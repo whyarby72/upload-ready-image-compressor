@@ -1,7 +1,10 @@
 {
   "schema": "AI_PROD_ANDROID_TECHNICAL_PROOF_v1",
   "observed_at": "2026-09-27",
-  "task_commit": "3b5b13d0b0f3bfe55103fa60c196d2aae7f49c85",
+  "task_commit": "772b3a321be6964240d4ac8f16f2fbecf4dc0de7",
+  "tested_source_commit": "772b3a321be6964240d4ac8f16f2fbecf4dc0de7",
+  "tested_artifact_commit": "772b3a321be6964240d4ac8f16f2fbecf4dc0de7",
+  "documentation_closure_base_commit": "3df5a7802582c681b7d610f43167c8884460df3c",
   "jdk": "Temurin 17.0.16",
   "gradle": "9.7.1",
   "gradle_wrapper": "9.7.1",

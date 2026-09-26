@@ -19,7 +19,7 @@ L=[
     f"Decision: {p.get('canonical_decision','')}",
     f"Progress: {p.get('progress_percent',0)}%",
     f"Current task: {t.get('id','')}",
-    f"Next owner: {t.get('owner','')}",
+    f"Next owner: {t.get('next_owner', t.get('owner',''))}",
     f"Task status: {t.get('status','')}",
     '', '## Evidence summary'
 ]

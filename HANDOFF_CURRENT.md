@@ -5,8 +5,8 @@ Stage: S3_FUNCTIONAL_VERTICAL_SLICE
 Decision: TEST
 Progress: 82%
 Current task: TASK-S3-001
-Next owner: CODEX
-Task status: OPEN
+Next owner: CHAT/S4_REVIEW
+Task status: COMPLETED
 
 ## Evidence summary
 - PASS: 24
@@ -24,4 +24,4 @@ Task status: OPEN
 - Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
 
 ## Next action
-Rerun final assembleDebug, unit tests, lint, regenerate evidence index/HANDOFF_CURRENT, reconcile all S3 PASS rows, commit and push TASK-S3-001. Do not claim S4.
+Independent CHAT audit of the completed S3 evidence closure. Do not claim S4 from this closure.
