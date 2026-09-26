@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 53,
+  "file_count": 57,
   "files": [
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
@@ -46,6 +46,26 @@
       "path": "evidence/build/release_authority_v0.3.0.log",
       "bytes": 43,
       "sha256": "6fc7d6266af0c58c1e81a950e30873daae2e35dd7b85a723052cc74c66445cd6"
+    },
+    {
+      "path": "evidence/play/S5_ARTIFACT_PROOF.json",
+      "bytes": 2309,
+      "sha256": "ba676ba627f9431724b6b1122e4ae9956a1dc50cbfb594072403b111369186e9"
+    },
+    {
+      "path": "evidence/play/S5_TESTER_HANDOFF.md",
+      "bytes": 1623,
+      "sha256": "f758f9e66189c98a06514671d3319a5a54d80fd89eab3ea97cfa66ca1bd43272"
+    },
+    {
+      "path": "evidence/play/app-release-0.1.0-vc1-unsigned.aab",
+      "bytes": 662863,
+      "sha256": "96ddc5b59df576c365af1321faf8801d9dbd72c77c482f97911df993ed1f5cea"
+    },
+    {
+      "path": "evidence/play/app-release-0.1.0-vc1-unsigned.apk",
+      "bytes": 2140754,
+      "sha256": "c07c6df36254a7939b13f6716dd6fe080669c68dc98a2b723121d79724d61601"
     },
     {
       "path": "evidence/release/release_authority_packaging_host.log",

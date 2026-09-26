@@ -33,3 +33,6 @@ Gradle 9.6.4 and 9.6.3 distribution URLs returned HTTP 404. The available instal
 
 ## D-011 — Android proof remains bounded
 API 36 build/install/launch, CURRENT detection, 1 MB actual-byte PASS, Save, Share, and permission inspection are artifact-bound PASS. Older API and remaining compression/metadata/safety cases remain open; canonical decision remains TEST.
+D-012 — S5 internal-test artifact signing boundary (2026-09-27)
+
+The S5 branch produces a Play-compatible bundle structure and identity metadata, but the generated release AAB/APK are unsigned because no authorized release/upload signing identity was provided. Codex records the exact artifacts and hashes, stops at HUMAN_PLAY_CONSOLE for signing/account/upload, and does not infer BUILD, release, publication, or S6 authority.

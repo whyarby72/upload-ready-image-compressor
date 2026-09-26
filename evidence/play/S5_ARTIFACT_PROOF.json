@@ -1,0 +1,66 @@
+{
+  "schema": "AI_PROD_S5_INTERNAL_TEST_ARTIFACT_PROOF_v1",
+  "observed_at": "2026-09-27",
+  "task": "TASK-S5-001",
+  "branch": "task/TASK-S5-001",
+  "tested_source_commit": "b36fe10e3daf5422c27a9e9ce5de2873fbfa3a14",
+  "s4_baseline_commit": "8b2538e63a6cc06beb918439b5c3ce6b9d2f751d",
+  "canonical_decision": "TEST",
+  "toolchain": {
+    "jdk": "Temurin 17.0.16",
+    "gradle": "9.7.1",
+    "agp": "9.4.1",
+    "compile_sdk": 36,
+    "target_sdk": 36,
+    "min_sdk": 29,
+    "build_tools": "36.0.0",
+    "platform_tools": "37.0.1"
+  },
+  "identity": {
+    "application_id": "com.uploadready.app",
+    "version_code": 1,
+    "version_name": "0.1.0"
+  },
+  "regression": {
+    "preflight": "PASS",
+    "assembleDebug": "PASS",
+    "testDebugUnitTest": "PASS",
+    "lintDebug": "PASS",
+    "assembleRelease": "PASS",
+    "bundleRelease": "PASS"
+  },
+  "artifacts": {
+    "debug_apk": {
+      "path": "app/build/outputs/apk/debug/app-debug.apk",
+      "bytes": 2581759,
+      "sha256": "f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34",
+      "signing": "debug keystore; apksigner v2 verified"
+    },
+    "release_aab": {
+      "path": "evidence/play/app-release-0.1.0-vc1-unsigned.aab",
+      "bytes": 662863,
+      "sha256": "96ddc5b59df576c365af1321faf8801d9dbd72c77c482f97911df993ed1f5cea",
+      "identity": "com.uploadready.app; versionCode 1; versionName 0.1.0",
+      "signing": "UNSIGNED; jarsigner reports jar is unsigned"
+    },
+    "release_apk": {
+      "path": "evidence/play/app-release-0.1.0-vc1-unsigned.apk",
+      "bytes": 2140754,
+      "sha256": "c07c6df36254a7939b13f6716dd6fe080669c68dc98a2b723121d79724d61601",
+      "signing": "UNSIGNED; apksigner does not verify; missing META-INF/MANIFEST.MF"
+    }
+  },
+  "permissions": {
+    "debug_and_release_manifest_permissions": [],
+    "internet": false,
+    "broad_storage_media": false,
+    "admob_ump_analytics": false
+  },
+  "human_action_required": [
+    "Human must provide/select the authorized Play App Signing or upload-key identity and complete any Play Console account/legal declarations.",
+    "Human must perform the authorized Play Console Internal Testing upload/submission; Codex did not upload or publish."
+  ],
+  "s5_disposition": "READY_FOR_HUMAN_PLAY_CONSOLE",
+  "s6_claim": false,
+  "build_claim": false
+}

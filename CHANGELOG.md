@@ -30,3 +30,9 @@
 - repaired missing resource style names and passed assembleDebug, unit-test task, and lintDebug;
 - recorded API 36 launch, CURRENT detection, 1 MB actual-byte PASS, Save, Share, and permission evidence;
 - left older API and remaining blocking matrix cases explicitly open.
+# 2026-09-27 — TASK-S5-001
+
+- Prepared Google Play Internal Testing artifact for `com.uploadready.app` versionCode 1/versionName 0.1.0.
+- Re-ran preflight, debug assemble, unit test, lint, release assemble, and bundle preparation.
+- Recorded unsigned AAB/APK hashes and the human Play Console signing/upload boundary.
+- No product behavior, AdMob, analytics, permissions, or canonical TEST decision changed.

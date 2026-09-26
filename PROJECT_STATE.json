@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_INTERNAL_TEST_READY",
     "canonical_decision": "TEST",
-    "progress_percent": 60
+    "progress_percent": 74
   },
   "artifacts": {
     "current_build": {
@@ -17,13 +17,22 @@
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
       "apk_sha256": "f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34"
     },
+    "s5_test_artifact": {
+      "application_id": "com.uploadready.app",
+      "version_code": 1,
+      "version_name": "0.1.0",
+      "aab_path": "evidence/play/app-release-0.1.0-vc1-unsigned.aab",
+      "aab_bytes": 662863,
+      "aab_sha256": "96ddc5b59df576c365af1321faf8801d9dbd72c77c482f97911df993ed1f5cea",
+      "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED"
+    },
     "frozen_release_candidate": null
   },
   "current_task": {
     "id": "TASK-S5-001",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "OPEN",
+    "next_owner": "HUMAN_PLAY_CONSOLE",
+    "status": "COMPLETED",
     "acceptance_ids": [
       "S5-01",
       "S5-02",
@@ -42,7 +51,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_PREPARATION_IN_PROGRESS",
+    "internal_test": "S5_READY_HUMAN_ACTION",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -62,12 +71,14 @@
     "publication_authorized": false
   },
   "evidence_index": "evidence/INDEX.json",
-  "open_blockers": [],
+  "open_blockers": [
+    "Release AAB/APK are unsigned; authorized human must provide/select Play App Signing or upload-key identity before Play Console upload."
+  ],
   "human_decisions_required": [
-    "Human action may be required for Play Console account/app identity, signing enrollment, tester identities, and any upload/submission action treated as release/publication.",
+    "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Codex executes TASK-S5-001 to prepare Google Play Internal Testing readiness without AdMob.",
+  "next_action": "HUMAN_PLAY_CONSOLE: apply authorized signing/account setup and upload the prepared internal-testing AAB. Do not claim S6 or BUILD.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
