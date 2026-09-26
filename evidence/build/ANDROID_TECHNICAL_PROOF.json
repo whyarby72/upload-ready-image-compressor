@@ -1,6 +1,7 @@
 {
   "schema": "AI_PROD_ANDROID_TECHNICAL_PROOF_v1",
   "observed_at": "2026-09-26",
+  "task_commit": "fd6c6e7e2aa4db7d7bc4ab2eb64f22f79f0793f6",
   "jdk": "Temurin 17.0.16",
   "gradle": "9.7.1",
   "gradle_wrapper": "9.7.1",

@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
-      "bytes": 1438,
-      "sha256": "2aa48c190de2708e6a0340067cc63645e8c20dded03be4497c0f8d41d4f75606"
+      "bytes": 1499,
+      "sha256": "2e89c3022fff5a65782056892228413490747566a797a118a4b51dc953a7adff"
     },
     {
       "path": "evidence/build/FACTORY_V1_0_1_REPO_BOOTSTRAP_PACKAGE_REPLAY.json",
