@@ -16,3 +16,9 @@
 - explicitly authorized creation/connection of a private `upload-ready-image-compressor` repo for TASK-S3-001;
 - preserved all production/release/publication authority boundaries;
 - Android build/device evidence remains pending.
+
+## v0.3.0-execution — 2026-09-26
+- ran `prompts/CODEX_START.md` through repository bootstrap and preflight;
+- completed local Git bootstrap with `main`, `develop`, and `task/TASK-S3-001`;
+- recorded `AUTH_REQUIRED` for GitHub private-remote creation/push;
+- recorded packaging-environment ceiling: JDK 25 present, Android/Gradle toolchain absent, so compile/APK/device evidence was not run.

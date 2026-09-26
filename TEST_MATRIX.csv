@@ -1,8 +1,8 @@
 test_id,requirement_id,stage,environment,fixture,expected,actual,evidence_path,artifact_version,artifact_hash,status,last_run
-T-000,AC-S3-01,S3,CODEX_GITHUB_ENV,N/A,Private GitHub remote verified; main/develop/task/TASK-S3-001 pushed; repo bootstrap evidence recorded,,,,,PENDING,
+T-000,AC-S3-01,S3,CODEX_GITHUB_ENV,N/A,Private GitHub remote verified; main/develop/task/TASK-S3-001 pushed; repo bootstrap evidence recorded,AUTH_REQUIRED; local branches ready; GitHub CLI/provider auth unavailable,evidence/build/REPO_BOOTSTRAP.json,v0.3.0-factory-v1.0.1,,BLOCKED,2026-09-26
 T-001,AC-S3-01,S3,PACKAGING_HOST,N/A,Factory preflight PASS,PREFLIGHT_PASS,evidence/build/preflight_packaging_host.log,v0.3.0-factory-v1.0.1,,PASS,2026-09-26
 T-002,AC-S3-04,S3,PACKAGING_HOST,host QualitySearchHostTest,Host quality-search PASS,HOST_TEST_PASS,evidence/unit/QualitySearchHostTest.log,v0.3.0-factory-v1.0.1,,PASS,2026-09-26
-T-003,AC-S3-02,S3,REAL_ANDROID_ENV,N/A,Record JDK/Gradle/SDK/build-tools identities,,,,,PENDING,
+T-003,AC-S3-02,S3,PACKAGING_HOST,N/A,JDK 17/AGP 9.4.1/Gradle 9.6.x/SDK API 36 identities recorded,JDK 25 present; Gradle/SDK/build-tools absent,evidence/build/PACKAGING_ENVIRONMENT.json,v0.3.0-factory-v1.0.1,,BLOCKED,2026-09-26
 T-004,AC-S3-03,S3,REAL_ANDROID_ENV,N/A,assembleDebug PASS + APK hash,,,,,PENDING,
 T-005,AC-S3-04,S3,REAL_ANDROID_ENV,N/A,testDebugUnitTest PASS,,,,,PENDING,
 T-006,AC-S3-04,S3,REAL_ANDROID_ENV,N/A,lintDebug no blocking failures,,,,,PENDING,
