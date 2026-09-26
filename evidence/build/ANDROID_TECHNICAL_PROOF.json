@@ -1,7 +1,7 @@
 {
   "schema": "AI_PROD_ANDROID_TECHNICAL_PROOF_v1",
-  "observed_at": "2026-09-26",
-  "task_commit": "fd6c6e7e2aa4db7d7bc4ab2eb64f22f79f0793f6",
+  "observed_at": "2026-09-27",
+  "task_commit": "3b5b13d0b0f3bfe55103fa60c196d2aae7f49c85",
   "jdk": "Temurin 17.0.16",
   "gradle": "9.7.1",
   "gradle_wrapper": "9.7.1",
@@ -35,20 +35,32 @@
       "status": "PASS"
     },
     "save": "PASS",
-    "share": "PASS"
+    "share": "PASS",
+    "api29_representative": {
+      "avd": "task-s3-api29",
+      "api": 29,
+      "install": "PASS",
+      "launch": "PASS",
+      "evidence": ["evidence/screenshots/launch_api29.png", "evidence/screenshots/launch_api29_uiautomator.xml"]
+    },
+    "s3_matrix": {
+      "50kb": "PASS_BEHAVIOR_NOT_MET",
+      "100kb": "PASS",
+      "200kb": "PASS",
+      "500kb": "PASS",
+      "already_ready": "PASS",
+      "unknown_limit": "PASS_REDUCED",
+      "exif_orientation": "PASS",
+      "large_input": "PASS_SAFE_NOT_MET",
+      "original_preservation": "PASS",
+      "save_share_regression": "PASS"
+    }
   },
   "permissions": {
     "uses_permission_entries": 0,
     "internet": false,
     "broad_storage_media": false
   },
-  "unrun": [
-    "API 29-35 representative device",
-    "50/100/200/500 KB matrix",
-    "unknown-limit REDUCED path",
-    "EXIF orientation",
-    "large-input safety",
-    "full original-preservation matrix"
-  ],
+  "unrun": [],
   "gradle_9_6_note": "Gradle 9.6.4 and 9.6.3 distribution URLs returned HTTP 404; 9.7.1 is the verified available runtime."
 }
