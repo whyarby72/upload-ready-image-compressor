@@ -90,14 +90,15 @@
     "public_visibility_authorized": false,
     "force_push_authorized": false,
     "local_git_state": "READY",
-    "remote_state": "AUTH_REQUIRED",
-    "remote_url": "",
+    "remote_state": "READY",
+    "remote_url": "https://github.com/whyarby72/upload-ready-image-compressor",
     "default_branch": "main",
     "integration_branch": "develop",
     "active_task_branch": "task/TASK-S3-001",
-    "bootstrap_state": "AUTH_REQUIRED",
-    "last_bootstrap_at": "2026-09-26T15:09:51.945265+00:00",
+    "bootstrap_state": "READY_REMOTE",
+    "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
-    "last_hold_code": "AUTH_REQUIRED"
+    "last_hold_code": "AUTH_REQUIRED",
+    "remote_visibility": "PRIVATE"
   }
 }
