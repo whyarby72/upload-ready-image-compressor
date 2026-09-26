@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "file_count": 15,
+  "files": [
+    {
+      "path": "evidence/build/FACTORY_V1_0_1_REPO_BOOTSTRAP_PACKAGE_REPLAY.json",
+      "bytes": 1106,
+      "sha256": "37f88020ade4f8b22df052498817f9415a7af2aceefa5539938c157362434d66"
+    },
+    {
+      "path": "evidence/build/PACKAGING_ENVIRONMENT.json",
+      "bytes": 403,
+      "sha256": "8849160dc1a5d0604854995b7e4e46a8d9e164422d21c0a7fe3ccfed114ad59c"
+    },
+    {
+      "path": "evidence/build/REPO_BOOTSTRAP.json",
+      "bytes": 1042,
+      "sha256": "3b3598499993c9892845ebeec5be151ac3e73030acbdfc40cffda8789a8ed11c"
+    },
+    {
+      "path": "evidence/build/ci_verify_packaging_host.log",
+      "bytes": 133,
+      "sha256": "18917644c968f7e8ba5fdf635affcb8a70649e2cc126f3fd7fb6409a9d82488f"
+    },
+    {
+      "path": "evidence/build/preflight_packaging_host.log",
+      "bytes": 168,
+      "sha256": "f25b366cfd555be3535f595f4ddfc309d508fc430ad6dcf5c35ab9fa3d15e695"
+    },
+    {
+      "path": "evidence/build/preflight_replay.log",
+      "bytes": 15,
+      "sha256": "5e6c3919a3603f66a2d2fcdda37d17b0ad1fe7793498311d5c5a7ae028363a56"
+    },
+    {
+      "path": "evidence/build/preflight_v0.3.0.log",
+      "bytes": 15,
+      "sha256": "5e6c3919a3603f66a2d2fcdda37d17b0ad1fe7793498311d5c5a7ae028363a56"
+    },
+    {
+      "path": "evidence/build/release_authority_v0.3.0.log",
+      "bytes": 43,
+      "sha256": "6fc7d6266af0c58c1e81a950e30873daae2e35dd7b85a723052cc74c66445cd6"
+    },
+    {
+      "path": "evidence/release/release_authority_packaging_host.log",
+      "bytes": 43,
+      "sha256": "6fc7d6266af0c58c1e81a950e30873daae2e35dd7b85a723052cc74c66445cd6"
+    },
+    {
+      "path": "evidence/source/IMPORT_PARITY_APP.diff",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/source/IMPORT_PARITY_PASS.txt",
+      "bytes": 130,
+      "sha256": "1d37051751fa3d93a32a858af142bf0019a33fb0989930fce0ad32fb2b661e83"
+    },
+    {
+      "path": "evidence/source/UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0_BUILD_STATUS.md",
+      "bytes": 1263,
+      "sha256": "73746bce1be1156a8d334c1612902f6c42add8a27342c2822b1a4cb80bd0df19"
+    },
+    {
+      "path": "evidence/source/UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0_MANIFEST.json",
+      "bytes": 5226,
+      "sha256": "23dbb9a2e89f64dc257fb00a915797453d27ebf6828cc7d8c17fb2b2420169a0"
+    },
+    {
+      "path": "evidence/source/UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0_QA_REPORT.json",
+      "bytes": 1858,
+      "sha256": "b03e087142af30bb0f078cb5c9c9997b684a052b48c3c68cefd6fd514a83640b"
+    },
+    {
+      "path": "evidence/unit/QualitySearchHostTest.log",
+      "bytes": 15,
+      "sha256": "2f4e950550489f74837533584223995bde7e3e58ca6d394d0d86cf90821cf324"
+    }
+  ]
+}

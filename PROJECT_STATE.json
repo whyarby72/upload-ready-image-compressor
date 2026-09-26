@@ -66,18 +66,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Canonical private GitHub remote was not created/verified/pushed because GitHub CLI/provider authentication is unavailable (AUTH_REQUIRED).",
-    "One-time human account/provider authorization is required before the authorized private GitHub bootstrap can continue.",
     "No Android SDK/Gradle/ADB evidence has executed in the packaging environment.",
     "No APK/assembleDebug evidence exists yet.",
     "No emulator/device execution evidence exists yet.",
     "Real Android Bitmap.compress target-fit, EXIF orientation, large-input, Save/Share and MediaStore/provider behaviors remain unproven."
   ],
   "human_decisions_required": [
-    "Only provider/account authentication if Codex reports AUTH_REQUIRED; do not ask the human to perform routine Git commands.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Provide GitHub CLI/provider authorization if remote evidence is required; provide a real JDK 17 + Gradle 9.6.x + Android SDK/API 36 environment to continue S3 Android proof.",
+  "next_action": "Provide a real JDK 17 + Gradle 9.6.x + Android SDK/API 36 environment to continue S3 Android proof; repository bootstrap and branch push are complete.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -98,7 +95,7 @@
     "bootstrap_state": "READY_REMOTE",
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
-    "last_hold_code": "AUTH_REQUIRED",
-    "remote_visibility": "PRIVATE"
+    "remote_visibility": "PRIVATE",
+    "last_pushed_task_commit": "3a49fcb2f3c7a5dfa8258810359db18ae9b99108"
   }
 }

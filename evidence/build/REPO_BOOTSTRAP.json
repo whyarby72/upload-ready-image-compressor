@@ -16,7 +16,12 @@
       "url": "https://github.com/whyarby72/upload-ready-image-compressor",
       "visibility": "PRIVATE"
     },
-    "push": "PASS"
+    "push": "PASS",
+    "pushed_branches": {
+      "main": "3aefe62e7e394397205d88724722a413c1e8cfa3",
+      "develop": "3aefe62e7e394397205d88724722a413c1e8cfa3",
+      "task/TASK-S3-001": "3a49fcb2f3c7a5dfa8258810359db18ae9b99108"
+    }
   },
   "secrets_recorded": false
 }
