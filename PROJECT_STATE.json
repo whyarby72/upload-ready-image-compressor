@@ -12,8 +12,10 @@
   "artifacts": {
     "current_build": {
       "source_version": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
-      "status": "PARTIAL_SOURCE_READY",
-      "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f"
+      "status": "ANDROID_DEBUG_BUILD_PASS",
+      "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
+      "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
+      "apk_sha256": "f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34"
     },
     "frozen_release_candidate": null
   },
@@ -44,7 +46,7 @@
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
-    "core_technical": "PARTIAL_SOURCE_READY",
+    "core_technical": "ANDROID_BUILD_AND_API36_SMOKE_PASS",
     "internal_test": "NOT_RUN",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
@@ -66,15 +68,14 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "No Android SDK/Gradle/ADB evidence has executed in the packaging environment.",
-    "No APK/assembleDebug evidence exists yet.",
-    "No emulator/device execution evidence exists yet.",
-    "Real Android Bitmap.compress target-fit, EXIF orientation, large-input, Save/Share and MediaStore/provider behaviors remain unproven."
+    "API 29-35 representative device evidence remains unrun.",
+    "Full blocking matrix coverage for 50/100/200/500 KB, unknown-limit, EXIF orientation, large-input, and original-preservation remains incomplete.",
+    "Gradle 9.6.x distribution URLs returned 404; verified build uses Gradle 9.7.1."
   ],
   "human_decisions_required": [
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Provide a real JDK 17 + Gradle 9.6.x + Android SDK/API 36 environment to continue S3 Android proof; repository bootstrap and branch push are complete.",
+  "next_action": "Continue remaining Android matrix coverage on API 36 and a supported older API; repository bootstrap, build, lint, launch, CURRENT detection, 1 MB target-fit, Save, and Share evidence are recorded.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",

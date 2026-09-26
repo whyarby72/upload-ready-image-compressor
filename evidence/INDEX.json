@@ -1,7 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 15,
+  "file_count": 30,
   "files": [
+    {
+      "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
+      "bytes": 1438,
+      "sha256": "2aa48c190de2708e6a0340067cc63645e8c20dded03be4497c0f8d41d4f75606"
+    },
     {
       "path": "evidence/build/FACTORY_V1_0_1_REPO_BOOTSTRAP_PACKAGE_REPLAY.json",
       "bytes": 1106,
@@ -46,6 +51,76 @@
       "path": "evidence/release/release_authority_packaging_host.log",
       "bytes": 43,
       "sha256": "6fc7d6266af0c58c1e81a950e30873daae2e35dd7b85a723052cc74c66445cd6"
+    },
+    {
+      "path": "evidence/result_1mb_api36.jpg",
+      "bytes": 1041703,
+      "sha256": "f421fdf225abeb35b20606ccc276488a05ded373d6f33d463ebb12de47c4e2f1"
+    },
+    {
+      "path": "evidence/screenshots/choose_photo_api36.png",
+      "bytes": 21677,
+      "sha256": "1d341f11206ef116a3ec3ab77b1f0a86b638d78a2e13a764c5a294151ba64865"
+    },
+    {
+      "path": "evidence/screenshots/choose_photo_api36_uiautomator.xml",
+      "bytes": 7385,
+      "sha256": "1fd9b73510e1169e0b182fbd45ff5c0830dfea3d572a15c21d5b3d760e00fb83"
+    },
+    {
+      "path": "evidence/screenshots/launch_api36.png",
+      "bytes": 26753,
+      "sha256": "798de0362ee9bba9663596895259b691a02cbb8cf764277f1ba0b3f9ffb6980e"
+    },
+    {
+      "path": "evidence/screenshots/launch_api36_uiautomator.xml",
+      "bytes": 4565,
+      "sha256": "c10e4ca563b13323c36b0b64b29780fb6a0a7490298c86334a53c81854921861"
+    },
+    {
+      "path": "evidence/screenshots/photo_picker_with_fixture_api36.png",
+      "bytes": 56032,
+      "sha256": "f3034be30ad0635ebbc488b9e24c52e24901aec93739103addbf095c1b055bc4"
+    },
+    {
+      "path": "evidence/screenshots/photo_picker_with_fixture_api36_uiautomator.xml",
+      "bytes": 9941,
+      "sha256": "7926baf79687520e19489e3b040018f7d6953371f0144d3dac3fe77bbdf68d76"
+    },
+    {
+      "path": "evidence/screenshots/photo_selected_api36.png",
+      "bytes": 42092,
+      "sha256": "49ee219ac1d4f3a5ee7963177daeb5b81322e6243175c8d123233fd4df8fc875"
+    },
+    {
+      "path": "evidence/screenshots/photo_selected_api36_uiautomator.xml",
+      "bytes": 9579,
+      "sha256": "f8aeafc22de4ea23b01bd296b16e93aec0a21818768211b97b346ba4e664bb04"
+    },
+    {
+      "path": "evidence/screenshots/result_1mb_api36.png",
+      "bytes": 39538,
+      "sha256": "ee33e5d90bede51c14e761caef23cabbf45f1dd7170c5db12bf214c01ae00219"
+    },
+    {
+      "path": "evidence/screenshots/result_1mb_api36_uiautomator.xml",
+      "bytes": 7419,
+      "sha256": "a347f8bbc8e90571334e74cf98dfc7d298f0b22a18aebcbe3e08668849f92657"
+    },
+    {
+      "path": "evidence/screenshots/save_result_api36_uiautomator.xml",
+      "bytes": 7419,
+      "sha256": "a347f8bbc8e90571334e74cf98dfc7d298f0b22a18aebcbe3e08668849f92657"
+    },
+    {
+      "path": "evidence/screenshots/share_result_api36.png",
+      "bytes": 232476,
+      "sha256": "7930a76fbd742a87ce42c6433f4566a49f1d911a103641a378df49d473557174"
+    },
+    {
+      "path": "evidence/screenshots/share_result_api36_uiautomator.xml",
+      "bytes": 20180,
+      "sha256": "eb4f4c9aba2c5947f15baff71d808e5854617a3491761350503639eb32da27c9"
     },
     {
       "path": "evidence/source/IMPORT_PARITY_APP.diff",

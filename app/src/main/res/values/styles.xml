@@ -9,24 +9,24 @@
         <item name="android:windowActionModeOverlay">true</item>
     </style>
 
-    <style name="Text.Title">
+    <style name="Text_Title">
         <item name="android:textColor">@color/ur_text</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Text.Section">
+    <style name="Text_Section">
         <item name="android:textColor">@color/ur_text</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Text.Body">
+    <style name="Text_Body">
         <item name="android:textColor">@color/ur_muted</item>
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="Button.Primary" parent="android:style/Widget.Material.Button">
+    <style name="Button_Primary" parent="android:style/Widget.Material.Button">
         <item name="android:backgroundTint">@color/ur_primary</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textAllCaps">false</item>
@@ -34,7 +34,7 @@
         <item name="android:minHeight">56dp</item>
     </style>
 
-    <style name="Button.Secondary" parent="android:style/Widget.Material.Button">
+    <style name="Button_Secondary" parent="android:style/Widget.Material.Button">
         <item name="android:backgroundTint">@color/ur_tonal</item>
         <item name="android:textColor">@color/ur_primary</item>
         <item name="android:textAllCaps">false</item>

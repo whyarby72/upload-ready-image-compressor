@@ -41,14 +41,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/home_title"
-                style="@style/Text.Title" />
+                style="@style/Text_Title" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/home_subtitle"
-                style="@style/Text.Body" />
+                style="@style/Text_Body" />
 
             <Button
                 android:id="@+id/choosePhotoButton"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="@string/choose_photo"
-                style="@style/Button.Primary" />
+                style="@style/Button_Primary" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:text="—"
-                    style="@style/Text.Body" />
+                    style="@style/Text_Body" />
             </LinearLayout>
 
             <TextView
@@ -114,14 +114,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="@string/requirement_title"
-                style="@style/Text.Section" />
+                style="@style/Text_Section" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="Choose the maximum size shown by the website or form."
-                style="@style/Text.Body" />
+                style="@style/Text_Body" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -162,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/make_ready"
-                style="@style/Button.Primary" />
+                style="@style/Button_Primary" />
 
             <Button
                 android:id="@+id/unknownLimitButton"
@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/unknown_limit"
-                style="@style/Button.Secondary" />
+                style="@style/Button_Secondary" />
         </LinearLayout>
 
         <LinearLayout
@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Compressing on-device…"
-                style="@style/Text.Body" />
+                style="@style/Text_Body" />
         </LinearLayout>
 
         <LinearLayout
@@ -240,8 +240,8 @@
                 android:orientation="vertical">
 
                 <TextView android:id="@+id/resultChangeText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" android:textColor="@color/ur_text" android:textSize="16sp" android:textStyle="bold" />
-                <TextView android:id="@+id/resultDimensionsText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="—" style="@style/Text.Body" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Original untouched · Metadata removed from compressed copies" style="@style/Text.Body" />
+                <TextView android:id="@+id/resultDimensionsText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="—" style="@style/Text_Body" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Original untouched · Metadata removed from compressed copies" style="@style/Text_Body" />
             </LinearLayout>
 
             <TextView
@@ -250,7 +250,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:text=""
-                style="@style/Text.Body" />
+                style="@style/Text_Body" />
 
             <Button
                 android:id="@+id/shareButton"
@@ -258,7 +258,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/share"
-                style="@style/Button.Primary" />
+                style="@style/Button_Primary" />
 
             <Button
                 android:id="@+id/saveButton"
@@ -266,7 +266,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/save"
-                style="@style/Button.Secondary" />
+                style="@style/Button_Secondary" />
 
             <Button
                 android:id="@+id/anotherButton"
@@ -274,7 +274,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/another"
-                style="@style/Button.Secondary" />
+                style="@style/Button_Secondary" />
         </LinearLayout>
 
         <TextView

@@ -1,0 +1,53 @@
+{
+  "schema": "AI_PROD_ANDROID_TECHNICAL_PROOF_v1",
+  "observed_at": "2026-09-26",
+  "jdk": "Temurin 17.0.16",
+  "gradle": "9.7.1",
+  "gradle_wrapper": "9.7.1",
+  "agp": "9.4.1",
+  "android_sdk_root": "/opt/homebrew/share/android-commandlinetools",
+  "compile_sdk": 36,
+  "target_sdk": 36,
+  "min_sdk": 29,
+  "build_tools": "36.0.0",
+  "platform_tools": "37.0.1",
+  "emulator": "37.1.11",
+  "apk": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "bytes": 2581759,
+    "sha256": "f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34"
+  },
+  "commands": {
+    "assembleDebug": "PASS",
+    "testDebugUnitTest": "PASS",
+    "lintDebug": "PASS"
+  },
+  "device": {
+    "avd": "task-s3-api36",
+    "api": 36,
+    "adb_serial": "emulator-5554",
+    "launch": "PASS",
+    "current_detection": "PASS",
+    "one_mb_target_fit": {
+      "result_bytes": 1041703,
+      "required_bytes": 1048576,
+      "status": "PASS"
+    },
+    "save": "PASS",
+    "share": "PASS"
+  },
+  "permissions": {
+    "uses_permission_entries": 0,
+    "internet": false,
+    "broad_storage_media": false
+  },
+  "unrun": [
+    "API 29-35 representative device",
+    "50/100/200/500 KB matrix",
+    "unknown-limit REDUCED path",
+    "EXIF orientation",
+    "large-input safety",
+    "full original-preservation matrix"
+  ],
+  "gradle_9_6_note": "Gradle 9.6.4 and 9.6.3 distribution URLs returned HTTP 404; 9.7.1 is the verified available runtime."
+}

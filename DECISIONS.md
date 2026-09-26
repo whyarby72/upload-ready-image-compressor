@@ -27,3 +27,9 @@ The local packaging environment has JDK 25 but no Gradle/Gradle Wrapper, Android
 
 ## D-009 — Remote bootstrap authentication boundary
 Local Git bootstrap completed on `task/TASK-S3-001`; private GitHub creation/push stopped at `AUTH_REQUIRED` because GitHub CLI/provider authentication is unavailable. No public remote or destructive remote action was attempted.
+
+## D-010 — Verified Gradle distribution availability
+Gradle 9.6.4 and 9.6.3 distribution URLs returned HTTP 404. The available installed Gradle 9.7.1 is used for the wrapper/build proof, with the deviation recorded rather than claiming an unavailable 9.6.x runtime.
+
+## D-011 — Android proof remains bounded
+API 36 build/install/launch, CURRENT detection, 1 MB actual-byte PASS, Save, Share, and permission inspection are artifact-bound PASS. Older API and remaining compression/metadata/safety cases remain open; canonical decision remains TEST.

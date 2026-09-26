@@ -22,3 +22,11 @@
 - completed local Git bootstrap with `main`, `develop`, and `task/TASK-S3-001`;
 - recorded `AUTH_REQUIRED` for GitHub private-remote creation/push;
 - recorded packaging-environment ceiling: JDK 25 present, Android/Gradle toolchain absent, so compile/APK/device evidence was not run.
+
+## v0.3.0-s3-proof — 2026-09-26
+- created and verified PRIVATE GitHub repository `whyarby72/upload-ready-image-compressor`;
+- pushed `main`, `develop`, and `task/TASK-S3-001` without force-push;
+- provisioned JDK 17, Gradle 9.7.1 wrapper, Android API 36/build tools/emulator;
+- repaired missing resource style names and passed assembleDebug, unit-test task, and lintDebug;
+- recorded API 36 launch, CURRENT detection, 1 MB actual-byte PASS, Save, Share, and permission evidence;
+- left older API and remaining blocking matrix cases explicitly open.
