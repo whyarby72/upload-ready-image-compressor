@@ -1,0 +1,153 @@
+{
+  "product": "UPLOAD_READY_IMAGE_COMPRESSOR",
+  "artifact": "ANDROID_FUNCTIONAL_VERTICAL_SLICE",
+  "version": "v0.1.0",
+  "state": "PARTIAL_SOURCE_READY",
+  "canonical_decision": "TEST",
+  "build_scope": "FUNCTIONAL_VERTICAL_SLICE_SOURCE_ONLY",
+  "build_authorized_for_release": false,
+  "admob_integrated": false,
+  "files": [
+    {
+      "path": "BUILD_STATUS.md",
+      "sha256": "73746bce1be1156a8d334c1612902f6c42add8a27342c2822b1a4cb80bd0df19",
+      "bytes": 1263
+    },
+    {
+      "path": "QA_REPORT.json",
+      "sha256": "b03e087142af30bb0f078cb5c9c9997b684a052b48c3c68cefd6fd514a83640b",
+      "bytes": 1858
+    },
+    {
+      "path": "README.md",
+      "sha256": "2c3a44d523560399e64badda77d51db0087566d00a4cccd14a489bab55107877",
+      "bytes": 2184
+    },
+    {
+      "path": "app/build.gradle",
+      "sha256": "dc93eaf6ab9f604f2071d9bacf2733ca6334fa5193f57734d5016c0c27420137",
+      "bytes": 590
+    },
+    {
+      "path": "app/proguard-rules.pro",
+      "sha256": "88505bf0846a930e0ca1ba14509a3bf483ad1732d15de0b67eb99bbff34f99f5",
+      "bytes": 39
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "sha256": "8a0fab4b676ccf735d7d4d490e04322201c59e6e31003bee1b56dcc3ab140516",
+      "bytes": 817
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/CompressionResult.java",
+      "sha256": "a126c86fdf0662970fdc1aa73ab322b2a543a745a5a7e9ab4fbfc76d46b9b066",
+      "bytes": 1003
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/FormatUtils.java",
+      "sha256": "84bfa86d116d4796b734e3598f370566ac135a7e1fe84ffad5ef4e0b95a12bc6",
+      "bytes": 650
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/ImageInfo.java",
+      "sha256": "58c0a5e3843f34ebe92f2ce146d89a9b07b95a0fb8f88de41508e897e8c86920",
+      "bytes": 525
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/ImageInspector.java",
+      "sha256": "456da133b9c66c80fd7d96c11a57314f85cc927d5362d429b543292d9587f0b1",
+      "bytes": 2895
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/JpegCompressionEngine.java",
+      "sha256": "48019946299868a6d1b793b291ca1ed0fd7df47ab1f27e59ddc2a7cf09c326f4",
+      "bytes": 11178
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/MainActivity.java",
+      "sha256": "19b5337028c468865fc995d45f9d4742c88c11e6f71f20d53a89ba0482d9ff57",
+      "bytes": 14407
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/MediaStoreSaver.java",
+      "sha256": "c7531d6cc5fd50b7da86804ec781f94d5a33ac6edc6d899aef6ef0e19c172db1",
+      "bytes": 1872
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/ResultContentProvider.java",
+      "sha256": "83223cd8ef85aa5119e75b558f8dd8c900295c7b6a4bc8454567cc500a375fee",
+      "bytes": 2541
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/ResultStore.java",
+      "sha256": "482d0d4b4b3866bca47e9387269ef0c4803c0c5d5a91c430553ca32049f150bb",
+      "bytes": 1285
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/core/QualitySearch.java",
+      "sha256": "e19484494c0287f17f574309c2c0e1bc43af324d3da546ca9dd2d43a97ef75f1",
+      "bytes": 1509
+    },
+    {
+      "path": "app/src/main/java/com/uploadready/app/core/ScalePlanner.java",
+      "sha256": "1da73cf73aefb7becdcd30cefacaa335031650410ac3cbad73da0f9e701ca415",
+      "bytes": 613
+    },
+    {
+      "path": "app/src/main/res/drawable/card_bg.xml",
+      "sha256": "9f5ab79c2eeba9a195303c74178b5fea3b436fbb4f723837a6bcfad3088352a0",
+      "bytes": 368
+    },
+    {
+      "path": "app/src/main/res/drawable/pill_default.xml",
+      "sha256": "0bf1073ee44d8930be8eea1a22693886bbdb47ef25df78d790a8110c1f021c69",
+      "bytes": 270
+    },
+    {
+      "path": "app/src/main/res/drawable/pill_selected.xml",
+      "sha256": "533d67c8d9aced6a3c69281187f0c2170846c01142be98b7b2cb3e321177cd1b",
+      "bytes": 268
+    },
+    {
+      "path": "app/src/main/res/layout/activity_main.xml",
+      "sha256": "3fca87e2388dd94d91cbf8b21b45beac45edaa10d9de14281849bcf20b8d5140",
+      "bytes": 12470
+    },
+    {
+      "path": "app/src/main/res/values/colors.xml",
+      "sha256": "7ac6ab9013697cdd7931bede3540d0b9d8146a05d0116ea012c56dadf0054d6a",
+      "bytes": 510
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "sha256": "3f9fe7de1154b715afbd031c35cfbdce2e2b1e62625d3efea8c15bac16fd0765",
+      "bytes": 684
+    },
+    {
+      "path": "app/src/main/res/values/styles.xml",
+      "sha256": "725dacd2d5e0a614518a2b37d655d59cece69909bd813c2f36df7a47e1cabd00",
+      "bytes": 1820
+    },
+    {
+      "path": "build.gradle",
+      "sha256": "a285972914492c2cfd358f248452351a821beec42fc34ba782dc117c43d4432a",
+      "bytes": 73
+    },
+    {
+      "path": "gradle.properties",
+      "sha256": "fd3dc84bf51d174859c61ea75231586e0a93de9bbad80da4e5e783ff5e730d09",
+      "bytes": 107
+    },
+    {
+      "path": "host-tests/QualitySearchHostTest.java",
+      "sha256": "0baf29cb6fce143321e4af6abb79e4c41e66ab68b9f36ffba5ec80d313de24c2",
+      "bytes": 1475
+    },
+    {
+      "path": "settings.gradle",
+      "sha256": "f49b1490cff248fd61e34e466a9725a51fe08a4c24b48fcef29ba363c5ecb6a5",
+      "bytes": 330
+    }
+  ],
+  "qa_file": "QA_REPORT.json"
+}

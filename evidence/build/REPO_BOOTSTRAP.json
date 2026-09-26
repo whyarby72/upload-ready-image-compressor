@@ -1,0 +1,13 @@
+{
+  "schema": "AI_PROD_REPO_BOOTSTRAP_EVIDENCE_v1",
+  "observed_at": "2026-09-26T15:09:21.941426+00:00",
+  "result": "COMMAND_FAILED",
+  "details": {
+    "root": "/Users/afradadmedia/DATA/PTAFRADAD/CHATGPTLOCAL/AI-PROD/IMAGE COMPRESSOR",
+    "provider": "GITHUB",
+    "visibility_required": "PRIVATE",
+    "hold_code": "COMMAND_FAILED",
+    "message": "git init -b main :: /Users/afradadmedia/DATA/PTAFRADAD/CHATGPTLOCAL/AI-PROD/IMAGE COMPRESSOR/.git: Operation not permitted"
+  },
+  "secrets_recorded": false
+}

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/ur_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="24dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓  Upload Ready"
+            android:textColor="@color/ur_text"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="● Private · on-device"
+            android:textColor="@color/ur_success"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/homePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_title"
+                style="@style/Text.Title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/home_subtitle"
+                style="@style/Text.Body" />
+
+            <Button
+                android:id="@+id/choosePhotoButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/choose_photo"
+                style="@style/Button.Primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Original untouched · No account"
+                android:textColor="@color/ur_muted"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/requirementPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CURRENT PHOTO"
+                    android:textColor="@color/ur_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/currentSizeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="—"
+                    android:textColor="@color/ur_text"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/currentMetaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="—"
+                    style="@style/Text.Body" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/requirement_title"
+                style="@style/Text.Section" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Choose the maximum size shown by the website or form."
+                style="@style/Text.Body" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button android:id="@+id/target50" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="50 KB" android:textAllCaps="false" />
+                <Button android:id="@+id/target100" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="100 KB" android:textAllCaps="false" />
+                <Button android:id="@+id/target200" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="200 KB" android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button android:id="@+id/target500" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="500 KB" android:textAllCaps="false" />
+                <Button android:id="@+id/target1m" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="1 MB" android:textAllCaps="false" />
+                <Button android:id="@+id/targetCustom" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Custom" android:textAllCaps="false" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/selectedTargetText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="REQUIRED: 1 MB"
+                android:textColor="@color/ur_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/makeReadyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/make_ready"
+                style="@style/Button.Primary" />
+
+            <Button
+                android:id="@+id/unknownLimitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/unknown_limit"
+                style="@style/Button.Secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/progressPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Compressing on-device…"
+                style="@style/Text.Body" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/resultPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/resultStateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPLOAD READY ✓"
+                android:textColor="@color/ur_success"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/resultSizeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="—"
+                android:textColor="@color/ur_text"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/resultProofText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="—"
+                android:textColor="@color/ur_success"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/card_bg"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/resultChangeText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" android:textColor="@color/ur_text" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:id="@+id/resultDimensionsText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="—" style="@style/Text.Body" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Original untouched · Metadata removed from compressed copies" style="@style/Text.Body" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/resultNoticeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text=""
+                style="@style/Text.Body" />
+
+            <Button
+                android:id="@+id/shareButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/share"
+                style="@style/Button.Primary" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/save"
+                style="@style/Button.Secondary" />
+
+            <Button
+                android:id="@+id/anotherButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/another"
+                style="@style/Button.Secondary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="#B42318"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,28 @@
+{
+  "schema": "AI_PROD_FACTORY_V1_0_1_REPO_BOOTSTRAP_PACKAGE_REPLAY_v1",
+  "observed_at": "2026-09-26",
+  "factory_bundle_sha256": "2768cdf0c6260d53d64f3f31d10fb616feebc92d87798efaa43fffbf4b8bb95f",
+  "factory_manifest_sha256": "9e9a3993e544f28f834a95ea2e83cec8c2b966150e289ad616c966b248fc58cb",
+  "factory_manifest_records": 48,
+  "pilot_package": "UPLOAD_READY_IMAGE_COMPRESSOR_ANDROID_CODEX_FACTORY_PILOT_v0.3.0",
+  "local_git_bootstrap_replay": {
+    "result": "PASS",
+    "branches": [
+      "main",
+      "develop",
+      "task/TASK-S3-001"
+    ],
+    "bootstrap_evidence_tracked_after_gitignore_fix": true,
+    "working_tree_after_READY_LOCAL": "CLEAN"
+  },
+  "remote_negative_control": {
+    "requested": "--create-private-github --push",
+    "result": "AUTH_REQUIRED",
+    "exit_code": 6,
+    "reason": "GitHub CLI/provider authorization unavailable in packaging validation environment",
+    "remote_created": false,
+    "public_repo_created": false
+  },
+  "claim_ceiling": "LOCAL_GIT_BOOTSTRAP_REPLAY_VALIDATED; GITHUB_REMOTE_CREATE_PUSH_NOT_EXECUTED",
+  "android_build_device_claim": "NOT_RUN"
+}

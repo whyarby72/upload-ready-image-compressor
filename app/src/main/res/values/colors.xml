@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ur_primary">#3157F6</color>
+    <color name="ur_primary_pressed">#2448D8</color>
+    <color name="ur_success">#0F7A57</color>
+    <color name="ur_warning">#8F4E0A</color>
+    <color name="ur_text">#101828</color>
+    <color name="ur_muted">#667085</color>
+    <color name="ur_surface">#FFFFFF</color>
+    <color name="ur_bg">#F7F9FC</color>
+    <color name="ur_outline">#DDE3EC</color>
+    <color name="ur_tonal">#EEF2FF</color>
+</resources>

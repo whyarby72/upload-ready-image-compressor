@@ -1,0 +1,248 @@
+{
+  "factory": "AI_PROD_ANDROID_ADMOB_REPO_FACTORY_TEMPLATE",
+  "version": "1.0.0",
+  "validation": {
+    "preflight": "PASS",
+    "evidence_index": "PASS",
+    "handoff_render": "PASS",
+    "authority_check": "PASS",
+    "ci_shell_syntax": "PASS"
+  },
+  "self_authorizes": {
+    "artifact_freeze": false,
+    "release": false,
+    "publication": false
+  },
+  "files": [
+    {
+      "path": ".editorconfig",
+      "bytes": 150,
+      "sha256": "40f9eff2764657c506047fd3b69bb062444bf4150d10c01b0be6cdbd83b82802"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "bytes": 497,
+      "sha256": "9551ddd52da9120f25f89464e5a3212857de873c5de46d3fd8a0941459afb453"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 701,
+      "sha256": "f7f1c94dd4762f88e2cb8b9b0197f56f926d498d9926b83e05741abc52cff111"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 244,
+      "sha256": "32bae73510862d69f2b2021169d18dcaa09192f1fa0792eb68b9008f52cf26cb"
+    },
+    {
+      "path": "ACCEPTANCE_CRITERIA.md",
+      "bytes": 318,
+      "sha256": "bead750964bec1efb9fd2bee273db7b09d7a6d2ba0cd9997d7adf09dc61d83c4"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1870,
+      "sha256": "905bf59403d0fe573bb2471fe47b9924ff2adf8b68b32891f1187bbb00578f0d"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 91,
+      "sha256": "3dc5aaabe45fecb4425bb1ec98c28af22b3b0fe7d0ff5fb324058ae5e5bd8521"
+    },
+    {
+      "path": "CURRENT_TASK.md",
+      "bytes": 679,
+      "sha256": "0d3c59f8ce1f5074b744e72dfe88be63b392c7ef18b42e34d577b1e2ad0b97da"
+    },
+    {
+      "path": "DECISIONS.md",
+      "bytes": 132,
+      "sha256": "3294da128337dae57d9b824d9949181a2822ed528b19c7b36111d585673754b6"
+    },
+    {
+      "path": "HANDOFF_CURRENT.md",
+      "bytes": 386,
+      "sha256": "fb044faab219f2d754e812e4af9fb0b82fd8d87a4244d9a6bed96cc57905c478"
+    },
+    {
+      "path": "PRODUCT_SPEC.md",
+      "bytes": 1112,
+      "sha256": "c6c7812fa01c8cf3e54cd1e83789a4b6ca1c75332f3d55e7703fa17df2a7adab"
+    },
+    {
+      "path": "PROJECT_STATE.json",
+      "bytes": 1215,
+      "sha256": "a9fc2620ffc33a89ed777fe2f9d6b6892200b019bf7cd39aa8a5e78527574e3d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 954,
+      "sha256": "deade95801606d376f3dd9315a27d29659ee964a45b7a1d62115d395632e2912"
+    },
+    {
+      "path": "TEST_MATRIX.csv",
+      "bytes": 158,
+      "sha256": "8aba240f964a4e902672257feefd6f449efd8995d1b4e70b06ffcbd0c7ffb3d5"
+    },
+    {
+      "path": "ci/README.md",
+      "bytes": 282,
+      "sha256": "be83decaf8a50f1cc330c15a529cd1fa4b4de368a2f449d242c56ac853d22d6e"
+    },
+    {
+      "path": "docs/BRANCH_POLICY.md",
+      "bytes": 604,
+      "sha256": "50250ee0c53a327f735fc7757bd09c4b71847ff95fb60582b43fd951ee460cab"
+    },
+    {
+      "path": "docs/HUMAN_INTERRUPTION_BUDGET.md",
+      "bytes": 471,
+      "sha256": "d2cfaf833c526c024532bfe010ab0b8f0ce61af0aa431fe3463250d4d70ed3d4"
+    },
+    {
+      "path": "docs/QUOTA_ROUTING.md",
+      "bytes": 443,
+      "sha256": "066a642c393123ada0385b8e026625ab3038767fe5b1d69002b393d8aa476769"
+    },
+    {
+      "path": "docs/STATE_MACHINE.md",
+      "bytes": 686,
+      "sha256": "1f076d75153cae48575070b80e22e99728ffe11ada2de49bc607baf28932d7bf"
+    },
+    {
+      "path": "docs/WORK_CHECKPOINTS.md",
+      "bytes": 504,
+      "sha256": "305c809f975358d031a6250b6fdd1b0310dd58d118614f2029d31a36f9accfac"
+    },
+    {
+      "path": "evidence/INDEX.json",
+      "bytes": 65,
+      "sha256": "d9d5516af5d434220572b76f9e8b3945fb35058578459bc43ba651ee1c3a8c73"
+    },
+    {
+      "path": "evidence/admob/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/build/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/instrumentation/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/lint/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/performance/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/play/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/privacy/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/release/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/screenshots/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/unit/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "prompts/CHAT_GATE_REVIEW.md",
+      "bytes": 338,
+      "sha256": "eca3183a7bbaf4965b28409c9193fda36558af4045f453886be42aba7208a134"
+    },
+    {
+      "path": "prompts/CODEX_START.md",
+      "bytes": 538,
+      "sha256": "a2ffeefc7badb66fc646e4372bc3849870a42895b5db099ab64697bbddbe8ec4"
+    },
+    {
+      "path": "prompts/WORK_AUDIT.md",
+      "bytes": 570,
+      "sha256": "7fc2377f08a4506fe5a5ad8749361097cafc2c199c3a7df6b42d22041b69694b"
+    },
+    {
+      "path": "release/RELEASE_APPROVAL_PACKET.md",
+      "bytes": 558,
+      "sha256": "feafec160294519933b4c69c7d2eff88aecf37f740677c97020f6e4f00845a03"
+    },
+    {
+      "path": "scripts/build_evidence_index.py",
+      "bytes": 590,
+      "sha256": "58b831b2b8b6702cae2311e0bbefc89392d133391bc86f9d9eaf11ed0b81bc5c"
+    },
+    {
+      "path": "scripts/ci_verify.sh",
+      "bytes": 486,
+      "sha256": "b21320af722e9ac095fbd25c9f6977bfb5b7b1443e0470081e20f24485de7f1c"
+    },
+    {
+      "path": "scripts/init_product.py",
+      "bytes": 943,
+      "sha256": "fd04827c72b891ec3f121ec3fcabc83f35b5c1e3570dca1b43bb5cebf85052c6"
+    },
+    {
+      "path": "scripts/preflight.py",
+      "bytes": 1304,
+      "sha256": "7bff2ce0cfa461b5be5cd690c33599af361821295ddebbdc56a15f89f0d96974"
+    },
+    {
+      "path": "scripts/render_handoff.py",
+      "bytes": 1556,
+      "sha256": "ae73ee9aaddcdaf7313647ca087c58c8c4492063f295b73de61ad221d612b18e"
+    },
+    {
+      "path": "scripts/validate_release_authority.py",
+      "bytes": 527,
+      "sha256": "f726e32d9179fd3cec43e5212a9ec7aef2f4a8eb8b7d4428b345b3b2ef449849"
+    },
+    {
+      "path": "store/ADS_DECLARATION.md",
+      "bytes": 153,
+      "sha256": "95d19d4df818ea2b640ebadfa6316bbea81dc4eb8c1b11ff8696086745b35032"
+    },
+    {
+      "path": "store/DATA_SAFETY_DRAFT.md",
+      "bytes": 178,
+      "sha256": "b7ba36ad24ebc375e23aa75218c034cc3a899badcba258731410c7580646445e"
+    },
+    {
+      "path": "store/PLAY_LISTING.md",
+      "bytes": 137,
+      "sha256": "5eb65c27c2fdcb84b66ddb2417fa943487ecfe4c2d492cfa212178b62866fc59"
+    },
+    {
+      "path": "store/PRIVACY_NOTES.md",
+      "bytes": 141,
+      "sha256": "aafc49590ce4d4855197263501e7314e40f00bc8cd5514501c7beeaf1f957c12"
+    },
+    {
+      "path": "store/RELEASE_NOTES.md",
+      "bytes": 90,
+      "sha256": "343e78d1c4831ae182adfab64441a3b790b898f1d1463f9166bc67995d5c0ba5"
+    }
+  ]
+}

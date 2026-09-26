@@ -1,0 +1,3 @@
+PREFLIGHT_PASS
+Environment ceiling: java+javac present; Gradle/Android SDK/adb/sdkmanager absent.
+Android compile/APK/device evidence NOT RUN in packaging environment.

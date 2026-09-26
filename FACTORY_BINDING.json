@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "product": "UPLOAD-READY IMAGE COMPRESSOR",
+  "canonical_decision": "TEST",
+  "pilot_scope": "BOUNDED_S3_FUNCTIONAL_VERTICAL_SLICE_TECHNICAL_PROOF",
+  "resolved_runtime": {
+    "primary_runtime": {
+      "version": "v5.16.25",
+      "sha256": "e8a4cf729a6eadf476292a30d9e6b0873804890402eaf021a2ec81c4ef40cd75"
+    },
+    "engine_admob": {
+      "version": "v1.1.5",
+      "loaded_artifact_sha256": "3e53b21a8bba5e08719b8d0dd8ccb570769d797a9614f9cc43a006dcb45b871b",
+      "runtime_binding": "PROJECT_RUNTIME_282D_REVALIDATE_BEFORE_61C.33A"
+    },
+    "invocation_contract": {
+      "version": "v1.0.0",
+      "sha256": "60554c44437d229e729e1fac740dfaef0a9da8162ef77b801f8faea45f60cd04"
+    },
+    "factory_registry": {
+      "version": "v1.0.2",
+      "sha256": "dfbebb629ce2df9a7a0da78c4b9ed758d22b608d5021599557b7450191b273f9"
+    },
+    "universal_sop": {
+      "version": "v1.0.2",
+      "sha256": "836fc4b6470d0d2329df4c5c5e3fd1d00facf299effb5dde015d02bb13839004"
+    }
+  },
+  "resolved_factory": {
+    "factory_id": "AI_PROD_ANDROID_ADMOB_REPO_FACTORY",
+    "version": "1.0.1",
+    "status": "ACTIVE_VALIDATED",
+    "validation_scope": "TEMPLATE_LEVEL_PLUS_LOCAL_GIT_BOOTSTRAP",
+    "operational_end_to_end_proven": false,
+    "github_provider_end_to_end_proven": false,
+    "bundle_sha256": "2768cdf0c6260d53d64f3f31d10fb616feebc92d87798efaa43fffbf4b8bb95f",
+    "manifest_sha256": "9e9a3993e544f28f834a95ea2e83cec8c2b966150e289ad616c966b248fc58cb",
+    "declared_file_records": 48
+  },
+  "source_vertical_slice": {
+    "version": "v0.1.0",
+    "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
+    "incoming_status": "PARTIAL_SOURCE_READY"
+  },
+  "authority": {
+    "canonical_BUILD_authorized": false,
+    "artifact_freeze_authorized": false,
+    "release_authorized": false,
+    "publication_authorized": false,
+    "bounded_TEST_technical_execution_authorized": true
+  },
+  "repository_bootstrap": {
+    "owner": "CODEX",
+    "provider": "GITHUB",
+    "required_visibility": "PRIVATE",
+    "remote_creation_authorized": true,
+    "authorization_ref": "USER_OPTION_1_2026-09-26_FACTORY_V1.0.1_ACTIVATION_AND_REFRESH",
+    "remote_delete_authorized": false,
+    "remote_transfer_authorized": false,
+    "public_visibility_authorized": false,
+    "evidence_required": "evidence/build/REPO_BOOTSTRAP.json"
+  }
+}

@@ -1,0 +1,25 @@
+.gradle/
+**/build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+.idea/
+*.iml
+.vscode/
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+.env
+.env.*
+google-services.json
+.DS_Store
+Thumbs.db
+HANDOFF_CURRENT.md
+evidence/INDEX.json
+# Keep repository evidence despite generic build directory ignore.
+!evidence/build/
+!evidence/build/**
+__pycache__/
+*.pyc

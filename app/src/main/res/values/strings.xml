@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Upload Ready</string>
+    <string name="home_title">Make your photo ready to upload.</string>
+    <string name="home_subtitle">Choose a JPEG. We’ll detect its size automatically.</string>
+    <string name="choose_photo">Choose photo</string>
+    <string name="requirement_title">What does the website require?</string>
+    <string name="make_ready">Make it upload-ready</string>
+    <string name="unknown_limit">I don’t know the website limit</string>
+    <string name="share">Share</string>
+    <string name="save">Save copy</string>
+    <string name="another">Compress another</string>
+</resources>

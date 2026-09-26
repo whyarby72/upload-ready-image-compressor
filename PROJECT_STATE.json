@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "factory_version": "1.0.1",
+  "project": {
+    "canonical_name": "UPLOAD-READY IMAGE COMPRESSOR",
+    "package_name": "com.uploadready.app",
+    "repo": "upload-ready-image-compressor",
+    "current_stage": "S3_FUNCTIONAL_VERTICAL_SLICE",
+    "canonical_decision": "TEST",
+    "progress_percent": 37
+  },
+  "artifacts": {
+    "current_build": {
+      "source_version": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
+      "status": "PARTIAL_SOURCE_READY",
+      "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f"
+    },
+    "frozen_release_candidate": null
+  },
+  "current_task": {
+    "id": "TASK-S3-001",
+    "owner": "CODEX",
+    "status": "OPEN",
+    "acceptance_ids": [
+      "AC-S3-01",
+      "AC-S3-02",
+      "AC-S3-03",
+      "AC-S3-04",
+      "AC-S3-05",
+      "AC-S3-06",
+      "AC-S3-07",
+      "AC-S3-08",
+      "AC-S3-09",
+      "AC-S3-10",
+      "AC-S3-11",
+      "AC-S3-12",
+      "AC-S3-13",
+      "AC-S3-14",
+      "AC-S3-15",
+      "AC-S3-16"
+    ]
+  },
+  "gates": {
+    "opportunity": "TEST_DECISION_EXISTS",
+    "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
+    "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
+    "core_technical": "PARTIAL_SOURCE_READY",
+    "internal_test": "NOT_RUN",
+    "admob_privacy": "NOT_RUN",
+    "monetization_qa": "NOT_RUN",
+    "play_compliance": "NOT_RUN",
+    "closed_test": "NOT_RUN",
+    "production_readiness": "NOT_RUN"
+  },
+  "work_checkpoints": {
+    "W1_pre_admob": "NOT_RUN",
+    "W2_post_admob": "NOT_RUN",
+    "W3_play_compliance": "NOT_RUN",
+    "W4_final_readiness": "NOT_RUN"
+  },
+  "authority": {
+    "build_authorized": false,
+    "artifact_freeze": false,
+    "release_authorized": false,
+    "publication_authorized": false
+  },
+  "evidence_index": "evidence/INDEX.json",
+  "open_blockers": [
+    "Canonical private GitHub remote has not yet been created/verified/pushed by Codex.",
+    "Provider authentication may require one-time human account authorization if unavailable in the Codex environment.",
+    "No Android SDK/Gradle/ADB evidence has executed in the packaging environment.",
+    "No APK/assembleDebug evidence exists yet.",
+    "No emulator/device execution evidence exists yet.",
+    "Real Android Bitmap.compress target-fit, EXIF orientation, large-input, Save/Share and MediaStore/provider behaviors remain unproven."
+  ],
+  "human_decisions_required": [
+    "Only provider/account authentication if Codex reports AUTH_REQUIRED; do not ask the human to perform routine Git commands.",
+    "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
+  ],
+  "next_action": "Codex runs repository bootstrap first; create/verify private GitHub remote and push main/develop/task/TASK-S3-001, then execute S3 Android technical proof.",
+  "repository": {
+    "bootstrap_owner": "CODEX",
+    "provider": "GITHUB",
+    "name": "upload-ready-image-compressor",
+    "visibility_required": "PRIVATE",
+    "remote_creation_authorized": true,
+    "remote_creation_authorization_ref": "USER_OPTION_1_2026-09-26_FACTORY_V1.0.1_ACTIVATION_AND_REFRESH",
+    "remote_delete_authorized": false,
+    "remote_transfer_authorized": false,
+    "public_visibility_authorized": false,
+    "force_push_authorized": false,
+    "local_git_state": "NOT_RUN",
+    "remote_state": "NOT_RUN",
+    "remote_url": "",
+    "default_branch": "main",
+    "integration_branch": "develop",
+    "active_task_branch": "",
+    "bootstrap_state": "COMMAND_FAILED",
+    "last_bootstrap_at": "2026-09-26T15:09:21.941426+00:00",
+    "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
+    "last_hold_code": "COMMAND_FAILED"
+  }
+}

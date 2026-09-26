@@ -1,0 +1,2 @@
+IMPORT_PARITY_PASS
+app/** byte-identical; build.gradle/settings.gradle/gradle.properties byte-identical to vertical slice v0.1.0.

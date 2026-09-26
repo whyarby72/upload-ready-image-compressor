@@ -1,0 +1,74 @@
+{
+  "artifact": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
+  "static_checks": {
+    "xml_all_well_formed": true,
+    "manifest_has_no_permissions": true,
+    "no_internet_permission": true,
+    "no_broad_storage_permission": true,
+    "provider_not_exported": true,
+    "photo_picker_api33": true,
+    "open_document_fallback": true,
+    "jpeg_only_picker": true,
+    "actual_output_bytes_used": true,
+    "already_ready_no_recompress": true,
+    "unknown_path_not_pass_semantics": true,
+    "quality_floor_40": true,
+    "dimension_guard_720": true,
+    "media_store_save": true,
+    "readonly_share_provider": true,
+    "compile_sdk_36": true,
+    "target_sdk_36": true,
+    "min_sdk_29": true,
+    "agp_9_4_1": true
+  },
+  "xml_results": [
+    {
+      "file": "app/src/main/res/drawable/pill_selected.xml",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "file": "app/src/main/res/drawable/pill_default.xml",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "file": "app/src/main/res/drawable/card_bg.xml",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "file": "app/src/main/res/values/styles.xml",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "file": "app/src/main/res/values/strings.xml",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "file": "app/src/main/res/values/colors.xml",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "file": "app/src/main/res/layout/activity_main.xml",
+      "pass": true,
+      "error": ""
+    },
+    {
+      "file": "app/src/main/AndroidManifest.xml",
+      "pass": true,
+      "error": ""
+    }
+  ],
+  "host_tests": {
+    "QualitySearchHostTest": "PASS"
+  },
+  "android_compile": "NOT_RUN_ANDROID_SDK_ABSENT",
+  "apk": "NOT_PRODUCED",
+  "device_execution": "NOT_RUN",
+  "real_android_bitmap_encoder_evidence": "NOT_RUN",
+  "overall": "PARTIAL_SOURCE_READY"
+}

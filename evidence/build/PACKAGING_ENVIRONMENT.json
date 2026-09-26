@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-09-26",
+  "java_present": true,
+  "javac_present": true,
+  "gradle_present": false,
+  "adb_present": false,
+  "sdkmanager_present": false,
+  "claim_ceiling": "FACTORY_REPO_AND_HOST_TEST_ONLY",
+  "android_build": "NOT_RUN",
+  "apk": "NOT_PRODUCED",
+  "device_execution": "NOT_RUN",
+  "factory_version": "1.0.1",
+  "github_remote_create_push": "NOT_RUN_IN_PACKAGING_ENVIRONMENT"
+}

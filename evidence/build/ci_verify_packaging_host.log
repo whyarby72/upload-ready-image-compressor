@@ -1,0 +1,4 @@
+PREFLIGHT_PASS
+CI_PARTIAL: gradlew not present; repo contract PASS, Android build skipped.
+EVIDENCE_INDEX_PASS 8
+HANDOFF_RENDER_PASS
