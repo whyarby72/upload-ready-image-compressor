@@ -1,10 +1,10 @@
 # APP_IDENTITY_DECISION_v1.0
 
-Status: FINAL_FOR_IMPLEMENTATION
+Status: SUPERSEDED_BY_KEYWORD_LED_NAMING_RESEARCH
 Decision date: 2026-09-27
 Scope: Google Play application identity before first Play upload
 
-## Final Identity
+## Superseded Identity
 
 - Play Store title (EN): `SizeProof: Photo Compressor`
 - Launcher / in-app brand: `SizeProof`
@@ -67,3 +67,9 @@ Working short-description direction:
 `Compress photos to KB/MB upload limits and verify the actual result.`
 
 Localization and final store copy remain separate ASO work and do not alter the package ID.
+
+
+## Supersession Note — 2026-09-27
+Subsequent keyword-led market research changed the naming strategy. The `SizeProof: Photo Compressor` title and `com.afradadmedia.sizeproof` package are no longer authorized for implementation. No source/package migration was performed from this superseded decision.
+
+See: `docs/market/FINAL_KEYWORD_SELECTION_v1.0.md`.
