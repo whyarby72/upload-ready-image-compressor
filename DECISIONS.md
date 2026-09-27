@@ -239,3 +239,14 @@ These are narrow layout/hierarchy defects. The visual system is not reopened and
 Independent review of `ccbea0bd612b0be5a4d72908a92164be1deda1fa` confirms the final polish is intentionally narrow and modifies only `MainActivity.kt`. The Requirement media context is compacted to a 92dp horizontal row, the Result status/value layout is separated, the friendly value is constrained to one line with responsive type sizing, and duplicated Processing trust copy is removed.
 
 Evidence closure `1d932cfb239c3c74b426fa3a16cf8ed703b5df3a` contains fresh builds, artifacts, hashes, API36/API29 captures and matrix rows. Source/technical evidence is accepted. Final visual quality still requires direct inspection of the fresh images; no visual PASS is inferred from proof text alone.
+
+
+## D-037 — Final visual ZIP proves repository-bound screenshot mislabeling and a 320dp chip clipping defect (2026-09-28)
+
+Direct inspection of the uploaded final-review ZIP shows that several repository-bound screenshots are materially mislabeled. PASS and NOT_MET 360 evidence are byte-identical to REDUCED; PASS 320/font evidence is the Android system photo picker; Requirement font-scale evidence is actually Home; and the Processing file does not show an active processing state.
+
+The uploaded hashes exactly match `evidence/INDEX.json`, so this is not a ZIP packaging error. The screenshot capture/semantic QA gate failed.
+
+Direct visual inspection also finds that the final Requirement layout is materially improved at 360dp, but at 320dp the `Custom` chip is clipped to `Custo`.
+
+A narrow source fix plus semantically verified evidence recapture is required. The Warm Ink system remains accepted and no redesign is authorized.

@@ -149,3 +149,17 @@ Corrective:
 `prompts/CODEX_S5_005_FINAL_VISUAL_POLISH.md`
 
 The Warm Ink concept itself remains approved.
+
+
+## Final visual evidence integrity failure
+
+Audit:
+`docs/ux/S5_005_FINAL_VISUAL_EVIDENCE_INTEGRITY_AUDIT_v1.0.md`
+
+Status:
+`HOLD_EVIDENCE_INTEGRITY_FAILURE_AND_320DP_LABEL_FIX`
+
+Corrective:
+`prompts/CODEX_S5_005_FINAL_EVIDENCE_REPAIR.md`
+
+This is a narrow source/evidence correction within the existing Compose approval.

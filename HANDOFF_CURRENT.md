@@ -1,53 +1,57 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_COMPOSE_WARM_INK_FINAL_VISUAL_REVIEW
+Stage: S5_FINAL_VISUAL_EVIDENCE_REPAIR
 Decision: TEST
 Progress: 97%
 Current task: TASK-S5-005
-Next owner: HUMAN
-Task status: SOURCE_TECHNICAL_PASS_FINAL_VISUAL_REVIEW_PENDING
+Next owner: CODEX
+Task status: HOLD_EVIDENCE_INTEGRITY_FAILURE_AND_320DP_LABEL_FIX
 
-## Final polish
+## Direct ZIP review
 
-Source:
-`ccbea0bd612b0be5a4d72908a92164be1deda1fa`
+CHAT directly inspected:
+`S5_005_FINAL_VISUAL_REVIEW.zip`
 
-Evidence closure:
-`1d932cfb239c3c74b426fa3a16cf8ed703b5df3a`
+ZIP SHA-256:
+`8a8c4ba52cd9cacc52bda4ee42bc10416fcb540ef31db2e05ba2e7bee961bf7c`
 
-Independent audit:
-`docs/ux/S5_005_FINAL_POLISH_INDEPENDENT_SOURCE_CLOSURE_AUDIT_v1.0.md`
+All screenshot hashes match `evidence/INDEX.json`; therefore the defect is repository-bound.
 
-## Status
+## Material evidence failures
 
-Source correction:
-PASS
+- PASS 360 is actually REDUCED.
+- NOT_MET 360 is byte-identical to PASS/REDUCED.
+- PASS 320 is the Android system photo picker.
+- PASS 1.3x is the same system picker.
+- Requirement 1.3x is Home.
+- Reduced 1.3x is byte-identical to normal Reduced 320.
+- Processing screenshot is a completed result state.
 
-Technical/build evidence:
-PASS
+## Actual visual findings
 
-Direct final visual review:
-PENDING
+Requirement 360:
+PASS.
 
-## Final artifacts
+Requirement 320:
+main hierarchy passes, but `Custom` is clipped to `Custo`.
 
-Debug APK:
-`6885621de33b8cc55c4dbd7d30ac0718988f1c41309618f02b9b069dcedaeaae`
+Reduced Result 360:
+PASS for REDUCED.
 
-Release APK:
-`44a07b8d888c47754ed8f69bf632f1bc8fd3eae7890e1314a3717906d4544a42`
+Reduced Result 320:
+PASS_WITH_SCROLL.
 
-Release AAB:
-`aacfcc495bd1d1bdec0a3c769f63337ade089ddf247984176cc571c8ad41a0aa`
+## Next action
 
-## Remaining human gate
+Run:
+`prompts/CODEX_S5_005_FINAL_EVIDENCE_REPAIR.md`
 
-Upload/directly inspect:
-- requirement_100kb_api36_360x800.png
-- requirement_100kb_api36_320x640.png
-- result_pass_api36_360x800.png
-- result_pass_api36_320x640.png
-- result_pass_font_1_3x_api36.png
+This includes:
+- narrow 320dp target-chip label fix;
+- semantic screenshot verification before naming;
+- fresh recapture;
+- duplicate-hash rejection;
+- fresh artifacts because source changes.
 
 No signing / Play upload / S6 / BUILD / Artifact Freeze / release / publication.

@@ -274,3 +274,15 @@
 - confirmed fresh build/artifact evidence and hashes;
 - advanced workflow to direct final visual review;
 - retained HOLD on S5 until fresh runtime screenshots are directly inspected.
+
+
+# 2026-09-28 — Final visual evidence integrity failure found by direct ZIP review
+
+- verified uploaded ZIP screenshot hashes exactly match repository evidence index;
+- found PASS/NOT_MET/REDUCED semantic screenshot collisions;
+- found system picker mislabeled as PASS result;
+- found Home mislabeled as Requirement font-scale evidence;
+- found Processing evidence showing a completed result;
+- found 320dp Custom target chip clipped to Custo;
+- reopened only the narrow target-chip layout and evidence-capture controls;
+- required semantic state verification and duplicate-hash rejection before evidence naming/closure.
