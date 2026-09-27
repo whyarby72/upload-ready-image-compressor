@@ -108,7 +108,7 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "8b2538e63a6cc06beb918439b5c3ce6b9d2f751d",
+    "last_pushed_task_commit": "aadf167aad7776b6396456eb4b7f535876fbe329",
     "evidence_closure_base_commit": "3df5a7802582c681b7d610f43167c8884460df3c"
   },
   "s4_review": {
