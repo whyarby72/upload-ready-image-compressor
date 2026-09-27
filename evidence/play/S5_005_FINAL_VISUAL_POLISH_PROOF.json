@@ -1,0 +1,32 @@
+{
+  "task": "TASK-S5-005",
+  "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW",
+  "decision": "TEST",
+  "source_commit": "ccbea0bd612b0be5a4d72908a92164be1deda1fa",
+  "tested_head_before_closure": "0dc3ea028a7591e5618987c495768fe677bcceb0",
+  "scope": "Narrow final visual polish only; presentation layer; no domain/compression changes.",
+  "environment": {
+    "jdk": "17.0.16",
+    "api36": "emulator-5554; 360x800 and 320x640 captures",
+    "api29": "emulator-5556; launch capture",
+    "fixture": "evidence/result_1mb_api36.jpg; deterministic 720x480 JPEG"
+  },
+  "commands": [
+    "JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home ./gradlew assembleDebug test lint",
+    "JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home ./gradlew assembleRelease bundleRelease"
+  ],
+  "expected_actual": {
+    "requirement": "Expected compact media context and all target controls above fold; actual fresh API36 frames show horizontal media row, six choices, selected summary, and Continue.",
+    "result": "Expected friendly size/unit one line at 320/360/font 1.3x; actual fresh Result frame shows 77 KB on one line with status badge above.",
+    "processing": "Expected media-first indeterminate progress with no duplicate On-device body trust; actual frame shows preview, spinner, and Original untouched.",
+    "protected_domain": "Expected no protected domain/compression changes; actual git diff is presentation-only MainActivity change."
+  },
+  "artifacts": [
+    {"path": "evidence/artifacts/s5_005_final/app-debug.apk", "bytes": 30359120, "sha256": "6885621de33b8cc55c4dbd7d30ac0718988f1c41309618f02b9b069dcedaeaae"},
+    {"path": "evidence/artifacts/s5_005_final/app-release-unsigned.apk", "bytes": 22984645, "sha256": "44a07b8d888c47754ed8f69bf632f1bc8fd3eae7890e1314a3717906d4544a42"},
+    {"path": "evidence/artifacts/s5_005_final/app-release.aab", "bytes": 7950304, "sha256": "aacfcc495bd1d1bdec0a3c769f63337ade089ddf247984176cc571c8ad41a0aa"}
+  ],
+  "evidence_namespace": "evidence/screenshots/s5_005_final/",
+  "visual_review": "HUMAN_REVIEW_REQUIRED; Codex does not claim visual PASS.",
+  "publication": "No signing, Play upload, S6, BUILD promotion, or release claim."
+}

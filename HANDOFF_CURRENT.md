@@ -5,41 +5,29 @@ Stage: S5_COMPOSE_WARM_INK_FINAL_VISUAL_POLISH
 Decision: TEST
 Progress: 95%
 Current task: TASK-S5-005
-Next owner: CODEX
-Task status: HOLD_NARROW_FINAL_VISUAL_POLISH
+Next owner: CHAT
+Task status: READY_FOR_FINAL_HUMAN_VISUAL_REVIEW
 
-## Direct visual review
+## Evidence summary
+- 0.1.0: 1
+- 2026-09-27: 1
+- HUMAN_ACTION_REQUIRED: 2
+- HUMAN_REVIEW_REQUIRED: 5
+- PASS: 106
+- six target choices: 1
 
-CHAT directly inspected the six uploaded runtime screenshots.
+## Authority
+- build_authorized: False
+- artifact_freeze: False
+- release_authorized: False
+- publication_authorized: False
 
-Audit:
-`docs/ux/S5_005_HUMAN_VISUAL_FORENSIC_AUDIT_v1.0.md`
+## Blockers
+- Direct final human visual review remains required; Codex does not self-approve visual quality.
 
-Disposition:
-- Warm Ink concept: PASS
-- technical evidence: PASS
-- runtime visual implementation: NARROW REWORK REQUIRED
-
-## Blocking visual issues
-
-1. Requirement:
-the large media card pushes the second preset row, requirement summary and continuation below the first 360x800 viewport.
-
-2. Result:
-friendly size wraps as `199` / `KB`, weakening the primary result hierarchy.
-
-## Non-blocking
-
-- Home: PASS_WITH_MINOR_POLISH
-- 1.3x Home: PASS
-- Processing: PASS_WITH_POLISH
-- Custom invalid-inline: PASS
+## Human decisions required
+- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
+- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
 
 ## Next action
-
-Run:
-`prompts/CODEX_S5_005_FINAL_VISUAL_POLISH.md`
-
-No redesign.
-No protected-domain changes.
-No signing or Play upload.
+CHAT + HUMAN independently review the fresh TASK-S5-005 final visual-polish screenshots; no S6 or release claim.

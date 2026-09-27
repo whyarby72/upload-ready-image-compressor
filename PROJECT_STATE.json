@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_COMPOSE_WARM_INK_CORRECTIVE",
+    "current_stage": "S5_COMPOSE_WARM_INK_FINAL_VISUAL_POLISH",
     "canonical_decision": "TEST",
     "progress_percent": 95,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -16,7 +16,7 @@
       "status": "READY_FOR_HUMAN_VISUAL_REVIEW",
       "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "49b8eb39e4585d314c305a63f2a8a0ce4a972d6ac63a3dbe703046e0732b33ea",
+      "apk_sha256": "6885621de33b8cc55c4dbd7d30ac0718988f1c41309618f02b9b069dcedaeaae",
       "application_id": "com.afradadmedia.reducephotosize",
       "namespace": "com.afradadmedia.reducephotosize",
       "label": "Reduce Photo Size"
@@ -25,12 +25,12 @@
       "application_id": "com.afradadmedia.reducephotosize",
       "version_code": 1,
       "version_name": "0.1.0",
-      "aab_path": "evidence/play/app-release-0.1.0-vc1-s5-004-corrective-unsigned.aab",
-      "aab_bytes": 682671,
-      "aab_sha256": "de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5",
-      "apk_path": "evidence/play/app-release-0.1.0-vc1-s5-004-corrective-unsigned.apk",
-      "apk_bytes": 2161978,
-      "apk_sha256": "f507b5249fa5f6322207cce174b3c53801c55cd7c248bc92aad25cd43b940f3b",
+      "aab_path": "evidence/artifacts/s5_005_final/app-release.aab",
+      "aab_bytes": 7950304,
+      "aab_sha256": "aacfcc495bd1d1bdec0a3c769f63337ade089ddf247984176cc571c8ad41a0aa",
+      "apk_path": "evidence/artifacts/s5_005_final/app-release-unsigned.apk",
+      "apk_bytes": 22984645,
+      "apk_sha256": "44a07b8d888c47754ed8f69bf632f1bc8fd3eae7890e1314a3717906d4544a42",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
       "disposition": "PROVENANCE_ONLY_PRE_COMPOSE"
@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-005",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "HOLD_NARROW_FINAL_VISUAL_POLISH",
+    "next_owner": "CHAT",
+    "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -70,15 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Requirement screen pushes the second preset row / selected summary / primary continuation below the first 360x800 viewport.",
-    "Result friendly size wraps its unit to a second line (e.g. 199 / KB), weakening the primary result hierarchy.",
-    "Direct final human visual approval is required after the narrow corrective."
+    "Direct final human visual review remains required; Codex does not self-approve visual quality."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX runs the narrow TASK-S5-005 final visual polish, then CHAT + HUMAN review fresh runtime screenshots.",
+  "next_action": "CHAT + HUMAN independently review the fresh TASK-S5-005 final visual-polish screenshots; no S6 or release claim.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -321,6 +319,17 @@
           "RESULT_SIZE_UNIT_WRAP"
         ]
       }
+    },
+    "final_visual_polish": {
+      "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW",
+      "source_commit": "ccbea0bd612b0be5a4d72908a92164be1deda1fa",
+      "tested_environment": "API36 emulator-5554; API29 emulator-5556; JDK 17.0.16",
+      "screenshot_namespace": "evidence/screenshots/s5_005_final/",
+      "artifact_namespace": "evidence/artifacts/s5_005_final/",
+      "build_gates": "assembleDebug; testDebugUnitTest; lint; assembleRelease; bundleRelease PASS",
+      "protected_domain_files_modified": false,
+      "visual_claim": "NOT_SELF_APPROVED",
+      "next_owner": "CHAT"
     }
   }
 }

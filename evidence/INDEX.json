@@ -1,7 +1,17 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 194,
+  "file_count": 219,
   "files": [
+    {
+      "path": "evidence/artifacts/.DS_Store",
+      "bytes": 6148,
+      "sha256": "0cb39625194426de7be05c94180e7ae1dfdc789d4c49d4e006a9bc9c51dbe895"
+    },
+    {
+      "path": "evidence/artifacts/s5_005/.DS_Store",
+      "bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+    },
     {
       "path": "evidence/artifacts/s5_005/app-debug.apk",
       "bytes": 30359120,
@@ -16,6 +26,21 @@
       "path": "evidence/artifacts/s5_005/app-release.aab",
       "bytes": 7950132,
       "sha256": "c20fd7aeefd9556e706b7c4da5f299e9fd011415c49768d6ab506c96d9e67465"
+    },
+    {
+      "path": "evidence/artifacts/s5_005_final/app-debug.apk",
+      "bytes": 30359120,
+      "sha256": "6885621de33b8cc55c4dbd7d30ac0718988f1c41309618f02b9b069dcedaeaae"
+    },
+    {
+      "path": "evidence/artifacts/s5_005_final/app-release-unsigned.apk",
+      "bytes": 22984645,
+      "sha256": "44a07b8d888c47754ed8f69bf632f1bc8fd3eae7890e1314a3717906d4544a42"
+    },
+    {
+      "path": "evidence/artifacts/s5_005_final/app-release.aab",
+      "bytes": 7950304,
+      "sha256": "aacfcc495bd1d1bdec0a3c769f63337ade089ddf247984176cc571c8ad41a0aa"
     },
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
@@ -66,6 +91,11 @@
       "path": "evidence/device_s5_identity_source_hashes.txt",
       "bytes": 215,
       "sha256": "a9082e15682e800e75d8a53a6a394eace057fbbc48c9a9f9353e8d8890ce583c"
+    },
+    {
+      "path": "evidence/play/S5_005_FINAL_VISUAL_POLISH_PROOF.json",
+      "bytes": 2223,
+      "sha256": "fe0547b703cb8ad8229cc913c1c8dcaaf565fc7d0299650dc9bf20ca43c24b84"
     },
     {
       "path": "evidence/play/S5_005_WARM_INK_CORRECTIVE_PROOF.json",
@@ -781,6 +811,101 @@
       "path": "evidence/screenshots/s5_005/share_sheet_api36.png",
       "bytes": 245200,
       "sha256": "ac0fab25f7d9048d99e86bf167ede4d6e6a81d33847672561615808994ecc423"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/after_select_attempt.png",
+      "bytes": 59305,
+      "sha256": "9ac2546479be60aef63a70cc250516798570ecce0463d4f570cc9c274ece7df8"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/home_api29_320x640.png",
+      "bytes": 110998,
+      "sha256": "2cecb7e846ad2f3d2994c42624f241e1ffb7a0a7c819d66454490f05ab9e3b07"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/home_api36_360x800.png",
+      "bytes": 20296,
+      "sha256": "b55f0427fc7557f0e3d87c141a42be3f27e2a1b3603ddcf75f27843f8c6e15e6"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/launch_api36_360x800.png",
+      "bytes": 28248,
+      "sha256": "ab8d536c3fc21adf94dc8c030186e27f5e9a817e489aa16a68b6133e68699574"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/picker_api36.png",
+      "bytes": 21367,
+      "sha256": "051f8d4477ca299ef74b1ddbbcc9ce18e256c1b39eb0c182e965018bd33d3c77"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/picker_api36_after_tap.png",
+      "bytes": 276496,
+      "sha256": "707595fa4f93baaea042d92c72c9a7b0a7988ca12271d4d8b8bc257484bb86ac"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/picker_selected_api36.png",
+      "bytes": 59588,
+      "sha256": "bb21d5e8d43e2dc50d0e24f55a414e0cd6c355e7f992ad76abc3f0f7faf321ac"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/processing_api36.png",
+      "bytes": 360371,
+      "sha256": "28e16998c1c98609fabc4c42e6aeca178dc72ec2a2bf59fcb8a1335cd054426e"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/requirement_100kb_api36_320x640.png",
+      "bytes": 60139,
+      "sha256": "4d1e2196b2f7e25af7b236d7b9324435d8f7b582e35d4eeee07b151dd4135a99"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/requirement_100kb_api36_360x800.png",
+      "bytes": 62629,
+      "sha256": "0d6a0f7d213b097070105f9b043dd29e03bae8145ee78bebfaf3d8146c233ac9"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/requirement_api36_360x800.png",
+      "bytes": 59588,
+      "sha256": "bb21d5e8d43e2dc50d0e24f55a414e0cd6c355e7f992ad76abc3f0f7faf321ac"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/requirement_font_1_3x_api36.png",
+      "bytes": 30852,
+      "sha256": "6fd51ebe03f6173ea1f095845c9a5b519bcb9d0ba46ba46314203a1731a88700"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/result_not_met_api36_360x800.png",
+      "bytes": 360181,
+      "sha256": "4d340f96d44b1815cff0a496e33493c3b9c9e2d4779ecabf04566aa6fc5cbf65"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/result_pass_api36_320x640.png",
+      "bytes": 158228,
+      "sha256": "2d4c45b19c0346ab6f84d92295750e4725f66281cd36738e37661739ad870474"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/result_pass_api36_360x800.png",
+      "bytes": 360181,
+      "sha256": "4d340f96d44b1815cff0a496e33493c3b9c9e2d4779ecabf04566aa6fc5cbf65"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/result_pass_font_1_3x_api36.png",
+      "bytes": 158228,
+      "sha256": "2d4c45b19c0346ab6f84d92295750e4725f66281cd36738e37661739ad870474"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/result_reduced_api36_320x640.png",
+      "bytes": 218672,
+      "sha256": "5014ac7127ba31ba1d94c55850f6fe84f587f80a4ca6ac6a38aca9caa2097a44"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/result_reduced_api36_360x800.png",
+      "bytes": 360181,
+      "sha256": "4d340f96d44b1815cff0a496e33493c3b9c9e2d4779ecabf04566aa6fc5cbf65"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final/result_reduced_font_1_3x_api36.png",
+      "bytes": 218672,
+      "sha256": "5014ac7127ba31ba1d94c55850f6fe84f587f80a4ca6ac6a38aca9caa2097a44"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",
