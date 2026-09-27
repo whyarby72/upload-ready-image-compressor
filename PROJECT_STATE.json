@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_COMPOSE_WARM_INK_FINAL_VISUAL_POLISH",
     "canonical_decision": "TEST",
-    "progress_percent": 95,
+    "progress_percent": 97,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-005",
-    "owner": "CODEX",
-    "next_owner": "CHAT",
-    "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW",
+    "owner": "CHAT + HUMAN",
+    "next_owner": "HUMAN",
+    "status": "SOURCE_TECHNICAL_PASS_FINAL_VISUAL_REVIEW_PENDING",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_NARROW_FINAL_VISUAL_POLISH",
+    "internal_test": "S5_HOLD_FINAL_DIRECT_VISUAL_REVIEW",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,13 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Direct final human visual review remains required; Codex does not self-approve visual quality."
+    "Direct inspection of final-polish Requirement and Result runtime screenshots remains required before visual PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT + HUMAN independently review the fresh TASK-S5-005 final visual-polish screenshots; no S6 or release claim.",
+  "next_action": "Human uploads the fresh s5_005_final Requirement and Result screenshots directly in chat; CHAT performs final visual gate.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -318,6 +318,19 @@
           "REQUIREMENT_ABOVE_FOLD_HIERARCHY",
           "RESULT_SIZE_UNIT_WRAP"
         ]
+      },
+      "final_polish_review": {
+        "status": "SOURCE_AND_TECHNICAL_EVIDENCE_PASS_FINAL_DIRECT_VISUAL_PENDING",
+        "reviewed_at": "2026-09-28",
+        "source_commit": "ccbea0bd612b0be5a4d72908a92164be1deda1fa",
+        "evidence_commit": "1d932cfb239c3c74b426fa3a16cf8ed703b5df3a",
+        "audit_ref": "docs/ux/S5_005_FINAL_POLISH_INDEPENDENT_SOURCE_CLOSURE_AUDIT_v1.0.md",
+        "source_blockers_resolved": [
+          "REQUIREMENT_COMPACT_MEDIA_HIERARCHY",
+          "RESULT_SINGLE_LINE_FRIENDLY_SIZE",
+          "PROCESSING_DUPLICATE_TRUST_COPY"
+        ],
+        "direct_visual_review": "PENDING"
       }
     },
     "final_visual_polish": {

@@ -232,3 +232,10 @@ CHAT directly inspected the uploaded TASK-S5-005 runtime screenshots. Home, font
 Two runtime defects block final visual PASS: the Requirement screen's large media card pushes key limit controls/continuation below the initial 360x800 viewport, and the Result screen allows the friendly file size unit to wrap onto a second line (for example `199` / `KB`).
 
 These are narrow layout/hierarchy defects. The visual system is not reopened and no product redesign is authorized. A final polish pass remains within the existing `COMPOSE_WARM_INK_IMPLEMENTATION` scope.
+
+
+## D-036 — Final visual-polish source and technical closure pass; direct screenshot gate remains (2026-09-28)
+
+Independent review of `ccbea0bd612b0be5a4d72908a92164be1deda1fa` confirms the final polish is intentionally narrow and modifies only `MainActivity.kt`. The Requirement media context is compacted to a 92dp horizontal row, the Result status/value layout is separated, the friendly value is constrained to one line with responsive type sizing, and duplicated Processing trust copy is removed.
+
+Evidence closure `1d932cfb239c3c74b426fa3a16cf8ed703b5df3a` contains fresh builds, artifacts, hashes, API36/API29 captures and matrix rows. Source/technical evidence is accepted. Final visual quality still requires direct inspection of the fresh images; no visual PASS is inferred from proof text alone.

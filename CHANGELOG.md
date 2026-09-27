@@ -263,3 +263,14 @@
 - accepted Processing with minor polish;
 - held final visual PASS because Requirement key controls fall below first viewport and Result size unit wraps to a second line;
 - opened a narrow final visual-polish pass without reopening product/design scope.
+
+
+# 2026-09-28 — Final visual-polish source/technical audit
+
+- verified final polish is a 9-line presentation-only MainActivity diff;
+- confirmed compact Requirement media row source correction;
+- confirmed Result single-line friendly-size source correction and responsive type sizing;
+- confirmed Processing duplicate trust text removal;
+- confirmed fresh build/artifact evidence and hashes;
+- advanced workflow to direct final visual review;
+- retained HOLD on S5 until fresh runtime screenshots are directly inspected.
