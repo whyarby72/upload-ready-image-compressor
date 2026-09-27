@@ -5,9 +5,9 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_FINAL_VISUAL_EVIDENCE_REPAIR",
+    "current_stage": "S5_FINAL_DIRECT_VISUAL_REVIEW",
     "canonical_decision": "TEST",
-    "progress_percent": 97,
+    "progress_percent": 98,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-005",
-    "owner": "CODEX",
-    "next_owner": "CHAT",
-    "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW_RECAPTURED",
+    "owner": "CHAT + HUMAN",
+    "next_owner": "HUMAN",
+    "status": "SOURCE_EVIDENCE_INTEGRITY_PASS_DIRECT_VISUAL_PENDING",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_FINAL_VISUAL_EVIDENCE_RECAPTURE",
+    "internal_test": "S5_HOLD_FINAL_DIRECT_VISUAL_REVIEW",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,13 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Final visual quality remains for independent CHAT + HUMAN review; Codex does not self-declare visual PASS."
+    "Direct human inspection of the semantically verified s5_005_final_recap PNGs remains required before final visual PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT + HUMAN independently review the semantically verified recap under evidence/screenshots/s5_005_final_recap/.",
+  "next_action": "Package/upload the semantically verified s5_005_final_recap screenshots for direct CHAT + HUMAN visual review.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -348,6 +348,16 @@
           "processing_api36.png"
         ],
         "ui_defect": "CUSTOM_LABEL_CLIPPED_AT_320DP"
+      },
+      "final_recap_independent_audit": {
+        "status": "SOURCE_AND_EVIDENCE_INTEGRITY_PASS_DIRECT_VISUAL_PENDING",
+        "reviewed_at": "2026-09-28",
+        "source_commit": "5c586048860c221bf36ccba9fb5f8f3955d7fbb2",
+        "evidence_commit": "b95ad7d1f9b46149d36f5cb29dd098bf658d1a4a",
+        "audit_ref": "docs/ux/S5_005_FINAL_RECAP_INDEPENDENT_EVIDENCE_AUDIT_v1.0.md",
+        "duplicate_hashes": false,
+        "semantic_verification": "PASS",
+        "direct_visual_review": "PENDING"
       }
     },
     "final_visual_polish": {
@@ -368,7 +378,13 @@
       "semantic_sidecar": "evidence/screenshots/s5_005_final_recap/SEMANTIC_VERIFICATION.json",
       "prior_namespace_disposition": "INVALID_FOR_FINAL_VISUAL_PROOF / provenance only",
       "chip_fix": "Reduced OutlinedButton content padding and selected check spacing; target semantics unchanged.",
-      "semantic_controls": ["foreground package", "viewport", "font_scale=1.3", "required/forbidden tokens", "unique state hashes"],
+      "semantic_controls": [
+        "foreground package",
+        "viewport",
+        "font_scale=1.3",
+        "required/forbidden tokens",
+        "unique state hashes"
+      ],
       "protected_domain_files_modified": false,
       "next_owner": "CHAT"
     }

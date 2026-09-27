@@ -286,3 +286,15 @@
 - found 320dp Custom target chip clipped to Custo;
 - reopened only the narrow target-chip layout and evidence-capture controls;
 - required semantic state verification and duplicate-hash rejection before evidence naming/closure.
+
+
+# 2026-09-28 — Final recap independent evidence audit
+
+- verified three-line target-chip presentation fix only;
+- confirmed all 320dp target labels are semantically present including Custom and selected 100 KB;
+- independently checked 11 semantic recap records;
+- confirmed no duplicate screenshot hashes;
+- confirmed PASS/NOT_MET/REDUCED state hashes are distinct;
+- confirmed 1.3x captures have distinct hashes and recorded font_scale=1.3;
+- accepted final recap source/technical/evidence-integrity gate;
+- advanced to direct final visual review only.

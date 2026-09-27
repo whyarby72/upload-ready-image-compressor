@@ -250,3 +250,12 @@ The uploaded hashes exactly match `evidence/INDEX.json`, so this is not a ZIP pa
 Direct visual inspection also finds that the final Requirement layout is materially improved at 360dp, but at 320dp the `Custom` chip is clipped to `Custo`.
 
 A narrow source fix plus semantically verified evidence recapture is required. The Warm Ink system remains accepted and no redesign is authorized.
+
+
+## D-038 — Final recap source and evidence-integrity gate accepted (2026-09-28)
+
+Independent CHAT audit of source fix `5c586048860c221bf36ccba9fb5f8f3955d7fbb2` and closure `b95ad7d1f9b46149d36f5cb29dd098bf658d1a4a` confirms that the 320dp chip correction is a three-line presentation-only change, protected domain/compression files are unchanged, and the new semantic screenshot sidecar repairs the prior evidence-control failure.
+
+All 11 recap captures are bound to foreground package, viewport, font scale, expected state, required/forbidden semantic tokens and unique hashes. Independent duplicate-hash checking finds no duplicates. The prior final screenshot namespace remains provenance-only invalidated.
+
+Source, technical evidence, evidence integrity and semantic state binding are PASS. Direct visual quality remains pending until the actual recap PNGs are inspected by CHAT + HUMAN.
