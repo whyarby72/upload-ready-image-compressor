@@ -7,7 +7,7 @@ Checkout:
 `task/TASK-S5-005`
 
 Required starting HEAD:
-`<filled in by setup commit>`
+Use the exact SHA supplied in the external handoff. It must equal the branch HEAD at execution.
 
 Material approval:
 `COMPOSE_WARM_INK_IMPLEMENTATION`
@@ -22,7 +22,7 @@ Material approval:
 6. `PRODUCT_SPEC.md`
 7. `docs/ux/S5_004_HUMAN_VISUAL_REJECTION_AUDIT_v1.0.md`
 
-STOP if starting HEAD does not match exactly.
+STOP if the caller-supplied starting HEAD does not match the checked-out branch HEAD exactly.
 
 ## Phase 0 — source and toolchain preflight
 

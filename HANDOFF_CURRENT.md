@@ -58,4 +58,4 @@ Once source mutation occurs:
 
 Run:
 `prompts/CODEX_S5_COMPOSE_WARM_INK_IMPLEMENTATION.md`
-from the exact setup HEAD.
+from the exact branch HEAD supplied in the external handoff. Stop on mismatch.

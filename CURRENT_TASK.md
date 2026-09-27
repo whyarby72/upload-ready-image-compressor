@@ -51,7 +51,7 @@ This approval DOES NOT authorize:
 
 ## Required starting HEAD
 
-`<filled in by setup commit>`
+The exact starting HEAD is supplied in the external Codex handoff and must equal the current branch HEAD at execution. Stop on mismatch.
 
 ## Product goal
 
