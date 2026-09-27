@@ -15,7 +15,7 @@ Repeat-use trigger: Another website/form requires a photo below a specific KB/MB
 
 ## Core Promise
 Primary promise: Know it's ready before you upload.
-Supporting promise: Make any photo fit the upload limit in a few clear steps.
+Supporting promise: Compress toward the upload limit, verify the actual result, and tell the user honestly whether it meets the requirement.
 
 ## UKDC
 Buyer definitely has: A photo.
@@ -111,6 +111,20 @@ Unsupported cases: Non-JPEG formats unless explicitly added and verified.
 - Original-preservation cannot be guaranteed.
 - Real implementation requires disproportionate maintenance/support.
 - Later behavioral validation shows no meaningful trust/value distinction from generic compressors.
+
+## Market-Validated Defect Prevention
+Current public review intelligence is maintained in `docs/market/MARKET_REVIEW_INTELLIGENCE_v1.0.md`.
+
+Binding product controls derived from that evidence:
+- Never weaken actual-byte PASS semantics to satisfy an "exact KB" marketing claim.
+- Never imply that every target can always be reached; NOT_MET is a valid truthful outcome.
+- Treat Save and Share as core-job completion; output retrieval/location clarity is material.
+- Treat silent waiting, unclear progress, and unrecoverable errors as buyer-job defects.
+- Preserve the quality guard rather than silently destroying quality to reach an extreme target.
+- Protect first verified value from ads/paywalls/subscription prompts or manufactured friction.
+- Keep batch/Select-All and general image-toolbox expansion outside MVP unless separately approved.
+
+S6 must exercise these controls on real distributed builds. Market evidence informs defect prevention and positioning; it does not independently authorize feature expansion.
 
 ## Source of Truth
 Full frozen candidate PDC: `docs/product/UPLOAD_READY_IMAGE_COMPRESSOR_PDC_MVP_SPEC_v1.2.0_PHOTO_FIRST_UKDC_CANDIDATE.md`.
