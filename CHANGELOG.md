@@ -83,3 +83,13 @@
 - found S5-REQ-24 false-positive for fractional Custom REQUIREMENT display;
 - reopened TASK-S5-003 for a narrow decimal-SI target formatter correction;
 - placed reqfix AAB `968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4` on HOLD for Play use.
+
+
+# 2026-09-27 — TASK-S5-003 final independent audit
+
+- accepted fractional target display correction;
+- independently verified source/closure lineage and API36 10.5 KB / 1.5 MB runtime evidence;
+- independently recomputed fresh unsigned AAB at 664,211 bytes / SHA-256 `064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc`;
+- closed TASK-S5-003 technical acceptance;
+- corrected stage semantics so S5 remains S5_INTERNAL_TEST_READY until actual Google Play Internal Testing distribution/install evidence exists;
+- preserved HUMAN_PLAY_CONSOLE as next owner and retained TEST decision.

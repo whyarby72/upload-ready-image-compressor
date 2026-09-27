@@ -69,3 +69,10 @@ Binding decision: `docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`.
 ## D-018 — Reopen TASK-S5-003 for fractional target display truth (2026-09-27)
 
 Independent closure audit found that the core explicit-selection repair passes, but S5-REQ-24 was a false-positive. Fractional Custom target bytes are exact internally while the REQUIREMENT label can be rounded or represented inconsistently (for example 10.5 KB -> ~11 KB; 1.5 MB -> 1500 KB), contrary to the binding decimal-SI display contract. TASK-S5-003 is reopened. The reqfix AAB `968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4` is HOLD for Play use until a narrow formatter repair, formatter tests, runtime fractional-Custom evidence, and fresh artifacts exist.
+
+
+## D-019 — TASK-S5-003 technical PASS; S5 distribution gate remains human-bound (2026-09-27)
+
+Independent audit accepts the fractional-display correction at tested source commit `2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d` and closure `dc193d5af46efa1332d896b68fced06ecdd7ceb1`. API36 runtime evidence proves faithful `10.5 KB` and `1.5 MB` requirement display, and the fresh unsigned AAB was independently recomputed as 664,211 bytes / SHA-256 `064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc`.
+
+TASK-S5-003 is therefore technically closed. However S5 itself is not declared-route complete because authorized Google Play Internal Testing distribution/install has not yet occurred. The state remains S5_INTERNAL_TEST_READY with next owner HUMAN_PLAY_CONSOLE. No S6/BUILD/release/publication authority is inferred.

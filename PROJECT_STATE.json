@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_INTERNAL_TEST_COMPLETE",
+    "current_stage": "S5_INTERNAL_TEST_READY",
     "canonical_decision": "TEST",
     "progress_percent": 76,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -41,7 +41,7 @@
     "id": "TASK-S5-003",
     "owner": "CODEX",
     "next_owner": "HUMAN_PLAY_CONSOLE",
-    "status": "COMPLETED",
+    "status": "CLOSED_PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION",
     "acceptance_ids": [
       "S5-REQ-01",
       "S5-REQ-02",
@@ -75,7 +75,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_PASS_HUMAN_SIGNING_UPLOAD_ACTION",
+    "internal_test": "S5_TECHNICAL_PREP_PASS_HUMAN_PLAY_DISTRIBUTION_REQUIRED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -96,13 +96,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after technical PASS."
+    "Authorized signing / Google Play Internal Testing distribution and install verification are still required before S5 declared-route completion."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "HUMAN_PLAY_CONSOLE performs authorized signing/account/upload review. No Play upload or S6/BUILD promotion by CODEX.",
+  "next_action": "HUMAN_PLAY_CONSOLE performs authorized signing/account setup and distributes the fresh fractional-fix artifact through Google Play Internal Testing. S6 begins only after declared-route distribution/install evidence.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -124,9 +124,9 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
+    "last_pushed_task_commit": "dc193d5af46efa1332d896b68fced06ecdd7ceb1",
     "evidence_closure_base_commit": "3df5a7802582c681b7d610f43167c8884460df3c",
-    "last_pushed_task_commit_scope": "SOURCE_FIX_CHECKPOINT; documentation closure commit intentionally cannot self-reference its own SHA"
+    "last_pushed_task_commit_scope": "TASK_S5_003_CODEX_CLOSURE; independent Chat reconciliation commit follows"
   },
   "s4_review": {
     "status": "PASS",
@@ -166,7 +166,7 @@
     "decision_ref": "docs/product/APP_IDENTITY_FINAL_v1.0.md"
   },
   "s5_requirement_truth_fix": {
-    "status": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
+    "status": "PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION",
     "source_fix_commit": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
     "tested_source_commit": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
     "defect_ref": "docs/ux/FIRST_OPEN_REQUIREMENT_DEEP_AUDIT_v1.0.md",
@@ -203,18 +203,15 @@
       "exact_byte_proof": true
     },
     "chat_review": {
-      "status": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
+      "status": "PASS_TASK_TECHNICAL",
       "reviewed_at": "2026-09-27",
-      "reviewed_closure": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
-      "passed": [
-        "No implicit default target on API36/API29.",
-        "Decimal preset/parser semantics implemented.",
-        "Exact-byte PASS/NOT_MET proof implemented.",
-        "Fresh AAB binary hash independently verified."
-      ],
-      "defect": null,
+      "reviewed_closure": "dc193d5af46efa1332d896b68fced06ecdd7ceb1",
+      "tested_source_commit": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
+      "independent_aab_sha256": "064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc",
+      "independent_aab_bytes": 664211,
+      "apk_sha256_recompute": "NOT_RECOMPUTED_CONNECTOR_BINARY_PAYLOAD_LIMIT",
       "failed_acceptance": null,
-      "audit_ref": "docs/ux/S5_003_INDEPENDENT_CLOSURE_AUDIT_v1.0.md"
+      "audit_ref": "docs/ux/S5_003_FINAL_INDEPENDENT_AUDIT_v1.0.md"
     }
   }
 }
