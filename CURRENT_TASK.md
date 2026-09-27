@@ -1,102 +1,117 @@
 # CURRENT_TASK.md
 
-Task ID: TASK-S5-001
+Task ID: TASK-S5-002
 Owner: CODEX
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: COMPLETED
+Status: OPEN
 
 ## Goal
-Prepare UPLOAD-READY IMAGE COMPRESSOR for a real Google Play Internal Testing route while preserving the S4-proven buyer job and keeping canonical decision `TEST`.
+Migrate the Android application identity from the superseded `com.uploadready.app` / working-name state to the frozen keyword-led identity:
 
-## Proven Baseline
-- S4 Core Technical Pass: PASS by independent Chat audit.
-- S4 evidence closure commit: `8b2538e63a6cc06beb918439b5c3ce6b9d2f751d`
-- Tested source/artifact commit: `772b3a321be6964240d4ac8f16f2fbecf4dc0de7`
-- S3 closure base: `3df5a7802582c681b7d610f43167c8884460df3c`
-- Debug APK SHA-256: `f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34`
-- S3 matrix: 24 PASS / 0 pending/blocking.
+- English Play title: `Reduce Photo Size: KB Limit`
+- Launcher / in-app name: `Reduce Photo Size`
+- applicationId / namespace: `com.afradadmedia.reducephotosize`
 
-## Declared S5 Test Route
-Google Play Console -> Internal testing.
+Then rebuild, retest, and regenerate S5 artifact evidence before any Play upload.
 
-The goal of S5 is readiness for distribution through the declared test route, not production release.
+## Authority
+
+This task is authorized for reversible engineering/package migration and verification only.
+
+It does NOT authorize:
+- Play Console upload;
+- signing identity creation/selection;
+- Artifact Freeze;
+- release;
+- publication;
+- BUILD promotion;
+- AdMob / UMP / analytics integration.
+
+Stop at HUMAN_ACTION_REQUIRED if account/signing/upload action is required.
+
+## Source of truth
+
+Read first:
+1. `docs/product/APP_IDENTITY_FINAL_v1.0.md`
+2. `docs/market/TITLE_FINAL_SCREEN_REDUCE_PHOTO_SIZE_KB_LIMIT_v1.0.md`
+3. `PRODUCT_SPEC.md`
+4. `S5_INTERNAL_TEST_PLAN.md`
+5. `S6_INTERNAL_TEST_PLAN.md`
+6. `AGENTS.md`
 
 ## In Scope
-- preserve S4 buyer-critical behavior and truth semantics;
-- prepare a Play-compatible internal-test artifact;
-- verify package/application identity, versionCode/versionName, target/min SDK, and build reproducibility;
-- produce a valid Android App Bundle when technically possible;
-- verify bundle structure and artifact SHA-256;
-- prepare internal-test release notes and tester instructions;
-- prepare tester feedback capture focused on buyer job;
-- prepare traceability from S4 evidence to S5 test artifact;
-- rerun proportional regression after any code/build-config change;
-- record all evidence under /evidence;
-- update PROJECT_STATE, TEST_MATRIX or S5 matrix, HANDOFF_CURRENT, DECISIONS, CHANGELOG;
-- commit and push ordinary engineering/evidence changes to this task branch.
 
-## Human / Account Authority Boundary
-Codex may prepare the technical artifact and Play Console handoff.
+- migrate `applicationId` to `com.afradadmedia.reducephotosize`;
+- migrate Android namespace to `com.afradadmedia.reducephotosize`;
+- migrate Java package declarations/imports/source directories where needed;
+- migrate provider authorities and any hard-coded package references;
+- change launcher/app label to `Reduce Photo Size`;
+- update tests/fixtures/evidence references to the final identity;
+- search repository for stale publication-relevant `com.uploadready.app` references;
+- preserve buyer-job semantics and existing S4/S5 core behavior;
+- rebuild debug/release/AAB artifacts;
+- rerun unit/lint/install/launch/core regression;
+- regenerate exact artifact hashes and S5 evidence;
+- commit/push ordinary engineering/evidence changes to this task branch.
 
-Codex must STOP for explicit human action before:
-- creating/selecting the app identity in Play Console if account/legal identity action is required;
-- accepting Play terms or declarations;
-- enrolling/configuring Play App Signing where an account decision is required;
-- supplying or generating production signing identity/keystore on behalf of the human;
-- adding/removing real tester identities if this reveals personal data not already approved;
-- uploading/submitting a release to Google Play when that action is treated as release/publication/account action;
-- changing pricing, countries, data-safety declarations, production access, or publication state.
+## Explicit Non-Scope
 
-A human Play Console action does not promote canonical decision beyond TEST.
-
-## Explicitly Out of Scope
-- canonical BUILD promotion;
-- AdMob / UMP / analytics;
-- production release;
-- closed/open testing;
-- production-access application;
-- Artifact Freeze;
-- store listing optimization;
 - feature expansion;
-- UI redesign unless a blocking S5 defect is proven;
-- force-push, public repo, remote delete/transfer, billing mutation.
+- UI redesign except identity-related strings or defect repair;
+- batch/PDF/converter/passport/crop/AI features;
+- AdMob/UMP/analytics;
+- Play Console upload;
+- production release/publication;
+- signing account decisions;
+- Artifact Freeze.
 
-## Required Technical Work
-1. Confirm branch ancestry from S4 closure.
-2. Run `python scripts/preflight.py`.
-3. Record exact JDK/Gradle/AGP/SDK/build-tools identities.
-4. Inspect current versionCode/versionName and document S5 test version policy.
-5. Build debug regression:
-   - `./gradlew --no-daemon assembleDebug`
-   - `./gradlew --no-daemon testDebugUnitTest`
-   - `./gradlew --no-daemon lintDebug`
-6. Build a Play-compatible bundle:
-   - prefer `./gradlew --no-daemon bundleRelease` only if it can be produced without inventing signing/account identity;
-   - if release signing is unavailable, use the safest technically valid preparation path and record the exact blocker rather than fabricating release readiness.
-7. Inspect resulting AAB/APK identity and hashes.
-8. Verify no AdMob/network/broad-storage permissions were introduced.
-9. Prepare internal-test release notes + tester instructions.
-10. Prepare an S5 traceability matrix.
-11. Regenerate evidence index + handoff.
-12. Run `python scripts/validate_release_authority.py`.
-13. Commit/push ordinary S5 preparation evidence.
+## Required Verification
 
-## S5 Acceptance
-- S5-01: S4 baseline provenance is preserved.
-- S5-02: branch/task/repo state is correct and private.
-- S5-03: preflight/build/unit/lint regression remains green.
-- S5-04: Play-compatible installable/distributable test artifact is produced or an exact human/account signing blocker is recorded.
-- S5-05: artifact identity/version/hash is recorded.
-- S5-06: permission/privacy regression remains green.
-- S5-07: internal-test route, release notes, tester instructions, and feedback plan are documented.
-- S5-08: evidence is artifact-bound, environment-bound, and replayable.
-- S5-09: authority validation remains fail-safe; no production/release authority is inferred.
-- S5-10: HANDOFF_CURRENT clearly identifies whether the next owner is HUMAN_PLAY_CONSOLE or CHAT/S5_REVIEW.
+1. `python scripts/preflight.py`
+2. repository-wide stale-identity search
+3. `./gradlew --no-daemon assembleDebug`
+4. `./gradlew --no-daemon testDebugUnitTest`
+5. `./gradlew --no-daemon lintDebug`
+6. `./gradlew --no-daemon assembleRelease`
+7. `./gradlew --no-daemon bundleRelease`
+8. inspect package/application identity in generated artifacts
+9. install/launch current Android environment
+10. install/launch representative older supported Android environment
+11. rerun buyer-critical truth cases:
+   - CURRENT detection
+   - known target PASS
+   - aggressive target NOT_MET
+   - unknown limit REDUCED
+   - original preservation
+   - Save
+   - Share
+   - orientation/quality safety
+   - large input
+12. permission/privacy regression:
+   - no INTERNET
+   - no broad storage/media permissions
+   - no AdMob/UMP/analytics
+13. generate new AAB/APK hashes
+14. update evidence index/state/handoff
+15. `python scripts/validate_release_authority.py`
 
-## Completion State
-Codex technical preparation is complete. The S5 gate remains at HUMAN_ACTION_REQUIRED until an authorized human completes the Play signing/account/upload step and the build is actually distributed through the declared Internal Testing route.
+## Acceptance
+
+- S5-ID-01: exact final applicationId is `com.afradadmedia.reducephotosize`.
+- S5-ID-02: namespace/source/provider/test references are internally consistent.
+- S5-ID-03: launcher/app label is `Reduce Photo Size`.
+- S5-ID-04: no publication-relevant stale `com.uploadready.app` remains.
+- S5-ID-05: preflight/build/unit/lint/release/bundle regression PASS.
+- S5-ID-06: current + representative older Android install/launch PASS.
+- S5-ID-07: core PASS/NOT_MET/REDUCED truth remains correct.
+- S5-ID-08: original preservation + Save/Share remain correct.
+- S5-ID-09: permission/privacy regression remains green.
+- S5-ID-10: new AAB/APK identity/bytes/SHA-256 are recorded.
+- S5-ID-11: old AAB `96ddc5b59df576c365af1321faf8801d9dbd72c77c482f97911df993ed1f5cea` remains provenance only and is not eligible for Play upload.
+- S5-ID-12: handoff stops at HUMAN_PLAY_CONSOLE if signing/upload is still required.
 
 ## Done When
-S5 may be reported READY only when the app has a real test artifact and the remaining action, if any, is a clearly identified human Play Console/account step. S5 does not authorize S6 PASS and does not authorize BUILD, AdMob, release, or publication.
+
+The final keyword-led identity is proven in fresh build artifacts and all buyer-critical regressions pass. The resulting unsigned/signed state must be described exactly. Do not claim S6, BUILD, Artifact Freeze, release, or publication.
