@@ -34,7 +34,7 @@ public final class MainActivity extends Activity {
     private Button[] targetButtons;
 
     private ImageInfo imageInfo;
-    private long selectedTargetBytes = 1024L * 1024L;
+    private long selectedTargetBytes;
     private File currentResultFile;
     private CompressionResult currentResult;
 
@@ -43,7 +43,7 @@ public final class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         bindViews();
         bindActions();
-        selectTarget(1024L * 1024L, 4);
+        clearTargetSelection();
     }
 
     private void bindViews() {
@@ -72,11 +72,11 @@ public final class MainActivity extends Activity {
 
     private void bindActions() {
         findViewById(R.id.choosePhotoButton).setOnClickListener(v -> launchPicker());
-        targetButtons[0].setOnClickListener(v -> selectTarget(50L * 1024L, 0));
-        targetButtons[1].setOnClickListener(v -> selectTarget(100L * 1024L, 1));
-        targetButtons[2].setOnClickListener(v -> selectTarget(200L * 1024L, 2));
-        targetButtons[3].setOnClickListener(v -> selectTarget(500L * 1024L, 3));
-        targetButtons[4].setOnClickListener(v -> selectTarget(1024L * 1024L, 4));
+        targetButtons[0].setOnClickListener(v -> selectTarget(50_000L, 0));
+        targetButtons[1].setOnClickListener(v -> selectTarget(100_000L, 1));
+        targetButtons[2].setOnClickListener(v -> selectTarget(200_000L, 2));
+        targetButtons[3].setOnClickListener(v -> selectTarget(500_000L, 3));
+        targetButtons[4].setOnClickListener(v -> selectTarget(1_000_000L, 4));
         targetButtons[5].setOnClickListener(v -> showCustomTargetDialog());
         makeReadyButton.setOnClickListener(v -> startKnownCompression());
         unknownLimitButton.setOnClickListener(v -> startUnknownReduction());
@@ -122,6 +122,7 @@ public final class MainActivity extends Activity {
 
     private void showRequirement(ImageInfo info) {
         imageInfo = info;
+        clearTargetSelection();
         homePanel.setVisibility(View.GONE);
         progressPanel.setVisibility(View.GONE);
         resultPanel.setVisibility(View.GONE);
@@ -132,8 +133,10 @@ public final class MainActivity extends Activity {
     }
 
     private void selectTarget(long bytes, int index) {
+        if (bytes < TargetLimitParser.MIN_BYTES || bytes > TargetLimitParser.MAX_BYTES) return;
         selectedTargetBytes = bytes;
         selectedTargetText.setText("REQUIRED: ≤ " + FormatUtils.target(bytes));
+        makeReadyButton.setEnabled(imageInfo != null);
         for (int i = 0; i < targetButtons.length; i++) {
             targetButtons[i].setBackgroundTintList(null);
             targetButtons[i].setBackgroundResource(i == index ? R.drawable.pill_selected : R.drawable.pill_default);
@@ -165,34 +168,32 @@ public final class MainActivity extends Activity {
                 .setNegativeButton("Cancel", null)
                 .setPositiveButton("Use limit", (d, which) -> {
                     try {
-                        double value = Double.parseDouble(input.getText().toString().trim());
-                        if (value <= 0) throw new NumberFormatException();
-                        long bytes = Math.round(value * (mb.isChecked() ? 1024d * 1024d : 1024d));
-                        if (bytes < 8L * 1024L || bytes > 50L * 1024L * 1024L) {
-                            Toast.makeText(this, "Use a limit between 8 KB and 50 MB", Toast.LENGTH_LONG).show();
-                            return;
-                        }
+                        long bytes = TargetLimitParser.parse(input.getText().toString(), mb.isChecked());
                         selectTarget(bytes, 5);
-                    } catch (NumberFormatException ex) {
-                        Toast.makeText(this, "Enter a valid number", Toast.LENGTH_LONG).show();
+                    } catch (IllegalArgumentException ex) {
+                        Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }).show();
     }
 
     private void startKnownCompression() {
-        if (imageInfo == null) return;
-        setBusy(imageInfo.sizeBytes <= selectedTargetBytes ? "Verifying actual size…" : "Compressing on-device…");
+        if (imageInfo == null || selectedTargetBytes <= 0) return;
+        final ImageInfo imageSnapshot = imageInfo;
+        final long targetSnapshot = selectedTargetBytes;
+        setBusy(imageSnapshot.sizeBytes <= targetSnapshot ? "Verifying actual size…" : "Compressing on-device…");
         worker.execute(() -> {
-            CompressionResult r = JpegCompressionEngine.compressKnown(this, imageInfo, selectedTargetBytes);
+            CompressionResult r = JpegCompressionEngine.compressKnown(this, imageSnapshot, targetSnapshot);
             runOnUiThread(() -> showResult(r));
         });
     }
 
     private void startUnknownReduction() {
         if (imageInfo == null) return;
+        final ImageInfo imageSnapshot = imageInfo;
+        clearTargetSelection();
         setBusy("Making a smaller copy…");
         worker.execute(() -> {
-            CompressionResult r = JpegCompressionEngine.reduceUnknown(this, imageInfo);
+            CompressionResult r = JpegCompressionEngine.reduceUnknown(this, imageSnapshot);
             runOnUiThread(() -> showResult(r));
         });
     }
@@ -226,7 +227,7 @@ public final class MainActivity extends Activity {
             case ALREADY_READY:
                 resultStateText.setText("UPLOAD READY ✓");
                 resultStateText.setTextColor(getColor(R.color.ur_success));
-                resultProofText.setText(FormatUtils.bytes(r.outputBytes) + " ≤ " + FormatUtils.target(r.targetBytes) + " — PASS");
+                resultProofText.setText(r.outputBytes + " bytes ≤ " + r.targetBytes + " bytes — PASS");
                 resultProofText.setTextColor(getColor(R.color.ur_success));
                 break;
             case REDUCED:
@@ -244,7 +245,7 @@ public final class MainActivity extends Activity {
             case NOT_MET:
                 resultStateText.setText("TARGET NOT MET");
                 resultStateText.setTextColor(getColor(R.color.ur_warning));
-                resultProofText.setText(FormatUtils.bytes(r.outputBytes) + " > " + FormatUtils.target(r.targetBytes));
+                resultProofText.setText(r.outputBytes + " bytes > " + r.targetBytes + " bytes — NOT_MET");
                 resultProofText.setTextColor(getColor(R.color.ur_warning));
                 break;
             case ERROR:
@@ -285,6 +286,7 @@ public final class MainActivity extends Activity {
 
     private void reset() {
         imageInfo = null;
+        clearTargetSelection();
         currentResult = null;
         currentResultFile = null;
         resultPanel.setVisibility(View.GONE);
@@ -306,6 +308,19 @@ public final class MainActivity extends Activity {
     }
 
     private void hideError() { errorText.setVisibility(View.GONE); }
+
+    private void clearTargetSelection() {
+        selectedTargetBytes = 0L;
+        if (selectedTargetText != null) selectedTargetText.setText("Choose the upload limit");
+        if (makeReadyButton != null) makeReadyButton.setEnabled(false);
+        if (targetButtons != null) {
+            for (Button button : targetButtons) {
+                button.setBackgroundTintList(null);
+                button.setBackgroundResource(R.drawable.pill_default);
+                button.setTextColor(getColor(R.color.ur_text));
+            }
+        }
+    }
     private int dp(int v) { return Math.round(v * getResources().getDisplayMetrics().density); }
 
     @Override protected void onDestroy() {
