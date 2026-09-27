@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: OPEN
+Status: COMPLETED
 
 ## Goal
 Prepare UPLOAD-READY IMAGE COMPRESSOR for a real Google Play Internal Testing route while preserving the S4-proven buyer job and keeping canonical decision `TEST`.
@@ -94,6 +94,9 @@ A human Play Console action does not promote canonical decision beyond TEST.
 - S5-08: evidence is artifact-bound, environment-bound, and replayable.
 - S5-09: authority validation remains fail-safe; no production/release authority is inferred.
 - S5-10: HANDOFF_CURRENT clearly identifies whether the next owner is HUMAN_PLAY_CONSOLE or CHAT/S5_REVIEW.
+
+## Completion State
+Codex technical preparation is complete. The S5 gate remains at HUMAN_ACTION_REQUIRED until an authorized human completes the Play signing/account/upload step and the build is actually distributed through the declared Internal Testing route.
 
 ## Done When
 S5 may be reported READY only when the app has a real test artifact and the remaining action, if any, is a clearly identified human Play Console/account step. S5 does not authorize S6 PASS and does not authorize BUILD, AdMob, release, or publication.
