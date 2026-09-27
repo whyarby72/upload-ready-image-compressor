@@ -103,3 +103,17 @@ Binding references:
 The first high-fidelity First Open / Requirement / PASS composite establishes the correct modern Precision Utility direction but contains several implementation-invalid details: a false EXIF-preservation claim, guaranteed target-success wording, a decimal-SI friendly/exact-byte mismatch, an over-specific first-open compression result, decorative navigation/overflow controls, and celebration confetti.
 
 TASK-S5-004 must therefore implement the visual system only after applying the corrections in `docs/ux/S5_HIGH_FIDELITY_MOCKUP_REVIEW_v1.0.md`. Unknown-limit truth, exact-byte verification, original preservation, metadata-removal disclosure, and decimal-SI consistency remain authoritative over visual mockup content.
+
+
+## D-023 — Mockup v2 accepted as visual bar; implementation contract frozen (2026-09-27)
+
+The eight-screen mockup v2 materially meets the target visual quality, but only seven core screens are approved for MVP implementation. The separate Requirement Helper screen is deferred pending behavioral evidence.
+
+The progress mockup's 68% indicator and staged checklist are explicitly rejected because the current engine exposes neither measured percentage nor phase callbacks. TASK-S5-004 must use truthful indeterminate progress.
+
+All friendly current/result/before/after sizes are now required to use decimal SI consistently with exact-byte verification. PASS copy may only claim that the entered maximum size is met, not full portal compatibility.
+
+The default implementation remains dependency-light XML/View. Material Components must not be silently added merely for styling.
+
+Binding implementation contract:
+`docs/ux/S5_UI_IMPLEMENTATION_CONTRACT_v1.0.md`

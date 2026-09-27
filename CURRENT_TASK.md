@@ -398,3 +398,20 @@ Mandatory corrections:
 - unknown-limit action remains visibly reachable.
 
 Codex must implement the corrected design system, not copy the mockup literally.
+
+
+## Mockup v2 and final implementation contract
+
+Read:
+- `docs/ux/S5_HIGH_FIDELITY_MOCKUP_V2_REVIEW_v1.0.md`
+- `docs/ux/S5_UI_IMPLEMENTATION_CONTRACT_v1.0.md`
+
+Mockup v2 is the visual quality target, but:
+- fake numeric progress is forbidden;
+- fake progress stages are forbidden;
+- Requirement Helper is deferred from MVP;
+- friendly file sizes must use decimal SI;
+- PASS support copy must only claim the entered maximum size is met;
+- NOT_MET must not add an unapproved new navigation flow.
+
+The implementation contract is authoritative for coding.

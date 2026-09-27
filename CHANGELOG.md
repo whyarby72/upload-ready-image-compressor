@@ -125,3 +125,15 @@
 - made photo thumbnail optional rather than a new product requirement;
 - rejected nonfunctional back/overflow controls and confetti;
 - preserved unknown-limit visibility and exact-byte result proof.
+
+
+# 2026-09-27 — TASK-S5-004 mockup v2 implementation gate
+
+- accepted mockup v2 as the target visual quality bar after bound corrections;
+- rejected fake 68% progress and fabricated processing stages;
+- deferred the extra Requirement Helper surface from MVP;
+- required decimal-SI friendly size formatting across current/result/comparison UI;
+- constrained PASS copy to maximum-size truth only;
+- retained existing navigation scope for NOT_MET;
+- froze dependency-light XML/View as the default implementation path;
+- created the final code-ready UI implementation contract.

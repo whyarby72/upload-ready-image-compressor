@@ -95,7 +95,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Refine TASK-S5-004 implementation against benchmark + design blueprint + high-fidelity mockup truth corrections before Play.",
+  "next_action": "CODEX executes TASK-S5-004 from the latest branch HEAD using the binding implementation contract, then returns fresh screenshots/artifacts for independent Chat review.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -208,7 +208,7 @@
     }
   },
   "s5_ui_ux_modernization": {
-    "status": "REQUIRED_OPEN",
+    "status": "CODE_READY",
     "reason": "User visual review found current UI materially outdated; source audit confirms legacy platform theme/button/component treatment.",
     "baseline_aab_sha256": "064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc",
     "baseline_aab_play_eligible": false,
@@ -218,6 +218,12 @@
     "design_system_ref": "docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md",
     "visual_archetype": "PRECISION_UTILITY_COBALT_NEUTRAL_MODERN_EDITORIAL_ANDROID",
     "mockup_review_status": "REWORK_BOUND_TRUTH_CORRECTIONS",
-    "mockup_review_ref": "docs/ux/S5_HIGH_FIDELITY_MOCKUP_REVIEW_v1.0.md"
+    "mockup_review_ref": "docs/ux/S5_HIGH_FIDELITY_MOCKUP_REVIEW_v1.0.md",
+    "mockup_v2_status": "IMPLEMENTATION_READY_AFTER_BOUND_CORRECTIONS",
+    "mockup_v2_review_ref": "docs/ux/S5_HIGH_FIDELITY_MOCKUP_V2_REVIEW_v1.0.md",
+    "implementation_contract_ref": "docs/ux/S5_UI_IMPLEMENTATION_CONTRACT_v1.0.md",
+    "requirement_helper": "DEFERRED_FROM_MVP",
+    "progress_semantics": "INDETERMINATE_ONLY_NO_FAKE_PERCENT",
+    "ui_dependency_policy": "DEPENDENCY_LIGHT_NATIVE_VIEW_DEFAULT"
   }
 }
