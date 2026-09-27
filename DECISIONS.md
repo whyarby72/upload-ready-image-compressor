@@ -223,3 +223,12 @@ CHAT independently reviewed corrective source `5ab842073cfe6dbc507baac499c3af37a
 The corrective source satisfies the previously identified implementation defects at source level, protected domain files remain unchanged, and the closure now contains repository-bound build/runtime/artifact evidence with replayable environment/commands and full artifact hashes.
 
 The current connector cannot decode repository PNG/binary files for direct visual inspection, so screenshot existence is accepted but visual quality is not inferred from filenames, Codex attestations, or matrix rows. Technical evidence is PASS; the direct human visual gate remains pending.
+
+
+## D-035 — Direct runtime visual review accepts Warm Ink direction but requires narrow final hierarchy polish (2026-09-28)
+
+CHAT directly inspected the uploaded TASK-S5-005 runtime screenshots. Home, font-scale Home, Custom invalid state, and overall Warm Ink palette/composition are materially improved and consistent with the approved premium direction.
+
+Two runtime defects block final visual PASS: the Requirement screen's large media card pushes key limit controls/continuation below the initial 360x800 viewport, and the Result screen allows the friendly file size unit to wrap onto a second line (for example `199` / `KB`).
+
+These are narrow layout/hierarchy defects. The visual system is not reopened and no product redesign is authorized. A final polish pass remains within the existing `COMPOSE_WARM_INK_IMPLEMENTATION` scope.

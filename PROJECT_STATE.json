@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-005",
-    "owner": "CHAT + HUMAN",
-    "next_owner": "HUMAN",
-    "status": "TECHNICAL_EVIDENCE_PASS_HUMAN_VISUAL_PENDING",
+    "owner": "CODEX",
+    "next_owner": "CODEX",
+    "status": "HOLD_NARROW_FINAL_VISUAL_POLISH",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_HUMAN_VISUAL_REVIEW",
+    "internal_test": "S5_HOLD_NARROW_FINAL_VISUAL_POLISH",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,13 +70,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Direct human visual approval of actual corrected Compose runtime screenshots is required before Play."
+    "Requirement screen pushes the second preset row / selected summary / primary continuation below the first 360x800 viewport.",
+    "Result friendly size wraps its unit to a second line (e.g. 199 / KB), weakening the primary result hierarchy.",
+    "Direct final human visual approval is required after the narrow corrective."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human provides the repository-bound TASK-S5-005 runtime screenshots directly in chat for visual comparison against the approved Warm Ink anchor.",
+  "next_action": "CODEX runs the narrow TASK-S5-005 final visual polish, then CHAT + HUMAN review fresh runtime screenshots.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -301,6 +303,23 @@
         "audit_ref": "docs/ux/S5_005_CHAT_INDEPENDENT_CLOSURE_AUDIT_v1.0.md",
         "artifact_hash_recompute": "NOT_AVAILABLE_BINARY_CONNECTOR_LIMIT",
         "visual_review": "PENDING_DIRECT_IMAGE_ACCESS"
+      },
+      "direct_visual_review": {
+        "status": "REWORK_REQUIRED_NARROW",
+        "reviewed_at": "2026-09-28",
+        "audit_ref": "docs/ux/S5_005_HUMAN_VISUAL_FORENSIC_AUDIT_v1.0.md",
+        "screenshots_reviewed": [
+          "home_api36_360x800.png",
+          "requirement_100kb_api36.png",
+          "processing_api36.png",
+          "result_api36.png",
+          "custom_invalid_inline_api36.png",
+          "home_font_1_3x_api36.png"
+        ],
+        "blocking_findings": [
+          "REQUIREMENT_ABOVE_FOLD_HIERARCHY",
+          "RESULT_SIZE_UNIT_WRAP"
+        ]
       }
     }
   }

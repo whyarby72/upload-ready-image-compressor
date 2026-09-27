@@ -253,3 +253,13 @@
 - confirmed repository-bound build/runtime/artifact evidence and full artifact hashes;
 - accepted technical-evidence closure;
 - retained HOLD for direct human visual review because the current connector cannot render repository PNG binaries in chat.
+
+
+# 2026-09-28 — Direct TASK-S5-005 visual forensic audit
+
+- directly reviewed six uploaded Compose runtime screenshots;
+- accepted Warm Ink concept and major visual modernization;
+- passed Home, 1.3x Home and Custom invalid-inline state;
+- accepted Processing with minor polish;
+- held final visual PASS because Requirement key controls fall below first viewport and Result size unit wraps to a second line;
+- opened a narrow final visual-polish pass without reopening product/design scope.

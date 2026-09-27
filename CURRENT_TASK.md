@@ -131,3 +131,21 @@ Corrective prompt:
 `prompts/CODEX_S5_005_WARM_INK_CORRECTIVE.md`
 
 This corrective is inside the existing `COMPOSE_WARM_INK_IMPLEMENTATION` approval scope.
+
+
+## Direct human-screen visual audit
+
+Audit:
+`docs/ux/S5_005_HUMAN_VISUAL_FORENSIC_AUDIT_v1.0.md`
+
+Status:
+`HOLD_NARROW_FINAL_VISUAL_POLISH`
+
+Blocking:
+- Requirement above-fold hierarchy.
+- Result friendly-size unit wrap.
+
+Corrective:
+`prompts/CODEX_S5_005_FINAL_VISUAL_POLISH.md`
+
+The Warm Ink concept itself remains approved.
