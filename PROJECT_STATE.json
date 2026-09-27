@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_INTERNAL_TEST_COMPLETE",
+    "current_stage": "S5_INTERNAL_TEST_READY",
     "canonical_decision": "TEST",
     "progress_percent": 76,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -33,15 +33,15 @@
       "apk_sha256": "7b28ba612f2cde6da032675fcf1cf3b732228f05859b889c493e3a7611d615d0",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
-      "disposition": "FRESH_REQFIX_ARTIFACT_UNSIGNED_HUMAN_ACTION_REQUIRED"
+      "disposition": "HOLD_FRACTIONAL_TARGET_DISPLAY_TRUTH"
     },
     "frozen_release_candidate": null
   },
   "current_task": {
     "id": "TASK-S5-003",
     "owner": "CODEX",
-    "next_owner": "HUMAN_PLAY_CONSOLE",
-    "status": "COMPLETED",
+    "next_owner": "CODEX",
+    "status": "REOPENED_CORRECTIVE_FIX_REQUIRED",
     "acceptance_ids": [
       "S5-REQ-01",
       "S5-REQ-02",
@@ -75,7 +75,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_PASS_HUMAN_SIGNING_UPLOAD_ACTION",
+    "internal_test": "S5_HOLD_FRACTIONAL_TARGET_DISPLAY_TRUTH",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -96,13 +96,14 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
+    "Fractional Custom requirement display violates the binding decimal-SI display contract: e.g. 10.5 KB can render as 11 KB and 1.5 MB as 1500 KB.",
     "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after technical PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "HUMAN_PLAY_CONSOLE performs authorized signing/account/upload review. No Play upload or S6/BUILD promotion by CODEX.",
+  "next_action": "CODEX repairs fractional Custom target display truth, adds formatter/runtime evidence, rebuilds fresh artifacts, and re-closes TASK-S5-003. No Play upload.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -165,8 +166,8 @@
     "authority_scope": "NAMING_AND_PACKAGE_IDENTITY_FREEZE_ONLY",
     "decision_ref": "docs/product/APP_IDENTITY_FINAL_v1.0.md"
   },
-    "s5_requirement_truth_fix": {
-    "status": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
+  "s5_requirement_truth_fix": {
+    "status": "HOLD_FRACTIONAL_TARGET_DISPLAY_TRUTH",
     "source_fix_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
     "tested_source_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
     "defect_ref": "docs/ux/FIRST_OPEN_REQUIREMENT_DEEP_AUDIT_v1.0.md",
@@ -201,6 +202,20 @@
       "max_fraction_digits": 3,
       "decimal_separator_policy": "ONE_DOT_OR_COMMA_NO_GROUPING",
       "exact_byte_proof": true
+    },
+    "chat_review": {
+      "status": "HOLD",
+      "reviewed_at": "2026-09-27",
+      "reviewed_closure": "bd690e8ac592d92ee2e3b1cd07698b2b87c22720",
+      "passed": [
+        "No implicit default target on API36/API29.",
+        "Decimal preset/parser semantics implemented.",
+        "Exact-byte PASS/NOT_MET proof implemented.",
+        "Fresh AAB binary hash independently verified."
+      ],
+      "defect": "Fractional Custom target display is not faithful to binding friendly decimal-SI contract.",
+      "failed_acceptance": "S5-REQ-24",
+      "audit_ref": "docs/ux/S5_003_INDEPENDENT_CLOSURE_AUDIT_v1.0.md"
     }
   }
 }

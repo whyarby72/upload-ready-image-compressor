@@ -234,3 +234,29 @@ Add explicit tests for:
 A fresh artifact proves the user must explicitly supply a known upload limit before any PASS/NOT_MET path, while the unknown path remains REDUCED-only.
 
 The Custom semantics blocker is resolved. Execute the repaired task and stop at HUMAN_PLAY_CONSOLE after producing fresh unsigned/signed-state evidence. Do not claim S6, BUILD, Artifact Freeze, release, or publication.
+
+
+## Independent closure review — corrective repair required
+
+Binding audit:
+`docs/ux/S5_003_INDEPENDENT_CLOSURE_AUDIT_v1.0.md`
+
+The reported closure is not accepted as final because `S5-REQ-24` is false-positive for fractional Custom target display.
+
+Required correction:
+- `FormatUtils.target(10_500)` -> `10.5 KB`
+- `FormatUtils.target(1_500_000)` -> `1.5 MB`
+- `FormatUtils.target(1_000)` -> `1 KB`
+- `FormatUtils.target(50_000_000)` -> `50 MB`
+- `FormatUtils.target(1_001)` -> `1.001 KB`
+
+Rules:
+- decimal SI only;
+- up to 3 useful fractional digits;
+- trim trailing zeros;
+- do not round the displayed maximum upward;
+- preserve exact-byte PASS/NOT_MET proof.
+
+Add deterministic formatter unit tests and runtime Custom requirement evidence for 10.5 KB and 1.5 MB.
+
+Current AAB `968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4` is HOLD and becomes provenance after the correction.

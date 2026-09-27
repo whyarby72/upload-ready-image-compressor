@@ -74,3 +74,12 @@
 - limited Custom values to 3 fractional digits and one dot OR comma decimal separator without grouping;
 - required exact decimal arithmetic and exact-byte PASS/NOT_MET proof;
 - reopened TASK-S5-003 for Codex source execution.
+
+
+# 2026-09-27 — TASK-S5-003 independent closure audit
+
+- independently verified branch/commit lineage and fresh AAB SHA-256;
+- accepted the explicit-selection, decimal parser, worker snapshot, and API29/API36 requirement-state repairs;
+- found S5-REQ-24 false-positive for fractional Custom REQUIREMENT display;
+- reopened TASK-S5-003 for a narrow decimal-SI target formatter correction;
+- placed reqfix AAB `968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4` on HOLD for Play use.
