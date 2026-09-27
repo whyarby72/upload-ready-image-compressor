@@ -5,6 +5,14 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class TargetLimitParserTest {
+    @Test public void targetDisplayUsesExactDecimalSiFractions() {
+        assertEquals("10.5 KB", FormatUtils.target(10_500L));
+        assertEquals("1.5 MB", FormatUtils.target(1_500_000L));
+        assertEquals("1 KB", FormatUtils.target(1_000L));
+        assertEquals("50 MB", FormatUtils.target(50_000_000L));
+        assertEquals("1.001 KB", FormatUtils.target(1_001L));
+    }
+
     @Test public void decimalPresetsUseSiBytes() {
         assertEquals(50_000L, TargetLimitParser.parse("50", false));
         assertEquals(100_000L, TargetLimitParser.parse("100", false));

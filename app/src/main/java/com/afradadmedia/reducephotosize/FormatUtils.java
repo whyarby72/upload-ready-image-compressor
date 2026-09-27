@@ -1,6 +1,8 @@
 package com.afradadmedia.reducephotosize;
 
 import java.util.Locale;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 final class FormatUtils {
     private FormatUtils() {}
@@ -16,8 +18,15 @@ final class FormatUtils {
     }
 
     static String target(long bytes) {
-        if (bytes % 1_000_000L == 0) return (bytes / 1_000_000L) + " MB";
-        if (bytes % 1_000L == 0) return (bytes / 1_000L) + " KB";
-        return bytes(bytes);
+        if (bytes >= 1_000_000L) return decimalSi(bytes, 1_000_000L, "MB");
+        if (bytes >= 1_000L) return decimalSi(bytes, 1_000L, "KB");
+        return bytes + " B";
+    }
+
+    private static String decimalSi(long bytes, long unit, String suffix) {
+        BigDecimal value = BigDecimal.valueOf(bytes)
+                .divide(BigDecimal.valueOf(unit), 3, RoundingMode.DOWN)
+                .stripTrailingZeros();
+        return value.toPlainString() + " " + suffix;
     }
 }
