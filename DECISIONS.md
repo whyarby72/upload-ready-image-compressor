@@ -50,3 +50,8 @@ Independent Chat audit of HEAD `2b787b5781aa8851420a71326db757364230660f` accept
 ## D-015 — Explicit upload-limit selection required before verified path (2026-09-27)
 
 Deep first-open/requirement audit found that the current source preselects 1 MB during app creation. Because PRODUCT_SPEC defines REQUIRED as a user-provided external website/form limit, an implicit app default can validate the wrong requirement. TASK-S5-003 therefore requires an unselected requirement state, a disabled known-limit CTA until explicit valid user selection, defensive target validation, reset of target selection for every newly selected photo, and preservation of the unknown-limit REDUCED-only path. The pre-fix AAB `992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6` is HOLD for Play use pending fresh post-fix artifacts. No broad redesign is authorized.
+
+
+## D-016 — Hold TASK-S5-003 for unresolved Custom KB/MB semantics (2026-09-27)
+
+Pre-code audit found that the frozen PDC defines Custom KB/MB as canonical but does not define decimal-vs-binary unit interpretation, the implementation's 8 KB / 50 MB boundaries, fractional-target display precision, or numeric locale behavior. Current code silently uses 1024-based units and rounds non-integral KB proof text, which can weaken visible requirement truth. TASK-S5-003 is therefore held before source modification until these semantics are explicitly resolved. This HOLD does not change the canonical TEST decision and does not authorize feature expansion.

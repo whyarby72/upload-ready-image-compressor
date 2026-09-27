@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: OPEN
+Status: HOLD_CUSTOM_UNIT_SEMANTICS_DECISION
 
 ## Goal
 
@@ -46,6 +46,22 @@ Read first:
 4. `S6_INTERNAL_TEST_PLAN.md`
 5. `docs/product/APP_IDENTITY_FINAL_v1.0.md`
 6. `AGENTS.md`
+
+## PRE-CODE BLOCKER — Custom unit semantics
+
+Do not modify app source yet.
+
+The Custom-limit audit found specification gaps that materially affect PASS truth:
+- the frozen PDC does not define decimal-vs-binary KB/MB;
+- current code silently uses 1024-based units;
+- the PDC does not define the current 8 KB minimum or 50 MB maximum;
+- decimal Custom values can be rounded misleadingly by current proof formatting;
+- fractional-input locale behavior is undefined.
+
+Binding audit:
+`docs/ux/TASK_S5_003_CUSTOM_LIMIT_BOUNDARY_AUDIT_v1.0.md`
+
+Resume source work only after the unit/boundary/display rules are explicitly resolved and added to this task.
 
 ## Required source changes
 
@@ -129,6 +145,19 @@ Do not reduce font sizes or preset touch targets merely to fit content.
 - unknown-path processing must not resurrect an abandoned known target on error/retry;
 - no error path may create a valid REQUIRED value from the unselected sentinel.
 
+## Custom-limit verification additions after blocker resolution
+
+Add explicit tests for:
+- resolved KB/MB byte convention on 100 KB and 1 MB;
+- resolved minimum exactly and immediately below;
+- resolved maximum exactly and immediately above;
+- fractional KB/MB when supported;
+- supported decimal-separator behavior;
+- visible REQUIRED/proof precision matching the actual byte threshold;
+- output immediately above/below a custom threshold;
+- prior valid target -> invalid/cancelled Custom preserves prior target;
+- no prior target -> invalid Custom remains unselected.
+
 ## Required verification
 
 1. `python scripts/preflight.py`
@@ -190,4 +219,4 @@ Do not reduce font sizes or preset touch targets merely to fit content.
 
 A fresh artifact proves the user must explicitly supply a known upload limit before any PASS/NOT_MET path, while the unknown path remains REDUCED-only.
 
-Stop at HUMAN_PLAY_CONSOLE after producing the fresh unsigned/signed-state evidence. Do not claim S6, BUILD, Artifact Freeze, release, or publication.
+While this pre-code blocker is open, stop before source modification. After the blocker is resolved, execute the repaired task and stop at HUMAN_PLAY_CONSOLE after producing fresh unsigned/signed-state evidence. Do not claim S6, BUILD, Artifact Freeze, release, or publication.

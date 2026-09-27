@@ -6,10 +6,23 @@ Stage: S5_INTERNAL_TEST_READY
 Decision: TEST
 Progress: 76%
 Current task: TASK-S5-003
-Next owner: CODEX
-Task status: OPEN
+Next owner: CHAT_RESEARCH_OR_SCOPE_DECISION
+Task status: HOLD_CUSTOM_UNIT_SEMANTICS_DECISION
 
 ## Current gate
+
+TASK-S5-003 source coding is temporarily held after a Custom-limit boundary audit found an unresolved product-truth specification gap.
+
+The frozen PDC supports Custom KB/MB but does not define:
+- 1000-vs-1024 byte units;
+- current 8 KB minimum;
+- current 50 MB maximum;
+- fractional display precision;
+- decimal parsing locale policy.
+
+See `docs/ux/TASK_S5_003_CUSTOM_LIMIT_BOUNDARY_AUDIT_v1.0.md`.
+
+
 
 S5 requirement-truth repair is required before Play Console.
 
@@ -41,4 +54,4 @@ Do not upload it to Google Play if TASK-S5-003 source repair is adopted.
 
 ## Next action
 
-CODEX executes `prompts/CODEX_S5_REQUIREMENT_TRUTH_FIX.md` on `task/TASK-S5-003`.
+Resolve and bind Custom KB/MB semantics first. Do not run the current Codex source-fix prompt until CURRENT_TASK.md is released from HOLD.

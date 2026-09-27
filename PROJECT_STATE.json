@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-003",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "OPEN",
+    "next_owner": "CHAT_RESEARCH_OR_SCOPE_DECISION",
+    "status": "HOLD_CUSTOM_UNIT_SEMANTICS_DECISION",
     "acceptance_ids": [
       "S5-REQ-01",
       "S5-REQ-02",
@@ -69,7 +69,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_REQUIRED",
+    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_HOLD_CUSTOM_UNIT_SEMANTICS",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -90,14 +90,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Known requirement-capture defect: the current build preselects 1 MB instead of requiring an explicit user-provided upload limit. Fix and fresh artifact evidence are required before Play upload.",
-    "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after the requirement-truth fix passes."
+    "Custom KB/MB semantics are not fully specified: decimal-vs-binary unit base, fractional precision/display, min/max limits, and locale parsing must be resolved before TASK-S5-003 source changes.",
+    "Known requirement-capture defect remains open until TASK-S5-003 is implemented and freshly verified.",
+    "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after technical PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes hardened TASK-S5-003 on task/TASK-S5-003. Do not start from the earlier prompt revision; use the current CURRENT_TASK.md and prompts/CODEX_S5_REQUIREMENT_TRUTH_FIX.md.",
+  "next_action": "Resolve custom KB/MB unit semantics and boundaries, then update TASK-S5-003 before Codex modifies source.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -176,6 +177,18 @@
         "Preset/Custom switching must preserve one last-valid-explicit-target invariant.",
         "API29 picker path must prove the same unselected requirement state."
       ]
+    },
+    "custom_limit_audit": {
+      "status": "HOLD",
+      "audit_ref": "docs/ux/TASK_S5_003_CUSTOM_LIMIT_BOUNDARY_AUDIT_v1.0.md",
+      "source_support": {
+        "custom_capability": "SUPPORTED",
+        "decimal_vs_binary_unit_base": "UNKNOWN",
+        "minimum_8kb": "UNSUPPORTED_BY_SPEC",
+        "maximum_50mb": "UNSUPPORTED_BY_SPEC",
+        "fractional_precision_rule": "UNKNOWN",
+        "locale_decimal_policy": "UNKNOWN"
+      }
     }
   }
 }
