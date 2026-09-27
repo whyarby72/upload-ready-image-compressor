@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_UI_UX_REDESIGN_V2_REQUIRED",
     "canonical_decision": "TEST",
-    "progress_percent": 85,
+    "progress_percent": 86,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -95,7 +95,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT converts the human-approved Warm Ink mockup into an exact Compose implementation brief/spec. Coding remains unauthorized until that brief is reviewed/approved.",
+  "next_action": "Human reviews/approves S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md scope. Only then may CODEX implement the Compose Warm Ink presentation layer.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -292,6 +292,15 @@
         "release",
         "publication"
       ]
+    },
+    "compose_implementation_brief": {
+      "status": "READY_FOR_APPROVAL",
+      "observed_at": "2026-09-27",
+      "ref": "docs/ux/S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md",
+      "scope": "PRESENTATION_LAYER_ONLY",
+      "engine_rewrite": false,
+      "coding_authorized": false,
+      "required_next_approval": "COMPOSE_WARM_INK_IMPLEMENTATION"
     }
   }
 }

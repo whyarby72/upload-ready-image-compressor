@@ -487,3 +487,18 @@ Next owner:
 
 Next phase:
 produce and approve a substantially different high-fidelity visual system before coding.
+
+
+## Compose Warm Ink implementation brief
+
+Exact implementation specification:
+`docs/ux/S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md`
+
+Status:
+`READY_FOR_HUMAN_IMPLEMENTATION_APPROVAL`
+
+Scope is presentation-layer migration only.
+The existing verified Java/domain engine remains frozen unless a separately proven defect requires change.
+
+Do not implement until explicit approval:
+`COMPOSE_WARM_INK_IMPLEMENTATION`

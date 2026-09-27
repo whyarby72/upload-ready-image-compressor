@@ -185,3 +185,12 @@ The preferred future presentation architecture remains Compose Material 3 over t
 The user explicitly approved the latest five-screen `MEDIA-FIRST PRECISION UTILITY — WARM INK` mockup concept. This establishes the visual anchor for the next implementation pass: warm ivory canvas, deep muted teal/ink primary actions, media-first composition, low copy density, premium rounded/pill controls, compact exact-byte proof, restrained semantic colors, and elegant photo comparison.
 
 This is a visual-concept approval only. It does not authorize Compose/source mutation, signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication. The current AAB remains HOLD because it does not implement the newly approved concept.
+
+
+## D-031 — Exact Compose Warm Ink implementation brief ready; coding remains approval-gated (2026-09-27)
+
+The human-approved premium Warm Ink concept has been translated into an exact implementation contract at `docs/ux/S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md`.
+
+The plan replaces the rejected View/XML presentation with a Compose Material 3 presentation layer while retaining the verified Java/domain engine. It defines the state/event bridge, responsive rules, exact screen copy/hierarchy, safe media previews, Warm Ink theme tokens, result action dock, PASS/NOT_MET/REDUCED mappings, custom limit behavior, accessibility, migration order, artifact refresh and runtime screenshot gates.
+
+The brief is complete but does not itself authorize source mutation. Compose implementation remains blocked until explicit human approval of `COMPOSE_WARM_INK_IMPLEMENTATION`.

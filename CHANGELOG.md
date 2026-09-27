@@ -212,3 +212,13 @@
 - preserved exact-byte truth and existing domain behavior as implementation constraints;
 - kept current AAB on HOLD because it predates the approved visual concept;
 - kept Compose/source coding separately gated pending an exact implementation brief/spec.
+
+
+# 2026-09-27 — Exact Compose Warm Ink implementation brief prepared
+
+- mapped the human-approved Warm Ink visual concept to a Compose Material 3 presentation architecture;
+- preserved the existing Java compression/domain engine and product-truth semantics;
+- specified screen-by-screen layout, exact low-density copy, responsive behavior, state/events, preview loading, action dock and result mappings;
+- defined migration order and fresh artifact/runtime evidence gates;
+- retained current AAB on HOLD;
+- kept source implementation explicitly approval-gated.
