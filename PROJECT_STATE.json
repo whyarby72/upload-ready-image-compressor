@@ -95,7 +95,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes TASK-S5-004 on task/TASK-S5-004, performs controlled professional UI/UX redesign, rebuilds/retests, and returns fresh visual/artifact evidence. No Play upload.",
+  "next_action": "CODEX executes TASK-S5-004 using the binding benchmark and design-system blueprint; capture fresh screen evidence before any Play action.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -212,6 +212,10 @@
     "reason": "User visual review found current UI materially outdated; source audit confirms legacy platform theme/button/component treatment.",
     "baseline_aab_sha256": "064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc",
     "baseline_aab_play_eligible": false,
-    "brief_ref": "docs/ux/S5_UI_UX_MODERNIZATION_BRIEF_v1.0.md"
+    "brief_ref": "docs/ux/S5_UI_UX_MODERNIZATION_BRIEF_v1.0.md",
+    "benchmark_status": "COMPLETE_BINDING",
+    "benchmark_ref": "docs/ux/S5_UI_UX_BENCHMARK_FORENSICS_v1.0.md",
+    "design_system_ref": "docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md",
+    "visual_archetype": "PRECISION_UTILITY_COBALT_NEUTRAL_MODERN_EDITORIAL_ANDROID"
   }
 }

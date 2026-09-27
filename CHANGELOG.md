@@ -103,3 +103,13 @@
 - authorized Save-primary / Share-secondary / Compress-another-tertiary result hierarchy;
 - prohibited Compose migration, feature expansion, AdMob, signing, Play upload, and truth-semantics changes;
 - placed the current AAB `064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc` on HOLD pending fresh post-redesign artifacts.
+
+
+# 2026-09-27 — TASK-S5-004 benchmark forensics complete
+
+- reviewed 30 market/workflow, visual-composition, and design-system reference objects;
+- separated app-market evidence from aspirational Dribbble/Pinterest/Figma visual references;
+- froze the `PRECISION UTILITY / COBALT-NEUTRAL / MODERN EDITORIAL ANDROID` archetype;
+- defined binding color, spacing, radius, typography, icon, card, button, chip, status, dialog and screen blueprints;
+- rejected cleaner-dashboard, glassmorphism, neon, bottom-nav and decorative feature-density patterns;
+- updated the Codex modernization prompt to consume the benchmark + design-system blueprint before implementation.

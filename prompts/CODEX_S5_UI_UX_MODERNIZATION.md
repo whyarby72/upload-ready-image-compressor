@@ -8,14 +8,17 @@ Branch:
 
 Read:
 1. `CURRENT_TASK.md`
-2. `docs/ux/S5_UI_UX_MODERNIZATION_BRIEF_v1.0.md`
-3. `PRODUCT_SPEC.md`
-4. `docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`
-5. `docs/ux/S5_003_FINAL_INDEPENDENT_AUDIT_v1.0.md`
+2. `docs/ux/S5_UI_UX_BENCHMARK_FORENSICS_v1.0.md`
+3. `docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md`
+4. `docs/ux/S5_UI_UX_MODERNIZATION_BRIEF_v1.0.md`
+5. `PRODUCT_SPEC.md`
+6. `docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`
+7. `docs/ux/S5_003_FINAL_INDEPENDENT_AUDIT_v1.0.md`
 
 Execute TASK-S5-004 as a controlled UI/UX redesign.
 
 Important:
+- implement the binding `PRECISION UTILITY` design system, not a generic visual refresh;
 - redesign composition, not just colors;
 - remove legacy platform-button look;
 - keep XML/View architecture; do not migrate to Compose;

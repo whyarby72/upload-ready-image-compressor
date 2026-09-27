@@ -85,3 +85,14 @@ User visual review determined that the current Android presentation is materiall
 TASK-S5-004 is authorized as a controlled UI/UX redesign. It may modernize composition, visual hierarchy, cards, target controls, vector iconography, Custom presentation, progress state, result screen, and result action hierarchy. Save copy becomes primary, Share secondary, and Compress another tertiary. Functional truth, compression behavior, package identity, privacy, permissions, and monetization state remain frozen.
 
 Current AAB `064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc` is HOLD while redesign is active and becomes provenance-only after product source changes.
+
+
+## D-021 — Benchmark-derived UI archetype frozen for TASK-S5-004 (2026-09-27)
+
+A 30-reference benchmark across current Android photo/file utilities, modern storage/scanner/file-manager visual concepts, Android Material 3 guidance, and Figma UI-kit/component guidance establishes the implementation archetype: `PRECISION UTILITY / COBALT-NEUTRAL / MODERN EDITORIAL ANDROID`.
+
+The redesign must emphasize one dominant buyer action per state, rounded tonal surfaces, modern target chips, compact product identity, explicit privacy cues, strong numeric outcome hierarchy, visible exact-byte proof, before/after comparison, and Save-primary result completion. Decorative cleaner-dashboard patterns, bottom navigation, glassmorphism, neon, oversized gradients, heavy shadows, and feature-density signaling are rejected.
+
+Binding references:
+- `docs/ux/S5_UI_UX_BENCHMARK_FORENSICS_v1.0.md`
+- `docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md`

@@ -26,7 +26,14 @@ The current implementation still relies on:
 
 The existing layout is understandable, but it reads like a prototype/utility from an older Android design era rather than a polished 2026 consumer utility.
 
-## Design direction
+## Benchmark-derived binding direction
+
+Read before implementation:
+1. `docs/ux/S5_UI_UX_BENCHMARK_FORENSICS_v1.0.md`
+2. `docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md`
+
+Binding archetype:
+**PRECISION UTILITY / COBALT-NEUTRAL / MODERN EDITORIAL ANDROID**
 
 Target:
 **modern, premium, calm, high-trust utility**
@@ -353,6 +360,15 @@ Once source/UI changes occur, that AAB becomes provenance-only and a fresh post-
 - UI-14: no new permissions/network/AdMob/analytics.
 - UI-15: fresh screenshot set and fresh APK/AAB hashes exist.
 - UI-16: independent Chat visual + artifact-bound review passes before Play.
+
+## Design-system requirement
+
+Implementation must use the exact token/component/screen hierarchy in:
+`docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md`
+
+Small stylistic adjustments are allowed only when they preserve the benchmark-derived archetype and improve real-device fit.
+
+Do not substitute a generic Material template or a Dribbble-style decorative dashboard.
 
 ## Done when
 
