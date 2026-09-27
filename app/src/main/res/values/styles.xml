@@ -7,6 +7,8 @@
         <item name="android:statusBarColor">@color/ur_bg</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
     </style>
 
     <style name="Text_Title">
@@ -26,18 +28,61 @@
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="Button_Primary" parent="android:style/Widget.Material.Button">
-        <item name="android:backgroundTint">@color/ur_primary</item>
+    <style name="Text_Support">
+        <item name="android:textColor">@color/ur_muted</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text_Label">
+        <item name="android:textColor">@color/ur_muted</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="Button_Primary">
+        <item name="android:background">@drawable/button_primary</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textSize">16sp</item>
         <item name="android:minHeight">56dp</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
     </style>
 
-    <style name="Button_Secondary" parent="android:style/Widget.Material.Button">
-        <item name="android:backgroundTint">@color/ur_tonal</item>
+    <style name="Button_Secondary">
+        <item name="android:background">@drawable/button_secondary</item>
         <item name="android:textColor">@color/ur_primary</item>
         <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="Button_Tertiary">
+        <item name="android:background">@drawable/button_tertiary</item>
+        <item name="android:textColor">@color/ur_primary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:minHeight">48dp</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Button_Chip">
+        <item name="android:background">@drawable/target_chip</item>
+        <item name="android:textColor">@color/ur_text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
     </style>
 </resources>

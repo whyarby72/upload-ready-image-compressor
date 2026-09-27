@@ -29,7 +29,9 @@ public final class MainActivity extends Activity {
 
     private LinearLayout homePanel, requirementPanel, progressPanel, resultPanel;
     private TextView currentSizeText, currentMetaText, selectedTargetText, progressText;
-    private TextView resultStateText, resultSizeText, resultProofText, resultChangeText, resultDimensionsText, resultNoticeText, errorText;
+    private TextView resultStateText, resultSizeText, resultProofText, resultChangeText, resultDimensionsText, resultNoticeText, errorText, resultBeforeText, resultAfterText;
+    private android.widget.ImageView resultStatusIcon;
+    private View resultStatusRow;
     private Button makeReadyButton, unknownLimitButton, shareButton, saveButton, anotherButton;
     private Button[] targetButtons;
 
@@ -58,9 +60,12 @@ public final class MainActivity extends Activity {
         resultStateText = findViewById(R.id.resultStateText);
         resultSizeText = findViewById(R.id.resultSizeText);
         resultProofText = findViewById(R.id.resultProofText);
-        resultChangeText = findViewById(R.id.resultChangeText);
         resultDimensionsText = findViewById(R.id.resultDimensionsText);
         resultNoticeText = findViewById(R.id.resultNoticeText);
+        resultBeforeText = findViewById(R.id.resultBeforeText);
+        resultAfterText = findViewById(R.id.resultAfterText);
+        resultStatusIcon = findViewById(R.id.resultStatusIcon);
+        resultStatusRow = findViewById(R.id.resultStatusRow);
         errorText = findViewById(R.id.errorText);
         makeReadyButton = findViewById(R.id.makeReadyButton);
         unknownLimitButton = findViewById(R.id.unknownLimitButton);
@@ -135,12 +140,11 @@ public final class MainActivity extends Activity {
     private void selectTarget(long bytes, int index) {
         if (bytes < TargetLimitParser.MIN_BYTES || bytes > TargetLimitParser.MAX_BYTES) return;
         selectedTargetBytes = bytes;
-        selectedTargetText.setText("REQUIRED: ≤ " + FormatUtils.target(bytes));
+        selectedTargetText.setText("Required ≤ " + FormatUtils.target(bytes));
         makeReadyButton.setEnabled(imageInfo != null);
         for (int i = 0; i < targetButtons.length; i++) {
-            targetButtons[i].setBackgroundTintList(null);
-            targetButtons[i].setBackgroundResource(i == index ? R.drawable.pill_selected : R.drawable.pill_default);
-            targetButtons[i].setTextColor(i == index ? getColor(R.color.ur_primary) : getColor(R.color.ur_text));
+            targetButtons[i].setSelected(i == index);
+            targetButtons[i].setContentDescription(i == index ? targetButtons[i].getText() + ", selected" : targetButtons[i].getText().toString());
         }
     }
 
@@ -162,18 +166,36 @@ public final class MainActivity extends Activity {
         units.addView(kb); units.addView(mb); kb.setChecked(true);
         box.addView(units);
 
-        new AlertDialog.Builder(this)
+        TextView helper = new TextView(this);
+        helper.setText("1 KB–50 MB · use a dot or comma · up to 3 decimal places");
+        helper.setTextColor(getColor(R.color.ur_muted));
+        helper.setTextSize(13);
+        helper.setPadding(0, dp(8), 0, 0);
+        box.addView(helper);
+
+        TextView validation = new TextView(this);
+        validation.setTextColor(getColor(R.color.ur_error));
+        validation.setTextSize(13);
+        validation.setVisibility(View.GONE);
+        validation.setPadding(0, dp(8), 0, 0);
+        box.addView(validation);
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Custom upload limit")
                 .setView(box)
                 .setNegativeButton("Cancel", null)
-                .setPositiveButton("Use limit", (d, which) -> {
-                    try {
-                        long bytes = TargetLimitParser.parse(input.getText().toString(), mb.isChecked());
-                        selectTarget(bytes, 5);
-                    } catch (IllegalArgumentException ex) {
-                        Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                }).show();
+                .setPositiveButton("Use limit", null).create();
+        dialog.setOnShowListener(d -> dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
+            try {
+                long bytes = TargetLimitParser.parse(input.getText().toString(), mb.isChecked());
+                selectTarget(bytes, 5);
+                dialog.dismiss();
+            } catch (IllegalArgumentException ex) {
+                validation.setText(ex.getMessage());
+                validation.setVisibility(View.VISIBLE);
+            }
+        }));
+        dialog.show();
     }
 
     private void startKnownCompression() {
@@ -216,7 +238,9 @@ public final class MainActivity extends Activity {
         hideError();
 
         resultSizeText.setText(FormatUtils.bytes(r.outputBytes));
-        resultChangeText.setText("CURRENT " + FormatUtils.bytes(r.sourceBytes) + "  →  RESULT " + FormatUtils.bytes(r.outputBytes));
+        resultBeforeText.setText(FormatUtils.bytes(r.sourceBytes));
+        resultAfterText.setText(FormatUtils.bytes(r.outputBytes));
+        if (resultChangeText != null) resultChangeText.setText("CURRENT " + FormatUtils.bytes(r.sourceBytes) + "  →  RESULT " + FormatUtils.bytes(r.outputBytes));
         resultDimensionsText.setText(r.width + " × " + r.height + " · JPEG quality " + (r.jpegQuality == 100 ? "unchanged" : r.jpegQuality));
         resultNoticeText.setText(r.message == null ? "" : r.message);
         shareButton.setEnabled(r.resultFile != null);
@@ -225,26 +249,42 @@ public final class MainActivity extends Activity {
         switch (r.state) {
             case PASS:
             case ALREADY_READY:
-                resultStateText.setText("UPLOAD READY ✓");
+                resultStateText.setText("MEETS LIMIT");
                 resultStateText.setTextColor(getColor(R.color.ur_success));
+                resultStatusIcon.setImageResource(R.drawable.ic_check_circle);
+                resultStatusRow.setBackgroundResource(R.drawable.status_success);
+                resultStatusIcon.setContentDescription("Meets limit");
+                resultNoticeText.setText("The file meets the maximum size you entered.");
                 resultProofText.setText(r.outputBytes + " bytes ≤ " + r.targetBytes + " bytes — PASS");
                 resultProofText.setTextColor(getColor(R.color.ur_success));
                 break;
             case REDUCED:
-                resultStateText.setText("REDUCED");
-                resultStateText.setTextColor(getColor(R.color.ur_primary));
-                resultProofText.setText("No website limit provided — upload compatibility not verified");
-                resultProofText.setTextColor(getColor(R.color.ur_warning));
+                resultStateText.setText("SMALLER COPY");
+                resultStateText.setTextColor(getColor(R.color.ur_info));
+                resultStatusIcon.setImageResource(R.drawable.ic_info);
+                resultStatusRow.setBackgroundResource(R.drawable.status_info);
+                resultStatusIcon.setContentDescription("Smaller copy");
+                resultNoticeText.setText("No upload limit was entered, so compatibility isn't verified.");
+                resultProofText.setText("No upload limit entered — no PASS claim");
+                resultProofText.setTextColor(getColor(R.color.ur_info));
                 break;
             case ALREADY_SMALL:
-                resultStateText.setText("ALREADY SMALL");
-                resultStateText.setTextColor(getColor(R.color.ur_primary));
-                resultProofText.setText("No website limit provided — no PASS claim");
-                resultProofText.setTextColor(getColor(R.color.ur_warning));
+                resultStateText.setText("SMALLER COPY");
+                resultStateText.setTextColor(getColor(R.color.ur_info));
+                resultStatusIcon.setImageResource(R.drawable.ic_info);
+                resultStatusRow.setBackgroundResource(R.drawable.status_info);
+                resultStatusIcon.setContentDescription("Smaller copy");
+                resultNoticeText.setText("No upload limit was entered, so compatibility isn't verified.");
+                resultProofText.setText("No upload limit entered — no PASS claim");
+                resultProofText.setTextColor(getColor(R.color.ur_info));
                 break;
             case NOT_MET:
                 resultStateText.setText("TARGET NOT MET");
                 resultStateText.setTextColor(getColor(R.color.ur_warning));
+                resultStatusIcon.setImageResource(R.drawable.ic_warning);
+                resultStatusRow.setBackgroundResource(R.drawable.status_warning);
+                resultStatusIcon.setContentDescription("Target not met");
+                resultNoticeText.setText("We stopped before quality dropped below the app's safety guard.");
                 resultProofText.setText(r.outputBytes + " bytes > " + r.targetBytes + " bytes — NOT_MET");
                 resultProofText.setTextColor(getColor(R.color.ur_warning));
                 break;
@@ -315,9 +355,8 @@ public final class MainActivity extends Activity {
         if (makeReadyButton != null) makeReadyButton.setEnabled(false);
         if (targetButtons != null) {
             for (Button button : targetButtons) {
-                button.setBackgroundTintList(null);
-                button.setBackgroundResource(R.drawable.pill_default);
-                button.setTextColor(getColor(R.color.ur_text));
+                button.setSelected(false);
+                button.setContentDescription(button.getText().toString());
             }
         }
     }

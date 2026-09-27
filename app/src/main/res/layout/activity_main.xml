@@ -1,291 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/ur_bg">
-
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/ur_bg">
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingTop="24dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="32dp">
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingLeft="20dp" android:paddingTop="18dp"
+        android:paddingRight="20dp" android:paddingBottom="32dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="✓  Reduce Photo Size"
-            android:textColor="@color/ur_text"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="● Private · on-device"
-            android:textColor="@color/ur_success"
-            android:textSize="14sp" />
-
-        <LinearLayout
-            android:id="@+id/homePanel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="34dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/home_title"
-                style="@style/Text_Title" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/home_subtitle"
-                style="@style/Text_Body" />
-
-            <Button
-                android:id="@+id/choosePhotoButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="@string/choose_photo"
-                style="@style/Button_Primary" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:gravity="center"
-                android:text="Original untouched · No account"
-                android:textColor="@color/ur_muted"
-                android:textSize="14sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_photo" android:contentDescription="Photo utility" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginLeft="10dp" android:text="Reduce Photo Size" android:textColor="@color/ur_text" android:textSize="19sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_shield" android:drawablePadding="5dp" android:gravity="center_vertical" android:text="On-device" android:textColor="@color/ur_success" android:textSize="12sp" android:textStyle="bold" android:background="@drawable/trust_pill" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/requirementPanel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:orientation="vertical"
-            android:visibility="gone">
+        <LinearLayout android:id="@+id/homePanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/home_title" style="@style/Text_Title" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/home_subtitle" style="@style/Text_Body" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card_bg"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CURRENT PHOTO"
-                    android:textColor="@color/ur_primary"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/currentSizeText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="—"
-                    android:textColor="@color/ur_text"
-                    android:textSize="34sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/currentMetaText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="—"
-                    style="@style/Text_Body" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:background="@drawable/surface_card" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <ImageView android:layout_width="52dp" android:layout_height="52dp" android:background="@drawable/status_info" android:padding="12dp" android:src="@drawable/ic_photo" android:contentDescription="Photo illustration" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PHOTO UTILITY" style="@style/Text_Label" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Before  →  Smaller" android:textColor="@color/ur_text" android:textSize="16sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Exact size checked on-device" style="@style/Text_Support" />
+                </LinearLayout>
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="@string/requirement_title"
-                style="@style/Text_Section" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:text="Choose the maximum size shown by the website or form."
-                style="@style/Text_Body" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <Button android:id="@+id/target50" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="50 KB" android:textAllCaps="false" />
-                <Button android:id="@+id/target100" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="100 KB" android:textAllCaps="false" />
-                <Button android:id="@+id/target200" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="200 KB" android:textAllCaps="false" />
+            <Button android:id="@+id/choosePhotoButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="20dp" android:drawableLeft="@drawable/ic_photo" android:drawableTint="#FFFFFF" android:drawablePadding="8dp" android:gravity="center" android:text="@string/choose_photo" style="@style/Button_Primary" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:gravity="center" android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Original untouched" android:textColor="@color/ur_muted" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="•" android:textColor="@color/ur_outline" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="No account" android:textColor="@color/ur_muted" android:textSize="13sp" />
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <Button android:id="@+id/target500" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="500 KB" android:textAllCaps="false" />
-                <Button android:id="@+id/target1m" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="1 MB" android:textAllCaps="false" />
-                <Button android:id="@+id/targetCustom" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Custom" android:textAllCaps="false" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/selectedTargetText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Choose the upload limit"
-                android:textColor="@color/ur_primary"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/makeReadyButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/make_ready"
-                android:enabled="false"
-                style="@style/Button_Primary" />
-
-            <Button
-                android:id="@+id/unknownLimitButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/unknown_limit"
-                style="@style/Button_Secondary" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/progressPanel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <ProgressBar
-                android:layout_width="48dp"
-                android:layout_height="48dp" />
-
-            <TextView
-                android:id="@+id/progressText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Compressing on-device…"
-                style="@style/Text_Body" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/resultPanel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <TextView
-                android:id="@+id/resultStateText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="UPLOAD READY ✓"
-                android:textColor="@color/ur_success"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/resultSizeText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="—"
-                android:textColor="@color/ur_text"
-                android:textSize="42sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/resultProofText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:text="—"
-                android:textColor="@color/ur_success"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/card_bg"
-                android:orientation="vertical">
-
-                <TextView android:id="@+id/resultChangeText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" android:textColor="@color/ur_text" android:textSize="16sp" android:textStyle="bold" />
-                <TextView android:id="@+id/resultDimensionsText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="—" style="@style/Text_Body" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Original untouched · Metadata removed from compressed copies" style="@style/Text_Body" />
+        <LinearLayout android:id="@+id/requirementPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:orientation="vertical" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/surface_card" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CURRENT PHOTO" style="@style/Text_Label" />
+                <TextView android:id="@+id/currentSizeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="—" android:textColor="@color/ur_text" android:textSize="36sp" android:textStyle="bold" />
+                <TextView android:id="@+id/currentMetaText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="—" style="@style/Text_Support" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:drawableLeft="@drawable/ic_shield" android:drawablePadding="5dp" android:text="On-device · original stays untouched" android:textColor="@color/ur_success" android:textSize="12sp" android:textStyle="bold" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/resultNoticeText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:text=""
-                style="@style/Text_Body" />
-
-            <Button
-                android:id="@+id/shareButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/share"
-                style="@style/Button_Primary" />
-
-            <Button
-                android:id="@+id/saveButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/save"
-                style="@style/Button_Secondary" />
-
-            <Button
-                android:id="@+id/anotherButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/another"
-                style="@style/Button_Secondary" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/requirement_title" style="@style/Text_Section" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Choose the maximum size shown on the website or form." style="@style/Text_Support" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="horizontal">
+                <Button android:id="@+id/target50" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginRight="4dp" android:layout_weight="1" android:text="50 KB" style="@style/Button_Chip" />
+                <Button android:id="@+id/target100" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:layout_weight="1" android:text="100 KB" style="@style/Button_Chip" />
+                <Button android:id="@+id/target200" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:text="200 KB" style="@style/Button_Chip" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:orientation="horizontal">
+                <Button android:id="@+id/target500" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginRight="4dp" android:layout_weight="1" android:text="500 KB" style="@style/Button_Chip" />
+                <Button android:id="@+id/target1m" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:layout_weight="1" android:text="1 MB" style="@style/Button_Chip" />
+                <Button android:id="@+id/targetCustom" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:text="Custom" style="@style/Button_Chip" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/status_info" android:gravity="center_vertical" android:orientation="horizontal" android:padding="12dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_target" android:contentDescription="Requirement" />
+                <TextView android:id="@+id/selectedTargetText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="Choose the upload limit" android:textColor="@color/ur_info" android:textSize="15sp" android:textStyle="bold" />
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="We'll verify the actual result against this limit." style="@style/Text_Support" />
+            <Button android:id="@+id/makeReadyButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="14dp" android:drawableLeft="@drawable/ic_target" android:drawableTint="#FFFFFF" android:drawablePadding="8dp" android:gravity="center" android:text="@string/make_ready" android:enabled="false" style="@style/Button_Primary" />
+            <Button android:id="@+id/unknownLimitButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="7dp" android:drawableLeft="@drawable/ic_info" android:drawablePadding="8dp" android:gravity="center" android:text="@string/unknown_limit" style="@style/Button_Secondary" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/errorText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textColor="#B42318"
-            android:textSize="15sp"
-            android:visibility="gone" />
+        <LinearLayout android:id="@+id/progressPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="48dp" android:gravity="center" android:orientation="vertical" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/surface_card" android:gravity="center" android:orientation="vertical" android:padding="24dp">
+                <ProgressBar android:layout_width="44dp" android:layout_height="44dp" android:indeterminate="true" />
+                <TextView android:id="@+id/progressText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Compressing on-device…" android:textColor="@color/ur_text" android:textSize="18sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Processing stays on this device.\nYour original stays untouched." android:gravity="center" style="@style/Text_Support" />
+            </LinearLayout>
+        </LinearLayout>
 
+        <LinearLayout android:id="@+id/resultPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:orientation="vertical" android:visibility="gone">
+            <LinearLayout android:id="@+id/resultStatusRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="2dp">
+                <ImageView android:id="@+id/resultStatusIcon" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="7dp" android:src="@drawable/ic_check_circle" android:contentDescription="Result status" />
+                <TextView android:id="@+id/resultStateText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MEETS LIMIT" android:textColor="@color/ur_success" android:textSize="15sp" android:textStyle="bold" />
+            </LinearLayout>
+            <TextView android:id="@+id/resultSizeText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="—" android:textColor="@color/ur_text" android:textSize="44sp" android:textStyle="bold" />
+            <TextView android:id="@+id/resultNoticeText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" style="@style/Text_Body" />
+            <TextView android:id="@+id/resultProofText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="—" android:textColor="@color/ur_success" android:textSize="14sp" android:textStyle="bold" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/surface_card" android:orientation="horizontal" android:padding="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BEFORE" style="@style/Text_Label"/><TextView android:id="@+id/resultBeforeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="—" android:textColor="@color/ur_text" android:textSize="18sp" android:textStyle="bold"/></LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="→" android:textColor="@color/ur_muted" android:textSize="20sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="right" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AFTER" style="@style/Text_Label"/><TextView android:id="@+id/resultAfterText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="—" android:textColor="@color/ur_text" android:textSize="18sp" android:textStyle="bold"/></LinearLayout>
+            </LinearLayout>
+            <TextView android:id="@+id/resultDimensionsText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" style="@style/Text_Support" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Original untouched · Metadata removed from compressed copy" style="@style/Text_Support" />
+            <Button android:id="@+id/saveButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="20dp" android:drawableLeft="@drawable/ic_save" android:drawablePadding="8dp" android:gravity="center" android:text="@string/save" style="@style/Button_Primary" />
+            <Button android:id="@+id/shareButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:drawableLeft="@drawable/ic_share" android:drawablePadding="8dp" android:gravity="center" android:text="@string/share" style="@style/Button_Secondary" />
+            <Button android:id="@+id/anotherButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp" android:drawableLeft="@drawable/ic_repeat" android:drawablePadding="8dp" android:gravity="center" android:text="@string/another" style="@style/Button_Tertiary" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/errorText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textColor="@color/ur_error" android:textSize="14sp" android:visibility="gone" />
     </LinearLayout>
 </ScrollView>

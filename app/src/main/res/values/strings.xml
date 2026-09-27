@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Reduce Photo Size</string>
     <string name="home_title">Make your photo ready to upload.</string>
-    <string name="home_subtitle">Choose a JPEG. We’ll detect its size automatically.</string>
+    <string name="home_subtitle">Choose a JPEG, set the website limit, and verify the result.</string>
     <string name="choose_photo">Choose photo</string>
     <string name="requirement_title">What\'s the upload limit?</string>
     <string name="make_ready">Make it upload-ready</string>

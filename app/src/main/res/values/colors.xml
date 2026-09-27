@@ -10,4 +10,12 @@
     <color name="ur_bg">#F7F9FC</color>
     <color name="ur_outline">#DDE3EC</color>
     <color name="ur_tonal">#EEF2FF</color>
+    <color name="ur_primary_soft_strong">#E2E8FF</color>
+    <color name="ur_surface_subtle">#F2F5F9</color>
+    <color name="ur_success_surface">#EAF7F1</color>
+    <color name="ur_warning_surface">#FFF4E5</color>
+    <color name="ur_error_surface">#FEECEB</color>
+    <color name="ur_info">#3857A6</color>
+    <color name="ur_info_surface">#EEF3FF</color>
+    <color name="ur_error">#B42318</color>
 </resources>
