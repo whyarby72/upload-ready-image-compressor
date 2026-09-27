@@ -3,7 +3,7 @@
   "factory_version": "1.0.1",
   "project": {
     "canonical_name": "UPLOAD-READY IMAGE COMPRESSOR",
-    "package_name": "com.uploadready.app",
+    "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_INTERNAL_TEST_READY",
     "canonical_decision": "TEST",
@@ -15,15 +15,21 @@
       "status": "ANDROID_DEBUG_BUILD_PASS",
       "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34"
+      "apk_sha256": "cc7272ecd43a23818065d1cdcae584bef8eeba348860a81d4432318299fcb3c0",
+      "application_id": "com.afradadmedia.reducephotosize",
+      "namespace": "com.afradadmedia.reducephotosize",
+      "label": "Reduce Photo Size"
     },
     "s5_test_artifact": {
-      "application_id": "com.uploadready.app",
+      "application_id": "com.afradadmedia.reducephotosize",
       "version_code": 1,
       "version_name": "0.1.0",
-      "aab_path": "evidence/play/app-release-0.1.0-vc1-unsigned.aab",
-      "aab_bytes": 662863,
-      "aab_sha256": "96ddc5b59df576c365af1321faf8801d9dbd72c77c482f97911df993ed1f5cea",
+      "aab_path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.aab",
+      "aab_bytes": 663007,
+      "aab_sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6",
+      "apk_path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.apk",
+      "apk_bytes": 2141450,
+      "apk_sha256": "c2230c8b9b1075687b8666bbbe7e36a24369a213e884886ba42bfacf71e57991",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED"
     },
     "frozen_release_candidate": null
@@ -31,8 +37,8 @@
   "current_task": {
     "id": "TASK-S5-002",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "OPEN",
+    "next_owner": "HUMAN_PLAY_CONSOLE",
+    "status": "COMPLETED",
     "acceptance_ids": [
       "S5-ID-01",
       "S5-ID-02",
@@ -53,7 +59,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_IDENTITY_MIGRATION_REQUIRED",
+    "internal_test": "S5_IDENTITY_MIGRATION_PASS_HUMAN_ACTION",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -74,14 +80,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Final keyword-led identity is frozen, but current build artifacts still use superseded com.uploadready.app and must be rebuilt before any Play upload.",
-    "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after migration proof."
+    "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after identity migration proof."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes TASK-S5-002 to migrate to com.afradadmedia.reducephotosize, rebuild, retest, and regenerate S5 artifact evidence. No Play upload.",
+  "next_action": "HUMAN_PLAY_CONSOLE: use only the fresh com.afradadmedia.reducephotosize artifact after authorized signing; do not upload the superseded provenance AAB. No S6/BUILD/publication claim.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -113,6 +118,20 @@
     "closure_commit": "8b2538e63a6cc06beb918439b5c3ce6b9d2f751d",
     "tested_source_commit": "772b3a321be6964240d4ac8f16f2fbecf4dc0de7",
     "debug_apk_sha256": "f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34"
+  },
+  "s5_identity_migration": {
+    "status": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
+    "migration_commit": "7122b368d61b58a9bfbace6a13f0eef0d61853b1",
+    "application_id": "com.afradadmedia.reducephotosize",
+    "namespace": "com.afradadmedia.reducephotosize",
+    "launcher_name": "Reduce Photo Size",
+    "play_title_en": "Reduce Photo Size: KB Limit",
+    "fresh_debug_apk_sha256": "cc7272ecd43a23818065d1cdcae584bef8eeba348860a81d4432318299fcb3c0",
+    "fresh_release_aab_sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6",
+    "fresh_release_apk_sha256": "c2230c8b9b1075687b8666bbbe7e36a24369a213e884886ba42bfacf71e57991",
+    "runtime_current": "PASS_API36",
+    "runtime_older": "PASS_API29",
+    "stale_identity": "PROVENANCE_ONLY_NOT_IN_FRESH_ARTIFACTS"
   },
   "final_identity": {
     "status": "FINAL_FOR_IMPLEMENTATION",

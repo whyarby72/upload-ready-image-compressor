@@ -36,3 +36,10 @@
 - Re-ran preflight, debug assemble, unit test, lint, release assemble, and bundle preparation.
 - Recorded unsigned AAB/APK hashes and the human Play Console signing/upload boundary.
 - No product behavior, AdMob, analytics, permissions, or canonical TEST decision changed.
+
+# 2026-09-27 — TASK-S5-002
+
+- Migrated the Android identity to `Reduce Photo Size` / `com.afradadmedia.reducephotosize`.
+- Rebuilt fresh debug APK, release APK, and release AAB artifacts and reran buyer-critical runtime regression.
+- Retained the superseded S5 artifact only as provenance; it is not eligible for Play upload.
+- No product behavior, AdMob, analytics, or signing/upload authority changed.

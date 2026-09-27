@@ -1,11 +1,20 @@
 {
-  "schema": "AI_PROD_S5_INTERNAL_TEST_ARTIFACT_PROOF_v1",
+  "schema": "AI_PROD_S5_IDENTITY_MIGRATION_PROOF_v1",
   "observed_at": "2026-09-27",
-  "task": "TASK-S5-001",
-  "branch": "task/TASK-S5-001",
-  "tested_source_commit": "b36fe10e3daf5422c27a9e9ce5de2873fbfa3a14",
+  "task": "TASK-S5-002",
+  "branch": "task/TASK-S5-002",
+  "source_commit_before_closure": "7122b368d61b58a9bfbace6a13f0eef0d61853b1",
   "s4_baseline_commit": "8b2538e63a6cc06beb918439b5c3ce6b9d2f751d",
   "canonical_decision": "TEST",
+  "identity": {
+    "play_title_en": "Reduce Photo Size: KB Limit",
+    "launcher_name": "Reduce Photo Size",
+    "application_id": "com.afradadmedia.reducephotosize",
+    "namespace": "com.afradadmedia.reducephotosize",
+    "provider_authority": "com.afradadmedia.reducephotosize.result",
+    "version_code": 1,
+    "version_name": "0.1.0"
+  },
   "toolchain": {
     "jdk": "Temurin 17.0.16",
     "gradle": "9.7.1",
@@ -16,51 +25,69 @@
     "build_tools": "36.0.0",
     "platform_tools": "37.0.1"
   },
-  "identity": {
-    "application_id": "com.uploadready.app",
-    "version_code": 1,
-    "version_name": "0.1.0"
-  },
   "regression": {
     "preflight": "PASS",
     "assembleDebug": "PASS",
     "testDebugUnitTest": "PASS",
     "lintDebug": "PASS",
     "assembleRelease": "PASS",
-    "bundleRelease": "PASS"
+    "bundleRelease": "PASS",
+    "current_and_older_install_launch": "PASS; API36 emulator-5554 and API29 emulator-5556",
+    "buyer_truth_save_share_orientation_large_input": "PASS; fresh identity package runtime evidence recorded"
   },
   "artifacts": {
     "debug_apk": {
       "path": "app/build/outputs/apk/debug/app-debug.apk",
-      "bytes": 2581759,
-      "sha256": "f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34",
-      "signing": "debug keystore; apksigner v2 verified"
+      "bytes": 2583179,
+      "sha256": "cc7272ecd43a23818065d1cdcae584bef8eeba348860a81d4432318299fcb3c0",
+      "identity": "com.afradadmedia.reducephotosize; versionCode 1; versionName 0.1.0"
     },
     "release_aab": {
-      "path": "evidence/play/app-release-0.1.0-vc1-unsigned.aab",
-      "bytes": 662863,
-      "sha256": "96ddc5b59df576c365af1321faf8801d9dbd72c77c482f97911df993ed1f5cea",
-      "identity": "com.uploadready.app; versionCode 1; versionName 0.1.0",
-      "signing": "UNSIGNED; jarsigner reports jar is unsigned"
+      "path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.aab",
+      "bytes": 663007,
+      "sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6",
+      "identity": "com.afradadmedia.reducephotosize; versionCode 1; versionName 0.1.0",
+      "signing": "UNSIGNED_HUMAN_ACTION_REQUIRED"
     },
     "release_apk": {
-      "path": "evidence/play/app-release-0.1.0-vc1-unsigned.apk",
-      "bytes": 2140754,
-      "sha256": "c07c6df36254a7939b13f6716dd6fe080669c68dc98a2b723121d79724d61601",
-      "signing": "UNSIGNED; apksigner does not verify; missing META-INF/MANIFEST.MF"
+      "path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.apk",
+      "bytes": 2141450,
+      "sha256": "c2230c8b9b1075687b8666bbbe7e36a24369a213e884886ba42bfacf71e57991",
+      "identity": "com.afradadmedia.reducephotosize; versionCode 1; versionName 0.1.0",
+      "signing": "UNSIGNED_HUMAN_ACTION_REQUIRED"
     }
   },
   "permissions": {
-    "debug_and_release_manifest_permissions": [],
+    "manifest_permissions": [],
     "internet": false,
     "broad_storage_media": false,
     "admob_ump_analytics": false
   },
+  "stale_reference_disposition": {
+    "publication_relevant_stale_identity": false,
+    "historical_provenance_only": [
+      "evidence/play/S5_PRE_IDENTITY_ARTIFACT_PROOF.json",
+      "docs/product/APP_IDENTITY_FINAL_v1.0.md",
+      "docs/product/APP_IDENTITY_DECISION_v1.0.md",
+      "TEST_MATRIX.csv S5-ID-11"
+    ],
+    "old_aab_sha256": "96ddc5b59df576c365af1321faf8801d9dbd72c77c482f97911df993ed1f5cea"
+  },
   "human_action_required": [
-    "Human must provide/select the authorized Play App Signing or upload-key identity and complete any Play Console account/legal declarations.",
-    "Human must perform the authorized Play Console Internal Testing upload/submission; Codex did not upload or publish."
+    "Do not upload the superseded old AAB.",
+    "Human must provide/select authorized signing identity and perform any Play Console upload; Codex does not create signing identity or upload."
   ],
-  "s5_disposition": "READY_FOR_HUMAN_PLAY_CONSOLE",
+  "runtime_evidence": {
+    "api36_launch": ["evidence/screenshots/s5_identity_launch_api36.png", "evidence/screenshots/s5_identity_launch_api36_uiautomator.xml"],
+    "api29_launch": ["evidence/screenshots/s5_identity_launch_api29.png", "evidence/screenshots/s5_identity_launch_api29_uiautomator.xml"],
+    "pass_100kb": ["evidence/screenshots/s5_identity_pass100_api36.png", "evidence/screenshots/s5_identity_pass100_api36_uiautomator.xml"],
+    "not_met_large": ["evidence/screenshots/s5_identity_notmet_large_api36.png", "evidence/screenshots/s5_identity_notmet_large_api36_uiautomator.xml"],
+    "reduced_unknown": ["evidence/screenshots/s5_identity_reduced_large_api36.png", "evidence/screenshots/s5_identity_reduced_large_api36_uiautomator.xml"],
+    "exif_quality": ["evidence/screenshots/s5_identity_exif_api36.png", "evidence/screenshots/s5_identity_exif_api36_uiautomator.xml"],
+    "save_share": ["evidence/result_s5_identity_saved.jpg", "evidence/screenshots/s5_identity_share_api36.png", "evidence/screenshots/s5_identity_share_api36_uiautomator.xml"],
+    "source_preservation": ["evidence/device_s5_identity_source_hashes.txt"]
+  },
+  "s5_id_disposition": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
   "s6_claim": false,
   "build_claim": false
 }

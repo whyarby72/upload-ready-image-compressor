@@ -1,0 +1,2 @@
+79e7505f2ebeff78392d9968358eda3186488204d2ab4f3e7c57600c52c1c682  /sdcard/Pictures/identity_exif.jpg
+79e7505f2ebeff78392d9968358eda3186488204d2ab4f3e7c57600c52c1c682  tests/fixtures/exif_orientation_6_1600x1200.jpg

@@ -2,9 +2,11 @@
 
 Route: Google Play Console -> Internal testing
 
-Artifact prepared: `evidence/play/app-release-0.1.0-vc1-unsigned.aab`
+Artifact prepared: `evidence/play/app-release-0.1.0-vc1-identity-unsigned.aab`
 
-The artifact is technically generated and identity-checked, but unsigned. Human action is required to use the authorized Play App Signing/upload-key identity and complete the Play Console upload. No upload or publication was performed by Codex.
+Final identity: `Reduce Photo Size: KB Limit`; launcher `Reduce Photo Size`; applicationId `com.afradadmedia.reducephotosize`.
+
+The fresh artifact is technically generated and identity-checked, but unsigned. Human action is required to use the authorized Play App Signing/upload-key identity and complete the Play Console upload. The superseded pre-migration AAB remains provenance only and is not eligible for upload. No upload or publication was performed by Codex.
 
 ## Tester instructions
 

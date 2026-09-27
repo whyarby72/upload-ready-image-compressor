@@ -36,3 +36,7 @@ API 36 build/install/launch, CURRENT detection, 1 MB actual-byte PASS, Save, Sha
 D-012 — S5 internal-test artifact signing boundary (2026-09-27)
 
 The S5 branch produces a Play-compatible bundle structure and identity metadata, but the generated release AAB/APK are unsigned because no authorized release/upload signing identity was provided. Codex records the exact artifacts and hashes, stops at HUMAN_PLAY_CONSOLE for signing/account/upload, and does not infer BUILD, release, publication, or S6 authority.
+
+D-013 — Final Android identity migration (2026-09-27)
+
+TASK-S5-002 migrates the applicationId, namespace, Java packages, provider authority, and visible app label to the frozen identity `Reduce Photo Size` / `com.afradadmedia.reducephotosize`. The superseded `com.uploadready.app` artifact remains provenance only; fresh identity artifacts are the only candidates for any future human-authorized Play action.

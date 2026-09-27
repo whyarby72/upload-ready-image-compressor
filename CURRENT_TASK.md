@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: OPEN
+Status: COMPLETED_WITH_HUMAN_SIGNING_UPLOAD_ACTION
 
 ## Goal
 Migrate the Android application identity from the superseded `com.uploadready.app` / working-name state to the frozen keyword-led identity:
