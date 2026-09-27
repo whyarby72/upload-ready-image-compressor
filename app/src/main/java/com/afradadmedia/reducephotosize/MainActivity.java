@@ -1,4 +1,4 @@
-package com.uploadready.app;
+package com.afradadmedia.reducephotosize;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -259,7 +259,7 @@ public final class MainActivity extends Activity {
         Intent send = new Intent(Intent.ACTION_SEND);
         send.setType("image/jpeg");
         send.putExtra(Intent.EXTRA_STREAM, ResultContentProvider.RESULT_URI);
-        send.setClipData(ClipData.newRawUri("Upload Ready result", ResultContentProvider.RESULT_URI));
+        send.setClipData(ClipData.newRawUri("Reduce Photo Size result", ResultContentProvider.RESULT_URI));
         send.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         startActivity(Intent.createChooser(send, "Share upload-ready photo"));
     }
@@ -272,7 +272,7 @@ public final class MainActivity extends Activity {
                 Uri saved = MediaStoreSaver.saveJpeg(this, currentResultFile);
                 runOnUiThread(() -> {
                     saveButton.setEnabled(true);
-                    Toast.makeText(this, "Saved to Pictures/Upload Ready", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Saved to Pictures/Reduce Photo Size", Toast.LENGTH_LONG).show();
                 });
             } catch (Exception e) {
                 runOnUiThread(() -> {

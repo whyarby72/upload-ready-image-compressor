@@ -1,4 +1,4 @@
-package com.uploadready.app;
+package com.afradadmedia.reducephotosize;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 public final class ResultContentProvider extends ContentProvider {
-    static final String AUTHORITY = "com.uploadready.app.result";
+    static final String AUTHORITY = "com.afradadmedia.reducephotosize.result";
     static final Uri RESULT_URI = Uri.parse("content://" + AUTHORITY + "/result");
 
     @Override public boolean onCreate() { return true; }

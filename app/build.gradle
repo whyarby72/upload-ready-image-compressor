@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.uploadready.app'
+    namespace 'com.afradadmedia.reducephotosize'
     compileSdk 36
 
     defaultConfig {
-        applicationId 'com.uploadready.app'
+        applicationId 'com.afradadmedia.reducephotosize'
         minSdk 29
         targetSdk 36
         versionCode 1

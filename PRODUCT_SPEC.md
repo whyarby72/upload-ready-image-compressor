@@ -2,7 +2,7 @@
 
 ## Product Identity
 Canonical name: UPLOAD-READY IMAGE COMPRESSOR
-Package name: com.uploadready.app
+Package name: com.afradadmedia.reducephotosize
 Primary market: Global Android users encountering website/form image upload-size limits
 Primary language: English MVP
 

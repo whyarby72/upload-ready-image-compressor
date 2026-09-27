@@ -1,4 +1,4 @@
-package com.uploadready.app;
+package com.afradadmedia.reducephotosize;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -8,8 +8,8 @@ import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
 
-import com.uploadready.app.core.QualitySearch;
-import com.uploadready.app.core.ScalePlanner;
+import com.afradadmedia.reducephotosize.core.QualitySearch;
+import com.afradadmedia.reducephotosize.core.ScalePlanner;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.uploadready.app;
+package com.afradadmedia.reducephotosize;
 
 import java.util.Locale;
 

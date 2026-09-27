@@ -1,4 +1,4 @@
-package com.uploadready.app;
+package com.afradadmedia.reducephotosize;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -22,7 +22,7 @@ final class MediaStoreSaver {
         ContentValues values = new ContentValues();
         values.put(MediaStore.Images.Media.DISPLAY_NAME, "UploadReady_" + stamp + ".jpg");
         values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
-        values.put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/Upload Ready");
+        values.put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/Reduce Photo Size");
         values.put(MediaStore.Images.Media.IS_PENDING, 1);
 
         Uri uri = cr.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);

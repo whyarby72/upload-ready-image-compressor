@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Upload Ready</string>
+    <string name="app_name">Reduce Photo Size</string>
     <string name="home_title">Make your photo ready to upload.</string>
     <string name="home_subtitle">Choose a JPEG. We’ll detect its size automatically.</string>
     <string name="choose_photo">Choose photo</string>

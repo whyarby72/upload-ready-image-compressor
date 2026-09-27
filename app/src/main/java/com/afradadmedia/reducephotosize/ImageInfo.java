@@ -1,4 +1,4 @@
-package com.uploadready.app;
+package com.afradadmedia.reducephotosize;
 
 final class ImageInfo {
     final android.net.Uri uri;

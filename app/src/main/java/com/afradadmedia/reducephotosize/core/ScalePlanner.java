@@ -1,4 +1,4 @@
-package com.uploadready.app.core;
+package com.afradadmedia.reducephotosize.core;
 
 /** Pure Java scale planner; host-testable without Android SDK. */
 public final class ScalePlanner {

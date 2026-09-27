@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:allowBackup="false"
-        android:label="Upload Ready"
+        android:label="Reduce Photo Size"
         android:theme="@style/Theme.UploadReady">
 
         <activity
@@ -16,7 +16,7 @@
 
         <provider
             android:name=".ResultContentProvider"
-            android:authorities="com.uploadready.app.result"
+            android:authorities="com.afradadmedia.reducephotosize.result"
             android:exported="false"
             android:grantUriPermissions="true" />
     </application>
