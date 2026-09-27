@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_FINAL_DIRECT_VISUAL_REVIEW",
+    "current_stage": "S5_FINAL_NOT_MET_COPY_FIDELITY",
     "canonical_decision": "TEST",
     "progress_percent": 98,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-005",
-    "owner": "CHAT + HUMAN",
-    "next_owner": "HUMAN",
-    "status": "SOURCE_EVIDENCE_INTEGRITY_PASS_DIRECT_VISUAL_PENDING",
+    "owner": "CODEX",
+    "next_owner": "CODEX",
+    "status": "HOLD_FINAL_NOT_MET_COPY_FIDELITY",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_FINAL_DIRECT_VISUAL_REVIEW",
+    "internal_test": "S5_HOLD_FINAL_NOT_MET_COPY_FIDELITY",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,13 +70,14 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Direct human inspection of the semantically verified s5_005_final_recap PNGs remains required before final visual PASS."
+    "NOT_MET runtime lacks frozen guidance: Try a higher limit or a different photo.",
+    "NOT_MET primary save action still uses Save copy instead of the frozen Save current copy label."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Package/upload the semantically verified s5_005_final_recap screenshots for direct CHAT + HUMAN visual review.",
+  "next_action": "CODEX performs the final narrow NOT_MET copy fidelity fix and captures semantically verified NOT_MET visual proof.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -358,6 +359,23 @@
         "duplicate_hashes": false,
         "semantic_verification": "PASS",
         "direct_visual_review": "PENDING"
+      },
+      "final_direct_visual_review": {
+        "status": "PASS_EXCEPT_NOT_MET_COPY_FIDELITY",
+        "reviewed_at": "2026-09-28",
+        "audit_ref": "docs/ux/S5_005_FINAL_DIRECT_VISUAL_REVIEW_v1.0.md",
+        "review_zip_sha256": "d823428ae2b77b446125f14e0d5b64f415b29bf8217c738082e5155b494d85b2",
+        "pass_states": [
+          "REQUIREMENT_360",
+          "REQUIREMENT_320",
+          "REQUIREMENT_FONT_1_3",
+          "PROCESSING",
+          "PASS_RESULT",
+          "REDUCED_RESULT"
+        ],
+        "hold_states": [
+          "NOT_MET_GUIDANCE_AND_SAVE_LABEL"
+        ]
       }
     },
     "final_visual_polish": {

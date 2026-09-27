@@ -298,3 +298,13 @@
 - confirmed 1.3x captures have distinct hashes and recorded font_scale=1.3;
 - accepted final recap source/technical/evidence-integrity gate;
 - advanced to direct final visual review only.
+
+
+# 2026-09-28 — Final direct visual review
+
+- directly inspected the valid semantically verified recap ZIP;
+- passed Requirement 360/320/1.3x;
+- passed Processing with only non-blocking spinner-frame polish;
+- passed PASS and REDUCED Result layouts including single-line sizes;
+- identified final frozen-spec miss on NOT_MET: missing guidance and wrong save-label specificity;
+- opened one narrow presentation-copy corrective with no redesign or domain change.

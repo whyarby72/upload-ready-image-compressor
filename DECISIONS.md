@@ -259,3 +259,12 @@ Independent CHAT audit of source fix `5c586048860c221bf36ccba9fb5f8f3955d7fbb2` 
 All 11 recap captures are bound to foreground package, viewport, font scale, expected state, required/forbidden semantic tokens and unique hashes. Independent duplicate-hash checking finds no duplicates. The prior final screenshot namespace remains provenance-only invalidated.
 
 Source, technical evidence, evidence integrity and semantic state binding are PASS. Direct visual quality remains pending until the actual recap PNGs are inspected by CHAT + HUMAN.
+
+
+## D-039 — Final direct visual recap passes except frozen NOT_MET guidance/save-label fidelity (2026-09-28)
+
+Direct inspection of the semantically verified recap accepts Requirement at 360/320/1.3x, Processing, PASS Result and REDUCED Result. The previously blocking 320dp chip clipping and result-value wrapping are resolved.
+
+One final presentation-copy defect remains against the frozen Warm Ink visual system and Compose implementation brief: NOT_MET does not render the required guidance `Try a higher limit or a different photo.`, and the shared Result action currently labels the primary save action `Save copy` rather than the NOT_MET-specific `Save current copy`.
+
+This is a narrow presentation-copy fidelity fix only; the visual system, product behavior and compression/domain engine remain closed.

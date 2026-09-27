@@ -163,3 +163,17 @@ Corrective:
 `prompts/CODEX_S5_005_FINAL_EVIDENCE_REPAIR.md`
 
 This is a narrow source/evidence correction within the existing Compose approval.
+
+
+## Final direct visual review
+
+Audit:
+`docs/ux/S5_005_FINAL_DIRECT_VISUAL_REVIEW_v1.0.md`
+
+Status:
+`HOLD_FINAL_NOT_MET_COPY_FIDELITY`
+
+All reviewed states pass except the documented NOT_MET guidance/save-label fidelity.
+
+Corrective:
+`prompts/CODEX_S5_005_FINAL_NOT_MET_COPY_FIDELITY.md`
