@@ -117,3 +117,12 @@ The default implementation remains dependency-light XML/View. Material Component
 
 Binding implementation contract:
 `docs/ux/S5_UI_IMPLEMENTATION_CONTRACT_v1.0.md`
+
+
+## D-024 — TASK-S5-004 visual foundation accepted; closure reopened for corrective UI/evidence (2026-09-27)
+
+Independent Chat review finds the main first-open and requirement redesign materially improved and aligned with the Precision Utility direction. However TASK-S5-004 cannot close because the Custom Limit surface remains a legacy platform AlertDialog/RadioButton treatment, `ic_target` is actually a plus symbol, selected target tiles lack the bound visible non-color indicator, and the required result/progress/save/share/API29/360x800/large-font visual evidence is incomplete.
+
+Evidence reconciliation also found a debug APK SHA typo in several matrix rows and an AAB byte-count drift: the fresh AAB SHA-256 is correct at `908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6`, while its independently observed size is 677,037 bytes, not 677,122.
+
+TASK-S5-004 is reopened for a narrow corrective pass. No Play upload or S6/BUILD promotion is allowed until independent review passes.

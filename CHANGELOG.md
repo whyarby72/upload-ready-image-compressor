@@ -137,3 +137,14 @@
 - retained existing navigation scope for NOT_MET;
 - froze dependency-light XML/View as the default implementation path;
 - created the final code-ready UI implementation contract.
+
+
+# 2026-09-27 — TASK-S5-004 independent visual/artifact audit
+
+- accepted the main Precision Utility first-open/requirement redesign direction;
+- reopened closure because Custom Limit remains visually legacy;
+- found plus-shaped `ic_target` and missing visible selected-target indicator;
+- found incomplete required Progress/PASS/NOT_MET/REDUCED/Save/Share/API29/360x800/large-font evidence;
+- found debug APK hash typo in matrix;
+- independently verified AAB SHA-256 and corrected observed byte count to 677,037;
+- placed current S5-004 artifact on HOLD pending a narrow corrective pass.

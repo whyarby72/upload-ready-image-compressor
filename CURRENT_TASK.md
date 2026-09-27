@@ -415,3 +415,25 @@ Mockup v2 is the visual quality target, but:
 - NOT_MET must not add an unapproved new navigation flow.
 
 The implementation contract is authoritative for coding.
+
+
+## Independent Chat audit — corrective pass required
+
+Audit:
+`docs/ux/S5_004_INDEPENDENT_VISUAL_ARTIFACT_AUDIT_v1.0.md`
+
+Status:
+`REOPENED_CORRECTIVE_UI_AND_EVIDENCE`
+
+Do not redesign the successful first-open/requirement foundation from scratch.
+
+Required:
+- modern Custom Limit modal with segmented KB/MB treatment;
+- real target/limit icon, not plus;
+- visible selected target indicator;
+- complete runtime screenshots/evidence for all binding screens;
+- one-to-one UI-01..UI-16 matrix reconciliation;
+- fresh artifacts after corrective source changes;
+- evidence hash/byte-count corrections.
+
+Current S5-004 AAB `908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6` is HOLD and becomes provenance-only after corrective source changes.

@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_UI_UX_REVIEW",
+    "current_stage": "S5_UI_UX_CORRECTIVE",
     "canonical_decision": "TEST",
     "progress_percent": 82,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -33,15 +33,15 @@
       "apk_sha256": "9769fbfc2eefd0783d7950e66cae0ca395cd97e3ed0f89d4473423adf32fdb10",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
-      "disposition": "HOLD_UI_UX_MODERNIZATION_REQUIRED"
+      "disposition": "HOLD_TASK_S5_004_CORRECTIVE_REQUIRED"
     },
     "frozen_release_candidate": null
   },
   "current_task": {
     "id": "TASK-S5-004",
     "owner": "CODEX",
-    "next_owner": "CHAT",
-    "status": "IMPLEMENTED_PENDING_CHAT_REVIEW",
+    "next_owner": "CODEX",
+    "status": "REOPENED_CORRECTIVE_UI_AND_EVIDENCE",
     "acceptance_ids": [
       "UI-01",
       "UI-02",
@@ -66,7 +66,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_UI_UX_IMPLEMENTED_PENDING_CHAT_REVIEW",
+    "internal_test": "S5_HOLD_UI_UX_CORRECTIVE_REQUIRED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -87,14 +87,17 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Independent Chat visual/artifact review of TASK-S5-004 remains pending.",
+    "Custom Limit modal still uses legacy platform dialog/radio treatment and does not meet the bound Precision Utility component bar.",
+    "Target icon is a plus symbol and selected target lacks a visible non-color indicator.",
+    "Required Progress/PASS/NOT_MET/REDUCED/Save/Share/API29 requirement/360x800/large-font evidence is incomplete.",
+    "TEST_MATRIX artifact hash typo and AAB byte-count drift must be reconciled.",
     "Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after reviewer PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT independently reviews TASK-S5-004 source, runtime screenshots, and artifact hashes; no S6 claim.",
+  "next_action": "CODEX executes the narrow TASK-S5-004 corrective pass, generates fresh source/artifacts and complete UI-01..UI-16 evidence, then returns to CHAT.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -207,7 +210,7 @@
     }
   },
   "s5_ui_ux_modernization": {
-    "status": "IMPLEMENTED_PENDING_CHAT_REVIEW",
+    "status": "REOPENED_CORRECTIVE_REQUIRED",
     "tested_source_commit": "959b131c7746dec1e5e8414f6b11d2741ae19b70",
     "evidence_proof": "evidence/play/S5_UI_UX_PROOF.json",
     "fresh_debug_apk_sha256": "eb30f81194d75b0b7424d75ba3ae9f8373adae779d42ada26aa8d72d96cd8f76",
@@ -228,6 +231,23 @@
     "implementation_contract_ref": "docs/ux/S5_UI_IMPLEMENTATION_CONTRACT_v1.0.md",
     "requirement_helper": "DEFERRED_FROM_MVP",
     "progress_semantics": "INDETERMINATE_ONLY_NO_FAKE_PERCENT",
-    "ui_dependency_policy": "DEPENDENCY_LIGHT_NATIVE_VIEW_DEFAULT"
+    "ui_dependency_policy": "DEPENDENCY_LIGHT_NATIVE_VIEW_DEFAULT",
+    "chat_review": {
+      "status": "HOLD_CORRECTIVE_UI_AND_EVIDENCE",
+      "reviewed_at": "2026-09-27",
+      "reviewed_closure": "a4dd389a764e7ce5e722c99759a48ab6d5b9a9ca",
+      "source_commit": "959b131c7746dec1e5e8414f6b11d2741ae19b70",
+      "independent_aab_sha256": "908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6",
+      "independent_aab_bytes": 677037,
+      "findings": [
+        "Custom modal remains visually legacy.",
+        "ic_target is a plus symbol.",
+        "Selected target lacks a visible non-color indicator.",
+        "Required result/progress/save/share/API29/360x800/large-font screenshots are incomplete.",
+        "Matrix debug hash typo.",
+        "AAB byte-count drift in proof."
+      ],
+      "audit_ref": "docs/ux/S5_004_INDEPENDENT_VISUAL_ARTIFACT_AUDIT_v1.0.md"
+    }
   }
 }
