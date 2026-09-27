@@ -55,11 +55,16 @@ Read first:
 - Use a safe unselected state such as target bytes = 0 / null-equivalent.
 
 ### RTF-02 — Reset requirement state for each newly selected photo
+Create one deterministic `clearTargetSelection()` / equivalent path and use it whenever a new requirement job begins.
+
 When `showRequirement(...)` opens:
 - clear any previous target selection;
-- ensure no preset appears selected;
-- display neutral requirement text such as `Choose the upload limit`;
+- set target bytes to the safe unselected sentinel;
+- ensure every preset/Custom button uses the unselected/default visual;
+- display neutral requirement text `Choose the upload limit`;
 - disable `Make it upload-ready`.
+
+Also call the same reset from `reset()` so returning to first-open cannot retain a hidden stale target.
 
 This prevents a target chosen for a prior photo from silently carrying into a new buyer job.
 
@@ -67,21 +72,42 @@ This prevents a target chosen for a prior photo from silently carrying into a ne
 For 50 KB / 100 KB / 200 KB / 500 KB / 1 MB / valid Custom:
 - set the target only after explicit user action;
 - show `REQUIRED: <= X` using the existing UI glyph/style where appropriate;
-- enable `Make it upload-ready`.
+- exactly one preset/Custom visual state may be selected;
+- the latest valid explicit selection is authoritative;
+- enable `Make it upload-ready` only when an image exists and the explicit target is valid.
 
-### RTF-04 — Defensive known-path guard
+### RTF-04 — Defensive known-path guard + immutable operation snapshot
 `startKnownCompression()` must not execute unless:
 - an image exists; and
 - a valid explicit target exists.
 
 Do not rely only on the button-disabled state.
 
-### RTF-05 — Preserve unknown path
+Before dispatching work:
+- snapshot the current `ImageInfo` into a local immutable reference;
+- snapshot the explicit target bytes into a local value;
+- use those snapshots for the progress decision and worker/compression call.
+
+Do not let an asynchronous worker read a mutable target field as the authoritative requirement after dispatch.
+
+### RTF-05 — Preserve unknown path and abandon stale known-target semantics
 `I don't know the upload limit` remains independently usable with no target selected.
 It must continue to produce REDUCED / no upload-compatibility PASS claim.
 
-### RTF-06 — Shorten requirement heading
-Change:
+If the user previously selected a known target and then explicitly chooses the unknown-limit action:
+- clear/abandon the known target before dispatch;
+- do not carry `REQUIRED` into the unknown result semantics;
+- result must still be REDUCED / ALREADY_SMALL / ERROR as applicable, never PASS / NOT_MET against the abandoned target.
+
+Snapshot the current image for the unknown worker path as well.
+
+### RTF-06 — Safe XML defaults + shortened requirement heading
+The layout resource itself must be fail-safe before Java state mutation:
+- `selectedTargetText` default text = `Choose the upload limit`;
+- `makeReadyButton` default `android:enabled="false"`;
+- do not ship XML with `REQUIRED: 1 MB` as the default visible state.
+
+Change heading:
 `What does the website require?`
 
 to:
@@ -91,6 +117,17 @@ Helper copy:
 `Choose the maximum size shown on the website or form.`
 
 Do not reduce font sizes or preset touch targets merely to fit content.
+
+### RTF-07 — Custom-target invariants
+- valid Custom input creates the explicit target and selects only the Custom visual state;
+- invalid Custom input with no prior valid target leaves the screen unselected and known-path CTA disabled;
+- invalid/cancelled Custom input after a prior valid target must not silently replace or corrupt that prior target; the displayed REQUIRED and enabled state must continue to match the last valid explicit selection;
+- switching from Custom to a preset, or preset A to preset B, must use only the latest valid explicit target.
+
+### RTF-08 — Error/retry selection semantics
+- known-path processing error may return to the requirement screen with the same explicit target still visible/valid for retry;
+- unknown-path processing must not resurrect an abandoned known target on error/retry;
+- no error path may create a valid REQUIRED value from the unselected sentinel.
 
 ## Required verification
 
@@ -110,17 +147,22 @@ Do not reduce font sizes or preset touch targets merely to fit content.
    - unknown-limit path visible/reachable
 11. explicit 100 KB selection -> known-path PASS case remains truthful
 12. aggressive explicit 50 KB -> honest NOT_MET
-13. no-selection known-path cannot execute
-14. unknown-limit path -> REDUCED only
-15. valid Custom target -> selected target shown and verified path enabled
-16. invalid Custom value -> no target/known-path authorization created
-17. select target for photo A -> choose another photo -> target is cleared for photo B
-18. Save/Share regression
-19. original preservation regression
-20. permission/privacy regression: no INTERNET, broad storage/media, AdMob/UMP/analytics
-21. fresh APK/AAB bytes + SHA-256
-22. update TEST_MATRIX, PROJECT_STATE, HANDOFF_CURRENT, evidence index
-23. `python scripts/validate_release_authority.py`
+13. no-selection known-path cannot execute, including direct/programmatic invocation of the guarded method
+14. unknown-limit path from a clean unselected state -> REDUCED only
+15. select 100 KB, then deliberately choose unknown-limit -> known target is abandoned and result remains REDUCED-only
+16. valid Custom target -> selected target shown and verified path enabled
+17. invalid Custom with no prior selection -> still unselected / known CTA disabled
+18. valid 100 KB -> invalid/cancelled Custom -> 100 KB remains the last valid explicit target; no silent mutation
+19. switch 100 KB -> 500 KB -> only 500 KB is visually/semantically authoritative and compression uses 500 KB
+20. select valid target for photo A -> complete/reset via `Compress another` -> choose photo B -> requirement target is cleared for photo B
+21. API29 requirement-screen smoke after selecting a JPEG -> no default target and known CTA disabled
+22. Save/Share regression
+23. original preservation regression
+24. known-path error/retry preserves only the explicit target; unknown-path error/retry does not resurrect one
+25. permission/privacy regression: no INTERNET, broad storage/media, AdMob/UMP/analytics
+26. fresh APK/AAB bytes + SHA-256
+27. update TEST_MATRIX, PROJECT_STATE, HANDOFF_CURRENT, evidence index
+28. `python scripts/validate_release_authority.py`
 
 ## Acceptance
 
@@ -138,6 +180,11 @@ Do not reduce font sizes or preset touch targets merely to fit content.
 - S5-REQ-12: fresh post-fix APK/AAB identity, bytes, SHA-256 and signing state are recorded.
 - S5-REQ-13: previous AAB `992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6` is marked superseded/ineligible for Play upload after source change.
 - S5-REQ-14: next owner is HUMAN_PLAY_CONSOLE only after all technical acceptance evidence passes.
+- S5-REQ-15: XML/resource defaults are fail-safe: neutral requirement text + known CTA disabled before runtime selection.
+- S5-REQ-16: unknown-limit action clears/abandons any prior known target semantics.
+- S5-REQ-17: the worker uses snapshotted image/target values captured at dispatch, not mutable target state.
+- S5-REQ-18: target switching and invalid/cancelled Custom interactions preserve a single truthful last-valid-selection invariant.
+- S5-REQ-19: API29 JPEG picker reaches the same unselected requirement state as API36.
 
 ## Done when
 

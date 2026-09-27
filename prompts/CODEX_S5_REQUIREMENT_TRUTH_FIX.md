@@ -10,10 +10,14 @@ Read `CURRENT_TASK.md` and execute it fully.
 
 The task is deliberately narrow:
 - remove implicit 1 MB target;
+- make XML defaults safe: neutral requirement text + known CTA disabled;
 - no preset selected when requirement screen opens;
-- clear target again whenever a newly selected photo enters the requirement screen;
+- clear target again whenever a newly selected photo enters the requirement screen and on reset;
 - disable known-limit CTA until explicit valid preset/custom selection;
 - add a defensive known-path target-validity guard;
+- snapshot image + target before asynchronous known compression;
+- if unknown-limit is chosen after a known target, abandon/clear that known target and snapshot the image before unknown reduction;
+- enforce a single last-valid-target invariant across preset switching and valid/invalid/cancelled Custom interactions;
 - preserve unknown-limit -> REDUCED-only semantics;
 - change heading to `What's the upload limit?`;
 - do not broad-redesign the UI.
@@ -37,9 +41,9 @@ Return:
 - final branch HEAD;
 - source fix commit;
 - exact changed source files;
-- proof of no default selected target;
-- API36/API29 results;
-- PASS/NOT_MET/REDUCED + Custom + new-photo-target-reset results;
+- proof of safe XML defaults and no default selected target;
+- API36/API29 results, including API29 requirement-state smoke;
+- PASS/NOT_MET/REDUCED + known->unknown abandonment + Custom + target-switch + new-photo-target-reset results;
 - Save/Share/preservation/privacy results;
 - fresh debug APK/release APK/AAB bytes + SHA-256;
 - signing state;

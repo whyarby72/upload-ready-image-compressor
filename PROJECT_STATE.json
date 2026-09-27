@@ -56,7 +56,12 @@
       "S5-REQ-11",
       "S5-REQ-12",
       "S5-REQ-13",
-      "S5-REQ-14"
+      "S5-REQ-14",
+      "S5-REQ-15",
+      "S5-REQ-16",
+      "S5-REQ-17",
+      "S5-REQ-18",
+      "S5-REQ-19"
     ]
   },
   "gates": {
@@ -92,7 +97,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes TASK-S5-003 on task/TASK-S5-003: remove implicit 1 MB requirement, require explicit target selection, rebuild/retest, and generate fresh S5 artifacts. No Play upload.",
+  "next_action": "CODEX executes hardened TASK-S5-003 on task/TASK-S5-003. Do not start from the earlier prompt revision; use the current CURRENT_TASK.md and prompts/CODEX_S5_REQUIREMENT_TRUTH_FIX.md.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -160,6 +165,17 @@
     "defect_ref": "docs/ux/FIRST_OPEN_REQUIREMENT_DEEP_AUDIT_v1.0.md",
     "pre_fix_aab_sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6",
     "pre_fix_aab_play_eligible": false,
-    "reason": "Implicit 1 MB target can create REQUIRED without deliberate user-provided external limit."
+    "reason": "Implicit 1 MB target can create REQUIRED without deliberate user-provided external limit.",
+    "spec_audit": {
+      "status": "HARDENED_BEFORE_CODEX",
+      "audited_at": "2026-09-27",
+      "findings": [
+        "XML defaults must be neutral/disabled, not only corrected by runtime code.",
+        "Unknown-limit action after known selection must abandon the known target before REDUCED processing.",
+        "Known/unknown async operations must use dispatch-time snapshots rather than mutable selection fields.",
+        "Preset/Custom switching must preserve one last-valid-explicit-target invariant.",
+        "API29 picker path must prove the same unselected requirement state."
+      ]
+    }
   }
 }
