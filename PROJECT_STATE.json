@@ -5,9 +5,9 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_UI_UX_REDESIGN_V2_REQUIRED",
+    "current_stage": "S5_COMPOSE_WARM_INK_IMPLEMENTATION",
     "canonical_decision": "TEST",
-    "progress_percent": 86,
+    "progress_percent": 87,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -38,35 +38,18 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "TASK-S5-004",
-    "owner": "CHAT",
-    "next_owner": "CHAT",
-    "status": "REOPENED_HUMAN_VISUAL_REJECTION",
-    "acceptance_ids": [
-      "UI-01",
-      "UI-02",
-      "UI-03",
-      "UI-04",
-      "UI-05",
-      "UI-06",
-      "UI-07",
-      "UI-08",
-      "UI-09",
-      "UI-10",
-      "UI-11",
-      "UI-12",
-      "UI-13",
-      "UI-14",
-      "UI-15",
-      "UI-16"
-    ]
+    "id": "TASK-S5-005",
+    "owner": "CODEX",
+    "next_owner": "CODEX",
+    "status": "OPEN_IMPLEMENTATION_AUTHORIZED",
+    "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_HUMAN_VISUAL_REJECTION",
+    "internal_test": "S5_HOLD_COMPOSE_WARM_INK_IMPLEMENTATION",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -87,15 +70,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Human visual review rejects the current market-facing UI as still materially dated.",
-    "A materially different UI/UX visual system must be approved before any Play Internal Testing upload.",
+    "TASK-S5-005 Compose Warm Ink implementation and fresh technical regression are required.",
+    "Direct human visual approval of actual Compose runtime screenshots is required before Play.",
     "Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after visual approval."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human reviews/approves S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md scope. Only then may CODEX implement the Compose Warm Ink presentation layer.",
+  "next_action": "CODEX executes TASK-S5-005 on task/TASK-S5-005 from the exact setup HEAD. Return fresh artifacts and runtime screenshots with status READY_FOR_HUMAN_VISUAL_REVIEW.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -112,7 +95,7 @@
     "remote_url": "https://github.com/whyarby72/upload-ready-image-compressor",
     "default_branch": "main",
     "integration_branch": "develop",
-    "active_task_branch": "task/TASK-S5-004",
+    "active_task_branch": "task/TASK-S5-005",
     "bootstrap_state": "READY_REMOTE",
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
@@ -264,7 +247,7 @@
       "name": "MEDIA_FIRST_PRECISION_UTILITY_WARM_INK",
       "palette": "WARM_IVORY_DEEP_MUTED_TEAL",
       "preferred_architecture": "COMPOSE_MATERIAL3_PRESENTATION_LAYER",
-      "coding_authorized": false,
+      "coding_authorized": true,
       "human_visual_anchor": "premium mockup v5"
     },
     "human_visual_approval": {
@@ -299,8 +282,10 @@
       "ref": "docs/ux/S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md",
       "scope": "PRESENTATION_LAYER_ONLY",
       "engine_rewrite": false,
-      "coding_authorized": false,
-      "required_next_approval": "COMPOSE_WARM_INK_IMPLEMENTATION"
+      "coding_authorized": true,
+      "required_next_approval": "COMPOSE_WARM_INK_IMPLEMENTATION",
+      "approved_at": "2026-09-27",
+      "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
     }
   }
 }

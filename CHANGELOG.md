@@ -222,3 +222,14 @@
 - defined migration order and fresh artifact/runtime evidence gates;
 - retained current AAB on HOLD;
 - kept source implementation explicitly approval-gated.
+
+
+# 2026-09-27 — TASK-S5-005 Compose Warm Ink implementation authorized
+
+- received explicit human approval `COMPOSE_WARM_INK_IMPLEMENTATION`;
+- opened branch `task/TASK-S5-005`;
+- bound current official stable Compose/Kotlin toolchain;
+- authorized presentation-layer migration and compileSdk 37 toolchain update while retaining targetSdk 36;
+- protected verified Java/domain engine and all truth semantics;
+- required fresh APK/AAB and full runtime evidence;
+- required direct human visual review of actual Compose screenshots before any Play progression.

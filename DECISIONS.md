@@ -194,3 +194,12 @@ The human-approved premium Warm Ink concept has been translated into an exact im
 The plan replaces the rejected View/XML presentation with a Compose Material 3 presentation layer while retaining the verified Java/domain engine. It defines the state/event bridge, responsive rules, exact screen copy/hierarchy, safe media previews, Warm Ink theme tokens, result action dock, PASS/NOT_MET/REDUCED mappings, custom limit behavior, accessibility, migration order, artifact refresh and runtime screenshot gates.
 
 The brief is complete but does not itself authorize source mutation. Compose implementation remains blocked until explicit human approval of `COMPOSE_WARM_INK_IMPLEMENTATION`.
+
+
+## D-032 — COMPOSE_WARM_INK_IMPLEMENTATION explicitly authorized (2026-09-27)
+
+The user explicitly approved option 1, authorizing implementation of the exact Compose Warm Ink presentation-layer brief. Authorization is limited to the scope defined by `S5_PREMIUM_VISUAL_SYSTEM_v1.0.md`, `S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md`, and the current stable toolchain binding.
+
+A new implementation task `TASK-S5-005` and branch `task/TASK-S5-005` are opened. The verified Java/domain engine remains protected. Toolchain-only compileSdk upgrade to 37 is authorized because current stable Compose 1.12.x requires compileSdk 37; targetSdk remains 36.
+
+Codex may implement and produce fresh artifacts/evidence but may not self-approve visual quality. Final implementation status must be `READY_FOR_HUMAN_VISUAL_REVIEW`. Signing, Play upload, S6, BUILD promotion, Artifact Freeze, release and publication remain unauthorized.
