@@ -1,0 +1,30 @@
+{
+  "task": "TASK-S5-005",
+  "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW_RECAPTURED",
+  "decision": "TEST",
+  "starting_head": "74ec9a151da2764dc0a06cf0c590afeed45d49f9",
+  "source_commit": "5c586048860c221bf36ccba9fb5f8f3955d7fbb2",
+  "scope": "Narrow 320dp target-chip label repair plus semantic evidence recapture; no domain/product behavior changes.",
+  "protected_domain_files_modified": false,
+  "environment": {
+    "api36": "emulator-5554",
+    "api29": "emulator-5556",
+    "package": "com.afradadmedia.reducephotosize",
+    "fixture": "result_1mb_api36.jpg and existing deterministic picker fixtures",
+    "font_scale_1_3_verified": true
+  },
+  "commands": [
+    "JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home ./gradlew assembleDebug testDebugUnitTest lintDebug assembleRelease bundleRelease"
+  ],
+  "semantic_verification": "evidence/screenshots/s5_005_final_recap/SEMANTIC_VERIFICATION.json",
+  "screenshots_namespace": "evidence/screenshots/s5_005_final_recap/",
+  "artifacts": [
+    {"path":"evidence/artifacts/s5_005_final_recap/app-debug.apk","bytes":30359120,"sha256":"fedcffb39d4e0cbe3b811d7e6e1e66c235a0de2bd1a0f92c7776e75409ec87d3"},
+    {"path":"evidence/artifacts/s5_005_final_recap/app-release-unsigned.apk","bytes":23001029,"sha256":"1c24cfc6caddfecc2bd4b66c713592dd92e9ebfe5c7a6dcbc9c21418120146da"},
+    {"path":"evidence/artifacts/s5_005_final_recap/app-release.aab","bytes":7951511,"sha256":"72276fda31b82526776585accf5931bad180d692734c90d066371a621d555b6b"}
+  ],
+  "prior_namespace": {"path":"evidence/screenshots/s5_005_final/","disposition":"INVALID_FOR_FINAL_VISUAL_PROOF / provenance only","not_deleted":true},
+  "anti_mislabel_controls": {"foreground_package_verified":true,"viewport_verified":true,"state_tokens_verified":true,"pass_not_met_reduced_hashes_unique":true,"normal_font_hashes_unique":true},
+  "visual_claim": "NOT_SELF_APPROVED; human visual review remains required.",
+  "publication": "No signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication claim."
+}

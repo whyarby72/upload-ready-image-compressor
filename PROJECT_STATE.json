@@ -13,10 +13,10 @@
   "artifacts": {
     "current_build": {
       "source_version": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
-      "status": "READY_FOR_HUMAN_VISUAL_REVIEW",
+      "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW_RECAPTURED",
       "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "6885621de33b8cc55c4dbd7d30ac0718988f1c41309618f02b9b069dcedaeaae",
+      "apk_sha256": "fedcffb39d4e0cbe3b811d7e6e1e66c235a0de2bd1a0f92c7776e75409ec87d3",
       "application_id": "com.afradadmedia.reducephotosize",
       "namespace": "com.afradadmedia.reducephotosize",
       "label": "Reduce Photo Size"
@@ -25,12 +25,12 @@
       "application_id": "com.afradadmedia.reducephotosize",
       "version_code": 1,
       "version_name": "0.1.0",
-      "aab_path": "evidence/artifacts/s5_005_final/app-release.aab",
-      "aab_bytes": 7950304,
-      "aab_sha256": "aacfcc495bd1d1bdec0a3c769f63337ade089ddf247984176cc571c8ad41a0aa",
-      "apk_path": "evidence/artifacts/s5_005_final/app-release-unsigned.apk",
-      "apk_bytes": 22984645,
-      "apk_sha256": "44a07b8d888c47754ed8f69bf632f1bc8fd3eae7890e1314a3717906d4544a42",
+      "aab_path": "evidence/artifacts/s5_005_final_recap/app-release.aab",
+      "aab_bytes": 7951511,
+      "aab_sha256": "72276fda31b82526776585accf5931bad180d692734c90d066371a621d555b6b",
+      "apk_path": "evidence/artifacts/s5_005_final_recap/app-release-unsigned.apk",
+      "apk_bytes": 23001029,
+      "apk_sha256": "1c24cfc6caddfecc2bd4b66c713592dd92e9ebfe5c7a6dcbc9c21418120146da",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
       "disposition": "PROVENANCE_ONLY_PRE_COMPOSE"
@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-005",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "HOLD_EVIDENCE_INTEGRITY_FAILURE_AND_320DP_LABEL_FIX",
+    "next_owner": "CHAT",
+    "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW_RECAPTURED",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -70,15 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Repository-bound final screenshot evidence contains mislabeled and duplicate semantic states.",
-    "Requirement 320dp clips the Custom target label to Custo.",
-    "PASS, NOT_MET, Processing, Requirement 1.3x and result font-scale final visual states require valid recapture."
+    "Final visual quality remains for independent CHAT + HUMAN review; Codex does not self-declare visual PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX performs the narrow 320dp chip-label source fix and recaptures semantically verified final visual evidence under s5_005_final_recap.",
+  "next_action": "CHAT + HUMAN independently review the semantically verified recap under evidence/screenshots/s5_005_final_recap/.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -353,14 +351,25 @@
       }
     },
     "final_visual_polish": {
-      "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW",
-      "source_commit": "ccbea0bd612b0be5a4d72908a92164be1deda1fa",
+      "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW_RECAPTURED",
+      "source_commit": "5c586048860c221bf36ccba9fb5f8f3955d7fbb2",
       "tested_environment": "API36 emulator-5554; API29 emulator-5556; JDK 17.0.16",
-      "screenshot_namespace": "evidence/screenshots/s5_005_final/",
-      "artifact_namespace": "evidence/artifacts/s5_005_final/",
+      "screenshot_namespace": "evidence/screenshots/s5_005_final_recap/",
+      "artifact_namespace": "evidence/artifacts/s5_005_final_recap/",
       "build_gates": "assembleDebug; testDebugUnitTest; lint; assembleRelease; bundleRelease PASS",
       "protected_domain_files_modified": false,
       "visual_claim": "NOT_SELF_APPROVED",
+      "next_owner": "CHAT"
+    },
+    "final_evidence_repair": {
+      "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW_RECAPTURED",
+      "source_commit": "5c586048860c221bf36ccba9fb5f8f3955d7fbb2",
+      "evidence_proof": "evidence/play/S5_005_FINAL_EVIDENCE_REPAIR_PROOF.json",
+      "semantic_sidecar": "evidence/screenshots/s5_005_final_recap/SEMANTIC_VERIFICATION.json",
+      "prior_namespace_disposition": "INVALID_FOR_FINAL_VISUAL_PROOF / provenance only",
+      "chip_fix": "Reduced OutlinedButton content padding and selected check spacing; target semantics unchanged.",
+      "semantic_controls": ["foreground package", "viewport", "font_scale=1.3", "required/forbidden tokens", "unique state hashes"],
+      "protected_domain_files_modified": false,
       "next_owner": "CHAT"
     }
   }

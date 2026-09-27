@@ -5,53 +5,32 @@ Stage: S5_FINAL_VISUAL_EVIDENCE_REPAIR
 Decision: TEST
 Progress: 97%
 Current task: TASK-S5-005
-Next owner: CODEX
-Task status: HOLD_EVIDENCE_INTEGRITY_FAILURE_AND_320DP_LABEL_FIX
+Next owner: CHAT
+Task status: READY_FOR_FINAL_HUMAN_VISUAL_REVIEW_RECAPTURED
 
-## Direct ZIP review
+## Evidence summary
+- 0.1.0: 1
+- 2026-09-27: 1
+- HUMAN_ACTION_REQUIRED: 2
+- HUMAN_REVIEW_REQUIRED: 6
+- PASS: 110
+- PROVENANCE_ONLY_INVALIDATED: 1
+- evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_360x800.png;evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_320x640.png;evidence/screenshots/s5_005_final_recap/requirement_font_1_3x_api36.png: 1
+- six target choices: 1
+- source-5c58604: 2
 
-CHAT directly inspected:
-`S5_005_FINAL_VISUAL_REVIEW.zip`
+## Authority
+- build_authorized: False
+- artifact_freeze: False
+- release_authorized: False
+- publication_authorized: False
 
-ZIP SHA-256:
-`8a8c4ba52cd9cacc52bda4ee42bc10416fcb540ef31db2e05ba2e7bee961bf7c`
+## Blockers
+- Final visual quality remains for independent CHAT + HUMAN review; Codex does not self-declare visual PASS.
 
-All screenshot hashes match `evidence/INDEX.json`; therefore the defect is repository-bound.
-
-## Material evidence failures
-
-- PASS 360 is actually REDUCED.
-- NOT_MET 360 is byte-identical to PASS/REDUCED.
-- PASS 320 is the Android system photo picker.
-- PASS 1.3x is the same system picker.
-- Requirement 1.3x is Home.
-- Reduced 1.3x is byte-identical to normal Reduced 320.
-- Processing screenshot is a completed result state.
-
-## Actual visual findings
-
-Requirement 360:
-PASS.
-
-Requirement 320:
-main hierarchy passes, but `Custom` is clipped to `Custo`.
-
-Reduced Result 360:
-PASS for REDUCED.
-
-Reduced Result 320:
-PASS_WITH_SCROLL.
+## Human decisions required
+- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
+- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
 
 ## Next action
-
-Run:
-`prompts/CODEX_S5_005_FINAL_EVIDENCE_REPAIR.md`
-
-This includes:
-- narrow 320dp target-chip label fix;
-- semantic screenshot verification before naming;
-- fresh recapture;
-- duplicate-hash rejection;
-- fresh artifacts because source changes.
-
-No signing / Play upload / S6 / BUILD / Artifact Freeze / release / publication.
+CHAT + HUMAN independently review the semantically verified recap under evidence/screenshots/s5_005_final_recap/.

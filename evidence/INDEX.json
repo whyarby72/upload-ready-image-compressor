@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 219,
+  "file_count": 236,
   "files": [
     {
       "path": "evidence/artifacts/.DS_Store",
@@ -41,6 +41,21 @@
       "path": "evidence/artifacts/s5_005_final/app-release.aab",
       "bytes": 7950304,
       "sha256": "aacfcc495bd1d1bdec0a3c769f63337ade089ddf247984176cc571c8ad41a0aa"
+    },
+    {
+      "path": "evidence/artifacts/s5_005_final_recap/app-debug.apk",
+      "bytes": 30359120,
+      "sha256": "fedcffb39d4e0cbe3b811d7e6e1e66c235a0de2bd1a0f92c7776e75409ec87d3"
+    },
+    {
+      "path": "evidence/artifacts/s5_005_final_recap/app-release-unsigned.apk",
+      "bytes": 23001029,
+      "sha256": "1c24cfc6caddfecc2bd4b66c713592dd92e9ebfe5c7a6dcbc9c21418120146da"
+    },
+    {
+      "path": "evidence/artifacts/s5_005_final_recap/app-release.aab",
+      "bytes": 7951511,
+      "sha256": "72276fda31b82526776585accf5931bad180d692734c90d066371a621d555b6b"
     },
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
@@ -91,6 +106,11 @@
       "path": "evidence/device_s5_identity_source_hashes.txt",
       "bytes": 215,
       "sha256": "a9082e15682e800e75d8a53a6a394eace057fbbc48c9a9f9353e8d8890ce583c"
+    },
+    {
+      "path": "evidence/play/S5_005_FINAL_EVIDENCE_REPAIR_PROOF.json",
+      "bytes": 2062,
+      "sha256": "71f29efc9b604526e18a689b518ccc9fb7f5f40ccd345a30d62ff91ca2c0c427"
     },
     {
       "path": "evidence/play/S5_005_FINAL_VISUAL_POLISH_PROOF.json",
@@ -906,6 +926,71 @@
       "path": "evidence/screenshots/s5_005_final/result_reduced_font_1_3x_api36.png",
       "bytes": 218672,
       "sha256": "5014ac7127ba31ba1d94c55850f6fe84f587f80a4ca6ac6a38aca9caa2097a44"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/README.md",
+      "bytes": 234,
+      "sha256": "9656fc6aeeb13d4f31a9466b968c744391b828b614ba56afa89eeeff115ec6eb"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/SEMANTIC_VERIFICATION.json",
+      "bytes": 5154,
+      "sha256": "17e6692b87bd3522fe5acaeda064e0459ba32ba207b8a3c243038b2a8201e637"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/processing_api36.png",
+      "bytes": 25044,
+      "sha256": "99c4f2a3023583896701494c15610415cd93d55c15f2e2760f12d0478fecb388"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_320x640.png",
+      "bytes": 60407,
+      "sha256": "816d7b28920f2734f6f558e8b5a91902c1188c01b8abecc49a1520aa690753b1"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_360x800.png",
+      "bytes": 63325,
+      "sha256": "5e2b3dc81a4081f0f66f7153105cb63a869d3612ebc288b7b0e27797f3ffd567"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/requirement_font_1_3x_api36.png",
+      "bytes": 71125,
+      "sha256": "1e37ea4cbd8da0b6997aaa36cccc1ab362d893c5823998bdc882ae8ffd10fcaf"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/result_not_met_api36_360x800.png",
+      "bytes": 360276,
+      "sha256": "ede99984802f55482a52ec1340dded0b5aaa981000ef72e1505a943361a88e89"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/result_pass_api36_320x640.png",
+      "bytes": 222899,
+      "sha256": "7e36b5e7d7802f611d3a93561124d7644aa568c94d5a23ab72d381be5520ac2f"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/result_pass_api36_360x800.png",
+      "bytes": 312775,
+      "sha256": "a42c5d4b95239ca5a01bc99c86773bd3c242a96f0dab1f13fade39042d487921"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/result_pass_font_1_3x_api36.png",
+      "bytes": 314622,
+      "sha256": "02a6849d65962f34c439854e3f1a43232a41d001eed3a771026148650e7d3b9b"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/result_reduced_api36_320x640.png",
+      "bytes": 218897,
+      "sha256": "35c495031cd6a1a97b5539c38a2e860da96f4b198e71b4fc3b527d98216e8f57"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/result_reduced_api36_360x800.png",
+      "bytes": 351060,
+      "sha256": "ed4ea9e31aff051e8d9d2b8dfaf25fb407dcda726836ad48ca51bd1fcdec0604"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_final_recap/result_reduced_font_1_3x_api36.png",
+      "bytes": 347224,
+      "sha256": "7f3ccddf7bb82ea352b38e2d95a70dc5aa3c9a48fb3909e71042a095399bd4f0"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",
