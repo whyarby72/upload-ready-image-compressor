@@ -1,6 +1,6 @@
 # FINAL_KEYWORD_SELECTION_v1.0
 
-Status: KEYWORD_STRATEGY_SELECTED / TITLE_PENDING_FINAL_CONFIRMATION
+Status: KEYWORD_STRATEGY_SELECTED / RECOMMENDED_TITLE_REJECTED_AFTER_COLLISION_SCREEN
 Observed: 2026-09-27
 Scope: Google Play English title strategy for the current JPEG/photo upload-limit MVP.
 
@@ -13,8 +13,8 @@ Secondary high-intent cluster:
 - `MB to KB`
 
 Recommended title basis:
-- `Reduce Photo Size: MB to KB`
-- Character count: 27 / 30
+- `Reduce Photo Size: MB to KB` — REJECTED after collision screen
+- Reason: Google Play already contains `Reduce Photo Size - MB to KB`; punctuation-only difference is materially too close.
 
 ## Evidence
 
@@ -114,17 +114,19 @@ Weakness:
 Disposition:
 - SELECTED PRIMARY CLUSTER.
 
-## Recommended Title
+## Rejected Title After Final Collision Screen
 
 `Reduce Photo Size: MB to KB`
 
-Why:
+This title is no longer recommended because a live Google Play listing uses `Reduce Photo Size - MB to KB`. The only meaningful title difference is punctuation.
+
+Original rationale:
 - uses the strongest observed demand-proxy phrase;
 - includes the high-intent MB-to-KB phrase;
 - 27 characters, within the 30-character Google Play limit;
 - accurately describes the current app;
 - does not claim guaranteed exact KB;
-- current public search did not surface an exact-title collision for this full title;
+- superseded: deeper collision screening found a near-exact live Google Play title (`Reduce Photo Size - MB to KB`);
 - remains more differentiated than repeating crowded `Photo Compressor: MB to KB` titles.
 
 ## Policy / Metadata Guardrails
@@ -170,3 +172,16 @@ It does not authorize:
 - Artifact Freeze;
 - release;
 - publication.
+
+
+## Current Naming State
+The keyword architecture remains useful:
+- primary cluster: `Reduce Photo Size`
+- secondary high-intent cluster: `MB to KB`
+
+However the combined title `Reduce Photo Size: MB to KB` is HOLD/REJECTED for publication identity.
+
+Leading replacement candidate for a separate collision screen:
+- `Reduce Photo Size: KB Limit` (27/30)
+
+No replacement title is frozen by this file.
