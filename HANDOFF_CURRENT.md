@@ -6,21 +6,22 @@ Stage: S5_INTERNAL_TEST_READY
 Decision: TEST
 Progress: 76%
 Current task: TASK-S5-003
-Next owner: CHAT_RESEARCH_OR_SCOPE_DECISION
-Task status: HOLD_CUSTOM_UNIT_SEMANTICS_DECISION
+Next owner: CODEX
+Task status: OPEN
 
 ## Current gate
 
-TASK-S5-003 source coding is temporarily held after a Custom-limit boundary audit found an unresolved product-truth specification gap.
+The Custom-limit semantics gap is now resolved and binding.
 
-The frozen PDC supports Custom KB/MB but does not define:
-- 1000-vs-1024 byte units;
-- current 8 KB minimum;
-- current 50 MB maximum;
-- fractional display precision;
-- decimal parsing locale policy.
+Use:
+`docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`
 
-See `docs/ux/TASK_S5_003_CUSTOM_LIMIT_BOUNDARY_AUDIT_v1.0.md`.
+Core rule:
+- KB/MB are decimal SI (1,000 / 1,000,000 bytes);
+- exact output bytes remain the verification primitive;
+- Custom = 1 KB..50 MB, max 3 fractional digits;
+- accept one dot OR comma decimal separator, no grouping;
+- exact-byte proof is required for PASS/NOT_MET.
 
 
 
@@ -54,4 +55,4 @@ Do not upload it to Google Play if TASK-S5-003 source repair is adopted.
 
 ## Next action
 
-Resolve and bind Custom KB/MB semantics first. Do not run the current Codex source-fix prompt until CURRENT_TASK.md is released from HOLD.
+CODEX executes the current `CURRENT_TASK.md` and `prompts/CODEX_S5_REQUIREMENT_TRUTH_FIX.md` on `task/TASK-S5-003`, then returns fresh artifact-bound evidence.

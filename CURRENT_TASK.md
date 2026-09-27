@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: HOLD_CUSTOM_UNIT_SEMANTICS_DECISION
+Status: OPEN
 
 ## Goal
 
@@ -47,21 +47,22 @@ Read first:
 5. `docs/product/APP_IDENTITY_FINAL_v1.0.md`
 6. `AGENTS.md`
 
-## PRE-CODE BLOCKER — Custom unit semantics
+## RESOLVED UNIT / CUSTOM CONTRACT
 
-Do not modify app source yet.
+The pre-code Custom semantics blocker is resolved by:
+`docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`
 
-The Custom-limit audit found specification gaps that materially affect PASS truth:
-- the frozen PDC does not define decimal-vs-binary KB/MB;
-- current code silently uses 1024-based units;
-- the PDC does not define the current 8 KB minimum or 50 MB maximum;
-- decimal Custom values can be rounded misleadingly by current proof formatting;
-- fractional-input locale behavior is undefined.
-
-Binding audit:
-`docs/ux/TASK_S5_003_CUSTOM_LIMIT_BOUNDARY_AUDIT_v1.0.md`
-
-Resume source work only after the unit/boundary/display rules are explicitly resolved and added to this task.
+Binding rules:
+- KB = 1,000 bytes; MB = 1,000,000 bytes.
+- Presets become exact decimal thresholds: 50,000 / 100,000 / 200,000 / 500,000 / 1,000,000 bytes.
+- Custom converted range = 1,000..50,000,000 bytes.
+- Custom supports at most 3 fractional digits.
+- Accept one decimal separator, either dot or comma; reject both/grouped notation.
+- Use exact decimal arithmetic, not `double`.
+- Never round a maximum upward; floor fractional-byte conversion.
+- Friendly KB/MB display uses decimal SI.
+- PASS/NOT_MET proof includes exact bytes to avoid rounded-threshold ambiguity.
+- Existing 1024-based artifact evidence becomes provenance after source changes.
 
 ## Required source changes
 
@@ -145,15 +146,22 @@ Do not reduce font sizes or preset touch targets merely to fit content.
 - unknown-path processing must not resurrect an abandoned known target on error/retry;
 - no error path may create a valid REQUIRED value from the unselected sentinel.
 
-## Custom-limit verification additions after blocker resolution
+## Custom-limit verification additions
 
 Add explicit tests for:
-- resolved KB/MB byte convention on 100 KB and 1 MB;
-- resolved minimum exactly and immediately below;
-- resolved maximum exactly and immediately above;
-- fractional KB/MB when supported;
-- supported decimal-separator behavior;
-- visible REQUIRED/proof precision matching the actual byte threshold;
+- 50 KB = 50,000 bytes;
+- 100 KB = 100,000 bytes;
+- 200 KB = 200,000 bytes;
+- 500 KB = 500,000 bytes;
+- 1 MB = 1,000,000 bytes;
+- minimum 1 KB exactly and immediately below;
+- maximum 50 MB exactly and immediately above;
+- `10.5 KB` -> 10,500 bytes;
+- `1.5 MB` and `1,5 MB` -> 1,500,000 bytes;
+- >3 fractional digits rejected;
+- inputs containing both dot and comma rejected;
+- visible friendly size uses decimal SI;
+- PASS/NOT_MET proof exposes exact byte comparison;
 - output immediately above/below a custom threshold;
 - prior valid target -> invalid/cancelled Custom preserves prior target;
 - no prior target -> invalid Custom remains unselected.
@@ -214,9 +222,15 @@ Add explicit tests for:
 - S5-REQ-17: the worker uses snapshotted image/target values captured at dispatch, not mutable target state.
 - S5-REQ-18: target switching and invalid/cancelled Custom interactions preserve a single truthful last-valid-selection invariant.
 - S5-REQ-19: API29 JPEG picker reaches the same unselected requirement state as API36.
+- S5-REQ-20: presets use decimal byte thresholds (50k/100k/200k/500k/1,000k bytes).
+- S5-REQ-21: Custom range is exactly 1,000..50,000,000 bytes.
+- S5-REQ-22: Custom decimal parser accepts one dot OR comma separator, rejects ambiguous/grouped input, and allows at most 3 fractional digits.
+- S5-REQ-23: requirement conversion uses exact decimal arithmetic and never rounds a maximum upward.
+- S5-REQ-24: friendly size display uses decimal SI; known-limit proof includes exact bytes.
+- S5-REQ-25: old 1024-based S5 artifacts/evidence remain provenance only after fresh artifacts are generated.
 
 ## Done when
 
 A fresh artifact proves the user must explicitly supply a known upload limit before any PASS/NOT_MET path, while the unknown path remains REDUCED-only.
 
-While this pre-code blocker is open, stop before source modification. After the blocker is resolved, execute the repaired task and stop at HUMAN_PLAY_CONSOLE after producing fresh unsigned/signed-state evidence. Do not claim S6, BUILD, Artifact Freeze, release, or publication.
+The Custom semantics blocker is resolved. Execute the repaired task and stop at HUMAN_PLAY_CONSOLE after producing fresh unsigned/signed-state evidence. Do not claim S6, BUILD, Artifact Freeze, release, or publication.

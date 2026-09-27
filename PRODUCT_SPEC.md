@@ -59,6 +59,17 @@ Fallback if unknown: REDUCED only; never PASS / UPLOAD READY.
 - EXIF editor
 - production AdMob integration during this S3 technical pilot
 
+## Upload-Limit Unit Semantics
+Binding decision: `docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`.
+
+- User-facing KB/MB maximum limits use decimal SI: 1 KB = 1,000 bytes; 1 MB = 1,000,000 bytes.
+- Presets therefore map to 50,000 / 100,000 / 200,000 / 500,000 / 1,000,000 bytes.
+- Actual result verification is performed in exact bytes.
+- Custom range is 1 KB..50 MB with at most 3 fractional digits.
+- Custom accepts one dot OR comma decimal separator and rejects ambiguous/grouped notation.
+- Known-limit result proof must expose exact-byte comparison so rounding cannot create a false-looking inequality.
+- Maximum-size PASS does not claim compliance with a portal's minimum-size, dimension, format, or other independent rules.
+
 ## State Semantics
 CURRENT: Observed source file size/dimensions/format.
 REQUIRED: User-provided external website/form limit.

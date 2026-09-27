@@ -9,6 +9,19 @@ Branch:
 Read `CURRENT_TASK.md` and execute it fully.
 
 The task is deliberately narrow:
+Read `docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md` before source work.
+
+Unit contract:
+- KB = 1,000 bytes; MB = 1,000,000 bytes;
+- preset targets are decimal;
+- Custom converted range 1,000..50,000,000 bytes;
+- max 3 fractional digits;
+- accept one dot OR comma decimal separator, no grouping;
+- use exact decimal arithmetic, never `double` for requirement conversion;
+- friendly display is decimal SI;
+- PASS/NOT_MET proof includes exact byte inequality.
+
+Then:
 - remove implicit 1 MB target;
 - make XML defaults safe: neutral requirement text + known CTA disabled;
 - no preset selected when requirement screen opens;
@@ -41,6 +54,7 @@ Return:
 - final branch HEAD;
 - source fix commit;
 - exact changed source files;
+- proof of decimal preset thresholds and Custom parser/boundary contract;
 - proof of safe XML defaults and no default selected target;
 - API36/API29 results, including API29 requirement-state smoke;
 - PASS/NOT_MET/REDUCED + known->unknown abandonment + Custom + target-switch + new-photo-target-reset results;

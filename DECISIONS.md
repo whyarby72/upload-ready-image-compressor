@@ -55,3 +55,12 @@ Deep first-open/requirement audit found that the current source preselects 1 MB 
 ## D-016 — Hold TASK-S5-003 for unresolved Custom KB/MB semantics (2026-09-27)
 
 Pre-code audit found that the frozen PDC defines Custom KB/MB as canonical but does not define decimal-vs-binary unit interpretation, the implementation's 8 KB / 50 MB boundaries, fractional-target display precision, or numeric locale behavior. Current code silently uses 1024-based units and rounds non-integral KB proof text, which can weaken visible requirement truth. TASK-S5-003 is therefore held before source modification until these semantics are explicitly resolved. This HOLD does not change the canonical TEST decision and does not authorize feature expansion.
+
+
+## D-017 — Decimal-SI maximum upload-limit convention (2026-09-27)
+
+Evidence review resolves TASK-S5-003 Custom semantics. User-facing KB/MB maximum limits use SI decimal units: 1 KB = 1,000 bytes and 1 MB = 1,000,000 bytes. This matches NIST SI terminology and current Android file-size formatting on all supported API levels. PHP demonstrates that binary-style web limits still exist; for maximum-size requirements, the smaller decimal threshold is therefore the conservative cross-convention interpretation when an external portal does not disclose its byte convention. Verification remains exact-byte based.
+
+Custom policy is bounded as a technical/product rule, not a market fact: 1 KB..50 MB, max 3 fractional digits, one dot OR comma decimal separator with no grouping, exact decimal arithmetic, never upward rounding of a maximum, and exact-byte proof for PASS/NOT_MET. Some portals also impose minimum-size or non-size constraints; the app does not infer full portal compliance from maximum-size PASS alone.
+
+Binding decision: `docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`.

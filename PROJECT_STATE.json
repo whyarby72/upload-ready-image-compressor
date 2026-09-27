@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-003",
     "owner": "CODEX",
-    "next_owner": "CHAT_RESEARCH_OR_SCOPE_DECISION",
-    "status": "HOLD_CUSTOM_UNIT_SEMANTICS_DECISION",
+    "next_owner": "CODEX",
+    "status": "OPEN",
     "acceptance_ids": [
       "S5-REQ-01",
       "S5-REQ-02",
@@ -61,7 +61,13 @@
       "S5-REQ-16",
       "S5-REQ-17",
       "S5-REQ-18",
-      "S5-REQ-19"
+      "S5-REQ-19",
+      "S5-REQ-20",
+      "S5-REQ-21",
+      "S5-REQ-22",
+      "S5-REQ-23",
+      "S5-REQ-24",
+      "S5-REQ-25"
     ]
   },
   "gates": {
@@ -69,7 +75,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_HOLD_CUSTOM_UNIT_SEMANTICS",
+    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_REQUIRED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -90,7 +96,6 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Custom KB/MB semantics are not fully specified: decimal-vs-binary unit base, fractional precision/display, min/max limits, and locale parsing must be resolved before TASK-S5-003 source changes.",
     "Known requirement-capture defect remains open until TASK-S5-003 is implemented and freshly verified.",
     "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after technical PASS."
   ],
@@ -98,7 +103,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Resolve custom KB/MB unit semantics and boundaries, then update TASK-S5-003 before Codex modifies source.",
+  "next_action": "CODEX executes the now-resolved TASK-S5-003 using decimal-SI upload-limit semantics, explicit target selection, and fresh artifact verification. No Play upload.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -179,16 +184,17 @@
       ]
     },
     "custom_limit_audit": {
-      "status": "HOLD",
+      "status": "RESOLVED_BINDING_DECISION",
       "audit_ref": "docs/ux/TASK_S5_003_CUSTOM_LIMIT_BOUNDARY_AUDIT_v1.0.md",
-      "source_support": {
-        "custom_capability": "SUPPORTED",
-        "decimal_vs_binary_unit_base": "UNKNOWN",
-        "minimum_8kb": "UNSUPPORTED_BY_SPEC",
-        "maximum_50mb": "UNSUPPORTED_BY_SPEC",
-        "fractional_precision_rule": "UNKNOWN",
-        "locale_decimal_policy": "UNKNOWN"
-      }
+      "decision_ref": "docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md",
+      "unit_base": "DECIMAL_SI",
+      "kb_bytes": 1000,
+      "mb_bytes": 1000000,
+      "custom_min_bytes": 1000,
+      "custom_max_bytes": 50000000,
+      "max_fraction_digits": 3,
+      "decimal_separator_policy": "ONE_DOT_OR_COMMA_NO_GROUPING",
+      "exact_byte_proof": true
     }
   }
 }

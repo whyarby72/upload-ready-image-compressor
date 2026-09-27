@@ -63,3 +63,14 @@
 - shortens requirement heading to `What's the upload limit?`;
 - marks pre-fix AAB `992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6` HOLD for Play upload;
 - broad redesign, AdMob, signing, release, publication and BUILD promotion remain out of scope.
+
+
+# 2026-09-27 — TASK-S5-003 Custom semantics resolved
+
+- researched SI/Android/web upload-size conventions and current portal/competitor practice;
+- bound KB/MB to decimal SI: 1 KB = 1,000 bytes; 1 MB = 1,000,000 bytes;
+- retained exact bytes as the verification primitive;
+- replaced undocumented 8 KB floor with a 1 KB technical floor and retained a 50 MB technical ceiling;
+- limited Custom values to 3 fractional digits and one dot OR comma decimal separator without grouping;
+- required exact decimal arithmetic and exact-byte PASS/NOT_MET proof;
+- reopened TASK-S5-003 for Codex source execution.
