@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: OPEN_UI_UX_REDESIGN_REQUIRED
+Status: CLOSED_PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION
 
 ## Goal
 
@@ -452,3 +452,20 @@ Next action is evidence-only:
 `prompts/CODEX_S5_UI_UX_EVIDENCE_RECAPTURE.md`
 
 Do not change product source unless a real defect is discovered.
+
+
+## Final independent closure
+
+Audit:
+`docs/ux/S5_004_FINAL_INDEPENDENT_CLOSURE_AUDIT_v1.0.md`
+
+Result:
+- UI-01 through UI-16: PASS
+- TASK-S5-004: PASS
+- mandatory UI/UX modernization: CLOSED
+- next owner: HUMAN_PLAY_CONSOLE
+
+Current unsigned AAB:
+`de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`
+
+S5 is not declared-route complete until actual Google Play Internal Testing distribution/install evidence exists.

@@ -158,3 +158,17 @@
 - found mislabeled splash/system frames for first-open, progress, NOT_MET, large-font requirement, and API29 requirement;
 - converted affected acceptance rows back to PENDING;
 - opened an evidence-only recapture step with no product-source mutation required.
+
+
+# 2026-09-27 — TASK-S5-004 final independent closure
+
+- verified evidence-only recapture contains no product-source/build changes;
+- accepted clean API36 first-open 320x640 and ~360x800 frames;
+- accepted actual indeterminate progress evidence;
+- accepted clean NOT_MET evidence at 81,208 bytes > 50,000 bytes;
+- accepted API36 1.3x-font requirement and API29 requirement evidence;
+- accepted UI-01 through UI-16;
+- closed TASK-S5-004 PASS;
+- retained current unsigned AAB `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`;
+- moved next ownership to HUMAN_PLAY_CONSOLE for actual Google Play Internal Testing distribution;
+- made no S6/BUILD/Artifact Freeze/release/publication claim.

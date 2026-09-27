@@ -135,3 +135,14 @@ Independent review accepts corrective source commit `6c9ce5e00bb497f705bbe26dc02
 However multiple evidence files are mislabeled: both fresh first-open viewport captures are Android splash frames, the progress capture is actually a PASS result, NOT_MET is a system stylus overlay, large-font requirement is the system photo picker, and API29 requirement is the document picker. These cannot close the corresponding acceptance IDs.
 
 The fresh corrective AAB is independently verified at 682,671 bytes / SHA-256 `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`. The artifact remains current but HOLD pending evidence-only recapture. No source change is required by this review.
+
+
+## D-026 — TASK-S5-004 PASS; mandatory UI/UX modernization closed (2026-09-27)
+
+Independent review of evidence-only recapture `d316d2d26edc13f68245544f3dbe412075b72c80` verifies that all previously mislabeled runtime states have been replaced with clean app evidence. API36 first-open at 320x640 and ~360x800, actual indeterminate progress, clean NOT_MET, font-scale 1.3x requirement, and API29 requirement all pass visual/runtime review.
+
+UI-01 through UI-16 are accepted. TASK-S5-004 is therefore closed PASS. The tested product source remains `6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6`.
+
+The current unsigned AAB remains `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5` at 682,671 bytes.
+
+This closes the mandatory UI/UX modernization task only. S5 Google Play Internal Testing distribution remains human-bound and incomplete until authorized signing/account setup plus actual Play Internal Testing distribution/install evidence exists.
