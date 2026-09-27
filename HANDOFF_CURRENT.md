@@ -5,28 +5,40 @@ Historical working name: UPLOAD-READY IMAGE COMPRESSOR (provenance only)
 Stage: S5_INTERNAL_TEST_READY
 Decision: TEST
 Progress: 76%
-Current task: TASK-S5-002
-Next owner: HUMAN_PLAY_CONSOLE
-Task status: CLOSED_PASS_WITH_HUMAN_ACTION
+Current task: TASK-S5-003
+Next owner: CODEX
+Task status: OPEN
 
-Reviewer disposition: PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION
+## Current gate
 
-## Evidence summary
-- HUMAN_ACTION_REQUIRED: 2
-- PASS: 44
+S5 requirement-truth repair is required before Play Console.
+
+Known defect:
+- current build preselects 1 MB;
+- verified PASS/NOT_MET path must instead require an explicit user-provided upload limit.
+
+## Artifact disposition
+
+Current pre-fix AAB:
+`992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6`
+
+Status:
+`HOLD_KNOWN_REQUIREMENT_CAPTURE_DEFECT`
+
+Do not upload it to Google Play if TASK-S5-003 source repair is adopted.
 
 ## Authority
+
 - build_authorized: False
 - artifact_freeze: False
 - release_authorized: False
 - publication_authorized: False
 
 ## Blockers
-- Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after identity migration proof.
 
-## Human decisions required
-- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
-- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
+1. TASK-S5-003 requirement-truth defect repair + fresh regression/artifact evidence.
+2. Release signing / Google Play Internal Testing upload remains HUMAN_ACTION_REQUIRED after technical PASS.
 
 ## Next action
-HUMAN_PLAY_CONSOLE: use only the fresh com.afradadmedia.reducephotosize artifact after authorized signing; do not upload the superseded provenance AAB. No S6/BUILD/publication claim.
+
+CODEX executes `prompts/CODEX_S5_REQUIREMENT_TRUTH_FIX.md` on `task/TASK-S5-003`.

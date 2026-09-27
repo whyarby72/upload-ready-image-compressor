@@ -53,3 +53,13 @@
 - confirmed no app/build-logic changes after migration commit `7122b368d61b58a9bfbace6a13f0eef0d61853b1`;
 - closed TASK-S5-002 as PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION;
 - retained TEST decision and all signing/upload/release/publication authority boundaries.
+
+
+# 2026-09-27 — TASK-S5-003 opened
+
+- opened a narrow requirement-truth defect repair before Play Internal Testing;
+- requires removal of implicit 1 MB target and explicit user selection before PASS/NOT_MET path;
+- requires target reset when a new photo is selected;
+- shortens requirement heading to `What's the upload limit?`;
+- marks pre-fix AAB `992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6` HOLD for Play upload;
+- broad redesign, AdMob, signing, release, publication and BUILD promotion remain out of scope.

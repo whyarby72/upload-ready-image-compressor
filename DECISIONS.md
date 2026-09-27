@@ -45,3 +45,8 @@ TASK-S5-002 migrates the applicationId, namespace, Java packages, provider autho
 ## D-014 — S5 identity closure and canonical/public naming reconciliation (2026-09-27)
 
 Independent Chat audit of HEAD `2b787b5781aa8851420a71326db757364230660f` accepted TASK-S5-002 as PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION. The publication/canonical product name is now `REDUCE PHOTO SIZE: KB LIMIT`; `UPLOAD-READY IMAGE COMPRESSOR` is retained only as a historical/internal provenance alias. The S5-06 permission/privacy row is rebound to the fresh-identity debug artifact SHA-256 `cc7272ecd43a23818065d1cdcae584bef8eeba348860a81d4432318299fcb3c0`. No product source or build logic is changed by this closure. S5 remains blocked on authorized human signing / Google Play Internal Testing distribution; no S6, BUILD, Artifact Freeze, release, or publication authority is inferred.
+
+
+## D-015 — Explicit upload-limit selection required before verified path (2026-09-27)
+
+Deep first-open/requirement audit found that the current source preselects 1 MB during app creation. Because PRODUCT_SPEC defines REQUIRED as a user-provided external website/form limit, an implicit app default can validate the wrong requirement. TASK-S5-003 therefore requires an unselected requirement state, a disabled known-limit CTA until explicit valid user selection, defensive target validation, reset of target selection for every newly selected photo, and preservation of the unknown-limit REDUCED-only path. The pre-fix AAB `992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6` is HOLD for Play use pending fresh post-fix artifacts. No broad redesign is authorized.
