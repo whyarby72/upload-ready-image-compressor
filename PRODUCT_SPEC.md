@@ -1,8 +1,10 @@
 # PRODUCT_SPEC.md
 
 ## Product Identity
-Canonical name: UPLOAD-READY IMAGE COMPRESSOR
+Canonical/public name: REDUCE PHOTO SIZE: KB LIMIT
+Launcher / in-app name: Reduce Photo Size
 Package name: com.afradadmedia.reducephotosize
+Historical/internal working name: UPLOAD-READY IMAGE COMPRESSOR (provenance alias only; not publication identity)
 Primary market: Global Android users encountering website/form image upload-size limits
 Primary language: English MVP
 

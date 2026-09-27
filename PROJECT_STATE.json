@@ -2,12 +2,13 @@
   "schema_version": "1.0.0",
   "factory_version": "1.0.1",
   "project": {
-    "canonical_name": "UPLOAD-READY IMAGE COMPRESSOR",
+    "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_INTERNAL_TEST_READY",
     "canonical_decision": "TEST",
-    "progress_percent": 74
+    "progress_percent": 76,
+    "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
     "current_build": {
@@ -38,7 +39,7 @@
     "id": "TASK-S5-002",
     "owner": "CODEX",
     "next_owner": "HUMAN_PLAY_CONSOLE",
-    "status": "COMPLETED",
+    "status": "CLOSED_PASS_WITH_HUMAN_ACTION",
     "acceptance_ids": [
       "S5-ID-01",
       "S5-ID-02",
@@ -108,8 +109,9 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "aadf167aad7776b6396456eb4b7f535876fbe329",
-    "evidence_closure_base_commit": "3df5a7802582c681b7d610f43167c8884460df3c"
+    "last_pushed_task_commit": "2b787b5781aa8851420a71326db757364230660f",
+    "evidence_closure_base_commit": "3df5a7802582c681b7d610f43167c8884460df3c",
+    "last_pushed_task_commit_scope": "PRE_CLOSURE_TASK_CHECKPOINT; closure commit intentionally cannot self-reference its own SHA"
   },
   "s4_review": {
     "status": "PASS",
@@ -131,7 +133,14 @@
     "fresh_release_apk_sha256": "c2230c8b9b1075687b8666bbbe7e36a24369a213e884886ba42bfacf71e57991",
     "runtime_current": "PASS_API36",
     "runtime_older": "PASS_API29",
-    "stale_identity": "PROVENANCE_ONLY_NOT_IN_FRESH_ARTIFACTS"
+    "stale_identity": "PROVENANCE_ONLY_NOT_IN_FRESH_ARTIFACTS",
+    "chat_review": {
+      "status": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
+      "reviewed_at": "2026-09-27",
+      "reviewed_head": "2b787b5781aa8851420a71326db757364230660f",
+      "artifact_binding": "PASS; no app/build-logic changes after migration commit 7122b368d61b58a9bfbace6a13f0eef0d61853b1",
+      "evidence_drift": "RECONCILED_IN_S5_CLOSURE"
+    }
   },
   "final_identity": {
     "status": "FINAL_FOR_IMPLEMENTATION",

@@ -1,12 +1,15 @@
 # HANDOFF_CURRENT
 
-Product: UPLOAD-READY IMAGE COMPRESSOR
+Product: REDUCE PHOTO SIZE: KB LIMIT
+Historical working name: UPLOAD-READY IMAGE COMPRESSOR (provenance only)
 Stage: S5_INTERNAL_TEST_READY
 Decision: TEST
-Progress: 74%
+Progress: 76%
 Current task: TASK-S5-002
 Next owner: HUMAN_PLAY_CONSOLE
-Task status: COMPLETED
+Task status: CLOSED_PASS_WITH_HUMAN_ACTION
+
+Reviewer disposition: PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION
 
 ## Evidence summary
 - HUMAN_ACTION_REQUIRED: 2
