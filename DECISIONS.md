@@ -76,3 +76,12 @@ Independent closure audit found that the core explicit-selection repair passes, 
 Independent audit accepts the fractional-display correction at tested source commit `2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d` and closure `dc193d5af46efa1332d896b68fced06ecdd7ceb1`. API36 runtime evidence proves faithful `10.5 KB` and `1.5 MB` requirement display, and the fresh unsigned AAB was independently recomputed as 664,211 bytes / SHA-256 `064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc`.
 
 TASK-S5-003 is therefore technically closed. However S5 itself is not declared-route complete because authorized Google Play Internal Testing distribution/install has not yet occurred. The state remains S5_INTERNAL_TEST_READY with next owner HUMAN_PLAY_CONSOLE. No S6/BUILD/release/publication authority is inferred.
+
+
+## D-020 — Mandatory professional UI/UX modernization before Play Internal Testing (2026-09-27)
+
+User visual review determined that the current Android presentation is materially too dated for the intended product quality bar. Source audit supports that assessment: the app still uses legacy Android Material theme/button primitives, a prototype-like stacked layout, native rectangular preset buttons, and text-glyph branding. Play Internal Testing upload is therefore paused.
+
+TASK-S5-004 is authorized as a controlled UI/UX redesign. It may modernize composition, visual hierarchy, cards, target controls, vector iconography, Custom presentation, progress state, result screen, and result action hierarchy. Save copy becomes primary, Share secondary, and Compress another tertiary. Functional truth, compression behavior, package identity, privacy, permissions, and monetization state remain frozen.
+
+Current AAB `064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc` is HOLD while redesign is active and becomes provenance-only after product source changes.

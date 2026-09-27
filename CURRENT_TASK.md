@@ -1,281 +1,364 @@
 # CURRENT_TASK.md
 
-Task ID: TASK-S5-003
+Task ID: TASK-S5-004
 Owner: CODEX
-Reviewer: CHAT — final independent artifact-bound audit PASS 2026-09-27
+Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: CLOSED_PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION
+Status: OPEN_UI_UX_REDESIGN_REQUIRED
 
 ## Goal
 
-Repair the known requirement-capture defect before any Google Play Internal Testing upload.
+Modernize the Android UI/UX before any Google Play Internal Testing upload.
 
-Current defect:
-- the requirement screen preselects `1 MB`;
-- `REQUIRED` can therefore exist without an explicit user-provided website/form limit;
-- this can produce a mathematically correct PASS against an app default while failing the user's real external requirement.
+The current app is functionally correct but visually below the intended professional market bar. This task is not a cosmetic recolor. It is a controlled UI/UX redesign that must preserve every frozen buyer-truth and compression behavior.
 
-Required product truth:
-- known external limit -> explicit user selection -> eligible for PASS / NOT_MET;
-- unknown external limit -> deliberate unknown path -> REDUCED only.
+## Current UI diagnosis
 
-## Authorized scope
+The current implementation still relies on:
+- `android:style/Theme.Material.Light.NoActionBar`;
+- `android:style/Widget.Material.Button`;
+- stacked LinearLayout composition;
+- native rectangular preset buttons;
+- text-glyph branding such as `✓ Reduce Photo Size`;
+- weak component hierarchy between header, cards, target controls, and result actions;
+- a visually old platform-button treatment despite otherwise clear product semantics.
 
-This task authorizes a narrow reversible source/UI defect repair plus proportional verification.
+The existing layout is understandable, but it reads like a prototype/utility from an older Android design era rather than a polished 2026 consumer utility.
 
-It does NOT authorize:
-- broad visual redesign;
-- Save/Share CTA reordering;
-- NOT_MET/REDUCED copy redesign beyond what is required by this task;
-- new features;
-- AdMob/UMP/analytics;
-- Play Console upload;
-- signing identity creation/selection;
-- BUILD promotion;
-- Artifact Freeze;
-- release;
-- publication.
+## Design direction
 
-## Source of truth
+Target:
+**modern, premium, calm, high-trust utility**
 
-Read first:
-1. `docs/ux/FIRST_OPEN_REQUIREMENT_DEEP_AUDIT_v1.0.md`
-2. `PRODUCT_SPEC.md`
-3. `S5_INTERNAL_TEST_PLAN.md`
-4. `S6_INTERNAL_TEST_PLAN.md`
-5. `docs/product/APP_IDENTITY_FINAL_v1.0.md`
-6. `AGENTS.md`
+Not:
+- flashy;
+- game-like;
+- gradient-heavy;
+- glassmorphism-heavy;
+- excessive animation;
+- decorative feature soup;
+- clone of another brand.
 
-## RESOLVED UNIT / CUSTOM CONTRACT
+Visual principles:
+1. strong hierarchy;
+2. generous but efficient spacing;
+3. rounded modern surfaces;
+4. clear primary/secondary/tertiary actions;
+5. restrained blue accent;
+6. privacy/trust cues as proper chips/badges, not text bullets;
+7. status/result states that feel deliberate and professional;
+8. modern target selectors, not old native buttons;
+9. no visual element may weaken requirement truth.
 
-The pre-code Custom semantics blocker is resolved by:
-`docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`
+## Required screen redesigns
 
-Binding rules:
-- KB = 1,000 bytes; MB = 1,000,000 bytes.
-- Presets become exact decimal thresholds: 50,000 / 100,000 / 200,000 / 500,000 / 1,000,000 bytes.
-- Custom converted range = 1,000..50,000,000 bytes.
-- Custom supports at most 3 fractional digits.
-- Accept one decimal separator, either dot or comma; reject both/grouped notation.
-- Use exact decimal arithmetic, not `double`.
-- Never round a maximum upward; floor fractional-byte conversion.
-- Friendly KB/MB display uses decimal SI.
-- PASS/NOT_MET proof includes exact bytes to avoid rounded-threshold ambiguity.
-- Existing 1024-based artifact evidence becomes provenance after source changes.
+### UX-01 — App shell / header
+Replace text-glyph header `✓ Reduce Photo Size`.
 
-## Required source changes
+Use:
+- compact product header;
+- neutral app/product mark or vector icon;
+- product name;
+- optional compact privacy/on-device chip.
 
-### RTF-01 — Remove implicit 1 MB REQUIRED
-- Do not call `selectTarget(1 MB, ...)` during `onCreate`.
-- Do not initialize a valid target that can be used without deliberate user action.
-- Use a safe unselected state such as target bytes = 0 / null-equivalent.
+Do not use a static checkmark that can be confused with result success state.
 
-### RTF-02 — Reset requirement state for each newly selected photo
-Create one deterministic `clearTargetSelection()` / equivalent path and use it whenever a new requirement job begins.
+### UX-02 — First-open screen
+Preserve:
+- clear buyer job;
+- one dominant action;
+- local/private trust;
+- original untouched/no account reassurance.
 
-When `showRequirement(...)` opens:
-- clear any previous target selection;
-- set target bytes to the safe unselected sentinel;
-- ensure every preset/Custom button uses the unselected/default visual;
-- display neutral requirement text `Choose the upload limit`;
-- disable `Make it upload-ready`.
+Modernize composition:
+- concise hero;
+- contained visual/photo utility surface;
+- modern iconography;
+- rounded primary CTA;
+- tighter, intentional spacing;
+- no empty prototype-like dead space.
 
-Also call the same reset from `reset()` so returning to first-open cannot retain a hidden stale target.
+Primary CTA:
+`Choose photo`
 
-This prevents a target chosen for a prior photo from silently carrying into a new buyer job.
+### UX-03 — Selected-photo / requirement screen
+Redesign CURRENT PHOTO as a modern information card.
 
-### RTF-03 — Explicit selection enables verified path
-For 50 KB / 100 KB / 200 KB / 500 KB / 1 MB / valid Custom:
-- set the target only after explicit user action;
-- show `REQUIRED: <= X` using the existing UI glyph/style where appropriate;
-- exactly one preset/Custom visual state may be selected;
-- the latest valid explicit selection is authoritative;
-- enable `Make it upload-ready` only when an image exists and the explicit target is valid.
+Must show:
+- file size as dominant datum;
+- dimensions;
+- format;
+- on-device status.
 
-### RTF-04 — Defensive known-path guard + immutable operation snapshot
-`startKnownCompression()` must not execute unless:
-- an image exists; and
-- a valid explicit target exists.
+Redesign preset selector:
+- 50 KB / 100 KB / 200 KB / 500 KB / 1 MB / Custom;
+- modern chip/segmented/pill treatment;
+- selected state must be obvious through more than color alone;
+- no default selected target;
+- 48dp minimum touch target.
 
-Do not rely only on the button-disabled state.
-
-Before dispatching work:
-- snapshot the current `ImageInfo` into a local immutable reference;
-- snapshot the explicit target bytes into a local value;
-- use those snapshots for the progress decision and worker/compression call.
-
-Do not let an asynchronous worker read a mutable target field as the authoritative requirement after dispatch.
-
-### RTF-05 — Preserve unknown path and abandon stale known-target semantics
-`I don't know the upload limit` remains independently usable with no target selected.
-It must continue to produce REDUCED / no upload-compatibility PASS claim.
-
-If the user previously selected a known target and then explicitly chooses the unknown-limit action:
-- clear/abandon the known target before dispatch;
-- do not carry `REQUIRED` into the unknown result semantics;
-- result must still be REDUCED / ALREADY_SMALL / ERROR as applicable, never PASS / NOT_MET against the abandoned target.
-
-Snapshot the current image for the unknown worker path as well.
-
-### RTF-06 — Safe XML defaults + shortened requirement heading
-The layout resource itself must be fail-safe before Java state mutation:
-- `selectedTargetText` default text = `Choose the upload limit`;
-- `makeReadyButton` default `android:enabled="false"`;
-- do not ship XML with `REQUIRED: 1 MB` as the default visible state.
-
-Change heading:
-`What does the website require?`
-
-to:
+Requirement title:
 `What's the upload limit?`
 
-Helper copy:
-`Choose the maximum size shown on the website or form.`
+Neutral state:
+`Choose the upload limit`
 
-Do not reduce font sizes or preset touch targets merely to fit content.
+Known CTA remains disabled until valid explicit selection.
 
-### RTF-07 — Custom-target invariants
-- valid Custom input creates the explicit target and selects only the Custom visual state;
-- invalid Custom input with no prior valid target leaves the screen unselected and known-path CTA disabled;
-- invalid/cancelled Custom input after a prior valid target must not silently replace or corrupt that prior target; the displayed REQUIRED and enabled state must continue to match the last valid explicit selection;
-- switching from Custom to a preset, or preset A to preset B, must use only the latest valid explicit target.
+Unknown-limit action stays visibly secondary.
 
-### RTF-08 — Error/retry selection semantics
-- known-path processing error may return to the requirement screen with the same explicit target still visible/valid for retry;
-- unknown-path processing must not resurrect an abandoned known target on error/retry;
-- no error path may create a valid REQUIRED value from the unselected sentinel.
+### UX-04 — Custom limit
+Modernize Custom input presentation without changing parser semantics.
 
-## Custom-limit verification additions
+Preserve:
+- decimal SI;
+- 1 KB..50 MB;
+- dot/comma decimal support;
+- max 3 fractional digits;
+- last-valid-target invariant.
 
-Add explicit tests for:
-- 50 KB = 50,000 bytes;
-- 100 KB = 100,000 bytes;
-- 200 KB = 200,000 bytes;
-- 500 KB = 500,000 bytes;
-- 1 MB = 1,000,000 bytes;
-- minimum 1 KB exactly and immediately below;
-- maximum 50 MB exactly and immediately above;
-- `10.5 KB` -> 10,500 bytes;
-- `1.5 MB` and `1,5 MB` -> 1,500,000 bytes;
-- >3 fractional digits rejected;
-- inputs containing both dot and comma rejected;
-- visible friendly size uses decimal SI;
-- PASS/NOT_MET proof exposes exact byte comparison;
-- output immediately above/below a custom threshold;
-- prior valid target -> invalid/cancelled Custom preserves prior target;
-- no prior target -> invalid Custom remains unselected.
+Prefer a clean modal/dialog or contained sheet-like presentation consistent with the visual system.
+Do not add unrelated settings.
+
+### UX-05 — Progress
+Replace generic legacy-feeling progress composition with a calm contained processing state.
+
+Show:
+- clear local/on-device processing cue;
+- non-blocking reassurance;
+- no fake percentage unless real progress is measured.
+
+### UX-06 — Result screen
+Redesign the result as the strongest screen in the app.
+
+Required hierarchy:
+1. status badge/state;
+2. final size;
+3. exact truth proof;
+4. before -> after comparison;
+5. dimensions / preservation disclosure;
+6. action hierarchy.
+
+PASS / NOT_MET / REDUCED must be visually differentiated by:
+- label;
+- icon;
+- typography;
+- restrained semantic color;
+not by color alone.
+
+Do not remove exact-byte proof.
+
+### UX-07 — Result actions
+Change hierarchy to align with the buyer job:
+
+Primary:
+`Save copy`
+
+Secondary:
+`Share`
+
+Tertiary:
+`Compress another`
+
+Reason: the core job is to create a concrete file that can be selected in an external upload form. Share remains important but is not the universal completion path.
+
+This is an approved UI/UX action-hierarchy change, not a change to result semantics.
+
+### UX-08 — Buttons and controls
+Remove old `Widget.Material.Button` appearance.
+
+Target:
+- 12–16dp corner radius;
+- 48–56dp touch height;
+- restrained elevation or outline;
+- clear disabled state;
+- proper press/focus state;
+- no all-caps;
+- no excessive shadows.
+
+Implementation may use Material Components if justified and verified, but:
+- do not migrate the app to Compose;
+- do not add a large framework migration only for styling;
+- avoid unnecessary dependency surface.
+
+### UX-09 — Cards / surfaces
+Use a consistent surface system:
+- app background;
+- card/surface;
+- outline;
+- tonal selected surface;
+- semantic success/warning surfaces.
+
+Suggested radius:
+- cards: 18–22dp;
+- primary buttons: 14–16dp;
+- chips/presets: 12–16dp.
+
+### UX-10 — Typography
+Keep system/Roboto-compatible fonts.
+
+Suggested hierarchy:
+- product/app header: 18–20sp semibold/bold;
+- hero: 28–32sp bold;
+- section: 20–22sp bold;
+- dominant numeric result: 40–48sp bold;
+- body: 15–16sp;
+- labels: 12–14sp medium/bold.
+
+Do not shrink critical text to fit.
+
+### UX-11 — Iconography
+Use vector icons where useful:
+- photo/image;
+- shield/privacy;
+- upload/target;
+- save/download;
+- share;
+- repeat/another;
+- success/warning/info.
+
+Do not use emoji or Unicode symbols as primary UI icons.
+
+### UX-12 — Color system
+Keep the high-trust blue/neutral identity but modernize application.
+
+Required properties:
+- accessible contrast;
+- semantic success/warning/error;
+- restrained saturation;
+- no gradient requirement;
+- no decorative neon.
+
+### UX-13 — Small-screen composition
+Reference viewport:
+`320 x 640`
+
+Also inspect:
+- a typical modern phone viewport around 360 x 800;
+- API29 and API36.
+
+No critical CTA may be accidentally clipped.
+Scrolling is acceptable when intentional.
+
+### UX-14 — Accessibility
+At minimum:
+- 48dp interactive targets;
+- content descriptions for non-text actionable icons;
+- text/button state does not rely only on color;
+- standard font-scale smoke;
+- no obvious TalkBack-order regression.
+
+Full accessibility certification remains S6 evidence.
+
+## Frozen behavior — MUST NOT regress
+
+Preserve all TASK-S5-003 truth:
+- no implicit target;
+- known path requires explicit target;
+- decimal SI KB/MB;
+- Custom parser contract;
+- exact-byte verification;
+- PASS / NOT_MET / REDUCED semantics;
+- unknown path never claims PASS;
+- source original untouched;
+- Save/Share;
+- EXIF/orientation safety;
+- no INTERNET;
+- no broad storage/media permissions;
+- no AdMob/UMP/analytics;
+- API29 + API36 support.
+
+## Implementation discipline
+
+Do NOT:
+- rewrite compression engine;
+- alter package/applicationId;
+- alter versionCode/versionName unless separately required;
+- add accounts/cloud/backend;
+- add ads;
+- add analytics;
+- change signing;
+- upload to Play;
+- add batch/PDF/editor/background-removal features;
+- convert project to Compose;
+- hide truth proof for aesthetics.
+
+## Required visual evidence
+
+Capture fresh screenshots for:
+1. first open;
+2. requirement unselected;
+3. preset selected;
+4. Custom 10.5 KB;
+5. PASS/ALREADY_READY;
+6. NOT_MET;
+7. REDUCED;
+8. progress;
+9. Save action/result;
+10. Share sheet.
+
+For core screens capture:
+- API36;
+- API29 where materially relevant.
 
 ## Required verification
 
-1. `python scripts/preflight.py`
-2. `./gradlew --no-daemon assembleDebug`
-3. `./gradlew --no-daemon testDebugUnitTest`
-4. `./gradlew --no-daemon lintDebug`
-5. `./gradlew --no-daemon assembleRelease`
-6. `./gradlew --no-daemon bundleRelease`
-7. API 36 install/launch
-8. API 29 install/launch
-9. fresh first-open screenshot
-10. fresh requirement-screen screenshot proving:
-   - no preset selected;
-   - neutral `Choose the upload limit`;
-   - known-limit CTA disabled;
-   - unknown-limit path visible/reachable
-11. explicit 100 KB selection -> known-path PASS case remains truthful
-12. aggressive explicit 50 KB -> honest NOT_MET
-13. no-selection known-path cannot execute, including direct/programmatic invocation of the guarded method
-14. unknown-limit path from a clean unselected state -> REDUCED only
-15. select 100 KB, then deliberately choose unknown-limit -> known target is abandoned and result remains REDUCED-only
-16. valid Custom target -> selected target shown and verified path enabled
-17. invalid Custom with no prior selection -> still unselected / known CTA disabled
-18. valid 100 KB -> invalid/cancelled Custom -> 100 KB remains the last valid explicit target; no silent mutation
-19. switch 100 KB -> 500 KB -> only 500 KB is visually/semantically authoritative and compression uses 500 KB
-20. select valid target for photo A -> complete/reset via `Compress another` -> choose photo B -> requirement target is cleared for photo B
-21. API29 requirement-screen smoke after selecting a JPEG -> no default target and known CTA disabled
-22. Save/Share regression
-23. original preservation regression
-24. known-path error/retry preserves only the explicit target; unknown-path error/retry does not resurrect one
-25. permission/privacy regression: no INTERNET, broad storage/media, AdMob/UMP/analytics
-26. fresh APK/AAB bytes + SHA-256
-27. update TEST_MATRIX, PROJECT_STATE, HANDOFF_CURRENT, evidence index
-28. `python scripts/validate_release_authority.py`
+Run:
+- preflight;
+- assembleDebug;
+- unit tests;
+- lint;
+- assembleRelease;
+- bundleRelease;
+- API36 install/launch;
+- API29 install/launch;
+- PASS/NOT_MET/REDUCED regression;
+- Custom 10.5 KB / 1.5 MB;
+- no-selection guard;
+- target reset;
+- Save;
+- Share;
+- source preservation;
+- EXIF/orientation;
+- large input;
+- permission/privacy inspection.
+
+Generate fresh APK/AAB hashes.
+
+## Artifact rule
+
+Current AAB:
+`064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc`
+
+is HOLD for Play while TASK-S5-004 is active.
+
+Once source/UI changes occur, that AAB becomes provenance-only and a fresh post-redesign AAB is required.
 
 ## Acceptance
 
-- S5-REQ-01: requirement screen opens with no selected target.
-- S5-REQ-02: no valid REQUIRED exists before explicit selection.
-- S5-REQ-03: known-path CTA is disabled until explicit valid target selection.
-- S5-REQ-04: known compression has a defensive target-validity guard.
-- S5-REQ-05: preset selection enables known path and displays the exact selected limit.
-- S5-REQ-06: Custom target succeeds only after valid explicit input.
-- S5-REQ-07: selecting a new photo clears any prior target.
-- S5-REQ-08: unknown-limit path remains deliberate and REDUCED-only.
-- S5-REQ-09: PASS / NOT_MET semantics remain actual-byte truthful.
-- S5-REQ-10: heading is `What's the upload limit?` and standard 320x640 composition remains usable.
-- S5-REQ-11: API36/API29, build/unit/lint/release/bundle, Save/Share, preservation, permission/privacy regressions PASS.
-- S5-REQ-12: fresh post-fix APK/AAB identity, bytes, SHA-256 and signing state are recorded.
-- S5-REQ-13: previous AAB `992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6` is marked superseded/ineligible for Play upload after source change.
-- S5-REQ-14: next owner is HUMAN_PLAY_CONSOLE only after all technical acceptance evidence passes.
-- S5-REQ-15: XML/resource defaults are fail-safe: neutral requirement text + known CTA disabled before runtime selection.
-- S5-REQ-16: unknown-limit action clears/abandons any prior known target semantics.
-- S5-REQ-17: the worker uses snapshotted image/target values captured at dispatch, not mutable target state.
-- S5-REQ-18: target switching and invalid/cancelled Custom interactions preserve a single truthful last-valid-selection invariant.
-- S5-REQ-19: API29 JPEG picker reaches the same unselected requirement state as API36.
-- S5-REQ-20: presets use decimal byte thresholds (50k/100k/200k/500k/1,000k bytes).
-- S5-REQ-21: Custom range is exactly 1,000..50,000,000 bytes.
-- S5-REQ-22: Custom decimal parser accepts one dot OR comma separator, rejects ambiguous/grouped input, and allows at most 3 fractional digits.
-- S5-REQ-23: requirement conversion uses exact decimal arithmetic and never rounds a maximum upward.
-- S5-REQ-24: friendly size display uses decimal SI; known-limit proof includes exact bytes.
-- S5-REQ-25: old 1024-based S5 artifacts/evidence remain provenance only after fresh artifacts are generated.
+- UI-01: no legacy text-glyph app header.
+- UI-02: first-open looks like a current professional consumer utility.
+- UI-03: target controls are modern, clear, and accessible.
+- UI-04: no default target regression.
+- UI-05: Custom flow visually coherent and truth-preserving.
+- UI-06: result screen hierarchy is strong and modern.
+- UI-07: Save copy is primary; Share secondary; Compress another tertiary.
+- UI-08: old platform-button visual treatment removed.
+- UI-09: status states remain semantically truthful.
+- UI-10: 320x640 has no accidental critical clipping.
+- UI-11: API29/API36 core screens render correctly.
+- UI-12: build/unit/lint/release/bundle pass.
+- UI-13: buyer-critical runtime regression passes.
+- UI-14: no new permissions/network/AdMob/analytics.
+- UI-15: fresh screenshot set and fresh APK/AAB hashes exist.
+- UI-16: independent Chat visual + artifact-bound review passes before Play.
 
 ## Done when
 
-A fresh artifact proves the user must explicitly supply a known upload limit before any PASS/NOT_MET path, while the unknown path remains REDUCED-only.
+The app no longer reads visually as a legacy Android prototype, while every frozen truth and privacy behavior remains intact.
 
-The Custom semantics blocker is resolved. Execute the repaired task and stop at HUMAN_PLAY_CONSOLE after producing fresh unsigned/signed-state evidence. Do not claim S6, BUILD, Artifact Freeze, release, or publication.
+Next owner after implementation:
+CHAT independent visual/artifact audit.
 
-
-## Independent closure review — corrective repair required
-
-Binding audit:
-`docs/ux/S5_003_INDEPENDENT_CLOSURE_AUDIT_v1.0.md`
-
-The reported closure is not accepted as final because `S5-REQ-24` is false-positive for fractional Custom target display.
-
-Required correction:
-- `FormatUtils.target(10_500)` -> `10.5 KB`
-- `FormatUtils.target(1_500_000)` -> `1.5 MB`
-- `FormatUtils.target(1_000)` -> `1 KB`
-- `FormatUtils.target(50_000_000)` -> `50 MB`
-- `FormatUtils.target(1_001)` -> `1.001 KB`
-
-Rules:
-- decimal SI only;
-- up to 3 useful fractional digits;
-- trim trailing zeros;
-- do not round the displayed maximum upward;
-- preserve exact-byte PASS/NOT_MET proof.
-
-Add deterministic formatter unit tests and runtime Custom requirement evidence for 10.5 KB and 1.5 MB.
-
-Current AAB `968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4` is HOLD and becomes provenance after the correction.
-
-
-## Final independent review
-
-Audit:
-`docs/ux/S5_003_FINAL_INDEPENDENT_AUDIT_v1.0.md`
-
-TASK-S5-003 technical acceptance is PASS.
-
-This closes the engineering/evidence task only.
-Overall S5 remains at the declared-route human boundary until authorized Google Play Internal Testing distribution/install evidence exists.
-
-Current unsigned AAB:
-`064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc`
-
-Next owner:
-`HUMAN_PLAY_CONSOLE`
-
-No S6, BUILD, Artifact Freeze, release, or publication claim.
+Do not proceed to HUMAN_PLAY_CONSOLE until TASK-S5-004 passes.

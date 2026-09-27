@@ -33,41 +33,32 @@
       "apk_sha256": "9769fbfc2eefd0783d7950e66cae0ca395cd97e3ed0f89d4473423adf32fdb10",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
-      "disposition": "FRESH_FRACTIONAL_ARTIFACT_UNSIGNED_HUMAN_ACTION_REQUIRED"
+      "disposition": "HOLD_UI_UX_MODERNIZATION_REQUIRED"
     },
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "TASK-S5-003",
+    "id": "TASK-S5-004",
     "owner": "CODEX",
-    "next_owner": "HUMAN_PLAY_CONSOLE",
-    "status": "CLOSED_PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION",
+    "next_owner": "CODEX",
+    "status": "OPEN_UI_UX_REDESIGN_REQUIRED",
     "acceptance_ids": [
-      "S5-REQ-01",
-      "S5-REQ-02",
-      "S5-REQ-03",
-      "S5-REQ-04",
-      "S5-REQ-05",
-      "S5-REQ-06",
-      "S5-REQ-07",
-      "S5-REQ-08",
-      "S5-REQ-09",
-      "S5-REQ-10",
-      "S5-REQ-11",
-      "S5-REQ-12",
-      "S5-REQ-13",
-      "S5-REQ-14",
-      "S5-REQ-15",
-      "S5-REQ-16",
-      "S5-REQ-17",
-      "S5-REQ-18",
-      "S5-REQ-19",
-      "S5-REQ-20",
-      "S5-REQ-21",
-      "S5-REQ-22",
-      "S5-REQ-23",
-      "S5-REQ-24",
-      "S5-REQ-25"
+      "UI-01",
+      "UI-02",
+      "UI-03",
+      "UI-04",
+      "UI-05",
+      "UI-06",
+      "UI-07",
+      "UI-08",
+      "UI-09",
+      "UI-10",
+      "UI-11",
+      "UI-12",
+      "UI-13",
+      "UI-14",
+      "UI-15",
+      "UI-16"
     ]
   },
   "gates": {
@@ -75,7 +66,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_TECHNICAL_PREP_PASS_HUMAN_PLAY_DISTRIBUTION_REQUIRED",
+    "internal_test": "S5_HOLD_UI_UX_MODERNIZATION_REQUIRED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -96,13 +87,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Authorized signing / Google Play Internal Testing distribution and install verification are still required before S5 declared-route completion."
+    "Professional UI/UX modernization is required before Google Play Internal Testing upload.",
+    "Fresh post-redesign APK/AAB and independent visual/artifact review are required.",
+    "Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after redesign PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "HUMAN_PLAY_CONSOLE performs authorized signing/account setup and distributes the fresh fractional-fix artifact through Google Play Internal Testing. S6 begins only after declared-route distribution/install evidence.",
+  "next_action": "CODEX executes TASK-S5-004 on task/TASK-S5-004, performs controlled professional UI/UX redesign, rebuilds/retests, and returns fresh visual/artifact evidence. No Play upload.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -119,7 +112,7 @@
     "remote_url": "https://github.com/whyarby72/upload-ready-image-compressor",
     "default_branch": "main",
     "integration_branch": "develop",
-    "active_task_branch": "task/TASK-S5-003",
+    "active_task_branch": "task/TASK-S5-004",
     "bootstrap_state": "READY_REMOTE",
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
@@ -213,5 +206,12 @@
       "failed_acceptance": null,
       "audit_ref": "docs/ux/S5_003_FINAL_INDEPENDENT_AUDIT_v1.0.md"
     }
+  },
+  "s5_ui_ux_modernization": {
+    "status": "REQUIRED_OPEN",
+    "reason": "User visual review found current UI materially outdated; source audit confirms legacy platform theme/button/component treatment.",
+    "baseline_aab_sha256": "064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc",
+    "baseline_aab_play_eligible": false,
+    "brief_ref": "docs/ux/S5_UI_UX_MODERNIZATION_BRIEF_v1.0.md"
   }
 }
