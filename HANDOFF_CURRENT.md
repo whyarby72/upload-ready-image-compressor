@@ -3,41 +3,49 @@
 Product: REDUCE PHOTO SIZE: KB LIMIT
 Stage: S5_UI_UX_REDESIGN_V2_REQUIRED
 Decision: TEST
-Progress: 83%
+Progress: 84%
 Current task: TASK-S5-004
 Next owner: CHAT
 Task status: REOPENED_HUMAN_VISUAL_REJECTION
 
-## Premium Android benchmark
+## Human-approved visual anchor
 
-Completed:
-`docs/ux/S5_PREMIUM_ANDROID_UI_BENCHMARK_2025_2026_v1.0.md`
+The latest warm, muted, media-first premium mockup is accepted as the preferred visual direction.
 
-Benchmark set:
-14 current/recent Android products and platform references.
+## Final visual system
 
-Binding next visual direction:
-`MEDIA-FIRST PRECISION UTILITY`
+Binding:
+`docs/ux/S5_PREMIUM_VISUAL_SYSTEM_v1.0.md`
 
-## Architecture direction
+Name:
+`MEDIA-FIRST PRECISION UTILITY — WARM INK`
 
-Preferred for visual prototype:
-Compose Material 3 / Material 3 Expressive presentation layer.
+Core direction:
+- warm ivory canvas
+- deep muted teal/ink primary
+- quiet semantic success/warning surfaces
+- media-first composition
+- low text density
+- contemporary iconography
+- pill-like actions
+- result action dock
+- compact exact-byte proof
+- modern Compose Material 3 presentation target
 
-Preserve:
-- existing verified compression/domain engine;
-- parser;
-- exact-byte truth;
-- PASS / NOT_MET / REDUCED;
-- Save/Share;
-- original preservation;
-- package identity.
+## Truth guard
 
-Coding is NOT authorized yet.
+Do not implement mockup-only artifacts such as:
+- fake 72% progress
+- precise promised output before real input
+- unsupported formats
+- unimplemented retry flow
 
-## Current artifact
+## Coding authority
 
-AAB:
+NOT AUTHORIZED.
+
+## Current AAB
+
 `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`
 
 Disposition:
@@ -45,9 +53,4 @@ Disposition:
 
 ## Next action
 
-Create high-fidelity mockups for:
-1. First Open
-2. Requirement
-3. Result
-
-Do not implement until direct human visual approval.
+Create exact high-fidelity production screens using the final visual system, then obtain direct human approval before Compose implementation.

@@ -192,3 +192,14 @@
 - bound the next visual concept to `MEDIA-FIRST PRECISION UTILITY`;
 - preserved the verified Java/domain engine and all exact-byte truth semantics;
 - did not authorize coding before human approval of new high-fidelity mockups.
+
+
+# 2026-09-27 — Premium Warm Ink visual system frozen
+
+- converted the human-preferred premium mockup into an implementation-oriented design system;
+- replaced bright cobalt branding with warm ivory + deep muted teal/ink;
+- defined typography, spacing, shapes, surfaces, iconography, photo treatment, buttons and result action dock;
+- required media-first result composition and compact exact-byte proof;
+- explicitly prohibited fake mockup percentage progress and unsupported behaviors;
+- retained Compose Material 3 as the preferred presentation architecture;
+- did not authorize coding before final screen-level human approval.

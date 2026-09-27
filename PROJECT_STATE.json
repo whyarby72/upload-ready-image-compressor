@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_UI_UX_REDESIGN_V2_REQUIRED",
     "canonical_decision": "TEST",
-    "progress_percent": 83,
+    "progress_percent": 84,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -95,7 +95,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT creates new high-fidelity mockups for First Open, Requirement, and Result using the MEDIA-FIRST PRECISION UTILITY direction. No coding until human visual approval.",
+  "next_action": "CHAT produces exact high-fidelity First Open, Requirement, PASS, NOT_MET, and REDUCED screens using S5_PREMIUM_VISUAL_SYSTEM_v1.0.md; no coding before direct human visual approval.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -256,6 +256,16 @@
       "binding_direction": "MEDIA_FIRST_PRECISION_UTILITY",
       "preferred_ui_architecture": "COMPOSE_PRESENTATION_LAYER_EXISTING_DOMAIN_ENGINE",
       "coding_authorized": false
+    },
+    "premium_visual_system": {
+      "status": "BOUND",
+      "observed_at": "2026-09-27",
+      "ref": "docs/ux/S5_PREMIUM_VISUAL_SYSTEM_v1.0.md",
+      "name": "MEDIA_FIRST_PRECISION_UTILITY_WARM_INK",
+      "palette": "WARM_IVORY_DEEP_MUTED_TEAL",
+      "preferred_architecture": "COMPOSE_MATERIAL3_PRESENTATION_LAYER",
+      "coding_authorized": false,
+      "human_visual_anchor": "premium mockup v5"
     }
   }
 }

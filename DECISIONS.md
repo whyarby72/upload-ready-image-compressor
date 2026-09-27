@@ -167,3 +167,14 @@ Binding visual direction:
 `MEDIA-FIRST PRECISION UTILITY`
 
 No Compose coding is authorized until new high-fidelity First Open / Requirement / Result mockups receive direct human visual approval.
+
+
+## D-029 — Premium Warm Ink visual system bound from human-approved mockup direction (2026-09-27)
+
+The user explicitly preferred the latest warm, muted mockup over the previous bright utility directions, describing it as more elegant and premium. That direction is now normalized into a binding implementation-oriented visual system: `MEDIA-FIRST PRECISION UTILITY — WARM INK`.
+
+The system uses a warm ivory canvas, deep muted teal/ink primary actions, restrained success/NOT_MET surfaces, lower text density, media-first result composition, contemporary iconography, pill-like actions, compact exact-byte proof, and a result action dock.
+
+Mockup-only inaccuracies remain non-authoritative. In particular, fake percentage progress, exact promised output before a real input exists, unsupported formats, and unimplemented retry flows are prohibited.
+
+The preferred future presentation architecture remains Compose Material 3 over the existing verified domain/compression engine. Coding remains withheld until exact final screen mockups receive direct human visual approval.
