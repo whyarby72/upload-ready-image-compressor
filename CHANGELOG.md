@@ -181,3 +181,14 @@
 - identified legacy View/theme foundation, generic action styling, dated iconography, coarse type hierarchy and form-like result composition as root visual issues;
 - placed current AAB `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5` on HOLD for Play;
 - reopened design work before any signing, Internal Testing upload, S6, BUILD, Artifact Freeze, release or publication.
+
+
+# 2026-09-27 — Premium Android 2025–2026 UI benchmark
+
+- benchmarked 14 current/recent Android products and platform references;
+- confirmed current Android platform direction is Compose-first / Material 3 Expressive;
+- identified media-first result presentation and contextual action docks as stronger references than stacked utility forms;
+- rejected another cosmetic View/XML skinning pass;
+- bound the next visual concept to `MEDIA-FIRST PRECISION UTILITY`;
+- preserved the verified Java/domain engine and all exact-byte truth semantics;
+- did not authorize coding before human approval of new high-fidelity mockups.

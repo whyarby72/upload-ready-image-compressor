@@ -155,3 +155,15 @@ The user reviewed the actual emulator result screen and explicitly judged the cu
 The current implementation is functionally accepted but visually rejected. TASK-S5-004 is reopened as `REOPENED_HUMAN_VISUAL_REJECTION`. Current AAB `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5` is HOLD for Play.
 
 Root cause is the decision to preserve a dependency-light legacy View/theme foundation and style over it. The next redesign must evaluate a materially different presentation architecture, with Compose-first UI preferred for evaluation while preserving the verified compression/domain engine and all product-truth semantics.
+
+
+## D-028 — Premium Android 2025–2026 benchmark binds MEDIA-FIRST PRECISION UTILITY direction (2026-09-27)
+
+A focused benchmark of 14 current/recent Android products and platform references was completed after direct human rejection of the previous View/XML redesign. The strongest transferable patterns are media-first composition, contextual/floating/docked actions, fewer intentional containers, modern connected controls, contemporary iconography, less exposed engineering detail, and Material 3 Expressive typography/shape/motion.
+
+Android's current platform guidance is Compose-first; traditional Views and View-based Material Components are in maintenance mode. For this small one-job app, the preferred next visual prototype is therefore a Compose Material 3 presentation layer over the already-verified domain/compression engine, not another skinning pass over the legacy View/theme foundation.
+
+Binding visual direction:
+`MEDIA-FIRST PRECISION UTILITY`
+
+No Compose coding is authorized until new high-fidelity First Open / Requirement / Result mockups receive direct human visual approval.
