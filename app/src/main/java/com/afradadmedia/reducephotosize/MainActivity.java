@@ -1,7 +1,7 @@
 package com.afradadmedia.reducephotosize;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.ClipData;
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.InputType;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -144,58 +146,55 @@ public final class MainActivity extends Activity {
         makeReadyButton.setEnabled(imageInfo != null);
         for (int i = 0; i < targetButtons.length; i++) {
             targetButtons[i].setSelected(i == index);
+            targetButtons[i].setCompoundDrawablesWithIntrinsicBounds(0, 0, i == index ? R.drawable.ic_check_small : 0, 0);
             targetButtons[i].setContentDescription(i == index ? targetButtons[i].getText() + ", selected" : targetButtons[i].getText().toString());
         }
     }
 
     private void showCustomTargetDialog() {
-        LinearLayout box = new LinearLayout(this);
-        box.setOrientation(LinearLayout.VERTICAL);
-        int pad = dp(20);
-        box.setPadding(pad, pad, pad, 0);
-
-        EditText input = new EditText(this);
-        input.setHint("e.g. 350");
-        input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
-        box.addView(input);
-
-        RadioGroup units = new RadioGroup(this);
-        units.setOrientation(RadioGroup.HORIZONTAL);
-        RadioButton kb = new RadioButton(this); kb.setText("KB"); kb.setId(View.generateViewId());
-        RadioButton mb = new RadioButton(this); mb.setText("MB"); mb.setId(View.generateViewId());
-        units.addView(kb); units.addView(mb); kb.setChecked(true);
-        box.addView(units);
-
-        TextView helper = new TextView(this);
-        helper.setText("1 KB–50 MB · use a dot or comma · up to 3 decimal places");
-        helper.setTextColor(getColor(R.color.ur_muted));
-        helper.setTextSize(13);
-        helper.setPadding(0, dp(8), 0, 0);
-        box.addView(helper);
-
-        TextView validation = new TextView(this);
-        validation.setTextColor(getColor(R.color.ur_error));
-        validation.setTextSize(13);
-        validation.setVisibility(View.GONE);
-        validation.setPadding(0, dp(8), 0, 0);
-        box.addView(validation);
-
-        AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle("Custom upload limit")
-                .setView(box)
-                .setNegativeButton("Cancel", null)
-                .setPositiveButton("Use limit", null).create();
-        dialog.setOnShowListener(d -> dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_custom_limit);
+        dialog.setCanceledOnTouchOutside(true);
+        EditText input = dialog.findViewById(R.id.customLimitInput);
+        TextView kb = dialog.findViewById(R.id.unitKb);
+        TextView mb = dialog.findViewById(R.id.unitMb);
+        TextView validation = dialog.findViewById(R.id.customLimitValidation);
+        final boolean[] megabytes = {false};
+        View.OnClickListener kbListener = v -> {
+            megabytes[0] = false;
+            kb.setBackgroundResource(R.drawable.segment_selected);
+            kb.setTextColor(getColor(R.color.ur_text));
+            mb.setBackgroundResource(R.drawable.segment_unselected);
+            mb.setTextColor(getColor(R.color.ur_muted));
+        };
+        View.OnClickListener mbListener = v -> {
+            megabytes[0] = true;
+            mb.setBackgroundResource(R.drawable.segment_selected);
+            mb.setTextColor(getColor(R.color.ur_text));
+            kb.setBackgroundResource(R.drawable.segment_unselected);
+            kb.setTextColor(getColor(R.color.ur_muted));
+        };
+        kb.setOnClickListener(kbListener);
+        mb.setOnClickListener(mbListener);
+        dialog.findViewById(R.id.customLimitCancel).setOnClickListener(v -> dialog.dismiss());
+        dialog.findViewById(R.id.customLimitUse).setOnClickListener(v -> {
             try {
-                long bytes = TargetLimitParser.parse(input.getText().toString(), mb.isChecked());
+                long bytes = TargetLimitParser.parse(input.getText().toString(), megabytes[0]);
                 selectTarget(bytes, 5);
                 dialog.dismiss();
             } catch (IllegalArgumentException ex) {
                 validation.setText(ex.getMessage());
                 validation.setVisibility(View.VISIBLE);
+                input.requestFocus();
             }
-        }));
+        });
         dialog.show();
+        Window window = dialog.getWindow();
+        if (window != null) {
+            window.setBackgroundDrawableResource(android.R.color.transparent);
+            window.setLayout(Math.min(dp(360), getResources().getDisplayMetrics().widthPixels - dp(32)), ViewGroup.LayoutParams.WRAP_CONTENT);
+        }
     }
 
     private void startKnownCompression() {
@@ -356,6 +355,7 @@ public final class MainActivity extends Activity {
         if (targetButtons != null) {
             for (Button button : targetButtons) {
                 button.setSelected(false);
+                button.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                 button.setContentDescription(button.getText().toString());
             }
         }
