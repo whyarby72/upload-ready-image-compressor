@@ -126,3 +126,12 @@ Independent Chat review finds the main first-open and requirement redesign mater
 Evidence reconciliation also found a debug APK SHA typo in several matrix rows and an AAB byte-count drift: the fresh AAB SHA-256 is correct at `908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6`, while its independently observed size is 677,037 bytes, not 677,122.
 
 TASK-S5-004 is reopened for a narrow corrective pass. No Play upload or S6/BUILD promotion is allowed until independent review passes.
+
+
+## D-025 — TASK-S5-004 corrective source PASS; evidence-only recapture required (2026-09-27)
+
+Independent review accepts corrective source commit `6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6`: the Custom Limit modal is modernized, KB/MB is segmented, the target icon is a bullseye, and selected targets have a visible check indicator. No product-truth or compression-engine regression is identified.
+
+However multiple evidence files are mislabeled: both fresh first-open viewport captures are Android splash frames, the progress capture is actually a PASS result, NOT_MET is a system stylus overlay, large-font requirement is the system photo picker, and API29 requirement is the document picker. These cannot close the corresponding acceptance IDs.
+
+The fresh corrective AAB is independently verified at 682,671 bytes / SHA-256 `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`. The artifact remains current but HOLD pending evidence-only recapture. No source change is required by this review.

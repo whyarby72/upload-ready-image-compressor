@@ -1,32 +1,57 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_UI_UX_CORRECTIVE
+Stage: S5_UI_UX_EVIDENCE_RECOVERY
 Decision: TEST
 Progress: 86%
 Current task: TASK-S5-004
-Next owner: CHAT
-Task status: CORRECTIVE_IMPLEMENTED_PENDING_CHAT_REVIEW
+Next owner: CODEX
+Task status: SOURCE_CORRECTIVE_PASS_EVIDENCE_RECAPTURE_REQUIRED
 
-## Evidence summary
-- HUMAN_ACTION_REQUIRED: 2
-- PASS: 90
-- PENDING: 3
+## Reviewer disposition
 
-## Authority
-- build_authorized: False
-- artifact_freeze: False
-- release_authorized: False
-- publication_authorized: False
+Source corrective:
+PASS
 
-## Blockers
-- Clean post-correction NOT_MET runtime frame remains pending before full UI-09/UI-13 closure.
-- Independent Chat visual/artifact audit remains required before any Play or later-stage claim.
-- Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after reviewer PASS.
+Overall TASK-S5-004:
+HOLD pending evidence-only recapture.
 
-## Human decisions required
-- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
-- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
+Audit:
+`docs/ux/S5_004_CORRECTIVE_INDEPENDENT_REVIEW_v1.0.md`
+
+## Valid corrective evidence
+
+- modern Custom dialog
+- segmented KB/MB
+- visible selected-target check
+- bullseye target icon
+- requirement unselected
+- PASS result
+- REDUCED result
+- Save success
+- Share sheet
+
+## Invalid/mislabeled evidence to replace
+
+- API36 first open 320x640 = splash screen
+- API36 first open 360x800 = splash screen
+- progress = PASS result
+- NOT_MET = system stylus overlay
+- large-font requirement = system picker
+- API29 requirement = system document picker
+
+## Current artifact
+
+AAB:
+`de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`
+682,671 bytes
+UNSIGNED
+
+Artifact is source-bound but HOLD until evidence closure.
 
 ## Next action
-CHAT independently audits corrective source, fresh artifacts, and UI-01..UI-16 evidence; NOT_MET runtime frame remains explicitly pending.
+
+Run:
+`prompts/CODEX_S5_UI_UX_EVIDENCE_RECAPTURE.md`
+
+Evidence-only. Do not modify product source.

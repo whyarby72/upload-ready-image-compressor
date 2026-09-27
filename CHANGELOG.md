@@ -148,3 +148,13 @@
 - found debug APK hash typo in matrix;
 - independently verified AAB SHA-256 and corrected observed byte count to 677,037;
 - placed current S5-004 artifact on HOLD pending a narrow corrective pass.
+
+
+# 2026-09-27 — TASK-S5-004 corrective independent review
+
+- accepted corrective source implementation;
+- independently verified fresh corrective AAB at 682,671 bytes / SHA-256 `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`;
+- validated modern Custom modal, target bullseye, selected check indicator, PASS/REDUCED/Save/Share evidence;
+- found mislabeled splash/system frames for first-open, progress, NOT_MET, large-font requirement, and API29 requirement;
+- converted affected acceptance rows back to PENDING;
+- opened an evidence-only recapture step with no product-source mutation required.

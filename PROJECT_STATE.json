@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_UI_UX_CORRECTIVE",
+    "current_stage": "S5_UI_UX_EVIDENCE_RECOVERY",
     "canonical_decision": "TEST",
     "progress_percent": 86,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -25,23 +25,23 @@
       "application_id": "com.afradadmedia.reducephotosize",
       "version_code": 1,
       "version_name": "0.1.0",
-      "aab_path": "evidence/play/app-release-0.1.0-vc1-fractional-unsigned.aab",
-      "aab_bytes": 664211,
-      "aab_sha256": "064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc",
-      "apk_path": "evidence/play/app-release-0.1.0-vc1-fractional-unsigned.apk",
-      "apk_bytes": 2142882,
-      "apk_sha256": "9769fbfc2eefd0783d7950e66cae0ca395cd97e3ed0f89d4473423adf32fdb10",
+      "aab_path": "evidence/play/app-release-0.1.0-vc1-s5-004-corrective-unsigned.aab",
+      "aab_bytes": 682671,
+      "aab_sha256": "de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5",
+      "apk_path": "evidence/play/app-release-0.1.0-vc1-s5-004-corrective-unsigned.apk",
+      "apk_bytes": 2161978,
+      "apk_sha256": "f507b5249fa5f6322207cce174b3c53801c55cd7c248bc92aad25cd43b940f3b",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
-      "disposition": "HOLD_TASK_S5_004_CORRECTIVE_REQUIRED"
+      "disposition": "CURRENT_CORRECTIVE_ARTIFACT_HOLD_EVIDENCE_RECAPTURE_REQUIRED"
     },
     "frozen_release_candidate": null
   },
   "current_task": {
     "id": "TASK-S5-004",
     "owner": "CODEX",
-    "next_owner": "CHAT",
-    "status": "CORRECTIVE_IMPLEMENTED_PENDING_CHAT_REVIEW",
+    "next_owner": "CODEX",
+    "status": "SOURCE_CORRECTIVE_PASS_EVIDENCE_RECAPTURE_REQUIRED",
     "acceptance_ids": [
       "UI-01",
       "UI-02",
@@ -66,7 +66,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_UI_UX_CORRECTIVE_REQUIRED",
+    "internal_test": "S5_HOLD_UI_UX_EVIDENCE_RECAPTURE_REQUIRED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -87,15 +87,16 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Clean post-correction NOT_MET runtime frame remains pending before full UI-09/UI-13 closure.",
-    "Independent Chat visual/artifact audit remains required before any Play or later-stage claim.",
+    "Corrective source changes pass, but several required runtime screenshots are mislabeled system/splash frames and must be recaptured.",
+    "Clean NOT_MET, actual progress, current-artifact first-open 320x640/360x800, large-font requirement, and API29 requirement evidence remain pending.",
+    "Independent Chat closure remains required before Play.",
     "Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after reviewer PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT independently audits corrective source, fresh artifacts, and UI-01..UI-16 evidence; NOT_MET runtime frame remains explicitly pending.",
+  "next_action": "CODEX performs evidence-only recapture using the exact current corrective debug APK; no product-source mutation.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -208,7 +209,7 @@
     }
   },
   "s5_ui_ux_modernization": {
-    "status": "CORRECTIVE_IMPLEMENTED_PENDING_CHAT_REVIEW",
+    "status": "SOURCE_CORRECTIVE_PASS_EVIDENCE_RECAPTURE_REQUIRED",
     "tested_source_commit": "6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6",
     "evidence_proof": "evidence/play/S5_UI_UX_CORRECTIVE_PROOF.json",
     "fresh_debug_apk_sha256": "690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370",
@@ -231,21 +232,32 @@
     "progress_semantics": "INDETERMINATE_ONLY_NO_FAKE_PERCENT",
     "ui_dependency_policy": "DEPENDENCY_LIGHT_NATIVE_VIEW_DEFAULT",
     "chat_review": {
-      "status": "HOLD_CORRECTIVE_UI_AND_EVIDENCE",
+      "status": "SOURCE_CORRECTIVE_PASS_EVIDENCE_HOLD",
       "reviewed_at": "2026-09-27",
-      "reviewed_closure": "a4dd389a764e7ce5e722c99759a48ab6d5b9a9ca",
-      "source_commit": "959b131c7746dec1e5e8414f6b11d2741ae19b70",
-      "independent_aab_sha256": "908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6",
-      "independent_aab_bytes": 677037,
-      "findings": [
-        "Custom modal remains visually legacy.",
-        "ic_target is a plus symbol.",
-        "Selected target lacks a visible non-color indicator.",
-        "Required result/progress/save/share/API29/360x800/large-font screenshots are incomplete.",
-        "Matrix debug hash typo.",
-        "AAB byte-count drift in proof."
+      "reviewed_closure": "a25f683f3cd1f10bf760aeec6f8a020d6af07677",
+      "source_commit": "6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6",
+      "independent_aab_sha256": "de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5",
+      "independent_aab_bytes": 682671,
+      "valid_runtime": [
+        "requirement_unselected",
+        "100kb_selected",
+        "custom_dialog",
+        "custom_10_5kb",
+        "custom_invalid",
+        "pass_result",
+        "reduced_result",
+        "save_success",
+        "share_sheet"
       ],
-      "audit_ref": "docs/ux/S5_004_INDEPENDENT_VISUAL_ARTIFACT_AUDIT_v1.0.md"
+      "invalid_or_mislabeled_runtime": [
+        "first_open_320x640_splash",
+        "first_open_360x800_splash",
+        "progress_is_pass_result",
+        "not_met_is_stylus_overlay",
+        "large_font_requirement_is_picker",
+        "api29_requirement_is_picker"
+      ],
+      "audit_ref": "docs/ux/S5_004_CORRECTIVE_INDEPENDENT_REVIEW_v1.0.md"
     }
   }
 }

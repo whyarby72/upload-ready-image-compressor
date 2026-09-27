@@ -437,3 +437,18 @@ Required:
 - evidence hash/byte-count corrections.
 
 Current S5-004 AAB `908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6` is HOLD and becomes provenance-only after corrective source changes.
+
+
+## Corrective independent review — source PASS, evidence recapture required
+
+Audit:
+`docs/ux/S5_004_CORRECTIVE_INDEPENDENT_REVIEW_v1.0.md`
+
+The corrective source implementation is accepted.
+
+TASK-S5-004 remains open only because several screenshot files are mislabeled system/splash frames rather than the claimed app states.
+
+Next action is evidence-only:
+`prompts/CODEX_S5_UI_UX_EVIDENCE_RECAPTURE.md`
+
+Do not change product source unless a real defect is discovered.
