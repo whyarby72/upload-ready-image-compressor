@@ -178,3 +178,10 @@ The system uses a warm ivory canvas, deep muted teal/ink primary actions, restra
 Mockup-only inaccuracies remain non-authoritative. In particular, fake percentage progress, exact promised output before a real input exists, unsupported formats, and unimplemented retry flows are prohibited.
 
 The preferred future presentation architecture remains Compose Material 3 over the existing verified domain/compression engine. Coding remains withheld until exact final screen mockups receive direct human visual approval.
+
+
+## D-030 — Human approves Warm Ink premium visual concept; implementation remains separately gated (2026-09-27)
+
+The user explicitly approved the latest five-screen `MEDIA-FIRST PRECISION UTILITY — WARM INK` mockup concept. This establishes the visual anchor for the next implementation pass: warm ivory canvas, deep muted teal/ink primary actions, media-first composition, low copy density, premium rounded/pill controls, compact exact-byte proof, restrained semantic colors, and elegant photo comparison.
+
+This is a visual-concept approval only. It does not authorize Compose/source mutation, signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication. The current AAB remains HOLD because it does not implement the newly approved concept.

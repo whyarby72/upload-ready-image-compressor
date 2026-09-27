@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_UI_UX_REDESIGN_V2_REQUIRED",
     "canonical_decision": "TEST",
-    "progress_percent": 84,
+    "progress_percent": 85,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -95,7 +95,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT produces exact high-fidelity First Open, Requirement, PASS, NOT_MET, and REDUCED screens using S5_PREMIUM_VISUAL_SYSTEM_v1.0.md; no coding before direct human visual approval.",
+  "next_action": "CHAT converts the human-approved Warm Ink mockup into an exact Compose implementation brief/spec. Coding remains unauthorized until that brief is reviewed/approved.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -266,6 +266,32 @@
       "preferred_architecture": "COMPOSE_MATERIAL3_PRESENTATION_LAYER",
       "coding_authorized": false,
       "human_visual_anchor": "premium mockup v5"
+    },
+    "human_visual_approval": {
+      "status": "APPROVED_CONCEPT",
+      "observed_at": "2026-09-27",
+      "visual_anchor": "latest premium Warm Ink five-screen mockup in chat",
+      "scope": [
+        "warm ivory + deep muted teal/ink palette",
+        "media-first composition",
+        "low text density",
+        "one-line product identity",
+        "premium pill actions",
+        "compact exact-byte proof",
+        "visual before/after result",
+        "quiet semantic success/warning surfaces"
+      ],
+      "does_not_authorize": [
+        "Compose coding",
+        "source mutation",
+        "signing",
+        "Play upload",
+        "S6",
+        "BUILD promotion",
+        "Artifact Freeze",
+        "release",
+        "publication"
+      ]
     }
   }
 }

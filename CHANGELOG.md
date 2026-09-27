@@ -203,3 +203,12 @@
 - explicitly prohibited fake mockup percentage progress and unsupported behaviors;
 - retained Compose Material 3 as the preferred presentation architecture;
 - did not authorize coding before final screen-level human approval.
+
+
+# 2026-09-27 — Warm Ink premium visual concept approved by human
+
+- user approved the latest five-screen premium mockup as the visual anchor;
+- bound warm ivory + muted ink palette, media-first composition, low text density, premium actions and restrained semantic surfaces;
+- preserved exact-byte truth and existing domain behavior as implementation constraints;
+- kept current AAB on HOLD because it predates the approved visual concept;
+- kept Compose/source coding separately gated pending an exact implementation brief/spec.
