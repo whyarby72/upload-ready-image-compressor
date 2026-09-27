@@ -3,39 +3,30 @@
 Product: REDUCE PHOTO SIZE: KB LIMIT
 Stage: S5_UI_UX_CORRECTIVE
 Decision: TEST
-Progress: 82%
+Progress: 86%
 Current task: TASK-S5-004
-Next owner: CODEX
-Task status: REOPENED_CORRECTIVE_UI_AND_EVIDENCE
+Next owner: CHAT
+Task status: CORRECTIVE_IMPLEMENTED_PENDING_CHAT_REVIEW
 
-## Independent review
-
-Overall visual modernization direction: PASS
-TASK-S5-004 closure: HOLD
-
-Audit:
-`docs/ux/S5_004_INDEPENDENT_VISUAL_ARTIFACT_AUDIT_v1.0.md`
-
-## Blocking corrections
-
-1. Modernize Custom Limit modal; current platform radio-dialog treatment remains visually legacy.
-2. Replace plus-shaped target icon with a real target/limit icon.
-3. Add visible selected indicator to target tiles.
-4. Capture complete post-fix runtime visual evidence: progress, PASS, NOT_MET, REDUCED, Save, Share, API29 requirement, 360x800 and large-font smoke.
-5. Reconcile UI-01..UI-16 one-to-one.
-6. Fix debug APK hash typo in matrix.
-7. Correct AAB byte count; independently observed current AAB is 677,037 bytes / SHA-256 908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6.
+## Evidence summary
+- HUMAN_ACTION_REQUIRED: 2
+- PASS: 90
+- PENDING: 3
 
 ## Authority
-
 - build_authorized: False
 - artifact_freeze: False
 - release_authorized: False
 - publication_authorized: False
 
+## Blockers
+- Clean post-correction NOT_MET runtime frame remains pending before full UI-09/UI-13 closure.
+- Independent Chat visual/artifact audit remains required before any Play or later-stage claim.
+- Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after reviewer PASS.
+
+## Human decisions required
+- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
+- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
+
 ## Next action
-
-CODEX executes:
-`prompts/CODEX_S5_UI_UX_CORRECTIVE.md`
-
-No Play upload.
+CHAT independently audits corrective source, fresh artifacts, and UI-01..UI-16 evidence; NOT_MET runtime frame remains explicitly pending.
