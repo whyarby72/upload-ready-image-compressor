@@ -7,16 +7,16 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_COMPOSE_WARM_INK_CORRECTIVE",
     "canonical_decision": "TEST",
-    "progress_percent": 88,
+    "progress_percent": 94,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
     "current_build": {
       "source_version": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
-      "status": "S5_UI_UX_EVIDENCE_RECAPTURED_PENDING_CHAT_REVIEW",
+      "status": "READY_FOR_HUMAN_VISUAL_REVIEW",
       "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370",
+      "apk_sha256": "49b8eb39e4585d314c305a63f2a8a0ce4a972d6ac63a3dbe703046e0732b33ea",
       "application_id": "com.afradadmedia.reducephotosize",
       "namespace": "com.afradadmedia.reducephotosize",
       "label": "Reduce Photo Size"
@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-005",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "REWORK_REQUIRED_BEFORE_HUMAN_VISUAL_REVIEW",
+    "next_owner": "CHAT + HUMAN",
+    "status": "READY_FOR_HUMAN_VISUAL_REVIEW",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -70,17 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Compose migration is technically present but materially deviates from the approved Warm Ink low-text/media-first visual brief.",
-    "Custom invalid validation currently closes the dialog instead of remaining inline.",
-    "PreviewLoader lacks mirrored EXIF orientation parity with the verified engine.",
-    "No TASK-S5-005 runtime screenshot/artifact proof set is repository-bound yet.",
     "Direct human visual approval of actual corrected Compose runtime screenshots is still required before Play."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX performs the narrow TASK-S5-005 Warm Ink fidelity corrective from the latest branch HEAD, then commits complete runtime/artifact evidence and returns READY_FOR_HUMAN_VISUAL_REVIEW.",
+  "next_action": "CHAT + HUMAN review the repository-bound TASK-S5-005 Warm Ink runtime screenshots; no visual PASS is claimed by Codex.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -279,7 +275,7 @@
       ]
     },
     "compose_implementation_brief": {
-      "status": "IMPLEMENTED_FIRST_PASS_REWORK_REQUIRED",
+      "status": "CORRECTIVE_IMPLEMENTED_READY_FOR_HUMAN_VISUAL_REVIEW",
       "observed_at": "2026-09-27",
       "ref": "docs/ux/S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md",
       "scope": "PRESENTATION_LAYER_ONLY",
@@ -289,11 +285,13 @@
       "approved_at": "2026-09-27",
       "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION",
       "first_pass_commit": "ee59fbf78cd0623b83b8bb6785aa479688231a38",
+      "corrective_source_commit": "5ab842073cfe6dbc507baac499c3af37a9e05183",
       "chat_source_review": {
-        "status": "TECHNICAL_MIGRATION_PASS_WARM_INK_FIDELITY_REWORK_REQUIRED",
+        "status": "CORRECTIVE_READY_FOR_HUMAN_VISUAL_REVIEW",
         "reviewed_at": "2026-09-27",
         "audit_ref": "docs/ux/S5_005_INDEPENDENT_SOURCE_AUDIT_v1.0.md",
-        "evidence_bound": false
+        "evidence_bound": true,
+        "evidence_ref": "evidence/play/S5_005_WARM_INK_CORRECTIVE_PROOF.json"
       }
     }
   }

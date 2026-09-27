@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "task": "TASK-S5-005",
+  "status": "READY_FOR_HUMAN_VISUAL_REVIEW",
+  "canonical_decision": "TEST",
+  "approval": "COMPOSE_WARM_INK_IMPLEMENTATION",
+  "source_commit_tested": "5ab842073cfe6dbc507baac499c3af37a9e05183",
+  "starting_head": "a0e735aef48057dc7a0cc4552f24772afca68e5b",
+  "environment": {
+    "os": "Mac OS X 26.5.2 aarch64",
+    "jdk": "Temurin 17.0.16",
+    "gradle": "9.7.1",
+    "agp": "9.4.1",
+    "compile_sdk": 37,
+    "target_sdk": 36,
+    "min_sdk": 29,
+    "compose_bom": "2026.09.00",
+    "material3": "1.4.0",
+    "activity_compose": "1.13.0",
+    "sdk_platform": "android-37.0",
+    "runtime_api36": "emulator-5554",
+    "runtime_api29": "emulator-5556"
+  },
+  "commands": [
+    "JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home ./gradlew assembleDebug testDebugUnitTest lintDebug assembleRelease bundleRelease --console=plain",
+    "adb install -r app/build/outputs/apk/debug/app-debug.apk",
+    "adb shell am start -n com.afradadmedia.reducephotosize/.MainActivity"
+  ],
+  "technical_checks": {
+    "assembleDebug": "PASS",
+    "testDebugUnitTest": "PASS",
+    "lintDebug": "PASS",
+    "assembleRelease": "PASS",
+    "bundleRelease": "PASS",
+    "protected_domain_diff": "CLEAN",
+    "signing_or_play_upload": "NOT_PERFORMED"
+  },
+  "artifacts": [
+    {"path": "evidence/artifacts/s5_005/app-debug.apk", "bytes": 30359120, "sha256": "49b8eb39e4585d314c305a63f2a8a0ce4a972d6ac63a3dbe703046e0732b33ea", "signing_state": "DEBUG_LOCAL"},
+    {"path": "evidence/artifacts/s5_005/app-release-unsigned.apk", "bytes": 22984645, "sha256": "0721f11429ffe354f4b0ea617bd8918e0a041fdf4ac34a5d9f0e76135e80e9d8", "signing_state": "UNSIGNED"},
+    {"path": "evidence/artifacts/s5_005/app-release.aab", "bytes": 7950132, "sha256": "c20fd7aeefd9556e706b7c4da5f299e9fd011415c49768d6ab506c96d9e67465", "signing_state": "LOCAL_GRADLE_OUTPUT_NOT_FOR_PLAY"}
+  ],
+  "runtime_evidence": [
+    "evidence/screenshots/s5_005/home_api36_320x640.png",
+    "evidence/screenshots/s5_005/home_api36_360x800.png",
+    "evidence/screenshots/s5_005/home_api29_320x640.png",
+    "evidence/screenshots/s5_005/requirement_api36.png",
+    "evidence/screenshots/s5_005/requirement_100kb_api36.png",
+    "evidence/screenshots/s5_005/requirement_lower_api36.png",
+    "evidence/screenshots/s5_005/custom_dialog_api36.png",
+    "evidence/screenshots/s5_005/custom_invalid_inline_api36.png",
+    "evidence/screenshots/s5_005/processing_api36.png",
+    "evidence/screenshots/s5_005/result_api36.png",
+    "evidence/screenshots/s5_005/result_actions_current_api36.png",
+    "evidence/screenshots/s5_005/save_success_api36.png",
+    "evidence/screenshots/s5_005/share_sheet_api36.png",
+    "evidence/screenshots/s5_005/home_font_1_3x_api36.png"
+  ],
+  "corrective_coverage": {
+    "minimal_home": "PASS_SOURCE_AND_RUNTIME_CAPTURE",
+    "minimal_requirement": "PASS_SOURCE_AND_RUNTIME_CAPTURE",
+    "selected_check": "PASS_SOURCE_AND_RUNTIME_CAPTURE",
+    "custom_inline_validation": "PASS_RUNTIME_CAPTURE_DIALOG_REMAINS_OPEN",
+    "media_first_processing": "PASS_SOURCE_IMPLEMENTATION",
+    "media_first_result": "PASS_RUNTIME_CAPTURE",
+    "compact_result_action_dock": "PASS_SOURCE_IMPLEMENTATION",
+    "floppy_save_removed": "PASS_SOURCE_IMPLEMENTATION",
+    "warm_ink_vectors": "PASS_ACTIVE_UI_NORMALIZED",
+    "exif_preview_parity": "PASS_SOURCE_IMPLEMENTATION_MATCHES_ENGINE_TRANSFORMS",
+    "one_line_320dp_identity": "PASS_RUNTIME_CAPTURE",
+    "central_typography": "PASS_SOURCE_IMPLEMENTATION"
+  },
+  "provenance_only": {
+    "pre_compose_aab_sha256": "de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5"
+  },
+  "visual_gate": "HUMAN_REVIEW_REQUIRED",
+  "next_owner": "CHAT + HUMAN"
+}
