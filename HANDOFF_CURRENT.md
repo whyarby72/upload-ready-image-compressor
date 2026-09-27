@@ -1,54 +1,46 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_INTERNAL_TEST_READY
+Stage: S5_UI_UX_REDESIGN_V2_REQUIRED
 Decision: TEST
-Progress: 88%
+Progress: 82%
 Current task: TASK-S5-004
-Next owner: HUMAN_PLAY_CONSOLE
-Task status: CLOSED_PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION
+Next owner: CHAT
+Task status: REOPENED_HUMAN_VISUAL_REJECTION
 
-## Independent closure
+## Human visual decision
 
-TASK-S5-004:
-PASS
+The current UI is not accepted for market-facing quality.
 
-UI-01 through UI-16:
-PASS
+The previous structural UI PASS is superseded by direct human visual rejection.
 
-Final audit:
-`docs/ux/S5_004_FINAL_INDEPENDENT_CLOSURE_AUDIT_v1.0.md`
+Audit:
+`docs/ux/S5_004_HUMAN_VISUAL_REJECTION_AUDIT_v1.0.md`
 
 ## Current artifact
 
 Unsigned AAB:
 `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`
-682,671 bytes
 
-Debug APK:
-`690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370`
+Disposition:
+`HOLD_HUMAN_VISUAL_REJECTION`
 
-Release APK:
-`f507b5249fa5f6322207cce174b3c53801c55cd7c248bc92aad25cd43b940f3b`
+Do not upload to Play.
 
-Signing:
-UNSIGNED_HUMAN_ACTION_REQUIRED
+## Root issue
 
-## Stage boundary
-
-The Android app and mandatory UI/UX modernization are technically accepted.
-
-S5 itself is not declared-route complete until authorized Google Play Internal Testing distribution/install occurs.
-
-## Authority
-
-- build_authorized: False
-- artifact_freeze: False
-- release_authorized: False
-- publication_authorized: False
+The app is functionally correct, but the visual system still reads as a legacy/basic Android utility:
+- legacy View/theme foundation;
+- generic full-width CTA treatment;
+- dated icon language;
+- form-like result composition;
+- coarse typography hierarchy;
+- overly prominent engineering detail;
+- crowded narrow-width header;
+- weak visual focal point.
 
 ## Next action
 
-HUMAN_PLAY_CONSOLE performs authorized signing/account setup and Google Play Internal Testing distribution.
+Develop a materially different high-fidelity visual concept and obtain human visual approval before implementation.
 
-No S6/BUILD/Artifact Freeze/release/publication claim before that evidence exists.
+No signing, Play upload, S6, BUILD, Artifact Freeze, release, or publication.

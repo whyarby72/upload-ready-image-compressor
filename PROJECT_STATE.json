@@ -5,9 +5,9 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_INTERNAL_TEST_READY",
+    "current_stage": "S5_UI_UX_REDESIGN_V2_REQUIRED",
     "canonical_decision": "TEST",
-    "progress_percent": 88,
+    "progress_percent": 82,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -33,15 +33,15 @@
       "apk_sha256": "f507b5249fa5f6322207cce174b3c53801c55cd7c248bc92aad25cd43b940f3b",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
-      "disposition": "CURRENT_UNSIGNED_PLAY_CANDIDATE_HUMAN_ACTION_REQUIRED"
+      "disposition": "HOLD_HUMAN_VISUAL_REJECTION"
     },
     "frozen_release_candidate": null
   },
   "current_task": {
     "id": "TASK-S5-004",
-    "owner": "CODEX",
-    "next_owner": "HUMAN_PLAY_CONSOLE",
-    "status": "CLOSED_PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION",
+    "owner": "CHAT",
+    "next_owner": "CHAT",
+    "status": "REOPENED_HUMAN_VISUAL_REJECTION",
     "acceptance_ids": [
       "UI-01",
       "UI-02",
@@ -66,7 +66,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_TECHNICAL_UI_PASS_HUMAN_PLAY_DISTRIBUTION_REQUIRED",
+    "internal_test": "S5_HOLD_HUMAN_VISUAL_REJECTION",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -87,13 +87,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Authorized signing / Google Play Internal Testing distribution and install verification remain required before S5 declared-route completion."
+    "Human visual review rejects the current market-facing UI as still materially dated.",
+    "A materially different UI/UX visual system must be approved before any Play Internal Testing upload.",
+    "Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after visual approval."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "HUMAN_PLAY_CONSOLE performs authorized signing/account setup and distributes the current corrective AAB through Google Play Internal Testing. S6 begins only after declared-route distribution/install evidence.",
+  "next_action": "CHAT develops and reviews a substantially different high-fidelity visual direction before any further implementation or Play action.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -206,7 +208,7 @@
     }
   },
   "s5_ui_ux_modernization": {
-    "status": "PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION",
+    "status": "REOPENED_HUMAN_VISUAL_REJECTION",
     "tested_source_commit": "6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6",
     "evidence_proof": "evidence/play/S5_UI_UX_CORRECTIVE_PROOF.json",
     "fresh_debug_apk_sha256": "690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370",
@@ -237,6 +239,14 @@
       "aab_bytes": 682671,
       "acceptance": "UI-01_THROUGH_UI-16_PASS",
       "audit_ref": "docs/ux/S5_004_FINAL_INDEPENDENT_CLOSURE_AUDIT_v1.0.md"
+    },
+    "human_visual_rejection": {
+      "status": "REOPEN",
+      "observed_at": "2026-09-27",
+      "reason": "User reviewed actual emulator result screen and judged the presentation still materially dated.",
+      "audit_ref": "docs/ux/S5_004_HUMAN_VISUAL_REJECTION_AUDIT_v1.0.md",
+      "current_aab_sha256": "de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5",
+      "play_disposition": "HOLD"
     }
   }
 }

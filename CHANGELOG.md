@@ -172,3 +172,12 @@
 - retained current unsigned AAB `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`;
 - moved next ownership to HUMAN_PLAY_CONSOLE for actual Google Play Internal Testing distribution;
 - made no S6/BUILD/Artifact Freeze/release/publication claim.
+
+
+# 2026-09-27 — TASK-S5-004 reopened by human visual rejection
+
+- direct user review rejected the current result screen as still materially dated;
+- superseded the prior subjective visual PASS while preserving functional/artifact evidence;
+- identified legacy View/theme foundation, generic action styling, dated iconography, coarse type hierarchy and form-like result composition as root visual issues;
+- placed current AAB `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5` on HOLD for Play;
+- reopened design work before any signing, Internal Testing upload, S6, BUILD, Artifact Freeze, release or publication.

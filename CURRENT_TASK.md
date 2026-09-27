@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: CLOSED_PASS_WITH_HUMAN_PLAY_DISTRIBUTION_ACTION
+Status: REOPENED_HUMAN_VISUAL_REJECTION
 
 ## Goal
 
@@ -469,3 +469,21 @@ Current unsigned AAB:
 `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`
 
 S5 is not declared-route complete until actual Google Play Internal Testing distribution/install evidence exists.
+
+
+## Human visual rejection — reopen
+
+The user reviewed the actual emulator result screen and rejected the current visual quality as still materially dated.
+
+Binding audit:
+`docs/ux/S5_004_HUMAN_VISUAL_REJECTION_AUDIT_v1.0.md`
+
+The previous UI-01..UI-16 structural pass does not override direct human rejection of subjective market-facing quality.
+
+Do not upload the current AAB to Play.
+
+Next owner:
+`CHAT`
+
+Next phase:
+produce and approve a substantially different high-fidelity visual system before coding.

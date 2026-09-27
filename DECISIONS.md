@@ -146,3 +146,12 @@ UI-01 through UI-16 are accepted. TASK-S5-004 is therefore closed PASS. The test
 The current unsigned AAB remains `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5` at 682,671 bytes.
 
 This closes the mandatory UI/UX modernization task only. S5 Google Play Internal Testing distribution remains human-bound and incomplete until authorized signing/account setup plus actual Play Internal Testing distribution/install evidence exists.
+
+
+## D-027 — Human visual rejection supersedes TASK-S5-004 visual PASS (2026-09-27)
+
+The user reviewed the actual emulator result screen and explicitly judged the current UI as still materially dated. Because subjective market-facing quality requires human approval, the previous structural UI-01..UI-16 PASS is not sufficient to authorize Play progression.
+
+The current implementation is functionally accepted but visually rejected. TASK-S5-004 is reopened as `REOPENED_HUMAN_VISUAL_REJECTION`. Current AAB `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5` is HOLD for Play.
+
+Root cause is the decision to preserve a dependency-light legacy View/theme foundation and style over it. The next redesign must evaluate a materially different presentation architecture, with Compose-first UI preferred for evaluation while preserving the verified compression/domain engine and all product-truth semantics.
