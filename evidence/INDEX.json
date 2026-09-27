@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 96,
+  "file_count": 112,
   "files": [
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
@@ -73,6 +73,11 @@
       "sha256": "83714d0c0c77a7af52b602fa8bb31187a6886e5bdbe525d5c0c75eb1138df159"
     },
     {
+      "path": "evidence/play/S5_UI_UX_PROOF.json",
+      "bytes": 2961,
+      "sha256": "aae74a690dfcd8013a2c81e9b55efeebe2ffe3adbc0ca19a21dba5b9277255a3"
+    },
+    {
       "path": "evidence/play/app-debug-0.1.0-vc1-fractional.apk",
       "bytes": 2630064,
       "sha256": "138403cc37259588cbc56e20c7a90b4892c6cb8de9c3e78d3151b0ce6f98c1aa"
@@ -81,6 +86,11 @@
       "path": "evidence/play/app-debug-0.1.0-vc1-reqfix.apk",
       "bytes": 2629752,
       "sha256": "ea416398009b01e03f687dd1448547bbfecbc237ffb08fefb125922687bc09bf"
+    },
+    {
+      "path": "evidence/play/app-debug-0.1.0-vc1-s5-004.apk",
+      "bytes": 2633821,
+      "sha256": "eb30f81194d75b0b7424d75ba3ae9f8373adae779d42ada26aa8d72d96cd8f76"
     },
     {
       "path": "evidence/play/app-release-0.1.0-vc1-fractional-unsigned.aab",
@@ -111,6 +121,16 @@
       "path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.apk",
       "bytes": 2142634,
       "sha256": "7b28ba612f2cde6da032675fcf1cf3b732228f05859b889c493e3a7611d615d0"
+    },
+    {
+      "path": "evidence/play/app-release-0.1.0-vc1-s5-004-unsigned.aab",
+      "bytes": 677037,
+      "sha256": "908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6"
+    },
+    {
+      "path": "evidence/play/app-release-0.1.0-vc1-s5-004-unsigned.apk",
+      "bytes": 2156766,
+      "sha256": "45c792d48371ea2f0f060b06ed8aee81399d7e6b3e33a92d26e699db6248530e"
     },
     {
       "path": "evidence/play/app-release-0.1.0-vc1-unsigned.aab",
@@ -291,6 +311,66 @@
       "path": "evidence/screenshots/result_50kb_api36_uiautomator.xml",
       "bytes": 7468,
       "sha256": "20a48f81a3526edb3c5e4b3c3f1ada590b48ca9f8e40aae0109c71c3ff16142c"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api29_first_open.png",
+      "bytes": 38112,
+      "sha256": "d3124ad5658c3792232657499a1ce7b73e2b984859521d7b9528a27cc1c5965d"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_100kb_selected.png",
+      "bytes": 45391,
+      "sha256": "81a67daab4569c7f07697c7fbb1ac682c3e68a4cfc5154045d951f6deac64613"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_100kb_selected.xml",
+      "bytes": 12376,
+      "sha256": "44946bc2e855ba589b908fae2a7e62b8008c76a7f4614c6d5f38aca0b0ac41df"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_custom_dialog.png",
+      "bytes": 46574,
+      "sha256": "a0df5b26a41a7a443cf5e2a71a346da94befcfc8c29d921e3382dc2f4e57144b"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_custom_invalid.png",
+      "bytes": 39906,
+      "sha256": "e349b4ddb5fdc45e810683de2b0d741a4fcf3f44c7d8185b43d978c291bea4f9"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_custom_invalid_inline.png",
+      "bytes": 40238,
+      "sha256": "86806beee185682739f8046e10473215482833c65b78be3b21a5e51d96bf0624"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_custom_invalid_inline.xml",
+      "bytes": 7372,
+      "sha256": "157888a82de40bab3a7102e4e0ee967bd28dced864078950f6659637089a20dc"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_first_open.png",
+      "bytes": 35638,
+      "sha256": "69d52e9edeca047895d4f156fcf210b921a391d83c3c174497ba6461fd0542ac"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_picker.png",
+      "bytes": 153140,
+      "sha256": "0640d2835dcf699c9e7839807477dc5eaa4d88ca97581027e31675e67935478d"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_picker.xml",
+      "bytes": 17256,
+      "sha256": "77854e503fff6c1af5257f102f598f1ae66f9ddd230fd474f9eb34a051a59d8a"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_picker_selected.png",
+      "bytes": 43917,
+      "sha256": "111c37a808063846561251be248f0005d1e5d511cade8a9073be0fd018dafb30"
+    },
+    {
+      "path": "evidence/screenshots/s5_004/api36_requirement.png",
+      "bytes": 43917,
+      "sha256": "111c37a808063846561251be248f0005d1e5d511cade8a9073be0fd018dafb30"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",

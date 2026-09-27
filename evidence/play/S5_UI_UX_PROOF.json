@@ -1,0 +1,53 @@
+{
+  "schema": "AI_PROD_S5_UI_UX_MODERNIZATION_PROOF_v1",
+  "observed_at": "2026-09-27",
+  "task": "TASK-S5-004",
+  "branch": "task/TASK-S5-004",
+  "required_start_head": "a996a1d5c3cbe4c43eea6b0962dddb350cfa2e58",
+  "tested_source_commit": "959b131c7746dec1e5e8414f6b11d2741ae19b70",
+  "canonical_decision": "TEST",
+  "design_system": "PRECISION_UTILITY_COBALT_NEUTRAL_MODERN_EDITORIAL_ANDROID",
+  "scope": "XML/View modernization only; no Compose, AdMob, analytics, signing, Play upload, or feature expansion",
+  "verification": {
+    "preflight": "PASS",
+    "assembleDebug": "PASS",
+    "testDebugUnitTest": "PASS",
+    "lintDebug": "PASS",
+    "assembleRelease": "PASS",
+    "bundleRelease": "PASS",
+    "api36_first_open": "PASS; emulator-5554; 320x640; fresh debug install",
+    "api29_first_open": "PASS; emulator-5556; 320x640; fresh debug install",
+    "api36_requirement_unselected": "PASS; neutral target state and disabled known CTA",
+    "api36_requirement_100kb": "PASS; selected border and tonal fill; Required ≤ 100 KB",
+    "api36_custom_dialog": "PASS; explicit unit choice and helper copy visible",
+    "launch_crash_regression": "PASS; corrected target vector path and relaunch verified"
+  },
+  "runtime_evidence": [
+    "evidence/screenshots/s5_004/api36_first_open.png",
+    "evidence/screenshots/s5_004/api29_first_open.png",
+    "evidence/screenshots/s5_004/api36_requirement.png",
+    "evidence/screenshots/s5_004/api36_100kb_selected.png",
+    "evidence/screenshots/s5_004/api36_100kb_selected.xml",
+    "evidence/screenshots/s5_004/api36_custom_dialog.png",
+    "evidence/screenshots/s5_004/api36_custom_invalid.png",
+    "evidence/screenshots/s5_004/api36_custom_invalid_inline.png",
+    "evidence/screenshots/s5_004/api36_picker.png",
+    "evidence/screenshots/s5_004/api36_picker.xml"
+  ],
+  "fixtures": {
+    "standard_2400x1600.jpg": "569d93c4756424a435536df4133f31960ae7027d4531f02dc80f867215868c4f",
+    "large_4500x3000.jpg": "0fc6a095eff306cda696352db3f998e86f2715ea474558846174d06dbf71db0a",
+    "already_small_640x480.jpg": "13036281836189d5e2d87a511b334730df30011eeaa009b0dcdae8c0d3aa2280",
+    "exif_orientation_6_1600x1200.jpg": "79e7505f2ebeff78392d9968358eda3186488204d2ab4f3e7c57600c52c1c682"
+  },
+  "artifacts": {
+    "debug_apk": {"path": "evidence/play/app-debug-0.1.0-vc1-s5-004.apk", "bytes": 2633821, "sha256": "eb30f81194d75b0b7424d75ba3ae9f8373adae779d42ada26aa8d72d96cd8f76"},
+    "release_apk": {"path": "evidence/play/app-release-0.1.0-vc1-s5-004-unsigned.apk", "sha256": "45c792d48371ea2f0f060b06ed8aee81399d7e6b3e33a92d26e699db6248530e"},
+    "release_aab": {"path": "evidence/play/app-release-0.1.0-vc1-s5-004-unsigned.aab", "bytes": 677122, "sha256": "908755dddc0d030e22172d5ad9650037a513bffa8e86d701337dbff1ed646de6", "signing": "UNSIGNED_HUMAN_ACTION_REQUIRED"}
+  },
+  "next_owner": "CHAT",
+  "chat_review_required": true,
+  "s6_claim": false,
+  "build_claim": false,
+  "upload_performed": false
+}

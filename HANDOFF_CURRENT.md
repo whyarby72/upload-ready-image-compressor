@@ -1,49 +1,30 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_INTERNAL_TEST_READY
+Stage: S5_UI_UX_REVIEW
 Decision: TEST
-Progress: 76%
+Progress: 82%
 Current task: TASK-S5-004
-Next owner: CODEX
-Task status: OPEN_UI_UX_REDESIGN_REQUIRED
+Next owner: CHAT
+Task status: IMPLEMENTED_PENDING_CHAT_REVIEW
 
-## Current gate
-
-Play upload is paused.
-
-Professional UI/UX modernization is now required before Google Play Internal Testing.
-
-## Baseline artifact
-
-Current pre-redesign AAB:
-`064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc`
-
-Disposition:
-`HOLD_UI_UX_MODERNIZATION_REQUIRED`
-
-Once TASK-S5-004 changes product source/UI, this artifact becomes provenance-only.
+## Evidence summary
+- HUMAN_ACTION_REQUIRED: 2
+- PASS: 77
 
 ## Authority
-
 - build_authorized: False
 - artifact_freeze: False
 - release_authorized: False
 - publication_authorized: False
 
 ## Blockers
+- Independent Chat visual/artifact review of TASK-S5-004 remains pending.
+- Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after reviewer PASS.
 
-1. TASK-S5-004 professional UI/UX redesign.
-2. Fresh screenshot + APK/AAB evidence.
-3. Independent Chat visual/artifact audit.
-4. Human signing / Google Play Internal Testing distribution after redesign PASS.
+## Human decisions required
+- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
+- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
 
 ## Next action
-
-CODEX executes:
-`prompts/CODEX_S5_UI_UX_MODERNIZATION.md`
-
-on:
-`task/TASK-S5-004`
-
-No Play upload before reviewer PASS.
+CHAT independently reviews TASK-S5-004 source, runtime screenshots, and artifact hashes; no S6 claim.
