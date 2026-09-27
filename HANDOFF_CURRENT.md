@@ -1,61 +1,49 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_COMPOSE_WARM_INK_IMPLEMENTATION
+Stage: S5_COMPOSE_WARM_INK_CORRECTIVE
 Decision: TEST
-Progress: 87%
+Progress: 88%
 Current task: TASK-S5-005
 Next owner: CODEX
-Task status: OPEN_IMPLEMENTATION_AUTHORIZED
+Task status: REWORK_REQUIRED_BEFORE_HUMAN_VISUAL_REVIEW
 
-## Material approval
+## First-pass source review
 
-`COMPOSE_WARM_INK_IMPLEMENTATION`
+Implementation commit:
+`ee59fbf78cd0623b83b8bb6785aa479688231a38`
 
-Scope:
-presentation-layer migration defined by:
-- `docs/ux/S5_PREMIUM_VISUAL_SYSTEM_v1.0.md`
-- `docs/ux/S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md`
-- `docs/ux/S5_COMPOSE_TOOLCHAIN_BINDING_v1.0.md`
+Disposition:
+`TECHNICAL_MIGRATION_PASS / WARM_INK_FIDELITY_REWORK_REQUIRED`
 
-## Implementation branch
+Audit:
+`docs/ux/S5_005_INDEPENDENT_SOURCE_AUDIT_v1.0.md`
 
-`task/TASK-S5-005`
+## Main blockers
 
-## Authority
+- Home/Requirement copy density still exceeds approved concept.
+- Result remains text/proof-card/stacked-action oriented instead of approved media-first action-dock design.
+- floppy Save icon remains.
+- selected limit lacks visible check indicator.
+- Custom invalid input closes the dialog instead of inline keep-open validation.
+- Processing lacks source preview.
+- PreviewLoader lacks mirrored EXIF orientation parity.
+- no dedicated TASK-S5-005 runtime screenshot/artifact proof set is committed.
 
-Authorized:
-- Kotlin/Compose enablement;
-- compileSdk 37 toolchain update;
-- Compose Material 3 UI migration;
-- UI state/event bridge;
-- safe media preview;
-- fresh builds/tests/evidence.
+## Artifact state
 
-Not authorized:
-- targetSdk/package/version changes;
-- domain/compression/parser changes;
-- network/ads/analytics;
-- signing;
-- Play upload;
-- S6/BUILD/Artifact Freeze/release/publication.
-
-## Visual gate
-
-Codex final state must be:
-`READY_FOR_HUMAN_VISUAL_REVIEW`
-
-Codex cannot approve its own visual implementation.
-
-## Current pre-Compose AAB
-
+Pre-Compose AAB:
 `de446e023a5ec668659f67e7a9fc2bfdb060ea11dffe57c5530624401a1325e5`
 
-Once source mutation occurs:
-`PROVENANCE_ONLY`
+Disposition:
+`PROVENANCE_ONLY_PRE_COMPOSE`
+
+New Compose artifacts:
+operator-attested only; full repository-bound hashes/binaries are pending.
 
 ## Next action
 
 Run:
-`prompts/CODEX_S5_COMPOSE_WARM_INK_IMPLEMENTATION.md`
-from the exact branch HEAD supplied in the external handoff. Stop on mismatch.
+`prompts/CODEX_S5_005_WARM_INK_CORRECTIVE.md`
+
+No Play/signing/release action.

@@ -233,3 +233,13 @@
 - protected verified Java/domain engine and all truth semantics;
 - required fresh APK/AAB and full runtime evidence;
 - required direct human visual review of actual Compose screenshots before any Play progression.
+
+
+# 2026-09-27 — TASK-S5-005 first-pass independent source audit
+
+- confirmed Compose migration is exactly one implementation commit from the approved starting HEAD;
+- confirmed protected Java/domain engine files are unchanged;
+- accepted technical migration direction but rejected first-pass Warm Ink fidelity;
+- found excessive copy, stacked result actions, floppy Save icon, missing selected check, non-inline Custom validation, non-media Processing, and mirrored-EXIF preview mismatch;
+- found no repository-bound TASK-S5-005 screenshot/artifact proof set;
+- opened a narrow corrective pass inside the existing Compose implementation approval.

@@ -203,3 +203,14 @@ The user explicitly approved option 1, authorizing implementation of the exact C
 A new implementation task `TASK-S5-005` and branch `task/TASK-S5-005` are opened. The verified Java/domain engine remains protected. Toolchain-only compileSdk upgrade to 37 is authorized because current stable Compose 1.12.x requires compileSdk 37; targetSdk remains 36.
 
 Codex may implement and produce fresh artifacts/evidence but may not self-approve visual quality. Final implementation status must be `READY_FOR_HUMAN_VISUAL_REVIEW`. Signing, Play upload, S6, BUILD promotion, Artifact Freeze, release and publication remain unauthorized.
+
+
+## D-033 — TASK-S5-005 first-pass Compose migration technically succeeds but fails Warm Ink fidelity gate (2026-09-27)
+
+Independent source review of `ee59fbf78cd0623b83b8bb6785aa479688231a38` confirms that the protected Java/domain engine was not modified and that the Compose presentation/toolchain migration is structurally in place.
+
+However the implementation materially diverges from the human-approved visual contract: Home and Requirement remain copy-heavy, selected chips lack the required visible check, Custom validation closes the dialog, Processing lacks media context, Result recreates the rejected status/number/proof-card/stacked-actions pattern, the floppy Save icon remains, and PreviewLoader lacks mirrored EXIF orientation parity with the engine.
+
+No dedicated TASK-S5-005 runtime screenshot/artifact evidence is committed, and chat-supplied artifact hashes are abbreviated, so technical build/smoke claims are not yet independently artifact-bound.
+
+TASK-S5-005 remains authorized within the existing approval scope for a narrow fidelity corrective. No new product scope is authorized.

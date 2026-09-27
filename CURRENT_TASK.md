@@ -115,3 +115,19 @@ A fresh AAB is mandatory.
 - fresh artifacts/hashes exist;
 - status is READY_FOR_HUMAN_VISUAL_REVIEW;
 - no Play/signing/release claim.
+
+
+## Independent first-pass source audit
+
+Audit:
+`docs/ux/S5_005_INDEPENDENT_SOURCE_AUDIT_v1.0.md`
+
+First-pass technical migration is accepted, but Warm Ink fidelity is not.
+
+Status:
+`REWORK_REQUIRED_BEFORE_HUMAN_VISUAL_REVIEW`
+
+Corrective prompt:
+`prompts/CODEX_S5_005_WARM_INK_CORRECTIVE.md`
+
+This corrective is inside the existing `COMPOSE_WARM_INK_IMPLEMENTATION` approval scope.

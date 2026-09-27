@@ -5,9 +5,9 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_COMPOSE_WARM_INK_IMPLEMENTATION",
+    "current_stage": "S5_COMPOSE_WARM_INK_CORRECTIVE",
     "canonical_decision": "TEST",
-    "progress_percent": 87,
+    "progress_percent": 88,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -33,7 +33,7 @@
       "apk_sha256": "f507b5249fa5f6322207cce174b3c53801c55cd7c248bc92aad25cd43b940f3b",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
-      "disposition": "HOLD_HUMAN_VISUAL_REJECTION"
+      "disposition": "PROVENANCE_ONLY_PRE_COMPOSE"
     },
     "frozen_release_candidate": null
   },
@@ -41,7 +41,7 @@
     "id": "TASK-S5-005",
     "owner": "CODEX",
     "next_owner": "CODEX",
-    "status": "OPEN_IMPLEMENTATION_AUTHORIZED",
+    "status": "REWORK_REQUIRED_BEFORE_HUMAN_VISUAL_REVIEW",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_COMPOSE_WARM_INK_IMPLEMENTATION",
+    "internal_test": "S5_HOLD_COMPOSE_WARM_INK_FIDELITY_CORRECTIVE",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,15 +70,17 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "TASK-S5-005 Compose Warm Ink implementation and fresh technical regression are required.",
-    "Direct human visual approval of actual Compose runtime screenshots is required before Play.",
-    "Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after visual approval."
+    "Compose migration is technically present but materially deviates from the approved Warm Ink low-text/media-first visual brief.",
+    "Custom invalid validation currently closes the dialog instead of remaining inline.",
+    "PreviewLoader lacks mirrored EXIF orientation parity with the verified engine.",
+    "No TASK-S5-005 runtime screenshot/artifact proof set is repository-bound yet.",
+    "Direct human visual approval of actual corrected Compose runtime screenshots is still required before Play."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes TASK-S5-005 on task/TASK-S5-005 from the exact setup HEAD. Return fresh artifacts and runtime screenshots with status READY_FOR_HUMAN_VISUAL_REVIEW.",
+  "next_action": "CODEX performs the narrow TASK-S5-005 Warm Ink fidelity corrective from the latest branch HEAD, then commits complete runtime/artifact evidence and returns READY_FOR_HUMAN_VISUAL_REVIEW.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -277,7 +279,7 @@
       ]
     },
     "compose_implementation_brief": {
-      "status": "READY_FOR_APPROVAL",
+      "status": "IMPLEMENTED_FIRST_PASS_REWORK_REQUIRED",
       "observed_at": "2026-09-27",
       "ref": "docs/ux/S5_COMPOSE_IMPLEMENTATION_BRIEF_v1.0.md",
       "scope": "PRESENTATION_LAYER_ONLY",
@@ -285,7 +287,14 @@
       "coding_authorized": true,
       "required_next_approval": "COMPOSE_WARM_INK_IMPLEMENTATION",
       "approved_at": "2026-09-27",
-      "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
+      "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION",
+      "first_pass_commit": "ee59fbf78cd0623b83b8bb6785aa479688231a38",
+      "chat_source_review": {
+        "status": "TECHNICAL_MIGRATION_PASS_WARM_INK_FIDELITY_REWORK_REQUIRED",
+        "reviewed_at": "2026-09-27",
+        "audit_ref": "docs/ux/S5_005_INDEPENDENT_SOURCE_AUDIT_v1.0.md",
+        "evidence_bound": false
+      }
     }
   }
 }
