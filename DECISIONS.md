@@ -214,3 +214,12 @@ However the implementation materially diverges from the human-approved visual co
 No dedicated TASK-S5-005 runtime screenshot/artifact evidence is committed, and chat-supplied artifact hashes are abbreviated, so technical build/smoke claims are not yet independently artifact-bound.
 
 TASK-S5-005 remains authorized within the existing approval scope for a narrow fidelity corrective. No new product scope is authorized.
+
+
+## D-034 — TASK-S5-005 technical evidence independently accepted; direct visual gate remains pending (2026-09-28)
+
+CHAT independently reviewed corrective source `5ab842073cfe6dbc507baac499c3af37a9e05183` and evidence closure `4db3e4e8dfa706fa69c92fcc381c666c8cd1b8e0`.
+
+The corrective source satisfies the previously identified implementation defects at source level, protected domain files remain unchanged, and the closure now contains repository-bound build/runtime/artifact evidence with replayable environment/commands and full artifact hashes.
+
+The current connector cannot decode repository PNG/binary files for direct visual inspection, so screenshot existence is accepted but visual quality is not inferred from filenames, Codex attestations, or matrix rows. Technical evidence is PASS; the direct human visual gate remains pending.

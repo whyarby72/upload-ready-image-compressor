@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_COMPOSE_WARM_INK_CORRECTIVE",
     "canonical_decision": "TEST",
-    "progress_percent": 94,
+    "progress_percent": 95,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-005",
-    "owner": "CODEX",
-    "next_owner": "CHAT + HUMAN",
-    "status": "READY_FOR_HUMAN_VISUAL_REVIEW",
+    "owner": "CHAT + HUMAN",
+    "next_owner": "HUMAN",
+    "status": "TECHNICAL_EVIDENCE_PASS_HUMAN_VISUAL_PENDING",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_COMPOSE_WARM_INK_FIDELITY_CORRECTIVE",
+    "internal_test": "S5_HOLD_HUMAN_VISUAL_REVIEW",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,13 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Direct human visual approval of actual corrected Compose runtime screenshots is still required before Play."
+    "Direct human visual approval of actual corrected Compose runtime screenshots is required before Play."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT + HUMAN review the repository-bound TASK-S5-005 Warm Ink runtime screenshots; no visual PASS is claimed by Codex.",
+  "next_action": "Human provides the repository-bound TASK-S5-005 runtime screenshots directly in chat for visual comparison against the approved Warm Ink anchor.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -292,6 +292,15 @@
         "audit_ref": "docs/ux/S5_005_INDEPENDENT_SOURCE_AUDIT_v1.0.md",
         "evidence_bound": true,
         "evidence_ref": "evidence/play/S5_005_WARM_INK_CORRECTIVE_PROOF.json"
+      },
+      "chat_closure_review": {
+        "status": "TECHNICAL_EVIDENCE_PASS_HUMAN_VISUAL_PENDING",
+        "reviewed_at": "2026-09-28",
+        "source_commit": "5ab842073cfe6dbc507baac499c3af37a9e05183",
+        "evidence_commit": "4db3e4e8dfa706fa69c92fcc381c666c8cd1b8e0",
+        "audit_ref": "docs/ux/S5_005_CHAT_INDEPENDENT_CLOSURE_AUDIT_v1.0.md",
+        "artifact_hash_recompute": "NOT_AVAILABLE_BINARY_CONNECTOR_LIMIT",
+        "visual_review": "PENDING_DIRECT_IMAGE_ACCESS"
       }
     }
   }
