@@ -29,21 +29,23 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "TASK-S5-001",
+    "id": "TASK-S5-002",
     "owner": "CODEX",
-    "next_owner": "HUMAN_PLAY_CONSOLE",
-    "status": "COMPLETED",
+    "next_owner": "CODEX",
+    "status": "OPEN",
     "acceptance_ids": [
-      "S5-01",
-      "S5-02",
-      "S5-03",
-      "S5-04",
-      "S5-05",
-      "S5-06",
-      "S5-07",
-      "S5-08",
-      "S5-09",
-      "S5-10"
+      "S5-ID-01",
+      "S5-ID-02",
+      "S5-ID-03",
+      "S5-ID-04",
+      "S5-ID-05",
+      "S5-ID-06",
+      "S5-ID-07",
+      "S5-ID-08",
+      "S5-ID-09",
+      "S5-ID-10",
+      "S5-ID-11",
+      "S5-ID-12"
     ]
   },
   "gates": {
@@ -51,7 +53,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_READY_HUMAN_ACTION",
+    "internal_test": "S5_IDENTITY_MIGRATION_REQUIRED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -72,13 +74,14 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Release AAB/APK are unsigned; authorized human must provide/select Play App Signing or upload-key identity before Play Console upload."
+    "Final keyword-led identity is frozen, but current build artifacts still use superseded com.uploadready.app and must be rebuilt before any Play upload.",
+    "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after migration proof."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "HUMAN_PLAY_CONSOLE: apply authorized signing/account setup and upload the prepared internal-testing AAB. Do not claim S6 or BUILD.",
+  "next_action": "CODEX executes TASK-S5-002 to migrate to com.afradadmedia.reducephotosize, rebuild, retest, and regenerate S5 artifact evidence. No Play upload.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -95,7 +98,7 @@
     "remote_url": "https://github.com/whyarby72/upload-ready-image-compressor",
     "default_branch": "main",
     "integration_branch": "develop",
-    "active_task_branch": "task/TASK-S5-001",
+    "active_task_branch": "task/TASK-S5-002",
     "bootstrap_state": "READY_REMOTE",
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
@@ -110,5 +113,13 @@
     "closure_commit": "8b2538e63a6cc06beb918439b5c3ce6b9d2f751d",
     "tested_source_commit": "772b3a321be6964240d4ac8f16f2fbecf4dc0de7",
     "debug_apk_sha256": "f170e342a247a758379aa499cd131ad29be363b13fb43823f38a726d1c411b34"
+  },
+  "final_identity": {
+    "status": "FINAL_FOR_IMPLEMENTATION",
+    "play_title_en": "Reduce Photo Size: KB Limit",
+    "launcher_name": "Reduce Photo Size",
+    "application_id": "com.afradadmedia.reducephotosize",
+    "authority_scope": "NAMING_AND_PACKAGE_IDENTITY_FREEZE_ONLY",
+    "decision_ref": "docs/product/APP_IDENTITY_FINAL_v1.0.md"
   }
 }
