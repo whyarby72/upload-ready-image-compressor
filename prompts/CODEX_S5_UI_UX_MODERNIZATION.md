@@ -10,10 +10,11 @@ Read:
 1. `CURRENT_TASK.md`
 2. `docs/ux/S5_UI_UX_BENCHMARK_FORENSICS_v1.0.md`
 3. `docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md`
-4. `docs/ux/S5_UI_UX_MODERNIZATION_BRIEF_v1.0.md`
-5. `PRODUCT_SPEC.md`
-6. `docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`
-7. `docs/ux/S5_003_FINAL_INDEPENDENT_AUDIT_v1.0.md`
+4. `docs/ux/S5_HIGH_FIDELITY_MOCKUP_REVIEW_v1.0.md`
+5. `docs/ux/S5_UI_UX_MODERNIZATION_BRIEF_v1.0.md`
+6. `PRODUCT_SPEC.md`
+7. `docs/product/CUSTOM_LIMIT_UNIT_SEMANTICS_DECISION_v1.0.md`
+8. `docs/ux/S5_003_FINAL_INDEPENDENT_AUDIT_v1.0.md`
 
 Execute TASK-S5-004 as a controlled UI/UX redesign.
 
@@ -46,3 +47,24 @@ CHAT independent visual/artifact audit.
 Do not sign/upload to Play.
 Do not integrate AdMob.
 Do not claim S6, BUILD, Artifact Freeze, release, or publication.
+
+
+## Mockup truth guard
+
+The high-fidelity mockup is directional, not literal.
+
+Do NOT implement:
+- `Metadata (EXIF) preserved`;
+- guaranteed target-success wording;
+- inconsistent friendly-size vs exact-byte values;
+- a precise promised result on first-open illustration;
+- decorative back/overflow controls with no action;
+- confetti/celebration decoration.
+
+Default CURRENT PHOTO visual should use a vector/photo icon unless a real thumbnail can be added without broadening product behavior.
+
+Unknown-limit action must remain visible/reachable.
+
+Preferred PASS status:
+`MEETS LIMIT`
+not `UPLOAD READY` as the sole state.

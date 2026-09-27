@@ -113,3 +113,15 @@
 - defined binding color, spacing, radius, typography, icon, card, button, chip, status, dialog and screen blueprints;
 - rejected cleaner-dashboard, glassmorphism, neon, bottom-nav and decorative feature-density patterns;
 - updated the Codex modernization prompt to consume the benchmark + design-system blueprint before implementation.
+
+
+# 2026-09-27 — TASK-S5-004 high-fidelity mockup audit
+
+- accepted the overall Precision Utility visual direction;
+- rejected literal implementation of false EXIF-preservation text;
+- removed guaranteed target-success promise;
+- required decimal-SI friendly/exact-byte consistency;
+- removed precise output promise from first-open illustration;
+- made photo thumbnail optional rather than a new product requirement;
+- rejected nonfunctional back/overflow controls and confetti;
+- preserved unknown-limit visibility and exact-byte result proof.

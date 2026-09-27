@@ -66,7 +66,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_UI_UX_MODERNIZATION_REQUIRED",
+    "internal_test": "S5_HOLD_UI_UX_REDESIGN_IMPLEMENTATION_REQUIRED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -95,7 +95,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes TASK-S5-004 using the binding benchmark and design-system blueprint; capture fresh screen evidence before any Play action.",
+  "next_action": "Refine TASK-S5-004 implementation against benchmark + design blueprint + high-fidelity mockup truth corrections before Play.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -216,6 +216,8 @@
     "benchmark_status": "COMPLETE_BINDING",
     "benchmark_ref": "docs/ux/S5_UI_UX_BENCHMARK_FORENSICS_v1.0.md",
     "design_system_ref": "docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md",
-    "visual_archetype": "PRECISION_UTILITY_COBALT_NEUTRAL_MODERN_EDITORIAL_ANDROID"
+    "visual_archetype": "PRECISION_UTILITY_COBALT_NEUTRAL_MODERN_EDITORIAL_ANDROID",
+    "mockup_review_status": "REWORK_BOUND_TRUTH_CORRECTIONS",
+    "mockup_review_ref": "docs/ux/S5_HIGH_FIDELITY_MOCKUP_REVIEW_v1.0.md"
   }
 }

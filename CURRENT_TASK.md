@@ -378,3 +378,23 @@ Next owner after implementation:
 CHAT independent visual/artifact audit.
 
 Do not proceed to HUMAN_PLAY_CONSOLE until TASK-S5-004 passes.
+
+
+## High-fidelity mockup review
+
+Binding review:
+`docs/ux/S5_HIGH_FIDELITY_MOCKUP_REVIEW_v1.0.md`
+
+The visual direction is approved, but the literal mockup is REWORK before implementation.
+
+Mandatory corrections:
+- no EXIF-preserved claim;
+- no guaranteed target-success copy;
+- decimal-SI friendly/exact-byte values must agree;
+- no precise promised output in first-open illustration;
+- photo thumbnail optional, vector/photo icon default;
+- no decorative back/overflow controls;
+- no confetti;
+- unknown-limit action remains visibly reachable.
+
+Codex must implement the corrected design system, not copy the mockup literally.

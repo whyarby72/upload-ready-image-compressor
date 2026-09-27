@@ -96,3 +96,10 @@ The redesign must emphasize one dominant buyer action per state, rounded tonal s
 Binding references:
 - `docs/ux/S5_UI_UX_BENCHMARK_FORENSICS_v1.0.md`
 - `docs/ux/S5_UI_DESIGN_SYSTEM_BLUEPRINT_v1.0.md`
+
+
+## D-022 — High-fidelity mockup approved directionally, not literally (2026-09-27)
+
+The first high-fidelity First Open / Requirement / PASS composite establishes the correct modern Precision Utility direction but contains several implementation-invalid details: a false EXIF-preservation claim, guaranteed target-success wording, a decimal-SI friendly/exact-byte mismatch, an over-specific first-open compression result, decorative navigation/overflow controls, and celebration confetti.
+
+TASK-S5-004 must therefore implement the visual system only after applying the corrections in `docs/ux/S5_HIGH_FIDELITY_MOCKUP_REVIEW_v1.0.md`. Unknown-limit truth, exact-byte verification, original preservation, metadata-removal disclosure, and decimal-SI consistency remain authoritative over visual mockup content.
