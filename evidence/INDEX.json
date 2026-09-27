@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 87,
+  "file_count": 96,
   "files": [
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
@@ -54,8 +54,8 @@
     },
     {
       "path": "evidence/play/S5_ARTIFACT_PROOF.json",
-      "bytes": 4040,
-      "sha256": "ddf48482be4db1fa98961960d4150a761d607f98c4f66f83fbfe3000438586c6"
+      "bytes": 4473,
+      "sha256": "c5b70d94ebfd6c7469bc7fb6cdfbada48633c8a5c5a4695fb2e1f2cc45bc2b85"
     },
     {
       "path": "evidence/play/S5_PRE_IDENTITY_ARTIFACT_PROOF.json",
@@ -73,9 +73,24 @@
       "sha256": "83714d0c0c77a7af52b602fa8bb31187a6886e5bdbe525d5c0c75eb1138df159"
     },
     {
+      "path": "evidence/play/app-debug-0.1.0-vc1-fractional.apk",
+      "bytes": 2630064,
+      "sha256": "138403cc37259588cbc56e20c7a90b4892c6cb8de9c3e78d3151b0ce6f98c1aa"
+    },
+    {
       "path": "evidence/play/app-debug-0.1.0-vc1-reqfix.apk",
       "bytes": 2629752,
       "sha256": "ea416398009b01e03f687dd1448547bbfecbc237ffb08fefb125922687bc09bf"
+    },
+    {
+      "path": "evidence/play/app-release-0.1.0-vc1-fractional-unsigned.aab",
+      "bytes": 664211,
+      "sha256": "064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc"
+    },
+    {
+      "path": "evidence/play/app-release-0.1.0-vc1-fractional-unsigned.apk",
+      "bytes": 2142882,
+      "sha256": "9769fbfc2eefd0783d7950e66cae0ca395cd97e3ed0f89d4473423adf32fdb10"
     },
     {
       "path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.aab",
@@ -276,6 +291,36 @@
       "path": "evidence/screenshots/result_50kb_api36_uiautomator.xml",
       "bytes": 7468,
       "sha256": "20a48f81a3526edb3c5e4b3c3f1ada590b48ca9f8e40aae0109c71c3ff16142c"
+    },
+    {
+      "path": "evidence/screenshots/s5_frac_api29_requirement.png",
+      "bytes": 42666,
+      "sha256": "23f950a93f99b3b7e3b497ed3eb44250fc68189e4a1f27e97b7924caa12e1f31"
+    },
+    {
+      "path": "evidence/screenshots/s5_frac_api29_requirement_uiautomator.xml",
+      "bytes": 9775,
+      "sha256": "3bb8e73bfe170c21cf563f88997dfed5d8f827b286fe95c6d41e5f43882b78e1"
+    },
+    {
+      "path": "evidence/screenshots/s5_frac_custom_10_5kb_api36.png",
+      "bytes": 42773,
+      "sha256": "32305850bb7fdb7696386e5a8da2ba19c5ea38187cb42bb1503d4ea7af0cdfb2"
+    },
+    {
+      "path": "evidence/screenshots/s5_frac_custom_10_5kb_api36_uiautomator.xml",
+      "bytes": 10060,
+      "sha256": "94ecede858618fc465521a69ab7818b9accecc9fa26c4c02a77ff9feb95cb988"
+    },
+    {
+      "path": "evidence/screenshots/s5_frac_custom_1_5mb_api36.png",
+      "bytes": 42655,
+      "sha256": "1b6716d0dccd30dddcc3e095937d47484e699abb0c1267aad55ac4e8175829e0"
+    },
+    {
+      "path": "evidence/screenshots/s5_frac_custom_1_5mb_api36_uiautomator.xml",
+      "bytes": 10059,
+      "sha256": "b947e1e3cc336cd90d18c47584dfdaf1597c4e2bcae112010321a3e26a6434d1"
     },
     {
       "path": "evidence/screenshots/s5_identity_exif_api36.png",

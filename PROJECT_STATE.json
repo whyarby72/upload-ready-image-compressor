@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_INTERNAL_TEST_READY",
+    "current_stage": "S5_INTERNAL_TEST_COMPLETE",
     "canonical_decision": "TEST",
     "progress_percent": 76,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -16,7 +16,7 @@
       "status": "S5_REQUIREMENT_TRUTH_FIX_PASS",
       "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "ea416398009b01e03f687dd1448547bbfecbc237ffb08fefb125922687bc09bf",
+      "apk_sha256": "138403cc37259588cbc56e20c7a90b4892c6cb8de9c3e78d3151b0ce6f98c1aa",
       "application_id": "com.afradadmedia.reducephotosize",
       "namespace": "com.afradadmedia.reducephotosize",
       "label": "Reduce Photo Size"
@@ -25,23 +25,23 @@
       "application_id": "com.afradadmedia.reducephotosize",
       "version_code": 1,
       "version_name": "0.1.0",
-      "aab_path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.aab",
-      "aab_bytes": 663874,
-      "aab_sha256": "968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4",
-      "apk_path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.apk",
-      "apk_bytes": 2142634,
-      "apk_sha256": "7b28ba612f2cde6da032675fcf1cf3b732228f05859b889c493e3a7611d615d0",
+      "aab_path": "evidence/play/app-release-0.1.0-vc1-fractional-unsigned.aab",
+      "aab_bytes": 664211,
+      "aab_sha256": "064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc",
+      "apk_path": "evidence/play/app-release-0.1.0-vc1-fractional-unsigned.apk",
+      "apk_bytes": 2142882,
+      "apk_sha256": "9769fbfc2eefd0783d7950e66cae0ca395cd97e3ed0f89d4473423adf32fdb10",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
-      "disposition": "HOLD_FRACTIONAL_TARGET_DISPLAY_TRUTH"
+      "disposition": "FRESH_FRACTIONAL_ARTIFACT_UNSIGNED_HUMAN_ACTION_REQUIRED"
     },
     "frozen_release_candidate": null
   },
   "current_task": {
     "id": "TASK-S5-003",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "REOPENED_CORRECTIVE_FIX_REQUIRED",
+    "next_owner": "HUMAN_PLAY_CONSOLE",
+    "status": "COMPLETED",
     "acceptance_ids": [
       "S5-REQ-01",
       "S5-REQ-02",
@@ -75,7 +75,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_FRACTIONAL_TARGET_DISPLAY_TRUTH",
+    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_PASS_HUMAN_SIGNING_UPLOAD_ACTION",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -96,14 +96,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Fractional Custom requirement display violates the binding decimal-SI display contract: e.g. 10.5 KB can render as 11 KB and 1.5 MB as 1500 KB.",
     "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after technical PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX repairs fractional Custom target display truth, adds formatter/runtime evidence, rebuilds fresh artifacts, and re-closes TASK-S5-003. No Play upload.",
+  "next_action": "HUMAN_PLAY_CONSOLE performs authorized signing/account/upload review. No Play upload or S6/BUILD promotion by CODEX.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -125,7 +124,7 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
+    "last_pushed_task_commit": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
     "evidence_closure_base_commit": "3df5a7802582c681b7d610f43167c8884460df3c",
     "last_pushed_task_commit_scope": "SOURCE_FIX_CHECKPOINT; documentation closure commit intentionally cannot self-reference its own SHA"
   },
@@ -167,16 +166,16 @@
     "decision_ref": "docs/product/APP_IDENTITY_FINAL_v1.0.md"
   },
   "s5_requirement_truth_fix": {
-    "status": "HOLD_FRACTIONAL_TARGET_DISPLAY_TRUTH",
-    "source_fix_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
-    "tested_source_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
+    "status": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
+    "source_fix_commit": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
+    "tested_source_commit": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
     "defect_ref": "docs/ux/FIRST_OPEN_REQUIREMENT_DEEP_AUDIT_v1.0.md",
     "pre_fix_aab_sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6",
     "pre_fix_aab_play_eligible": false,
     "fresh_artifact_sha256": {
-      "debug_apk": "ea416398009b01e03f687dd1448547bbfecbc237ffb08fefb125922687bc09bf",
-      "release_apk": "7b28ba612f2cde6da032675fcf1cf3b732228f05859b889c493e3a7611d615d0",
-      "release_aab": "968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4"
+      "debug_apk": "138403cc37259588cbc56e20c7a90b4892c6cb8de9c3e78d3151b0ce6f98c1aa",
+      "release_apk": "9769fbfc2eefd0783d7950e66cae0ca395cd97e3ed0f89d4473423adf32fdb10",
+      "release_aab": "064478b56efb5e327dc27c0a37a91cc0626889cad5f6025b767c3a845e2019fc"
     },
     "reason": "Implicit 1 MB target can create REQUIRED without deliberate user-provided external limit.",
     "spec_audit": {
@@ -204,17 +203,17 @@
       "exact_byte_proof": true
     },
     "chat_review": {
-      "status": "HOLD",
+      "status": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
       "reviewed_at": "2026-09-27",
-      "reviewed_closure": "bd690e8ac592d92ee2e3b1cd07698b2b87c22720",
+      "reviewed_closure": "2cc6b4b3d5b8deea1f46ad3f62e83af536ca7b2d",
       "passed": [
         "No implicit default target on API36/API29.",
         "Decimal preset/parser semantics implemented.",
         "Exact-byte PASS/NOT_MET proof implemented.",
         "Fresh AAB binary hash independently verified."
       ],
-      "defect": "Fractional Custom target display is not faithful to binding friendly decimal-SI contract.",
-      "failed_acceptance": "S5-REQ-24",
+      "defect": null,
+      "failed_acceptance": null,
       "audit_ref": "docs/ux/S5_003_INDEPENDENT_CLOSURE_AUDIT_v1.0.md"
     }
   }
