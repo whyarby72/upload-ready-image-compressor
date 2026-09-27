@@ -1,0 +1,7 @@
+TASK-S5-004 evidence-only recapture
+APK sha256 verified before install: 690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370
+APK bytes: 2634938
+Package/activity: com.afradadmedia.reducephotosize/.MainActivity
+API36 device: emulator-5554
+API29 device: emulator-5556
+Capture rule: screenshots were taken after waiting for the app to render and after picker/system education surfaces were dismissed; invalid splash/picker/stylus files remain provenance-only and are not referenced by the recapture proof.

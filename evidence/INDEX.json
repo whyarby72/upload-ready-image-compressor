@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 152,
+  "file_count": 170,
   "files": [
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
@@ -74,8 +74,8 @@
     },
     {
       "path": "evidence/play/S5_UI_UX_CORRECTIVE_PROOF.json",
-      "bytes": 3373,
-      "sha256": "1ac9e272b27a9d87d932d2a36a4e6902e27bbe10f1516c91989e62099482ad47"
+      "bytes": 4016,
+      "sha256": "ebad8fdf08357101f34af9b7d8ee64abbcc952d535d5fc77c9a35b05924b46d6"
     },
     {
       "path": "evidence/play/S5_UI_UX_PROOF.json",
@@ -571,6 +571,96 @@
       "path": "evidence/screenshots/s5_004_corrective/api36_share_sheet.xml",
       "bytes": 12372,
       "sha256": "9d8a3382efa6f2dfd5a5b3144cccd803a17d0ef990ee18b004bd983697b61ac5"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/FOREGROUND_VERIFICATION.txt",
+      "bytes": 514,
+      "sha256": "a25f3422dbd1096199facada326dc9042124a3f629721ef2a555c6d09504e529"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api29_first_open_320x640_clean.png",
+      "bytes": 37919,
+      "sha256": "90f11fd024de02f5748759ba743dbd4bb45e833f634b495f5c2d60876f3fcf57"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api29_not_met_clean.xml",
+      "bytes": 11248,
+      "sha256": "b0528b85b3acd2bf8a6fa2ce6148d8cbe6a92d799ee08c286a0f6af04ab7f514"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api29_picker_standard.png",
+      "bytes": 78411,
+      "sha256": "382b7007436c5c358d9e223ae3049d5fb05c2f01b3ea2523a2d67cae707c7be3"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api29_progress_300ms.png",
+      "bytes": 42878,
+      "sha256": "87b2c232d83c3e504d2a2de0268dce7e34363a41f4307fa84670a044100d4883"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api29_progress_immediate.png",
+      "bytes": 18487,
+      "sha256": "1208466559b99c8bec20a7066d08796f93618f87af0d64088d022249455a2a6c"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api29_result_after_standard.png",
+      "bytes": 42533,
+      "sha256": "386e82e966ab21a5d5d6f13fac20e9e676bb97c18546f0e29d42b7f105e1a60c"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api29_standard_requirement_clean.png",
+      "bytes": 47991,
+      "sha256": "6b9695500d033178abd94b4b0456dfac0f88c41c0b6edce1b7f1350ad3b038a1"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_first_open_320x640_clean.png",
+      "bytes": 35649,
+      "sha256": "a5f78a3ebf9dbdcd1b556713abb5bee3fb692eeed03791ca73d2e19888dc002b"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_first_open_360x800_clean.png",
+      "bytes": 36200,
+      "sha256": "1807f93fe27408e4861e6c862f4eca9c71c2064b37fa40c8f3aab70120bce756"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_large_font_first_open_clean.png",
+      "bytes": 42468,
+      "sha256": "266ec5f22e1103610834065c98390feacc978f4a0c2fd8e38def8d0fbc30da69"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_large_font_requirement_clean.png",
+      "bytes": 45064,
+      "sha256": "78f4f4b5b0bd403bc08977b06c4666c1779c829b1d76611a639128ca7d1441a9"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_not_met_clean.png",
+      "bytes": 42845,
+      "sha256": "a26e0bee5fd46116e9912a59caab487c274d383cdcd07e6188f6cef099fb0560"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_not_met_clean.xml",
+      "bytes": 11642,
+      "sha256": "2df5286657616ae9e04a1687f8342ab78426c9db1ba8fb68ec4768932cdccc09"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_picker_standard.png",
+      "bytes": 119510,
+      "sha256": "b2dbce88b8d53657b70d71408b8f844ace85f41517cfc2cb765add760674efcb"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_progress_300ms.png",
+      "bytes": 43144,
+      "sha256": "05782a7d52d7f60b267290f2dee5f48dcf080cf555690655b7a3b477be360f14"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_progress_immediate.png",
+      "bytes": 19111,
+      "sha256": "72b57d59230f25afdb63d472c20d1978ca6eeed1e66bef0240aa387d5b411065"
+    },
+    {
+      "path": "evidence/screenshots/s5_004_recap/api36_standard_requirement_clean.png",
+      "bytes": 46158,
+      "sha256": "8c18e419ee541b330c3f5e18cd556f70b95c286040634e9e7c83734b828aa7fa"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",

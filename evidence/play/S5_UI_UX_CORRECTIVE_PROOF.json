@@ -6,6 +6,8 @@
   "required_start_head": "4012b36e2136416dac18ee9a9e582a81ef4a43cb",
   "tested_source_commit": "6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6",
   "canonical_decision": "TEST",
+  "mode": "EVIDENCE_ONLY",
+  "debug_apk_sha256_verified_before_install": "690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370",
   "corrective_scope": ["modern rounded Custom Limit dialog", "segmented KB/MB controls", "semantic target vector", "visible selected target check indicator"],
   "preserved": ["parser semantics", "compression engine", "no Compose", "no AdMob/analytics", "no signing or Play upload", "no product feature expansion"],
   "verification": {
@@ -23,14 +25,20 @@
     "reduced_result": "PASS; no upload limit entered and no PASS claim",
     "save": "PASS; saved-to-Pictures confirmation visible",
     "share": "PASS; Android share sheet visible",
-    "not_met_runtime": "PENDING_CHAT_REVIEW; no claim recorded without a clean post-correction frame"
+    "not_met_runtime": "PASS; API36 and API29 clean app frames show 81208 bytes > 50000 bytes — NOT_MET",
+    "progress_runtime": "PASS; API36 clean app frame shows indeterminate progress while actual compression is active",
+    "large_font_requirement": "PASS; API36 font-scale 1.3x clean app requirement frame after picker return"
   },
   "runtime_evidence": [
-    "evidence/screenshots/s5_004_corrective/api36_first_open_320x640.png",
-    "evidence/screenshots/s5_004_corrective/api36_first_open_360x800.png",
-    "evidence/screenshots/s5_004_corrective/api36_large_font_first_open.png",
-    "evidence/screenshots/s5_004_corrective/api36_large_font_requirement.png",
-    "evidence/screenshots/s5_004_corrective/api36_requirement_unselected.png",
+    "evidence/screenshots/s5_004_recap/api36_first_open_320x640_clean.png",
+    "evidence/screenshots/s5_004_recap/api36_first_open_360x800_clean.png",
+    "evidence/screenshots/s5_004_recap/api36_progress_immediate.png",
+    "evidence/screenshots/s5_004_recap/api36_not_met_clean.png",
+    "evidence/screenshots/s5_004_recap/api36_large_font_first_open_clean.png",
+    "evidence/screenshots/s5_004_recap/api36_large_font_requirement_clean.png",
+    "evidence/screenshots/s5_004_recap/api29_first_open_320x640_clean.png",
+    "evidence/screenshots/s5_004_recap/api29_standard_requirement_clean.png",
+    "evidence/screenshots/s5_004_recap/api29_not_met_clean.xml",
     "evidence/screenshots/s5_004_corrective/api36_100kb_selected_check.png",
     "evidence/screenshots/s5_004_corrective/api36_custom_dialog_open.png",
     "evidence/screenshots/s5_004_corrective/api36_custom_10_5kb_selected.png",
@@ -39,7 +47,7 @@
     "evidence/screenshots/s5_004_corrective/api36_reduced_result.png",
     "evidence/screenshots/s5_004_corrective/api36_save_success.png",
     "evidence/screenshots/s5_004_corrective/api36_share_sheet.png",
-    "evidence/screenshots/s5_004_corrective/api29_requirement_unselected.png"
+    "evidence/screenshots/s5_004_recap/FOREGROUND_VERIFICATION.txt"
   ],
   "artifacts": {
     "debug_apk": {"path": "evidence/play/app-debug-0.1.0-vc1-s5-004-corrective.apk", "bytes": 2634938, "sha256": "690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370"},

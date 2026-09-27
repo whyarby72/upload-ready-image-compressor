@@ -13,7 +13,7 @@
   "artifacts": {
     "current_build": {
       "source_version": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
-      "status": "S5_UI_UX_CORRECTIVE_IMPLEMENTED_PENDING_CHAT_REVIEW",
+      "status": "S5_UI_UX_EVIDENCE_RECAPTURED_PENDING_CHAT_REVIEW",
       "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
       "apk_sha256": "690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370",
@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-004",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "SOURCE_CORRECTIVE_PASS_EVIDENCE_RECAPTURE_REQUIRED",
+    "next_owner": "CHAT",
+    "status": "EVIDENCE_RECAPTURED_PENDING_CHAT_REVIEW",
     "acceptance_ids": [
       "UI-01",
       "UI-02",
@@ -66,7 +66,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_UI_UX_EVIDENCE_RECAPTURE_REQUIRED",
+    "internal_test": "S5_EVIDENCE_RECAPTURED_PENDING_CHAT_REVIEW",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -87,16 +87,14 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Corrective source changes pass, but several required runtime screenshots are mislabeled system/splash frames and must be recaptured.",
-    "Clean NOT_MET, actual progress, current-artifact first-open 320x640/360x800, large-font requirement, and API29 requirement evidence remain pending.",
-    "Independent Chat closure remains required before Play.",
+    "Independent Chat closure remains required for the recaptured evidence set before Play.",
     "Authorized signing / Google Play Internal Testing distribution remains HUMAN_ACTION_REQUIRED after reviewer PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX performs evidence-only recapture using the exact current corrective debug APK; no product-source mutation.",
+  "next_action": "CHAT independently audits the clean evidence-only recapture; no product-source mutation or Play action.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -209,7 +207,7 @@
     }
   },
   "s5_ui_ux_modernization": {
-    "status": "SOURCE_CORRECTIVE_PASS_EVIDENCE_RECAPTURE_REQUIRED",
+    "status": "EVIDENCE_RECAPTURED_PENDING_CHAT_REVIEW",
     "tested_source_commit": "6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6",
     "evidence_proof": "evidence/play/S5_UI_UX_CORRECTIVE_PROOF.json",
     "fresh_debug_apk_sha256": "690318caca04be7a43d7d5d1debf17613ea20a8b66bf0c18639ede86dd1f5370",
@@ -232,7 +230,7 @@
     "progress_semantics": "INDETERMINATE_ONLY_NO_FAKE_PERCENT",
     "ui_dependency_policy": "DEPENDENCY_LIGHT_NATIVE_VIEW_DEFAULT",
     "chat_review": {
-      "status": "SOURCE_CORRECTIVE_PASS_EVIDENCE_HOLD",
+      "status": "EVIDENCE_RECAPTURED_PENDING_CHAT_REVIEW",
       "reviewed_at": "2026-09-27",
       "reviewed_closure": "a25f683f3cd1f10bf760aeec6f8a020d6af07677",
       "source_commit": "6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6",
@@ -257,6 +255,7 @@
         "large_font_requirement_is_picker",
         "api29_requirement_is_picker"
       ],
+      "recapture_evidence_prefix": "evidence/screenshots/s5_004_recap/",
       "audit_ref": "docs/ux/S5_004_CORRECTIVE_INDEPENDENT_REVIEW_v1.0.md"
     }
   }
