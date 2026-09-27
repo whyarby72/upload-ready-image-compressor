@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_INTERNAL_TEST_READY",
+    "current_stage": "S5_INTERNAL_TEST_COMPLETE",
     "canonical_decision": "TEST",
     "progress_percent": 76,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -13,10 +13,10 @@
   "artifacts": {
     "current_build": {
       "source_version": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
-      "status": "ANDROID_DEBUG_BUILD_PASS",
+      "status": "S5_REQUIREMENT_TRUTH_FIX_PASS",
       "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "cc7272ecd43a23818065d1cdcae584bef8eeba348860a81d4432318299fcb3c0",
+      "apk_sha256": "ea416398009b01e03f687dd1448547bbfecbc237ffb08fefb125922687bc09bf",
       "application_id": "com.afradadmedia.reducephotosize",
       "namespace": "com.afradadmedia.reducephotosize",
       "label": "Reduce Photo Size"
@@ -25,23 +25,23 @@
       "application_id": "com.afradadmedia.reducephotosize",
       "version_code": 1,
       "version_name": "0.1.0",
-      "aab_path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.aab",
-      "aab_bytes": 663007,
-      "aab_sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6",
-      "apk_path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.apk",
-      "apk_bytes": 2141450,
-      "apk_sha256": "c2230c8b9b1075687b8666bbbe7e36a24369a213e884886ba42bfacf71e57991",
+      "aab_path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.aab",
+      "aab_bytes": 663874,
+      "aab_sha256": "968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4",
+      "apk_path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.apk",
+      "apk_bytes": 2142634,
+      "apk_sha256": "7b28ba612f2cde6da032675fcf1cf3b732228f05859b889c493e3a7611d615d0",
       "signing_state": "UNSIGNED_HUMAN_ACTION_REQUIRED",
       "play_upload_eligible": false,
-      "disposition": "HOLD_KNOWN_REQUIREMENT_CAPTURE_DEFECT"
+      "disposition": "FRESH_REQFIX_ARTIFACT_UNSIGNED_HUMAN_ACTION_REQUIRED"
     },
     "frozen_release_candidate": null
   },
   "current_task": {
     "id": "TASK-S5-003",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "OPEN",
+    "next_owner": "HUMAN_PLAY_CONSOLE",
+    "status": "COMPLETED",
     "acceptance_ids": [
       "S5-REQ-01",
       "S5-REQ-02",
@@ -75,7 +75,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_REQUIRED",
+    "internal_test": "S5_REQUIREMENT_TRUTH_FIX_PASS_HUMAN_SIGNING_UPLOAD_ACTION",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -96,14 +96,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Known requirement-capture defect remains open until TASK-S5-003 is implemented and freshly verified.",
     "Release signing / Play Console upload remains HUMAN_ACTION_REQUIRED after technical PASS."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes the now-resolved TASK-S5-003 using decimal-SI upload-limit semantics, explicit target selection, and fresh artifact verification. No Play upload.",
+  "next_action": "HUMAN_PLAY_CONSOLE performs authorized signing/account/upload review. No Play upload or S6/BUILD promotion by CODEX.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -125,9 +124,9 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "2b787b5781aa8851420a71326db757364230660f",
+    "last_pushed_task_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
     "evidence_closure_base_commit": "3df5a7802582c681b7d610f43167c8884460df3c",
-    "last_pushed_task_commit_scope": "PRE_CLOSURE_TASK_CHECKPOINT; closure commit intentionally cannot self-reference its own SHA"
+    "last_pushed_task_commit_scope": "SOURCE_FIX_CHECKPOINT; documentation closure commit intentionally cannot self-reference its own SHA"
   },
   "s4_review": {
     "status": "PASS",
@@ -166,11 +165,18 @@
     "authority_scope": "NAMING_AND_PACKAGE_IDENTITY_FREEZE_ONLY",
     "decision_ref": "docs/product/APP_IDENTITY_FINAL_v1.0.md"
   },
-  "s5_requirement_truth_fix": {
-    "status": "REQUIRED_OPEN",
+    "s5_requirement_truth_fix": {
+    "status": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
+    "source_fix_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
+    "tested_source_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
     "defect_ref": "docs/ux/FIRST_OPEN_REQUIREMENT_DEEP_AUDIT_v1.0.md",
     "pre_fix_aab_sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6",
     "pre_fix_aab_play_eligible": false,
+    "fresh_artifact_sha256": {
+      "debug_apk": "ea416398009b01e03f687dd1448547bbfecbc237ffb08fefb125922687bc09bf",
+      "release_apk": "7b28ba612f2cde6da032675fcf1cf3b732228f05859b889c493e3a7611d615d0",
+      "release_aab": "968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4"
+    },
     "reason": "Implicit 1 MB target can create REQUIRED without deliberate user-provided external limit.",
     "spec_audit": {
       "status": "HARDENED_BEFORE_CODEX",

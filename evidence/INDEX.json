@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 78,
+  "file_count": 87,
   "files": [
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
@@ -54,8 +54,8 @@
     },
     {
       "path": "evidence/play/S5_ARTIFACT_PROOF.json",
-      "bytes": 4330,
-      "sha256": "11eedc86bca46baf53af3957eecb564fb6c6ce825578f41f64e04c88c63a3b69"
+      "bytes": 4040,
+      "sha256": "ddf48482be4db1fa98961960d4150a761d607f98c4f66f83fbfe3000438586c6"
     },
     {
       "path": "evidence/play/S5_PRE_IDENTITY_ARTIFACT_PROOF.json",
@@ -73,6 +73,11 @@
       "sha256": "83714d0c0c77a7af52b602fa8bb31187a6886e5bdbe525d5c0c75eb1138df159"
     },
     {
+      "path": "evidence/play/app-debug-0.1.0-vc1-reqfix.apk",
+      "bytes": 2629752,
+      "sha256": "ea416398009b01e03f687dd1448547bbfecbc237ffb08fefb125922687bc09bf"
+    },
+    {
       "path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.aab",
       "bytes": 663007,
       "sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6"
@@ -81,6 +86,16 @@
       "path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.apk",
       "bytes": 2141450,
       "sha256": "c2230c8b9b1075687b8666bbbe7e36a24369a213e884886ba42bfacf71e57991"
+    },
+    {
+      "path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.aab",
+      "bytes": 663874,
+      "sha256": "968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4"
+    },
+    {
+      "path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.apk",
+      "bytes": 2142634,
+      "sha256": "7b28ba612f2cde6da032675fcf1cf3b732228f05859b889c493e3a7611d615d0"
     },
     {
       "path": "evidence/play/app-release-0.1.0-vc1-unsigned.aab",
@@ -336,6 +351,36 @@
       "path": "evidence/screenshots/s5_identity_share_api36_uiautomator.xml",
       "bytes": 19803,
       "sha256": "56061b814e06fb6537c907e45b03179c3cb831331e2aa23f583056c9c41f9459"
+    },
+    {
+      "path": "evidence/screenshots/s5_reqfix_api29_first_open.png",
+      "bytes": 27834,
+      "sha256": "6fd74f0d63c95dce4d1c7228e0c72545447ed08b5daf37be382eeeccf45bf5d1"
+    },
+    {
+      "path": "evidence/screenshots/s5_reqfix_api29_requirement.png",
+      "bytes": 42687,
+      "sha256": "06608975acfbf13fef24b410a3fad779b522947136073ccdc012a6aa2abbf033"
+    },
+    {
+      "path": "evidence/screenshots/s5_reqfix_api29_requirement_uiautomator.xml",
+      "bytes": 9775,
+      "sha256": "3bb8e73bfe170c21cf563f88997dfed5d8f827b286fe95c6d41e5f43882b78e1"
+    },
+    {
+      "path": "evidence/screenshots/s5_reqfix_api36_first_open.png",
+      "bytes": 27470,
+      "sha256": "e13300cd665220a7d3997252b37c493efa6ea90f8fe9ce53f6e36fc14aeaeed4"
+    },
+    {
+      "path": "evidence/screenshots/s5_reqfix_api36_requirement.png",
+      "bytes": 42268,
+      "sha256": "08a5260004861bac726ab6cc4e785d5fe8bc8c07587df703dc3e15767e9f2e39"
+    },
+    {
+      "path": "evidence/screenshots/s5_reqfix_api36_requirement_uiautomator.xml",
+      "bytes": 10063,
+      "sha256": "365fe0844be42dda7ff5a1d5e43037fcdbc2db2727b4e551412222c4764d329a"
     },
     {
       "path": "evidence/screenshots/save_result_api36_uiautomator.xml",

@@ -1,93 +1,20 @@
 {
-  "schema": "AI_PROD_S5_IDENTITY_MIGRATION_PROOF_v1",
+  "schema": "AI_PROD_S5_REQUIREMENT_TRUTH_FIX_PROOF_v1",
   "observed_at": "2026-09-27",
-  "task": "TASK-S5-002",
-  "branch": "task/TASK-S5-002",
-  "source_commit_before_closure": "7122b368d61b58a9bfbace6a13f0eef0d61853b1",
-  "s4_baseline_commit": "8b2538e63a6cc06beb918439b5c3ce6b9d2f751d",
+  "task": "TASK-S5-003",
+  "branch": "task/TASK-S5-003",
+  "required_start_head": "8ce0cd1284440f636a5e03c94c7076cbbd060b0a",
+  "source_fix_commit": "99c635ddb1f2de40f5d665523e154385ce5ee55d",
   "canonical_decision": "TEST",
-  "identity": {
-    "play_title_en": "Reduce Photo Size: KB Limit",
-    "launcher_name": "Reduce Photo Size",
-    "application_id": "com.afradadmedia.reducephotosize",
-    "namespace": "com.afradadmedia.reducephotosize",
-    "provider_authority": "com.afradadmedia.reducephotosize.result",
-    "version_code": 1,
-    "version_name": "0.1.0"
-  },
-  "toolchain": {
-    "jdk": "Temurin 17.0.16",
-    "gradle": "9.7.1",
-    "agp": "9.4.1",
-    "compile_sdk": 36,
-    "target_sdk": 36,
-    "min_sdk": 29,
-    "build_tools": "36.0.0",
-    "platform_tools": "37.0.1"
-  },
-  "regression": {
-    "preflight": "PASS",
-    "assembleDebug": "PASS",
-    "testDebugUnitTest": "PASS",
-    "lintDebug": "PASS",
-    "assembleRelease": "PASS",
-    "bundleRelease": "PASS",
-    "current_and_older_install_launch": "PASS; API36 emulator-5554 and API29 emulator-5556",
-    "buyer_truth_save_share_orientation_large_input": "PASS; fresh identity package runtime evidence recorded"
-  },
-  "artifacts": {
-    "debug_apk": {
-      "path": "app/build/outputs/apk/debug/app-debug.apk",
-      "bytes": 2583179,
-      "sha256": "cc7272ecd43a23818065d1cdcae584bef8eeba348860a81d4432318299fcb3c0",
-      "identity": "com.afradadmedia.reducephotosize; versionCode 1; versionName 0.1.0"
-    },
-    "release_aab": {
-      "path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.aab",
-      "bytes": 663007,
-      "sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6",
-      "identity": "com.afradadmedia.reducephotosize; versionCode 1; versionName 0.1.0",
-      "signing": "UNSIGNED_HUMAN_ACTION_REQUIRED"
-    },
-    "release_apk": {
-      "path": "evidence/play/app-release-0.1.0-vc1-identity-unsigned.apk",
-      "bytes": 2141450,
-      "sha256": "c2230c8b9b1075687b8666bbbe7e36a24369a213e884886ba42bfacf71e57991",
-      "identity": "com.afradadmedia.reducephotosize; versionCode 1; versionName 0.1.0",
-      "signing": "UNSIGNED_HUMAN_ACTION_REQUIRED"
-    }
-  },
-  "permissions": {
-    "manifest_permissions": [],
-    "internet": false,
-    "broad_storage_media": false,
-    "admob_ump_analytics": false
-  },
-  "stale_reference_disposition": {
-    "publication_relevant_stale_identity": false,
-    "historical_provenance_only": [
-      "evidence/play/S5_PRE_IDENTITY_ARTIFACT_PROOF.json",
-      "docs/product/APP_IDENTITY_FINAL_v1.0.md",
-      "docs/product/APP_IDENTITY_DECISION_v1.0.md",
-      "TEST_MATRIX.csv S5-ID-11"
-    ],
-    "old_aab_sha256": "96ddc5b59df576c365af1321faf8801d9dbd72c77c482f97911df993ed1f5cea"
-  },
-  "human_action_required": [
-    "Do not upload the superseded old AAB.",
-    "Human must provide/select authorized signing identity and perform any Play Console upload; Codex does not create signing identity or upload."
-  ],
-  "runtime_evidence": {
-    "api36_launch": ["evidence/screenshots/s5_identity_launch_api36.png", "evidence/screenshots/s5_identity_launch_api36_uiautomator.xml"],
-    "api29_launch": ["evidence/screenshots/s5_identity_launch_api29.png", "evidence/screenshots/s5_identity_launch_api29_uiautomator.xml"],
-    "pass_100kb": ["evidence/screenshots/s5_identity_pass100_api36.png", "evidence/screenshots/s5_identity_pass100_api36_uiautomator.xml"],
-    "not_met_large": ["evidence/screenshots/s5_identity_notmet_large_api36.png", "evidence/screenshots/s5_identity_notmet_large_api36_uiautomator.xml"],
-    "reduced_unknown": ["evidence/screenshots/s5_identity_reduced_large_api36.png", "evidence/screenshots/s5_identity_reduced_large_api36_uiautomator.xml"],
-    "exif_quality": ["evidence/screenshots/s5_identity_exif_api36.png", "evidence/screenshots/s5_identity_exif_api36_uiautomator.xml"],
-    "save_share": ["evidence/result_s5_identity_saved.jpg", "evidence/screenshots/s5_identity_share_api36.png", "evidence/screenshots/s5_identity_share_api36_uiautomator.xml"],
-    "source_preservation": ["evidence/device_s5_identity_source_hashes.txt"]
-  },
-  "s5_id_disposition": "PASS_WITH_HUMAN_SIGNING_UPLOAD_ACTION",
+  "identity": {"play_title_en": "Reduce Photo Size: KB Limit", "launcher_name": "Reduce Photo Size", "application_id": "com.afradadmedia.reducephotosize", "namespace": "com.afradadmedia.reducephotosize", "version_code": 1, "version_name": "0.1.0"},
+  "unit_contract": {"kb_bytes": 1000, "mb_bytes": 1000000, "presets_bytes": [50000, 100000, 200000, 500000, 1000000], "custom_range_bytes": "1000..50000000 inclusive", "max_fraction_digits": 3, "decimal_separator": "one dot OR one comma; ambiguous/grouped forms rejected", "arithmetic": "BigDecimal exact conversion with FLOOR; no double", "proof": "PASS/NOT_MET exposes exact output and target bytes"},
+  "verification": {"preflight": "PASS", "assembleDebug": "PASS", "testDebugUnitTest": "PASS; 8 tests", "lintDebug": "PASS", "assembleRelease": "PASS", "bundleRelease": "PASS", "api36_install_launch": "PASS; emulator-5554", "api29_install_launch": "PASS; emulator-5556", "api36_requirement": "PASS; neutral text, no selected target, disabled known CTA, unknown reachable", "api29_requirement": "PASS; same unselected state after JPEG picker", "runtime_truth": "PASS; explicit selection required; known/unknown workers use dispatch snapshots"},
+  "runtime_evidence": {"first_open_api36": ["evidence/screenshots/s5_reqfix_api36_first_open.png"], "first_open_api29": ["evidence/screenshots/s5_reqfix_api29_first_open.png"], "requirement_api36": ["evidence/screenshots/s5_reqfix_api36_requirement.png", "evidence/screenshots/s5_reqfix_api36_requirement_uiautomator.xml"], "requirement_api29": ["evidence/screenshots/s5_reqfix_api29_requirement.png", "evidence/screenshots/s5_reqfix_api29_requirement_uiautomator.xml"], "fixtures": {"standard": "569d93c4756424a435536df4133f31960ae7027d4531f02dc80f867215868c4f", "large": "0fc6a095eff306cda696352db3f998e86f2715ea474558846174d06dbf71db0a", "already_small": "13036281836189d5e2d87a511b334730df30011eeaa009b0dcdae8c0d3aa2280", "exif_orientation_6": "79e7505f2ebeff78392d9968358eda3186488204d2ab4f3e7c57600c52c1c682"}},
+  "acceptance": {"S5-REQ-01..25": "PASS; source, unit, runtime, privacy, artifact and provenance rows recorded in TEST_MATRIX.csv", "explicit_100kb": "PASS; known path remains truthful", "explicit_50kb_not_met": "PASS; actual-byte NOT_MET semantics retained", "unknown_clean_and_known_to_unknown": "PASS; REDUCED-only and stale target abandoned", "custom_valid_invalid_cancelled": "PASS; exact parser and last-valid invariant covered by unit/source tests", "target_switch_and_new_photo_reset": "PASS; latest valid selection only and showRequirement/reset clear target", "save_share_preservation_orientation_large_input": "PASS; prior deterministic regression evidence retained and source unchanged", "permission_privacy": "PASS; no INTERNET, broad storage/media, AdMob/UMP/analytics"},
+  "artifacts": {"debug_apk": {"path": "evidence/play/app-debug-0.1.0-vc1-reqfix.apk", "bytes": 2629752, "sha256": "ea416398009b01e03f687dd1448547bbfecbc237ffb08fefb125922687bc09bf"}, "release_apk": {"path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.apk", "bytes": 2142634, "sha256": "7b28ba612f2cde6da032675fcf1cf3b732228f05859b889c493e3a7611d615d0", "signing": "UNSIGNED_HUMAN_ACTION_REQUIRED"}, "release_aab": {"path": "evidence/play/app-release-0.1.0-vc1-reqfix-unsigned.aab", "bytes": 663874, "sha256": "968f3ae2928b407aa01efd96b14785c856d75861fe162d7f27bfc0169299c5e4", "signing": "UNSIGNED_HUMAN_ACTION_REQUIRED"}},
+  "superseded_provenance": {"old_aab_sha256": "992a2acddb197796b7aec8be72923c7ec8759a2cb36cf39dcc7f91c32a60c7a6", "status": "PROVENANCE_ONLY_NOT_PLAY_ELIGIBLE_AFTER_SOURCE_FIX"},
+  "next_owner": "HUMAN_PLAY_CONSOLE",
   "s6_claim": false,
-  "build_claim": false
+  "build_claim": false,
+  "upload_performed": false
 }
