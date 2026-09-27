@@ -1,6 +1,6 @@
 # FINAL_KEYWORD_SELECTION_v1.0
 
-Status: KEYWORD_STRATEGY_SELECTED / RECOMMENDED_TITLE_REJECTED_AFTER_COLLISION_SCREEN
+Status: FINAL_KEYWORD_TITLE_SELECTED
 Observed: 2026-09-27
 Scope: Google Play English title strategy for the current JPEG/photo upload-limit MVP.
 
@@ -185,3 +185,23 @@ Leading replacement candidate for a separate collision screen:
 - `Reduce Photo Size: KB Limit` (27/30)
 
 No replacement title is frozen by this file.
+
+
+## Final Naming Decision — 2026-09-27
+
+After a dedicated collision/policy screen, the selected English Play title is:
+
+`Reduce Photo Size: KB Limit`
+
+Status:
+- FINAL_FOR_IMPLEMENTATION
+- NAMING / PACKAGE IDENTITY FREEZE ONLY
+
+Final application ID:
+`com.afradadmedia.reducephotosize`
+
+Evidence:
+- `docs/market/TITLE_FINAL_SCREEN_REDUCE_PHOTO_SIZE_KB_LIMIT_v1.0.md`
+- `docs/product/APP_IDENTITY_FINAL_v1.0.md`
+
+The previously rejected `Reduce Photo Size: MB to KB` remains rejected.
