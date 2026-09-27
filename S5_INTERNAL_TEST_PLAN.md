@@ -45,5 +45,17 @@ Do not request personal/sensitive images. Testers should use non-sensitive sampl
 - UX: unclear wording/flow that materially affects completion
 - COSMETIC: non-blocking presentation issue
 
+## Market-review derived handoff checks
+Before S6 starts, the distributed test artifact/handoff must preserve:
+- truthful PASS / NOT_MET / REDUCED semantics;
+- visible Save and Share actions;
+- clear progress/error states;
+- no unexpected network dependency;
+- no AdMob/paywall/subscription interruption before first verified value;
+- quality guard and original-preservation behavior;
+- explicit tester observation of whether the saved result is easy to find and whether Share sends the expected file.
+
+Reference: `docs/market/MARKET_REVIEW_INTELLIGENCE_v1.0.md`.
+
 ## Exit
-S5_INTERNAL_TEST_READY when a real declared-route test artifact is prepared and all remaining account/signing/upload actions are explicitly assigned to the human.
+S5_INTERNAL_TEST_READY when a real declared-route test artifact is prepared and all remaining account/signing/upload actions are explicitly assigned to the human. S5 does not substitute for the real-user S6 observations above.
