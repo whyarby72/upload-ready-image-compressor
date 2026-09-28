@@ -354,3 +354,14 @@
 - closed TASK-S5-005 and returned the broader workflow to S5_INTERNAL_TEST_READY;
 - set next owner to HUMAN_PLAY_CONSOLE for the still-pending actual Google Play Internal Testing distribution/install boundary;
 - did not authorize signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+
+# 2026-09-28 — Google Play Internal Testing human handoff prepared
+
+- reverified current official Internal testing, Play App Signing and target-API requirements;
+- confirmed targetSdk 36 matches the current Google Play mobile submission minimum;
+- bound the exact post-geometry AAB candidate and SHA-256;
+- recorded that the candidate is unsigned and therefore not Play-upload-eligible;
+- superseded the stale earlier tester handoff;
+- prepared provider-aware preflight, release draft, tester route and provider-evidence contract;
+- retained signing, Play Console mutation, upload, rollout, S6, BUILD, Artifact Freeze, release and publication authority as false.
