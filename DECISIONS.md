@@ -316,3 +316,22 @@ Approval ref:
 
 Closure audit:
 `docs/qa/S5_005_FINAL_GEOMETRY_VISUAL_HUMAN_CLOSURE_v1.0.md`
+
+
+## D-044 — Google Play Internal Testing handoff prepared without provider authority (2026-09-28)
+
+Current Google Play requirements were reverified from official Google sources before preparing the handoff.
+
+The app targets API 36, matching the current mobile new-app/update submission target requirement effective 2026-08-31.
+
+The exact current pre-signing candidate is:
+`evidence/artifacts/s5_005_geometry_final/app-release.aab`
+— 7,951,808 bytes
+— SHA-256 `e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02`.
+
+The candidate remains unsigned and therefore is not Play-upload-eligible. Signing/account/provider state remains owned by the authorized Play Console account holder.
+
+Canonical handoff:
+`docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md`
+
+This preparation grants no signing, app creation/mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority.
