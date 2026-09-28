@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-005",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "HOLD_ACTUAL_ENGINE_GEOMETRY_PROOF_REQUIRED",
+    "next_owner": "CHAT/HUMAN",
+    "status": "READY_FOR_FINAL_GEOMETRY_HUMAN_REVIEW",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_ACTUAL_ENGINE_GEOMETRY_PROOF",
+    "internal_test": "S5_ACTUAL_ENGINE_GEOMETRY_PROOF_PASS",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,15 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Current geometry test proves ScalePlanner arithmetic only, not actual JpegCompressionEngine output.",
-    "Geometry proof JSON lacks actual decoded output dimensions/cross-product deltas for the mandatory ratio matrix.",
-    "TEST_MATRIX S5-24 currently overclaims decoded-output proof and must be reopened."
+    "Human visual review remains required; Codex does not self-approve visual quality."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes an actual production-engine geometry test/evidence repair without modifying protected compression/domain source.",
+  "next_action": "CHAT/HUMAN independently reviews actual-engine geometry evidence; do not promote to S6, BUILD, Artifact Freeze, release, or publication.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -100,9 +98,9 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "285ce9fd724678da4a1097b6d4d3b74c6a734f54",
-    "evidence_closure_base_commit": "285ce9fd724678da4a1097b6d4d3b74c6a734f54",
-    "last_pushed_task_commit_scope": "TASK_S5_005_GEOMETRY_AND_NOT_MET_SOURCE; evidence closure follows"
+    "last_pushed_task_commit": "c736a5d1e9beeb663b9bc336618171bbefe82a28",
+    "evidence_closure_base_commit": "c736a5d1e9beeb663b9bc336618171bbefe82a28",
+    "last_pushed_task_commit_scope": "TASK_S5_005_ACTUAL_ENGINE_GEOMETRY_PROOF_SOURCE; evidence closure follows"
   },
   "s4_review": {
     "status": "PASS",

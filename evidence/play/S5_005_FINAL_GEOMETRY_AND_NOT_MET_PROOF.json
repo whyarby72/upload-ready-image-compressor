@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "task": "TASK-S5-005",
-  "tested_source_commit": "285ce9fd724678da4a1097b6d4d3b74c6a734f54",
+  "tested_source_commit": "c736a5d1e9beeb663b9bc336618171bbefe82a28",
   "artifact": {
     "debug_apk_sha256": "2a5e777b5adbfbc8cd277079ae7fa239fd1dcac22d2e4ec6cae6e161676dc80c",
     "release_unsigned_apk_sha256": "2bbaa8cfb71bed882c6e53eee5562d84c1a3adef242fe2beb616268fae69ed7b",
