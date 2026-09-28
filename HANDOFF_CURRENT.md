@@ -49,3 +49,22 @@ Evidence-only closure; no app/source files changed.
 - Environment: `task-s3-api36`, `emulator-5554`, API 36, 360x800, font scale 1.0; repaired APK SHA-256 remains `34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814`.
 
 Next owner: `CHAT`. Human `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION` approval remains pending; Codex does not self-approve.
+
+
+## Generated Home hero selected — 2026-09-29
+
+User selected the newly generated elegant compression illustration for the app Home.
+
+Integrated:
+`app/src/main/res/drawable-nodpi/ill_home_fit_to_limit_generated.webp`
+
+Direction is explicit:
+`large source left → small result right`.
+
+Previous Home screenshot evidence is superseded for premium-quality review because the presentation source changed.
+
+Machine-QA work order:
+`prompts/CODEX_TASK_S5_006_GENERATED_HERO_QA.md`
+
+Next owner:
+`CODEX`
