@@ -364,3 +364,39 @@ Binding corrective documents:
 
 Next material approval must explicitly authorize:
 `TASK-S5-006 VISUAL ASSET COMPLETENESS IMPLEMENTATION`.
+
+
+## D-046 — Human authorizes TASK-S5-006 visual asset completeness implementation (2026-09-28)
+
+The human explicitly selected Option 1 after it was scoped to:
+`TASK-S5-006 VISUAL ASSET COMPLETENESS IMPLEMENTATION`.
+
+Authorization includes only:
+- dedicated local launcher/app mark assets;
+- purpose-built first-open hero illustration;
+- minimal per-screen visual-asset integration defined by the corrective spec;
+- Compose/resource presentation changes required by the spec;
+- fresh build/test/runtime screenshot evidence.
+
+Authorization explicitly excludes:
+- compression/domain changes;
+- new formats;
+- backend/network;
+- AdMob/analytics;
+- package/applicationId, SDK, version changes;
+- signing;
+- Play Console mutation/upload;
+- S6;
+- BUILD promotion;
+- Artifact Freeze;
+- release;
+- publication.
+
+Approval ref:
+`USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION`
+
+Execution owner:
+`CODEX`
+
+Work order:
+`prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md`
