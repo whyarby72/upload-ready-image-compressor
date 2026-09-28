@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 285,
+  "file_count": 287,
   "files": [
     {
       "path": "evidence/artifacts/.DS_Store",
@@ -1174,8 +1174,8 @@
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/SCREENSHOT_MANIFEST.json",
-      "bytes": 3366,
-      "sha256": "ca676c65bc54e2f2474a7870ee01520cec9b8987c89c5a72d7a8a973243e18cb"
+      "bytes": 3926,
+      "sha256": "5cc63d24c0b5dfb0581861831860c6ef6308541ae5ec8ed347596722e21d7fe9"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/before_after_landscape_api36.png",
@@ -1199,8 +1199,18 @@
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800.png",
-      "bytes": 274750,
-      "sha256": "7de3d81e23d54dc8183d85631bec278b121df875d74898092d52d3c5d86d9497"
+      "bytes": 28084,
+      "sha256": "629f78a5fb4ffbb9a7fe7e1d17f6e9130d948880b23a54f60ef2cc90579f98c3"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800_foreground.txt",
+      "bytes": 208,
+      "sha256": "5afe7612bd4460f7bec7cd02ab586f6db5939193816a97cf342bfd93c29b7f18"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800_uiautomator.xml",
+      "bytes": 6800,
+      "sha256": "ed0e566859b76982b4f108737a56fbfe5d7ef53a044b40b18f4ff212977d2afc"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/home_font_1_3x_api36.png",

@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-006",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "HOLD_HOME360_SEMANTIC_RECAPTURE_REQUIRED",
+    "next_owner": "CHAT",
+    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY",
     "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
     "opened_from": "TASK-S5-005",
     "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
@@ -75,15 +75,12 @@
     "publication_authorized": false
   },
   "evidence_index": "evidence/INDEX.json",
-  "open_blockers": [
-    "home_api36_360x800.png is Android launcher/home screen, not the Reduce Photo Size app Home runtime.",
-    "Home360 must be recaptured with foreground-package evidence plus UIAutomator semantic anchors from the same state."
-  ],
+  "open_blockers": [],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Codex executes prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md. No app/source changes; human PREMIUM_QUALITY review remains closed until CHAT directly re-audits the bound Home360 evidence.",
+  "next_action": "CHAT directly audits the bound Home360 evidence; human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval remains pending.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -469,7 +466,7 @@
     "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
   },
   "s5_visual_productization_rework": {
-    "status": "HOLD_HOME360_SEMANTIC_RECAPTURE_REQUIRED",
+    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
@@ -478,7 +475,7 @@
     "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
-    "visual_productization_status": "SOURCE_AND_EVIDENCE_REPAIRED_MACHINE_QA_PASS",
+    "visual_productization_status": "SOURCE_AND_EVIDENCE_REPAIRED_MACHINE_QA_PASS_HOME360_BOUND",
     "implementation_authorized": true,
     "protected_domain_change_authorized": false,
     "implementation_approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
@@ -487,8 +484,19 @@
     "fidelity_matrix_ref": "docs/ux/TASK_S5_006_MOCKUP_RUNTIME_FIDELITY_MATRIX_v1.0.md",
     "artifact_proof_ref": "evidence/play/S5_006_ARTIFACT_PROOF.json",
     "human_review_scope": "PREMIUM_QUALITY / VISUAL_PRODUCTIZATION",
-    "human_review_status": "NOT_READY_HOME360_EVIDENCE_INVALID",
+    "human_review_status": "CHAT_PREMIUM_REVIEW_REQUIRED",
     "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.1.md",
-    "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md"
+    "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md",
+    "home360_semantic_binding": {
+      "screenshot": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800.png",
+      "screenshot_sha256": "629f78a5fb4ffbb9a7fe7e1d17f6e9130d948880b23a54f60ef2cc90579f98c3",
+      "foreground_proof": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800_foreground.txt",
+      "foreground_sha256": "5afe7612bd4460f7bec7cd02ab586f6db5939193816a97cf342bfd93c29b7f18",
+      "observed_package": "com.afradadmedia.reducephotosize",
+      "uiautomator": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800_uiautomator.xml",
+      "uiautomator_sha256": "ed0e566859b76982b4f108737a56fbfe5d7ef53a044b40b18f4ff212977d2afc",
+      "anchors": ["Reduce Photo Size", "Fit your photo to an upload limit.", "Choose photo", "On-device · original untouched"],
+      "environment": "task-s3-api36 / emulator-5554 / API 36 / 360x800 / font_scale 1.0"
+    }
   }
 }

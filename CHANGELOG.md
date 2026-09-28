@@ -426,3 +426,9 @@
 - invalidated Home360 PASS and kept human premium review closed;
 - strengthened Android native visual-productization runtime to require foreground-package + UI-hierarchy screenshot semantic binding;
 - prepared evidence-only Home360 recapture work order; no app/source change required.
+## 2026-09-29 — TASK-S5-006 Home360 semantic evidence closure
+
+- Evidence-only recapture of the API36 360x800 Home after splash exit.
+- Bound the screenshot to foreground package `com.afradadmedia.reducephotosize` and same-state UIAutomator anchors.
+- Persisted foreground proof, hierarchy proof, screenshot hash, and reconciled manifest, evidence index, TEST_MATRIX, PROJECT_STATE, and handoff.
+- No app/source files changed; CHAT direct review remains required.
