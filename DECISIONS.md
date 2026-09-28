@@ -268,3 +268,16 @@ Direct inspection of the semantically verified recap accepts Requirement at 360/
 One final presentation-copy defect remains against the frozen Warm Ink visual system and Compose implementation brief: NOT_MET does not render the required guidance `Try a higher limit or a different photo.`, and the shared Result action currently labels the primary save action `Save copy` rather than the NOT_MET-specific `Save current copy`.
 
 This is a narrow presentation-copy fidelity fix only; the visual system, product behavior and compression/domain engine remain closed.
+
+
+## D-040 — Image geometry preservation becomes a hard product invariant (2026-09-28)
+
+Human explicitly requires that original and compressed output preserve image proportion and never become stretched/squashed.
+
+A new binding contract defines geometry using EXIF-oriented display dimensions, requires uniform scaling for actual output, prohibits cropping as a compression strategy, and permits only integer-pixel rounding drift.
+
+Current compression source already derives width and height from the same scale factor, so protected engine code is not reopened. Instead, deterministic decoded-output geometry regression is now mandatory. If that test fails, Codex must STOP and request separate material approval before changing protected compression/domain code.
+
+Truth-critical UI is tightened: Processing, Result hero, and both Before/After images must use full-frame Fit presentation; Requirement thumbnail may remain Crop because it is identification-only.
+
+The pending NOT_MET copy fidelity correction is folded into the same final corrective to avoid another independent iteration.

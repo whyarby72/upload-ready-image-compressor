@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_FINAL_NOT_MET_COPY_FIDELITY",
+    "current_stage": "S5_FINAL_GEOMETRY_AND_NOT_MET_FIDELITY",
     "canonical_decision": "TEST",
     "progress_percent": 98,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -41,7 +41,7 @@
     "id": "TASK-S5-005",
     "owner": "CODEX",
     "next_owner": "CODEX",
-    "status": "HOLD_FINAL_NOT_MET_COPY_FIDELITY",
+    "status": "HOLD_FINAL_GEOMETRY_AND_NOT_MET_FIDELITY",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_FINAL_NOT_MET_COPY_FIDELITY",
+    "internal_test": "S5_HOLD_GEOMETRY_AND_NOT_MET_FIDELITY",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,14 +70,16 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "NOT_MET runtime lacks frozen guidance: Try a higher limit or a different photo.",
-    "NOT_MET primary save action still uses Save copy instead of the frozen Save current copy label."
+    "Hard geometry contract requires deterministic proof that compressed output preserves display-oriented aspect ratio with no stretch/crop.",
+    "Result hero and Before/After currently use ContentScale.Crop and must use full-frame Fit presentation.",
+    "Processing preview must use full-frame Fit presentation.",
+    "NOT_MET still requires frozen guidance and Save current copy label."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX performs the final narrow NOT_MET copy fidelity fix and captures semantically verified NOT_MET visual proof.",
+  "next_action": "CODEX executes the combined final geometry + NOT_MET fidelity corrective from the latest bound HEAD, proving engine ratio invariance before any protected-domain change.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -406,5 +408,17 @@
       "protected_domain_files_modified": false,
       "next_owner": "CHAT"
     }
+  },
+  "image_geometry_contract": {
+    "status": "BINDING_HARD_INVARIANT",
+    "bound_at": "2026-09-28",
+    "ref": "docs/product/IMAGE_GEOMETRY_PRESERVATION_CONTRACT_v1.0.md",
+    "output_rule": "UNIFORM_SCALE_NO_STRETCH_NO_CROP",
+    "display_ratio_basis": "EXIF_ORIENTED_DIMENSIONS",
+    "result_hero": "FIT_FULL_FRAME",
+    "before_after": "FIT_FULL_FRAME_BOTH",
+    "processing": "FIT_FULL_FRAME",
+    "requirement_thumbnail": "CROP_ALLOWED_IDENTIFICATION_ONLY",
+    "protected_engine_change": "STOP_AND_REQUIRE_NEW_APPROVAL_IF_TEST_FAILS"
   }
 }

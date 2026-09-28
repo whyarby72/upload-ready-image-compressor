@@ -177,3 +177,27 @@ All reviewed states pass except the documented NOT_MET guidance/save-label fidel
 
 Corrective:
 `prompts/CODEX_S5_005_FINAL_NOT_MET_COPY_FIDELITY.md`
+
+
+## Hard image-geometry invariant
+
+Binding:
+`docs/product/IMAGE_GEOMETRY_PRESERVATION_CONTRACT_v1.0.md`
+
+Human requirement:
+source/output display geometry MUST remain proportional; no stretch/squash.
+
+Current preview renderer uses Crop globally. The next corrective MUST:
+- keep Requirement thumbnail Crop if desired;
+- set Processing to Fit;
+- set Result hero to Fit;
+- set both Before/After images to Fit;
+- add deterministic decoded-output geometry proof.
+
+If geometry proof fails against protected engine behavior, STOP for new approval rather than modifying protected domain/compression source.
+
+Combined corrective:
+`prompts/CODEX_S5_005_FINAL_GEOMETRY_AND_NOT_MET_FIDELITY.md`
+
+This supersedes:
+`prompts/CODEX_S5_005_FINAL_NOT_MET_COPY_FIDELITY.md`

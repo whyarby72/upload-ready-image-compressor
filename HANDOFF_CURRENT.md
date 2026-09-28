@@ -1,46 +1,50 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_FINAL_NOT_MET_COPY_FIDELITY
+Stage: S5_FINAL_GEOMETRY_AND_NOT_MET_FIDELITY
 Decision: TEST
 Progress: 98%
 Current task: TASK-S5-005
 Next owner: CODEX
-Task status: HOLD_FINAL_NOT_MET_COPY_FIDELITY
+Task status: HOLD_FINAL_GEOMETRY_AND_NOT_MET_FIDELITY
 
-## Direct final visual review
+## New binding hard invariant
 
-CHAT directly inspected the valid recap ZIP.
+Human decision:
+**source/output image geometry must be preserved; output must never stretch/squash.**
 
-Audit:
-`docs/ux/S5_005_FINAL_DIRECT_VISUAL_REVIEW_v1.0.md`
+Binding contract:
+`docs/product/IMAGE_GEOMETRY_PRESERVATION_CONTRACT_v1.0.md`
 
-## PASS
+### Output file
+- uniform X/Y scale only;
+- no crop as compression strategy;
+- EXIF-oriented aspect ratio preserved;
+- only integer-pixel rounding drift permitted.
 
-- Requirement 360x800
-- Requirement 320x640
-- Requirement 1.3x
-- Processing (minor polish only)
-- PASS result 360/320/1.3x
-- REDUCED result 360/320/1.3x
+### UI truth surfaces
+- Requirement thumbnail: Crop allowed.
+- Processing: Fit.
+- Result hero: Fit.
+- Before/After source + result: Fit.
 
-## Final blocker
+Current engine source already appears to use uniform scaling, but deterministic decoded-output evidence is now mandatory.
 
-NOT_MET is visually truthful but misses two frozen copy requirements:
+If geometry tests fail, STOP. Do not modify protected compression/domain code without new explicit approval.
 
-1. guidance:
+## Existing final blocker folded into same pass
+
+NOT_MET must add:
 `Try a higher limit or a different photo.`
 
-2. primary save label:
+NOT_MET save label:
 `Save current copy`
-
-Current source uses `Save copy` unconditionally.
 
 ## Next action
 
 Run:
-`prompts/CODEX_S5_005_FINAL_NOT_MET_COPY_FIDELITY.md`
+`prompts/CODEX_S5_005_FINAL_GEOMETRY_AND_NOT_MET_FIDELITY.md`
 
-No redesign.
-No domain/compression changes.
+This supersedes the earlier standalone NOT_MET corrective.
+
 No signing / Play upload / S6 / BUILD / Artifact Freeze / release / publication.

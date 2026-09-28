@@ -308,3 +308,15 @@
 - passed PASS and REDUCED Result layouts including single-line sizes;
 - identified final frozen-spec miss on NOT_MET: missing guidance and wrong save-label specificity;
 - opened one narrow presentation-copy corrective with no redesign or domain change.
+
+
+# 2026-09-28 — Hard image geometry preservation contract bound
+
+- made source/output aspect-ratio preservation a non-negotiable product invariant;
+- prohibited output stretch, squash and crop-as-compression;
+- defined EXIF-oriented geometry comparison and integer-pixel rounding tolerance;
+- required deterministic decoded-output tests across square, landscape, portrait, widescreen and orientation fixtures;
+- required Processing, Result hero and Before/After to use full-frame Fit presentation;
+- retained Crop only for Requirement identification thumbnail;
+- kept protected compression/domain source closed unless geometry tests prove a defect;
+- combined geometry correction with the pending NOT_MET copy-fidelity pass.
