@@ -331,3 +331,15 @@
 - found missing actual-output matrix coverage and cross-product/tolerance records;
 - reopened S5-24 as a false-positive;
 - required real production-engine JPEG outputs to be decoded and hash-bound before geometry PASS.
+
+
+# 2026-09-28 — Actual production-engine geometry closure accepted
+
+- independently verified the Android instrumentation harness invokes production JpegCompressionEngine;
+- verified real result JPEGs are retained and decoded;
+- verified 10/10 mandatory geometry cases;
+- verified cross-product delta is zero for every case;
+- verified source/output artifact sizes and SHA-256 bindings through evidence index;
+- accepted EXIF rotate-90, mirrored EXIF and ALREADY_READY geometry cases;
+- kept protected compression/domain source frozen;
+- closed engine geometry PASS and advanced only to final human Fit/full-frame visual review.

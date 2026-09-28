@@ -5,9 +5,9 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_ACTUAL_ENGINE_GEOMETRY_PROOF",
+    "current_stage": "S5_FINAL_GEOMETRY_VISUAL_REVIEW",
     "canonical_decision": "TEST",
-    "progress_percent": 98,
+    "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-005",
-    "owner": "CODEX",
-    "next_owner": "CHAT/HUMAN",
-    "status": "READY_FOR_FINAL_GEOMETRY_HUMAN_REVIEW",
+    "owner": "CHAT + HUMAN",
+    "next_owner": "HUMAN",
+    "status": "GEOMETRY_ENGINE_PASS_HUMAN_VISUAL_FIT_REVIEW_PENDING",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_ACTUAL_ENGINE_GEOMETRY_PROOF_PASS",
+    "internal_test": "S5_HOLD_FINAL_GEOMETRY_VISUAL_REVIEW",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,13 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Human visual review remains required; Codex does not self-approve visual quality."
+    "Direct human inspection of the new Fit-based geometry-final screenshots remains required before closing TASK-S5-005 visual gate."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT/HUMAN independently reviews actual-engine geometry evidence; do not promote to S6, BUILD, Artifact Freeze, release, or publication.",
+  "next_action": "Package/upload evidence/screenshots/s5_005_geometry_final/ for direct CHAT + HUMAN visual review; actual production-engine geometry proof is closed PASS.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -417,7 +417,13 @@
     "processing": "FIT_FULL_FRAME",
     "requirement_thumbnail": "CROP_ALLOWED_IDENTIFICATION_ONLY",
     "protected_engine_change": "STOP_AND_REQUIRE_NEW_APPROVAL_IF_TEST_FAILS",
-    "current_evidence_status": "REOPEN_ACTUAL_ENGINE_OUTPUT_PROOF_REQUIRED",
-    "independent_audit_ref": "docs/qa/S5_005_GEOMETRY_PROOF_INDEPENDENT_AUDIT_v1.0.md"
+    "current_evidence_status": "ACTUAL_ENGINE_ARTIFACT_BOUND_PASS",
+    "independent_audit_ref": "docs/qa/S5_005_GEOMETRY_PROOF_INDEPENDENT_AUDIT_v1.0.md",
+    "actual_engine_test_commit": "c736a5d1e9beeb663b9bc336618171bbefe82a28",
+    "evidence_closure_commit": "3fc36df49da0616412efbe71425446626fd4c3af",
+    "independent_closure_audit_ref": "docs/qa/S5_005_ACTUAL_ENGINE_GEOMETRY_INDEPENDENT_CLOSURE_AUDIT_v1.0.md",
+    "matrix_passed": 10,
+    "matrix_failed": 0,
+    "cross_product_delta": "0_ALL_CASES"
   }
 }

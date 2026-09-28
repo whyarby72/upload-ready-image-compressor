@@ -1,36 +1,58 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_ACTUAL_ENGINE_GEOMETRY_PROOF
+Stage: S5_FINAL_GEOMETRY_VISUAL_REVIEW
 Decision: TEST
-Progress: 98%
+Progress: 99%
 Current task: TASK-S5-005
-Next owner: CHAT/HUMAN
-Task status: READY_FOR_FINAL_GEOMETRY_HUMAN_REVIEW
+Next owner: HUMAN
+Task status: GEOMETRY_ENGINE_PASS_HUMAN_VISUAL_FIT_REVIEW_PENDING
 
-## Accepted from source commit 285ce9fd...
+## Actual-engine geometry closure
 
-- UI truth-critical previews use Fit.
-- Requirement thumbnail alone may Crop.
-- NOT_MET guidance is present.
-- NOT_MET primary label is Save current copy.
-- protected compression/domain source remains unchanged.
+Actual-engine test:
+`c736a5d1e9beeb663b9bc336618171bbefe82a28`
 
-## Reopened geometry evidence
+Evidence closure:
+`3fc36df49da0616412efbe71425446626fd4c3af`
 
-Independent audit:
-`docs/qa/S5_005_GEOMETRY_PROOF_INDEPENDENT_AUDIT_v1.0.md`
+Independent CHAT audit:
+`docs/qa/S5_005_ACTUAL_ENGINE_GEOMETRY_INDEPENDENT_CLOSURE_AUDIT_v1.0.md`
 
-Actual production-engine proof is now recorded in `evidence/geometry/S5_005_GEOMETRY_PROOF.json`; ten real JPEG cases were executed and decoded on API36, with source/output files retained under `evidence/geometry/s5_005_actual_outputs/`.
+## Geometry disposition
 
-## Next action
+PASS.
 
-CHAT/HUMAN performs independent final geometry review. The actual-engine matrix is PASS; Codex does not self-declare visual PASS.
+Production `JpegCompressionEngine.compressKnown()` was invoked with real JPEG files.
+Actual result JPEGs were retained, decoded, hashed and bound.
 
-Test/evidence only unless real engine output fails.
+Matrix:
+10 / 10 PASS.
 
-If real engine output fails geometry:
-STOP.
-Do not modify protected engine without new explicit human approval.
+Cross-product delta:
+0 for every case.
+
+Covered:
+- 1:1
+- 3:2
+- 2:3
+- 4:3
+- 3:4
+- 16:9
+- 9:16
+- EXIF rotate-90
+- mirrored EXIF
+- ALREADY_READY
+
+Protected compression/domain source:
+UNCHANGED.
+
+## Remaining gate
+
+Direct human inspection of:
+`evidence/screenshots/s5_005_geometry_final/`
+
+This is visual Fit/full-frame acceptance only.
+The actual engine geometry invariant itself is closed PASS.
 
 No signing / Play upload / S6 / BUILD / Artifact Freeze / release / publication.

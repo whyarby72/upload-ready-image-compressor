@@ -292,3 +292,12 @@ However the geometry acceptance is reopened because the new unit test exercises 
 The geometry proof JSON also uses non-observed placeholders such as `2400x1600-or-scaled-uniformly`, omits required output dimensions/cross-product deltas/tolerances, and does not contain actual-output coverage for the full mandatory aspect-ratio matrix.
 
 TEST_MATRIX row S5-24 is therefore a false-positive and must return to HOLD until actual production-engine output is tested. This is a test/evidence repair only; protected engine source remains closed unless a real failure is demonstrated.
+
+
+## D-042 — Actual production-engine geometry invariant closes PASS (2026-09-28)
+
+Independent CHAT audit of `c736a5d1e9beeb663b9bc336618171bbefe82a28` and `3fc36df49da0616412efbe71425446626fd4c3af` confirms the geometry harness invokes the real production `JpegCompressionEngine.compressKnown()` through MediaStore URIs, retains the actual result JPEGs, decodes those files, and hash-binds source/output artifacts.
+
+All 10 mandatory cases pass. Actual decoded dimensions preserve source display geometry with cross-product delta exactly zero for 1:1, 3:2, 2:3, 4:3, 3:4, 16:9, 9:16, EXIF rotate-90, mirrored EXIF, and ALREADY_READY. No protected compression/domain production file was modified.
+
+The hard file-output geometry invariant is therefore closed PASS. The only remaining TASK-S5-005 gate is direct human review of the new Fit/full-frame UI screenshots.
