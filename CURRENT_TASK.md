@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: HUMAN + CHAT
 Stage: S5_VISUAL_PRODUCTIZATION_REWORK
 Priority: HIGH
-Status: IMPLEMENTATION_AUTHORIZED
+Status: HOLD_MACHINE_EVIDENCE_INCOMPLETE_REPAIR_AUTHORIZED
 
 ## Trigger
 
@@ -55,7 +55,10 @@ Approval ref:
 Approved by user:
 2026-09-28
 
-Codex work order:
+Current Codex work order:
+`prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md`
+
+Original implementation work order (completed/provenance):
 `prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md`
 
 Approval authorizes only:
@@ -109,3 +112,29 @@ After deterministic implementation/build/test/screenshot evidence:
 - return next owner to `CHAT + HUMAN`;
 - request scoped `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION` approval;
 - keep Play handoff paused until that approval is recorded.
+
+
+## CHAT evidence-integrity hold — 2026-09-28
+
+Direct CHAT review of the pushed TASK-S5-006 evidence found the machine-QA closure was not semantically valid.
+
+Authoritative audit:
+`docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.0.md`
+
+Confirmed defects:
+- `home_api36_360x800.png` is splash-only, not Home;
+- `result_pass_api36.png` is actually TARGET NOT MET;
+- `before_after_landscape_api36.png` does not independently prove a landscape case;
+- Custom Limit helper still requires the binding decimal-entry guidance;
+- current build metadata requires reconciliation to the fresh TASK-S5-006 artifact.
+
+Current Codex action:
+`prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md`
+
+Next owner:
+`CODEX`
+
+Completion state after repair may be only:
+`IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY`
+
+Do NOT request HUMAN PREMIUM_QUALITY approval until CHAT has directly re-audited the repaired runtime evidence.
