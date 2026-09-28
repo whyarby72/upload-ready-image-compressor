@@ -5,8 +5,8 @@ Stage: S5_VISUAL_PRODUCTIZATION_REWORK
 Decision: TEST
 Progress: 96%
 Current task: TASK-S5-006
-Next owner: HUMAN
-Task status: SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED
+Next owner: CODEX
+Task status: IMPLEMENTATION_AUTHORIZED
 
 ## Why S5 reopened
 
@@ -56,3 +56,22 @@ Required exact approval scope:
 No implementation has been authorized by the audit/spec work alone.
 
 No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication.
+
+
+## TASK-S5-006 implementation authorization — 2026-09-28
+
+Approval ref:
+`USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION`
+
+Execution owner:
+`CODEX`
+
+Canonical work order:
+`prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md`
+
+Codex is authorized only for the bounded visual/resource implementation and fresh verification described in that work order.
+
+Play handoff remains PAUSED.
+
+After machine QA, required next human scope:
+`PREMIUM_QUALITY / VISUAL_PRODUCTIZATION`
