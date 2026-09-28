@@ -83,3 +83,27 @@ Play handoff remains PAUSED.
 
 After machine QA, required next human scope:
 `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION`
+
+
+## CHAT evidence audit — 2026-09-28
+
+Disposition:
+`HOLD_MACHINE_EVIDENCE_INCOMPLETE`
+
+Direct review found:
+- `home_api36_360x800.png` is splash-only, not Home;
+- `result_pass_api36.png` visibly renders TARGET NOT MET;
+- `before_after_landscape_api36.png` is byte-identical to the NOT_MET capture and does not independently prove a landscape case;
+- Custom Limit helper still requires the binding decimal-entry guidance;
+- current-build state metadata requires fresh post-repair reconciliation.
+
+Audit:
+`docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.0.md`
+
+Codex repair:
+`prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md`
+
+Next owner:
+`CODEX`
+
+Do not request human PREMIUM_QUALITY approval until CHAT re-audits the repaired evidence.
