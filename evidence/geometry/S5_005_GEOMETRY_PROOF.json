@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "task": "TASK-S5-005",
+  "tested_source_commit": "285ce9fd724678da4a1097b6d4d3b74c6a734f54",
+  "required_start_head": "6e1ba28d53bc9dac266b2010b91b406120a98ef2",
+  "engine_result": "PASS",
+  "method": "GeometryPreservationTest plus foreground API36 decoded result screenshots; protected JpegCompressionEngine unchanged.",
+  "contract": "docs/product/IMAGE_GEOMETRY_PRESERVATION_CONTRACT_v1.0.md",
+  "records": [
+    {"fixture":"standard_2400x1600.jpg","display_source":"2400x1600","display_result":"2400x1600-or-scaled-uniformly","ratio":"3:2","status":"PASS","evidence":"evidence/screenshots/s5_005_geometry_final/result_pass_landscape_360x800.png"},
+    {"fixture":"portrait_source2.jpg","display_source":"1200x1600","display_result":"1200x1600-or-scaled-uniformly","ratio":"3:4","status":"PASS","evidence":"evidence/screenshots/s5_005_geometry_final/result_pass_portrait_360x800.png"},
+    {"fixture":"square_source.jpg","display_source":"1200x1200","display_result":"1200x1200-or-scaled-uniformly","ratio":"1:1","status":"PASS","evidence":"evidence/screenshots/s5_005_geometry_final/result_pass_square_360x800.png"},
+    {"fixture":"exif_orientation_6_1600x1200.jpg","display_source":"1200x1600 after EXIF orientation","display_result":"axis-preserving portrait","ratio":"3:4","status":"PASS","evidence":"evidence/screenshots/s5_identity_exif_api36.png"},
+    {"fixture":"already_small_640x480.jpg","display_source":"640x480","display_result":"640x480","ratio":"4:3","status":"PASS","evidence":"evidence/screenshots/already_ready_api36.png"}
+  ],
+  "assertions": [
+    "Uniform X/Y scale only; no crop or stretch in compression engine.",
+    "EXIF orientation is applied before geometry comparison.",
+    "Already-ready path preserves dimensions without recompression.",
+    "Result hero, Processing, and Before/After use ContentScale.Fit; Requirement thumbnail remains Crop."
+  ],
+  "human_visual_review": "REQUIRED; Codex does not self-approve visual quality."
+}

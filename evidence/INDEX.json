@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 236,
+  "file_count": 251,
   "files": [
     {
       "path": "evidence/artifacts/.DS_Store",
@@ -58,6 +58,16 @@
       "sha256": "72276fda31b82526776585accf5931bad180d692734c90d066371a621d555b6b"
     },
     {
+      "path": "evidence/artifacts/s5_005_geometry_final/app-release-unsigned.apk",
+      "bytes": 23001029,
+      "sha256": "2bbaa8cfb71bed882c6e53eee5562d84c1a3adef242fe2beb616268fae69ed7b"
+    },
+    {
+      "path": "evidence/artifacts/s5_005_geometry_final/app-release.aab",
+      "bytes": 7951808,
+      "sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02"
+    },
+    {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
       "bytes": 2129,
       "sha256": "e55f1a98c9cd305d1a9a2d098359fc38ce8b3e675678d8fec8195f1da5a2cd5a"
@@ -108,9 +118,19 @@
       "sha256": "a9082e15682e800e75d8a53a6a394eace057fbbc48c9a9f9353e8d8890ce583c"
     },
     {
+      "path": "evidence/geometry/S5_005_GEOMETRY_PROOF.json",
+      "bytes": 2002,
+      "sha256": "c73d4c7a9336f4acb9445c41036c7ea13abe9eaa7976f461da30d62efbd01709"
+    },
+    {
       "path": "evidence/play/S5_005_FINAL_EVIDENCE_REPAIR_PROOF.json",
       "bytes": 2062,
       "sha256": "71f29efc9b604526e18a689b518ccc9fb7f5f40ccd345a30d62ff91ca2c0c427"
+    },
+    {
+      "path": "evidence/play/S5_005_FINAL_GEOMETRY_AND_NOT_MET_PROOF.json",
+      "bytes": 1279,
+      "sha256": "29df67e6eff02baeab62b048b0d196436137c33f11579472bee8e24924379c2c"
     },
     {
       "path": "evidence/play/S5_005_FINAL_VISUAL_POLISH_PROOF.json",
@@ -991,6 +1011,61 @@
       "path": "evidence/screenshots/s5_005_final_recap/result_reduced_font_1_3x_api36.png",
       "bytes": 347224,
       "sha256": "7f3ccddf7bb82ea352b38e2d95a70dc5aa3c9a48fb3909e71042a095399bd4f0"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/README.md",
+      "bytes": 365,
+      "sha256": "12d4bcb005a0e251a3a611942fb563f5b3bab3f9eb77ba268baa6159028afd1c"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/SEMANTIC_VERIFICATION.json",
+      "bytes": 816,
+      "sha256": "66901233f7fe116491f50341b7931ea51725e10a519d2b7f88d3a53511695f1a"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/before_after_landscape.png",
+      "bytes": 260082,
+      "sha256": "56a87370f7433f32bd0df69ae6ce7d40d2809fd5978182534af9d5f3a9a08dd5"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/before_after_portrait.png",
+      "bytes": 231673,
+      "sha256": "9a86113a35f2b529b52fcf74c70cbf98c7a0eb10bcff4a7aa55b16acfba76e67"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/result_not_met_actions_api36_360x800.png",
+      "bytes": 263405,
+      "sha256": "2770796a5bc8139003ea747be1ce8b37c09f61d152232423616a8b462993bd07"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/result_not_met_api36_320x640.png",
+      "bytes": 189097,
+      "sha256": "6052c67b6eacfc83057d7d32313e97677b5164d435b9a62b0ac1e19bd5f958cc"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/result_not_met_api36_360x800.png",
+      "bytes": 341163,
+      "sha256": "8db8f19627b6741e5526382ae1185dade1843516a7cdd7d9dacd3e21083fbc36"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/result_not_met_font_1_3x_api36.png",
+      "bytes": 175848,
+      "sha256": "ed352a8b519333a4c4ef0be60380e070f3561eb8e3fb81b3abd429261a719226"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/result_pass_landscape_360x800.png",
+      "bytes": 260082,
+      "sha256": "56a87370f7433f32bd0df69ae6ce7d40d2809fd5978182534af9d5f3a9a08dd5"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/result_pass_portrait_360x800.png",
+      "bytes": 231673,
+      "sha256": "9a86113a35f2b529b52fcf74c70cbf98c7a0eb10bcff4a7aa55b16acfba76e67"
+    },
+    {
+      "path": "evidence/screenshots/s5_005_geometry_final/result_pass_square_360x800.png",
+      "bytes": 219360,
+      "sha256": "da5fdd4bcadf76e74c79573a7a1b1afedd8ba8c5a42b015f6ef2b03cf6a1f842"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",

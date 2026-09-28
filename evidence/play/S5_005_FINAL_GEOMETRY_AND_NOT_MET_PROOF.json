@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "task": "TASK-S5-005",
+  "tested_source_commit": "285ce9fd724678da4a1097b6d4d3b74c6a734f54",
+  "artifact": {
+    "debug_apk_sha256": "2a5e777b5adbfbc8cd277079ae7fa239fd1dcac22d2e4ec6cae6e161676dc80c",
+    "release_unsigned_apk_sha256": "2bbaa8cfb71bed882c6e53eee5562d84c1a3adef242fe2beb616268fae69ed7b",
+    "release_aab_sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02"
+  },
+  "environment": "API36 emulator-5554 foreground; 360x800; font_scale=1.0 and 1.3; 320x640 capture; package com.afradadmedia.reducephotosize",
+  "not_met_semantics": {
+    "status": "PASS",
+    "required_tokens": ["TARGET NOT MET", ">", "Try a higher limit or a different photo.", "Save current copy"],
+    "evidence": [
+      "evidence/screenshots/s5_005_geometry_final/result_not_met_api36_360x800.png",
+      "evidence/screenshots/s5_005_geometry_final/result_not_met_api36_320x640.png",
+      "evidence/screenshots/s5_005_geometry_final/result_not_met_font_1_3x_api36.png",
+      "evidence/screenshots/s5_005_geometry_final/result_not_met_actions_api36_360x800.png"
+    ]
+  },
+  "regression": "PASS labels remain Save copy for PASS/REDUCED; NOT_MET uses Save current copy.",
+  "status": "READY_FOR_FINAL_GEOMETRY_AND_VISUAL_HUMAN_REVIEW"
+}

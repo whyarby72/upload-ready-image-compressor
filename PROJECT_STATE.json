@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-005",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "HOLD_FINAL_GEOMETRY_AND_NOT_MET_FIDELITY",
+    "next_owner": "CHAT/HUMAN",
+    "status": "READY_FOR_FINAL_GEOMETRY_AND_VISUAL_HUMAN_REVIEW",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -70,16 +70,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Hard geometry contract requires deterministic proof that compressed output preserves display-oriented aspect ratio with no stretch/crop.",
-    "Result hero and Before/After currently use ContentScale.Crop and must use full-frame Fit presentation.",
-    "Processing preview must use full-frame Fit presentation.",
-    "NOT_MET still requires frozen guidance and Save current copy label."
+    "Human visual review remains required; Codex does not self-approve visual quality."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CODEX executes the combined final geometry + NOT_MET fidelity corrective from the latest bound HEAD, proving engine ratio invariance before any protected-domain change.",
+  "next_action": "CHAT/HUMAN independently reviews the foreground API36 geometry and NOT_MET evidence; do not promote to S6 or BUILD.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -101,9 +98,9 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "6c9ce5e00bb497f705bbe26dc020fea1fdbcbfc6",
-    "evidence_closure_base_commit": "3df5a7802582c681b7d610f43167c8884460df3c",
-    "last_pushed_task_commit_scope": "TASK_S5_003_CODEX_CLOSURE; independent Chat reconciliation commit follows"
+    "last_pushed_task_commit": "285ce9fd724678da4a1097b6d4d3b74c6a734f54",
+    "evidence_closure_base_commit": "285ce9fd724678da4a1097b6d4d3b74c6a734f54",
+    "last_pushed_task_commit_scope": "TASK_S5_005_GEOMETRY_AND_NOT_MET_SOURCE; evidence closure follows"
   },
   "s4_review": {
     "status": "PASS",

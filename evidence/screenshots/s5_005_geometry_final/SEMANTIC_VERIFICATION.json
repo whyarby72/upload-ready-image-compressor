@@ -1,0 +1,16 @@
+{
+  "package": "com.afradadmedia.reducephotosize",
+  "foreground_verified": true,
+  "api": 36,
+  "font_scale_evidence": 1.3,
+  "screens": {
+    "result_not_met_api36_360x800.png": ["TARGET NOT MET", "Try a higher limit or a different photo."],
+    "result_not_met_api36_320x640.png": ["TARGET NOT MET", "Try a higher limit or a different photo."],
+    "result_not_met_font_1_3x_api36.png": ["TARGET NOT MET"],
+    "result_not_met_actions_api36_360x800.png": ["TARGET NOT MET", "Try a higher limit or a different photo.", "Save current copy", "Share", "Compress another"],
+    "result_pass_landscape_360x800.png": ["MEETS LIMIT", "PASS"],
+    "result_pass_portrait_360x800.png": ["MEETS LIMIT", "PASS"],
+    "result_pass_square_360x800.png": ["MEETS LIMIT", "PASS"]
+  },
+  "visual_quality": "HUMAN_REVIEW_REQUIRED"
+}
