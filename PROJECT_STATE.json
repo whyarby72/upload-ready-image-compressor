@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_VISUAL_PRODUCTIZATION_REWORK",
     "canonical_decision": "TEST",
-    "progress_percent": 98,
+    "progress_percent": 97,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -40,22 +40,23 @@
   "current_task": {
     "id": "TASK-S5-006",
     "owner": "CODEX",
-    "next_owner": "CHAT",
-    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY",
+    "next_owner": "CODEX",
+    "status": "GENERATED_HERO_SOURCE_INTEGRATED_MACHINE_QA_PENDING",
     "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
     "opened_from": "TASK-S5-005",
     "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
     "approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
-    "codex_work_order": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md",
+    "codex_work_order": "prompts/CODEX_TASK_S5_006_GENERATED_HERO_QA.md",
     "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md",
-    "previous_codex_work_order": "prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md"
+    "previous_codex_work_order": "prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md",
+    "approval_ref_generated_hero": "USER_APPROVED_GENERATED_HOME_HERO_2026-09-29"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_HOME360_SEMANTIC_EVIDENCE",
+    "internal_test": "S5_HOLD_GENERATED_HERO_MACHINE_QA",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -75,12 +76,15 @@
     "publication_authorized": false
   },
   "evidence_index": "evidence/INDEX.json",
-  "open_blockers": [],
+  "open_blockers": [
+    "Fresh build/test/emulator evidence is required after replacing the Home hero with the user-approved generated raster asset.",
+    "Previous Home screenshot evidence is superseded for premium review because the presentation source changed."
+  ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT directly audits the bound Home360 evidence; human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval remains pending.",
+  "next_action": "Codex executes prompts/CODEX_TASK_S5_006_GENERATED_HERO_QA.md; then CHAT + HUMAN reviews the actual generated-hero runtime screenshots.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -466,7 +470,7 @@
     "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
   },
   "s5_visual_productization_rework": {
-    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY",
+    "status": "GENERATED_HERO_SOURCE_INTEGRATED_MACHINE_QA_PENDING",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
@@ -475,16 +479,16 @@
     "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
-    "visual_productization_status": "SOURCE_AND_EVIDENCE_REPAIRED_MACHINE_QA_PASS_HOME360_BOUND",
+    "visual_productization_status": "USER_APPROVED_GENERATED_HERO_INTEGRATED_FRESH_QA_REQUIRED",
     "implementation_authorized": true,
     "protected_domain_change_authorized": false,
     "implementation_approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
-    "tested_source_commit": "bfd3c329efbc58b82e99c101d744c3746c711468",
+    "tested_source_commit": null,
     "asset_manifest_ref": "docs/ux/TASK_S5_006_VISUAL_ASSET_MANIFEST_v1.0.json",
     "fidelity_matrix_ref": "docs/ux/TASK_S5_006_MOCKUP_RUNTIME_FIDELITY_MATRIX_v1.0.md",
     "artifact_proof_ref": "evidence/play/S5_006_ARTIFACT_PROOF.json",
     "human_review_scope": "PREMIUM_QUALITY / VISUAL_PRODUCTIZATION",
-    "human_review_status": "CHAT_PREMIUM_REVIEW_REQUIRED",
+    "human_review_status": "NOT_READY_SOURCE_CHANGED",
     "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.1.md",
     "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md",
     "home360_semantic_binding": {
@@ -495,8 +499,22 @@
       "observed_package": "com.afradadmedia.reducephotosize",
       "uiautomator": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800_uiautomator.xml",
       "uiautomator_sha256": "ed0e566859b76982b4f108737a56fbfe5d7ef53a044b40b18f4ff212977d2afc",
-      "anchors": ["Reduce Photo Size", "Fit your photo to an upload limit.", "Choose photo", "On-device · original untouched"],
+      "anchors": [
+        "Reduce Photo Size",
+        "Fit your photo to an upload limit.",
+        "Choose photo",
+        "On-device · original untouched"
+      ],
       "environment": "task-s3-api36 / emulator-5554 / API 36 / 360x800 / font_scale 1.0"
+    },
+    "generated_hero": {
+      "approval_ref": "USER_APPROVED_GENERATED_HOME_HERO_2026-09-29",
+      "resource_path": "app/src/main/res/drawable-nodpi/ill_home_fit_to_limit_generated.webp",
+      "packaged_sha256": "558da958fd28db36333a12013607399189689a288bbafa05e3644b0e5095b7be",
+      "packaged_dimensions": "1000x578",
+      "source_image_sha256": "30826729b4e8cd2c6b75aadabd1501a7f7b73596612a370242430e2b14da561b",
+      "semantic_direction": "LARGE_SOURCE_LEFT_TO_SMALL_RESULT_RIGHT",
+      "presentation_source_commit": "6762878a87a551e53af295e13d60998ca00cde8e"
     }
   }
 }
