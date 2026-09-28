@@ -1,3 +1,16 @@
+# HOLD — VISUAL PRODUCTIZATION REWORK
+
+Status: PAUSED 2026-09-28
+
+TASK-S5-006 reopened buyer-facing visual productization after direct emulator review. Do NOT execute signing, Play Console mutation, AAB upload, tester mutation, or rollout from this handoff until TASK-S5-006 is implemented, freshly rebuilt/reverified, and human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval is recorded.
+
+Current corrective spec:
+`docs/ux/TASK_S5_006_VISUAL_ASSET_COMPLETENESS_CORRECTIVE_SPEC_v1.0.md`
+
+The remainder below is retained as provenance/planning only.
+
+---
+
 # S5 — HUMAN_PLAY_CONSOLE / GOOGLE PLAY INTERNAL TESTING HANDOFF v2.0
 
 Observed: 2026-09-28
