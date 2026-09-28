@@ -5,7 +5,7 @@
   "package_name": "com.afradadmedia.reducephotosize",
   "stage": "S5_INTERNAL_TEST_READY",
   "canonical_decision": "TEST",
-  "handoff_status": "READY_NO_PROVIDER_ACTION_AUTHORIZED",
+  "handoff_status": "PAUSED_VISUAL_PRODUCTIZATION_REWORK",
   "current_branch_head": "50673007ad15cfd78d2d36f5e1f123d0ed76885d",
   "artifact": {
     "path": "evidence/artifacts/s5_005_geometry_final/app-release.aab",
@@ -13,7 +13,8 @@
     "sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02",
     "signing_state": "UNSIGNED",
     "play_upload_eligible": false,
-    "tested_source_commit": "c736a5d1e9beeb663b9bc336618171bbefe82a28"
+    "tested_source_commit": "c736a5d1e9beeb663b9bc336618171bbefe82a28",
+    "disposition": "PRE_REWORK_PROVENANCE_ONLY_FOR_NEXT_ACTION"
   },
   "identity": {
     "play_title": "Reduce Photo Size: KB Limit",
@@ -60,7 +61,11 @@
     "release": false,
     "publication": false
   },
-  "next_owner": "HUMAN_PLAY_CONSOLE",
-  "next_action": "Obtain separate scoped authorization for the required provider/signing step; then execute only the authorized action and capture provider-bound evidence.",
-  "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md"
+  "next_owner": "HUMAN",
+  "next_action": "Review and explicitly approve TASK-S5-006 VISUAL ASSET COMPLETENESS IMPLEMENTATION before source/resource changes.",
+  "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md",
+  "current_branch": "task/TASK-S5-006",
+  "provider_action_authorized": false,
+  "pause_reason": "TASK-S5-006 buyer-facing visual asset completeness corrective is open.",
+  "resume_condition": "Fresh post-TASK-S5-006 artifact/evidence and scoped human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval."
 }
