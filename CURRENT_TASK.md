@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: HUMAN + CHAT
 Stage: S5_VISUAL_PRODUCTIZATION_REWORK
 Priority: HIGH
-Status: HOLD_MACHINE_EVIDENCE_INCOMPLETE_REPAIR_AUTHORIZED
+Status: HOLD_HOME360_SEMANTIC_RECAPTURE_REQUIRED
 
 ## Trigger
 
@@ -138,3 +138,28 @@ Completion state after repair may be only:
 `IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY`
 
 Do NOT request HUMAN PREMIUM_QUALITY approval until CHAT has directly re-audited the repaired runtime evidence.
+
+
+## CHAT premium review v1.1 — 2026-09-29
+
+Direct review of evidence closure `d22dff0c0abb568d9a6226984da67e7b7bd8c4fe` confirmed PASS, landscape Before/After, Custom helper, and current artifact metadata are repaired.
+
+One required artifact remains invalid:
+`home_api36_360x800.png` is the Android launcher/home screen, not the app Home runtime.
+
+Audit:
+`docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.1.md`
+
+Active work order:
+`prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md`
+
+The recapture must persist:
+- foreground package proof;
+- UIAutomator hierarchy proof with required Home anchors;
+- screenshot hash.
+
+Next owner:
+`CODEX`
+
+No app/source mutation is required.
+Human PREMIUM_QUALITY review remains NOT READY.
