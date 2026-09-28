@@ -400,3 +400,20 @@ Execution owner:
 
 Work order:
 `prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md`
+
+
+## D-047 — Do not spend human premium-review attention on invalid TASK-S5-006 evidence (2026-09-28)
+
+CHAT directly rendered the TASK-S5-006 runtime evidence before requesting human PREMIUM_QUALITY approval.
+
+The evidence pack contains deterministic semantic misbindings: the required 360x800 Home capture is splash-only, the file named result_pass renders TARGET NOT MET, and the landscape Before/After artifact does not independently prove a landscape case.
+
+Therefore the human premium-quality gate is NOT READY. The source implementation remains within scope, but machine evidence must be repaired first.
+
+Codex may perform the bounded presentation/evidence repair under the existing TASK-S5-006 implementation authorization; no new human scope approval is required.
+
+Audit:
+`docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.0.md`
+
+Repair work order:
+`prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md`
