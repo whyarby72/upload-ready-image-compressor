@@ -1,11 +1,11 @@
 # CURRENT_TASK.md
 
 Task ID: TASK-S5-006
-Owner: CHAT
+Owner: CODEX
 Reviewer: HUMAN + CHAT
 Stage: S5_VISUAL_PRODUCTIZATION_REWORK
 Priority: HIGH
-Status: SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED
+Status: IMPLEMENTATION_AUTHORIZED
 
 ## Trigger
 
@@ -44,10 +44,19 @@ S5 Internal Testing handoff is paused until this visual corrective is implemente
 
 The existing AAB is retained as pre-rework provenance only for next-action purposes. It must not be used as the next Play upload candidate after any UI/resource mutation.
 
-## Pending material approval
+## Material approval recorded
 
-Required approval token:
+Approval token:
 `TASK-S5-006 VISUAL ASSET COMPLETENESS IMPLEMENTATION`
+
+Approval ref:
+`USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION`
+
+Approved by user:
+2026-09-28
+
+Codex work order:
+`prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md`
 
 Approval authorizes only:
 - dedicated local launcher/app mark assets;
@@ -83,3 +92,20 @@ It does NOT authorize:
 - fresh artifact hashes are recorded;
 - human explicitly approves `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION`;
 - only then may Play Internal Testing handoff be regenerated/resumed.
+
+
+## Execution handoff — 2026-09-28
+
+Implementation is now authorized within the scope above.
+
+Next owner:
+`CODEX`
+
+Codex must execute:
+`prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md`
+
+After deterministic implementation/build/test/screenshot evidence:
+- do not self-approve premium quality;
+- return next owner to `CHAT + HUMAN`;
+- request scoped `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION` approval;
+- keep Play handoff paused until that approval is recorded.
