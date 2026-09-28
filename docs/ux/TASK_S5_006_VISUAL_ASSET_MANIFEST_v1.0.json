@@ -91,7 +91,7 @@
       "packaged_dimensions": "1000x578",
       "semantic_direction": "LARGE_SOURCE_PHOTO_LEFT_TO_SMALL_RESULT_PHOTO_RIGHT",
       "approved_by_user": "2026-09-29",
-      "status": "SOURCE_INTEGRATED_MACHINE_QA_PENDING"
+      "status": "SOURCE_INTEGRATED_GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_REQUIRED"
     }
   ],
   "semantic_icons": {
@@ -110,5 +110,14 @@
     "before_after": "REAL_SOURCE_AND_RESULT"
   },
   "provenance_status": "PASS",
-  "remote_runtime_dependency": false
+  "remote_runtime_dependency": false,
+  "generated_hero_qa": {
+    "tested_source_commit": "b0ff9d5aa83605027139010e4a736aa3a22de4c4",
+    "debug_apk_sha256": "0de3f807d4125f60e448a42e15c82fe2e040f84bde4b37e894967ee370cb072c",
+    "proof": "evidence/play/S5_006_GENERATED_HERO_PROOF.json",
+    "screenshots": "evidence/screenshots/s5_006_visual_productization_generated_hero/",
+    "status": "PASS_MACHINE_QA_CHAT_HUMAN_REVIEW_REQUIRED",
+    "direction_check": "large/source image left -> right-pointing arrow -> smaller/result image right",
+    "home_semantic_binding": "foreground package + UIAutomator anchors + screenshot hash persisted for 360x800, 320x640, and font_scale=1.3"
+  }
 }

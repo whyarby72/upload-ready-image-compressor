@@ -3,10 +3,10 @@
 Product: REDUCE PHOTO SIZE: KB LIMIT
 Stage: S5_VISUAL_PRODUCTIZATION_REWORK
 Decision: TEST
-Progress: 98%
+Progress: 97%
 Current task: TASK-S5-006
-Next owner: CHAT
-Task status: IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY
+Next owner: CHAT + HUMAN
+Task status: GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY
 
 ## Evidence summary
 - 0.1.0: 1
@@ -15,8 +15,8 @@ Task status: IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY
 - 34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814: 1
 - FAIL: 1
 - HUMAN_ACTION_REQUIRED: 2
-- HUMAN_REVIEW_REQUIRED: 7
-- PASS: 116
+- HUMAN_REVIEW_REQUIRED: 8
+- PASS: 119
 - PROVENANCE_ONLY_INVALIDATED: 1
 - evidence/play/S5_005_FINAL_GEOMETRY_AND_NOT_MET_PROOF.json: 1
 - evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_360x800.png;evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_320x640.png;evidence/screenshots/s5_005_final_recap/requirement_font_1_3x_api36.png: 1
@@ -37,34 +37,26 @@ Task status: IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY
 - Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
 
 ## Next action
-CHAT directly audits the bound Home360 evidence; human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval remains pending.
+CHAT + HUMAN directly review the generated-hero runtime screenshots; PREMIUM_QUALITY / VISUAL_PRODUCTIZATION remains unapproved.
 
-## TASK-S5-006 Home360 semantic evidence closure — 2026-09-29
+## TASK-S5-006 generated hero machine QA closure — 2026-09-29
 
-Evidence-only closure; no app/source files changed.
+Tested source commit: `b0ff9d5aa83605027139010e4a736aa3a22de4c4`
+Presentation source commit: `6762878a87a551e53af295e13d60998ca00cde8e`
+Proof: `evidence/play/S5_006_GENERATED_HERO_PROOF.json`
 
-- Foreground proof: `evidence/screenshots/s5_006_visual_productization/home_api36_360x800_foreground.txt`; observed package `com.afradadmedia.reducephotosize`; SHA-256 `5afe7612bd4460f7bec7cd02ab586f6db5939193816a97cf342bfd93c29b7f18`.
-- Same-state UIAutomator proof: `evidence/screenshots/s5_006_visual_productization/home_api36_360x800_uiautomator.xml`; SHA-256 `ed0e566859b76982b4f108737a56fbfe5d7ef53a044b40b18f4ff212977d2afc`; anchors all PASS: `Reduce Photo Size`, `Fit your photo to an upload limit.`, `Choose photo`, `On-device · original untouched`.
-- Screenshot: `evidence/screenshots/s5_006_visual_productization/home_api36_360x800.png`; SHA-256 `629f78a5fb4ffbb9a7fe7e1d17f6e9130d948880b23a54f60ef2cc90579f98c3`; visibly actual app Home, not launcher, splash, picker, or sharesheet.
-- Environment: `task-s3-api36`, `emulator-5554`, API 36, 360x800, font scale 1.0; repaired APK SHA-256 remains `34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814`.
+The generated hero reads clearly as large/source image on the left → right-pointing arrow → smaller/result image on the right. No clipping, stretch, or squash was observed. CTA remains reachable at 320x640 and font scale 1.3 remains usable.
 
-Next owner: `CHAT`. Human `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION` approval remains pending; Codex does not self-approve.
+Home evidence directory:
+`evidence/screenshots/s5_006_visual_productization_generated_hero/`
 
+Home screenshots:
+- `home_generated_hero_360x800.png`
+- `home_generated_hero_320x640.png`
+- `home_generated_hero_font_1_3x.png`
 
-## Generated Home hero selected — 2026-09-29
+Regression smoke:
+- `requirement_smoke.png`
+- `result_pass_smoke.png` — `MEETS LIMIT`, `979637 bytes ≤ 1000000 bytes — PASS`
 
-User selected the newly generated elegant compression illustration for the app Home.
-
-Integrated:
-`app/src/main/res/drawable-nodpi/ill_home_fit_to_limit_generated.webp`
-
-Direction is explicit:
-`large source left → small result right`.
-
-Previous Home screenshot evidence is superseded for premium-quality review because the presentation source changed.
-
-Machine-QA work order:
-`prompts/CODEX_TASK_S5_006_GENERATED_HERO_QA.md`
-
-Next owner:
-`CODEX`
+Build gates and connected geometry instrumentation: PASS. Protected compression/domain diff: NONE. Next owner: `CHAT + HUMAN`.

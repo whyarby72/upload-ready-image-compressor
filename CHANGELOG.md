@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2026-09-29 — TASK-S5-006 generated hero machine QA
+
+- Verified the user-approved local WebP hero in a clean debug/release build and API36 runtime.
+- Confirmed visual direction: large/source image left → right-pointing arrow → smaller/result image right.
+- Captured Home at 360x800, 320x640, and font scale 1.3 with foreground/UIAutomator bindings, plus Requirement and genuine PASS smoke evidence.
+- `assembleDebug`, unit tests, lintDebug, assembleRelease, bundleRelease, and connected geometry instrumentation all passed.
+- Machine status: `GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY`; premium visual approval remains pending.
+
 ## 2026-09-28 — TASK-S5-006 visual asset completeness
 
 - added project-owned Compression Frame Mark, adaptive launcher identity, and purpose-built fit-to-limit Home hero;

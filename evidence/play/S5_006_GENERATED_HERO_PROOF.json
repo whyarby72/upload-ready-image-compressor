@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "task": "TASK-S5-006",
+  "tested_source_commit": "b0ff9d5aa83605027139010e4a736aa3a22de4c4",
+  "presentation_source_commit": "6762878a87a551e53af295e13d60998ca00cde8e",
+  "environment": {
+    "avd": "task-s3-api36",
+    "device": "emulator-5554",
+    "api": 36,
+    "home_viewports": ["360x800", "320x640"],
+    "font_scale_home": 1.3,
+    "font_scale_requirement_pass": 1.0,
+    "package": "com.afradadmedia.reducephotosize"
+  },
+  "generated_hero": {
+    "resource": "app/src/main/res/drawable-nodpi/ill_home_fit_to_limit_generated.webp",
+    "packaged_sha256": "558da958fd28db36333a12013607399189689a288bbafa05e3644b0e5095b7be",
+    "dimensions": "1000x578",
+    "semantic_direction": "LARGE_SOURCE_LEFT_TO_RIGHT_ARROW_TO_SMALL_RESULT_RIGHT",
+    "visual_checks": {"large_source_left": "PASS", "arrow_left_to_right": "PASS", "small_result_right": "PASS", "not_clipped": "PASS", "no_stretch_or_squash": "PASS"}
+  },
+  "artifacts": {
+    "debug_apk": {"path": "app/build/outputs/apk/debug/app-debug.apk", "bytes": 29909978, "sha256": "0de3f807d4125f60e448a42e15c82fe2e040f84bde4b37e894967ee370cb072c"},
+    "unsigned_release_apk": {"path": "app/build/outputs/apk/release/app-release-unsigned.apk", "bytes": 23001458, "sha256": "a53db62d57c8bca23374a65a449029b53a92b7ee70ebaac7415f4928d0f6fd92"},
+    "release_aab": {"path": "app/build/outputs/bundle/release/app-release.aab", "bytes": 7967469, "sha256": "ee87dbe357f892d0d66ccec03f9d95a4fbc6ea0311033055acbbcd54234d53fb"}
+  },
+  "gates": {
+    "clean_assembleDebug": "PASS",
+    "test": "PASS",
+    "lintDebug": "PASS",
+    "assembleRelease": "PASS",
+    "bundleRelease": "PASS",
+    "connectedDebugAndroidTest_geometry": "PASS",
+    "packaged_asset_hash": "PASS",
+    "protected_domain_diff": "PASS_NO_FILES"
+  },
+  "screenshots": {
+    "directory": "evidence/screenshots/s5_006_visual_productization_generated_hero/",
+    "home_360": {"path": "home_generated_hero_360x800.png", "sha256": "408e7182fe677d41171b7c35ac07f17db688614b88605dd1f177a50d2ca0a5ce", "foreground_proof": "home_generated_hero_360x800_foreground.txt", "foreground_sha256": "cdc0f719b23fc18d8cbb7552b62193d9d7e5d67151af8885be89bc7e4715654c", "uiautomator": "home_generated_hero_360x800_uiautomator.xml", "uiautomator_sha256": "c91c3bbcd24113c69e523cd6331b2f89dd3c11b281541b4729cb7071c5b9307a", "anchors": ["Reduce Photo Size", "Fit your photo to an upload limit.", "Choose photo", "On-device · original untouched"], "status": "PASS"},
+    "home_320": {"path": "home_generated_hero_320x640.png", "sha256": "36a7902db65d8ec04a5ea3df97abab38187ce41631c00475ddfaf46ab5eff5ab", "foreground_proof": "home_generated_hero_320x640_foreground.txt", "foreground_sha256": "bbf41ca6fafad97b715dda71be26a3615f46646742c12d09753d8cc33d6d471e", "uiautomator": "home_generated_hero_320x640_uiautomator.xml", "uiautomator_sha256": "c91c3bbcd24113c69e523cd6331b2f89dd3c11b281541b4729cb7071c5b9307a", "cta_reachable": true, "status": "PASS"},
+    "home_font_1_3x": {"path": "home_generated_hero_font_1_3x.png", "sha256": "212b2247f2e09f57a557f8017a6bec8b6266d0c6f1d75aede9cb4b02b978f523", "foreground_proof": "home_generated_hero_font_1_3x_foreground.txt", "foreground_sha256": "3e2a9376965a004be22bcdfbb74a17abd63ae0d7414ca0c8b8b7c36bbde95add", "uiautomator": "home_generated_hero_font_1_3x_uiautomator.xml", "uiautomator_sha256": "f01c6edf1b31d4ca5814387d9564de3e219c874eebc41ec23ab32b783930ba97", "font_scale": 1.3, "status": "PASS"},
+    "requirement_smoke": {"path": "requirement_smoke.png", "sha256": "1cb1305f3580281cd283f394cf8789b151deb676befdc990cb0928d05ba7ecfc", "status": "PASS_REAL_PHOTO_REQUIREMENT"},
+    "result_pass_smoke": {"path": "result_pass_smoke.png", "sha256": "ae95c55f2035cccc07babf0a315c5c010f3e2229ee52888838897da267902799", "visible_tokens": ["MEETS LIMIT", "979637 bytes ≤ 1000000 bytes — PASS"], "status": "PASS_GENUINE"}
+  },
+  "human_gate": "CHAT + HUMAN PREMIUM_QUALITY / VISUAL_PRODUCTIZATION REVIEW REQUIRED",
+  "unresolved_visual_exceptions": []
+}

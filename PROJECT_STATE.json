@@ -12,11 +12,11 @@
   },
   "artifacts": {
     "current_build": {
-      "source_version": "TASK-S5-006_REPAIRED_DEBUG_ARTIFACT",
-      "status": "FRESH_TASK_S5_006_REPAIRED",
-      "source_bundle_sha256": "b78c886b327a19c956a847ca2fd9870c802dbbdabc1004d3924ae140abd8c996",
+      "source_version": "TASK-S5-006_GENERATED_HERO_QA_ARTIFACT",
+      "status": "FRESH_GENERATED_HERO_QA_ARTIFACT",
+      "source_bundle_sha256": "bbf376e34753b1a2bad7011a6b94da98e62234ce82caf9f86b04343c8f6d4827",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814",
+      "apk_sha256": "0de3f807d4125f60e448a42e15c82fe2e040f84bde4b37e894967ee370cb072c",
       "application_id": "com.afradadmedia.reducephotosize",
       "namespace": "com.afradadmedia.reducephotosize",
       "label": "Reduce Photo Size"
@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-006",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "GENERATED_HERO_SOURCE_INTEGRATED_MACHINE_QA_PENDING",
+    "next_owner": "CHAT + HUMAN",
+    "status": "GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
     "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
     "opened_from": "TASK-S5-005",
     "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
@@ -56,7 +56,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_GENERATED_HERO_MACHINE_QA",
+    "internal_test": "S5_HOLD_CHAT_HUMAN_GENERATED_HERO_REVIEW",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -76,15 +76,12 @@
     "publication_authorized": false
   },
   "evidence_index": "evidence/INDEX.json",
-  "open_blockers": [
-    "Fresh build/test/emulator evidence is required after replacing the Home hero with the user-approved generated raster asset.",
-    "Previous Home screenshot evidence is superseded for premium review because the presentation source changed."
-  ],
+  "open_blockers": [],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Codex executes prompts/CODEX_TASK_S5_006_GENERATED_HERO_QA.md; then CHAT + HUMAN reviews the actual generated-hero runtime screenshots.",
+  "next_action": "CHAT + HUMAN directly review the generated-hero runtime screenshots; PREMIUM_QUALITY / VISUAL_PRODUCTIZATION remains unapproved.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -470,7 +467,7 @@
     "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
   },
   "s5_visual_productization_rework": {
-    "status": "GENERATED_HERO_SOURCE_INTEGRATED_MACHINE_QA_PENDING",
+    "status": "GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
@@ -479,16 +476,16 @@
     "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
-    "visual_productization_status": "USER_APPROVED_GENERATED_HERO_INTEGRATED_FRESH_QA_REQUIRED",
+    "visual_productization_status": "GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_REQUIRED",
     "implementation_authorized": true,
     "protected_domain_change_authorized": false,
     "implementation_approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
-    "tested_source_commit": null,
+    "tested_source_commit": "b0ff9d5aa83605027139010e4a736aa3a22de4c4",
     "asset_manifest_ref": "docs/ux/TASK_S5_006_VISUAL_ASSET_MANIFEST_v1.0.json",
     "fidelity_matrix_ref": "docs/ux/TASK_S5_006_MOCKUP_RUNTIME_FIDELITY_MATRIX_v1.0.md",
     "artifact_proof_ref": "evidence/play/S5_006_ARTIFACT_PROOF.json",
     "human_review_scope": "PREMIUM_QUALITY / VISUAL_PRODUCTIZATION",
-    "human_review_status": "NOT_READY_SOURCE_CHANGED",
+    "human_review_status": "CHAT_HUMAN_REVIEW_REQUIRED",
     "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.1.md",
     "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md",
     "home360_semantic_binding": {
@@ -514,7 +511,16 @@
       "packaged_dimensions": "1000x578",
       "source_image_sha256": "30826729b4e8cd2c6b75aadabd1501a7f7b73596612a370242430e2b14da561b",
       "semantic_direction": "LARGE_SOURCE_LEFT_TO_SMALL_RESULT_RIGHT",
-      "presentation_source_commit": "6762878a87a551e53af295e13d60998ca00cde8e"
+      "presentation_source_commit": "6762878a87a551e53af295e13d60998ca00cde8e",
+      "qa_proof": "evidence/play/S5_006_GENERATED_HERO_PROOF.json",
+      "qa_screenshot_directory": "evidence/screenshots/s5_006_visual_productization_generated_hero/",
+      "debug_apk_sha256": "0de3f807d4125f60e448a42e15c82fe2e040f84bde4b37e894967ee370cb072c",
+      "direction_check": "PASS_LARGE_SOURCE_LEFT_ARROW_RIGHT_SMALL_RESULT_RIGHT",
+      "home_360": "PASS_FOREGROUND_UIAUTOMATOR_SCREENSHOT_BOUND",
+      "home_320": "PASS_CTA_REACHABLE",
+      "home_font_1_3x": "PASS_USABLE",
+      "requirement_smoke": "PASS",
+      "result_pass_smoke": "PASS_GENUINE"
     }
   }
 }

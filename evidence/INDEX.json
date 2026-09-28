@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 287,
+  "file_count": 299,
   "files": [
     {
       "path": "evidence/artifacts/.DS_Store",
@@ -246,6 +246,11 @@
       "path": "evidence/play/S5_006_ARTIFACT_PROOF.json",
       "bytes": 1895,
       "sha256": "74dd17a5a2801469b3d8758f52a3bef82700341174f22812b1acf5f78f1075d9"
+    },
+    {
+      "path": "evidence/play/S5_006_GENERATED_HERO_PROOF.json",
+      "bytes": 4025,
+      "sha256": "1256d9683ddd2bf1503c341397afad81145605a108a1b9ed045ccd6ef7804ff9"
     },
     {
       "path": "evidence/play/S5_ARTIFACT_PROOF.json",
@@ -1246,6 +1251,61 @@
       "path": "evidence/screenshots/s5_006_visual_productization/result_reduced_api36.png",
       "bytes": 318576,
       "sha256": "39f5ecc53aef0716cdecb0767562c8758a00bffb1572b7461bb728fbb52a10e2"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_320x640.png",
+      "bytes": 44277,
+      "sha256": "36a7902db65d8ec04a5ea3df97abab38187ce41631c00475ddfaf46ab5eff5ab"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_320x640_foreground.txt",
+      "bytes": 208,
+      "sha256": "bbf41ca6fafad97b715dda71be26a3615f46646742c12d09753d8cc33d6d471e"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_320x640_uiautomator.xml",
+      "bytes": 6818,
+      "sha256": "c91c3bbcd24113c69e523cd6331b2f89dd3c11b281541b4729cb7071c5b9307a"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_360x800.png",
+      "bytes": 48532,
+      "sha256": "408e7182fe677d41171b7c35ac07f17db688614b88605dd1f177a50d2ca0a5ce"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_360x800_foreground.txt",
+      "bytes": 209,
+      "sha256": "cdc0f719b23fc18d8cbb7552b62193d9d7e5d67151af8885be89bc7e4715654c"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_360x800_uiautomator.xml",
+      "bytes": 6818,
+      "sha256": "c91c3bbcd24113c69e523cd6331b2f89dd3c11b281541b4729cb7071c5b9307a"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_font_1_3x.png",
+      "bytes": 51072,
+      "sha256": "212b2247f2e09f57a557f8017a6bec8b6266d0c6f1d75aede9cb4b02b978f523"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_font_1_3x_foreground.txt",
+      "bytes": 209,
+      "sha256": "3e2a9376965a004be22bcdfbb74a17abd63ae0d7414ca0c8b8b7c36bbde95add"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/home_generated_hero_font_1_3x_uiautomator.xml",
+      "bytes": 6819,
+      "sha256": "f01c6edf1b31d4ca5814387d9564de3e219c874eebc41ec23ab32b783930ba97"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/requirement_smoke.png",
+      "bytes": 60588,
+      "sha256": "1cb1305f3580281cd283f394cf8789b151deb676befdc990cb0928d05ba7ecfc"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/result_pass_smoke.png",
+      "bytes": 319617,
+      "sha256": "ae95c55f2035cccc07babf0a315c5c010f3e2229ee52888838897da267902799"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",
