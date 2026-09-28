@@ -36,3 +36,21 @@ Task status: IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY
 
 ## Next action
 CHAT directly audits repaired TASK-S5-006 runtime evidence; human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval remains pending.
+
+## CHAT premium review v1.1 — Home360 HOLD
+
+Direct rendering confirms the current `home_api36_360x800.png` is Android launcher/home, not app Home.
+
+Repaired and accepted at deterministic level:
+- genuine PASS state;
+- independent landscape Before/After;
+- Custom Limit decimal guidance;
+- repaired current-build hash metadata.
+
+Remaining:
+`HOME360_SEMANTIC_RECAPTURE`
+
+Work order:
+`prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md`
+
+Human PREMIUM_QUALITY gate remains closed.
