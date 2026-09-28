@@ -5,9 +5,9 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_INTERNAL_TEST_READY",
+    "current_stage": "S5_VISUAL_PRODUCTIZATION_REWORK",
     "canonical_decision": "TEST",
-    "progress_percent": 99,
+    "progress_percent": 96,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -38,19 +38,20 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "TASK-S5-005",
-    "owner": "CHAT + HUMAN",
-    "next_owner": "HUMAN_PLAY_CONSOLE",
-    "status": "CLOSED_HUMAN_VISUAL_PASS",
-    "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION",
-    "closure_approval_ref": "USER_OPTION_1_2026-09-28_FINAL_GEOMETRY_VISUAL_GATE_ONLY"
+    "id": "TASK-S5-006",
+    "owner": "CHAT",
+    "next_owner": "HUMAN",
+    "status": "SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED",
+    "approval_token": "VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION_PENDING",
+    "opened_from": "TASK-S5-005",
+    "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration."
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_INTERNAL_TEST_READY_PLAY_DISTRIBUTION_PENDING",
+    "internal_test": "S5_HOLD_VISUAL_PRODUCTIZATION_REWORK",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -71,15 +72,16 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Current AAB is unsigned and not Play-upload-eligible until signed with the authorized upload key.",
-    "Play Console provider state is unknown until the authorized account holder checks app existence, Play App Signing/upload-key state, versionCode availability, and tester configuration.",
-    "Actual Google Play Internal Testing distribution/install evidence has not yet occurred."
+    "Dedicated launcher/app identity asset is not implemented.",
+    "First-open hero remains placeholder-like relative to the approved premium/mockup direction.",
+    "TASK-S5-006 corrective spec requires explicit implementation approval before source mutation.",
+    "After implementation, fresh runtime screenshots and artifact-bound visual QA are required before Play handoff resumes."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Use docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md. Obtain separate scoped authorization before any signing, Play Console mutation, AAB upload, tester mutation, or Internal testing rollout.",
+  "next_action": "Review docs/ux/TASK_S5_006_VISUAL_ASSET_COMPLETENESS_CORRECTIVE_SPEC_v1.0.md and obtain explicit approval for TASK-S5-006 VISUAL ASSET COMPLETENESS IMPLEMENTATION. Do not resume signing/Play upload while this visual rework is open.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -96,7 +98,7 @@
     "remote_url": "https://github.com/whyarby72/upload-ready-image-compressor",
     "default_branch": "main",
     "integration_branch": "develop",
-    "active_task_branch": "task/TASK-S5-005",
+    "active_task_branch": "task/TASK-S5-006",
     "bootstrap_state": "READY_REMOTE",
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
@@ -446,7 +448,7 @@
     "broader_authority_granted": false
   },
   "s5_play_internal_testing_handoff": {
-    "status": "READY_NO_PROVIDER_ACTION_AUTHORIZED",
+    "status": "PAUSED_BY_VISUAL_PRODUCTIZATION_REWORK",
     "prepared_at": "2026-09-28",
     "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md",
     "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v1.0.json",
@@ -455,11 +457,27 @@
       "bytes": 7951808,
       "sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02",
       "signing_state": "UNSIGNED",
-      "play_upload_eligible": false
+      "play_upload_eligible": false,
+      "disposition": "LAST_VERIFIED_PRE_REWORK_PROVENANCE_ONLY_FOR_NEXT_ACTION"
     },
     "target_sdk": 36,
     "current_play_target_api_requirement": "API_36_FOR_NEW_MOBILE_APP_SUBMISSIONS_AS_OF_2026_08_31",
     "next_owner": "HUMAN_PLAY_CONSOLE",
-    "provider_action_authorized": false
+    "provider_action_authorized": false,
+    "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
+  },
+  "s5_visual_productization_rework": {
+    "status": "REWORK_SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED",
+    "observed_at": "2026-09-28",
+    "trigger": "Human emulator first-open review",
+    "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
+    "corrective_spec_ref": "docs/ux/TASK_S5_006_VISUAL_ASSET_COMPLETENESS_CORRECTIVE_SPEC_v1.0.md",
+    "engine_patch_ref": "docs/engine/AI_PROD_ANDROID_NATIVE_VISUAL_PRODUCTIZATION_GATE_PATCH_v1.0.0.md",
+    "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
+    "technical_core_status": "PRESERVED_PASS",
+    "geometry_status": "PRESERVED_PASS",
+    "visual_productization_status": "REWORK",
+    "implementation_authorized": false,
+    "protected_domain_change_authorized": false
   }
 }
