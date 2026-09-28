@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "observed_at": "2026-09-28",
+  "product": "REDUCE PHOTO SIZE: KB LIMIT",
+  "package_name": "com.afradadmedia.reducephotosize",
+  "stage": "S5_INTERNAL_TEST_READY",
+  "canonical_decision": "TEST",
+  "handoff_status": "READY_NO_PROVIDER_ACTION_AUTHORIZED",
+  "current_branch_head": "50673007ad15cfd78d2d36f5e1f123d0ed76885d",
+  "artifact": {
+    "path": "evidence/artifacts/s5_005_geometry_final/app-release.aab",
+    "bytes": 7951808,
+    "sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02",
+    "signing_state": "UNSIGNED",
+    "play_upload_eligible": false,
+    "tested_source_commit": "c736a5d1e9beeb663b9bc336618171bbefe82a28"
+  },
+  "identity": {
+    "play_title": "Reduce Photo Size: KB Limit",
+    "launcher_name": "Reduce Photo Size",
+    "application_id": "com.afradadmedia.reducephotosize",
+    "min_sdk": 29,
+    "target_sdk": 36,
+    "compile_sdk": 37,
+    "version_code": 1,
+    "version_name": "0.1.0"
+  },
+  "verified_current_play_facts": {
+    "checked_at": "2026-09-28",
+    "internal_tester_capacity_max": 100,
+    "target_api_mobile_submission_minimum": 36,
+    "target_api_effective_since": "2026-08-31",
+    "personal_account_post_2023_11_13_closed_test_requirement": {
+      "applicability": "UNKNOWN_ACCOUNT_DEPENDENT",
+      "minimum_opted_in_testers": 12,
+      "continuous_days": 14,
+      "applies_to": "later production access; not internal-test eligibility"
+    }
+  },
+  "unknown_provider_state": [
+    "app_exists_in_play_console",
+    "developer_account_type_and_creation_date",
+    "play_app_signing_enrollment",
+    "registered_upload_key_fingerprint",
+    "version_code_1_availability",
+    "tester_identities",
+    "feedback_channel",
+    "provider_warnings_or_errors"
+  ],
+  "authority": {
+    "create_or_rotate_key": false,
+    "signing": false,
+    "play_app_creation": false,
+    "upload": false,
+    "tester_account_mutation": false,
+    "rollout": false,
+    "s6": false,
+    "build_promotion": false,
+    "artifact_freeze": false,
+    "release": false,
+    "publication": false
+  },
+  "next_owner": "HUMAN_PLAY_CONSOLE",
+  "next_action": "Obtain separate scoped authorization for the required provider/signing step; then execute only the authorized action and capture provider-bound evidence.",
+  "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md"
+}
