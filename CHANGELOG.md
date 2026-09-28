@@ -320,3 +320,14 @@
 - retained Crop only for Requirement identification thumbnail;
 - kept protected compression/domain source closed unless geometry tests prove a defect;
 - combined geometry correction with the pending NOT_MET copy-fidelity pass.
+
+
+# 2026-09-28 — Actual engine geometry proof reopened
+
+- accepted UI Fit policy and NOT_MET guidance/save-label source changes;
+- confirmed protected compression/domain source remained unchanged;
+- rejected geometry closure because GeometryPreservationTest exercises ScalePlanner only;
+- found placeholder rather than observed decoded output dimensions in geometry proof;
+- found missing actual-output matrix coverage and cross-product/tolerance records;
+- reopened S5-24 as a false-positive;
+- required real production-engine JPEG outputs to be decoded and hash-bound before geometry PASS.

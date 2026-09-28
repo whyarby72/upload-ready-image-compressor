@@ -201,3 +201,19 @@ Combined corrective:
 
 This supersedes:
 `prompts/CODEX_S5_005_FINAL_NOT_MET_COPY_FIDELITY.md`
+
+
+## Actual engine geometry proof reopened
+
+Independent audit:
+`docs/qa/S5_005_GEOMETRY_PROOF_INDEPENDENT_AUDIT_v1.0.md`
+
+Status:
+`HOLD_ACTUAL_ENGINE_GEOMETRY_PROOF_REQUIRED`
+
+The existing GeometryPreservationTest only tests ScalePlanner arithmetic and cannot substantiate the TEST_MATRIX claim that decoded production output preserves ratio.
+
+Repair prompt:
+`prompts/CODEX_S5_005_ACTUAL_ENGINE_GEOMETRY_PROOF_REPAIR.md`
+
+Protected compression/domain source remains closed. If the real engine fails, STOP for explicit approval.

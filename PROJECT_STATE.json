@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_FINAL_GEOMETRY_AND_NOT_MET_FIDELITY",
+    "current_stage": "S5_ACTUAL_ENGINE_GEOMETRY_PROOF",
     "canonical_decision": "TEST",
     "progress_percent": 98,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-005",
     "owner": "CODEX",
-    "next_owner": "CHAT/HUMAN",
-    "status": "READY_FOR_FINAL_GEOMETRY_AND_VISUAL_HUMAN_REVIEW",
+    "next_owner": "CODEX",
+    "status": "HOLD_ACTUAL_ENGINE_GEOMETRY_PROOF_REQUIRED",
     "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
   },
   "gates": {
@@ -49,7 +49,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_GEOMETRY_AND_NOT_MET_FIDELITY",
+    "internal_test": "S5_HOLD_ACTUAL_ENGINE_GEOMETRY_PROOF",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,13 +70,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Human visual review remains required; Codex does not self-approve visual quality."
+    "Current geometry test proves ScalePlanner arithmetic only, not actual JpegCompressionEngine output.",
+    "Geometry proof JSON lacks actual decoded output dimensions/cross-product deltas for the mandatory ratio matrix.",
+    "TEST_MATRIX S5-24 currently overclaims decoded-output proof and must be reopened."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT/HUMAN independently reviews the foreground API36 geometry and NOT_MET evidence; do not promote to S6 or BUILD.",
+  "next_action": "CODEX executes an actual production-engine geometry test/evidence repair without modifying protected compression/domain source.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -416,6 +418,8 @@
     "before_after": "FIT_FULL_FRAME_BOTH",
     "processing": "FIT_FULL_FRAME",
     "requirement_thumbnail": "CROP_ALLOWED_IDENTIFICATION_ONLY",
-    "protected_engine_change": "STOP_AND_REQUIRE_NEW_APPROVAL_IF_TEST_FAILS"
+    "protected_engine_change": "STOP_AND_REQUIRE_NEW_APPROVAL_IF_TEST_FAILS",
+    "current_evidence_status": "REOPEN_ACTUAL_ENGINE_OUTPUT_PROOF_REQUIRED",
+    "independent_audit_ref": "docs/qa/S5_005_GEOMETRY_PROOF_INDEPENDENT_AUDIT_v1.0.md"
   }
 }

@@ -281,3 +281,14 @@ Current compression source already derives width and height from the same scale 
 Truth-critical UI is tightened: Processing, Result hero, and both Before/After images must use full-frame Fit presentation; Requirement thumbnail may remain Crop because it is identification-only.
 
 The pending NOT_MET copy fidelity correction is folded into the same final corrective to avoid another independent iteration.
+
+
+## D-041 — Geometry source intent accepted but actual output proof rejected (2026-09-28)
+
+Independent audit accepts the new Fit presentation policy and NOT_MET copy fidelity, and confirms protected production compression/domain source was not changed.
+
+However the geometry acceptance is reopened because the new unit test exercises only `ScalePlanner.scaledDimension` using synthetic widths/heights and synthetic scale values. It does not invoke the production `JpegCompressionEngine` or decode actual output JPEGs.
+
+The geometry proof JSON also uses non-observed placeholders such as `2400x1600-or-scaled-uniformly`, omits required output dimensions/cross-product deltas/tolerances, and does not contain actual-output coverage for the full mandatory aspect-ratio matrix.
+
+TEST_MATRIX row S5-24 is therefore a false-positive and must return to HOLD until actual production-engine output is tested. This is a test/evidence repair only; protected engine source remains closed unless a real failure is demonstrated.
