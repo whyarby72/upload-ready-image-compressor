@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: HUMAN + CHAT
 Stage: S5_VISUAL_PRODUCTIZATION_REWORK
 Priority: HIGH
-Status: HOLD_HOME360_SEMANTIC_RECAPTURE_REQUIRED
+Status: GENERATED_HERO_SOURCE_INTEGRATED_MACHINE_QA_PENDING
 
 ## Trigger
 
@@ -163,3 +163,35 @@ Next owner:
 
 No app/source mutation is required.
 Human PREMIUM_QUALITY review remains NOT READY.
+
+
+## User-approved generated Home hero — 2026-09-29
+
+User explicitly selected the newly generated illustration for the application.
+
+Approval ref:
+`USER_APPROVED_GENERATED_HOME_HERO_2026-09-29`
+
+Integrated asset:
+`app/src/main/res/drawable-nodpi/ill_home_fit_to_limit_generated.webp`
+
+Packaged SHA-256:
+`558da958fd28db36333a12013607399189689a288bbafa05e3644b0e5095b7be`
+
+Presentation source commit:
+`6762878a87a551e53af295e13d60998ca00cde8e`
+
+Required semantic direction:
+`large source image on the left → right-pointing arrow → smaller result image on the right`
+
+The previous vector hero remains provenance only and is no longer used by Home.
+
+Fresh machine QA is required because presentation source changed.
+
+Active work order:
+`prompts/CODEX_TASK_S5_006_GENERATED_HERO_QA.md`
+
+Next owner:
+`CODEX`
+
+No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication.
