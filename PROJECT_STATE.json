@@ -12,11 +12,11 @@
   },
   "artifacts": {
     "current_build": {
-      "source_version": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
-      "status": "STALE_METADATA_REQUIRES_TASK_S5_006_RECONCILIATION",
-      "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
+      "source_version": "TASK-S5-006_REPAIRED_DEBUG_ARTIFACT",
+      "status": "FRESH_TASK_S5_006_REPAIRED",
+      "source_bundle_sha256": "b78c886b327a19c956a847ca2fd9870c802dbbdabc1004d3924ae140abd8c996",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "fedcffb39d4e0cbe3b811d7e6e1e66c235a0de2bd1a0f92c7776e75409ec87d3",
+      "apk_sha256": "34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814",
       "application_id": "com.afradadmedia.reducephotosize",
       "namespace": "com.afradadmedia.reducephotosize",
       "label": "Reduce Photo Size"
@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-006",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "HOLD_MACHINE_EVIDENCE_INCOMPLETE_REPAIR_AUTHORIZED",
+    "next_owner": "CHAT + HUMAN",
+    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY",
     "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
     "opened_from": "TASK-S5-005",
     "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
@@ -75,18 +75,12 @@
     "publication_authorized": false
   },
   "evidence_index": "evidence/INDEX.json",
-  "open_blockers": [
-    "home_api36_360x800.png is a splash frame, not the required Home runtime screen.",
-    "result_pass_api36.png renders TARGET NOT MET and therefore does not prove PASS.",
-    "before_after_landscape_api36.png is byte-identical to the NOT_MET capture and does not independently prove a landscape case.",
-    "Custom Limit helper still diverges from the binding decimal-entry guidance.",
-    "PROJECT_STATE current_build digest is stale relative to TASK-S5-006 artifact proof."
-  ],
+  "open_blockers": [],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Codex executes prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md. Human PREMIUM_QUALITY review is not ready until CHAT re-audits corrected evidence.",
+  "next_action": "CHAT directly audits repaired TASK-S5-006 runtime evidence; human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval remains pending.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -472,7 +466,7 @@
     "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
   },
   "s5_visual_productization_rework": {
-    "status": "HOLD_MACHINE_EVIDENCE_INCOMPLETE",
+    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
@@ -481,16 +475,16 @@
     "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
-    "visual_productization_status": "SOURCE_IMPLEMENTED_EVIDENCE_REPAIR_REQUIRED",
+    "visual_productization_status": "SOURCE_AND_EVIDENCE_REPAIRED_MACHINE_QA_PASS",
     "implementation_authorized": true,
     "protected_domain_change_authorized": false,
     "implementation_approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
-    "tested_source_commit": "d165d6b325258346b9f55c76b3dbbfc12aa1a538",
+    "tested_source_commit": "bfd3c329efbc58b82e99c101d744c3746c711468",
     "asset_manifest_ref": "docs/ux/TASK_S5_006_VISUAL_ASSET_MANIFEST_v1.0.json",
     "fidelity_matrix_ref": "docs/ux/TASK_S5_006_MOCKUP_RUNTIME_FIDELITY_MATRIX_v1.0.md",
     "artifact_proof_ref": "evidence/play/S5_006_ARTIFACT_PROOF.json",
     "human_review_scope": "PREMIUM_QUALITY / VISUAL_PRODUCTIZATION",
-    "human_review_status": "NOT_READY_MACHINE_EVIDENCE_INCOMPLETE",
+    "human_review_status": "CHAT_PREMIUM_REVIEW_REQUIRED",
     "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.0.md",
     "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md"
   }

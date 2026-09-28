@@ -244,8 +244,8 @@
     },
     {
       "path": "evidence/play/S5_006_ARTIFACT_PROOF.json",
-      "bytes": 1041,
-      "sha256": "f362f3fa98a6609ff95ff1a8410babfaa025b2b9b5190a94782fa762b52622d2"
+      "bytes": 1895,
+      "sha256": "74dd17a5a2801469b3d8758f52a3bef82700341174f22812b1acf5f78f1075d9"
     },
     {
       "path": "evidence/play/S5_ARTIFACT_PROOF.json",
@@ -1174,13 +1174,13 @@
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/SCREENSHOT_MANIFEST.json",
-      "bytes": 2471,
-      "sha256": "dfd0c98bf8270d2cc79801b57fafb981142e5ee4c6a6f5bda69a618688419c29"
+      "bytes": 3366,
+      "sha256": "ca676c65bc54e2f2474a7870ee01520cec9b8987c89c5a72d7a8a973243e18cb"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/before_after_landscape_api36.png",
-      "bytes": 238795,
-      "sha256": "c998c97539c47f29d331a5b35914a5bffc6f5855ce81dec8fc5ce3492082b0cb"
+      "bytes": 273298,
+      "sha256": "c45722c41ba6dfd90697b4cd0921e3e0e1006e7d0a07936513d2f6911bd46de4"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/before_after_portrait_api36.png",
@@ -1189,23 +1189,23 @@
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/custom_limit_api36.png",
-      "bytes": 30950,
-      "sha256": "0429e65a66cffb11e5c0e493fa6e22352c963db93526fd913c1864b4eff6ce33"
+      "bytes": 32260,
+      "sha256": "10a4b2d7d70a2a3315653830f52fdcc1d649dc53f1f50e39041285d898d5965d"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/home_api36_320x640.png",
-      "bytes": 26353,
-      "sha256": "dbd87db30e6f4033347489dae9fedb4562cb8cd0e7ddf94f718cf582e63fa915"
+      "bytes": 26517,
+      "sha256": "38b94ab24af3a696d39bd3286f2754abce47df82fb471dba7277b87a80a7e409"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800.png",
-      "bytes": 10545,
-      "sha256": "b8e80c73a2842fae4df62c690c20e2fd5939907c1321c1bbe1542b20a38521d5"
+      "bytes": 274750,
+      "sha256": "7de3d81e23d54dc8183d85631bec278b121df875d74898092d52d3c5d86d9497"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/home_font_1_3x_api36.png",
-      "bytes": 31447,
-      "sha256": "97c063c7654440487e1ef56c624cca2a6220c43ad79606f54f31f5764c8b9df4"
+      "bytes": 31415,
+      "sha256": "6c14ca4cbb1a5b03d9b994ae7d53d23e5ef26f431896c59abca2fc7679bfbc1d"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/launcher_api36.png",
@@ -1214,28 +1214,28 @@
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/processing_real_photo_api36.png",
-      "bytes": 215425,
-      "sha256": "34de3b51d1380deddee5b490bafd1e96b8743614218bfee4a5a04f69bc9c2d88"
+      "bytes": 243863,
+      "sha256": "11c6e4ed3eb5b28e331338f2d253f4cf8bebc4aa17f522be45d67da4ea1d8467"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/requirement_real_photo_api36.png",
-      "bytes": 58855,
-      "sha256": "47ad4401ad2fd896e287147214fc69fc51857459879975da8f6af6384d2e1d5b"
+      "bytes": 60804,
+      "sha256": "b7fbebbbdc60e9c4d52e1954cd884664b11ca24a1b776c2c2e44a63c209d45bc"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/result_not_met_api36.png",
-      "bytes": 238795,
-      "sha256": "c998c97539c47f29d331a5b35914a5bffc6f5855ce81dec8fc5ce3492082b0cb"
+      "bytes": 246770,
+      "sha256": "f8352d73bcccedbaa69c569ed4dec0c3371f460e3d4ac3e4fb194f4ee6d52c14"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/result_pass_api36.png",
-      "bytes": 238706,
-      "sha256": "0a91ed61efaf72eaca67924b6a92defb49dd93375f477ae882aafff6d4d85a36"
+      "bytes": 319641,
+      "sha256": "522923cee9a74b2a6f29328ce21d52dd530a4a97984b59235779d70bfc8fb83b"
     },
     {
       "path": "evidence/screenshots/s5_006_visual_productization/result_reduced_api36.png",
-      "bytes": 232089,
-      "sha256": "ce363959df9486fbf41a643a192ca809b70b79390db4c9c6d7c7210a8d41b67a"
+      "bytes": 318576,
+      "sha256": "39f5ecc53aef0716cdecb0767562c8758a00bffb1572b7461bb728fbb52a10e2"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",

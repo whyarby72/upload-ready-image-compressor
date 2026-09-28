@@ -409,3 +409,10 @@
 - downgraded S5-VAC-02 and S5-VAC-03 to HOLD;
 - prepared deterministic Codex recapture/repair work order;
 - human PREMIUM_QUALITY review remains NOT READY.
+## 2026-09-28 — TASK-S5-006 evidence repair and recapture
+
+- Repaired Custom Limit helper guidance to state dot/comma decimal entry and maximum three decimal places without changing parser/range behavior.
+- Rebuilt with JDK17: assembleDebug, unit tests, lintDebug, assembleRelease, and bundleRelease passed.
+- Recaptured API36 Home, Requirement, Custom Limit, Processing, PASS, NOT_MET, REDUCED, and independent landscape Before/After evidence after splash exit.
+- Reconciled artifact hashes, screenshot manifest, fidelity matrix, TEST_MATRIX, PROJECT_STATE, and HANDOFF_CURRENT.
+- Machine status: `IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY`; human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION review remains pending.

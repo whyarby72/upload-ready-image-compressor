@@ -1,12 +1,17 @@
 {
   "schema_version":"1.0.0",
   "task":"TASK-S5-006",
-  "source_commit":"d165d6b325258346b9f55c76b3dbbfc12aa1a538",
-  "environment":{"device":"emulator-5554","avd":"task-s3-api36","api":36,"screenshots":"360x800; 320x640; font_scale=1.3"},
-  "debug_apk":{"path":"app/build/outputs/apk/debug/app-debug.apk","bytes":29897586,"sha256":"3065ce39a568ad3644544c54cd0c7e244c04b005459a74a7deb2ad90bc1d739f"},
-  "unsigned_release_apk":{"path":"app/build/outputs/apk/release/app-release-unsigned.apk","bytes":22989205,"sha256":"ed54c8f9df87445e1113002751ccb446789cac7f25dae1b4141ec1100495cd68"},
-  "release_aab":{"path":"app/build/outputs/bundle/release/app-release.aab","bytes":7955971,"sha256":"b3a79c2657530bb4370d10612790ce177a7927b246461b9c510beebe0343c286"},
-  "gates":{"clean_assembleDebug":"PASS","test":"PASS","lintDebug":"PASS","launcher_resource_packaging":"PASS","protected_domain_diff":"PASS"},
+  "source_commit":"bfd3c329efbc58b82e99c101d744c3746c711468",
+  "source_bundle_sha256":"b78c886b327a19c956a847ca2fd9870c802dbbdabc1004d3924ae140abd8c996",
+  "environment":{"device":"emulator-5554","avd":"task-s3-api36","api":36,"viewport":"360x800; narrow 320x640; font_scale 1.3","jdk":"17"},
+  "debug_apk":{"path":"app/build/outputs/apk/debug/app-debug.apk","bytes":29897586,"sha256":"34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814"},
+  "unsigned_release_apk":{"path":"app/build/outputs/apk/release/app-release-unsigned.apk","bytes":22989205,"sha256":"b9c4f6f5bab48ea04bd7c3a014acaac930a38f083ffbcd87c93b7ea874650730"},
+  "release_aab":{"path":"app/build/outputs/bundle/release/app-release.aab","bytes":7955997,"sha256":"39bdcce015ac240fba44997ce2bf3bda77f36a6d0b8f13380de464236d6b6dec"},
+  "gates":{"preflight":"PASS","clean_assembleDebug":"PASS","test":"PASS","lintDebug":"PASS","assembleRelease":"PASS","bundleRelease":"PASS","foreground_package":"PASS","protected_domain_diff":"PASS_NO_FILES"},
+  "custom_limit_repair":{"helper":"Use a dot or comma for decimals · up to 3 decimal places","range_enforcement":"unchanged","scope":"presentation-only"},
+  "runtime_semantic_checks":{"home360":"PASS actual Home, not splash","pass":"PASS MEETS LIMIT; 979637 bytes ≤ 1000000 bytes — PASS; no TARGET NOT MET or > proof","landscape":"PASS standard_2400x1600.jpg is 2400x1600 landscape; Before/After previews visible; capture differs from NOT_MET","not_met":"PASS TARGET NOT MET; 84884 bytes > 50000 bytes — NOT_MET","reduced":"PASS SMALLER COPY; no upload limit entered — no PASS claim"},
   "screenshots_path":"evidence/screenshots/s5_006_visual_productization/",
-  "human_gate":"PREMIUM_QUALITY / VISUAL_PRODUCTIZATION REQUIRED"
+  "human_gate":"PREMIUM_QUALITY / VISUAL_PRODUCTIZATION REQUIRED",
+  "signing_state":"UNSIGNED_HUMAN_ACTION_REQUIRED",
+  "play_upload_eligible":false
 }
