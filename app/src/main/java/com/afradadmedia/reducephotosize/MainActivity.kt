@@ -286,7 +286,7 @@ private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Uni
 
 @Composable private fun AppHeader() {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-        Icon(painterResource(R.drawable.ic_photo), null, tint = Ink, modifier = Modifier.size(26.dp))
+        Icon(painterResource(R.drawable.ic_brand_compress_frame), "Reduce Photo Size", tint = Ink, modifier = Modifier.size(26.dp))
         Spacer(Modifier.width(10.dp))
         Text("Reduce Photo Size", color = InkDeep, style = WarmInkTypography.titleLarge, modifier = Modifier.weight(1f), maxLines = 1)
     }
@@ -298,7 +298,7 @@ private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Uni
     Spacer(Modifier.height(22.dp))
     Surface(color = SurfaceWarm, shape = RoundedCornerShape(28.dp), modifier = Modifier.fillMaxWidth().border(1.dp, Outline, RoundedCornerShape(28.dp))) {
         Column(Modifier.padding(20.dp)) {
-            WarmInkArtwork()
+            Image(painterResource(R.drawable.ill_home_fit_to_limit), "Photo fitted to an upload limit", modifier = Modifier.fillMaxWidth().height(190.dp).clip(RoundedCornerShape(22.dp)), contentScale = ContentScale.Fit)
         }
     }
     Spacer(Modifier.height(22.dp)); PrimaryButton("Choose photo", R.drawable.ic_photo, onChoose); Spacer(Modifier.height(12.dp)); Text("On-device · original untouched", color = TextSecondary, style = WarmInkTypography.labelMedium, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
@@ -335,5 +335,4 @@ private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Uni
 @Composable private fun SecondaryButton(label: String, icon: Int, onClick: () -> Unit) { OutlinedButton(onClick = onClick, modifier = Modifier.fillMaxWidth().height(52.dp), shape = RoundedCornerShape(22.dp), colors = ButtonDefaults.outlinedButtonColors(containerColor = SurfaceWarm, contentColor = InkDeep), border = androidx.compose.foundation.BorderStroke(1.dp, Outline)) { Icon(painterResource(icon), null, modifier = Modifier.size(19.dp)); Spacer(Modifier.width(8.dp)); Text(label, fontSize = 15.sp, fontWeight = FontWeight.Medium) } }
 @Composable private fun CompactAction(label: String, icon: Int, modifier: Modifier, onClick: () -> Unit) { TextButton(onClick = onClick, modifier = modifier.height(48.dp)) { Icon(painterResource(icon), null, tint = Info, modifier = Modifier.size(18.dp)); Spacer(Modifier.width(6.dp)); Text(label, color = InkDeep, style = WarmInkTypography.labelMedium, maxLines = 1) } }
 @Composable private fun TrustCue() { Surface(color = SuccessSurface, shape = RoundedCornerShape(50)) { Text("On-device", color = Success, style = WarmInkTypography.labelMedium, modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)) } }
-@Composable private fun WarmInkArtwork() { Box(Modifier.fillMaxWidth().height(190.dp).clip(RoundedCornerShape(22.dp)).background(InfoSurface), contentAlignment = Alignment.Center) { Column(horizontalAlignment = Alignment.CenterHorizontally) { Surface(color = Ink, shape = RoundedCornerShape(18.dp), modifier = Modifier.size(82.dp)) { Icon(painterResource(R.drawable.ic_photo), "Photo", tint = SurfaceWarm, modifier = Modifier.padding(24.dp).fillMaxSize()) }; Spacer(Modifier.height(14.dp)); Text("PHOTO  →  READY", color = Info, style = WarmInkTypography.labelMedium) } } }
 @Composable private fun CustomLimitDialog(onDismiss: () -> Unit, onApply: (String, Boolean) -> Boolean) { var raw by remember { mutableStateOf("") }; var mb by remember { mutableStateOf(false) }; var validation by remember { mutableStateOf<String?>(null) }; AlertDialog(onDismissRequest = onDismiss, containerColor = SurfaceWarm, title = { Text("Custom limit", color = InkDeep, style = WarmInkTypography.titleLarge) }, text = { Column { Text("Decimal KB or MB · 1 KB to 50 MB", color = TextSecondary, style = WarmInkTypography.bodyMedium); Spacer(Modifier.height(12.dp)); OutlinedTextField(value = raw, onValueChange = { raw = it; validation = null }, isError = validation != null, supportingText = { if (validation != null) Text(validation!!, color = Warning) }, singleLine = true, label = { Text("Amount") }); Spacer(Modifier.height(10.dp)); Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { LimitChip("KB", !mb, modifier = Modifier.weight(1f)) { mb = false }; LimitChip("MB", mb, modifier = Modifier.weight(1f)) { mb = true } } } }, confirmButton = { TextButton(onClick = { if (!onApply(raw, mb)) validation = "Use a valid number with up to 3 decimal places." }) { Text("Use limit", color = Ink, fontWeight = FontWeight.SemiBold) } }, dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel", color = TextSecondary) } }) }
