@@ -39,12 +39,14 @@
   },
   "current_task": {
     "id": "TASK-S5-006",
-    "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED",
-    "approval_token": "VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION_PENDING",
+    "owner": "CODEX",
+    "next_owner": "CODEX",
+    "status": "IMPLEMENTATION_AUTHORIZED",
+    "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
     "opened_from": "TASK-S5-005",
-    "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration."
+    "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
+    "approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
+    "codex_work_order": "prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -81,7 +83,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Review docs/ux/TASK_S5_006_VISUAL_ASSET_COMPLETENESS_CORRECTIVE_SPEC_v1.0.md and obtain explicit approval for TASK-S5-006 VISUAL ASSET COMPLETENESS IMPLEMENTATION. Do not resume signing/Play upload while this visual rework is open.",
+  "next_action": "Codex executes prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md on task/TASK-S5-006, builds/tests/captures fresh runtime evidence, and returns with PREMIUM_QUALITY / VISUAL_PRODUCTIZATION human review pending.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -467,7 +469,7 @@
     "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
   },
   "s5_visual_productization_rework": {
-    "status": "REWORK_SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED",
+    "status": "IMPLEMENTATION_AUTHORIZED_CODEX_PENDING",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
@@ -477,7 +479,8 @@
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
     "visual_productization_status": "REWORK",
-    "implementation_authorized": false,
-    "protected_domain_change_authorized": false
+    "implementation_authorized": true,
+    "protected_domain_change_authorized": false,
+    "implementation_approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION"
   }
 }
