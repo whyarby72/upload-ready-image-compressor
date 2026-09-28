@@ -13,7 +13,7 @@
   "artifacts": {
     "current_build": {
       "source_version": "UPLOAD_READY_ANDROID_VERTICAL_SLICE_v0.1.0",
-      "status": "READY_FOR_FINAL_HUMAN_VISUAL_REVIEW_RECAPTURED",
+      "status": "STALE_METADATA_REQUIRES_TASK_S5_006_RECONCILIATION",
       "source_bundle_sha256": "65d3867024b1cbe1830a2dbacdb2b3f9ff36d9a783b8225ebab2a4d0b841470f",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
       "apk_sha256": "fedcffb39d4e0cbe3b811d7e6e1e66c235a0de2bd1a0f92c7776e75409ec87d3",
@@ -40,20 +40,21 @@
   "current_task": {
     "id": "TASK-S5-006",
     "owner": "CODEX",
-    "next_owner": "CHAT + HUMAN",
-    "status": "IMPLEMENTED_MACHINE_QA_PASS_HUMAN_PREMIUM_REVIEW_PENDING",
+    "next_owner": "CODEX",
+    "status": "HOLD_MACHINE_EVIDENCE_INCOMPLETE_REPAIR_AUTHORIZED",
     "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
     "opened_from": "TASK-S5-005",
     "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
     "approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
-    "codex_work_order": "prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md"
+    "codex_work_order": "prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md",
+    "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_PREMIUM_QUALITY_REVIEW",
+    "internal_test": "S5_HOLD_MACHINE_EVIDENCE_REPAIR",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -74,13 +75,17 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Human scoped PREMIUM_QUALITY / VISUAL_PRODUCTIZATION review is required before S5 Internal Testing handoff resumes."
+    "home_api36_360x800.png is a splash frame, not the required Home runtime screen.",
+    "result_pass_api36.png renders TARGET NOT MET and therefore does not prove PASS.",
+    "before_after_landscape_api36.png is byte-identical to the NOT_MET capture and does not independently prove a landscape case.",
+    "Custom Limit helper still diverges from the binding decimal-entry guidance.",
+    "PROJECT_STATE current_build digest is stale relative to TASK-S5-006 artifact proof."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT + HUMAN reviews the actual TASK-S5-006 runtime evidence and explicitly approves or rejects PREMIUM_QUALITY / VISUAL_PRODUCTIZATION; do not resume Play handoff or advance S6.",
+  "next_action": "Codex executes prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md. Human PREMIUM_QUALITY review is not ready until CHAT re-audits corrected evidence.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -466,7 +471,7 @@
     "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
   },
   "s5_visual_productization_rework": {
-    "status": "IMPLEMENTED_MACHINE_QA_PASS_HUMAN_PREMIUM_REVIEW_PENDING",
+    "status": "HOLD_MACHINE_EVIDENCE_INCOMPLETE",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
@@ -475,7 +480,7 @@
     "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
-    "visual_productization_status": "MACHINE_QA_PASS_HUMAN_REVIEW_PENDING",
+    "visual_productization_status": "SOURCE_IMPLEMENTED_EVIDENCE_REPAIR_REQUIRED",
     "implementation_authorized": true,
     "protected_domain_change_authorized": false,
     "implementation_approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
@@ -484,6 +489,8 @@
     "fidelity_matrix_ref": "docs/ux/TASK_S5_006_MOCKUP_RUNTIME_FIDELITY_MATRIX_v1.0.md",
     "artifact_proof_ref": "evidence/play/S5_006_ARTIFACT_PROOF.json",
     "human_review_scope": "PREMIUM_QUALITY / VISUAL_PRODUCTIZATION",
-    "human_review_status": "PENDING"
+    "human_review_status": "NOT_READY_MACHINE_EVIDENCE_INCOMPLETE",
+    "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.0.md",
+    "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md"
   }
 }
