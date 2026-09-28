@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_FINAL_GEOMETRY_VISUAL_REVIEW",
+    "current_stage": "S5_INTERNAL_TEST_READY",
     "canonical_decision": "TEST",
     "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -40,16 +40,17 @@
   "current_task": {
     "id": "TASK-S5-005",
     "owner": "CHAT + HUMAN",
-    "next_owner": "HUMAN",
-    "status": "GEOMETRY_ENGINE_PASS_HUMAN_VISUAL_FIT_REVIEW_PENDING",
-    "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION"
+    "next_owner": "HUMAN_PLAY_CONSOLE",
+    "status": "CLOSED_HUMAN_VISUAL_PASS",
+    "approval_token": "COMPOSE_WARM_INK_IMPLEMENTATION",
+    "closure_approval_ref": "USER_OPTION_1_2026-09-28_FINAL_GEOMETRY_VISUAL_GATE_ONLY"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_FINAL_GEOMETRY_VISUAL_REVIEW",
+    "internal_test": "S5_INTERNAL_TEST_READY_PLAY_DISTRIBUTION_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -70,13 +71,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Direct human inspection of the new Fit-based geometry-final screenshots remains required before closing TASK-S5-005 visual gate."
+    "Actual Google Play Internal Testing distribution/install evidence has not yet occurred; signing/account/upload actions require separate scoped human authorization."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Package/upload evidence/screenshots/s5_005_geometry_final/ for direct CHAT + HUMAN visual review; actual production-engine geometry proof is closed PASS.",
+  "next_action": "Await separate scoped human authorization/action for required Play Console signing/account/upload steps, then obtain actual Google Play Internal Testing distribution/install evidence. Do not claim S6 or BUILD.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -424,6 +425,22 @@
     "independent_closure_audit_ref": "docs/qa/S5_005_ACTUAL_ENGINE_GEOMETRY_INDEPENDENT_CLOSURE_AUDIT_v1.0.md",
     "matrix_passed": 10,
     "matrix_failed": 0,
-    "cross_product_delta": "0_ALL_CASES"
+    "cross_product_delta": "0_ALL_CASES",
+    "human_visual_fit_review": {
+      "status": "PASS",
+      "approved_at": "2026-09-28",
+      "approval_ref": "USER_OPTION_1_2026-09-28_FINAL_GEOMETRY_VISUAL_GATE_ONLY",
+      "audit_ref": "docs/qa/S5_005_FINAL_GEOMETRY_VISUAL_HUMAN_CLOSURE_v1.0.md"
+    }
+  },
+  "s5_final_geometry_visual_review": {
+    "status": "PASS_HUMAN_APPROVED",
+    "approved_at": "2026-09-28",
+    "approval_ref": "USER_OPTION_1_2026-09-28_FINAL_GEOMETRY_VISUAL_GATE_ONLY",
+    "approval_scope": "TASK-S5-005 FINAL GEOMETRY VISUAL FIT/FULL-FRAME GATE ONLY",
+    "evidence_path": "evidence/screenshots/s5_005_geometry_final/",
+    "audit_ref": "docs/qa/S5_005_FINAL_GEOMETRY_VISUAL_HUMAN_CLOSURE_v1.0.md",
+    "technical_geometry_status": "ACTUAL_ENGINE_ARTIFACT_BOUND_PASS",
+    "broader_authority_granted": false
   }
 }
