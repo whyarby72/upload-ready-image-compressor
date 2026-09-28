@@ -1,14 +1,17 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_FINAL_GEOMETRY_VISUAL_REVIEW
+Stage: S5_INTERNAL_TEST_READY
 Decision: TEST
 Progress: 99%
 Current task: TASK-S5-005
-Next owner: HUMAN
-Task status: GEOMETRY_ENGINE_PASS_HUMAN_VISUAL_FIT_REVIEW_PENDING
+Next owner: HUMAN_PLAY_CONSOLE
+Task status: CLOSED_HUMAN_VISUAL_PASS
 
-## Actual-engine geometry closure
+## TASK-S5-005 closure
+
+Actual production-engine geometry:
+PASS.
 
 Actual-engine test:
 `c736a5d1e9beeb663b9bc336618171bbefe82a28`
@@ -16,43 +19,34 @@ Actual-engine test:
 Evidence closure:
 `3fc36df49da0616412efbe71425446626fd4c3af`
 
-Independent CHAT audit:
+Technical independent closure:
 `docs/qa/S5_005_ACTUAL_ENGINE_GEOMETRY_INDEPENDENT_CLOSURE_AUDIT_v1.0.md`
 
-## Geometry disposition
+Final human visual closure:
+`docs/qa/S5_005_FINAL_GEOMETRY_VISUAL_HUMAN_CLOSURE_v1.0.md`
+
+Approval ref:
+`USER_OPTION_1_2026-09-28_FINAL_GEOMETRY_VISUAL_GATE_ONLY`
+
+## Final geometry disposition
 
 PASS.
 
-Production `JpegCompressionEngine.compressKnown()` was invoked with real JPEG files.
-Actual result JPEGs were retained, decoded, hashed and bound.
+- 10 / 10 mandatory actual-engine geometry cases PASS.
+- Cross-product delta = 0 for every case.
+- Result/Processing/Before-After use Fit/full-frame presentation.
+- Requirement identification thumbnail alone may Crop.
+- NOT_MET guidance and `Save current copy` fidelity are present.
+- Direct human approval closes the TASK-S5-005 final geometry visual gate.
+- Protected compression/domain source remains unchanged.
 
-Matrix:
-10 / 10 PASS.
+## Remaining S5 gate
 
-Cross-product delta:
-0 for every case.
+S5 remains open until actual Google Play Internal Testing distribution/install evidence exists.
 
-Covered:
-- 1:1
-- 3:2
-- 2:3
-- 4:3
-- 3:4
-- 16:9
-- 9:16
-- EXIF rotate-90
-- mirrored EXIF
-- ALREADY_READY
+Next owner:
+`HUMAN_PLAY_CONSOLE`
 
-Protected compression/domain source:
-UNCHANGED.
+Signing/account/upload actions require separate scoped human authorization/action.
 
-## Remaining gate
-
-Direct human inspection of:
-`evidence/screenshots/s5_005_geometry_final/`
-
-This is visual Fit/full-frame acceptance only.
-The actual engine geometry invariant itself is closed PASS.
-
-No signing / Play upload / S6 / BUILD / Artifact Freeze / release / publication.
+No S6 / BUILD promotion / Artifact Freeze / release / publication authority is granted by this closure.
