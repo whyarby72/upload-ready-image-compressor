@@ -259,8 +259,8 @@
     },
     {
       "path": "evidence/play/S5_TESTER_HANDOFF.md",
-      "bytes": 1855,
-      "sha256": "83714d0c0c77a7af52b602fa8bb31187a6886e5bdbe525d5c0c75eb1138df159"
+      "bytes": 800,
+      "sha256": "17c8a471c4670e7bdd9c4f4e83530b7459bafe3c47ad6c6cc9f595663827fb85"
     },
     {
       "path": "evidence/play/S5_UI_UX_CORRECTIVE_PROOF.json",
