@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "task": "TASK-S5-006",
+  "source_commit": "d165d6b325258346b9f55c76b3dbbfc12aa1a538",
+  "visual_direction": "MEDIA_FIRST_PRECISION_UTILITY_WARM_INK",
+  "assets": [
+    {"asset_id":"ic_brand_compress_frame","resource_path":"app/src/main/res/drawable/ic_brand_compress_frame.xml","role":"app_header","type":"LOCAL_VECTOR","provenance":"ORIGINAL_PROJECT_OWNED","generation_method":"CODEX_VECTOR","license":"PROJECT_OWNED","sha256":"f5e0abbd1d2200ed89fb28a94493104af0d3e24fe882beffb05d3a83379c9f8c"},
+    {"asset_id":"ic_launcher","resource_path":"app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml","role":"adaptive_launcher","type":"ADAPTIVE_VECTOR","provenance":"ORIGINAL_PROJECT_OWNED","generation_method":"CODEX_VECTOR","license":"PROJECT_OWNED","sha256":"ee02dcf97e172881c05ebd817f0a7daa0fbe149d8c3282ba2d05241d12d1ab0e"},
+    {"asset_id":"ic_launcher_round","resource_path":"app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml","role":"round_launcher","type":"ADAPTIVE_VECTOR","provenance":"ORIGINAL_PROJECT_OWNED","generation_method":"CODEX_VECTOR","license":"PROJECT_OWNED","sha256":"ee02dcf97e172881c05ebd817f0a7daa0fbe149d8c3282ba2d05241d12d1ab0e"},
+    {"asset_id":"ic_launcher_foreground","resource_path":"app/src/main/res/drawable/ic_launcher_foreground.xml","role":"launcher_foreground_basis","type":"LOCAL_VECTOR","provenance":"ORIGINAL_PROJECT_OWNED","generation_method":"CODEX_VECTOR","license":"PROJECT_OWNED","sha256":"315133b0fd947276f907c637e8654199a0a1700616462de2a7a795b70bc51087"},
+    {"asset_id":"ic_launcher_monochrome","resource_path":"app/src/main/res/drawable/ic_launcher_monochrome.xml","role":"themed_launcher_foreground","type":"LOCAL_VECTOR","provenance":"ORIGINAL_PROJECT_OWNED","generation_method":"CODEX_VECTOR","license":"PROJECT_OWNED","sha256":"0dfc10df99d606f1af2004548366d0fdd8c2a88bf81a41c99d93ca315d58450b"},
+    {"asset_id":"ill_home_fit_to_limit","resource_path":"app/src/main/res/drawable/ill_home_fit_to_limit.xml","role":"first_open_hero","type":"LOCAL_VECTOR","provenance":"ORIGINAL_PROJECT_OWNED","generation_method":"CODEX_VECTOR","license":"PROJECT_OWNED","text_baked_in":false,"sha256":"ff28a4e9a8925df1345b25158d719975bb5eca292f7dc12a0e0177b285c1ce26"},
+    {"asset_id":"ic_launcher_background","resource_path":"app/src/main/res/drawable/ic_launcher_background.xml","role":"launcher_background","type":"LOCAL_VECTOR","provenance":"ORIGINAL_PROJECT_OWNED","generation_method":"CODEX_VECTOR","license":"PROJECT_OWNED","sha256":"bac7f2e21f9b917368fd67643a8c25d557bde0fc2865cdeb356907b4f964ebca"}
+  ],
+  "semantic_icons": {"success":"existing local vector","warning":"existing local vector","info":"existing local vector","target":"existing local vector","download":"existing local vector","share":"existing local vector","repeat":"existing local vector"},
+  "user_media_policy": {"requirement":"REAL_SOURCE_PHOTO","processing":"REAL_SOURCE_PHOTO","result":"REAL_RESULT_PHOTO","before_after":"REAL_SOURCE_AND_RESULT"},
+  "provenance_status":"PASS",
+  "remote_runtime_dependency":false
+}

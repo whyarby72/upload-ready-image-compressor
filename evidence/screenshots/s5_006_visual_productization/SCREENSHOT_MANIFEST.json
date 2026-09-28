@@ -1,0 +1,21 @@
+{
+  "source_commit":"d165d6b325258346b9f55c76b3dbbfc12aa1a538",
+  "artifact_sha256":"3065ce39a568ad3644544c54cd0c7e244c04b005459a74a7deb2ad90bc1d739f",
+  "environment":{"avd":"task-s3-api36","device":"emulator-5554","api":36,"default_viewport":"360x800","narrow_viewport":"320x640","font_scale":1.3},
+  "screenshots":[
+    {"path":"launcher_api36.png","sha256":"9eb4fc8dce63dd5e1f3b5643fc21f19c05501be00cf70d3bbfbd46b2edaf889c","semantic":"launcher shows dedicated Compression Frame Mark"},
+    {"path":"home_api36_360x800.png","sha256":"b8e80c73a2842fae4df62c690c20e2fd5939907c1321c1bbe1542b20a38521d5","semantic":"branded hero and Choose photo CTA"},
+    {"path":"home_api36_320x640.png","sha256":"dbd87db30e6f4033347489dae9fedb4562cb8cd0e7ddf94f718cf582e63fa915","semantic":"narrow Home remains usable"},
+    {"path":"home_font_1_3x_api36.png","sha256":"97c063c7654440487e1ef56c624cca2a6220c43ad79606f54f31f5764c8b9df4","semantic":"font_scale=1.3 Home remains usable"},
+    {"path":"requirement_real_photo_api36.png","sha256":"47ad4401ad2fd896e287147214fc69fc51857459879975da8f6af6384d2e1d5b","semantic":"real selected photo remains primary"},
+    {"path":"custom_limit_api36.png","sha256":"0429e65a66cffb11e5c0e493fa6e22352c963db93526fd913c1864b4eff6ce33","semantic":"Warm Ink custom limit dialog"},
+    {"path":"processing_real_photo_api36.png","sha256":"34de3b51d1380deddee5b490bafd1e96b8743614218bfee4a5a04f69bc9c2d88","semantic":"real source photo with indeterminate Compressing state"},
+    {"path":"result_pass_api36.png","sha256":"0a91ed61efaf72eaca67924b6a92defb49dd93375f477ae882aafff6d4d85a36","semantic":"PASS result with real media and exact-byte proof"},
+    {"path":"result_not_met_api36.png","sha256":"c998c97539c47f29d331a5b35914a5bffc6f5855ce81dec8fc5ce3492082b0cb","semantic":"NOT_MET with frozen guidance and real media"},
+    {"path":"result_reduced_api36.png","sha256":"ce363959df9486fbf41a643a192ca809b70b79390db4c9c6d7c7210a8d41b67a","semantic":"REDUCED with no-PASS disclaimer and real media"},
+    {"path":"before_after_landscape_api36.png","sha256":"c998c97539c47f29d331a5b35914a5bffc6f5855ce81dec8fc5ce3492082b0cb","semantic":"landscape Before/After full-frame Fit"},
+    {"path":"before_after_portrait_api36.png","sha256":"bd00c502223c66f9ad83d377053401ea95ea21761178cfd9fae04f159db032cf","semantic":"portrait Before/After full-frame Fit"}
+  ],
+  "machine_result":"PASS",
+  "human_review":"PENDING_PREMIUM_QUALITY_VISUAL_PRODUCTIZATION"
+}

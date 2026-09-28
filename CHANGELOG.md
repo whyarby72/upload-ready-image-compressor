@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2026-09-28 — TASK-S5-006 visual asset completeness
+
+- added project-owned Compression Frame Mark, adaptive launcher identity, and purpose-built fit-to-limit Home hero;
+- preserved real media, compression/domain semantics, Fit geometry, NOT_MET copy, and Save/Share behavior;
+- completed API36 runtime evidence at 320dp, 360dp, and font scale 1.3 plus buyer states;
+- machine QA PASS; `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION` human review remains required;
+- no Play upload, S6 promotion, BUILD promotion, freeze, release, or publication.
+
 ## v0.2.0-factory-pilot — 2026-09-26
 - instantiated canonical Repo Factory v1.0.0 for Upload-Ready Image Compressor;
 - imported Android vertical slice v0.1.0;

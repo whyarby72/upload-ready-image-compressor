@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0.0",
+  "task":"TASK-S5-006",
+  "source_commit":"d165d6b325258346b9f55c76b3dbbfc12aa1a538",
+  "environment":{"device":"emulator-5554","avd":"task-s3-api36","api":36,"screenshots":"360x800; 320x640; font_scale=1.3"},
+  "debug_apk":{"path":"app/build/outputs/apk/debug/app-debug.apk","bytes":29897586,"sha256":"3065ce39a568ad3644544c54cd0c7e244c04b005459a74a7deb2ad90bc1d739f"},
+  "unsigned_release_apk":{"path":"app/build/outputs/apk/release/app-release-unsigned.apk","bytes":22989205,"sha256":"ed54c8f9df87445e1113002751ccb446789cac7f25dae1b4141ec1100495cd68"},
+  "release_aab":{"path":"app/build/outputs/bundle/release/app-release.aab","bytes":7955971,"sha256":"b3a79c2657530bb4370d10612790ce177a7927b246461b9c510beebe0343c286"},
+  "gates":{"clean_assembleDebug":"PASS","test":"PASS","lintDebug":"PASS","launcher_resource_packaging":"PASS","protected_domain_diff":"PASS"},
+  "screenshots_path":"evidence/screenshots/s5_006_visual_productization/",
+  "human_gate":"PREMIUM_QUALITY / VISUAL_PRODUCTIZATION REQUIRED"
+}

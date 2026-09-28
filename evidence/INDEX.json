@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 271,
+  "file_count": 285,
   "files": [
     {
       "path": "evidence/artifacts/.DS_Store",
@@ -241,6 +241,11 @@
       "path": "evidence/play/S5_005_WARM_INK_CORRECTIVE_PROOF.json",
       "bytes": 3745,
       "sha256": "6819590c37cc875d2a1bb278b861ed6a71c44b178a4ddf52271b7c6dab368461"
+    },
+    {
+      "path": "evidence/play/S5_006_ARTIFACT_PROOF.json",
+      "bytes": 1041,
+      "sha256": "f362f3fa98a6609ff95ff1a8410babfaa025b2b9b5190a94782fa762b52622d2"
     },
     {
       "path": "evidence/play/S5_ARTIFACT_PROOF.json",
@@ -1166,6 +1171,71 @@
       "path": "evidence/screenshots/s5_005_geometry_final/result_pass_square_360x800.png",
       "bytes": 219360,
       "sha256": "da5fdd4bcadf76e74c79573a7a1b1afedd8ba8c5a42b015f6ef2b03cf6a1f842"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/SCREENSHOT_MANIFEST.json",
+      "bytes": 2471,
+      "sha256": "dfd0c98bf8270d2cc79801b57fafb981142e5ee4c6a6f5bda69a618688419c29"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/before_after_landscape_api36.png",
+      "bytes": 238795,
+      "sha256": "c998c97539c47f29d331a5b35914a5bffc6f5855ce81dec8fc5ce3492082b0cb"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/before_after_portrait_api36.png",
+      "bytes": 180625,
+      "sha256": "bd00c502223c66f9ad83d377053401ea95ea21761178cfd9fae04f159db032cf"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/custom_limit_api36.png",
+      "bytes": 30950,
+      "sha256": "0429e65a66cffb11e5c0e493fa6e22352c963db93526fd913c1864b4eff6ce33"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/home_api36_320x640.png",
+      "bytes": 26353,
+      "sha256": "dbd87db30e6f4033347489dae9fedb4562cb8cd0e7ddf94f718cf582e63fa915"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/home_api36_360x800.png",
+      "bytes": 10545,
+      "sha256": "b8e80c73a2842fae4df62c690c20e2fd5939907c1321c1bbe1542b20a38521d5"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/home_font_1_3x_api36.png",
+      "bytes": 31447,
+      "sha256": "97c063c7654440487e1ef56c624cca2a6220c43ad79606f54f31f5764c8b9df4"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/launcher_api36.png",
+      "bytes": 81094,
+      "sha256": "9eb4fc8dce63dd5e1f3b5643fc21f19c05501be00cf70d3bbfbd46b2edaf889c"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/processing_real_photo_api36.png",
+      "bytes": 215425,
+      "sha256": "34de3b51d1380deddee5b490bafd1e96b8743614218bfee4a5a04f69bc9c2d88"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/requirement_real_photo_api36.png",
+      "bytes": 58855,
+      "sha256": "47ad4401ad2fd896e287147214fc69fc51857459879975da8f6af6384d2e1d5b"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/result_not_met_api36.png",
+      "bytes": 238795,
+      "sha256": "c998c97539c47f29d331a5b35914a5bffc6f5855ce81dec8fc5ce3492082b0cb"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/result_pass_api36.png",
+      "bytes": 238706,
+      "sha256": "0a91ed61efaf72eaca67924b6a92defb49dd93375f477ae882aafff6d4d85a36"
+    },
+    {
+      "path": "evidence/screenshots/s5_006_visual_productization/result_reduced_api36.png",
+      "bytes": 232089,
+      "sha256": "ce363959df9486fbf41a643a192ca809b70b79390db4c9c6d7c7210a8d41b67a"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",
