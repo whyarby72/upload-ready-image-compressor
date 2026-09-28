@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_VISUAL_PRODUCTIZATION_REWORK",
     "canonical_decision": "TEST",
-    "progress_percent": 97,
+    "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-006",
-    "owner": "CODEX",
-    "next_owner": "CHAT + HUMAN",
-    "status": "GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
+    "owner": "CHAT + HUMAN",
+    "next_owner": "HUMAN",
+    "status": "CHAT_PREMIUM_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
     "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
     "opened_from": "TASK-S5-005",
     "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
@@ -56,7 +56,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_CHAT_HUMAN_GENERATED_HERO_REVIEW",
+    "internal_test": "S5_HOLD_HUMAN_PREMIUM_APPROVAL",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -76,12 +76,14 @@
     "publication_authorized": false
   },
   "evidence_index": "evidence/INDEX.json",
-  "open_blockers": [],
+  "open_blockers": [
+    "Explicit human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval for TASK-S5-006 has not yet been recorded."
+  ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT + HUMAN directly review the generated-hero runtime screenshots; PREMIUM_QUALITY / VISUAL_PRODUCTIZATION remains unapproved.",
+  "next_action": "Human decides TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION based on the generated-hero runtime evidence and CHAT review. Approval closes visual productization only; Play/signing/release authorities remain separate.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -467,7 +469,7 @@
     "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
   },
   "s5_visual_productization_rework": {
-    "status": "GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
+    "status": "CHAT_PREMIUM_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
@@ -476,7 +478,7 @@
     "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
-    "visual_productization_status": "GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_REQUIRED",
+    "visual_productization_status": "MACHINE_QA_PASS_CHAT_PREMIUM_PASS_HUMAN_PENDING",
     "implementation_authorized": true,
     "protected_domain_change_authorized": false,
     "implementation_approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
@@ -485,7 +487,7 @@
     "fidelity_matrix_ref": "docs/ux/TASK_S5_006_MOCKUP_RUNTIME_FIDELITY_MATRIX_v1.0.md",
     "artifact_proof_ref": "evidence/play/S5_006_ARTIFACT_PROOF.json",
     "human_review_scope": "PREMIUM_QUALITY / VISUAL_PRODUCTIZATION",
-    "human_review_status": "CHAT_HUMAN_REVIEW_REQUIRED",
+    "human_review_status": "PENDING_EXPLICIT_HUMAN_PREMIUM_APPROVAL",
     "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.1.md",
     "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md",
     "home360_semantic_binding": {
@@ -521,6 +523,7 @@
       "home_font_1_3x": "PASS_USABLE",
       "requirement_smoke": "PASS",
       "result_pass_smoke": "PASS_GENUINE"
-    }
+    },
+    "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md"
   }
 }
