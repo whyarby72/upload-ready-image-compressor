@@ -60,3 +60,36 @@ Regression smoke:
 - `result_pass_smoke.png` — `MEETS LIMIT`, `979637 bytes ≤ 1000000 bytes — PASS`
 
 Build gates and connected geometry instrumentation: PASS. Protected compression/domain diff: NONE. Next owner: `CHAT + HUMAN`.
+
+
+## CHAT generated-hero premium review — 2026-09-29
+
+Disposition:
+`CHAT_PREMIUM_REVIEW_PASS / HUMAN_APPROVAL_PENDING`
+
+Directly reviewed:
+- 360x800 Home;
+- 320x640 Home;
+- Home at font scale 1.3;
+- Requirement smoke;
+- genuine PASS result smoke.
+
+Findings:
+- large/source image is clearly left;
+- arrow points right;
+- smaller/result image is clearly right;
+- no clipping or visible distortion;
+- CTA remains prominent;
+- narrow-width and font-scale layouts remain usable;
+- no regression observed in Requirement or PASS result.
+
+Audit:
+`docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md`
+
+Next owner:
+`HUMAN`
+
+Required scope:
+`TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION`
+
+No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication authority is implied.
