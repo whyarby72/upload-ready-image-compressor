@@ -416,3 +416,13 @@
 - Recaptured API36 Home, Requirement, Custom Limit, Processing, PASS, NOT_MET, REDUCED, and independent landscape Before/After evidence after splash exit.
 - Reconciled artifact hashes, screenshot manifest, fidelity matrix, TEST_MATRIX, PROJECT_STATE, and HANDOFF_CURRENT.
 - Machine status: `IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY`; human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION review remains pending.
+
+
+# 2026-09-29 — TASK-S5-006 Home360 semantic evidence held
+
+- directly reviewed repaired evidence closure;
+- confirmed PASS screenshot, landscape Before/After, Custom Limit helper, and fresh current-build metadata are corrected;
+- found `home_api36_360x800.png` still shows Android launcher/home rather than app Home;
+- invalidated Home360 PASS and kept human premium review closed;
+- strengthened Android native visual-productization runtime to require foreground-package + UI-hierarchy screenshot semantic binding;
+- prepared evidence-only Home360 recapture work order; no app/source change required.
