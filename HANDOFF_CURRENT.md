@@ -50,3 +50,32 @@ Next owner:
 Signing/account/upload actions require separate scoped human authorization/action.
 
 No S6 / BUILD promotion / Artifact Freeze / release / publication authority is granted by this closure.
+
+
+## Play Internal Testing handoff prepared — 2026-09-28
+
+Canonical handoff:
+`docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md`
+
+Readiness record:
+`docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v1.0.json`
+
+Exact current pre-signing AAB:
+`evidence/artifacts/s5_005_geometry_final/app-release.aab`
+
+Bytes:
+`7951808`
+
+SHA-256:
+`e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02`
+
+Signing state:
+`UNSIGNED / NOT PLAY-UPLOAD-ELIGIBLE`
+
+targetSdk:
+`36`
+
+The handoff is preparation only. No signing, Play Console mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+Next owner remains:
+`HUMAN_PLAY_CONSOLE`
