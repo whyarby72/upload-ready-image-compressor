@@ -451,3 +451,14 @@
 - retained all compression/domain behavior unchanged;
 - invalidated prior Home premium-review screenshots for the changed presentation source;
 - queued fresh build/test/API36 visual evidence before premium-quality approval resumes.
+
+
+# 2026-09-29 — CHAT generated-hero premium visual review PASS
+
+- directly rendered and reviewed generated-hero Home at 360x800, 320x640, and font scale 1.3;
+- confirmed correct large-left → small-right compression semantics;
+- confirmed no clipping, stretch, or blocking hierarchy defect;
+- reviewed Requirement and genuine PASS smoke screens for presentation regression;
+- recorded CHAT premium visual PASS;
+- advanced progress to 99% with explicit human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval still pending;
+- did not authorize signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication.
