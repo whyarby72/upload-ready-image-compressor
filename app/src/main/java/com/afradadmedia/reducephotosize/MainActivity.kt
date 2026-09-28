@@ -16,6 +16,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -296,10 +297,17 @@ private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Uni
 @Composable private fun HomeScreen(onChoose: () -> Unit) {
     Text("Fit your photo to an upload limit.", color = InkDeep, style = WarmInkTypography.headlineLarge)
     Spacer(Modifier.height(22.dp))
-    Surface(color = SurfaceWarm, shape = RoundedCornerShape(28.dp), modifier = Modifier.fillMaxWidth().border(1.dp, Outline, RoundedCornerShape(28.dp))) {
-        Column(Modifier.padding(20.dp)) {
-            Image(painterResource(R.drawable.ill_home_fit_to_limit), "Photo fitted to an upload limit", modifier = Modifier.fillMaxWidth().height(190.dp).clip(RoundedCornerShape(22.dp)), contentScale = ContentScale.Fit)
-        }
+    Surface(
+        color = SurfaceWarm,
+        shape = RoundedCornerShape(28.dp),
+        modifier = Modifier.fillMaxWidth().border(1.dp, Outline, RoundedCornerShape(28.dp))
+    ) {
+        Image(
+            painterResource(R.drawable.ill_home_fit_to_limit_generated),
+            "A large photo becomes a smaller upload-ready copy",
+            modifier = Modifier.fillMaxWidth().aspectRatio(1000f / 578f).clip(RoundedCornerShape(28.dp)),
+            contentScale = ContentScale.Fit
+        )
     }
     Spacer(Modifier.height(22.dp)); PrimaryButton("Choose photo", R.drawable.ic_photo, onChoose); Spacer(Modifier.height(12.dp)); Text("On-device · original untouched", color = TextSecondary, style = WarmInkTypography.labelMedium, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
 }
