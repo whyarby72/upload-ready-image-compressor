@@ -417,3 +417,26 @@ Audit:
 
 Repair work order:
 `prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md`
+
+
+## D-048 — Use the user-approved generated Home compression illustration (2026-09-29)
+
+The user explicitly selected the newly generated illustration for the Android Home hero.
+
+Binding visual semantics:
+- large/source photo on the left;
+- right-pointing transition arrow;
+- smaller/result photo on the right;
+- Warm Ink-compatible restrained visual treatment.
+
+The approved image was integrated locally as an optimized WebP:
+`app/src/main/res/drawable-nodpi/ill_home_fit_to_limit_generated.webp`
+
+Packaged SHA-256:
+`558da958fd28db36333a12013607399189689a288bbafa05e3644b0e5095b7be`
+
+The optimization only removed unused outer blank margin, resized, and encoded to WebP; it did not redesign the user-approved composition.
+
+Home now references this asset. Previous Home runtime screenshots are superseded for premium review and fresh machine/emulator evidence is required.
+
+This decision does not authorize signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication.
