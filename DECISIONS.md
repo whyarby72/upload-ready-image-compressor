@@ -335,3 +335,32 @@ Canonical handoff:
 `docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md`
 
 This preparation grants no signing, app creation/mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority.
+
+
+## D-045 — Reopen S5 for native visual productization completeness (2026-09-28)
+
+Direct human emulator review exposed a late buyer-facing visual defect that prior functional, geometry and ordinary visual reviews did not catch.
+
+The current first-open runtime uses the generic `ic_photo` glyph as both app/header identity and the core hero symbol, and the repository contains no dedicated launcher mipmap/adaptive-icon asset system. The current `WarmInkArtwork()` is a tonal card with a generic photo glyph plus `PHOTO → READY`, which is materially below the intended premium/mockup richness.
+
+The defect is classified as a visual-productization acceptance escape, not a domain/geometry defect.
+
+Primary Runtime v5.16.25 already states that a technically functional interface below the selected market-quality floor is REWORK and that late defects should strengthen the earliest reusable control. The reusable weakness is the Android adapter/SOP binding: native visual asset completeness, launcher identity, mockup-object parity and placeholder-escape controls were not explicit hard requirements.
+
+Therefore:
+- canonical decision remains TEST;
+- progress reopens from 99% to 96%;
+- stage becomes `S5_VISUAL_PRODUCTIZATION_REWORK`;
+- TASK-S5-006 is opened;
+- Play Internal Testing handoff is paused;
+- prior geometry approval remains valid only for geometry Fit/full-frame scope;
+- core technical and geometry evidence remain valid within scope;
+- no product-source mutation is authorized yet.
+
+Binding corrective documents:
+- `docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md`
+- `docs/ux/TASK_S5_006_VISUAL_ASSET_COMPLETENESS_CORRECTIVE_SPEC_v1.0.md`
+- `docs/engine/AI_PROD_ANDROID_NATIVE_VISUAL_PRODUCTIZATION_GATE_PATCH_v1.0.0.md`
+
+Next material approval must explicitly authorize:
+`TASK-S5-006 VISUAL ASSET COMPLETENESS IMPLEMENTATION`.
