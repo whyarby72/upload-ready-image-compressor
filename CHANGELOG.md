@@ -396,3 +396,16 @@
 - retained protected compression/domain source boundary;
 - retained Play handoff pause;
 - retained signing, Play upload, S6, BUILD promotion, Artifact Freeze, release and publication authority as false.
+
+
+# 2026-09-28 — TASK-S5-006 machine evidence held after CHAT direct review
+
+- verified implementation commit is limited to manifest/Compose presentation and new local visual resources;
+- confirmed dedicated launcher/header identity and improved Home at 320dp/font-scale evidence;
+- detected that the required 360x800 Home screenshot is actually the launch splash;
+- detected that the file labeled result_pass visibly renders TARGET NOT MET;
+- detected that the landscape Before/After evidence is byte-identical to the NOT_MET capture;
+- detected stale current-build metadata and remaining Custom Limit helper fidelity drift;
+- downgraded S5-VAC-02 and S5-VAC-03 to HOLD;
+- prepared deterministic Codex recapture/repair work order;
+- human PREMIUM_QUALITY review remains NOT READY.
