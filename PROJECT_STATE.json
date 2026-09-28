@@ -71,13 +71,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Actual Google Play Internal Testing distribution/install evidence has not yet occurred; signing/account/upload actions require separate scoped human authorization."
+    "Current AAB is unsigned and not Play-upload-eligible until signed with the authorized upload key.",
+    "Play Console provider state is unknown until the authorized account holder checks app existence, Play App Signing/upload-key state, versionCode availability, and tester configuration.",
+    "Actual Google Play Internal Testing distribution/install evidence has not yet occurred."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Await separate scoped human authorization/action for required Play Console signing/account/upload steps, then obtain actual Google Play Internal Testing distribution/install evidence. Do not claim S6 or BUILD.",
+  "next_action": "Use docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md. Obtain separate scoped authorization before any signing, Play Console mutation, AAB upload, tester mutation, or Internal testing rollout.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -442,5 +444,22 @@
     "audit_ref": "docs/qa/S5_005_FINAL_GEOMETRY_VISUAL_HUMAN_CLOSURE_v1.0.md",
     "technical_geometry_status": "ACTUAL_ENGINE_ARTIFACT_BOUND_PASS",
     "broader_authority_granted": false
+  },
+  "s5_play_internal_testing_handoff": {
+    "status": "READY_NO_PROVIDER_ACTION_AUTHORIZED",
+    "prepared_at": "2026-09-28",
+    "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md",
+    "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v1.0.json",
+    "candidate_aab": {
+      "path": "evidence/artifacts/s5_005_geometry_final/app-release.aab",
+      "bytes": 7951808,
+      "sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02",
+      "signing_state": "UNSIGNED",
+      "play_upload_eligible": false
+    },
+    "target_sdk": 36,
+    "current_play_target_api_requirement": "API_36_FOR_NEW_MOBILE_APP_SUBMISSIONS_AS_OF_2026_08_31",
+    "next_owner": "HUMAN_PLAY_CONSOLE",
+    "provider_action_authorized": false
   }
 }
