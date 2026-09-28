@@ -365,3 +365,16 @@
 - superseded the stale earlier tester handoff;
 - prepared provider-aware preflight, release draft, tester route and provider-evidence contract;
 - retained signing, Play Console mutation, upload, rollout, S6, BUILD, Artifact Freeze, release and publication authority as false.
+
+
+# 2026-09-28 — TASK-S5-006 visual productization rework opened
+
+- accepted human emulator feedback that first-open visual identity still appears placeholder-like relative to the approved premium/mockup direction;
+- confirmed source uses generic `ic_photo` for header identity and Home hero;
+- confirmed no dedicated launcher mipmap/adaptive-icon resource set exists in the current app resources;
+- classified the issue as an acceptance-spec/runtime-governance escape rather than a compression/geometry defect;
+- preserved all valid technical and geometry evidence by scope;
+- added a project-runtime Android Native Visual Productization Gate patch;
+- added a screen-level Visual Asset Completeness Corrective Spec;
+- reopened progress to 96% and paused the Play Internal Testing handoff;
+- did not authorize source/resource implementation, signing, Play upload, S6, BUILD promotion, Artifact Freeze, release or publication.
