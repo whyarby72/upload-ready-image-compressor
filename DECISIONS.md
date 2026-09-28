@@ -301,3 +301,18 @@ Independent CHAT audit of `c736a5d1e9beeb663b9bc336618171bbefe82a28` and `3fc36d
 All 10 mandatory cases pass. Actual decoded dimensions preserve source display geometry with cross-product delta exactly zero for 1:1, 3:2, 2:3, 4:3, 3:4, 16:9, 9:16, EXIF rotate-90, mirrored EXIF, and ALREADY_READY. No protected compression/domain production file was modified.
 
 The hard file-output geometry invariant is therefore closed PASS. The only remaining TASK-S5-005 gate is direct human review of the new Fit/full-frame UI screenshots.
+
+
+## D-043 — Human approves final TASK-S5-005 geometry visual gate only (2026-09-28)
+
+After independent actual-engine geometry closure and direct CHAT inspection of the repository-bound `s5_005_geometry_final` screenshots, the human explicitly selected the scoped Option 1 approving only the final geometry visual Fit/full-frame gate for TASK-S5-005.
+
+The approval closes TASK-S5-005 visual acceptance. It does not authorize signing, Play upload, S6, canonical BUILD promotion, Artifact Freeze, release, or publication.
+
+Broader S5 therefore returns to `S5_INTERNAL_TEST_READY` with next owner `HUMAN_PLAY_CONSOLE`. Actual Google Play Internal Testing distribution/install evidence is still required before S5 can be treated as route-complete.
+
+Approval ref:
+`USER_OPTION_1_2026-09-28_FINAL_GEOMETRY_VISUAL_GATE_ONLY`
+
+Closure audit:
+`docs/qa/S5_005_FINAL_GEOMETRY_VISUAL_HUMAN_CLOSURE_v1.0.md`
