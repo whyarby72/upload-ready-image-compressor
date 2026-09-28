@@ -432,3 +432,14 @@
 - Bound the screenshot to foreground package `com.afradadmedia.reducephotosize` and same-state UIAutomator anchors.
 - Persisted foreground proof, hierarchy proof, screenshot hash, and reconciled manifest, evidence index, TEST_MATRIX, PROJECT_STATE, and handoff.
 - No app/source files changed; CHAT direct review remains required.
+
+
+# 2026-09-29 — User-approved generated Home hero integrated
+
+- added the user-selected elegant compression illustration as a local optimized WebP;
+- bound Home to the generated hero instead of the prior vector;
+- preserved left-to-right semantics: large source image → smaller result image;
+- changed the hero layout to proportional aspect-ratio rendering instead of a fixed 190dp image box;
+- retained all compression/domain behavior unchanged;
+- invalidated prior Home premium-review screenshots for the changed presentation source;
+- queued fresh build/test/API36 visual evidence before premium-quality approval resumes.
