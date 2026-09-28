@@ -1,11 +1,11 @@
 # CURRENT_TASK.md
 
 Task ID: TASK-S5-005
-Owner: CODEX
+Owner: CHAT + HUMAN
 Reviewer: CHAT + HUMAN_VISUAL
-Stage: S5_UI_UX_REDESIGN_V2_IMPLEMENTATION
+Stage: S5_INTERNAL_TEST_READY
 Priority: HIGH
-Status: OPEN_IMPLEMENTATION_AUTHORIZED
+Status: CLOSED_HUMAN_VISUAL_PASS
 
 ## Material approval
 
@@ -217,3 +217,35 @@ Repair prompt:
 `prompts/CODEX_S5_005_ACTUAL_ENGINE_GEOMETRY_PROOF_REPAIR.md`
 
 Protected compression/domain source remains closed. If the real engine fails, STOP for explicit approval.
+
+
+## Final geometry visual human closure — 2026-09-28
+
+Status:
+`PASS / TASK-S5-005 CLOSED`
+
+Approval ref:
+`USER_OPTION_1_2026-09-28_FINAL_GEOMETRY_VISUAL_GATE_ONLY`
+
+Audit:
+`docs/qa/S5_005_FINAL_GEOMETRY_VISUAL_HUMAN_CLOSURE_v1.0.md`
+
+The human explicitly approved only the final TASK-S5-005 geometry visual Fit/full-frame gate after CHAT directly reviewed the current geometry-final screenshots.
+
+This approval closes:
+- final Fit/full-frame visual acceptance;
+- TASK-S5-005 human visual gate.
+
+It does NOT authorize:
+- signing;
+- Play upload;
+- S6;
+- BUILD promotion;
+- Artifact Freeze;
+- release;
+- publication.
+
+Next owner:
+`HUMAN_PLAY_CONSOLE`
+
+Broader S5 remains open until actual Google Play Internal Testing distribution/install evidence exists.
