@@ -40,13 +40,13 @@
   "current_task": {
     "id": "TASK-S5-006",
     "owner": "CODEX",
-    "next_owner": "CHAT + HUMAN",
-    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY",
+    "next_owner": "CODEX",
+    "status": "HOLD_HOME360_SEMANTIC_RECAPTURE_REQUIRED",
     "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
     "opened_from": "TASK-S5-005",
     "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
     "approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
-    "codex_work_order": "prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md",
+    "codex_work_order": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md",
     "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md",
     "previous_codex_work_order": "prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md"
   },
@@ -55,7 +55,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_MACHINE_EVIDENCE_REPAIR",
+    "internal_test": "S5_HOLD_HOME360_SEMANTIC_EVIDENCE",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -75,12 +75,15 @@
     "publication_authorized": false
   },
   "evidence_index": "evidence/INDEX.json",
-  "open_blockers": [],
+  "open_blockers": [
+    "home_api36_360x800.png is Android launcher/home screen, not the Reduce Photo Size app Home runtime.",
+    "Home360 must be recaptured with foreground-package evidence plus UIAutomator semantic anchors from the same state."
+  ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT directly audits repaired TASK-S5-006 runtime evidence; human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval remains pending.",
+  "next_action": "Codex executes prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md. No app/source changes; human PREMIUM_QUALITY review remains closed until CHAT directly re-audits the bound Home360 evidence.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -466,12 +469,12 @@
     "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
   },
   "s5_visual_productization_rework": {
-    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY",
+    "status": "HOLD_HOME360_SEMANTIC_RECAPTURE_REQUIRED",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
     "corrective_spec_ref": "docs/ux/TASK_S5_006_VISUAL_ASSET_COMPLETENESS_CORRECTIVE_SPEC_v1.0.md",
-    "engine_patch_ref": "docs/engine/AI_PROD_ANDROID_NATIVE_VISUAL_PRODUCTIZATION_GATE_PATCH_v1.0.0.md",
+    "engine_patch_ref": "docs/engine/AI_PROD_ANDROID_NATIVE_VISUAL_PRODUCTIZATION_GATE_PATCH_v1.0.1.md",
     "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
@@ -484,8 +487,8 @@
     "fidelity_matrix_ref": "docs/ux/TASK_S5_006_MOCKUP_RUNTIME_FIDELITY_MATRIX_v1.0.md",
     "artifact_proof_ref": "evidence/play/S5_006_ARTIFACT_PROOF.json",
     "human_review_scope": "PREMIUM_QUALITY / VISUAL_PRODUCTIZATION",
-    "human_review_status": "CHAT_PREMIUM_REVIEW_REQUIRED",
-    "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.0.md",
-    "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md"
+    "human_review_status": "NOT_READY_HOME360_EVIDENCE_INVALID",
+    "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.1.md",
+    "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md"
   }
 }
