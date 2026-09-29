@@ -1,95 +1,56 @@
 # HANDOFF_CURRENT
 
 Product: REDUCE PHOTO SIZE: KB LIMIT
-Stage: S5_VISUAL_PRODUCTIZATION_REWORK
+Stage: S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK
 Decision: TEST
-Progress: 97%
-Current task: TASK-S5-006
-Next owner: CHAT + HUMAN
-Task status: GENERATED_HERO_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY
+Progress: 98%
+Current task: TASK-S5-007
+Next owner: HUMAN
+Task status: SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED
 
-## Evidence summary
-- 0.1.0: 1
-- 2026-09-27: 1
-- 2026-09-29: 1
-- 34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814: 1
-- FAIL: 1
-- HUMAN_ACTION_REQUIRED: 2
-- HUMAN_REVIEW_REQUIRED: 8
-- PASS: 119
-- PROVENANCE_ONLY_INVALIDATED: 1
-- evidence/play/S5_005_FINAL_GEOMETRY_AND_NOT_MET_PROOF.json: 1
-- evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_360x800.png;evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_320x640.png;evidence/screenshots/s5_005_final_recap/requirement_font_1_3x_api36.png: 1
-- six target choices: 1
-- source-5c58604: 2
+## Why S5 reopened
 
-## Authority
-- build_authorized: False
-- artifact_freeze: False
-- release_authorized: False
-- publication_authorized: False
+Human manual evidence found a support-risk discrepancy between the app's decimal-SI rounded KB display and Android file-manager size labels.
 
-## Blockers
-- None recorded
+Observed verified case:
+- app exact result: `495,669 bytes`;
+- app rounded decimal-SI label: `496 KB`;
+- saved file: `495,669 bytes`;
+- engine result SHA-256 = saved file SHA-256:
+  `f30a022df6c6c447a5c2d22aefc715277310d6455ce285d8f6db0fcd6992790b`;
+- Android file-manager label approximately `484 KB`.
 
-## Human decisions required
-- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
-- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
+This proves no Save mutation. The difference is display-unit convention.
 
-## Next action
-CHAT + HUMAN directly review the generated-hero runtime screenshots; PREMIUM_QUALITY / VISUAL_PRODUCTIZATION remains unapproved.
+## Canonical truth remains
 
-## TASK-S5-006 generated hero machine QA closure — 2026-09-29
+- 1 KB = 1,000 bytes;
+- 1 MB = 1,000,000 bytes;
+- exact bytes are authoritative;
+- PASS iff output bytes <= target bytes.
 
-Tested source commit: `b0ff9d5aa83605027139010e4a736aa3a22de4c4`
-Presentation source commit: `6762878a87a551e53af295e13d60998ca00cde8e`
-Proof: `evidence/play/S5_006_GENERATED_HERO_PROOF.json`
+Do not switch arithmetic to 1024-byte units.
 
-The generated hero reads clearly as large/source image on the left → right-pointing arrow → smaller/result image on the right. No clipping, stretch, or squash was observed. CTA remains reachable at 320x640 and font scale 1.3 remains usable.
-
-Home evidence directory:
-`evidence/screenshots/s5_006_visual_productization_generated_hero/`
-
-Home screenshots:
-- `home_generated_hero_360x800.png`
-- `home_generated_hero_320x640.png`
-- `home_generated_hero_font_1_3x.png`
-
-Regression smoke:
-- `requirement_smoke.png`
-- `result_pass_smoke.png` — `MEETS LIMIT`, `979637 bytes ≤ 1000000 bytes — PASS`
-
-Build gates and connected geometry instrumentation: PASS. Protected compression/domain diff: NONE. Next owner: `CHAT + HUMAN`.
-
-
-## CHAT generated-hero premium review — 2026-09-29
-
-Disposition:
-`CHAT_PREMIUM_REVIEW_PASS / HUMAN_APPROVAL_PENDING`
-
-Directly reviewed:
-- 360x800 Home;
-- 320x640 Home;
-- Home at font scale 1.3;
-- Requirement smoke;
-- genuine PASS result smoke.
-
-Findings:
-- large/source image is clearly left;
-- arrow points right;
-- smaller/result image is clearly right;
-- no clipping or visible distortion;
-- CTA remains prominent;
-- narrow-width and font-scale layouts remain usable;
-- no regression observed in Requirement or PASS result.
+## Corrective package
 
 Audit:
-`docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md`
+`docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md`
 
-Next owner:
-`HUMAN`
+Spec:
+`docs/ux/TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_SPEC_v1.0.md`
 
-Required scope:
-`TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION`
+Prepared work order:
+`prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md`
 
-No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication authority is implied.
+## Previous visual state
+
+TASK-S5-006 generated hero machine QA and CHAT premium review remain valid within scope. Human premium approval was still pending when this new Result-copy issue was found.
+
+## Next approval
+
+Required exact scope:
+`TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY IMPLEMENTATION`
+
+No source mutation is authorized by opening this task.
+
+No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication.
