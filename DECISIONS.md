@@ -440,3 +440,20 @@ The optimization only removed unused outer blank margin, resized, and encoded to
 Home now references this asset. Previous Home runtime screenshots are superseded for premium review and fresh machine/emulator evidence is required.
 
 This decision does not authorize signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+
+## D-049 — Treat file-manager size mismatch as display ambiguity, not compression/save defect (2026-09-30)
+
+Human manual evidence showed the app displaying `496 KB` while Android Files displayed approximately `484 KB` for a saved JPEG.
+
+The underlying result and saved file were independently verified at exactly `495,669 bytes` with identical SHA-256:
+`f30a022df6c6c447a5c2d22aefc715277310d6455ce285d8f6db0fcd6992790b`.
+
+Decision:
+- retain decimal-SI target semantics: 1 KB = 1,000 bytes;
+- retain exact-byte verification as authoritative;
+- do not change compression or Save behavior;
+- add compact Result-screen disclosure to prevent cross-display confusion;
+- open TASK-S5-007 as presentation-only rework.
+
+Implementation is not authorized by this decision alone.
