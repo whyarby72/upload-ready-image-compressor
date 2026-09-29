@@ -1,197 +1,73 @@
 # CURRENT_TASK.md
 
-Task ID: TASK-S5-006
-Owner: CODEX
+Task ID: TASK-S5-007
+Owner: CHAT
 Reviewer: HUMAN + CHAT
-Stage: S5_VISUAL_PRODUCTIZATION_REWORK
-Priority: HIGH
-Status: GENERATED_HERO_SOURCE_INTEGRATED_MACHINE_QA_PENDING
+Stage: S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK
+Priority: MEDIUM
+Status: SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED
 
 ## Trigger
 
-Direct human emulator review of the current first-open screen exposed a material visual-productization gap:
-- no dedicated launcher/app identity asset;
-- generic `ic_photo` used as identity/hero symbol;
-- first-open `PHOTO → READY` block reads as placeholder-like relative to the approved premium/mockup direction.
+Human manual testing found that the app can show a rounded decimal-SI size such as `496 KB` while Android Files may show approximately `484 KB` for the exact same 495,669-byte file.
+
+Independent evidence confirms the produced result and saved copy in the observed case are byte-identical:
+- bytes: `495,669`
+- SHA-256: `f30a022df6c6c447a5c2d22aefc715277310d6455ce285d8f6db0fcd6992790b`
+
+Therefore this is a cross-display unit-label ambiguity, not compression or Save mutation.
 
 ## Source-of-truth
 
 Audit:
-`docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md`
+`docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md`
 
 Corrective spec:
-`docs/ux/TASK_S5_006_VISUAL_ASSET_COMPLETENESS_CORRECTIVE_SPEC_v1.0.md`
+`docs/ux/TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_SPEC_v1.0.md`
 
-Project runtime engine correction:
-`docs/engine/AI_PROD_ANDROID_NATIVE_VISUAL_PRODUCTIZATION_GATE_PATCH_v1.0.0.md`
+Prepared Codex work order:
+`prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md`
 
 ## Preserved PASS
 
-The following remain valid within their proven scope:
 - compression/domain behavior;
-- exact-byte PASS / NOT_MET / REDUCED semantics;
-- Save / Share;
-- API29/API36 technical evidence;
-- actual-engine geometry 10/10;
-- full-frame Fit geometry;
-- NOT_MET copy/action fidelity.
+- target parser;
+- decimal-SI semantics;
+- PASS / NOT_MET / REDUCED classification;
+- exact output byte count;
+- Save fidelity;
+- Share;
+- geometry;
+- generated Home hero and visual productization evidence.
 
-Do not reopen protected compression/domain source.
+## Required correction
 
-## Current HOLD
+Presentation-only:
+- make exact bytes explicitly read as `Actual file`;
+- group exact byte counts for readability;
+- keep decimal-SI rounded KB/MB summary;
+- disclose `1 KB = 1,000 bytes`;
+- explain compactly that some file managers may show 1,024-byte units.
 
-S5 Internal Testing handoff is paused until this visual corrective is implemented and reverified.
+## Pending material approval
 
-The existing AAB is retained as pre-rework provenance only for next-action purposes. It must not be used as the next Play upload candidate after any UI/resource mutation.
+Required exact scope:
+`TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY IMPLEMENTATION`
 
-## Material approval recorded
+Approval would authorize only:
+- Result-screen copy/layout adjustments defined by the spec;
+- presentation-only exact-byte formatting helper;
+- fresh build/test/emulator/saved-file evidence.
 
-Approval token:
-`TASK-S5-006 VISUAL ASSET COMPLETENESS IMPLEMENTATION`
-
-Approval ref:
-`USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION`
-
-Approved by user:
-2026-09-28
-
-Current Codex work order:
-`prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md`
-
-Original implementation work order (completed/provenance):
-`prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md`
-
-Approval authorizes only:
-- dedicated local launcher/app mark assets;
-- purpose-built first-open hero illustration;
-- minimal per-screen visual-asset integration defined by the corrective spec;
-- Compose/resource presentation changes required by the spec;
-- fresh build/test/runtime screenshot evidence.
-
-It does NOT authorize:
-- compression/domain changes;
-- new formats;
-- backend/network;
-- AdMob/analytics;
-- package/applicationId change;
-- targetSdk change;
-- versionCode/versionName change;
+It would NOT authorize:
+- target arithmetic change;
+- compression/domain change;
+- Save behavior change;
+- package/version/SDK change;
 - signing;
-- Play Console mutation/upload;
+- Play upload;
 - S6;
 - BUILD promotion;
 - Artifact Freeze;
 - release;
 - publication.
-
-## Done when
-
-- VAC-01 through VAC-12 are evidenced;
-- dedicated launcher/app identity exists;
-- first-open hero is purpose-built and no longer placeholder-like;
-- real user media remains primary on Requirement/Processing/Result;
-- mockup-to-runtime fidelity matrix is complete;
-- actual runtime screenshots at 320dp, 360dp and 1.3x are reviewed;
-- fresh artifact hashes are recorded;
-- human explicitly approves `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION`;
-- only then may Play Internal Testing handoff be regenerated/resumed.
-
-
-## Execution handoff — 2026-09-28
-
-Implementation is now authorized within the scope above.
-
-Next owner:
-`CODEX`
-
-Codex must execute:
-`prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md`
-
-After deterministic implementation/build/test/screenshot evidence:
-- do not self-approve premium quality;
-- return next owner to `CHAT + HUMAN`;
-- request scoped `PREMIUM_QUALITY / VISUAL_PRODUCTIZATION` approval;
-- keep Play handoff paused until that approval is recorded.
-
-
-## CHAT evidence-integrity hold — 2026-09-28
-
-Direct CHAT review of the pushed TASK-S5-006 evidence found the machine-QA closure was not semantically valid.
-
-Authoritative audit:
-`docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.0.md`
-
-Confirmed defects:
-- `home_api36_360x800.png` is splash-only, not Home;
-- `result_pass_api36.png` is actually TARGET NOT MET;
-- `before_after_landscape_api36.png` does not independently prove a landscape case;
-- Custom Limit helper still requires the binding decimal-entry guidance;
-- current build metadata requires reconciliation to the fresh TASK-S5-006 artifact.
-
-Current Codex action:
-`prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md`
-
-Next owner:
-`CODEX`
-
-Completion state after repair may be only:
-`IMPLEMENTED_MACHINE_QA_PASS_CHAT_PREMIUM_REVIEW_READY`
-
-Do NOT request HUMAN PREMIUM_QUALITY approval until CHAT has directly re-audited the repaired runtime evidence.
-
-
-## CHAT premium review v1.1 — 2026-09-29
-
-Direct review of evidence closure `d22dff0c0abb568d9a6226984da67e7b7bd8c4fe` confirmed PASS, landscape Before/After, Custom helper, and current artifact metadata are repaired.
-
-One required artifact remains invalid:
-`home_api36_360x800.png` is the Android launcher/home screen, not the app Home runtime.
-
-Audit:
-`docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.1.md`
-
-Active work order:
-`prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md`
-
-The recapture must persist:
-- foreground package proof;
-- UIAutomator hierarchy proof with required Home anchors;
-- screenshot hash.
-
-Next owner:
-`CODEX`
-
-No app/source mutation is required.
-Human PREMIUM_QUALITY review remains NOT READY.
-
-
-## User-approved generated Home hero — 2026-09-29
-
-User explicitly selected the newly generated illustration for the application.
-
-Approval ref:
-`USER_APPROVED_GENERATED_HOME_HERO_2026-09-29`
-
-Integrated asset:
-`app/src/main/res/drawable-nodpi/ill_home_fit_to_limit_generated.webp`
-
-Packaged SHA-256:
-`558da958fd28db36333a12013607399189689a288bbafa05e3644b0e5095b7be`
-
-Presentation source commit:
-`6762878a87a551e53af295e13d60998ca00cde8e`
-
-Required semantic direction:
-`large source image on the left → right-pointing arrow → smaller result image on the right`
-
-The previous vector hero remains provenance only and is no longer used by Home.
-
-Fresh machine QA is required because presentation source changed.
-
-Active work order:
-`prompts/CODEX_TASK_S5_006_GENERATED_HERO_QA.md`
-
-Next owner:
-`CODEX`
-
-No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication.
