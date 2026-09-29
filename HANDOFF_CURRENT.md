@@ -6,7 +6,7 @@ Decision: TEST
 Progress: 98%
 Current task: TASK-S5-007
 Next owner: CODEX
-Task status: IMPLEMENTATION_AUTHORIZED
+Task status: IMPLEMENTATION_AUTHORIZED_HARDENED_WORK_ORDER_READY
 
 ## Why S5 reopened
 
@@ -72,3 +72,45 @@ Scope is presentation-only Result-size clarity plus fresh verification.
 Compression/domain arithmetic and Save behavior remain protected.
 
 No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication authority is granted.
+
+
+## TASK-S5-007 pre-execution hardening — 2026-09-30
+
+The implementation approval remains valid. No new human approval is required.
+
+Hardened work order:
+`prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md` (v1.1)
+
+Execution is now explicitly constrained to:
+- `MainActivity.kt`;
+- `FormatUtils.java`;
+- optional formatting-only unit test;
+- evidence/docs/state reconciliation.
+
+Protected compression/domain/Save files remain unchanged.
+
+QA build execution is authorized for this task:
+- assembleDebug;
+- unit tests;
+- lintDebug;
+- assembleRelease;
+- bundleRelease;
+- existing relevant instrumentation/regression.
+
+This does NOT authorize canonical BUILD promotion.
+
+Evidence hardening now requires:
+- foreground package + UIAutomator hierarchy + screenshot hash for PASS / NOT_MET / REDUCED;
+- grouped exact-byte formatting unit tests;
+- real UI Save action;
+- exact byte-count and SHA-256 equality between app result JPEG and MediaStore saved JPEG.
+
+Canonical disclosure copy:
+`Size units here: 1 KB = 1,000 bytes. Some file managers calculate KB using 1,024 bytes.`
+
+Play Internal Testing handoff remains paused until TASK-S5-007 machine QA plus CHAT/HUMAN closure.
+
+Next owner:
+`CODEX`
+
+No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication.
