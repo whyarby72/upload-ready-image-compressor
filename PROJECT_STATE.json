@@ -39,13 +39,14 @@
   },
   "current_task": {
     "id": "TASK-S5-007",
-    "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED",
+    "owner": "CODEX",
+    "next_owner": "CODEX",
+    "status": "IMPLEMENTATION_AUTHORIZED",
     "opened_from": "TASK-S5-006",
     "reopened_reason": "Human manual evidence showed decimal-SI KB/MB labels can differ from Android file-manager labels despite byte-identical saved output.",
-    "approval_token": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION_PENDING",
-    "codex_work_order": "prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md"
+    "approval_token": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
+    "codex_work_order": "prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md",
+    "approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -80,7 +81,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Review TASK-S5-007 output-size display clarity spec and obtain explicit approval for TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY IMPLEMENTATION.",
+  "next_action": "Codex executes prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md on task/TASK-S5-007, performs presentation-only Result copy/format changes, fresh build/test/emulator evidence, and saved-file byte/hash verification; then returns for CHAT + HUMAN review.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -524,7 +525,7 @@
     "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md"
   },
   "s5_output_size_display_clarity": {
-    "status": "REWORK_SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED",
+    "status": "IMPLEMENTATION_AUTHORIZED_CODEX_PENDING",
     "observed_at": "2026-09-30",
     "trigger": "Human manual emulator + saved-file evidence review",
     "audit_ref": "docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md",
@@ -534,7 +535,8 @@
     "canonical_unit_semantics": "1_KB_1000_BYTES_1_MB_1000000_BYTES",
     "exact_byte_truth_status": "PASS_PRESERVED",
     "save_fidelity_status": "PASS_PRESERVED",
-    "implementation_authorized": false,
-    "protected_domain_change_authorized": false
+    "implementation_authorized": true,
+    "protected_domain_change_authorized": false,
+    "implementation_approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION"
   }
 }
