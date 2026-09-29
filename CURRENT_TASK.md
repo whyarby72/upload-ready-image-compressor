@@ -1,112 +1,65 @@
 # CURRENT_TASK.md
 
-Task ID: TASK-S5-007
-Owner: CODEX
-Reviewer: HUMAN + CHAT
-Stage: S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK
-Priority: MEDIUM
-Status: IMPLEMENTATION_AUTHORIZED
+Task ID: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
+Owner: CHAT
+Reviewer: HUMAN
+Stage: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
+Priority: HIGH
+Status: READY_TO_PREPARE_CURRENT_SOURCE_HANDOFF
 
 ## Trigger
 
-Human manual testing found that the app can show a rounded decimal-SI size such as `496 KB` while Android Files may show approximately `484 KB` for the exact same 495,669-byte file.
+TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION is now human-approved and closed.
 
-Independent evidence confirms the produced result and saved copy in the observed case are byte-identical:
-- bytes: `495,669`
-- SHA-256: `f30a022df6c6c447a5c2d22aefc715277310d6455ce285d8f6db0fcd6992790b`
+TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY is also human-approved and closed.
 
-Therefore this is a cross-display unit-label ambiguity, not compression or Save mutation.
+All current S5 product-quality corrective gates are therefore closed.
 
-## Source-of-truth
+## Why Play handoff still needs refresh
 
-Audit:
-`docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md`
+The existing Play Internal Testing handoff candidate references a pre-rework provenance artifact from before the TASK-S5-006 visual productization and TASK-S5-007 Result clarity changes.
 
-Corrective spec:
-`docs/ux/TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_SPEC_v1.0.md`
+It must not be uploaded as the current candidate.
 
-Prepared Codex work order:
-`prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md`
+Latest tested source:
+`27199bf6f174e55dc835d0d9898e456d3848001c`
 
-## Preserved PASS
+Latest TASK-S5-007 debug APK SHA-256:
+`843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce`
 
-- compression/domain behavior;
-- target parser;
-- decimal-SI semantics;
-- PASS / NOT_MET / REDUCED classification;
-- exact output byte count;
-- Save fidelity;
-- Share;
-- geometry;
-- generated Home hero and visual productization evidence.
+Latest release AAB SHA-256 recorded by QA:
+`a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
 
-## Required correction
+That AAB hash is QA provenance only until a refreshed Play handoff/readiness package explicitly binds it as the next candidate.
 
-Presentation-only:
-- make exact bytes explicitly read as `Actual file`;
-- group exact byte counts for readability;
-- keep decimal-SI rounded KB/MB summary;
-- disclose `1 KB = 1,000 bytes`;
-- explain compactly that some file managers may show 1,024-byte units.
+## Closed gates
 
-## Material approval recorded
+TASK-S5-006:
+`PASS_HUMAN_APPROVED_CLOSED`
 
-Approval scope:
-`TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY IMPLEMENTATION`
+Closure:
+`docs/qa/TASK_S5_006_HUMAN_PREMIUM_VISUAL_PRODUCTIZATION_CLOSURE_v1.0.md`
 
 Approval ref:
-`USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION`
+`USER_OPTION_1_2026-09-30_TASK_S5_006_PREMIUM_QUALITY_VISUAL_PRODUCTIZATION_APPROVAL`
 
-Approved by user:
-2026-09-30
+TASK-S5-007:
+`PASS_HUMAN_APPROVED_CLOSED`
 
-Approval would authorize only:
-- Result-screen copy/layout adjustments defined by the spec;
-- presentation-only exact-byte formatting helper;
-- fresh build/test/emulator/saved-file evidence.
+## Next action
 
-It would NOT authorize:
-- target arithmetic change;
-- compression/domain change;
-- Save behavior change;
-- package/version/SDK change;
+Prepare a refreshed Play Internal Testing handoff/readiness package against the latest tested source and current artifact hashes.
+
+This preparation may update docs/evidence/state only.
+
+It does NOT authorize:
 - signing;
-- Play upload;
+- Play Console mutation;
+- Play upload or submission;
 - S6;
-- BUILD promotion;
+- canonical BUILD promotion;
 - Artifact Freeze;
 - release;
 - publication.
 
-
-## Execution handoff — 2026-09-30
-
-Implementation is now authorized only within the scope above.
-
-Next owner:
-`CODEX`
-
-Canonical work order:
-`prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md`
-
-Codex may:
-- add presentation-only exact-byte formatting;
-- update Result copy/disclosure exactly as specified;
-- rebuild/test/lint/run relevant instrumentation;
-- capture fresh PASS / NOT_MET / REDUCED evidence;
-- verify at least one saved-file byte/hash identity case;
-- update evidence/state documents.
-
-Codex may NOT:
-- change decimal-SI arithmetic;
-- change compression/domain behavior;
-- change Save behavior;
-- change package/version/SDK;
-- sign/upload to Play;
-- advance S6;
-- promote BUILD;
-- freeze/release/publish.
-
-After machine QA:
-- return next owner to `CHAT + HUMAN`;
-- do not self-approve final visual/product clarity.
+Human action/approval remains required before any irreversible Play/signing step.
