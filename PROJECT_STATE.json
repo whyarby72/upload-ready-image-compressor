@@ -41,12 +41,18 @@
     "id": "TASK-S5-007",
     "owner": "CODEX",
     "next_owner": "CODEX",
-    "status": "IMPLEMENTATION_AUTHORIZED",
+    "status": "IMPLEMENTATION_AUTHORIZED_HARDENED_WORK_ORDER_READY",
     "opened_from": "TASK-S5-006",
     "reopened_reason": "Human manual evidence showed decimal-SI KB/MB labels can differ from Android file-manager labels despite byte-identical saved output.",
     "approval_token": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
     "codex_work_order": "prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md",
-    "approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION"
+    "approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
+    "work_order_version": "v1.1",
+    "allowed_app_source_files": [
+      "app/src/main/java/com/afradadmedia/reducephotosize/MainActivity.kt",
+      "app/src/main/java/com/afradadmedia/reducephotosize/FormatUtils.java",
+      "app/src/test/java/com/afradadmedia/reducephotosize/* formatting-only unit test"
+    ]
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -74,14 +80,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "TASK-S5-007 output-size display clarity implementation is not yet authorized.",
-    "Fresh Result-screen runtime evidence and saved-file byte/hash proof are required after the presentation-only correction."
+    "Fresh Result-screen runtime evidence is required after the presentation-only correction.",
+    "A replayable saved-file proof must show exact byte-count and SHA-256 equality between the app result file and the MediaStore-saved JPEG.",
+    "CHAT + HUMAN review is required after machine QA before Play handoff may resume."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Codex executes prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md on task/TASK-S5-007, performs presentation-only Result copy/format changes, fresh build/test/emulator evidence, and saved-file byte/hash verification; then returns for CHAT + HUMAN review.",
+  "next_action": "Codex executes the hardened v1.1 TASK-S5-007 work order, limited to MainActivity.kt, FormatUtils.java, optional formatting-only unit test, plus evidence/docs/state. It must prove state-bound screenshots and saved-file byte/hash equality, then return to CHAT + HUMAN review.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -448,7 +455,7 @@
     "broader_authority_granted": false
   },
   "s5_play_internal_testing_handoff": {
-    "status": "PAUSED_BY_VISUAL_PRODUCTIZATION_REWORK",
+    "status": "PAUSED_BY_TASK_S5_007_OUTPUT_SIZE_CLARITY_REWORK",
     "prepared_at": "2026-09-28",
     "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md",
     "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v1.0.json",
@@ -464,7 +471,7 @@
     "current_play_target_api_requirement": "API_36_FOR_NEW_MOBILE_APP_SUBMISSIONS_AS_OF_2026_08_31",
     "next_owner": "HUMAN_PLAY_CONSOLE",
     "provider_action_authorized": false,
-    "resume_condition": "TASK-S5-006 visual productization implementation + fresh artifact/runtime visual evidence + scoped human premium-quality approval."
+    "resume_condition": "TASK-S5-007 implementation + fresh state-bound runtime evidence + saved-file byte/hash equality proof + CHAT/HUMAN closure. Existing TASK-S5-006 visual conditions remain preserved."
   },
   "s5_visual_productization_rework": {
     "status": "CHAT_PREMIUM_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
@@ -525,7 +532,7 @@
     "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md"
   },
   "s5_output_size_display_clarity": {
-    "status": "IMPLEMENTATION_AUTHORIZED_CODEX_PENDING",
+    "status": "IMPLEMENTATION_AUTHORIZED_HARDENED_WORK_ORDER_READY",
     "observed_at": "2026-09-30",
     "trigger": "Human manual emulator + saved-file evidence review",
     "audit_ref": "docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md",
@@ -537,6 +544,29 @@
     "save_fidelity_status": "PASS_PRESERVED",
     "implementation_authorized": true,
     "protected_domain_change_authorized": false,
-    "implementation_approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION"
+    "implementation_approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
+    "work_order_version": "v1.1",
+    "unit_disclosure_copy": "Size units here: 1 KB = 1,000 bytes. Some file managers calculate KB using 1,024 bytes.",
+    "screenshot_semantic_binding_required": true,
+    "saved_file_hash_equality_required": true,
+    "expected_app_source_mutation": [
+      "MainActivity.kt",
+      "FormatUtils.java",
+      "optional formatting-only unit test"
+    ]
+  },
+  "qa_build_authority": {
+    "task": "TASK-S5-007",
+    "authorized": true,
+    "allowed": [
+      "assembleDebug",
+      "unit tests",
+      "lintDebug",
+      "assembleRelease",
+      "bundleRelease",
+      "existing relevant instrumentation/regression"
+    ],
+    "canonical_build_promotion_authorized": false,
+    "note": "QA build execution is authorized for TASK-S5-007; canonical BUILD promotion remains unauthorized."
   }
 }
