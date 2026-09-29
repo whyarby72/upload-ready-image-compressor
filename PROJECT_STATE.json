@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK",
+    "current_stage": "S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH",
     "canonical_decision": "TEST",
     "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -38,30 +38,20 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "TASK-S5-007",
+    "id": "S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH",
     "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "PASS_HUMAN_APPROVED_CLOSED",
-    "opened_from": "TASK-S5-006",
-    "reopened_reason": "Human manual evidence showed decimal-SI KB/MB labels can differ from Android file-manager labels despite byte-identical saved output.",
-    "approval_token": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
-    "codex_work_order": "prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md",
-    "approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
-    "work_order_version": "v1.1",
-    "allowed_app_source_files": [
-      "app/src/main/java/com/afradadmedia/reducephotosize/MainActivity.kt",
-      "app/src/main/java/com/afradadmedia/reducephotosize/FormatUtils.java",
-      "app/src/test/java/com/afradadmedia/reducephotosize/* formatting-only unit test"
-    ],
-    "human_approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_APPROVAL",
-    "human_closure_ref": "docs/qa/TASK_S5_007_HUMAN_OUTPUT_SIZE_DISPLAY_CLARITY_CLOSURE_v1.0.md"
+    "next_owner": "CHAT",
+    "status": "READY_TO_PREPARE_CURRENT_SOURCE_HANDOFF",
+    "opened_from": "TASK-S5-006 + TASK-S5-007",
+    "reason": "All current S5 product-quality corrective gates are human-closed, but the existing Play handoff candidate predates the visual and size-display rework.",
+    "play_action_authorized": false
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_HUMAN_PREMIUM_VISUAL_APPROVAL",
+    "internal_test": "S5_READY_FOR_CURRENT_SOURCE_PLAY_HANDOFF_REFRESH",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -82,13 +72,14 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION still requires explicit human approval before Play handoff can resume."
+    "The existing Play Internal Testing candidate is pre-rework provenance and must be refreshed against the latest tested source/evidence before any upload.",
+    "Signing and Play Console upload/submission remain separate human actions and are not authorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides the still-pending TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION gate. TASK-S5-007 is closed PASS and no longer blocks S5.",
+  "next_action": "Prepare a refreshed Play Internal Testing handoff/readiness package bound to the latest tested source and artifacts. Do not sign, upload, submit, advance S6, promote BUILD, freeze, release, or publish.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -455,7 +446,7 @@
     "broader_authority_granted": false
   },
   "s5_play_internal_testing_handoff": {
-    "status": "PAUSED_BY_PENDING_TASK_S5_006_HUMAN_PREMIUM_APPROVAL",
+    "status": "READY_FOR_CURRENT_SOURCE_REFRESH_AFTER_S5_QUALITY_CLOSURE",
     "prepared_at": "2026-09-28",
     "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md",
     "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v1.0.json",
@@ -465,16 +456,20 @@
       "sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02",
       "signing_state": "UNSIGNED",
       "play_upload_eligible": false,
-      "disposition": "LAST_VERIFIED_PRE_REWORK_PROVENANCE_ONLY_FOR_NEXT_ACTION"
+      "disposition": "STALE_PRE_REWORK_PROVENANCE_ONLY_DO_NOT_UPLOAD"
     },
     "target_sdk": 36,
     "current_play_target_api_requirement": "API_36_FOR_NEW_MOBILE_APP_SUBMISSIONS_AS_OF_2026_08_31",
-    "next_owner": "HUMAN_PLAY_CONSOLE",
+    "next_owner": "CHAT",
     "provider_action_authorized": false,
-    "resume_condition": "TASK-S5-006 premium visual-productization human approval must be explicitly recorded. TASK-S5-007 output-size clarity is closed PASS."
+    "resume_condition": "SATISFIED_PRODUCT_QUALITY_GATES; refresh candidate/readiness against latest tested source before any Play action.",
+    "latest_tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+    "latest_debug_apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce",
+    "latest_release_aab_sha256_from_qa": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01",
+    "latest_release_aab_disposition": "QA_HASH_ONLY_NOT_YET_PROMOTED_TO_PLAY_CANDIDATE"
   },
   "s5_visual_productization_rework": {
-    "status": "CHAT_PREMIUM_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
+    "status": "PASS_HUMAN_APPROVED_CLOSED",
     "observed_at": "2026-09-28",
     "trigger": "Human emulator first-open review",
     "audit_ref": "docs/qa/TASK_S5_006_VISUAL_PRODUCTIZATION_ESCAPE_AUDIT_v1.0.md",
@@ -483,7 +478,7 @@
     "root_cause": "GENERAL_VISUAL_CAPABILITY_EXISTS_BUT_ANDROID_ASSET_COMPLETENESS_BINDING_WAS_MISSING",
     "technical_core_status": "PRESERVED_PASS",
     "geometry_status": "PRESERVED_PASS",
-    "visual_productization_status": "MACHINE_QA_PASS_CHAT_PREMIUM_PASS_HUMAN_PENDING",
+    "visual_productization_status": "PASS_HUMAN_APPROVED",
     "implementation_authorized": true,
     "protected_domain_change_authorized": false,
     "implementation_approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
@@ -492,7 +487,7 @@
     "fidelity_matrix_ref": "docs/ux/TASK_S5_006_MOCKUP_RUNTIME_FIDELITY_MATRIX_v1.0.md",
     "artifact_proof_ref": "evidence/play/S5_006_ARTIFACT_PROOF.json",
     "human_review_scope": "PREMIUM_QUALITY / VISUAL_PRODUCTIZATION",
-    "human_review_status": "PENDING_EXPLICIT_HUMAN_PREMIUM_APPROVAL",
+    "human_review_status": "PASS_HUMAN_APPROVED",
     "chat_evidence_audit_ref": "docs/qa/TASK_S5_006_CHAT_PREMIUM_REVIEW_EVIDENCE_AUDIT_v1.1.md",
     "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_HOME360_SEMANTIC_RECAPTURE.md",
     "home360_semantic_binding": {
@@ -529,7 +524,11 @@
       "requirement_smoke": "PASS",
       "result_pass_smoke": "PASS_GENUINE"
     },
-    "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md"
+    "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md",
+    "human_approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_006_PREMIUM_QUALITY_VISUAL_PRODUCTIZATION_APPROVAL",
+    "human_closure_ref": "docs/qa/TASK_S5_006_HUMAN_PREMIUM_VISUAL_PRODUCTIZATION_CLOSURE_v1.0.md",
+    "closed_against_current_product_state": true,
+    "current_state_compatibility_note": "TASK-S5-007 Result presentation changes were separately reviewed and human-closed PASS before final TASK-S5-006 premium approval."
   },
   "s5_output_size_display_clarity": {
     "status": "PASS_HUMAN_APPROVED_CLOSED",
