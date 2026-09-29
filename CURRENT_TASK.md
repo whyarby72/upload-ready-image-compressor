@@ -1,11 +1,11 @@
 # CURRENT_TASK.md
 
 Task ID: TASK-S5-007
-Owner: CHAT
+Owner: CODEX
 Reviewer: HUMAN + CHAT
 Stage: S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK
 Priority: MEDIUM
-Status: SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED
+Status: IMPLEMENTATION_AUTHORIZED
 
 ## Trigger
 
@@ -49,10 +49,16 @@ Presentation-only:
 - disclose `1 KB = 1,000 bytes`;
 - explain compactly that some file managers may show 1,024-byte units.
 
-## Pending material approval
+## Material approval recorded
 
-Required exact scope:
+Approval scope:
 `TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY IMPLEMENTATION`
+
+Approval ref:
+`USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION`
+
+Approved by user:
+2026-09-30
 
 Approval would authorize only:
 - Result-screen copy/layout adjustments defined by the spec;
@@ -71,3 +77,36 @@ It would NOT authorize:
 - Artifact Freeze;
 - release;
 - publication.
+
+
+## Execution handoff — 2026-09-30
+
+Implementation is now authorized only within the scope above.
+
+Next owner:
+`CODEX`
+
+Canonical work order:
+`prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md`
+
+Codex may:
+- add presentation-only exact-byte formatting;
+- update Result copy/disclosure exactly as specified;
+- rebuild/test/lint/run relevant instrumentation;
+- capture fresh PASS / NOT_MET / REDUCED evidence;
+- verify at least one saved-file byte/hash identity case;
+- update evidence/state documents.
+
+Codex may NOT:
+- change decimal-SI arithmetic;
+- change compression/domain behavior;
+- change Save behavior;
+- change package/version/SDK;
+- sign/upload to Play;
+- advance S6;
+- promote BUILD;
+- freeze/release/publish.
+
+After machine QA:
+- return next owner to `CHAT + HUMAN`;
+- do not self-approve final visual/product clarity.
