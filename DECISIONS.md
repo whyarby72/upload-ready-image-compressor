@@ -486,3 +486,20 @@ Not authorized:
 
 Approval ref:
 `USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION`
+
+
+## D-051 — Human approves TASK-S5-007 output-size display clarity (2026-09-30)
+
+The human explicitly selected Option 1 for:
+`TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY`.
+
+Decision:
+- close TASK-S5-007 as `PASS_HUMAN_APPROVED_CLOSED`;
+- preserve decimal-SI semantics and exact-byte truth;
+- retain the Result disclosure explaining possible 1,024-byte file-manager calculations;
+- TASK-S5-007 no longer blocks S5.
+
+This decision does not approve TASK-S5-006 premium visual productization and does not grant signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication authority.
+
+Approval ref:
+`USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_APPROVAL`
