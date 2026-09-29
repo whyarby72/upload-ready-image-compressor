@@ -5,9 +5,9 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_VISUAL_PRODUCTIZATION_REWORK",
+    "current_stage": "S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK",
     "canonical_decision": "TEST",
-    "progress_percent": 99,
+    "progress_percent": 98,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -38,25 +38,21 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "TASK-S5-006",
-    "owner": "CHAT + HUMAN",
+    "id": "TASK-S5-007",
+    "owner": "CHAT",
     "next_owner": "HUMAN",
-    "status": "CHAT_PREMIUM_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
-    "approval_token": "TASK-S5-006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
-    "opened_from": "TASK-S5-005",
-    "reopened_reason": "Human emulator review exposed missing branded visual assets and placeholder-like first-open illustration.",
-    "approval_ref": "USER_OPTION_1_2026-09-28_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION",
-    "codex_work_order": "prompts/CODEX_TASK_S5_006_GENERATED_HERO_QA.md",
-    "evidence_repair_prompt": "prompts/CODEX_TASK_S5_006_EVIDENCE_REPAIR_AND_RECAPTURE.md",
-    "previous_codex_work_order": "prompts/CODEX_TASK_S5_006_VISUAL_ASSET_COMPLETENESS_IMPLEMENTATION.md",
-    "approval_ref_generated_hero": "USER_APPROVED_GENERATED_HOME_HERO_2026-09-29"
+    "status": "SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED",
+    "opened_from": "TASK-S5-006",
+    "reopened_reason": "Human manual evidence showed decimal-SI KB/MB labels can differ from Android file-manager labels despite byte-identical saved output.",
+    "approval_token": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION_PENDING",
+    "codex_work_order": "prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_HUMAN_PREMIUM_APPROVAL",
+    "internal_test": "S5_HOLD_OUTPUT_SIZE_DISPLAY_CLARITY",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -77,13 +73,14 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Explicit human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval for TASK-S5-006 has not yet been recorded."
+    "TASK-S5-007 output-size display clarity implementation is not yet authorized.",
+    "Fresh Result-screen runtime evidence and saved-file byte/hash proof are required after the presentation-only correction."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION based on the generated-hero runtime evidence and CHAT review. Approval closes visual productization only; Play/signing/release authorities remain separate.",
+  "next_action": "Review TASK-S5-007 output-size display clarity spec and obtain explicit approval for TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY IMPLEMENTATION.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -100,7 +97,7 @@
     "remote_url": "https://github.com/whyarby72/upload-ready-image-compressor",
     "default_branch": "main",
     "integration_branch": "develop",
-    "active_task_branch": "task/TASK-S5-006",
+    "active_task_branch": "task/TASK-S5-007",
     "bootstrap_state": "READY_REMOTE",
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
@@ -525,5 +522,19 @@
       "result_pass_smoke": "PASS_GENUINE"
     },
     "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md"
+  },
+  "s5_output_size_display_clarity": {
+    "status": "REWORK_SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED",
+    "observed_at": "2026-09-30",
+    "trigger": "Human manual emulator + saved-file evidence review",
+    "audit_ref": "docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md",
+    "spec_ref": "docs/ux/TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_SPEC_v1.0.md",
+    "work_order_ref": "prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md",
+    "classification": "PRESENTATION_ONLY_CROSS_DISPLAY_UNIT_AMBIGUITY",
+    "canonical_unit_semantics": "1_KB_1000_BYTES_1_MB_1000000_BYTES",
+    "exact_byte_truth_status": "PASS_PRESERVED",
+    "save_fidelity_status": "PASS_PRESERVED",
+    "implementation_authorized": false,
+    "protected_domain_change_authorized": false
   }
 }
