@@ -5,8 +5,8 @@ Stage: S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK
 Decision: TEST
 Progress: 98%
 Current task: TASK-S5-007
-Next owner: CHAT + HUMAN
-Task status: IMPLEMENTED_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY
+Next owner: HUMAN
+Task status: CHAT_CLARITY_REVIEW_PASS_HUMAN_APPROVAL_PENDING
 
 ## Evidence summary
 - 0.1.0: 1
@@ -42,3 +42,33 @@ Task status: IMPLEMENTED_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY
 
 ## Next action
 CHAT + HUMAN reviews TASK-S5-007 machine QA evidence and presentation clarity. Play handoff remains paused.
+
+## CHAT TASK-S5-007 clarity review — 2026-09-30
+
+Disposition:
+`CHAT_CLARITY_REVIEW_PASS / HUMAN_APPROVAL_PENDING`
+
+Direct runtime review passed:
+- PASS 360x800;
+- NOT_MET 360x800;
+- REDUCED 360x800;
+- PASS 320x640;
+- PASS font scale 1.3.
+
+Confirmed:
+- large rounded decimal-SI result size remains the primary scan target;
+- exact `Actual file` byte proof is clear and truthful;
+- `1 KB = 1,000 bytes` disclosure is visible but secondary;
+- 320dp and 1.3x remain usable by scroll;
+- protected compression/domain/Save source is unchanged.
+
+CHAT audit:
+`docs/qa/TASK_S5_007_CHAT_OUTPUT_SIZE_DISPLAY_CLARITY_REVIEW_v1.0.md`
+
+Next owner:
+`HUMAN`
+
+Required scope:
+`TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY`
+
+No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication authority is implied.
