@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-007",
-    "owner": "CHAT + HUMAN",
+    "owner": "CHAT",
     "next_owner": "HUMAN",
-    "status": "CHAT_CLARITY_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
+    "status": "PASS_HUMAN_APPROVED_CLOSED",
     "opened_from": "TASK-S5-006",
     "reopened_reason": "Human manual evidence showed decimal-SI KB/MB labels can differ from Android file-manager labels despite byte-identical saved output.",
     "approval_token": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
@@ -52,14 +52,16 @@
       "app/src/main/java/com/afradadmedia/reducephotosize/MainActivity.kt",
       "app/src/main/java/com/afradadmedia/reducephotosize/FormatUtils.java",
       "app/src/test/java/com/afradadmedia/reducephotosize/* formatting-only unit test"
-    ]
+    ],
+    "human_approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_APPROVAL",
+    "human_closure_ref": "docs/qa/TASK_S5_007_HUMAN_OUTPUT_SIZE_DISPLAY_CLARITY_CLOSURE_v1.0.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_HUMAN_OUTPUT_SIZE_CLARITY_APPROVAL",
+    "internal_test": "S5_HOLD_HUMAN_PREMIUM_VISUAL_APPROVAL",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -80,13 +82,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Explicit human approval for TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY has not yet been recorded."
+    "TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION still requires explicit human approval before Play handoff can resume."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY based on CHAT review and runtime evidence. Approval closes this clarity corrective only; Play/signing/release authorities remain separate.",
+  "next_action": "Human decides the still-pending TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION gate. TASK-S5-007 is closed PASS and no longer blocks S5.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -453,7 +455,7 @@
     "broader_authority_granted": false
   },
   "s5_play_internal_testing_handoff": {
-    "status": "PAUSED_BY_TASK_S5_007_OUTPUT_SIZE_CLARITY_REWORK",
+    "status": "PAUSED_BY_PENDING_TASK_S5_006_HUMAN_PREMIUM_APPROVAL",
     "prepared_at": "2026-09-28",
     "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md",
     "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v1.0.json",
@@ -469,7 +471,7 @@
     "current_play_target_api_requirement": "API_36_FOR_NEW_MOBILE_APP_SUBMISSIONS_AS_OF_2026_08_31",
     "next_owner": "HUMAN_PLAY_CONSOLE",
     "provider_action_authorized": false,
-    "resume_condition": "TASK-S5-007 implementation + fresh state-bound runtime evidence + saved-file byte/hash equality proof + CHAT/HUMAN closure. Existing TASK-S5-006 visual conditions remain preserved."
+    "resume_condition": "TASK-S5-006 premium visual-productization human approval must be explicitly recorded. TASK-S5-007 output-size clarity is closed PASS."
   },
   "s5_visual_productization_rework": {
     "status": "CHAT_PREMIUM_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
@@ -530,7 +532,7 @@
     "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md"
   },
   "s5_output_size_display_clarity": {
-    "status": "CHAT_CLARITY_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
+    "status": "PASS_HUMAN_APPROVED_CLOSED",
     "observed_at": "2026-09-30",
     "trigger": "Human manual emulator + saved-file evidence review",
     "audit_ref": "docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md",
@@ -563,7 +565,9 @@
     "machine_qa_status": "PASS",
     "chat_review_status": "PASS",
     "chat_review_ref": "docs/qa/TASK_S5_007_CHAT_OUTPUT_SIZE_DISPLAY_CLARITY_REVIEW_v1.0.md",
-    "human_review_status": "PENDING_EXPLICIT_HUMAN_APPROVAL"
+    "human_review_status": "PASS_HUMAN_APPROVED",
+    "human_approval_ref": "USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_APPROVAL",
+    "human_closure_ref": "docs/qa/TASK_S5_007_HUMAN_OUTPUT_SIZE_DISPLAY_CLARITY_CLOSURE_v1.0.md"
   },
   "qa_build_authority": {
     "task": "TASK-S5-007",
