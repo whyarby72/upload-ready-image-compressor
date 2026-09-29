@@ -457,3 +457,32 @@ Decision:
 - open TASK-S5-007 as presentation-only rework.
 
 Implementation is not authorized by this decision alone.
+
+
+## D-050 — Human authorizes TASK-S5-007 output-size display clarity implementation (2026-09-30)
+
+The human explicitly selected Option 1 after the scope was bound to:
+`TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY IMPLEMENTATION`.
+
+Authorized:
+- presentation-only Result copy/layout adjustment;
+- exact-byte grouping/display helper;
+- compact disclosure that this app uses 1 KB = 1,000 bytes and some file managers may display 1,024-byte units;
+- fresh build/test/emulator evidence;
+- saved-file byte/hash fidelity proof.
+
+Not authorized:
+- target arithmetic changes;
+- compression/domain changes;
+- Save behavior changes;
+- package/version/SDK changes;
+- signing;
+- Play upload;
+- S6;
+- BUILD promotion;
+- Artifact Freeze;
+- release;
+- publication.
+
+Approval ref:
+`USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION`
