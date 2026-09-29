@@ -6,7 +6,7 @@ Decision: TEST
 Progress: 98%
 Current task: TASK-S5-007
 Next owner: HUMAN
-Task status: CHAT_CLARITY_REVIEW_PASS_HUMAN_APPROVAL_PENDING
+Task status: PASS_HUMAN_APPROVED_CLOSED
 
 ## Evidence summary
 - 0.1.0: 1
@@ -70,5 +70,29 @@ Next owner:
 
 Required scope:
 `TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY`
+
+No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication authority is implied.
+
+
+## TASK-S5-007 human closure — 2026-09-30
+
+Approved scope:
+`TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY`
+
+Approval ref:
+`USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_APPROVAL`
+
+Disposition:
+`PASS_HUMAN_APPROVED_CLOSED`
+
+Closure:
+`docs/qa/TASK_S5_007_HUMAN_OUTPUT_SIZE_DISPLAY_CLARITY_CLOSURE_v1.0.md`
+
+TASK-S5-007 no longer blocks S5.
+
+Remaining human gate:
+`TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION`
+
+Play handoff remains paused until that separate visual approval is explicitly recorded.
 
 No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication authority is implied.
