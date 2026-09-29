@@ -5,8 +5,8 @@ Stage: S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK
 Decision: TEST
 Progress: 98%
 Current task: TASK-S5-007
-Next owner: HUMAN
-Task status: SPEC_READY_IMPLEMENTATION_NOT_AUTHORIZED
+Next owner: CODEX
+Task status: IMPLEMENTATION_AUTHORIZED
 
 ## Why S5 reopened
 
@@ -54,3 +54,21 @@ Required exact scope:
 No source mutation is authorized by opening this task.
 
 No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication.
+
+
+## TASK-S5-007 implementation authorization — 2026-09-30
+
+Approval ref:
+`USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION`
+
+Execution owner:
+`CODEX`
+
+Canonical work order:
+`prompts/CODEX_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY.md`
+
+Scope is presentation-only Result-size clarity plus fresh verification.
+
+Compression/domain arithmetic and Save behavior remain protected.
+
+No signing / Play upload / S6 / BUILD promotion / Artifact Freeze / release / publication authority is granted.
