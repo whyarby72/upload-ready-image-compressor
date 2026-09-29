@@ -462,3 +462,14 @@
 - recorded CHAT premium visual PASS;
 - advanced progress to 99% with explicit human PREMIUM_QUALITY / VISUAL_PRODUCTIZATION approval still pending;
 - did not authorize signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+
+# 2026-09-30 — TASK-S5-007 output size display clarity rework opened
+
+- reviewed human manual evidence showing app/file-manager KB labels differ for the same saved output;
+- independently verified one engine result and saved JPEG are byte-identical at 495,669 bytes with matching SHA-256;
+- classified issue as cross-display unit ambiguity, not compression or Save defect;
+- preserved decimal-SI target semantics and exact-byte PASS truth;
+- defined a compact Result-screen disclosure and exact-byte copy corrective;
+- prepared bounded Codex work order;
+- did not authorize implementation, signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication.
