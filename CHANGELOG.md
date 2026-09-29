@@ -490,3 +490,15 @@
 - retained exact-byte verification as authoritative;
 - assigned bounded presentation-only implementation and fresh evidence to Codex;
 - kept compression/domain, Save behavior, package/version/SDK, signing, Play upload, S6, BUILD, freeze, release and publication out of scope.
+
+
+# 2026-09-30 — CHAT TASK-S5-007 output-size clarity review PASS
+
+- directly rendered and reviewed PASS, NOT_MET and REDUCED Result screens;
+- reviewed 320dp and font-scale 1.3 usability;
+- confirmed exact Actual file byte proof and decimal-SI disclosure are clear;
+- confirmed large rounded size remains the primary visual result;
+- confirmed protected compression/domain/Save source remains unchanged;
+- accepted unavailable instrumentation as non-blocking for this presentation-only task because preserved engine/geometry evidence remains in scope;
+- advanced progress to 99% with explicit human TASK-S5-007 clarity approval still pending;
+- Play handoff remains paused and no signing/release authority was granted.
