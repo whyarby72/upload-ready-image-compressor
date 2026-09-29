@@ -3,7 +3,7 @@
 Observed: 2026-09-30
 Product: REDUCE PHOTO SIZE: KB LIMIT
 Stage: S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK
-Implementation authority: NOT YET GRANTED
+Implementation authority: GRANTED — bounded presentation-only scope
 
 ## 1. Objective
 
@@ -60,7 +60,7 @@ Do not imply success against an unknown limit.
 
 Add a compact, quiet helper on Result screens:
 
-`Size units here: 1 KB = 1,000 bytes. Some file managers may show 1,024-byte units.`
+`Size units here: 1 KB = 1,000 bytes. Some file managers calculate KB using 1,024 bytes.`
 
 Requirements:
 - secondary text color;
@@ -161,9 +161,40 @@ Do NOT:
 - add a modal educational screen;
 - change generated Home hero.
 
-## 11. Current disposition
+## 11. Source mutation boundary
 
-`SPEC_READY / IMPLEMENTATION_NOT_AUTHORIZED`
+Expected app-source mutation is limited to:
+- `MainActivity.kt`;
+- `FormatUtils.java`;
+- optional formatting-only unit test under the existing unit-test package.
 
-Required next approval scope:
+Protected compression/domain/Save files remain unchanged.
+
+## 12. Deterministic evidence binding
+
+Every PASS / NOT_MET / REDUCED screenshot used for closure must bind:
+- screenshot SHA-256;
+- foreground package proof;
+- UIAutomator hierarchy from the same state/session;
+- required and forbidden semantic anchors.
+
+A filename or manifest description alone is not evidence of screen state.
+
+## 13. Saved-file proof method
+
+At least one case must execute the real UI Save action and independently compare:
+- app result cache JPEG;
+- MediaStore saved JPEG.
+
+Record bytes and SHA-256 for each.
+Closure requires equality.
+
+## 14. Current disposition
+
+`IMPLEMENTATION_AUTHORIZED / CODEX_READY_AFTER_WORK_ORDER_HARDENING`
+
+Approval scope:
 `TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY IMPLEMENTATION`
+
+Approval ref:
+`USER_OPTION_1_2026-09-30_TASK_S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION`
