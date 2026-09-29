@@ -473,3 +473,12 @@
 - defined a compact Result-screen disclosure and exact-byte copy corrective;
 - prepared bounded Codex work order;
 - did not authorize implementation, signing, Play upload, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+
+# 2026-09-30 — TASK-S5-007 implementation authorized
+
+- recorded explicit human approval for output-size display clarity implementation;
+- retained 1 KB = 1,000 bytes and 1 MB = 1,000,000 bytes semantics;
+- retained exact-byte verification as authoritative;
+- assigned bounded presentation-only implementation and fresh evidence to Codex;
+- kept compression/domain, Save behavior, package/version/SDK, signing, Play upload, S6, BUILD, freeze, release and publication out of scope.
