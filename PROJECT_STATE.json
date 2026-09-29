@@ -12,11 +12,11 @@
   },
   "artifacts": {
     "current_build": {
-      "source_version": "TASK-S5-006_GENERATED_HERO_QA_ARTIFACT",
-      "status": "FRESH_GENERATED_HERO_QA_ARTIFACT",
-      "source_bundle_sha256": "bbf376e34753b1a2bad7011a6b94da98e62234ce82caf9f86b04343c8f6d4827",
+      "source_version": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY",
+      "status": "FRESH_TASK_S5_007_QA_ARTIFACT",
+      "source_bundle_sha256": "27199bf6f174e55dc835d0d9898e456d3848001c",
       "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
-      "apk_sha256": "0de3f807d4125f60e448a42e15c82fe2e040f84bde4b37e894967ee370cb072c",
+      "apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce",
       "application_id": "com.afradadmedia.reducephotosize",
       "namespace": "com.afradadmedia.reducephotosize",
       "label": "Reduce Photo Size"
@@ -40,8 +40,8 @@
   "current_task": {
     "id": "TASK-S5-007",
     "owner": "CODEX",
-    "next_owner": "CODEX",
-    "status": "IMPLEMENTATION_AUTHORIZED_HARDENED_WORK_ORDER_READY",
+    "next_owner": "CHAT + HUMAN",
+    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
     "opened_from": "TASK-S5-006",
     "reopened_reason": "Human manual evidence showed decimal-SI KB/MB labels can differ from Android file-manager labels despite byte-identical saved output.",
     "approval_token": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
@@ -80,15 +80,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Fresh Result-screen runtime evidence is required after the presentation-only correction.",
-    "A replayable saved-file proof must show exact byte-count and SHA-256 equality between the app result file and the MediaStore-saved JPEG.",
     "CHAT + HUMAN review is required after machine QA before Play handoff may resume."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Codex executes the hardened v1.1 TASK-S5-007 work order, limited to MainActivity.kt, FormatUtils.java, optional formatting-only unit test, plus evidence/docs/state. It must prove state-bound screenshots and saved-file byte/hash equality, then return to CHAT + HUMAN review.",
+  "next_action": "CHAT + HUMAN reviews TASK-S5-007 machine QA evidence and presentation clarity. Play handoff remains paused.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -110,7 +108,7 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "7367d9279706d9a59e36e4b6f315067f96a160bd",
+    "last_pushed_task_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
     "evidence_closure_base_commit": "d165d6b325258346b9f55c76b3dbbfc12aa1a538",
     "last_pushed_task_commit_scope": "CHAT_S5_006_EVIDENCE_REPAIR_STATE_RECONCILIATION"
   },
@@ -532,7 +530,7 @@
     "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md"
   },
   "s5_output_size_display_clarity": {
-    "status": "IMPLEMENTATION_AUTHORIZED_HARDENED_WORK_ORDER_READY",
+    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
     "observed_at": "2026-09-30",
     "trigger": "Human manual emulator + saved-file evidence review",
     "audit_ref": "docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md",
@@ -553,7 +551,14 @@
       "MainActivity.kt",
       "FormatUtils.java",
       "optional formatting-only unit test"
-    ]
+    ],
+    "tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+    "evidence_proof": "evidence/play/S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_PROOF.json",
+    "debug_apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce",
+    "formatting_unit_tests": "PASS",
+    "protected_domain_diff": "NONE",
+    "saved_file_fidelity": "PASS_BYTES_AND_SHA256_EQUAL",
+    "next_owner": "CHAT + HUMAN"
   },
   "qa_build_authority": {
     "task": "TASK-S5-007",

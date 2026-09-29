@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 299,
+  "file_count": 315,
   "files": [
     {
       "path": "evidence/artifacts/.DS_Store",
@@ -251,6 +251,11 @@
       "path": "evidence/play/S5_006_GENERATED_HERO_PROOF.json",
       "bytes": 4025,
       "sha256": "1256d9683ddd2bf1503c341397afad81145605a108a1b9ed045ccd6ef7804ff9"
+    },
+    {
+      "path": "evidence/play/S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_PROOF.json",
+      "bytes": 6759,
+      "sha256": "01f7a04c6d035181bee27e77900751ec0c2f30a0fc2b0e193c8b77187be06247"
     },
     {
       "path": "evidence/play/S5_ARTIFACT_PROOF.json",
@@ -1306,6 +1311,81 @@
       "path": "evidence/screenshots/s5_006_visual_productization_generated_hero/result_pass_smoke.png",
       "bytes": 319617,
       "sha256": "ae95c55f2035cccc07babf0a315c5c010f3e2229ee52888838897da267902799"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/font_1_3/foreground.txt",
+      "bytes": 208,
+      "sha256": "2be5755a214b04b25912bf28538a52c8cca9ae639c43383d65a7a00334677618"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/font_1_3/screenshot.png",
+      "bytes": 210597,
+      "sha256": "1c3e4773f76425c16f5990a02ce1a3b89c7e80a39e0dadb074357d7776d0393d"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/font_1_3/uiautomator.xml",
+      "bytes": 9070,
+      "sha256": "f06b4e725ce26f5e2d734d5b411bc0f01ee4c6a35c01540f649987fdd86a2cf7"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/not_met_360/foreground.txt",
+      "bytes": 209,
+      "sha256": "0994ca751949bdaebbf9ed21aabc03a34ccc9b4e2245ba70ff20394815705daf"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/not_met_360/screenshot.png",
+      "bytes": 219417,
+      "sha256": "adc84548e97f10e8d702022c2eb2015cf64c271bb04e2e9516105eaaa559133e"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/not_met_360/uiautomator.xml",
+      "bytes": 9473,
+      "sha256": "184fb034685d9e4988cce031a7b8e9e35820a6e0aef01b8702d4565a0f6ede41"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_320/foreground.txt",
+      "bytes": 209,
+      "sha256": "270fdc5c10a9887887f2cb04a2646d69382e603fcafbf7c3c1bb0650a1d72ad7"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_320/screenshot.png",
+      "bytes": 56778,
+      "sha256": "2aefb273ff4a23ebb0df39e582ee98968c148c7f8432cdaf4577b1ae1e9e53fc"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_320/uiautomator.xml",
+      "bytes": 11263,
+      "sha256": "3c58d2c31f37d0311779549f14c371b2bd2c1619b7ee367bbf6e561740e5a192"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_360/foreground.txt",
+      "bytes": 207,
+      "sha256": "fa348051ad04ee40de890e047684611af1acf5dfac9cd960c87ca3739594e9a4"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_360/screenshot.png",
+      "bytes": 168869,
+      "sha256": "4a363ddcadc708dd81f73a034bf5e79aa95ec7f5673d518e01a1a65bf56285e6"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_360/uiautomator.xml",
+      "bytes": 9069,
+      "sha256": "5da609c379349723b613a94b8d4691b97cc929da22ed16dd08dbc5e2fda042c1"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/foreground.txt",
+      "bytes": 209,
+      "sha256": "ec55cfe67ae66d873e89f0ea76ef09bb1814335979c94f71816e57a4e02baa89"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/screenshot.png",
+      "bytes": 281877,
+      "sha256": "4932abd6b4bf8a43dcbdeeb7567118d3b22a2d9982460917bfffab1b4b1e86d9"
+    },
+    {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/uiautomator.xml",
+      "bytes": 9438,
+      "sha256": "865c33ef98019312a7a4551b2c6d9d0d45f21998932257d91931270a17007798"
     },
     {
       "path": "evidence/screenshots/s5_frac_api29_requirement.png",

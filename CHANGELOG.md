@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2026-09-30 — TASK-S5-007 output-size display clarity machine QA
+
+- Added presentation-only grouped exact-byte proof for PASS, NOT_MET, and REDUCED Result states.
+- Preserved decimal-SI summary and arithmetic; added the 1,000-byte KB disclosure.
+- Passed clean debug/release/AAB builds, unit tests, lint, API36 state-bound screenshots at 360x800, 320x640, and font scale 1.3.
+- Exercised real Save and proved internal result versus MediaStore copy equality by byte count and SHA-256.
+- Machine status: `IMPLEMENTED_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY`; CHAT + HUMAN review remains required and Play handoff stays paused.
+
 ## 2026-09-29 — TASK-S5-006 generated hero machine QA
 
 - Verified the user-approved local WebP hero in a clean debug/release build and API36 runtime.

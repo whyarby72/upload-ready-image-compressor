@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "task": "TASK-S5-007",
+  "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
+  "next_owner": "CHAT + HUMAN",
+  "tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+  "environment": {
+    "device": "task-s3-api36 / emulator-5554",
+    "api": 36,
+    "package": "com.afradadmedia.reducephotosize",
+    "fixture_selected": "existing indexed deterministic JPEG; observed 1600 x 900 JPEG in Requirement hierarchy",
+    "canonical_units": "1 KB = 1,000 bytes; 1 MB = 1,000,000 bytes"
+  },
+  "artifacts": {
+    "debug_apk": {
+      "path": "app/build/outputs/apk/debug/app-debug.apk",
+      "bytes": 29926362,
+      "sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce"
+    },
+    "release_apk": {
+      "path": "app/build/outputs/apk/release/app-release-unsigned.apk",
+      "bytes": 23001458,
+      "sha256": "801e503a40b9551141de0d592e62ca18795bad3fdaf8fb8e9c09f7a5b45121c1"
+    },
+    "release_aab": {
+      "path": "app/build/outputs/bundle/release/app-release.aab",
+      "bytes": 7968406,
+      "sha256": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01"
+    }
+  },
+  "builds": {
+    "preflight": "PASS",
+    "clean_assembleDebug": "PASS",
+    "test": "PASS",
+    "lintDebug": "PASS",
+    "assembleRelease": "PASS",
+    "bundleRelease": "PASS",
+    "instrumentation_regressions": "NOT_AVAILABLE_IN_THIS_RUN",
+    "protected_domain_diff": "NONE"
+  },
+  "formatting_tests": {
+    "result": "PASS",
+    "exactBytes": {
+      "0": "0",
+      "999": "999",
+      "1000": "1,000",
+      "495669": "495,669",
+      "1000000": "1,000,000"
+    },
+    "decimal_si_summary_regression": "PASS"
+  },
+  "screenshots": {
+    "pass_360": {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_360/screenshot.png",
+      "sha256": "4a363ddcadc708dd81f73a034bf5e79aa95ec7f5673d518e01a1a65bf56285e6",
+      "foreground_path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_360/foreground.txt",
+      "foreground_sha256": "fa348051ad04ee40de890e047684611af1acf5dfac9cd960c87ca3739594e9a4",
+      "uiautomator_path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_360/uiautomator.xml",
+      "uiautomator_sha256": "5da609c379349723b613a94b8d4691b97cc929da22ed16dd08dbc5e2fda042c1",
+      "semantic_checks": ["MEETS LIMIT", "Actual file: 981,182 bytes ≤ 1,000,000-byte limit — PASS", "unit disclosure", "no TARGET NOT MET", "no NOT_MET"]
+    },
+    "not_met_360": {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/not_met_360/screenshot.png",
+      "sha256": "adc84548e97f10e8d702022c2eb2015cf64c271bb04e2e9516105eaaa559133e",
+      "foreground_path": "evidence/screenshots/s5_007_output_size_display_clarity/not_met_360/foreground.txt",
+      "foreground_sha256": "0994ca751949bdaebbf9ed21aabc03a34ccc9b4e2245ba70ff20394815705daf",
+      "uiautomator_path": "evidence/screenshots/s5_007_output_size_display_clarity/not_met_360/uiautomator.xml",
+      "uiautomator_sha256": "184fb034685d9e4988cce031a7b8e9e35820a6e0aef01b8702d4565a0f6ede41",
+      "semantic_checks": ["TARGET NOT MET", "Actual file: 54,114 bytes > 50,000-byte limit — NOT_MET", "unit disclosure"]
+    },
+    "reduced_360": {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/screenshot.png",
+      "sha256": "4932abd6b4bf8a43dcbdeeb7567118d3b22a2d9982460917bfffab1b4b1e86d9",
+      "foreground_path": "evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/foreground.txt",
+      "foreground_sha256": "ec55cfe67ae66d873e89f0ea76ef09bb1814335979c94f71816e57a4e02baa89",
+      "uiautomator_path": "evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/uiautomator.xml",
+      "uiautomator_sha256": "865c33ef98019312a7a4551b2c6d9d0d45f21998932257d91931270a17007798",
+      "semantic_checks": ["SMALLER COPY", "Actual file: 720,737 bytes · no upload limit entered", "No PASS claim", "unit disclosure", "no MEETS LIMIT"]
+    },
+    "pass_320": {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_320/screenshot.png",
+      "sha256": "2aefb273ff4a23ebb0df39e582ee98968c148c7f8432cdaf4577b1ae1e9e53fc",
+      "foreground_path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_320/foreground.txt",
+      "foreground_sha256": "270fdc5c10a9887887f2cb04a2646d69382e603fcafbf7c3c1bb0650a1d72ad7",
+      "uiautomator_path": "evidence/screenshots/s5_007_output_size_display_clarity/pass_320/uiautomator.xml",
+      "uiautomator_sha256": "3c58d2c31f37d0311779549f14c371b2bd2c1619b7ee367bbf6e561740e5a192",
+      "semantic_checks": ["MEETS LIMIT", "Actual file: 97,220 bytes ≤ 1,000,000-byte limit — PASS", "unit disclosure", "Save copy reachable after scroll", "Share reachable after scroll", "Compress another reachable after scroll"]
+    },
+    "pass_font_1_3": {
+      "path": "evidence/screenshots/s5_007_output_size_display_clarity/font_1_3/screenshot.png",
+      "sha256": "1c3e4773f76425c16f5990a02ce1a3b89c7e80a39e0dadb074357d7776d0393d",
+      "foreground_path": "evidence/screenshots/s5_007_output_size_display_clarity/font_1_3/foreground.txt",
+      "foreground_sha256": "2be5755a214b04b25912bf28538a52c8cca9ae639c43383d65a7a00334677618",
+      "uiautomator_path": "evidence/screenshots/s5_007_output_size_display_clarity/font_1_3/uiautomator.xml",
+      "uiautomator_sha256": "f06b4e725ce26f5e2d734d5b411bc0f01ee4c6a35c01540f649987fdd86a2cf7",
+      "semantic_checks": ["font_scale=1.3 verified before flow", "MEETS LIMIT", "Actual file: 985,470 bytes ≤ 1,000,000-byte limit — PASS", "unit disclosure", "no clipping observed"]
+    }
+  },
+  "save_fidelity": {
+    "action": "real in-app Save copy",
+    "result_path": "cache/share/result.jpg inside com.afradadmedia.reducephotosize",
+    "saved_path": "Pictures/Reduce Photo Size/UploadReady_20260930_060112.jpg",
+    "result_bytes": 981182,
+    "saved_bytes": 981182,
+    "result_sha256": "b9ee1bb65ce9cf7012665df5ea24690feefe8866a93243fd988c4f9a43d7de71",
+    "saved_sha256": "b9ee1bb65ce9cf7012665df5ea24690feefe8866a93243fd988c4f9a43d7de71",
+    "bytes_equal": true,
+    "sha256_equal": true,
+    "result": "PASS"
+  },
+  "source_scope": {
+    "changed_app_source_files": [
+      "app/src/main/java/com/afradadmedia/reducephotosize/MainActivity.kt",
+      "app/src/main/java/com/afradadmedia/reducephotosize/FormatUtils.java",
+      "app/src/test/java/com/afradadmedia/reducephotosize/TargetLimitParserTest.java"
+    ],
+    "protected_files_unchanged": true,
+    "product_behavior_scope": "presentation-only exact-byte proof and disclosure"
+  },
+  "play_handoff": "PAUSED_UNTIL_TASK_S5_007_CHAT_HUMAN_REVIEW",
+  "visual_approval": "NOT_SELF_APPROVED_CHAT_HUMAN_REQUIRED"
+}

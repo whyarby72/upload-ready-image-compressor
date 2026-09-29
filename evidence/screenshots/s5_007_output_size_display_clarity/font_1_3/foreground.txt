@@ -1,0 +1,2 @@
+  mCurrentFocus=Window{1ab5174 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+  mFocusedApp=ActivityRecord{95503330 u0 com.afradadmedia.reducephotosize/.MainActivity t123}
