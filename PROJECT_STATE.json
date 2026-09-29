@@ -108,7 +108,7 @@
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",
     "remote_visibility": "PRIVATE",
-    "last_pushed_task_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+    "last_pushed_task_commit": "e53fd2113d2e359f640dda89f241871b51ccbdd8",
     "evidence_closure_base_commit": "d165d6b325258346b9f55c76b3dbbfc12aa1a538",
     "last_pushed_task_commit_scope": "CHAT_S5_006_EVIDENCE_REPAIR_STATE_RECONCILIATION"
   },
@@ -553,6 +553,7 @@
       "optional formatting-only unit test"
     ],
     "tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+    "evidence_closure_commit": "e53fd2113d2e359f640dda89f241871b51ccbdd8",
     "evidence_proof": "evidence/play/S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_PROOF.json",
     "debug_apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce",
     "formatting_unit_tests": "PASS",
