@@ -7,7 +7,7 @@
     "repo": "upload-ready-image-compressor",
     "current_stage": "S5_OUTPUT_SIZE_TRUTH_CLARITY_REWORK",
     "canonical_decision": "TEST",
-    "progress_percent": 98,
+    "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
   },
   "artifacts": {
@@ -39,9 +39,9 @@
   },
   "current_task": {
     "id": "TASK-S5-007",
-    "owner": "CODEX",
-    "next_owner": "CHAT + HUMAN",
-    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
+    "owner": "CHAT + HUMAN",
+    "next_owner": "HUMAN",
+    "status": "CHAT_CLARITY_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
     "opened_from": "TASK-S5-006",
     "reopened_reason": "Human manual evidence showed decimal-SI KB/MB labels can differ from Android file-manager labels despite byte-identical saved output.",
     "approval_token": "TASK-S5-007_OUTPUT_SIZE_DISPLAY_CLARITY_IMPLEMENTATION",
@@ -59,7 +59,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_HOLD_OUTPUT_SIZE_DISPLAY_CLARITY",
+    "internal_test": "S5_HOLD_HUMAN_OUTPUT_SIZE_CLARITY_APPROVAL",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -80,13 +80,13 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "CHAT + HUMAN review is required after machine QA before Play handoff may resume."
+    "Explicit human approval for TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY has not yet been recorded."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "CHAT + HUMAN reviews TASK-S5-007 machine QA evidence and presentation clarity. Play handoff remains paused.",
+  "next_action": "Human decides TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY based on CHAT review and runtime evidence. Approval closes this clarity corrective only; Play/signing/release authorities remain separate.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -530,7 +530,7 @@
     "chat_premium_review_ref": "docs/qa/TASK_S5_006_CHAT_GENERATED_HERO_PREMIUM_REVIEW_v1.0.md"
   },
   "s5_output_size_display_clarity": {
-    "status": "IMPLEMENTED_MACHINE_QA_PASS_CHAT_HUMAN_REVIEW_READY",
+    "status": "CHAT_CLARITY_REVIEW_PASS_HUMAN_APPROVAL_PENDING",
     "observed_at": "2026-09-30",
     "trigger": "Human manual emulator + saved-file evidence review",
     "audit_ref": "docs/qa/TASK_S5_007_OUTPUT_SIZE_DISPLAY_TRUTH_AUDIT_v1.0.md",
@@ -553,13 +553,17 @@
       "optional formatting-only unit test"
     ],
     "tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
-    "evidence_closure_commit": "e53fd2113d2e359f640dda89f241871b51ccbdd8",
+    "evidence_closure_commit": "b7a5191d5562b50e7d5869c81946f3bc2d270527",
     "evidence_proof": "evidence/play/S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_PROOF.json",
     "debug_apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce",
     "formatting_unit_tests": "PASS",
     "protected_domain_diff": "NONE",
     "saved_file_fidelity": "PASS_BYTES_AND_SHA256_EQUAL",
-    "next_owner": "CHAT + HUMAN"
+    "next_owner": "CHAT + HUMAN",
+    "machine_qa_status": "PASS",
+    "chat_review_status": "PASS",
+    "chat_review_ref": "docs/qa/TASK_S5_007_CHAT_OUTPUT_SIZE_DISPLAY_CLARITY_REVIEW_v1.0.md",
+    "human_review_status": "PENDING_EXPLICIT_HUMAN_APPROVAL"
   },
   "qa_build_authority": {
     "task": "TASK-S5-007",
