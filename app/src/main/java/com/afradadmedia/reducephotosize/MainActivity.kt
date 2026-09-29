@@ -329,7 +329,21 @@ private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Uni
     val result = state.result; val pass = result.state == CompressionResult.State.PASS || result.state == CompressionResult.State.ALREADY_READY; val reduced = result.state == CompressionResult.State.REDUCED || result.state == CompressionResult.State.ALREADY_SMALL; val notMet = !pass && !reduced; val accent = if (pass) Success else if (reduced) Info else Warning; val tint = if (pass) SuccessSurface else if (reduced) InfoSurface else WarningSurface
     val resultValueStyle = WarmInkTypography.displayLarge.copy(fontSize = if (result.outputBytes >= 10_000_000L) 36.sp else if (result.outputBytes >= 1_000_000L) 42.sp else 50.sp, lineHeight = if (result.outputBytes >= 10_000_000L) 40.sp else if (result.outputBytes >= 1_000_000L) 46.sp else 54.sp)
     Surface(color = SurfaceWarm, shape = RoundedCornerShape(28.dp), modifier = Modifier.fillMaxWidth().border(1.dp, Outline, RoundedCornerShape(28.dp))) { Column(Modifier.padding(14.dp)) { PreviewBox(state.resultPreview, Modifier.fillMaxWidth().height(252.dp), ContentScale.Fit); Spacer(Modifier.height(16.dp)); Surface(color = tint, shape = RoundedCornerShape(50)) { Text(if (pass) "MEETS LIMIT" else if (reduced) "SMALLER COPY" else "TARGET NOT MET", color = accent, style = WarmInkTypography.labelMedium, modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp)) }; Spacer(Modifier.height(8.dp)); Text(FormatUtils.bytes(result.outputBytes), color = InkDeep, style = resultValueStyle, maxLines = 1, softWrap = false, modifier = Modifier.fillMaxWidth()) } }
-    Spacer(Modifier.height(14.dp)); Surface(color = InfoSurface, shape = RoundedCornerShape(16.dp), modifier = Modifier.fillMaxWidth()) { Text(if (pass) "${result.outputBytes} bytes ≤ ${result.targetBytes} bytes — PASS" else if (reduced) "No upload limit entered — no PASS claim" else "${result.outputBytes} bytes > ${result.targetBytes} bytes — NOT_MET", color = accent, style = WarmInkTypography.bodyMedium, modifier = Modifier.padding(14.dp)) }
+    Spacer(Modifier.height(14.dp)); Surface(color = InfoSurface, shape = RoundedCornerShape(16.dp), modifier = Modifier.fillMaxWidth()) {
+        Column(Modifier.padding(14.dp)) {
+            Text(
+                if (pass) "Actual file: ${FormatUtils.exactBytes(result.outputBytes)} bytes ≤ ${FormatUtils.exactBytes(result.targetBytes)}-byte limit — PASS"
+                else if (reduced) "Actual file: ${FormatUtils.exactBytes(result.outputBytes)} bytes · no upload limit entered"
+                else "Actual file: ${FormatUtils.exactBytes(result.outputBytes)} bytes > ${FormatUtils.exactBytes(result.targetBytes)}-byte limit — NOT_MET",
+                color = accent,
+                style = WarmInkTypography.bodyMedium
+            )
+            if (reduced) {
+                Spacer(Modifier.height(4.dp)); Text("No PASS claim", color = TextSecondary, style = WarmInkTypography.bodyMedium)
+            }
+        }
+    }
+    Spacer(Modifier.height(8.dp)); Text("Size units here: 1 KB = 1,000 bytes. Some file managers calculate KB using 1,024 bytes.", color = TextSecondary, style = WarmInkTypography.labelMedium, modifier = Modifier.fillMaxWidth())
     if (notMet) { Spacer(Modifier.height(10.dp)); Text("Try a higher limit or a different photo.", color = Warning, style = WarmInkTypography.bodyMedium, modifier = Modifier.fillMaxWidth()) }
     Spacer(Modifier.height(14.dp)); BeforeAfterCard(state.sourcePreview, state.resultPreview, result); Spacer(Modifier.height(8.dp)); Text("${result.width} × ${result.height} · JPEG · original untouched", color = TextSecondary, style = WarmInkTypography.bodyMedium)
     Spacer(Modifier.height(20.dp)); PrimaryButton(if (notMet) "Save current copy" else "Save copy", R.drawable.ic_download, { onEvent(MainUiEvent.Save) }); Spacer(Modifier.height(10.dp)); Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(20.dp)).background(SurfaceWarm).border(1.dp, Outline, RoundedCornerShape(20.dp))) { CompactAction("Share", R.drawable.ic_share, Modifier.weight(1f)) { onEvent(MainUiEvent.Share) }; Box(Modifier.width(1.dp).height(48.dp).background(Outline)); CompactAction("Compress another", R.drawable.ic_repeat, Modifier.weight(1f)) { onEvent(MainUiEvent.CompressAnother) } }

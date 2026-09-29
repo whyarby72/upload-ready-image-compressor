@@ -5,6 +5,19 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class TargetLimitParserTest {
+    @Test public void exactBytesUseGroupedDecimalIntegers() {
+        assertEquals("0", FormatUtils.exactBytes(0L));
+        assertEquals("999", FormatUtils.exactBytes(999L));
+        assertEquals("1,000", FormatUtils.exactBytes(1_000L));
+        assertEquals("495,669", FormatUtils.exactBytes(495_669L));
+        assertEquals("1,000,000", FormatUtils.exactBytes(1_000_000L));
+    }
+
+    @Test public void roundedByteSummaryRemainsDecimalSi() {
+        assertEquals("496 KB", FormatUtils.bytes(495_669L));
+        assertEquals("1.50 MB", FormatUtils.bytes(1_500_000L));
+    }
+
     @Test public void targetDisplayUsesExactDecimalSiFractions() {
         assertEquals("10.5 KB", FormatUtils.target(10_500L));
         assertEquals("1.5 MB", FormatUtils.target(1_500_000L));

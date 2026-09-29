@@ -17,6 +17,10 @@ final class FormatUtils {
         return bytes + " B";
     }
 
+    static String exactBytes(long bytes) {
+        return String.format(Locale.US, "%,d", bytes);
+    }
+
     static String target(long bytes) {
         if (bytes >= 1_000_000L) return decimalSi(bytes, 1_000_000L, "MB");
         if (bytes >= 1_000L) return decimalSi(bytes, 1_000L, "KB");
