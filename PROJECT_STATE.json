@@ -5,7 +5,7 @@
     "canonical_name": "REDUCE PHOTO SIZE: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH",
+    "current_stage": "S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING",
     "canonical_decision": "TEST",
     "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR"
@@ -39,19 +39,24 @@
   },
   "current_task": {
     "id": "S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH",
-    "owner": "CHAT",
-    "next_owner": "CHAT",
-    "status": "READY_TO_PREPARE_CURRENT_SOURCE_HANDOFF",
+    "owner": "HUMAN",
+    "next_owner": "HUMAN",
+    "status": "HANDOFF_REFRESH_PREPARED_UNSIGNED_CANDIDATE_MATERIALIZATION_APPROVAL_PENDING",
     "opened_from": "TASK-S5-006 + TASK-S5-007",
-    "reason": "All current S5 product-quality corrective gates are human-closed, but the existing Play handoff candidate predates the visual and size-display rework.",
-    "play_action_authorized": false
+    "reason": "Current S5 product-quality gates are closed; Play handoff has been refreshed to the latest tested source, but the unsigned AAB must be materialized and hash-bound before any signing request.",
+    "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md",
+    "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v2.0.json",
+    "proof_ref": "evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json",
+    "prepared_materialization_prompt": "prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md",
+    "materialization_authorized": false,
+    "provider_action_authorized": false
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_READY_FOR_CURRENT_SOURCE_PLAY_HANDOFF_REFRESH",
+    "internal_test": "S5_INTERNAL_TEST_HANDOFF_REFRESHED_UNSIGNED_CANDIDATE_MATERIALIZATION_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -72,14 +77,15 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "The existing Play Internal Testing candidate is pre-rework provenance and must be refreshed against the latest tested source/evidence before any upload.",
-    "Signing and Play Console upload/submission remain separate human actions and are not authorized."
+    "The latest unsigned release AAB is QA-proven but not yet materialized under repository evidence as the current pre-sign Play candidate.",
+    "Signing and all Play Console provider actions remain separately unauthorized.",
+    "Provider-bound facts such as app existence, account type/date, Play App Signing state, upload-key fingerprint, versionCode availability, tester list, and feedback channel remain unknown."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Prepare a refreshed Play Internal Testing handoff/readiness package bound to the latest tested source and artifacts. Do not sign, upload, submit, advance S6, promote BUILD, freeze, release, or publish.",
+  "next_action": "Human decides whether to authorize S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY. This would rebuild or verify and evidence-bind the unsigned AAB without signing or Play Console actions.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -446,27 +452,35 @@
     "broader_authority_granted": false
   },
   "s5_play_internal_testing_handoff": {
-    "status": "READY_FOR_CURRENT_SOURCE_REFRESH_AFTER_S5_QUALITY_CLOSURE",
-    "prepared_at": "2026-09-28",
-    "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md",
-    "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v1.0.json",
-    "candidate_aab": {
-      "path": "evidence/artifacts/s5_005_geometry_final/app-release.aab",
-      "bytes": 7951808,
-      "sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02",
+    "status": "REFRESHED_CURRENT_SOURCE_UNSIGNED_CANDIDATE_MATERIALIZATION_PENDING",
+    "prepared_at": "2026-09-30",
+    "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md",
+    "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v2.0.json",
+    "proof_ref": "evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json",
+    "supersedes_handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v2.0.md",
+    "tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+    "current_qa_aab_reference": {
+      "build_path": "app/build/outputs/bundle/release/app-release.aab",
+      "bytes": 7968406,
+      "sha256": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01",
       "signing_state": "UNSIGNED",
+      "repository_materialized": false,
       "play_upload_eligible": false,
-      "disposition": "STALE_PRE_REWORK_PROVENANCE_ONLY_DO_NOT_UPLOAD"
+      "disposition": "QA_PROVENANCE_REFERENCE_MUST_BE_MATERIALIZED_AND_REHASHED_BEFORE_SIGNING"
     },
     "target_sdk": 36,
     "current_play_target_api_requirement": "API_36_FOR_NEW_MOBILE_APP_SUBMISSIONS_AS_OF_2026_08_31",
-    "next_owner": "CHAT",
+    "quality_gates": {
+      "task_s5_006": "PASS_HUMAN_APPROVED_CLOSED",
+      "task_s5_007": "PASS_HUMAN_APPROVED_CLOSED"
+    },
+    "materialization_prompt": "prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md",
+    "materialization_authorized": false,
+    "next_owner": "HUMAN",
     "provider_action_authorized": false,
-    "resume_condition": "SATISFIED_PRODUCT_QUALITY_GATES; refresh candidate/readiness against latest tested source before any Play action.",
-    "latest_tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
-    "latest_debug_apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce",
-    "latest_release_aab_sha256_from_qa": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01",
-    "latest_release_aab_disposition": "QA_HASH_ONLY_NOT_YET_PROMOTED_TO_PLAY_CANDIDATE"
+    "signing_authorized": false,
+    "upload_authorized": false,
+    "rollout_authorized": false
   },
   "s5_visual_productization_rework": {
     "status": "PASS_HUMAN_APPROVED_CLOSED",
