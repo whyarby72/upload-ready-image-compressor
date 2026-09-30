@@ -6,6 +6,7 @@
   "source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
   "branch": "task/TASK-S5-007",
   "repository_head_at_materialization": "695d8e78f8a1f8502e200d9ce33f55854c1709bf",
+  "materialization_commit": "f191462281354dc9329b157c27de10919e463983",
   "artifact": {
     "input_path": "app/build/outputs/bundle/release/app-release.aab",
     "materialized_path": "evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab",

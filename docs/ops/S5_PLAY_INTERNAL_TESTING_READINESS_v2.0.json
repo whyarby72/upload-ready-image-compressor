@@ -79,7 +79,7 @@
     "prompt": "prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md",
     "materialized_path": "evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab",
     "materialization_proof": "evidence/play/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_PROOF.json",
-    "materialization_commit": "PENDING_COMMIT",
+    "materialization_commit": "f191462281354dc9329b157c27de10919e463983",
     "rebuild_required": false,
     "acceptance": [
       "exact tested source binding",

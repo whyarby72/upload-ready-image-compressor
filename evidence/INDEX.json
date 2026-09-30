@@ -269,8 +269,8 @@
     },
     {
       "path": "evidence/play/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_PROOF.json",
-      "bytes": 1945,
-      "sha256": "8f48b0e5169c97d497e3e3f2ecceb9b06b5ad3f3dc318d999e97b3d052a37f89"
+      "bytes": 2017,
+      "sha256": "8b8a0d4e21255f44bf3138767f14f9e1d879659850a1e71a549ca51d43a37c43"
     },
     {
       "path": "evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json",

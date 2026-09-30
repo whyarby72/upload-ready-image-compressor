@@ -47,6 +47,7 @@ Human separately authorizes signing and observes provider-bound Play Console act
 ## Materialized unsigned candidate
 
 - Source commit: `27199bf6f174e55dc835d0d9898e456d3848001c`
+- Materialization commit: `f191462281354dc9329b157c27de10919e463983`
 - AAB: `evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab`
 - Bytes: `7,968,406`
 - SHA-256: `a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
