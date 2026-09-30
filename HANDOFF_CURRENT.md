@@ -123,3 +123,21 @@ Do not infer:
 - provider warnings/errors.
 
 These require observation by the legitimately authorized Play Console account holder.
+
+
+## Physical smartphone final manual review — 2026-09-30
+
+Human disposition:
+`PASS_HUMAN_ATTESTED`
+
+The human explicitly declared the complete final manual smartphone checklist PASS.
+
+Closure:
+`docs/qa/S5_HUMAN_PHYSICAL_SMARTPHONE_FINAL_MANUAL_REVIEW_CLOSURE_v1.0.md`
+
+Observed app/file-manager KB label differences were accepted as display-convention and rounding behavior; exact bytes remain authoritative.
+
+Remaining next decision:
+`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
+
+No signing / Play mutation / upload / rollout / S6 / BUILD promotion / Artifact Freeze / release / publication authority is implied.
