@@ -522,3 +522,16 @@
 - cleared current S5 product-quality corrective blockers;
 - moved next action to refreshed Play Internal Testing handoff preparation against latest tested source;
 - kept signing, Play upload/submission, S6, BUILD promotion, Artifact Freeze, release and publication unauthorized.
+
+
+# 2026-09-30 — Refreshed Play Internal testing handoff prepared
+
+- replaced the stale pre-rework next-action handoff with v3.0 bound to the latest tested source;
+- created readiness v2.0 and a handoff refresh proof;
+- rechecked mutable Google Play requirements against official Google sources;
+- confirmed project targetSdk 36 meets the current mobile submission minimum;
+- bound the latest QA AAB reference: 7,968,406 bytes, SHA-256 a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01;
+- marked that AAB as unsigned, not repository-materialized, and not Play-upload-eligible;
+- prepared a non-signing Codex materialization prompt but did not authorize execution;
+- retained provider-bound account/signing/tester/version state as UNKNOWN;
+- did not authorize key creation/rotation, signing, Play Console mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
