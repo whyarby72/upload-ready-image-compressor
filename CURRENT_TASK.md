@@ -1,65 +1,113 @@
 # CURRENT_TASK.md
 
 Task ID: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
-Owner: CHAT
-Reviewer: HUMAN
-Stage: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
+Owner: HUMAN
+Reviewer: CHAT
+Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Priority: HIGH
-Status: READY_TO_PREPARE_CURRENT_SOURCE_HANDOFF
+Status: HANDOFF_REFRESH_PREPARED_UNSIGNED_CANDIDATE_MATERIALIZATION_APPROVAL_PENDING
 
-## Trigger
+## Product-quality status
 
-TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION is now human-approved and closed.
+TASK-S5-005 geometry:
+`PASS_HUMAN_APPROVED`
 
-TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY is also human-approved and closed.
+TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION:
+`PASS_HUMAN_APPROVED_CLOSED`
 
-All current S5 product-quality corrective gates are therefore closed.
+TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY:
+`PASS_HUMAN_APPROVED_CLOSED`
 
-## Why Play handoff still needs refresh
+No current S5 product-quality corrective gate remains open.
 
-The existing Play Internal Testing handoff candidate references a pre-rework provenance artifact from before the TASK-S5-006 visual productization and TASK-S5-007 Result clarity changes.
+## Refreshed Play handoff package
 
-It must not be uploaded as the current candidate.
+Human handoff:
+`docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md`
 
-Latest tested source:
+Readiness:
+`docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v2.0.json`
+
+Refresh proof:
+`evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json`
+
+The v3.0 handoff supersedes the old v2.0 handoff for next-action purposes.
+
+## Current tested source
+
 `27199bf6f174e55dc835d0d9898e456d3848001c`
 
-Latest TASK-S5-007 debug APK SHA-256:
-`843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce`
+No later app/source mutation exists in the reviewed branch history through the handoff preparation base.
 
-Latest release AAB SHA-256 recorded by QA:
+## Current QA AAB reference
+
+Build path:
+`app/build/outputs/bundle/release/app-release.aab`
+
+Recorded bytes:
+`7,968,406`
+
+Recorded SHA-256:
 `a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
 
-That AAB hash is QA provenance only until a refreshed Play handoff/readiness package explicitly binds it as the next candidate.
+Signing:
+`UNSIGNED`
 
-## Closed gates
+Repository materialization:
+`FALSE`
 
-TASK-S5-006:
-`PASS_HUMAN_APPROVED_CLOSED`
+Play upload eligibility:
+`FALSE`
 
-Closure:
-`docs/qa/TASK_S5_006_HUMAN_PREMIUM_VISUAL_PRODUCTIZATION_CLOSURE_v1.0.md`
+Disposition:
+`QA_PROVENANCE_REFERENCE_MUST_BE_MATERIALIZED_AND_REHASHED_BEFORE_SIGNING`
 
-Approval ref:
-`USER_OPTION_1_2026-09-30_TASK_S5_006_PREMIUM_QUALITY_VISUAL_PRODUCTIZATION_APPROVAL`
+## Current provider facts
 
-TASK-S5-007:
-`PASS_HUMAN_APPROVED_CLOSED`
+Verified from official Google sources on 2026-09-30:
+- new mobile submissions require target API 36 or higher;
+- current project targets API 36;
+- Internal testing supports up to 100 testers;
+- new personal accounts created after 2023-11-13 may have the later 12-testers / 14-days closed-test production-access requirement;
+- Play App Signing uses a developer-held upload key to sign the bundle before upload.
 
-## Next action
+## Pending human decision
 
-Prepare a refreshed Play Internal Testing handoff/readiness package against the latest tested source and current artifact hashes.
+Required exact scope:
+`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
 
-This preparation may update docs/evidence/state only.
+Prepared work order:
+`prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md`
+
+If authorized, this scope allows only:
+- verify or rebuild the unsigned current-source release AAB;
+- run non-provider build/test checks;
+- copy the unsigned AAB into a dedicated evidence artifact namespace;
+- record bytes/SHA-256 and source binding;
+- update evidence/docs/state.
 
 It does NOT authorize:
+- upload-key/keystore creation or rotation;
 - signing;
-- Play Console mutation;
-- Play upload or submission;
+- Play Console app creation/mutation;
+- upload;
+- tester-list mutation;
+- rollout;
 - S6;
-- canonical BUILD promotion;
+- BUILD promotion;
 - Artifact Freeze;
 - release;
 - publication.
 
-Human action/approval remains required before any irreversible Play/signing step.
+## Provider unknowns
+
+Remain unknown until a legitimately authorized human checks Play Console:
+- whether the app already exists;
+- account type/date;
+- release-to-testing permission;
+- Play App Signing state;
+- upload-key state/fingerprint;
+- versionCode 1 availability;
+- tester identities/count;
+- feedback channel;
+- provider warnings/errors.
