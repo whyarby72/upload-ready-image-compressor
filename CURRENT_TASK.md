@@ -1,11 +1,11 @@
 # CURRENT_TASK.md
 
-Task ID: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
-Owner: CODEX
-Reviewer: CHAT + HUMAN
+Task ID: S5_PLAY_PROVIDER_PREFLIGHT
+Owner: HUMAN
+Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Priority: HIGH
-Status: UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED
+Status: PROVIDER_PREFLIGHT_REQUIRED_BEFORE_SIGNING_APPROVAL
 
 ## Product-quality status
 
@@ -18,123 +18,71 @@ TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION:
 TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY:
 `PASS_HUMAN_APPROVED_CLOSED`
 
-No current S5 product-quality corrective gate remains open.
+Physical smartphone final manual review:
+`PASS_HUMAN_ATTESTED`
 
-## Refreshed Play handoff package
+No current product-quality corrective gate is open.
 
-Human handoff:
-`docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md`
+## Current unsigned Play candidate
 
-Readiness:
-`docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v2.0.json`
-
-Refresh proof:
-`evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json`
-
-The v3.0 handoff supersedes the old v2.0 handoff for next-action purposes.
-
-## Current tested source
-
+Source commit:
 `27199bf6f174e55dc835d0d9898e456d3848001c`
 
-No later app/source mutation exists in the reviewed branch history through the handoff preparation base.
+Materialization commit:
+`f191462281354dc9329b157c27de10919e463983`
 
-## Current QA AAB reference
+Evidence-binding commit:
+`5c61065768b131d14ffc6beddaac15842fc74cb8`
 
-Build path:
-`app/build/outputs/bundle/release/app-release.aab`
+Artifact:
+`evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab`
 
-Recorded bytes:
+Bytes:
 `7,968,406`
 
-Recorded SHA-256:
+SHA-256:
 `a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
 
 Signing:
 `UNSIGNED`
 
-Repository materialization:
+Repository materialized:
+`TRUE`
+
+Play upload eligible:
 `FALSE`
 
-Play upload eligibility:
+Rebuild required:
 `FALSE`
 
-Disposition:
-`QA_PROVENANCE_REFERENCE_MUST_BE_MATERIALIZED_AND_REHASHED_BEFORE_SIGNING`
+CHAT audit:
+`docs/qa/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_CHAT_AUDIT_v1.0.md`
 
-## Current provider facts
+## Current gate
 
-Verified from official Google sources on 2026-09-30:
-- new mobile submissions require target API 36 or higher;
-- current project targets API 36;
-- Internal testing supports up to 100 testers;
-- new personal accounts created after 2023-11-13 may have the later 12-testers / 14-days closed-test production-access requirement;
-- Play App Signing uses a developer-held upload key to sign the bundle before upload.
+Before any signing approval, human must perform a provider-bound Play Console preflight.
 
-## Human approval recorded
+Read-only observations required:
+- whether the app/package already exists in the intended Play Console account;
+- account type/date where relevant;
+- permission to release apps to testing;
+- Play App Signing enrollment/configuration;
+- authorized upload-key availability and non-secret certificate fingerprint;
+- whether versionCode 1 is available;
+- intended internal tester setup;
+- feedback email/URL;
+- any provider warnings/blockers.
 
-Required exact scope:
-`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
+Do not infer provider state from repository state.
 
-Prepared work order:
-`prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md`
+## Authority boundary
 
-If authorized, this scope allows only:
-- verify or rebuild the unsigned current-source release AAB;
-- run non-provider build/test checks;
-- copy the unsigned AAB into a dedicated evidence artifact namespace;
-- record bytes/SHA-256 and source binding;
-- update evidence/docs/state.
-
-It does NOT authorize:
-- upload-key/keystore creation or rotation;
+Not authorized:
+- key creation or rotation;
 - signing;
-- Play Console app creation/mutation;
-- upload;
-- tester-list mutation;
-- rollout;
-- S6;
-- BUILD promotion;
-- Artifact Freeze;
-- release;
-- publication.
-
-## Provider unknowns
-
-Remain unknown until a legitimately authorized human checks Play Console:
-- whether the app already exists;
-- account type/date;
-- release-to-testing permission;
-- Play App Signing state;
-- upload-key state/fingerprint;
-- versionCode 1 availability;
-- tester identities/count;
-- feedback channel;
-- provider warnings/errors.
-
-
-## Authorization — 2026-09-30
-
-Approved scope:
-`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
-
-Approval ref:
-`USER_OPTION_1_2026-09-30_S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY`
-
-Next owner:
-`HUMAN`
-
-Codex must execute:
-`prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md`
-
-Stop after:
-`UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED`
-
-Still NOT authorized:
-- signing;
-- key creation/rotation;
 - Play Console mutation;
-- upload;
+- app creation;
+- AAB upload;
 - tester mutation;
 - rollout;
 - S6;
@@ -143,19 +91,8 @@ Still NOT authorized:
 - release;
 - publication.
 
-## Materialization closure
+## Next action
 
-Source commit:
-`27199bf6f174e55dc835d0d9898e456d3848001c`
+Human performs the read-only/provider-bound preflight and reports the observed facts to CHAT.
 
-Materialized unsigned AAB:
-`evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab`
-
-Bytes: `7,968,406`
-
-SHA-256:
-`a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
-
-The surviving QA AAB matched; no rebuild was required. Signing approval is required next. No signing or provider action was performed.
-
-Next owner: `HUMAN`
+Only after reconciliation may a separately scoped signing approval be requested.
