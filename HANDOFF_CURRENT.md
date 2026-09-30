@@ -4,54 +4,88 @@ Product: REDUCE PHOTO SIZE: KB LIMIT
 Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Decision: TEST
 Progress: 99%
-Current task: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
+Current task: S5_PLAY_PROVIDER_PREFLIGHT
 Next owner: HUMAN
-Task status: UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED
+Task status: PROVIDER_PREFLIGHT_REQUIRED_BEFORE_SIGNING_APPROVAL
 
-## Evidence summary
-- 0.1.0: 1
-- 000; existing bytes() summary regression PASS: 1
-- 2026-09-27: 1
-- 2026-09-29: 1
-- 2026-09-30: 4
-- 34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814: 1
-- FAIL: 1
-- HUMAN_ACTION_REQUIRED: 3
-- HUMAN_REVIEW_REQUIRED: 6
-- PASS: 129
-- PROVENANCE_ONLY_INVALIDATED: 1
-- REWORK: 1
-- evidence/play/S5_005_FINAL_GEOMETRY_AND_NOT_MET_PROOF.json: 1
-- evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_360x800.png;evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_320x640.png;evidence/screenshots/s5_005_final_recap/requirement_font_1_3x_api36.png: 1
-- evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/screenshot.png;evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/foreground.txt;evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/uiautomator.xml; evidence/play/S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_PROOF.json: 1
-- six target choices: 1
-- source-5c58604: 2
+## Current unsigned Play candidate
+
+Source commit:
+`27199bf6f174e55dc835d0d9898e456d3848001c`
+
+Materialization commit:
+`f191462281354dc9329b157c27de10919e463983`
+
+Evidence-binding commit:
+`5c61065768b131d14ffc6beddaac15842fc74cb8`
+
+Artifact:
+`evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab`
+
+Bytes:
+`7,968,406`
+
+SHA-256:
+`a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
+
+Signing:
+`UNSIGNED`
+
+Repository materialized:
+`TRUE`
+
+Play upload eligible:
+`FALSE`
+
+Rebuild required:
+`FALSE`
+
+Proof:
+`evidence/play/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_PROOF.json`
+
+CHAT audit:
+`docs/qa/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_CHAT_AUDIT_v1.0.md`
+
+## Product-quality status
+
+- TASK-S5-005 geometry: PASS_HUMAN_APPROVED
+- TASK-S5-006 premium visual productization: PASS_HUMAN_APPROVED_CLOSED
+- TASK-S5-007 output-size display clarity: PASS_HUMAN_APPROVED_CLOSED
+- physical smartphone final manual review: PASS_HUMAN_ATTESTED
+
+No product-quality corrective gate is open.
+
+## Current gate
+
+Before signing approval, HUMAN must observe provider-bound Play Console facts:
+
+- whether the app/package already exists in the intended account;
+- account type/date where relevant;
+- permission to release apps to testing;
+- Play App Signing enrollment/configuration;
+- authorized upload-key availability and non-secret certificate fingerprint;
+- whether versionCode 1 is available;
+- intended internal tester setup;
+- feedback email/URL;
+- any provider warnings/blockers.
+
+Do not infer these from repository state.
 
 ## Authority
-- build_authorized: False
-- artifact_freeze: False
-- release_authorized: False
-- publication_authorized: False
 
-## Blockers
-- Signing and all Play Console provider actions remain separately unauthorized.
-- Provider-bound facts such as app existence, account type/date, Play App Signing state, upload-key fingerprint, versionCode availability, tester list, and feedback channel remain unknown.
-
-## Human decisions required
-- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
-- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
+Not authorized:
+- key creation/rotation;
+- signing;
+- Play Console mutation or app creation;
+- upload;
+- tester mutation;
+- rollout;
+- S6;
+- BUILD promotion;
+- Artifact Freeze;
+- release;
+- publication.
 
 ## Next action
-Human separately authorizes signing and observes provider-bound Play Console actions; no provider action is authorized by this materialization.
 
-## Materialized unsigned candidate
-
-- Source commit: `27199bf6f174e55dc835d0d9898e456d3848001c`
-- Materialization commit: `f191462281354dc9329b157c27de10919e463983`
-- AAB: `evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab`
-- Bytes: `7,968,406`
-- SHA-256: `a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
-- Surviving QA AAB matched; rebuild required: `FALSE`
-- Signing state: `UNSIGNED`
-- Play upload eligibility: `FALSE`
-- Proof: `evidence/play/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_PROOF.json`
+Human performs read-only/provider-bound Play Console preflight and reports observed facts to CHAT.
