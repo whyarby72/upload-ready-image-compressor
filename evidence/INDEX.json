@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 315,
+  "file_count": 316,
   "files": [
     {
       "path": "evidence/artifacts/.DS_Store",
@@ -1576,6 +1576,11 @@
       "path": "evidence/unit/QualitySearchHostTest.log",
       "bytes": 15,
       "sha256": "2f4e950550489f74837533584223995bde7e3e58ca6d394d0d86cf90821cf324"
+    },
+    {
+      "path": "evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json",
+      "bytes": 2365,
+      "sha256": "7ef413a73b5b409fc073ec35b6088f95050558b4a80d37f8257e051afe32e1c7"
     }
   ]
 }
