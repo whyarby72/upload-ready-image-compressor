@@ -5,7 +5,7 @@
   "package_name": "com.afradadmedia.reducephotosize",
   "stage": "S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING",
   "canonical_decision": "TEST",
-  "handoff_status": "REFRESHED_CURRENT_SOURCE_PROVIDER_ACTION_NOT_AUTHORIZED",
+  "handoff_status": "UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED",
   "current_branch": "task/TASK-S5-007",
   "preparation_base_head": "13b88c9ac7eb8e578cd9459d215530a49facd8a3",
   "tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
@@ -37,9 +37,9 @@
       "bytes": 7968406,
       "sha256": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01",
       "signing_state": "UNSIGNED",
-      "repository_materialized": false,
+      "repository_materialized": true,
       "play_upload_eligible": false,
-      "disposition": "QA_PROVENANCE_REFERENCE_MUST_BE_MATERIALIZED_AND_REHASHED_BEFORE_SIGNING"
+      "disposition": "CURRENT_UNSIGNED_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED"
     }
   },
   "quality_gates": {
@@ -75,8 +75,12 @@
   },
   "pre_sign_materialization": {
     "required": true,
-    "authorized": false,
+    "authorized": true,
     "prompt": "prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md",
+    "materialized_path": "evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab",
+    "materialization_proof": "evidence/play/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_PROOF.json",
+    "materialization_commit": "PENDING_COMMIT",
+    "rebuild_required": false,
     "acceptance": [
       "exact tested source binding",
       "fresh or surviving unsigned AAB independently hashed",
@@ -111,7 +115,7 @@
     "publication": false
   },
   "next_owner": "HUMAN",
-  "next_decision": "AUTHORIZE_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY",
+  "next_decision": "AUTHORIZE_SIGNING_ONLY_AFTER_PROVIDER_PREFLIGHT",
   "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md",
   "provider_action_authorized": false
 }

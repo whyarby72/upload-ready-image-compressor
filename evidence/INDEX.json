@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "file_count": 316,
+  "file_count": 318,
   "files": [
     {
       "path": "evidence/artifacts/.DS_Store",
@@ -66,6 +66,11 @@
       "path": "evidence/artifacts/s5_005_geometry_final/app-release.aab",
       "bytes": 7951808,
       "sha256": "e1a83becf5f0dfaab2dce38be5d1dc5f212a6c313a8155810317d0d878104e02"
+    },
+    {
+      "path": "evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab",
+      "bytes": 7968406,
+      "sha256": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01"
     },
     {
       "path": "evidence/build/ANDROID_TECHNICAL_PROOF.json",
@@ -261,6 +266,16 @@
       "path": "evidence/play/S5_ARTIFACT_PROOF.json",
       "bytes": 4473,
       "sha256": "c5b70d94ebfd6c7469bc7fb6cdfbada48633c8a5c5a4695fb2e1f2cc45bc2b85"
+    },
+    {
+      "path": "evidence/play/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_PROOF.json",
+      "bytes": 1945,
+      "sha256": "8f48b0e5169c97d497e3e3f2ecceb9b06b5ad3f3dc318d999e97b3d052a37f89"
+    },
+    {
+      "path": "evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json",
+      "bytes": 2365,
+      "sha256": "7ef413a73b5b409fc073ec35b6088f95050558b4a80d37f8257e051afe32e1c7"
     },
     {
       "path": "evidence/play/S5_PRE_IDENTITY_ARTIFACT_PROOF.json",
@@ -1576,11 +1591,6 @@
       "path": "evidence/unit/QualitySearchHostTest.log",
       "bytes": 15,
       "sha256": "2f4e950550489f74837533584223995bde7e3e58ca6d394d0d86cf90821cf324"
-    },
-    {
-      "path": "evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json",
-      "bytes": 2365,
-      "sha256": "7ef413a73b5b409fc073ec35b6088f95050558b4a80d37f8257e051afe32e1c7"
     }
   ]
 }

@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-10-01 — S5 unsigned Play candidate materialization
+
+- Materialized the surviving QA-proven unsigned AAB under `evidence/artifacts/s5_current_play_candidate/`.
+- Verified exact identity: 7,968,406 bytes, SHA-256 `a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`.
+- No rebuild was required; source remained bound to `27199bf6f174e55dc835d0d9898e456d3848001c`.
+- Signing, Play Console mutation, upload, tester changes, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.
+
 ## 2026-09-30 — TASK-S5-007 output-size display clarity machine QA
 
 - Added presentation-only grouped exact-byte proof for PASS, NOT_MET, and REDUCED Result states.

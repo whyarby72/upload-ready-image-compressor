@@ -5,7 +5,7 @@ Owner: CODEX
 Reviewer: CHAT + HUMAN
 Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Priority: HIGH
-Status: UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_AUTHORIZED
+Status: UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED
 
 ## Product-quality status
 
@@ -122,7 +122,7 @@ Approval ref:
 `USER_OPTION_1_2026-09-30_S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY`
 
 Next owner:
-`CODEX`
+`HUMAN`
 
 Codex must execute:
 `prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md`
@@ -142,3 +142,20 @@ Still NOT authorized:
 - Artifact Freeze;
 - release;
 - publication.
+
+## Materialization closure
+
+Source commit:
+`27199bf6f174e55dc835d0d9898e456d3848001c`
+
+Materialized unsigned AAB:
+`evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab`
+
+Bytes: `7,968,406`
+
+SHA-256:
+`a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
+
+The surviving QA AAB matched; no rebuild was required. Signing approval is required next. No signing or provider action was performed.
+
+Next owner: `HUMAN`

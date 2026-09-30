@@ -40,8 +40,8 @@
   "current_task": {
     "id": "S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH",
     "owner": "CODEX",
-    "next_owner": "CHAT + HUMAN",
-    "status": "UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_AUTHORIZED",
+    "next_owner": "HUMAN",
+    "status": "UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED",
     "opened_from": "TASK-S5-006 + TASK-S5-007",
     "reason": "Current S5 product-quality gates are closed; Play handoff has been refreshed to the latest tested source, but the unsigned AAB must be materialized and hash-bound before any signing request.",
     "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md",
@@ -57,7 +57,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "S5_INTERNAL_TEST_HANDOFF_REFRESHED_UNSIGNED_CANDIDATE_MATERIALIZATION_PENDING",
+    "internal_test": "UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -78,7 +78,6 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "The latest unsigned release AAB is QA-proven but not yet materialized under repository evidence as the current pre-sign Play candidate.",
     "Signing and all Play Console provider actions remain separately unauthorized.",
     "Provider-bound facts such as app existence, account type/date, Play App Signing state, upload-key fingerprint, versionCode availability, tester list, and feedback channel remain unknown."
   ],
@@ -86,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Codex executes S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY using prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md. Stop after unsigned AAB is evidence-materialized and hash-bound; no signing or Play Console action.",
+  "next_action": "Human separately authorizes signing and observes provider-bound Play Console actions; no provider action is authorized by this materialization.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -597,6 +596,19 @@
     ],
     "canonical_build_promotion_authorized": false,
     "note": "QA build execution is authorized for TASK-S5-007; canonical BUILD promotion remains unauthorized."
+  },
+  "s5_current_play_candidate": {
+    "status": "UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED",
+    "source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+    "materialization_commit": "PENDING_COMMIT",
+    "artifact_path": "evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab",
+    "bytes": 7968406,
+    "sha256": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01",
+    "signing_state": "UNSIGNED",
+    "play_upload_eligible": false,
+    "rebuild_required": false,
+    "proof": "evidence/play/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_PROOF.json",
+    "next_owner": "HUMAN"
   },
   "s5_human_physical_smartphone_review": {
     "status": "PASS_HUMAN_ATTESTED",

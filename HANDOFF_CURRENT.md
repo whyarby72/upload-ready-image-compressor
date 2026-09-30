@@ -5,159 +5,52 @@ Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Decision: TEST
 Progress: 99%
 Current task: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
-Next owner: CODEX
-Task status: UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_AUTHORIZED
+Next owner: HUMAN
+Task status: UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED
 
-## S5 product-quality closure
+## Evidence summary
+- 0.1.0: 1
+- 000; existing bytes() summary regression PASS: 1
+- 2026-09-27: 1
+- 2026-09-29: 1
+- 2026-09-30: 4
+- 34c6af2c5f42d18893608b923dac28fef2ba8710802ae4fbe55bde9839c05814: 1
+- FAIL: 1
+- HUMAN_ACTION_REQUIRED: 3
+- HUMAN_REVIEW_REQUIRED: 6
+- PASS: 129
+- PROVENANCE_ONLY_INVALIDATED: 1
+- REWORK: 1
+- evidence/play/S5_005_FINAL_GEOMETRY_AND_NOT_MET_PROOF.json: 1
+- evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_360x800.png;evidence/screenshots/s5_005_final_recap/requirement_100kb_api36_320x640.png;evidence/screenshots/s5_005_final_recap/requirement_font_1_3x_api36.png: 1
+- evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/screenshot.png;evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/foreground.txt;evidence/screenshots/s5_007_output_size_display_clarity/reduced_360/uiautomator.xml; evidence/play/S5_007_OUTPUT_SIZE_DISPLAY_CLARITY_PROOF.json: 1
+- six target choices: 1
+- source-5c58604: 2
 
-TASK-S5-005 geometry:
-`PASS_HUMAN_APPROVED`
+## Authority
+- build_authorized: False
+- artifact_freeze: False
+- release_authorized: False
+- publication_authorized: False
 
-TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION:
-`PASS_HUMAN_APPROVED_CLOSED`
+## Blockers
+- Signing and all Play Console provider actions remain separately unauthorized.
+- Provider-bound facts such as app existence, account type/date, Play App Signing state, upload-key fingerprint, versionCode availability, tester list, and feedback channel remain unknown.
 
-TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY:
-`PASS_HUMAN_APPROVED_CLOSED`
+## Human decisions required
+- Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.
+- Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication.
 
-All current S5 product-quality corrective gates are closed.
+## Next action
+Human separately authorizes signing and observes provider-bound Play Console actions; no provider action is authorized by this materialization.
 
-## Refreshed Google Play Internal testing package
+## Materialized unsigned candidate
 
-Canonical handoff:
-`docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md`
-
-Canonical readiness:
-`docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v2.0.json`
-
-Refresh proof:
-`evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json`
-
-Prepared next-step prompt:
-`prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md`
-
-The old v2.0 handoff / v1.0 readiness are superseded for next-action purposes and retained only as provenance.
-
-## Current tested app source
-
-`27199bf6f174e55dc835d0d9898e456d3848001c`
-
-No later reviewed app/source mutation exists after this tested source; later branch changes are evidence/docs/state only.
-
-## Current unsigned QA AAB reference
-
-Build path:
-`app/build/outputs/bundle/release/app-release.aab`
-
-Bytes:
-`7,968,406`
-
-SHA-256:
-`a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
-
-Signing:
-`UNSIGNED`
-
-Repository materialized:
-`FALSE`
-
-Play upload eligible:
-`FALSE`
-
-This is a QA-proven local artifact reference, not yet the evidence-materialized pre-sign Play candidate.
-
-Older `s5_005*` AABs must not be uploaded as the current candidate.
-
-## Current policy refresh
-
-Official Google sources were rechecked on 2026-09-30.
-
-Current project target:
-`API 36`
-
-Current Google Play minimum for new mobile submissions:
-`API 36`
-
-Internal testing supports up to:
-`100 testers`
-
-For qualifying newer personal developer accounts, later production access may require:
-`12 continuously opted-in closed-test testers for at least 14 days`
-
-That production-access rule is account-dependent and is not fulfilled by Internal testing alone.
-
-## Pending exact human decision
-
-`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
-
-If approved, Codex may:
-- verify the surviving local QA AAB or rebuild from unchanged source;
-- run build/unit/lint checks;
-- copy the unsigned AAB into a dedicated evidence artifact location;
-- record exact bytes/SHA-256/source binding;
-- update repository evidence/docs/state.
-
-It may NOT:
-- create/rotate keys;
-- sign;
-- touch Play Console;
-- upload;
-- change testers;
-- rollout;
-- advance S6;
-- promote BUILD;
-- Artifact Freeze;
-- release;
-- publish.
-
-## Provider-bound UNKNOWN
-
-Do not infer:
-- whether app/package already exists in Play Console;
-- account type/date;
-- release-to-testing permission;
-- Play App Signing state;
-- upload-key state/fingerprint;
-- versionCode 1 availability;
-- tester identities/count;
-- feedback channel;
-- provider warnings/errors.
-
-These require observation by the legitimately authorized Play Console account holder.
-
-
-## Physical smartphone final manual review — 2026-09-30
-
-Human disposition:
-`PASS_HUMAN_ATTESTED`
-
-The human explicitly declared the complete final manual smartphone checklist PASS.
-
-Closure:
-`docs/qa/S5_HUMAN_PHYSICAL_SMARTPHONE_FINAL_MANUAL_REVIEW_CLOSURE_v1.0.md`
-
-Observed app/file-manager KB label differences were accepted as display-convention and rounding behavior; exact bytes remain authoritative.
-
-Remaining next decision:
-`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
-
-No signing / Play mutation / upload / rollout / S6 / BUILD promotion / Artifact Freeze / release / publication authority is implied.
-
-
-## Unsigned Play candidate materialization authorization — 2026-09-30
-
-Approved scope:
-`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
-
-Approval ref:
-`USER_OPTION_1_2026-09-30_S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY`
-
-Next owner:
-`CODEX`
-
-Execute:
-`prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md`
-
-Required terminal state:
-`UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED`
-
-No signing, key creation/rotation, Play Console mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+- Source commit: `27199bf6f174e55dc835d0d9898e456d3848001c`
+- AAB: `evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab`
+- Bytes: `7,968,406`
+- SHA-256: `a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01`
+- Surviving QA AAB matched; rebuild required: `FALSE`
+- Signing state: `UNSIGNED`
+- Play upload eligibility: `FALSE`
+- Proof: `evidence/play/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_PROOF.json`
