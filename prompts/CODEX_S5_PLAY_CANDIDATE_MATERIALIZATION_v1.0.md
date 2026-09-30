@@ -1,13 +1,16 @@
 # CODEX — S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION v1.0
 
-Status: PREPARED / NOT AUTHORIZED
+Status: AUTHORIZED FOR EXECUTION — UNSIGNED MATERIALIZATION ONLY
 Product: REDUCE PHOTO SIZE: KB LIMIT
 Branch: `task/TASK-S5-007`
 
-Do NOT execute this work order until the human explicitly authorizes:
+Human approval recorded:
+`USER_OPTION_1_2026-09-30_S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY`
+
+Approved scope:
 `S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
 
-This work order does NOT authorize signing or any Play Console action.
+This approval does NOT authorize signing or any Play Console action.
 
 ## Goal
 
