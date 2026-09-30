@@ -522,3 +522,21 @@ This decision does not authorize signing, Play upload/submission, S6, BUILD prom
 
 Approval ref:
 `USER_OPTION_1_2026-09-30_TASK_S5_006_PREMIUM_QUALITY_VISUAL_PRODUCTIZATION_APPROVAL`
+
+
+## D-053 — Refresh Google Play Internal testing handoff to current tested source (2026-09-30)
+
+After TASK-S5-006 and TASK-S5-007 were both human-closed PASS, the previous Play Internal testing handoff became stale because it referenced a pre-rework AAB.
+
+Decision:
+- promote `docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md` as the canonical next-action handoff;
+- promote `docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v2.0.json` as the canonical readiness record;
+- bind the latest tested app source to `27199bf6f174e55dc835d0d9898e456d3848001c`;
+- retain the latest QA release AAB hash `a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01` as an UNSIGNED local QA artifact reference only;
+- require explicit unsigned candidate materialization + fresh hash binding before any signing request;
+- treat old v2.0/v1.0 Play handoff/readiness files as provenance only for next-action purposes.
+
+No signing, key creation/rotation, Play Console mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+Next material approval scope:
+`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
