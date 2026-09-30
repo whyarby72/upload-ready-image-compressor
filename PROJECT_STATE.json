@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides whether to authorize S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY. This would rebuild or verify and evidence-bind the unsigned AAB without signing or Play Console actions.",
+  "next_action": "Human decides whether to authorize S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY. Physical-smartphone manual review is PASS.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -595,5 +595,25 @@
     ],
     "canonical_build_promotion_authorized": false,
     "note": "QA build execution is authorized for TASK-S5-007; canonical BUILD promotion remains unauthorized."
+  },
+  "s5_human_physical_smartphone_review": {
+    "status": "PASS_HUMAN_ATTESTED",
+    "observed_at": "2026-09-30",
+    "scope": "FULL_FINAL_MANUAL_SMARTPHONE_CHECKLIST",
+    "closure_ref": "docs/qa/S5_HUMAN_PHYSICAL_SMARTPHONE_FINAL_MANUAL_REVIEW_CLOSURE_v1.0.md",
+    "checklist_result": "ALL_ITEMS_PASS",
+    "size_display_observation": {
+      "accepted": true,
+      "app_summary_examples": [
+        "250 KB",
+        "50 KB"
+      ],
+      "file_manager_examples": [
+        "244 KB",
+        "48.52 KB"
+      ],
+      "interpretation": "DISPLAY_UNIT_CONVENTION_AND_ROUNDING",
+      "canonical_truth": "EXACT_BYTES"
+    }
   }
 }
