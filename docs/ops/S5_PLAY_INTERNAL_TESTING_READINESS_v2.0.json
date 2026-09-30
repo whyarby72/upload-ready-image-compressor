@@ -1,0 +1,117 @@
+{
+  "schema_version": "2.0.0",
+  "observed_at": "2026-09-30",
+  "product": "REDUCE PHOTO SIZE: KB LIMIT",
+  "package_name": "com.afradadmedia.reducephotosize",
+  "stage": "S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING",
+  "canonical_decision": "TEST",
+  "handoff_status": "REFRESHED_CURRENT_SOURCE_PROVIDER_ACTION_NOT_AUTHORIZED",
+  "current_branch": "task/TASK-S5-007",
+  "preparation_base_head": "13b88c9ac7eb8e578cd9459d215530a49facd8a3",
+  "tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+  "post_tested_source_app_source_drift": false,
+  "identity": {
+    "play_title": "Reduce Photo Size: KB Limit",
+    "launcher_name": "Reduce Photo Size",
+    "application_id": "com.afradadmedia.reducephotosize",
+    "namespace": "com.afradadmedia.reducephotosize",
+    "min_sdk": 29,
+    "target_sdk": 36,
+    "compile_sdk": 37,
+    "version_code": 1,
+    "version_name": "0.1.0"
+  },
+  "current_qa_artifacts": {
+    "debug_apk": {
+      "build_path": "app/build/outputs/apk/debug/app-debug.apk",
+      "bytes": 29926362,
+      "sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce"
+    },
+    "unsigned_release_apk": {
+      "build_path": "app/build/outputs/apk/release/app-release-unsigned.apk",
+      "bytes": 23001458,
+      "sha256": "801e503a40b9551141de0d592e62ca18795bad3fdaf8fb8e9c09f7a5b45121c1"
+    },
+    "release_aab": {
+      "build_path": "app/build/outputs/bundle/release/app-release.aab",
+      "bytes": 7968406,
+      "sha256": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01",
+      "signing_state": "UNSIGNED",
+      "repository_materialized": false,
+      "play_upload_eligible": false,
+      "disposition": "QA_PROVENANCE_REFERENCE_MUST_BE_MATERIALIZED_AND_REHASHED_BEFORE_SIGNING"
+    }
+  },
+  "quality_gates": {
+    "geometry": "PASS_HUMAN_APPROVED",
+    "premium_visual_productization": "PASS_HUMAN_APPROVED_CLOSED",
+    "output_size_display_clarity": "PASS_HUMAN_APPROVED_CLOSED",
+    "core_technical": "PASS_PRESERVED",
+    "exact_byte_truth": "PASS",
+    "save_fidelity": "PASS",
+    "protected_domain_diff": "NONE"
+  },
+  "app_surface": {
+    "allow_backup": false,
+    "internet_permission_declared": false,
+    "broad_storage_permission_declared": false,
+    "admob_dependency_present": false,
+    "analytics_dependency_present": false
+  },
+  "verified_current_play_facts": {
+    "checked_at": "2026-09-30",
+    "sources": "OFFICIAL_GOOGLE_ONLY",
+    "internal_testing_max_testers": 100,
+    "target_api_mobile_submission_minimum": 36,
+    "target_api_effective_since": "2026-08-31",
+    "current_target_api_status": "MEETS_MINIMUM",
+    "personal_account_post_2023_11_13_closed_test_requirement": {
+      "applicability": "UNKNOWN_ACCOUNT_DEPENDENT",
+      "minimum_continuously_opted_in_testers": 12,
+      "minimum_continuous_days": 14,
+      "applies_to": "later production access; not internal-test eligibility"
+    },
+    "play_app_signing_upload_model": "developer upload key signs bundle before upload; Google Play app-signing key signs distributed APKs"
+  },
+  "pre_sign_materialization": {
+    "required": true,
+    "authorized": false,
+    "prompt": "prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md",
+    "acceptance": [
+      "exact tested source binding",
+      "fresh or surviving unsigned AAB independently hashed",
+      "dedicated evidence artifact path",
+      "no source mutation",
+      "no signing"
+    ]
+  },
+  "unknown_provider_state": [
+    "app_exists_in_play_console",
+    "developer_account_type_and_creation_date",
+    "release_to_testing_permission",
+    "play_app_signing_enrollment",
+    "registered_upload_key_fingerprint",
+    "version_code_1_availability",
+    "tester_identities_and_count",
+    "feedback_channel",
+    "provider_warnings_or_errors"
+  ],
+  "authority": {
+    "create_or_rotate_key": false,
+    "signing": false,
+    "play_app_creation": false,
+    "play_console_mutation": false,
+    "upload": false,
+    "tester_account_mutation": false,
+    "rollout": false,
+    "s6": false,
+    "build_promotion": false,
+    "artifact_freeze": false,
+    "release": false,
+    "publication": false
+  },
+  "next_owner": "HUMAN",
+  "next_decision": "AUTHORIZE_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY",
+  "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md",
+  "provider_action_authorized": false
+}
