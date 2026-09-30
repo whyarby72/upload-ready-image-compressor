@@ -5,8 +5,8 @@ Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Decision: TEST
 Progress: 99%
 Current task: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
-Next owner: HUMAN
-Task status: HANDOFF_REFRESH_PREPARED_UNSIGNED_CANDIDATE_MATERIALIZATION_APPROVAL_PENDING
+Next owner: CODEX
+Task status: UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_AUTHORIZED
 
 ## S5 product-quality closure
 
@@ -141,3 +141,23 @@ Remaining next decision:
 `S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
 
 No signing / Play mutation / upload / rollout / S6 / BUILD promotion / Artifact Freeze / release / publication authority is implied.
+
+
+## Unsigned Play candidate materialization authorization — 2026-09-30
+
+Approved scope:
+`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
+
+Approval ref:
+`USER_OPTION_1_2026-09-30_S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY`
+
+Next owner:
+`CODEX`
+
+Execute:
+`prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md`
+
+Required terminal state:
+`UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED`
+
+No signing, key creation/rotation, Play Console mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
