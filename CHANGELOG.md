@@ -542,3 +542,16 @@
 - prepared a non-signing Codex materialization prompt but did not authorize execution;
 - retained provider-bound account/signing/tester/version state as UNKNOWN;
 - did not authorize key creation/rotation, signing, Play Console mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+
+# 2026-10-01 — Unsigned Play candidate materialization audited
+
+- verified branch HEAD matched evidence-binding commit 5c61065768b131d14ffc6beddaac15842fc74cb8 at audit start;
+- verified no app/source drift after tested source 27199bf6f174e55dc835d0d9898e456d3848001c;
+- verified materialization commit added the current unsigned AAB plus evidence/docs/state only;
+- verified the recorded AAB identity is consistent across proof, evidence index, readiness and handoff: 7,968,406 bytes, SHA-256 a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01;
+- recorded CHAT limitation: GitHub connector confirms binary presence but does not expose payload for independent SHA-256 recomputation;
+- reconciled stale pre-materialization state fields;
+- closed the materialization gate as PASS;
+- opened provider-bound Play Console preflight before any signing approval;
+- did not authorize signing, key operations, Play Console mutation, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release or publication.
