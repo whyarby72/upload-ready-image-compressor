@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "observed_at": "2026-09-30",
+  "task": "S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH",
+  "status": "HANDOFF_REFRESH_PREPARED_PROVIDER_ACTION_NOT_AUTHORIZED",
+  "product": "REDUCE PHOTO SIZE: KB LIMIT",
+  "tested_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
+  "preparation_base_head": "13b88c9ac7eb8e578cd9459d215530a49facd8a3",
+  "source_binding": {
+    "later_app_source_drift": false,
+    "basis": "compare tested source to preparation base head; later changes are evidence/docs/state only"
+  },
+  "quality_closure": {
+    "task_s5_006": "PASS_HUMAN_APPROVED_CLOSED",
+    "task_s5_007": "PASS_HUMAN_APPROVED_CLOSED"
+  },
+  "current_aab_reference": {
+    "build_path": "app/build/outputs/bundle/release/app-release.aab",
+    "bytes": 7968406,
+    "sha256": "a25a3a08e8c65c84afc74fe065ac5ce6648cfaafe5d04bfa2994cbe940949f01",
+    "signing_state": "UNSIGNED",
+    "repository_materialized": false,
+    "upload_eligible": false
+  },
+  "policy_refresh": {
+    "checked_at": "2026-09-30",
+    "target_api_minimum_mobile": 36,
+    "project_target_api": 36,
+    "internal_testing_max_testers": 100,
+    "personal_new_account_closed_test": "12 continuously opted-in testers for 14 days before production access; account-dependent",
+    "sources": [
+      "Google Play Console Help — Target API level requirements for Google Play apps",
+      "Google Play Console Help — Set up an open, closed, or internal test",
+      "Google Play Console Help — App testing requirements for new personal developer accounts",
+      "Google Play Console Help — Use Play App Signing"
+    ]
+  },
+  "package_refs": {
+    "handoff": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md",
+    "readiness": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v2.0.json",
+    "materialization_prompt": "prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md"
+  },
+  "blocker": "unsigned current AAB must be materialized and hash-bound before any signing request; provider state remains unknown",
+  "authority": {
+    "signing": false,
+    "play_console_mutation": false,
+    "upload": false,
+    "rollout": false,
+    "s6": false,
+    "build_promotion": false,
+    "artifact_freeze": false,
+    "release": false,
+    "publication": false
+  },
+  "next_owner": "HUMAN",
+  "next_decision": "AUTHORIZE_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY"
+}
