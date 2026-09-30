@@ -62,6 +62,9 @@ CHAT audit:
 
 Before any signing approval, human must perform a provider-bound Play Console preflight.
 
+Canonical checklist:
+`docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_CHECKLIST_v1.0.md`
+
 Read-only observations required:
 - whether the app/package already exists in the intended Play Console account;
 - account type/date where relevant;
