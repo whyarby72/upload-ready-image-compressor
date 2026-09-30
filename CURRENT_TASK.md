@@ -1,11 +1,11 @@
 # CURRENT_TASK.md
 
 Task ID: S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH
-Owner: HUMAN
-Reviewer: CHAT
+Owner: CODEX
+Reviewer: CHAT + HUMAN
 Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Priority: HIGH
-Status: HANDOFF_REFRESH_PREPARED_UNSIGNED_CANDIDATE_MATERIALIZATION_APPROVAL_PENDING
+Status: UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_AUTHORIZED
 
 ## Product-quality status
 
@@ -71,7 +71,7 @@ Verified from official Google sources on 2026-09-30:
 - new personal accounts created after 2023-11-13 may have the later 12-testers / 14-days closed-test production-access requirement;
 - Play App Signing uses a developer-held upload key to sign the bundle before upload.
 
-## Pending human decision
+## Human approval recorded
 
 Required exact scope:
 `S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
@@ -111,3 +111,34 @@ Remain unknown until a legitimately authorized human checks Play Console:
 - tester identities/count;
 - feedback channel;
 - provider warnings/errors.
+
+
+## Authorization — 2026-09-30
+
+Approved scope:
+`S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
+
+Approval ref:
+`USER_OPTION_1_2026-09-30_S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY`
+
+Next owner:
+`CODEX`
+
+Codex must execute:
+`prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md`
+
+Stop after:
+`UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED`
+
+Still NOT authorized:
+- signing;
+- key creation/rotation;
+- Play Console mutation;
+- upload;
+- tester mutation;
+- rollout;
+- S6;
+- BUILD promotion;
+- Artifact Freeze;
+- release;
+- publication.
