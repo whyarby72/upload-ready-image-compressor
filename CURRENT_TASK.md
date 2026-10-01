@@ -129,3 +129,25 @@ Keyword result:
 `PASS_NATURAL_SEMANTIC_COVERAGE`
 
 The current Create-app package-status authorization remains limited to observing package eligibility/status. Final Create app submission is still not authorized.
+
+
+## Play store visual-asset audit — 2026-10-01
+
+Audit:
+`docs/market/S5_PLAY_STORE_VISUAL_ASSET_AUDIT_2026_10_01_v1.0.md`
+
+Status:
+`AUDIT_PASS / STORE_VISUAL_ASSET_PRODUCTION_REQUIRED`
+
+Findings:
+- current adaptive launcher icon concept is aligned, but no dedicated 512x512 Play PNG exists;
+- no compliant 1024x500 feature graphic exists;
+- current QA screenshot evidence is not a store-ready set;
+- 360x800 screenshots exceed the current 2:1 screenshot dimension rule;
+- 320x640 is technically within the 2:1 rule but below the current 1080px promotion-surface recommendation;
+- recommended target is six portrait 1080x1920 store screenshots built around KB-limit selection, exact-byte PASS proof, Save/Share, Custom Limit, on-device processing, and truthful NOT_MET.
+
+Next material approval scope:
+`S5 PLAY STORE VISUAL ASSET PACK PRODUCTION`
+
+This audit does not authorize image production, source mutation, final Create app submission, package registration mutation, signing, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
