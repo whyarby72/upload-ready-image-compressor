@@ -821,3 +821,30 @@ Expected terminal state:
 `PLAY_SCREENSHOT_V2_PREMIUM_COMPOSITION_READY_HUMAN_REVIEW_REQUIRED`
 
 No Play Console mutation, signing, upload, testers, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
+
+
+## D-063 — Play screenshot v2 passes final CHAT visual audit with one brand-consistency polish (2026-10-02)
+
+V2 production commit:
+`84ea8527343394b86898e8a2db96782e5cb4c75e`
+
+Audit:
+`docs/qa/S5_PLAY_SCREENSHOT_V2_CHAT_FINAL_VISUAL_AUDIT_v1.0.md`
+
+Decision:
+- accept the v2 composition system, sequence, truth binding, and visual differentiation;
+- no broad redesign and no further emulator recapture are justified;
+- retain the six-screen ordering;
+- recommend one composition-only micro-polish before final human approval:
+  replace external kicker `REDUCE PHOTO SIZE` with `PHOTO COMPRESSOR: KB LIMIT`;
+- preserve the in-app `Reduce Photo Size` label exactly;
+- preserve embedded screenshot pixels exactly;
+- regenerate final hashes/contact sheet/manifest after the kicker-only change.
+
+Current status:
+`V2_VISUAL_AUDIT_PASS_WITH_BRAND_KICKER_MICRO_POLISH_RECOMMENDED / HUMAN_APPROVAL_PENDING`
+
+Next scope:
+`S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH`
+
+No Play Console mutation, signing, upload, testers, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
