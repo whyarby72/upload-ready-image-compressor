@@ -328,3 +328,35 @@ Terminal success:
 `PLAY_SCREENSHOT_V2_PREMIUM_COMPOSITION_READY_HUMAN_REVIEW_REQUIRED`
 
 No Play Console mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+
+## Play screenshot v2 final visual audit — 2026-10-02
+
+V2 production commit:
+`84ea8527343394b86898e8a2db96782e5cb4c75e`
+
+Audit:
+`docs/qa/S5_PLAY_SCREENSHOT_V2_CHAT_FINAL_VISUAL_AUDIT_v1.0.md`
+
+Disposition:
+`V2_VISUAL_AUDIT_PASS_WITH_BRAND_KICKER_MICRO_POLISH_RECOMMENDED / HUMAN_APPROVAL_PENDING`
+
+PASS:
+- truthful runtime screenshots;
+- targeted recaptures;
+- all six 1080x1920 RGB assets;
+- pixel fidelity;
+- semantic truth;
+- sequence architecture;
+- premium Warm Ink composition;
+- competitor differentiation;
+- no app/source mutation.
+
+Recommended non-functional micro-polish:
+replace the external store-composition kicker `REDUCE PHOTO SIZE` with the frozen Play title:
+`PHOTO COMPRESSOR: KB LIMIT`
+
+This does not change in-app text and requires no emulator recapture or app-source mutation.
+
+Next material scope:
+`S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH`
