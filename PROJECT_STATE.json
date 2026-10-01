@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides whether to authorize S5 PLAY STORE VISUAL ASSET PACK PRODUCTION using the completed 13-competitor benchmark. Final Create app submission remains unauthorized.",
+  "next_action": "Human visually reviews the produced Play icon + feature graphic candidates. If approved, materialize selected binary assets into the repository; final screenshot composites remain blocked until current runtime UI captures are materialized/captured truthfully.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -666,23 +666,34 @@
     "observed_at": "2026-10-01",
     "audit_ref": "docs/market/S5_PLAY_STORE_VISUAL_ASSET_AUDIT_2026_10_01_v1.0.md",
     "play_icon": {
-      "status": "MISSING_DEDICATED_512_PNG",
-      "concept": "COMPRESSION_FRAME_MARK_PASS"
+      "status": "CHAT_PRODUCED_HUMAN_VISUAL_REVIEW_PENDING",
+      "filename": "play_icon_512_v1.png",
+      "dimensions": "512x512",
+      "sha256": "b2fa2060fa40cf0eaccabd8063f1cb6cb768f125217ddb02ef554a75731fc831"
     },
     "feature_graphic": {
-      "status": "MISSING_1024X500",
-      "concept": "HOME_HERO_GRAMMAR_READY"
+      "status": "CHAT_PRODUCED_HUMAN_VISUAL_REVIEW_PENDING",
+      "primary_filename": "feature_graphic_1024x500_textfree_v1.png",
+      "primary_sha256": "ff1b8d660876426b9c152fe94e8612e577d31a1b82db670633f45a764c4b1364",
+      "alternate_filename": "feature_graphic_1024x500_textlight_alt_v1.png",
+      "alternate_sha256": "a2e614c77dc06f7778519f48c7020d385d819ad0dc1c614becee36bd84fd0b5c"
     },
     "screenshots": {
-      "status": "RECAPTURE_REQUIRED",
-      "current_qa_360x800": "INVALID_PLAY_RATIO_2_22_TO_1",
-      "current_qa_320x640": "TECHNICALLY_VALID_BUT_BELOW_1080_PROMOTION_RECOMMENDATION",
-      "target": "SIX_PORTRAIT_1080X1920"
+      "status": "TEMPLATES_READY_FINAL_UI_BINDING_BLOCKED",
+      "count": 6,
+      "dimensions": "1080x1920",
+      "fake_ui_substitution": false,
+      "blocker": "Current runtime UI screenshot binaries are not locally materialized with artifact-bound provenance in this production environment."
     },
-    "asset_production_authorized": false,
+    "asset_production_authorized": true,
     "next_scope": "S5 PLAY STORE VISUAL ASSET PACK PRODUCTION",
     "competitor_benchmark_status": "PASS",
-    "competitor_benchmark_ref": "docs/market/S5_PLAY_VISUAL_COMPETITOR_BENCHMARK_2026_10_01_v1.0.md"
+    "competitor_benchmark_ref": "docs/market/S5_PLAY_VISUAL_COMPETITOR_BENCHMARK_2026_10_01_v1.0.md",
+    "production_status": "PARTIAL_ARTIFACT_PACK_HUMAN_VISUAL_REVIEW_PENDING",
+    "production_result_ref": "docs/market/S5_PLAY_STORE_VISUAL_ASSET_PACK_PRODUCTION_RESULT_v1.0.md",
+    "conversation_bundle_filename": "S5_PLAY_STORE_VISUAL_ASSET_PACK_v1.0.zip",
+    "conversation_bundle_sha256": "db70210bd77a716f7dc7d33f6345f83acadc84d68a81016551aae8067d155689",
+    "binary_repo_materialization": "PENDING_HUMAN_VISUAL_SELECTION"
   },
   "play_store_visual_competitor_benchmark": {
     "status": "PASS",
