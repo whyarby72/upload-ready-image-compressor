@@ -1,0 +1,39 @@
+{
+  "schema": "S5_REAL_PLAY_SCREENSHOT_CAPTURE_v1",
+  "source_commit": "4a9637ee5a5d8b60906ccde90dbdba4bf025c216",
+  "source_baseline": "27199bf6f174e55dc835d0d9898e456d3848001c",
+  "apk": "app/build/outputs/apk/debug/app-debug.apk",
+  "apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce",
+  "device_serial": "emulator-5554",
+  "android_api": 36,
+  "wm_size": "1080x1920",
+  "wm_density": 480,
+  "font_scale": 1.0,
+  "package": "com.afradadmedia.reducephotosize",
+  "activity": "com.afradadmedia.reducephotosize.MainActivity",
+  "fixture_path": "app/src/androidTest/assets/fixtures/ratio_16x9.jpg",
+  "fixture_sha256": "5697821c39c0a9c7ed696a9cddc591503b2e1e41268fe198cb766eeee6f4e20d",
+  "semantic_state": "NOT_MET",
+  "semantic_required": [
+    "TARGET NOT MET",
+    "Actual file:",
+    "80,947 bytes",
+    "50,000-byte limit",
+    "NOT_MET"
+  ],
+  "semantic_forbidden": [
+    "MEETS LIMIT"
+  ],
+  "target_bytes": 50000,
+  "output_bytes": 80947,
+  "classification": "NOT_MET",
+  "screenshot_raw": "evidence/store/play_screenshots_v1/06_not_met/screenshot_raw.png",
+  "screenshot_raw_sha256": "ba863fb2d1293e12685218a4a1a7eb373f42f29ae08f00752bb29e34ce4e07ab",
+  "uiautomator": "evidence/store/play_screenshots_v1/06_not_met/uiautomator.xml",
+  "uiautomator_sha256": "780096519b908843b70e7bdeaff8dd3a1873c4d0981eea244bec328c73e6d912",
+  "foreground": "evidence/store/play_screenshots_v1/06_not_met/foreground.txt",
+  "foreground_sha256": "7c1a0a6a034affb72f9681db6057715b6176e269b782ea1959a35bd7be5ae0ff",
+  "foreground_package_pass": true,
+  "semantic_assertions_pass": true,
+  "result": "PASS"
+}

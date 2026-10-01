@@ -1,0 +1,47 @@
+{
+  "schema": "S5_PLAY_STORE_SCREENSHOT_MANIFEST_v1",
+  "screenshots": [
+    {
+      "path": "store/assets/play/en-US/screenshots/01_verified_result_1080x1920.png",
+      "sha256": "c6b969083969ab6c309ae473e8c7a85a80dae6bfd54583d52441b22d6394f858",
+      "width": 1080,
+      "height": 1920,
+      "source_transform": "identity copy of genuine runtime screenshot"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots/02_set_kb_limit_1080x1920.png",
+      "sha256": "16c5faa3f81689f94c3cf299f45c349ba61a61740d2b625be3e542d3407d3f29",
+      "width": 1080,
+      "height": 1920,
+      "source_transform": "identity copy of genuine runtime screenshot"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots/03_save_share_1080x1920.png",
+      "sha256": "ab111010826986ed4ee13091ba78ea9ec7acfcc766581376c194d24fa554100b",
+      "width": 1080,
+      "height": 1920,
+      "source_transform": "identity copy of genuine runtime screenshot"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots/04_custom_limit_1080x1920.png",
+      "sha256": "fccc61754253071d8db9c2acb7ff8e035a158305b15b16fea33dce09884406f0",
+      "width": 1080,
+      "height": 1920,
+      "source_transform": "identity copy of genuine runtime screenshot"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots/05_on_device_1080x1920.png",
+      "sha256": "c92484a06806a82cfb09a252a68e5b86235fd789e0f8840239413da78836f4cb",
+      "width": 1080,
+      "height": 1920,
+      "source_transform": "identity copy of genuine runtime screenshot"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots/06_not_met_1080x1920.png",
+      "sha256": "ba863fb2d1293e12685218a4a1a7eb373f42f29ae08f00752bb29e34ce4e07ab",
+      "width": 1080,
+      "height": 1920,
+      "source_transform": "identity copy of genuine runtime screenshot"
+    }
+  ]
+}

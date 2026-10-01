@@ -1,0 +1,31 @@
+      Window #2: WindowStateAnimator{d604f8a com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+      Window #3: WindowStateAnimator{8fa19fb com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+    numWindow=2 mCanAddInternalSystemWindow=false mAlertWindows={} mClientDead=false    mPackageName=com.afradadmedia.reducephotosize
+  deepestLastOrientationSource=ActivityRecord{84945679 u0 com.afradadmedia.reducephotosize/.MainActivity t127}
+  mCurrentFocus=Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+  mFocusedApp=ActivityRecord{84945679 u0 com.afradadmedia.reducephotosize/.MainActivity t127}
+  mObscuringWindow=Window{5eda7ad u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+      mPreferredTopFocusableRootTask=Task{19b179c #127 type=standard A=10216:com.afradadmedia.reducephotosize}
+      mLastFocusedRootTask=Task{19b179c #127 type=standard A=10216:com.afradadmedia.reducephotosize}
+      * Task{19b179c #127 type=standard A=10216:com.afradadmedia.reducephotosize U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+        * ActivityRecord{84945679 u0 com.afradadmedia.reducephotosize/.MainActivity t127}
+    mFocusedWindow=Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+    mTopFullscreenOpaqueWindowState=Window{5eda7ad u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+    mSystemBarColorApps={ActivityRecord{84945679 u0 com.afradadmedia.reducephotosize/.MainActivity t127}}
+    mNavBarColorWindowCandidate=Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+    mNavBarBackgroundWindowCandidate=Window{5eda7ad u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+      Window{5eda7ad u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+      Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}:
+        mControlTarget=Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+        mControlTarget=Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+        mControlTarget=Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+  ActivityRecord{84945679 u0 com.afradadmedia.reducephotosize/.MainActivity t127}
+  Window #7 Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}:
+    mOwnerUid=10216 showForAllUsers=false package=com.afradadmedia.reducephotosize appop=NONE
+    WindowStateAnimator{8fa19fb com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}:
+  Window #8 Window{5eda7ad u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}:
+    mOwnerUid=10216 showForAllUsers=false package=com.afradadmedia.reducephotosize appop=NONE
+    WindowStateAnimator{d604f8a com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}:
+  imeLayeringTarget in display# 0 Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+  imeInputTarget in display# 0 Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}
+  imeControlTarget in display# 0 Window{7efb5b3 u0 com.afradadmedia.reducephotosize/com.afradadmedia.reducephotosize.MainActivity}

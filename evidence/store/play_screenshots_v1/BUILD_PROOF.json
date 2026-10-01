@@ -1,0 +1,12 @@
+{
+  "schema": "S5_REAL_PLAY_SCREENSHOT_BUILD_PROOF_v1",
+  "source_commit": "4a9637ee5a5d8b60906ccde90dbdba4bf025c216",
+  "command": "./gradlew clean test lintDebug assembleDebug",
+  "result": "PASS",
+  "test": "PASS",
+  "lintDebug": "PASS",
+  "assembleDebug": "PASS",
+  "apk_path": "app/build/outputs/apk/debug/app-debug.apk",
+  "apk_bytes": 29926362,
+  "apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce"
+}

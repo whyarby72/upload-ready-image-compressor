@@ -1,0 +1,48 @@
+=== git rev-parse HEAD ===
+4a9637ee5a5d8b60906ccde90dbdba4bf025c216
+=== git status --short ===
+?? evidence/store/
+=== java -version ===
+openjdk version "25" 2025-09-16 LTS
+OpenJDK Runtime Environment Temurin-25+36 (build 25+36-LTS)
+OpenJDK 64-Bit Server VM Temurin-25+36 (build 25+36-LTS, mixed mode, sharing)
+=== gradle --version ===
+
+------------------------------------------------------------
+Gradle 9.7.1
+------------------------------------------------------------
+
+Build time:    2026-08-19 14:16:09 UTC
+Revision:      92f0512e7f06d84621afba191f75e265363890cf
+
+Kotlin:        2.4.0
+Groovy:        4.0.32
+Ant:           Apache Ant(TM) version 1.10.17 compiled on April 6 2026
+Launcher JVM:  25 (Eclipse Adoptium 25+36-LTS)
+Daemon JVM:    /Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home (no Daemon JVM specified, using current Java home)
+OS:            Mac OS X 26.5.2 aarch64
+
+=== command -v adb ===
+=== adb version ===
+Android Debug Bridge version 1.0.41
+Version 37.0.1-15733141
+Installed as /opt/homebrew/share/android-commandlinetools/platform-tools/adb
+Running on Darwin 25.5.0 (arm64)
+=== adb devices -l ===
+List of devices attached
+
+=== command -v emulator ===
+=== emulator list ===
+task-s3-api29
+task-s3-api36
+Capture profile (2026-10-02):
+  serial=emulator-5554
+  avd=task-s3-api36
+  api=36
+  wm_size=1080x1920 (physical 320x640; override 1080x1920)
+  wm_density=480 (physical 160; override 480)
+  font_scale=1.0
+  package=com.afradadmedia.reducephotosize
+  activity=com.afradadmedia.reducephotosize.MainActivity
+  source_commit=4a9637ee5a5d8b60906ccde90dbdba4bf025c216
+  apk_sha256=843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce

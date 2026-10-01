@@ -1,0 +1,8 @@
+{
+  "01_verified_result_1080x1920.png": "Verified result: output is within the 1 MB upload limit.",
+  "02_set_kb_limit_1080x1920.png": "Choose limit screen with a selected photo and upload-limit options.",
+  "03_save_share_1080x1920.png": "Verified result with Save copy and Share actions visible.",
+  "04_custom_limit_1080x1920.png": "Custom upload limit dialog with decimal guidance.",
+  "05_on_device_1080x1920.png": "Home screen for preparing a photo on-device.",
+  "06_not_met_1080x1920.png": "Result showing the selected output exceeds the upload limit."
+}
