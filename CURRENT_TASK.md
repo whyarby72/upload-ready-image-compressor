@@ -260,3 +260,38 @@ No screenshot execution is claimed.
 
 Required next:
 run the prompt in a Codex/terminal environment with Android SDK + adb + API36 emulator, then return the terminal status and evidence paths for audit.
+
+
+## Real screenshot capture independent audit — 2026-10-02
+
+Capture commit:
+`5e575b22f50c8309aefd71ff84db6dfb881ae122`
+
+Audit:
+`docs/qa/S5_REAL_PLAY_SCREENSHOT_CAPTURE_CHAT_INDEPENDENT_AUDIT_v1.0.md`
+
+Disposition:
+`CAPTURE_EVIDENCE_PASS / STORE_VISUAL_HOLD_TARGETED_RECAPTURE_AND_COMPOSITION_REQUIRED`
+
+Verified:
+- capture commit contains no `app/` mutation;
+- build/test/lint PASS;
+- APK hash matches the bound debug build;
+- six foreground package proofs PASS;
+- six UIAutomator semantic bindings PASS;
+- genuine PASS and genuine NOT_MET states PASS;
+- raw and current store PNGs are byte-identical in Git for all six screenshots;
+- no synthetic/recreated UI contamination.
+
+Store visual issues:
+- current `store/assets/play/en-US/screenshots/` files are raw identity copies, not premium compositions;
+- 02 has no selected target and shows disabled Continue;
+- 04 has an empty Amount field;
+- directly rendered captures show avoidable status/notification-bar clutter;
+- 03 is a useful action capture but is scrolled and loses the strongest top-level PASS context.
+
+Next material scope:
+`S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE`
+
+No broad app redesign is required.
+No Play Console mutation, signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
