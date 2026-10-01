@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Run prompts/CODEX_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE_v1.0.md in Codex after syncing task/TASK-S5-007. Return v2 contact sheet, proof, hashes, and terminal status for CHAT + human review.",
+  "next_action": "Human decides whether to authorize S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH: composition-only replacement of the external REDUCE PHOTO SIZE kicker with PHOTO COMPRESSOR: KB LIMIT across all six screenshots, preserving embedded app pixels exactly.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -744,7 +744,7 @@
     ]
   },
   "play_screenshot_v2": {
-    "status": "AUTHORIZED_PROMPT_READY_EXECUTION_PENDING",
+    "status": "V2_VISUAL_AUDIT_PASS_WITH_BRAND_KICKER_MICRO_POLISH_RECOMMENDED",
     "approval_ref": "USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE",
     "prompt_ref": "prompts/CODEX_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE_v1.0.md",
     "scope": "S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE",
@@ -760,6 +760,17 @@
     "pixel_fidelity_required": true,
     "synthetic_ui_forbidden": true,
     "human_visual_approval": "PENDING",
-    "execution_observed": false
+    "execution_observed": false,
+    "production_commit": "84ea8527343394b86898e8a2db96782e5cb4c75e",
+    "final_visual_audit_ref": "docs/qa/S5_PLAY_SCREENSHOT_V2_CHAT_FINAL_VISUAL_AUDIT_v1.0.md",
+    "visual_sequence_pass": true,
+    "premium_composition_pass": true,
+    "competitor_differentiation_pass": true,
+    "pixel_fidelity_pass": true,
+    "brand_kicker_micro_polish_recommended": true,
+    "recommended_kicker": "PHOTO COMPRESSOR: KB LIMIT",
+    "recapture_required": false,
+    "app_source_change_required": false,
+    "required_next_scope": "S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH"
   }
 }
