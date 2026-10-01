@@ -41,11 +41,13 @@
     "id": "S5_PLAY_APP_CREATION_PACKAGE_STATUS_CHECK",
     "owner": "HUMAN",
     "next_owner": "HUMAN",
-    "status": "APP_CREATION_PACKAGE_STATUS_CHECK_APPROVAL_PENDING",
+    "status": "APP_CREATION_PACKAGE_STATUS_CHECK_AUTHORIZED",
     "opened_from": "S5_PLAY_PROVIDER_PREFLIGHT",
     "reason": "Provider preflight completed. The app does not yet exist in Play Console; the next provider mutation is to enter the Create app flow and observe package-name eligibility/registration behavior before proceeding further.",
     "provider_preflight_ref": "docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_RESULT_v1.0.md",
-    "provider_action_authorized": false
+    "provider_action_authorized": true,
+    "authorization_ref": "USER_OPTION_1_2026-10-01_S5_PLAY_CREATE_APP_FLOW_PACKAGE_STATUS_CHECK_ONLY",
+    "runbook_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CHECK_v1.0.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -82,7 +84,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides whether to authorize entering the Play Console Create app flow for this app and observing the package-name status. Stop if Play requires ownership proof or any key/signing action.",
+  "next_action": "Human executes the approved Create app flow + package status check only, stops at the first package eligibility/ownership checkpoint, and sends the screenshot/result to CHAT.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
