@@ -38,27 +38,21 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH",
+    "id": "S5_PLAY_APP_CREATION_PACKAGE_STATUS_CHECK",
     "owner": "HUMAN",
     "next_owner": "HUMAN",
-    "status": "UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_SIGNING_APPROVAL_REQUIRED",
-    "opened_from": "TASK-S5-006 + TASK-S5-007",
-    "reason": "Current S5 product-quality gates are closed; Play handoff has been refreshed to the latest tested source, but the unsigned AAB must be materialized and hash-bound before any signing request.",
-    "handoff_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_HUMAN_HANDOFF_v3.0.md",
-    "readiness_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_READINESS_v2.0.json",
-    "proof_ref": "evidence/play/S5_PLAY_INTERNAL_TESTING_HANDOFF_REFRESH_PROOF_v1.0.json",
-    "prepared_materialization_prompt": "prompts/CODEX_S5_PLAY_CANDIDATE_MATERIALIZATION_v1.0.md",
-    "materialization_authorized": true,
-    "provider_action_authorized": false,
-    "materialization_approval_ref": "USER_OPTION_1_2026-09-30_S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_MATERIALIZATION_ONLY",
-    "chat_audit_ref": "docs/qa/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_CHAT_AUDIT_v1.0.md"
+    "status": "APP_CREATION_PACKAGE_STATUS_CHECK_APPROVAL_PENDING",
+    "opened_from": "S5_PLAY_PROVIDER_PREFLIGHT",
+    "reason": "Provider preflight completed. The app does not yet exist in Play Console; the next provider mutation is to enter the Create app flow and observe package-name eligibility/registration behavior before proceeding further.",
+    "provider_preflight_ref": "docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_RESULT_v1.0.md",
+    "provider_action_authorized": false
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "UNSIGNED_CURRENT_PLAY_CANDIDATE_MATERIALIZED_PROVIDER_PREFLIGHT_REQUIRED_BEFORE_SIGNING",
+    "internal_test": "PROVIDER_PREFLIGHT_PASS_APP_CREATION_PACKAGE_STATUS_CHECK_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -79,15 +73,16 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Provider-bound Play Console preflight is required before any signing approval.",
-    "Signing and all Play Console provider actions remain separately unauthorized.",
-    "Provider-bound facts including app existence, account type/date where relevant, Play App Signing state, upload-key fingerprint, versionCode availability, tester setup, feedback channel, and provider warnings remain unknown."
+    "The Play app has not yet been created.",
+    "Package registration/eligibility behavior for com.afradadmedia.reducephotosize is not yet observed in the Create app flow.",
+    "No upload key has been established for this app.",
+    "Signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human performs read-only/provider-bound Play Console preflight and reports the observed facts. Do not sign or mutate Play Console yet.",
+  "next_action": "Human decides whether to authorize entering the Play Console Create app flow for this app and observing the package-name status. Stop if Play requires ownership proof or any key/signing action.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -635,5 +630,16 @@
       "interpretation": "DISPLAY_UNIT_CONVENTION_AND_ROUNDING",
       "canonical_truth": "EXACT_BYTES"
     }
+  },
+  "play_provider_preflight": {
+    "status": "PASS",
+    "observed_at": "2026-10-01",
+    "result_ref": "docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_RESULT_v1.0.md",
+    "developer_verification_status": "VERIFIED",
+    "app_exists_in_account": false,
+    "account_type": "PERSONAL",
+    "account_created_after_2023_11_13": false,
+    "release_to_testing_permission": true,
+    "provider_warnings": "NONE"
   }
 }
