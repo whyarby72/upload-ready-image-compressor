@@ -540,3 +540,38 @@ No signing, key creation/rotation, Play Console mutation, upload, tester mutatio
 
 Next material approval scope:
 `S5 CURRENT UNSIGNED PLAY CANDIDATE MATERIALIZATION ONLY`
+
+
+## D-054 — ASO refreeze Play title after 20-competitor benchmark (2026-10-01)
+
+The human selected Option 3 to run one additional ASO title + short-description benchmark across 15–20 current Google Play competitors and then freeze the name.
+
+Benchmark:
+`docs/market/S5_ASO_TITLE_SHORT_DESCRIPTION_BENCHMARK_2026_10_01_v1.0.md`
+
+Observed 20-title sample token prevalence:
+- photo: 14/20;
+- compressor: 12/20;
+- KB: 12/20;
+- size: 7/20;
+- image: 7/20;
+- MB: 6/20;
+- resizer: 5/20;
+- exact: 2/20;
+- limit: 2/20.
+
+Decision:
+- refreeze en-US Play title as `Photo Compressor: KB Limit`;
+- retain launcher/in-app label `Reduce Photo Size`;
+- retain package `com.afradadmedia.reducephotosize`;
+- reject `Exact KB` as an over-strong product claim because the product contract is maximum-limit PASS (RESULT <= REQUIRED), not guaranteed target equality;
+- do not use `MB to KB` as the primary title framing because it is crowded and semantically narrower than the actual buyer job;
+- use `KB Limit` as the buyer-job differentiator on top of the established `Photo Compressor` category anchor.
+
+Short-description candidate:
+`Set a KB limit, compress locally, and verify the final file in exact bytes.`
+
+This decision changes Play metadata only. It does not authorize source mutation, final Play app creation submission, package registration mutation, key creation/rotation, signing, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+Approval ref:
+`USER_OPTION_3_2026-10-01_ASO_BENCHMARK_THEN_FREEZE_NAME`
