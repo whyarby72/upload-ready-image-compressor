@@ -793,3 +793,31 @@ Next scope:
 `S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE`
 
 No Play Console mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
+
+
+## D-062 — Authorize premium Play screenshot v2 with targeted recapture (2026-10-02)
+
+The human selected Option 1 after independent review of the real API36 screenshot capture.
+
+Authorized scope:
+`S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE`
+
+Prompt:
+`prompts/CODEX_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE_v1.0.md`
+
+Decision:
+- preserve v1 raw capture evidence unchanged;
+- mandatory recapture 02 with 200 KB selected and enabled Continue;
+- mandatory recapture 04 with 750 KB populated and KB selected;
+- optionally recapture 03 only if a stronger truthful single frame is possible;
+- remove avoidable emulator/system clutter where safe;
+- otherwise crop only system chrome in final composition;
+- create six premium 1080x1920 Warm Ink creatives around genuine screenshot pixels;
+- no phone hardware mockup, stock/lifestyle background, mascot, percentage claims, or synthetic UI;
+- every embedded screenshot must pass deterministic pixel-fidelity verification against its source crop;
+- human visual approval remains pending after Codex QA.
+
+Expected terminal state:
+`PLAY_SCREENSHOT_V2_PREMIUM_COMPOSITION_READY_HUMAN_REVIEW_REQUIRED`
+
+No Play Console mutation, signing, upload, testers, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
