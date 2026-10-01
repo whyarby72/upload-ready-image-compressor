@@ -3,8 +3,9 @@
 ## Product Identity
 Canonical/public name: PHOTO COMPRESSOR: KB LIMIT
 Launcher / in-app name: Reduce Photo Size
-Play short-description candidate: Set a KB limit, compress locally, and verify the final file in exact bytes.
+Play short-description candidate: Compress photos under a KB limit and verify the final size in exact bytes.
 ASO benchmark: docs/market/S5_ASO_TITLE_SHORT_DESCRIPTION_BENCHMARK_2026_10_01_v1.0.md
+Short/full description architecture audit: docs/market/S5_ASO_SHORT_FULL_DESCRIPTION_ARCHITECTURE_AUDIT_2026_10_01_v1.0.md
 Package name: com.afradadmedia.reducephotosize
 Historical/internal working name: UPLOAD-READY IMAGE COMPRESSOR (provenance alias only; not publication identity)
 Primary market: Global Android users encountering website/form image upload-size limits
