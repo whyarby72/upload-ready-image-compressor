@@ -763,3 +763,33 @@ Decision:
 - after execution, bring terminal result + evidence summary back to CHAT for independent audit.
 
 No provider mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+
+## D-061 — Real screenshot capture passes evidence gate; store creative remains HOLD (2026-10-02)
+
+The real API36 screenshot capture was committed and independently audited.
+
+Capture commit:
+`5e575b22f50c8309aefd71ff84db6dfb881ae122`
+
+Independent audit:
+`docs/qa/S5_REAL_PLAY_SCREENSHOT_CAPTURE_CHAT_INDEPENDENT_AUDIT_v1.0.md`
+
+Decision:
+- accept the six emulator captures as truthful artifact-bound runtime evidence;
+- accept genuine PASS / NOT_MET semantics;
+- accept raw/store byte identity as proof that no synthetic UI or retouching was introduced;
+- do NOT accept the current identity-copy store PNGs as final premium listing creatives;
+- do not reopen app UI or broad product design;
+- require targeted recapture of 02 with a selected preset and 04 with a populated valid custom limit;
+- clean status/notification clutter;
+- optionally improve 03 framing to preserve PASS context plus actions;
+- then build premium external compositions around original captured pixels.
+
+Status:
+`CAPTURE_EVIDENCE_PASS / STORE_VISUAL_HOLD`
+
+Next scope:
+`S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE`
+
+No Play Console mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
