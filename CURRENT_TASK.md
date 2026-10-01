@@ -1,38 +1,40 @@
 # CURRENT_TASK.md
 
-Task ID: S5_PLAY_PROVIDER_PREFLIGHT
+Task ID: S5_PLAY_APP_CREATION_PACKAGE_STATUS_CHECK
 Owner: HUMAN
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Priority: HIGH
-Status: PROVIDER_PREFLIGHT_REQUIRED_BEFORE_SIGNING_APPROVAL
+Status: APP_CREATION_PACKAGE_STATUS_CHECK_APPROVAL_PENDING
 
-## Product-quality status
+## Completed provider preflight
 
-TASK-S5-005 geometry:
-`PASS_HUMAN_APPROVED`
+Result:
+`PASS`
 
-TASK-S5-006 PREMIUM_QUALITY / VISUAL_PRODUCTIZATION:
-`PASS_HUMAN_APPROVED_CLOSED`
+Record:
+`docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_RESULT_v1.0.md`
 
-TASK-S5-007 OUTPUT SIZE DISPLAY CLARITY:
-`PASS_HUMAN_APPROVED_CLOSED`
+Key provider facts:
+- account authorized: YES
+- release-to-testing permission: YES
+- account type: PERSONAL
+- account created after 2023-11-13: NO
+- developer verification: VERIFIED
+- app already exists: NO
+- Play App Signing: NOT_CONFIGURED_APP_NOT_CREATED
+- authorized upload key available: NO
+- versionCode 1: N_A_NEW_APP_PREUPLOAD
+- Internal testing accessible: NO
+- existing internal release: NO
+- provider warnings: NONE
 
-Physical smartphone final manual review:
-`PASS_HUMAN_ATTESTED`
-
-No current product-quality corrective gate is open.
+No personal identity details are stored in repository evidence.
 
 ## Current unsigned Play candidate
 
-Source commit:
+Source:
 `27199bf6f174e55dc835d0d9898e456d3848001c`
-
-Materialization commit:
-`f191462281354dc9329b157c27de10919e463983`
-
-Evidence-binding commit:
-`5c61065768b131d14ffc6beddaac15842fc74cb8`
 
 Artifact:
 `evidence/artifacts/s5_current_play_candidate/app-release-0.1.0-vc1-unsigned.aab`
@@ -46,47 +48,25 @@ SHA-256:
 Signing:
 `UNSIGNED`
 
-Repository materialized:
-`TRUE`
+## Current decision
 
-Play upload eligible:
-`FALSE`
+The next provider action is not signing.
 
-Rebuild required:
-`FALSE`
+The app does not yet exist in Play Console, so the next controlled action is to enter the Play Console Create app flow and observe the package-name eligibility/registration result for:
+`com.afradadmedia.reducephotosize`
 
-CHAT audit:
-`docs/qa/S5_CURRENT_UNSIGNED_PLAY_CANDIDATE_CHAT_AUDIT_v1.0.md`
-
-## Current gate
-
-Before any signing approval, human must perform a provider-bound Play Console preflight.
-
-Canonical checklist:
-`docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_CHECKLIST_v1.0.md`
-
-Read-only observations required:
-- whether the app/package already exists in the intended Play Console account;
-- account type/date where relevant;
-- permission to release apps to testing;
-- Play App Signing enrollment/configuration;
-- authorized upload-key availability and non-secret certificate fingerprint;
-- whether versionCode 1 is available;
-- intended internal tester setup;
-- feedback email/URL;
-- any provider warnings/blockers.
-
-Do not infer provider state from repository state.
+Because this package has already been used during local physical-device QA, Play may request ownership proof for the signing key previously associated with the package. If that occurs, STOP and report the exact prompt before taking any key action.
 
 ## Authority boundary
 
 Not authorized:
+- app creation;
+- package registration mutation;
 - key creation or rotation;
 - signing;
-- Play Console mutation;
-- app creation;
 - AAB upload;
 - tester mutation;
+- release creation;
 - rollout;
 - S6;
 - BUILD promotion;
@@ -96,6 +76,11 @@ Not authorized:
 
 ## Next action
 
-Human performs the read-only/provider-bound preflight and reports the observed facts to CHAT.
+Human decides whether to authorize:
+`S5 PLAY CREATE-APP FLOW + PACKAGE STATUS CHECK ONLY`
 
-Only after reconciliation may a separately scoped signing approval be requested.
+If authorized, stop at the first provider screen that:
+- confirms package registration/eligibility; or
+- requests ownership proof, signing key, or other irreversible/provider-sensitive action.
+
+Do not proceed beyond that checkpoint without a new approval.
