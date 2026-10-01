@@ -743,3 +743,23 @@ Six screenshot jobs remain:
 6. genuine NOT_MET.
 
 No Play Console mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+
+## D-060 — Codex screenshot execution requested; current chat has no runner (2026-10-02)
+
+The human selected Option 1 to execute the prepared real-emulator screenshot prompt.
+
+CHAT verified:
+- the prompt exists;
+- the repository is reachable;
+- the prompt requires artifact-bound API36 emulator capture.
+
+The current chat exposes no Codex execution runner, terminal session, Android emulator, or Work/Computer-use surface capable of launching the task.
+
+Decision:
+- do not pretend execution occurred;
+- preserve status as `READY_FOR_EXTERNAL_CODEX_RUN / BLOCKED_IN_CHAT_NO_CODEX_RUNNER`;
+- require the prompt to be run in a Codex/terminal environment with Android SDK + adb + API36 emulator;
+- after execution, bring terminal result + evidence summary back to CHAT for independent audit.
+
+No provider mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
