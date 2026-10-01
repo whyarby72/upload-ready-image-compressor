@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human visually reviews the produced Play icon + feature graphic candidates. If approved, materialize selected binary assets into the repository; final screenshot composites remain blocked until current runtime UI captures are materialized/captured truthfully.",
+  "next_action": "Run the prepared Codex emulator-capture prompt in an environment with Android SDK + adb + API36 emulator. If emulator capability is unavailable, stop with BLOCKED_EMULATOR_ENVIRONMENT_NOT_AVAILABLE. No Play Console mutation is authorized.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -712,5 +712,21 @@
     "broad_app_redesign_required": false,
     "asset_production_authorized": false,
     "next_scope": "S5 PLAY STORE VISUAL ASSET PACK PRODUCTION"
+  },
+  "real_play_screenshot_capture": {
+    "status": "CODEX_PROMPT_READY_EXECUTION_NOT_YET_OBSERVED",
+    "prompt_ref": "prompts/CODEX_S5_REAL_PLAY_SCREENSHOT_CAPTURE_ANDROID_EMULATOR_v1.0.md",
+    "approval_ref": "USER_OPTION_1_2026-10-02_CODEX_S5_REAL_PLAY_SCREENSHOT_CAPTURE_VIA_ANDROID_EMULATOR_PROMPT",
+    "required_count": 6,
+    "raw_capture_target": "1080x1920_API36",
+    "truth_binding": [
+      "foreground package",
+      "UIAutomator hierarchy",
+      "raw screencap",
+      "capture.json",
+      "SHA-256"
+    ],
+    "synthetic_ui_forbidden": true,
+    "execution_observed": false
   }
 }
