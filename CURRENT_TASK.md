@@ -295,3 +295,36 @@ Next material scope:
 
 No broad app redesign is required.
 No Play Console mutation, signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+
+## Play screenshot v2 premium composition authorization — 2026-10-02
+
+Human authorization:
+`USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE`
+
+Scope:
+`S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE`
+
+Codex prompt:
+`prompts/CODEX_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE_v1.0.md`
+
+Mandatory targeted recapture:
+- 02 Set KB limit with `200 KB` selected and active Continue;
+- 04 Custom Limit with `750 KB` populated, KB selected, keyboard dismissed.
+
+Optional:
+- improve 03 Save/Share only if a better truthful single-frame capture is possible.
+
+Final v2 rules:
+- six 1080x1920 RGB PNGs;
+- real emulator screenshots only;
+- premium external Warm Ink composition;
+- crop only system chrome, never app UI;
+- deterministic pixel-fidelity proof;
+- no synthetic/recreated/retouched app UI;
+- v1 evidence remains preserved.
+
+Terminal success:
+`PLAY_SCREENSHOT_V2_PREMIUM_COMPOSITION_READY_HUMAN_REVIEW_REQUIRED`
+
+No Play Console mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
