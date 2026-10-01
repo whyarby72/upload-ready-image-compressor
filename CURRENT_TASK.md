@@ -103,3 +103,29 @@ Hard stop:
 - before final Create app submission if it creates/registers the app;
 - immediately if ownership proof/private-key proof is requested;
 - before any key, signing, upload, tester, release, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication action.
+
+
+## Play listing metadata freeze — 2026-10-01
+
+Status:
+`FROZEN_EN_US_METADATA_COPY`
+
+Play title:
+`Photo Compressor: KB Limit`
+
+Short description:
+`Set a KB limit, compress photos, and verify the final size in exact bytes.`
+
+Full description:
+canonical copy in `store/PLAY_LISTING.md`
+
+Audit:
+`docs/market/S5_PLAY_FULL_DESCRIPTION_FINAL_POLICY_KEYWORD_AUDIT_2026_10_01_v1.0.md`
+
+Audit result:
+`PASS_NO_MATERIAL_METADATA_POLICY_CONFLICT_FOUND`
+
+Keyword result:
+`PASS_NATURAL_SEMANTIC_COVERAGE`
+
+The current Create-app package-status authorization remains limited to observing package eligibility/status. Final Create app submission is still not authorized.
