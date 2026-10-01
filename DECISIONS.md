@@ -654,3 +654,38 @@ Next material scope:
 `S5 PLAY STORE VISUAL ASSET PACK PRODUCTION`
 
 No asset generation, source mutation, final Create app submission, package mutation, signing, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
+
+
+## D-058 — Competitor visual benchmark before Play asset production (2026-10-01)
+
+The human selected Option 2 to benchmark 10–15 competitor Play listings before producing store assets.
+
+Benchmark:
+`docs/market/S5_PLAY_VISUAL_COMPETITOR_BENCHMARK_2026_10_01_v1.0.md`
+
+Sample:
+13 direct / near-direct Android competitors.
+
+Decision:
+- no broad app redesign is justified;
+- preserve the existing Warm Ink visual system and Compression Frame Mark;
+- differentiate through evidence-led verified-result visuals rather than feature breadth;
+- lead the screenshot sequence with exact-byte PASS proof;
+- avoid mascot-led identity, generic blue-toolbox sameness, giant percentage-reduction claims, and feature-grid collage;
+- retain the six-screen store storyboard, with refined ordering:
+  1. verified result;
+  2. set KB limit;
+  3. save/share;
+  4. custom KB/MB;
+  5. on-device compression;
+  6. honest NOT_MET;
+- keep feature graphic text-light / text-free;
+- require a post-AdMob visual-drift audit before publication.
+
+Benchmark result:
+`PASS`
+
+Next material scope:
+`S5 PLAY STORE VISUAL ASSET PACK PRODUCTION`
+
+No asset generation, source mutation, final Create app submission, package mutation, signing, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
