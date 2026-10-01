@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Run prompts/CODEX_S5_REAL_PLAY_SCREENSHOT_CAPTURE_ANDROID_EMULATOR_v1.0.md in a Codex/terminal environment with Android SDK + adb + API36 emulator, then return terminal result and evidence summary to CHAT for audit.",
+  "next_action": "Authorize and run S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE: clean emulator status/notification clutter, recapture state 02 with 200 KB selected, recapture state 04 with 750 KB populated, optionally improve state 03 framing, then compose six premium 1080x1920 Play creatives around truthful app screenshots without altering UI pixels.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -714,7 +714,7 @@
     "next_scope": "S5 PLAY STORE VISUAL ASSET PACK PRODUCTION"
   },
   "real_play_screenshot_capture": {
-    "status": "READY_FOR_EXTERNAL_CODEX_RUN_BLOCKED_IN_CHAT_NO_CODEX_RUNNER",
+    "status": "CAPTURE_EVIDENCE_PASS_STORE_VISUAL_HOLD",
     "prompt_ref": "prompts/CODEX_S5_REAL_PLAY_SCREENSHOT_CAPTURE_ANDROID_EMULATOR_v1.0.md",
     "approval_ref": "USER_OPTION_1_2026-10-02_CODEX_S5_REAL_PLAY_SCREENSHOT_CAPTURE_VIA_ANDROID_EMULATOR_PROMPT",
     "required_count": 6,
@@ -729,6 +729,18 @@
     "synthetic_ui_forbidden": true,
     "execution_observed": false,
     "execution_requested_at": "2026-10-02",
-    "execution_handoff_ref": "docs/ops/S5_CODEX_REAL_PLAY_SCREENSHOT_EXECUTION_HANDOFF_v1.0.md"
+    "execution_handoff_ref": "docs/ops/S5_CODEX_REAL_PLAY_SCREENSHOT_EXECUTION_HANDOFF_v1.0.md",
+    "remote_capture_commit": "5e575b22f50c8309aefd71ff84db6dfb881ae122",
+    "independent_audit_ref": "docs/qa/S5_REAL_PLAY_SCREENSHOT_CAPTURE_CHAT_INDEPENDENT_AUDIT_v1.0.md",
+    "capture_evidence_pass": true,
+    "premium_store_composition_done": false,
+    "human_visual_approval": "PENDING",
+    "required_next_scope": "S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE",
+    "targeted_recap": [
+      "02_set_kb_limit_with_selected_preset",
+      "04_custom_limit_with_populated_value",
+      "status_notification_cleanup",
+      "optional_03_pass_context_plus_actions"
+    ]
   }
 }
