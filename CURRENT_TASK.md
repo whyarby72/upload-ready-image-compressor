@@ -5,7 +5,7 @@ Owner: HUMAN
 Reviewer: CHAT
 Stage: S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING
 Priority: HIGH
-Status: APP_CREATION_PACKAGE_STATUS_CHECK_APPROVAL_PENDING
+Status: APP_CREATION_PACKAGE_STATUS_CHECK_AUTHORIZED
 
 ## Completed provider preflight
 
@@ -84,3 +84,22 @@ If authorized, stop at the first provider screen that:
 - requests ownership proof, signing key, or other irreversible/provider-sensitive action.
 
 Do not proceed beyond that checkpoint without a new approval.
+
+
+## Authorization — 2026-10-01
+
+Approved scope:
+`S5 PLAY CREATE-APP FLOW + PACKAGE STATUS CHECK ONLY`
+
+Approval ref:
+`USER_OPTION_1_2026-10-01_S5_PLAY_CREATE_APP_FLOW_PACKAGE_STATUS_CHECK_ONLY`
+
+Runbook:
+`docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CHECK_v1.0.md`
+
+Human may enter the Create app flow and observe the package-name status only.
+
+Hard stop:
+- before final Create app submission if it creates/registers the app;
+- immediately if ownership proof/private-key proof is requested;
+- before any key, signing, upload, tester, release, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication action.
