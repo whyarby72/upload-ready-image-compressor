@@ -1,0 +1,133 @@
+{
+  "schema": "S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_MANIFEST_v1.0",
+  "source_commit": "e3a5745d4ed5e0cd0bb87f84fb3ca37366eec5ec",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "format": "RGB PNG"
+  },
+  "style": "MEDIA-FIRST PRECISION UTILITY \u2014 WARM INK",
+  "crop_policy": "System chrome crop only; no app UI pixels removed. Source crop is x=0,y=72,width=1080,height=1776.",
+  "resize": {
+    "width": 900,
+    "height": 1480,
+    "interpolation": "CoreGraphics high quality"
+  },
+  "destination_rect_top_origin": [
+    90,
+    260,
+    900,
+    1480
+  ],
+  "pixel_fidelity": "PASS",
+  "items": [
+    {
+      "final_path": "store/assets/play/en-US/screenshots_v2/01_verified_result_1080x1920.png",
+      "final_sha256": "1a9a175958c00097002b508bbac6cd23ba25912d85d48f6bded273d501f5983a",
+      "source_raw_path": "evidence/store/play_screenshots_v1/01_verified_result/screenshot_raw.png",
+      "source_raw_sha256": "c6b969083969ab6c309ae473e8c7a85a80dae6bfd54583d52441b22d6394f858",
+      "source_crop_rect_top_origin": [
+        0,
+        72,
+        1080,
+        1776
+      ],
+      "resize_width": 900,
+      "resize_height": 1480,
+      "destination_x": 90,
+      "destination_y_top_origin": 260,
+      "interpolation": "CoreGraphics high quality",
+      "pixel_fidelity": "PASS"
+    },
+    {
+      "final_path": "store/assets/play/en-US/screenshots_v2/02_set_kb_limit_1080x1920.png",
+      "final_sha256": "24a400f7c2f17c3c5108b08ec38632ba9251aa2564edc89f30965c21964ac905",
+      "source_raw_path": "evidence/store/play_screenshots_v2/02_set_kb_limit/screenshot_raw.png",
+      "source_raw_sha256": "c7191f847e021d57a94f6ec78fce7559fcc61ab1b3423bb5a1eebc6911a163d5",
+      "source_crop_rect_top_origin": [
+        0,
+        72,
+        1080,
+        1776
+      ],
+      "resize_width": 900,
+      "resize_height": 1480,
+      "destination_x": 90,
+      "destination_y_top_origin": 260,
+      "interpolation": "CoreGraphics high quality",
+      "pixel_fidelity": "PASS"
+    },
+    {
+      "final_path": "store/assets/play/en-US/screenshots_v2/03_save_share_1080x1920.png",
+      "final_sha256": "e55559414712ce28d19f33b2a6608e6949e643cdf3d38f09d2f82a7458835cdf",
+      "source_raw_path": "evidence/store/play_screenshots_v1/03_save_share/screenshot_raw.png",
+      "source_raw_sha256": "ab111010826986ed4ee13091ba78ea9ec7acfcc766581376c194d24fa554100b",
+      "source_crop_rect_top_origin": [
+        0,
+        72,
+        1080,
+        1776
+      ],
+      "resize_width": 900,
+      "resize_height": 1480,
+      "destination_x": 90,
+      "destination_y_top_origin": 260,
+      "interpolation": "CoreGraphics high quality",
+      "pixel_fidelity": "PASS"
+    },
+    {
+      "final_path": "store/assets/play/en-US/screenshots_v2/04_custom_limit_1080x1920.png",
+      "final_sha256": "9c145b8e8556381e610994003a4b437039828aefbbfb7212647085bb49fb1498",
+      "source_raw_path": "evidence/store/play_screenshots_v2/04_custom_limit/screenshot_raw.png",
+      "source_raw_sha256": "a4976525af09e81fa0696a6ea15ffa346a999cf4950646263449b4a4943f5737",
+      "source_crop_rect_top_origin": [
+        0,
+        72,
+        1080,
+        1776
+      ],
+      "resize_width": 900,
+      "resize_height": 1480,
+      "destination_x": 90,
+      "destination_y_top_origin": 260,
+      "interpolation": "CoreGraphics high quality",
+      "pixel_fidelity": "PASS"
+    },
+    {
+      "final_path": "store/assets/play/en-US/screenshots_v2/05_on_device_1080x1920.png",
+      "final_sha256": "3dffcf5b95142de7a3926bbe0ed93f4a117db8303bbf04b62306e304befcae33",
+      "source_raw_path": "evidence/store/play_screenshots_v1/05_on_device/screenshot_raw.png",
+      "source_raw_sha256": "c92484a06806a82cfb09a252a68e5b86235fd789e0f8840239413da78836f4cb",
+      "source_crop_rect_top_origin": [
+        0,
+        72,
+        1080,
+        1776
+      ],
+      "resize_width": 900,
+      "resize_height": 1480,
+      "destination_x": 90,
+      "destination_y_top_origin": 260,
+      "interpolation": "CoreGraphics high quality",
+      "pixel_fidelity": "PASS"
+    },
+    {
+      "final_path": "store/assets/play/en-US/screenshots_v2/06_not_met_1080x1920.png",
+      "final_sha256": "d00e7031c69353caa68c7e310ae200c36e7dec8ed1655611e865cf3a514eb07a",
+      "source_raw_path": "evidence/store/play_screenshots_v1/06_not_met/screenshot_raw.png",
+      "source_raw_sha256": "ba863fb2d1293e12685218a4a1a7eb373f42f29ae08f00752bb29e34ce4e07ab",
+      "source_crop_rect_top_origin": [
+        0,
+        72,
+        1080,
+        1776
+      ],
+      "resize_width": 900,
+      "resize_height": 1480,
+      "destination_x": 90,
+      "destination_y_top_origin": 260,
+      "interpolation": "CoreGraphics high quality",
+      "pixel_fidelity": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_PROOF_v1.0",
+  "terminal_status": "PLAY_SCREENSHOT_V2_PREMIUM_COMPOSITION_READY_HUMAN_REVIEW_REQUIRED",
+  "source_head_before_task": "e3a5745d4ed5e0cd0bb87f84fb3ca37366eec5ec",
+  "source_commit": "e3a5745d4ed5e0cd0bb87f84fb3ca37366eec5ec",
+  "accepted_capture_commit": "5e575b22f50c8309aefd71ff84db6dfb881ae122",
+  "apk_sha256": "843c6321febc8b1756c7ed3ba0f0d547fa74bad69bc7a9fef121f44a138e64ce",
+  "emulator": {
+    "avd": "task-s3-api36",
+    "serial": "emulator-5554",
+    "api": 36,
+    "wm_size": "1080x1920",
+    "wm_density": 480,
+    "font_scale": 1.0
+  },
+  "fixture": {
+    "path": "app/src/androidTest/assets/fixtures/ratio_16x9.jpg",
+    "sha256": "5697821c39c0a9c7ed696a9cddc591503b2e1e41268fe198cb766eeee6f4e20d"
+  },
+  "recaptured_states": [
+    "02_set_kb_limit (200 KB selected)",
+    "04_custom_limit (750 KB, keyboard dismissed)"
+  ],
+  "reused_states": [
+    "01_verified_result",
+    "03_save_share",
+    "05_on_device",
+    "06_not_met"
+  ],
+  "pixel_fidelity": {
+    "01_verified_result_1080x1920.png": "PASS",
+    "02_set_kb_limit_1080x1920.png": "PASS",
+    "03_save_share_1080x1920.png": "PASS",
+    "04_custom_limit_1080x1920.png": "PASS",
+    "05_on_device_1080x1920.png": "PASS",
+    "06_not_met_1080x1920.png": "PASS"
+  },
+  "final_assets": [
+    {
+      "path": "store/assets/play/en-US/screenshots_v2/01_verified_result_1080x1920.png",
+      "sha256": "1a9a175958c00097002b508bbac6cd23ba25912d85d48f6bded273d501f5983a"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots_v2/02_set_kb_limit_1080x1920.png",
+      "sha256": "24a400f7c2f17c3c5108b08ec38632ba9251aa2564edc89f30965c21964ac905"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots_v2/03_save_share_1080x1920.png",
+      "sha256": "e55559414712ce28d19f33b2a6608e6949e643cdf3d38f09d2f82a7458835cdf"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots_v2/04_custom_limit_1080x1920.png",
+      "sha256": "9c145b8e8556381e610994003a4b437039828aefbbfb7212647085bb49fb1498"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots_v2/05_on_device_1080x1920.png",
+      "sha256": "3dffcf5b95142de7a3926bbe0ed93f4a117db8303bbf04b62306e304befcae33"
+    },
+    {
+      "path": "store/assets/play/en-US/screenshots_v2/06_not_met_1080x1920.png",
+      "sha256": "d00e7031c69353caa68c7e310ae200c36e7dec8ed1655611e865cf3a514eb07a"
+    }
+  ],
+  "human_visual_approval": "PENDING",
+  "play_console_mutation": false,
+  "signing": false,
+  "upload": false
+}

@@ -1,0 +1,8 @@
+{
+  "01_verified_result_1080x1920.png": "Premium composition showing the real result screen with a verified file size within the upload limit.",
+  "02_set_kb_limit_1080x1920.png": "Premium composition showing the real Requirement screen with 200 KB selected and Continue enabled.",
+  "03_save_share_1080x1920.png": "Premium composition showing the real verified result with Save copy and Share actions.",
+  "04_custom_limit_1080x1920.png": "Premium composition showing the real Custom limit dialog populated with 750 KB.",
+  "05_on_device_1080x1920.png": "Premium composition showing the real Home screen and on-device photo compression message.",
+  "06_not_met_1080x1920.png": "Premium composition showing the real result that reports the target was not met."
+}
