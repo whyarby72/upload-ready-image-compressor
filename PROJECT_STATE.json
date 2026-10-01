@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human continues the already-authorized Play Create app flow using title 'Photo Compressor: KB Limit' and package 'com.afradadmedia.reducephotosize', observes package-name status, and stops before final Create app submission or any ownership/key action.",
+  "next_action": "Human decides whether to authorize S5 PLAY STORE VISUAL ASSET PACK PRODUCTION. The existing Create-app package-status authorization remains valid but final Create app submission remains unauthorized.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -660,5 +660,26 @@
     "full_description_status": "FROZEN_EN_US_METADATA_COPY",
     "audit_ref": "docs/market/S5_PLAY_FULL_DESCRIPTION_FINAL_POLICY_KEYWORD_AUDIT_2026_10_01_v1.0.md",
     "publication_authorized": false
+  },
+  "play_store_visual_assets": {
+    "status": "AUDIT_PASS_PRODUCTION_REQUIRED",
+    "observed_at": "2026-10-01",
+    "audit_ref": "docs/market/S5_PLAY_STORE_VISUAL_ASSET_AUDIT_2026_10_01_v1.0.md",
+    "play_icon": {
+      "status": "MISSING_DEDICATED_512_PNG",
+      "concept": "COMPRESSION_FRAME_MARK_PASS"
+    },
+    "feature_graphic": {
+      "status": "MISSING_1024X500",
+      "concept": "HOME_HERO_GRAMMAR_READY"
+    },
+    "screenshots": {
+      "status": "RECAPTURE_REQUIRED",
+      "current_qa_360x800": "INVALID_PLAY_RATIO_2_22_TO_1",
+      "current_qa_320x640": "TECHNICALLY_VALID_BUT_BELOW_1080_PROMOTION_RECOMMENDATION",
+      "target": "SIX_PORTRAIT_1080X1920"
+    },
+    "asset_production_authorized": false,
+    "next_scope": "S5 PLAY STORE VISUAL ASSET PACK PRODUCTION"
   }
 }
