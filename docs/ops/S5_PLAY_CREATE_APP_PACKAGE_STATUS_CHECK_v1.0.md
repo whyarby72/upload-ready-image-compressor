@@ -1,7 +1,7 @@
 # S5 — PLAY CREATE-APP FLOW + PACKAGE STATUS CHECK v1.0
 
 Approved: 2026-10-01
-Product: REDUCE PHOTO SIZE: KB LIMIT
+Product: PHOTO COMPRESSOR: KB LIMIT
 Package: `com.afradadmedia.reducephotosize`
 
 Approval ref:
@@ -41,7 +41,7 @@ Not authorized:
 ## Canonical identity
 
 Play title:
-`Reduce Photo Size: KB Limit`
+`Photo Compressor: KB Limit`
 
 Package:
 `com.afradadmedia.reducephotosize`
@@ -58,7 +58,7 @@ Current versionCode:
 2. Open `All apps`.
 3. Choose `Create app`.
 4. If the page contains an App name field, enter:
-   `Reduce Photo Size: KB Limit`
+   `Photo Compressor: KB Limit`
 5. If the page contains a Package name field, enter:
    `com.afradadmedia.reducephotosize`
 6. Observe the package-name status immediately.
