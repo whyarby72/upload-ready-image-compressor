@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Authorize and run S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE: clean emulator status/notification clutter, recapture state 02 with 200 KB selected, recapture state 04 with 750 KB populated, optionally improve state 03 framing, then compose six premium 1080x1920 Play creatives around truthful app screenshots without altering UI pixels.",
+  "next_action": "Run prompts/CODEX_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE_v1.0.md in Codex after syncing task/TASK-S5-007. Return v2 contact sheet, proof, hashes, and terminal status for CHAT + human review.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -742,5 +742,24 @@
       "status_notification_cleanup",
       "optional_03_pass_context_plus_actions"
     ]
+  },
+  "play_screenshot_v2": {
+    "status": "AUTHORIZED_PROMPT_READY_EXECUTION_PENDING",
+    "approval_ref": "USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE",
+    "prompt_ref": "prompts/CODEX_S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_TARGETED_RECAPTURE_v1.0.md",
+    "scope": "S5 PLAY SCREENSHOT PREMIUM COMPOSITION + TARGETED RECAPTURE",
+    "mandatory_recapture": [
+      "02_set_kb_limit_200KB_selected",
+      "04_custom_limit_750KB_populated"
+    ],
+    "optional_recapture": [
+      "03_save_share_if_truthfully_better"
+    ],
+    "preserve_v1": true,
+    "output_namespace": "store/assets/play/en-US/screenshots_v2/",
+    "pixel_fidelity_required": true,
+    "synthetic_ui_forbidden": true,
+    "human_visual_approval": "PENDING",
+    "execution_observed": false
   }
 }
