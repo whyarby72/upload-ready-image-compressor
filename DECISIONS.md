@@ -628,3 +628,29 @@ This is a metadata freeze only. It does not authorize final Create app submissio
 
 Approval ref:
 `USER_OPTION_1_2026-10-01_FULL_DESCRIPTION_FINAL_POLICY_KEYWORD_AUDIT`
+
+
+## D-057 — Audit Play icon, screenshots, and feature graphic (2026-10-01)
+
+The human selected Option 2 to audit Play visual assets before continuing Create app.
+
+Audit:
+`docs/market/S5_PLAY_STORE_VISUAL_ASSET_AUDIT_2026_10_01_v1.0.md`
+
+Decision:
+- preserve the existing Compression Frame Mark as the brand basis;
+- require a dedicated 512x512 Play-store icon export rather than treating the adaptive launcher XML as the store asset;
+- use the approved Home large-photo -> limit -> smaller-result story as the feature-graphic visual grammar, but create a separate compliant 1024x500 JPEG/PNG asset;
+- do not upload current QA screenshots as the final Play screenshot set;
+- target six portrait 1080x1920 screenshots;
+- prioritize exact-byte verification in screenshot 1, KB-limit selection in screenshot 2, and Save/Share completion in screenshot 3;
+- keep feature graphic text-light or text-free and avoid keyword stuffing in graphics;
+- perform a post-AdMob visual-drift check before publication.
+
+Current result:
+`STORE_VISUAL_ASSET_AUDIT_PASS / PRODUCTION_REQUIRED`
+
+Next material scope:
+`S5 PLAY STORE VISUAL ASSET PACK PRODUCTION`
+
+No asset generation, source mutation, final Create app submission, package mutation, signing, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
