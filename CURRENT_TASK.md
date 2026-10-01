@@ -241,3 +241,22 @@ Environment failure:
 `BLOCKED_EMULATOR_ENVIRONMENT_NOT_AVAILABLE`
 
 This prompt does not authorize any Play Console mutation, package registration, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+
+## Codex execution request — 2026-10-02
+
+Human selected:
+`USER_OPTION_1_2026-10-02_RUN_CODEX_REAL_PLAY_SCREENSHOT_CAPTURE`
+
+Execution handoff:
+`docs/ops/S5_CODEX_REAL_PLAY_SCREENSHOT_EXECUTION_HANDOFF_v1.0.md`
+
+Status:
+`READY_FOR_EXTERNAL_CODEX_RUN / BLOCKED_IN_CHAT_NO_CODEX_RUNNER`
+
+CHAT verified the capture prompt exists and is bound, but this chat does not expose a Codex runner, terminal, Android emulator, or cloud-computer execution surface.
+
+No screenshot execution is claimed.
+
+Required next:
+run the prompt in a Codex/terminal environment with Android SDK + adb + API36 emulator, then return the terminal status and evidence paths for audit.
