@@ -598,3 +598,33 @@ This decision does not authorize final Create app submission, package registrati
 
 Approval ref:
 `USER_OPTION_2_2026-10-01_SHORT_FULL_DESCRIPTION_ASO_AUDIT`
+
+
+## D-056 — Freeze en-US Play listing copy after policy and keyword audit (2026-10-01)
+
+The human selected Option 1 to produce the final en-US full description, audit it against current Google Play metadata guidance and the product-truth contract, and freeze the copy if the audit passed.
+
+Audit:
+`docs/market/S5_PLAY_FULL_DESCRIPTION_FINAL_POLICY_KEYWORD_AUDIT_2026_10_01_v1.0.md`
+
+Decision:
+- keep Play title frozen as `Photo Compressor: KB Limit`;
+- freeze short description as:
+  `Set a KB limit, compress photos, and verify the final size in exact bytes.`
+- freeze the final en-US full description stored in `store/PLAY_LISTING.md`;
+- replace the prior short-description candidate because "under a KB limit" could be read as a universal success guarantee;
+- preserve truthful PASS semantics: result bytes must be <= the user-provided limit;
+- preserve NOT_MET as a valid outcome;
+- preserve the JPEG/JPG, Save/Share, original-preservation, local-compression, and exact-byte truth boundaries;
+- exclude unsupported feature claims, ranking/performance claims, pricing claims, "ad-free" wording, exact-equality guarantees, and keyword stuffing.
+
+Audit result:
+`PASS_NO_MATERIAL_METADATA_POLICY_CONFLICT_FOUND`
+
+Keyword result:
+`PASS_NATURAL_SEMANTIC_COVERAGE`
+
+This is a metadata freeze only. It does not authorize final Create app submission, package registration mutation, signing, key operations, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+Approval ref:
+`USER_OPTION_1_2026-10-01_FULL_DESCRIPTION_FINAL_POLICY_KEYWORD_AUDIT`
