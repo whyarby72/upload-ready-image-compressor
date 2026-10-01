@@ -151,3 +151,31 @@ Next material approval scope:
 `S5 PLAY STORE VISUAL ASSET PACK PRODUCTION`
 
 This audit does not authorize image production, source mutation, final Create app submission, package registration mutation, signing, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+
+## Visual competitor benchmark — 2026-10-01
+
+Benchmark:
+`docs/market/S5_PLAY_VISUAL_COMPETITOR_BENCHMARK_2026_10_01_v1.0.md`
+
+Sample:
+`13 direct / near-direct Google Play competitors`
+
+Status:
+`PASS`
+
+Strategic thesis:
+`QUIET PROOF > LOUD PROMISE`
+
+Implications:
+- no broad app redesign;
+- keep Warm Ink brand;
+- lead screenshot #1 with verified-result proof, not Home;
+- avoid mascot-led identity, generic bright-blue utility sameness, giant percentage claims, and feature-grid collage;
+- preserve exact-byte inequality / PASS / NOT_MET as the store visual signature;
+- dedicated 512x512 Play icon, 1024x500 feature graphic, and six 1080x1920 screenshots remain required.
+
+Next material approval scope:
+`S5 PLAY STORE VISUAL ASSET PACK PRODUCTION`
+
+No asset generation, source mutation, final Create app submission, package mutation, signing, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized by this benchmark.
