@@ -575,3 +575,26 @@ This decision changes Play metadata only. It does not authorize source mutation,
 
 Approval ref:
 `USER_OPTION_3_2026-10-01_ASO_BENCHMARK_THEN_FREEZE_NAME`
+
+
+## D-055 — Audit Play short description and full-description keyword architecture (2026-10-01)
+
+The human selected Option 2 to run a focused ASO audit of the short description and full-description keyword architecture before continuing Play app creation.
+
+Audit:
+`docs/market/S5_ASO_SHORT_FULL_DESCRIPTION_ARCHITECTURE_AUDIT_2026_10_01_v1.0.md`
+
+Decision:
+- keep Play title frozen as `Photo Compressor: KB Limit`;
+- recommend short description:
+  `Compress photos under a KB limit and verify the final size in exact bytes.`
+- supersede the earlier short-description candidate that began with `Set a KB limit...`;
+- freeze the full-description keyword architecture and truth boundaries, but do not freeze final full-description prose yet;
+- prioritize natural semantic coverage over keyword repetition;
+- preserve maximum-limit truth: PASS means RESULT <= REQUIRED, not guaranteed exact equality;
+- do not use unsupported batch, PNG/WebP, passport/visa, crop, converter, or "no ads" claims.
+
+This decision does not authorize final Create app submission, package registration mutation, signing, upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+Approval ref:
+`USER_OPTION_2_2026-10-01_SHORT_FULL_DESCRIPTION_ASO_AUDIT`
