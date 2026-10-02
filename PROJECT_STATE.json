@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides whether to authorize S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH: composition-only replacement of the external REDUCE PHOTO SIZE kicker with PHOTO COMPRESSOR: KB LIMIT across all six screenshots, preserving embedded app pixels exactly.",
+  "next_action": "Human decides whether to approve the six V2.1 Play Store screenshots for visual use. Approval of screenshots does not authorize Play Console mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -772,5 +772,28 @@
     "recapture_required": false,
     "app_source_change_required": false,
     "required_next_scope": "S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH"
+  },
+  "s5_play_screenshot_v2_1": {
+    "status": "PASS_READY_FOR_HUMAN_VISUAL_APPROVAL",
+    "authorization_ref": "USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_MICRO_POLISH",
+    "result_commit": "f787c438e23bc5fd14afe7968f4d2c72944d052e",
+    "scope": "EXTERNAL_COMPOSITION_ONLY",
+    "previous_kicker": "REDUCE PHOTO SIZE",
+    "current_kicker": "PHOTO COMPRESSOR: KB LIMIT",
+    "embedded_app_pixels": "PASS_EXACT_PIXEL_IDENTITY_APP_RECT_ALL_SIX",
+    "app_source_mutation": false,
+    "emulator_recapture": false,
+    "final_asset_sha256": {
+      "01_verified_result_1080x1920.png": "bd9df46276e19dc6981ce50740552d34a34ef05bb4a29d6d994f97d30a71ddf8",
+      "02_set_kb_limit_1080x1920.png": "8e20f4ea41d7ec045cc374f1b986df85bab50b6cfd4b116f211f6a8798f325ef",
+      "03_save_share_1080x1920.png": "444d1a073f3027819d81289af6be5116f66bf561a8fba1fa53a4f48d4cb783b7",
+      "04_custom_limit_1080x1920.png": "1349f795d662a95d4eded738ec2ead9d34a6fe79329aeec529f78b921a258900",
+      "05_on_device_1080x1920.png": "35532d92bc51ca6d13e9d3e2803208767bfd4a16e154df9b6745123a30cd63a9",
+      "06_not_met_1080x1920.png": "d2c4cbb22d3ececf1bbc1d1775062bbb4ac70df5ecf2aceaefd2555991550e25"
+    },
+    "contact_sheet_sha256": "1d4f99a757bedeabcad1d3bf2c476ba33d8dc88438f5313e4bd877b181bb6932",
+    "proof_ref": "evidence/store/S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_PROOF_v1.0.json",
+    "manifest_ref": "store/assets/play/en-US/screenshots_v2/composition_manifest.json",
+    "chat_audit_ref": "docs/qa/S5_PLAY_SCREENSHOT_V2_1_CHAT_INDEPENDENT_AUDIT_v1.0.md"
   }
 }
