@@ -658,3 +658,29 @@ Execution owner:
 
 Next:
 capture the read-only Play App Signing page and return it to CHAT for artifact-bound audit.
+
+
+## Protected with Play overview observed — read-only audit partial — 2026-10-02
+
+Evidence:
+`evidence/play/S5_PLAY_PROTECTED_WITH_PLAY_READ_ONLY_STATUS_2026_10_02_v1.0.md`
+
+PDF SHA-256:
+`0fef8382b2f129369c861bcf00052d09562d36c3adb30de0275f181a1b6f4ed4`
+
+Visible status:
+- overall: `Good protection`;
+- Automatic protection: `1 of 1 service active`;
+- Play Integrity API: `0 of 7 services active`;
+- Play Store protection: `6 of 7 services active`;
+- Play Billing protection: `0 of 4 services active`.
+
+Disposition:
+`READ_ONLY_SIGNING_AUDIT_PARTIAL_PROTECTED_WITH_PLAY_OVERVIEW_ONLY`
+
+The page does not yet expose app-signing or upload-key certificate details.
+
+Next within the already authorized read-only scope:
+expand `Play Store protection`, then open `Play app signing` / `Manage Play app signing` if offered and capture the resulting status page.
+
+No mutating action is authorized.
