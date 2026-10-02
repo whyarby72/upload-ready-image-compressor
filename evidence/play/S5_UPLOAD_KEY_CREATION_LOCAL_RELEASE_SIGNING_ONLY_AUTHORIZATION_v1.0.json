@@ -1,0 +1,34 @@
+{
+  "schema": "S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_ONLY_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "package": "com.afradadmedia.reducephotosize",
+  "authorized_at": "2026-10-03",
+  "approval_ref": "USER_EXPLICIT_2026-10-03_S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_ONLY",
+  "authorized_scope": "S5 UPLOAD KEY CREATION + LOCAL RELEASE SIGNING ONLY",
+  "permitted": [
+    "Create one dedicated developer-held upload keystore locally",
+    "Keep keystore and all passwords only on the human-controlled local device",
+    "Build a fresh release AAB from the verified source using the already-authorized QA bundleRelease path",
+    "Sign the fresh release AAB locally with the dedicated upload key",
+    "Verify the AAB signature locally",
+    "Record only non-secret metadata: public upload-certificate SHA-256 fingerprint, source commit, AAB SHA-256, byte size, versionName, versionCode, and verification result"
+  ],
+  "prohibited": [
+    "Committing or uploading the private keystore",
+    "Sending private key material or passwords to CHAT",
+    "Storing passwords in repository files",
+    "Play Console AAB upload",
+    "Tester mutation",
+    "Release creation",
+    "Rollout",
+    "S6",
+    "BUILD promotion",
+    "Artifact Freeze",
+    "Publication"
+  ],
+  "hard_stop": "STOP_AFTER_LOCAL_SIGNED_AAB_VERIFICATION_BEFORE_ANY_PLAY_UPLOAD",
+  "secret_boundary": "PRIVATE_KEYSTORE_AND_PASSWORDS_LOCAL_ONLY",
+  "provider_app_signing_status": "ACTIVE_APP_SIGNING_KEY_IN_USE",
+  "provider_app_signing_sha256": "56:39:62:12:1D:E2:14:C3:C7:53:41:CB:54:8B:A2:C0:71:D7:16:25:F0:5A:34:77:98:21:5B:38:0F:00:9B:47",
+  "provider_upload_key_certificate_status": "NOT_YET_SHOWN_FIRST_BUNDLE_NOT_UPLOADED"
+}
