@@ -971,3 +971,23 @@ Canonical values:
 - Package name: `com.afradadmedia.reducephotosize`.
 
 No signing, key operation, AAB upload, tester mutation, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority is added.
+
+
+## D-069 — Play package availability PASS; final Create app action is next (2026-10-02)
+
+Direct user-supplied Play Console evidence shows:
+- app name `Photo Compressor: KB Limit`;
+- package `com.afradadmedia.reducephotosize`;
+- green provider confirmation `Package name available`;
+- default language `English (United States) – en-US`.
+
+Screenshot SHA-256:
+`5923b11e6455be89ded4b8220a68500bdaa2ab182a87866734eb3b1b8fee9a88`
+
+Decision:
+- close package-status checkpoint as `PACKAGE_STATUS_NEW_OR_AUTO_REGISTERABLE_OBSERVED`;
+- package availability = PASS;
+- activate the already-authorized `FINAL CREATE APP CREATION ONLY` scope;
+- stop immediately after app entry creation.
+
+No authority is added beyond the already-bound create-app-only scope.
