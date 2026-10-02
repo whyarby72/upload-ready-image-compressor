@@ -360,3 +360,37 @@ This does not change in-app text and requires no emulator recapture or app-sourc
 
 Next material scope:
 `S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH`
+
+
+## Play screenshot V2.1 brand-kicker micro-polish — 2026-10-02
+
+Authorization:
+`USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_MICRO_POLISH`
+
+Execution result commit:
+`f787c438e23bc5fd14afe7968f4d2c72944d052e`
+
+Result:
+`PASS_READY_FOR_HUMAN_VISUAL_APPROVAL`
+
+Applied to all six external Play screenshot compositions:
+`REDUCE PHOTO SIZE` -> `PHOTO COMPRESSOR: KB LIMIT`.
+
+Verified invariants:
+- embedded app screenshot pixels: exact identity in the bound app rectangle for all six;
+- pixels below the external header boundary y=260: unchanged;
+- in-app `Reduce Photo Size`: preserved;
+- emulator recapture: not required / not run;
+- `app/` source mutation: none;
+- six final hashes + contact sheet + composition manifest regenerated.
+
+Proof:
+`evidence/store/S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_PROOF_v1.0.json`
+
+Independent CHAT audit:
+`docs/qa/S5_PLAY_SCREENSHOT_V2_1_CHAT_INDEPENDENT_AUDIT_v1.0.md`
+
+Next material gate:
+`HUMAN PLAY STORE SCREENSHOT VISUAL APPROVAL`.
+
+No Play Console mutation, signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
