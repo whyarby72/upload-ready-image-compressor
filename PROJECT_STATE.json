@@ -85,7 +85,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides whether to approve the six V2.1 Play Store screenshots for visual use. Approval of screenshots does not authorize Play Console mutation, signing, upload, testers, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.",
+  "next_action": "Proceed only within the already-authorized S5 PLAY CREATE-APP FLOW + PACKAGE STATUS CHECK ONLY provider scope, stopping before final Create app submission/registration mutation and immediately on any ownership-proof or key-sensitive prompt.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -774,7 +774,7 @@
     "required_next_scope": "S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH"
   },
   "s5_play_screenshot_v2_1": {
-    "status": "PASS_READY_FOR_HUMAN_VISUAL_APPROVAL",
+    "status": "PASS_HUMAN_VISUAL_APPROVED_CLOSED",
     "authorization_ref": "USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_MICRO_POLISH",
     "result_commit": "f787c438e23bc5fd14afe7968f4d2c72944d052e",
     "scope": "EXTERNAL_COMPOSITION_ONLY",
@@ -794,6 +794,15 @@
     "contact_sheet_sha256": "1d4f99a757bedeabcad1d3bf2c476ba33d8dc88438f5313e4bd877b181bb6932",
     "proof_ref": "evidence/store/S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_PROOF_v1.0.json",
     "manifest_ref": "store/assets/play/en-US/screenshots_v2/composition_manifest.json",
-    "chat_audit_ref": "docs/qa/S5_PLAY_SCREENSHOT_V2_1_CHAT_INDEPENDENT_AUDIT_v1.0.md"
+    "chat_audit_ref": "docs/qa/S5_PLAY_SCREENSHOT_V2_1_CHAT_INDEPENDENT_AUDIT_v1.0.md",
+    "human_visual_approval": {
+      "status": "APPROVED",
+      "approval_ref": "USER_OPTION_1_2026-10-02_HUMAN_PLAY_STORE_SCREENSHOT_VISUAL_APPROVAL",
+      "approval_evidence_ref": "evidence/store/S5_PLAY_SCREENSHOT_V2_1_HUMAN_VISUAL_APPROVAL_v1.0.json",
+      "approved_result_commit": "f787c438e23bc5fd14afe7968f4d2c72944d052e",
+      "composition_manifest_sha256": "5e7388b40d4039c285622d32b2a75f39d3980c492f77b902a0b06eb486ed78b4",
+      "contact_sheet_sha256": "1d4f99a757bedeabcad1d3bf2c476ba33d8dc88438f5313e4bd877b181bb6932",
+      "scope": "VISUAL_APPROVAL_ONLY_NO_PROVIDER_OR_RELEASE_AUTHORITY"
+    }
   }
 }
