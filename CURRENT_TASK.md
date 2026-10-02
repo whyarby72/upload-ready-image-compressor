@@ -706,3 +706,37 @@ Next within the existing read-only scope:
 open `Manage Play app signing` and capture the certificate/status page.
 
 No mutating signing/key/upload action is authorized.
+
+
+## Play App Signing key-management read-only audit — PASS — 2026-10-03
+
+Evidence:
+`evidence/play/S5_PLAY_APP_SIGNING_KEYMANAGEMENT_READ_ONLY_RESULT_2026_10_03_v1.0.md`
+
+PDF SHA-256:
+`7fe1c913adedf1948c0bac8946a8a14a987cd61265a219233e231c118383e1bb`
+
+Provider facts:
+- `App signing key`: `In use`;
+- app-signing SHA-256 fingerprint:
+  `56:39:62:12:1D:E2:14:C3:C7:53:41:CB:54:8B:A2:C0:71:D7:16:25:F0:5A:34:77:98:21:5B:38:0F:00:9B:47`;
+- `Upload key certificate` currently states that fingerprints will appear after the first app bundle upload.
+
+Disposition:
+`READ_ONLY_APP_SIGNING_AUDIT_PASS`
+
+Provider-side Play App Signing is active.
+
+The upload-key certificate is not yet established/displayed in Play because the first bundle has not been uploaded.
+
+Current project preflight still records no authorized upload key available.
+
+Recommended next material scope:
+`S5 UPLOAD KEY CREATION + LOCAL RELEASE SIGNING ONLY`
+
+Security boundary:
+- private keystore/passwords must stay local;
+- do not commit key material;
+- do not send private key material to CHAT;
+- record only public fingerprints/non-secret metadata;
+- stop before any Play upload.
