@@ -740,3 +740,37 @@ Security boundary:
 - do not send private key material to CHAT;
 - record only public fingerprints/non-secret metadata;
 - stop before any Play upload.
+
+
+## S5 upload-key creation + local release signing authorized — 2026-10-03
+
+Human authorization:
+`USER_EXPLICIT_2026-10-03_S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_ONLY`
+
+Scope:
+`S5 UPLOAD KEY CREATION + LOCAL RELEASE SIGNING ONLY`
+
+Runbook:
+`docs/ops/S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_RUNBOOK_v1.0.md`
+
+Local helper:
+`scripts/local/s5_create_upload_key_and_sign.sh`
+
+Execution model:
+- HUMAN runs the helper on the trusted local Mac/Linux machine;
+- helper creates a dedicated RSA-4096 upload keystore outside the repository;
+- passwords are entered interactively and remain local;
+- helper runs a fresh `bundleRelease`;
+- helper signs a copied release AAB locally with `jarsigner`;
+- helper verifies the signature;
+- helper records only non-secret metadata in `S5_LOCAL_SIGNING_RESULT.json`.
+
+Secret boundary:
+- NEVER commit/upload the keystore;
+- NEVER send the keystore/private key/passwords to CHAT;
+- repository evidence may contain only public fingerprint/hash/version/verification metadata.
+
+Hard stop:
+`STOP_AFTER_LOCAL_SIGNED_AAB_VERIFICATION_BEFORE_ANY_PLAY_UPLOAD`.
+
+AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.
