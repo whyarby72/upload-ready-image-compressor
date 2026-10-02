@@ -39,17 +39,17 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_PLAY_FINAL_CREATE_APP_CREATION_ONLY",
-    "owner": "HUMAN",
+    "id": "S5_PLAY_APP_ENTRY_CREATED_POST_CREATE_STOP",
+    "owner": "CHAT",
     "next_owner": "HUMAN",
-    "status": "PACKAGE_STATUS_PASS_FINAL_CREATE_APP_READY",
+    "status": "PLAY_APP_ENTRY_CREATED_PROVIDER_CONFIRMED",
     "opened_from": "S5_PLAY_PROVIDER_PREFLIGHT",
     "reason": "Provider preflight completed. The app does not yet exist in Play Console; the next provider mutation is to enter the Create app flow and observe package-name eligibility/registration behavior before proceeding further.",
     "provider_preflight_ref": "docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_RESULT_v1.0.md",
     "provider_action_authorized": true,
     "authorization_ref": "USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY",
     "runbook_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CHECK_v1.0.md",
-    "provider_execution_state": "READY_FOR_FINAL_CREATE_APP_ACTION",
+    "provider_execution_state": "POST_CREATE_HARD_STOP_COMPLETE",
     "current_provider_audit_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CURRENT_PROVIDER_AUDIT_2026_10_02_v1.0.md",
     "authorization_evidence_ref": "evidence/play/S5_PLAY_FINAL_CREATE_APP_CREATION_ONLY_AUTHORIZATION_v1.0.json",
     "hard_stop": "IMMEDIATELY_AFTER_APP_ENTRY_CREATION",
@@ -60,14 +60,20 @@
     "package_status": "PACKAGE_STATUS_NEW_OR_AUTO_REGISTERABLE_OBSERVED",
     "package_availability_result": "AVAILABLE",
     "package_availability_evidence_ref": "evidence/play/S5_PLAY_PACKAGE_AVAILABILITY_RESULT_2026_10_02_v1.0.md",
-    "package_availability_screenshot_sha256": "5923b11e6455be89ded4b8220a68500bdaa2ab182a87866734eb3b1b8fee9a88"
+    "package_availability_screenshot_sha256": "5923b11e6455be89ded4b8220a68500bdaa2ab182a87866734eb3b1b8fee9a88",
+    "create_app_authorization_consumed": true,
+    "create_app_authorization_ref": "USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY",
+    "post_create_evidence_ref": "evidence/play/S5_PLAY_APP_ENTRY_CREATED_POST_CREATE_DASHBOARD_2026_10_02_v1.0.md",
+    "post_create_pdf_sha256": "82a0da061a94e6ee44256131c24b72a35c308d1859eb2c4c2002d796769d5f91",
+    "provider_app_id": "4973120481844433940",
+    "hard_stop_status": "HONORED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "PROVIDER_PREFLIGHT_PASS_PACKAGE_AVAILABLE_FINAL_CREATE_APP_READY",
+    "internal_test": "PLAY_APP_ENTRY_CREATED_SIGNING_UPLOAD_KEY_STATUS_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -88,21 +94,22 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "The Play app has not yet been created.",
     "Package registration/eligibility behavior for com.afradadmedia.reducephotosize is not yet observed in the Create app flow.",
     "No upload key has been established for this app.",
     "Signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "The Play app entry has not yet been confirmed created.",
     "Signing, AAB upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "In-app privacy-policy surface/link must be completed before distribution/publication.",
     "A public privacy-policy URL must be bound before distribution/publication.",
-    "Play Data safety declaration must be completed before distribution/publication."
+    "Play Data safety declaration must be completed before distribution/publication.",
+    "Play App Signing / upload-key state for the newly created app has not yet been observed.",
+    "No authorized upload key has been established for this app.",
+    "AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Account holder reviews and personally accepts the Developer Program Policies and US export-law declarations if true, then may press Create app under the existing create-app-only authorization. Stop immediately after app entry creation.",
+  "next_action": "Human decides whether to authorize a read-only Play App Signing + upload-key status audit for the newly created app. No key creation/rotation/import, signing, AAB upload, tester mutation, release, or rollout is authorized yet.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -833,5 +840,16 @@
       "Public privacy-policy URL not yet bound",
       "Play Data safety declaration not yet completed"
     ]
+  },
+  "play_app_creation": {
+    "status": "PASS_PROVIDER_CONFIRMED",
+    "observed_at": "2026-10-02",
+    "play_title": "Photo Compressor: KB Limit",
+    "package_name": "com.afradadmedia.reducephotosize",
+    "provider_app_id": "4973120481844433940",
+    "post_create_evidence_ref": "evidence/play/S5_PLAY_APP_ENTRY_CREATED_POST_CREATE_DASHBOARD_2026_10_02_v1.0.md",
+    "post_create_pdf_sha256": "82a0da061a94e6ee44256131c24b72a35c308d1859eb2c4c2002d796769d5f91",
+    "authorization_ref": "USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY",
+    "hard_stop_status": "HONORED"
   }
 }
