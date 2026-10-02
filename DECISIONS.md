@@ -848,3 +848,29 @@ Next scope:
 `S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH`
 
 No Play Console mutation, signing, upload, testers, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+
+## D-064 — Authorize and complete Play screenshot V2.1 brand-kicker micro-polish (2026-10-02)
+
+The human selected Option 1 and explicitly authorized:
+`S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH`.
+
+Final result commit:
+`f787c438e23bc5fd14afe7968f4d2c72944d052e`
+
+Decision:
+- replace only external store-composition kicker on all six screenshots from `REDUCE PHOTO SIZE` to `PHOTO COMPRESSOR: KB LIMIT`;
+- preserve embedded application screenshot pixels exactly;
+- preserve in-app `Reduce Photo Size`;
+- do not perform emulator recapture;
+- regenerate screenshot hashes, contact sheet, composition manifest, and replayable proof.
+
+Verification result:
+`PASS_READY_FOR_HUMAN_VISUAL_APPROVAL`
+
+The first orchestration workflow attempt failed before artifact mutation because its temporary YAML was malformed. It was repaired; the successful run produced the bound result above and removed the temporary workflow from the final tree. The failed attempt is not counted as PASS.
+
+Authorization ref:
+`USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_MICRO_POLISH`
+
+No Play Console mutation, signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
