@@ -42,20 +42,22 @@
     "id": "S5_PLAY_APP_CREATION_PACKAGE_STATUS_CHECK",
     "owner": "HUMAN",
     "next_owner": "HUMAN",
-    "status": "APP_CREATION_PACKAGE_STATUS_CHECK_AUTHORIZED",
+    "status": "HOLD_PROVIDER_FLOW_CONFLICT",
     "opened_from": "S5_PLAY_PROVIDER_PREFLIGHT",
     "reason": "Provider preflight completed. The app does not yet exist in Play Console; the next provider mutation is to enter the Create app flow and observe package-name eligibility/registration behavior before proceeding further.",
     "provider_preflight_ref": "docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_RESULT_v1.0.md",
     "provider_action_authorized": true,
     "authorization_ref": "USER_OPTION_1_2026-10-01_S5_PLAY_CREATE_APP_FLOW_PACKAGE_STATUS_CHECK_ONLY",
-    "runbook_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CHECK_v1.0.md"
+    "runbook_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CHECK_v1.0.md",
+    "provider_execution_state": "HOLD_BEFORE_FINAL_CREATE_APP",
+    "current_provider_audit_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CURRENT_PROVIDER_AUDIT_2026_10_02_v1.0.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "PROVIDER_PREFLIGHT_PASS_APP_CREATION_PACKAGE_STATUS_CHECK_PENDING",
+    "internal_test": "PROVIDER_PREFLIGHT_PASS_CREATE_APP_PACKAGE_STATUS_RUNBOOK_CONFLICT_HOLD",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -79,13 +81,16 @@
     "The Play app has not yet been created.",
     "Package registration/eligibility behavior for com.afradadmedia.reducephotosize is not yet observed in the Create app flow.",
     "No upload key has been established for this app.",
-    "Signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
+    "Signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
+    "Current official Play Console Create app documentation does not expose a package-name status checkpoint before the final Create app action.",
+    "The existing package-status-only runbook assumption conflicts with current documented provider flow.",
+    "Final Create app action remains unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Proceed only within the already-authorized S5 PLAY CREATE-APP FLOW + PACKAGE STATUS CHECK ONLY provider scope, stopping before final Create app submission/registration mutation and immediately on any ownership-proof or key-sensitive prompt.",
+  "next_action": "Human decides whether to authorize final Create app creation only, with an immediate hard stop after creation and before any package/signing/upload/tester/release action; otherwise HOLD.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
