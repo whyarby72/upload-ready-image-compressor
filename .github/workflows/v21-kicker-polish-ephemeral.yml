@@ -1,0 +1,327 @@
+name: V2.1 screenshot kicker polish (ephemeral)
+
+on:
+  push:
+    branches:
+      - task/TASK-S5-007
+    paths:
+      - .github/workflows/v21-kicker-polish-ephemeral.yml
+
+permissions:
+  contents: write
+
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: task/TASK-S5-007
+          fetch-depth: 0
+
+      - name: Install Pillow
+        run: python -m pip install --quiet pillow
+
+      - name: Apply composition-only kicker polish and verify pixel fidelity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          from pathlib import Path
+          import hashlib, json, statistics, datetime
+
+          ROOT = Path(".")
+          BASE = ROOT / "store/assets/play/en-US/screenshots_v2"
+          paths = [
+              BASE / "01_verified_result_1080x1920.png",
+              BASE / "02_set_kb_limit_1080x1920.png",
+              BASE / "03_save_share_1080x1920.png",
+              BASE / "04_custom_limit_1080x1920.png",
+              BASE / "05_on_device_1080x1920.png",
+              BASE / "06_not_met_1080x1920.png",
+          ]
+          old_kicker = "REDUCE PHOTO SIZE"
+          new_kicker = "PHOTO COMPRESSOR: KB LIMIT"
+          app_rect = (90, 260, 990, 1740)
+          auth_ref = "USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_MICRO_POLISH"
+
+          def sha256_file(p):
+              h = hashlib.sha256()
+              with open(p, "rb") as f:
+                  for c in iter(lambda: f.read(1024 * 1024), b""):
+                      h.update(c)
+              return h.hexdigest()
+
+          # Arial-like metric; choose the largest restrained size that comfortably fits.
+          font_candidates = [
+              "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+              "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+          ]
+          font_path = next((p for p in font_candidates if Path(p).exists()), None)
+          if not font_path:
+              raise SystemExit("No suitable bold sans font found")
+
+          fidelity = {}
+          final_hashes = {}
+          visual_meta = {}
+
+          for p in paths:
+              im = Image.open(p).convert("RGB")
+              before = im.copy()
+              bg = im.getpixel((20, 20))
+
+              # External kicker lives only in this ROI; headline begins below it.
+              x0, y0, x1, y1 = 35, 30, 650, 115
+              pts = []
+              colors = []
+              for y in range(y0, y1):
+                  for x in range(x0, x1):
+                      px = im.getpixel((x, y))
+                      dist = sum(abs(px[i] - bg[i]) for i in range(3))
+                      if dist >= 18:
+                          pts.append((x, y))
+                          colors.append(px)
+              if not pts:
+                  raise SystemExit(f"No kicker glyph pixels detected in {p}")
+
+              bx0 = min(x for x,y in pts)
+              by0 = min(y for x,y in pts)
+              bx1 = max(x for x,y in pts) + 1
+              by1 = max(y for x,y in pts) + 1
+
+              # Median antialiased glyph color approximates the original kicker tone.
+              text_color = tuple(int(statistics.median([c[i] for c in colors])) for i in range(3))
+
+              draw = ImageDraw.Draw(im)
+              pad = 6
+              draw.rectangle((bx0-pad, by0-pad, max(bx1+pad, 520), by1+pad), fill=bg)
+
+              # Match original label height and fit new copy without competing with headline.
+              target_h = max(17, by1 - by0)
+              chosen = None
+              for size in range(24, 13, -1):
+                  f = ImageFont.truetype(font_path, size=size)
+                  tb = draw.textbbox((0,0), new_kicker, font=f)
+                  w, h = tb[2]-tb[0], tb[3]-tb[1]
+                  if h <= target_h + 5 and w <= 520:
+                      chosen = f
+                      break
+              if chosen is None:
+                  chosen = ImageFont.truetype(font_path, size=14)
+
+              tb = draw.textbbox((0,0), new_kicker, font=chosen)
+              th = tb[3]-tb[1]
+              ty = by0 + ((by1-by0)-th)//2 - tb[1]
+              draw.text((bx0, ty), new_kicker, font=chosen, fill=text_color)
+
+              # Hard claim-bound fidelity: embedded app screenshot pixels cannot change.
+              if before.crop(app_rect).tobytes() != im.crop(app_rect).tobytes():
+                  raise SystemExit(f"Embedded app pixel drift detected: {p}")
+              fidelity[p.name] = "PASS_EXACT_PIXEL_IDENTITY_APP_RECT"
+
+              # Also prove only external top composition changed.
+              if before.crop((0,260,1080,1920)).tobytes() != im.crop((0,260,1080,1920)).tobytes():
+                  raise SystemExit(f"Pixels below external header changed: {p}")
+
+              im.save(p, "PNG", optimize=True)
+              final_hashes[p.name] = sha256_file(p)
+              visual_meta[p.name] = {
+                  "old_bbox": [bx0, by0, bx1, by1],
+                  "background_rgb": list(bg),
+                  "text_rgb": list(text_color),
+                  "font": Path(font_path).name,
+                  "font_size": chosen.size,
+              }
+
+          # Rebuild a deterministic 3x2 contact sheet from the six final assets.
+          thumbs = []
+          tw, th = 270, 480
+          for p in paths:
+              im = Image.open(p).convert("RGB")
+              thumbs.append(im.resize((tw, th), Image.Resampling.LANCZOS))
+          gap = 24
+          margin = 24
+          sheet = Image.new("RGB", (margin*2 + tw*3 + gap*2, margin*2 + th*2 + gap), (247,243,239))
+          for i, im in enumerate(thumbs):
+              col, row = i % 3, i // 3
+              sheet.paste(im, (margin + col*(tw+gap), margin + row*(th+gap)))
+          contact = BASE / "CONTACT_SHEET_6UP.png"
+          sheet.save(contact, "PNG", optimize=True)
+
+          manifest_path = BASE / "composition_manifest.json"
+          manifest = json.loads(manifest_path.read_text())
+          manifest["schema"] = "S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_MANIFEST_v1.1"
+          manifest["composition_version"] = "V2.1_BRAND_KICKER_MICRO_POLISH"
+          manifest["authorization_ref"] = auth_ref
+          manifest["external_brand_kicker"] = {
+              "previous": old_kicker,
+              "current": new_kicker,
+              "scope": "EXTERNAL_COMPOSITION_ONLY",
+              "embedded_app_pixels_changed": False,
+              "emulator_recapture_required": False
+          }
+          manifest["pixel_fidelity"] = "PASS_EXACT_APP_RECT_ALL_SIX"
+          for item in manifest["items"]:
+              name = Path(item["final_path"]).name
+              item["final_sha256"] = final_hashes[name]
+              item["pixel_fidelity"] = "PASS_EXACT_APP_RECT"
+          manifest["contact_sheet"] = {
+              "path": str(contact),
+              "sha256": sha256_file(contact),
+              "layout": "3x2"
+          }
+          manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
+
+          proof_path = ROOT / "evidence/store/S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_PROOF_v1.0.json"
+          proof = {
+              "schema": "S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_PROOF_v1.0",
+              "authorization_ref": auth_ref,
+              "scope": "COMPOSITION_ONLY",
+              "previous_kicker": old_kicker,
+              "new_kicker": new_kicker,
+              "emulator_recapture": False,
+              "app_source_mutation": False,
+              "embedded_app_rect": list(app_rect),
+              "pixel_fidelity": fidelity,
+              "visual_meta": visual_meta,
+              "final_assets_sha256": final_hashes,
+              "contact_sheet_sha256": sha256_file(contact),
+              "manifest_sha256": sha256_file(manifest_path),
+              "result": "PASS_READY_FOR_HUMAN_VISUAL_APPROVAL"
+          }
+          proof_path.parent.mkdir(parents=True, exist_ok=True)
+          proof_path.write_text(json.dumps(proof, indent=2) + "\n")
+
+          qa = ROOT / "docs/qa/S5_PLAY_SCREENSHOT_V2_1_EXECUTION_RESULT_v1.0.md"
+          qa.write_text(f"""# S5 PLAY SCREENSHOT V2.1 — BRAND KICKER MICRO-POLISH EXECUTION RESULT
+
+Date: 2026-10-02
+Product: PHOTO COMPRESSOR: KB LIMIT
+Authorization: `{auth_ref}`
+
+## Scope executed
+
+- external composition kicker changed on all six Play screenshot creatives:
+  - from `REDUCE PHOTO SIZE`
+  - to `PHOTO COMPRESSOR: KB LIMIT`
+- embedded application screenshot pixels preserved exactly;
+- no emulator recapture;
+- no `app/` source mutation;
+- final screenshot hashes regenerated;
+- 6-up contact sheet regenerated;
+- composition manifest regenerated.
+
+## Verification
+
+- all six assets remain 1080x1920 RGB PNG;
+- pixels in the embedded app rectangle `x=90..989, y=260..1739` are byte-identical before vs after;
+- all pixels below y=260 are unchanged;
+- only external header composition pixels changed;
+- pixel fidelity result: `PASS_EXACT_APP_RECT_ALL_SIX`.
+
+## Result
+
+`PASS_READY_FOR_HUMAN_VISUAL_APPROVAL`
+
+Next material gate:
+`HUMAN PLAY STORE SCREENSHOT VISUAL APPROVAL`
+
+This execution grants no Play Console mutation, signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority.
+""")
+
+          # State update without changing workflow progress semantics.
+          state_path = ROOT / "PROJECT_STATE.json"
+          state = json.loads(state_path.read_text())
+          state["s5_play_screenshot_v2_1"] = {
+              "status": "PASS_READY_FOR_HUMAN_VISUAL_APPROVAL",
+              "authorization_ref": auth_ref,
+              "scope": "EXTERNAL_COMPOSITION_ONLY",
+              "previous_kicker": old_kicker,
+              "current_kicker": new_kicker,
+              "embedded_app_pixels": "PASS_EXACT_IDENTITY",
+              "app_source_mutation": False,
+              "emulator_recapture": False,
+              "manifest_ref": str(manifest_path),
+              "proof_ref": str(proof_path),
+              "qa_ref": str(qa)
+          }
+          state["next_action"] = "Human decides whether to approve the six V2.1 Play Store screenshots for visual use; no provider/release authority is implied."
+          state_path.write_text(json.dumps(state, indent=2) + "\n")
+
+          with open("DECISIONS.md", "a", encoding="utf-8") as f:
+              f.write(f"""
+
+## D-064 — Authorize and execute Play screenshot V2.1 brand-kicker micro-polish (2026-10-02)
+
+The human selected Option 1 and explicitly authorized:
+`S5 PLAY SCREENSHOT V2.1 BRAND KICKER MICRO-POLISH`.
+
+Executed scope:
+- changed only the external store-composition kicker on all six screenshots from
+  `REDUCE PHOTO SIZE` to `PHOTO COMPRESSOR: KB LIMIT`;
+- preserved embedded in-app pixels exactly;
+- preserved in-app `Reduce Photo Size` identity;
+- no emulator recapture;
+- regenerated final hashes, contact sheet, manifest, and verification evidence.
+
+Result:
+`PASS_READY_FOR_HUMAN_VISUAL_APPROVAL`
+
+Authorization ref:
+`{auth_ref}`
+
+No Play Console mutation, signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+""")
+
+          with open("CURRENT_TASK.md", "a", encoding="utf-8") as f:
+              f.write(f"""
+
+## Play screenshot V2.1 brand-kicker micro-polish — 2026-10-02
+
+Authorization:
+`{auth_ref}`
+
+Result:
+`PASS_READY_FOR_HUMAN_VISUAL_APPROVAL`
+
+Applied to all six external Play screenshot compositions:
+`REDUCE PHOTO SIZE` -> `PHOTO COMPRESSOR: KB LIMIT`.
+
+Hard invariants verified:
+- embedded app screenshot pixels: EXACTLY PRESERVED;
+- in-app `Reduce Photo Size`: PRESERVED;
+- emulator recapture: NOT REQUIRED / NOT RUN;
+- `app/` source mutation: NONE.
+
+Evidence:
+`evidence/store/S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_PROOF_v1.0.json`
+
+QA:
+`docs/qa/S5_PLAY_SCREENSHOT_V2_1_EXECUTION_RESULT_v1.0.md`
+
+Next material gate:
+`HUMAN PLAY STORE SCREENSHOT VISUAL APPROVAL`.
+""")
+          PY
+
+      - name: Guard scope and commit result
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --name-only | grep -q '^app/'; then
+            echo "Unauthorized app source mutation detected" >&2
+            exit 1
+          fi
+          rm .github/workflows/v21-kicker-polish-ephemeral.yml
+          git config user.name "ai-prod-v2.1-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add             store/assets/play/en-US/screenshots_v2             evidence/store/S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_PROOF_v1.0.json             docs/qa/S5_PLAY_SCREENSHOT_V2_1_EXECUTION_RESULT_v1.0.md             PROJECT_STATE.json CURRENT_TASK.md DECISIONS.md             .github/workflows/v21-kicker-polish-ephemeral.yml
+          echo "Changed paths:"
+          git diff --cached --name-only
+          if git diff --cached --name-only | grep -q '^app/'; then
+            echo "Unauthorized app source mutation staged" >&2
+            exit 1
+          fi
+          git commit -m "store: polish Play screenshot brand kicker v2.1"
+          git push origin HEAD:task/TASK-S5-007
