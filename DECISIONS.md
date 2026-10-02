@@ -1098,3 +1098,21 @@ Screenshot SHA-256:
 `e97edcb18a41b4c12cbbedf0c932c0b6956d07334fe3ab96d5cace925a16c5b3`.
 
 No signing/key/upload mutation is authorized.
+
+
+## D-075 — Close read-only Play App Signing audit; upload-key setup is next material decision (2026-10-03)
+
+Direct provider key-management evidence shows:
+- Play app-signing key status `In use`;
+- app-signing SHA-256 fingerprint:
+  `56:39:62:12:1D:E2:14:C3:C7:53:41:CB:54:8B:A2:C0:71:D7:16:25:F0:5A:34:77:98:21:5B:38:0F:00:9B:47`;
+- upload-key fingerprints are not yet shown because the first app bundle has not yet been uploaded.
+
+Decision:
+- close `S5 PLAY APP SIGNING + UPLOAD KEY READ-ONLY STATUS AUDIT` as PASS;
+- preserve the hard stop against key/signing/upload mutation;
+- do not infer any existing authorized developer-held upload key;
+- recommend a separate bounded scope:
+  `S5 UPLOAD KEY CREATION + LOCAL RELEASE SIGNING ONLY`.
+
+No Play upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority is added.
