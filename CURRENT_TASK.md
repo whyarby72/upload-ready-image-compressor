@@ -500,3 +500,37 @@ Execution owner:
 `HUMAN`
 
 CHAT must not infer success until the post-create provider state is observed.
+
+
+## Direct provider UI evidence resolves package-status runbook conflict — 2026-10-02
+
+Evidence:
+`docs/ops/S5_PLAY_CREATE_APP_DIRECT_PROVIDER_UI_EVIDENCE_2026_10_02_v1.0.md`
+
+User-supplied Play Console capture SHA-256:
+`7eb0c95038c87ea8154c9865513ca0751e1866914d4b64d0d725d2712e3799a2`
+
+The actual account-specific Create app screen visibly contains:
+- `App name`;
+- `Package name`;
+- `Check availability`;
+- default language;
+- app/game;
+- free/paid;
+- declarations;
+- final `Create app`.
+
+Therefore the previous documentation-based HOLD is superseded.
+
+Current least-authority execution:
+1. enter `Photo Compressor: KB Limit`;
+2. enter `com.afradadmedia.reducephotosize`;
+3. invoke `Check availability`;
+4. STOP and report the exact package-status result.
+
+Do not press `Create app` yet.
+
+The package-status-only authorization is sufficient:
+`USER_OPTION_1_2026-10-01_S5_PLAY_CREATE_APP_FLOW_PACKAGE_STATUS_CHECK_ONLY`.
+
+The broader create-app-only authorization remains available but should not be consumed until after the reversible package-status result is reviewed.
