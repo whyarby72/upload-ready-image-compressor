@@ -593,3 +593,33 @@ Publication controls still required:
 The account holder must personally make the two Play Console attestations. CHAT does not attest legal statements on the human's behalf.
 
 After truthful attestation, the already-authorized `FINAL CREATE APP CREATION ONLY` action may proceed, followed by immediate hard stop after app entry creation.
+
+
+## Play app entry created — provider confirmed — 2026-10-02
+
+Post-create evidence:
+`evidence/play/S5_PLAY_APP_ENTRY_CREATED_POST_CREATE_DASHBOARD_2026_10_02_v1.0.md`
+
+PDF SHA-256:
+`82a0da061a94e6ee44256131c24b72a35c308d1859eb2c4c2002d796769d5f91`
+
+Observed:
+- Google Play Console app Dashboard loaded successfully;
+- visible app selector: `Photo Compressor: KB Limit`;
+- dashboard shows setup/testing/release task groups for the newly created app;
+- provider app id observed from the captured dashboard URL: `4973120481844433940`.
+
+Disposition:
+`PLAY_APP_ENTRY_CREATED_PROVIDER_CONFIRMED`
+
+The authorization:
+`USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY`
+is now consumed.
+
+Hard stop:
+`HONORED`
+
+No signing, key action, AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is claimed or authorized.
+
+Next material scope:
+`S5 PLAY APP SIGNING + UPLOAD KEY READ-ONLY STATUS AUDIT`.
