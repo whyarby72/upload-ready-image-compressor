@@ -433,3 +433,26 @@ Next active provider scope remains the previously authorized:
 `S5 PLAY CREATE-APP FLOW + PACKAGE STATUS CHECK ONLY`
 
 Hard stop remains before any final Create app submission/registration mutation and immediately if ownership proof or signing-key/private-key action is requested.
+
+
+## Current provider-flow revalidation — 2026-10-02
+
+Audit:
+`docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CURRENT_PROVIDER_AUDIT_2026_10_02_v1.0.md`
+
+Disposition:
+`HOLD_PROVIDER_FLOW_CONFLICT`
+
+Current official Google Play Console Help documents the initial Create app form as language/name, app-or-game, free-or-paid, contact email, declarations, then final `Create app`.
+
+It does not document a package-name field or package-eligibility checkpoint before final app creation.
+
+Therefore the previously authorized package-status-only objective cannot currently be completed without risk of crossing the explicit hard stop before final Create app creation.
+
+No provider mutation was performed.
+
+Next material decision:
+`AUTHORIZE FINAL CREATE APP CREATION ONLY`
+with immediate stop after creation and before any signing, key, upload, tester, release, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication action;
+
+or retain HOLD.
