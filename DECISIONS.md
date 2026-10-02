@@ -1011,3 +1011,26 @@ Publication remains blocked until privacy-policy and Data safety controls are co
 The legal/developer declarations remain the responsibility of the account holder.
 
 No authority beyond the existing `FINAL CREATE APP CREATION ONLY` scope is added.
+
+
+## D-071 — Google Play app entry creation confirmed; hard stop honored (2026-10-02)
+
+Direct post-create Play Console evidence shows the app Dashboard for:
+`Photo Compressor: KB Limit`.
+
+PDF SHA-256:
+`82a0da061a94e6ee44256131c24b72a35c308d1859eb2c4c2002d796769d5f91`
+
+Provider app id observed from the captured dashboard URL:
+`4973120481844433940`.
+
+Decision:
+- close `FINAL CREATE APP CREATION ONLY` as PASS;
+- mark app entry creation as provider-confirmed;
+- record that the mandated post-create hard stop was honored;
+- do not infer signing/key/upload/tester/release authority.
+
+Next recommended provider scope:
+`S5 PLAY APP SIGNING + UPLOAD KEY READ-ONLY STATUS AUDIT`.
+
+This next scope is observation-only unless separately authorized.
