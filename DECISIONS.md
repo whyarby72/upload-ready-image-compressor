@@ -1146,3 +1146,23 @@ Helper:
 `scripts/local/s5_create_upload_key_and_sign.sh`
 
 No Play upload or downstream release authority is granted.
+
+
+## D-077 — Local upload-key signing passes screenshot review; canonical closure waits for result JSON (2026-10-03)
+
+Direct terminal screenshot shows:
+- fresh build success;
+- local AAB signing success;
+- signature verification PASS;
+- public upload-certificate SHA-256:
+  `22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`;
+- signed AAB SHA-256:
+  `d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`;
+- no Play upload performed.
+
+Decision:
+- accept the screenshot as strong execution evidence;
+- keep final local-signing closure open until `S5_LOCAL_SIGNING_RESULT.json` is ingested and reconciled;
+- preserve hard stop before any Play upload.
+
+No AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority is added.
