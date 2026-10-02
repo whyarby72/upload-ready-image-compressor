@@ -1166,3 +1166,27 @@ Decision:
 - preserve hard stop before any Play upload.
 
 No AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority is added.
+
+
+## D-078 — Close local upload-key creation + release-AAB signing as PASS (2026-10-03)
+
+The returned `S5_LOCAL_SIGNING_RESULT.json` reconciles exactly with the previously observed terminal PASS for the public upload certificate fingerprint and signed-AAB SHA-256.
+
+Accepted:
+- source commit `91bb462de8007b6491be5c5ed6c073d60858ae70`;
+- version `0.1.0` / versionCode `1`;
+- upload certificate SHA-256 `22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`;
+- signed AAB SHA-256 `d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`;
+- signed bytes `7984820`;
+- jarsigner `PASS_JAR_VERIFIED`;
+- no secret material recorded;
+- no Play upload performed.
+
+Repository comparison confirms no `app/` changes after verified application-source commit `27199bf6f174e55dc835d0d9898e456d3848001c` through signing commit `91bb462de8007b6491be5c5ed6c073d60858ae70`.
+
+Decision:
+`PASS_LOCAL_UPLOAD_KEY_CREATED_AND_RELEASE_AAB_SIGNED_VERIFIED`.
+
+The earlier unsigned materialized candidate is provenance-only for signing. The fresh signed candidate is the current local Play-upload candidate, but Play acceptance has not been tested and upload remains unauthorized.
+
+No tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority is granted.
