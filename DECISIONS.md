@@ -1082,3 +1082,19 @@ Decision:
 continue only within the existing read-only signing audit authorization by opening the Play Store protection / Play app signing detail page.
 
 No key/signing/upload mutation is authorized.
+
+
+## D-074 — Play App Signing active; upload-key status still unknown (2026-10-02)
+
+Direct provider screenshot shows:
+`Protect app signing key — Releases signed by Play`.
+
+Decision:
+- mark Play App Signing as provider-confirmed active;
+- do not infer upload-key certificate state;
+- continue only within the authorized read-only audit by opening `Manage Play app signing`.
+
+Screenshot SHA-256:
+`e97edcb18a41b4c12cbbedf0c932c0b6956d07334fe3ab96d5cace925a16c5b3`.
+
+No signing/key/upload mutation is authorized.
