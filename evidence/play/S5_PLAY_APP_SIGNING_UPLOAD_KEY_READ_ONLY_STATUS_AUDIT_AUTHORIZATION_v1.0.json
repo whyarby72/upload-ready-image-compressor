@@ -1,0 +1,50 @@
+{
+  "schema": "S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "package": "com.afradadmedia.reducephotosize",
+  "provider_app_id": "4973120481844433940",
+  "authorized_at": "2026-10-02",
+  "approval_ref": "USER_OPTION_1_2026-10-02_S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT",
+  "authorized_scope": "S5 PLAY APP SIGNING + UPLOAD KEY READ-ONLY STATUS AUDIT",
+  "permitted": [
+    "Open Protected with Play",
+    "Open Play Store distribution",
+    "Navigate to Play app signing / Manage Play app signing",
+    "Read the current Play App Signing enrollment state",
+    "Read whether an app signing key certificate is present",
+    "Read whether an upload key certificate is present",
+    "Capture certificate fingerprints/status text shown by Play",
+    "Capture any non-mutating warnings or setup prompts"
+  ],
+  "prohibited": [
+    "Accepting or changing signing terms if that creates or changes signing state",
+    "Changing the app signing key",
+    "Creating a key",
+    "Rotating or resetting a key",
+    "Importing or uploading a key/certificate",
+    "Generating or registering an upload key",
+    "Signing an AAB",
+    "Uploading an AAB",
+    "Creating testers",
+    "Creating a release",
+    "Rollout or publication",
+    "S6",
+    "BUILD promotion",
+    "Artifact Freeze"
+  ],
+  "hard_stop": [
+    "Any action button that changes app signing configuration",
+    "Any key creation/rotation/reset/import prompt",
+    "Any AAB upload or release-flow action",
+    "Any terms acceptance that would materially alter signing configuration"
+  ],
+  "expected_observations": [
+    "Play App Signing enrollment/configuration state",
+    "App signing key certificate status and visible SHA-256 fingerprint if present",
+    "Upload key certificate status and visible SHA-256 fingerprint if present",
+    "Whether Google-generated signing keys are already bound",
+    "Whether the console requests setup/terms/action before certificate state can be observed"
+  ],
+  "official_doc_snapshot": "Google Play Console Help — Use Play App Signing, observed 2026-10-02",
+  "result_state_after_authorization": "READY_FOR_HUMAN_READ_ONLY_PROVIDER_AUDIT"
+}
