@@ -456,3 +456,47 @@ Next material decision:
 with immediate stop after creation and before any signing, key, upload, tester, release, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication action;
 
 or retain HOLD.
+
+
+## Final Create app creation-only authorization — 2026-10-02
+
+Approval ref:
+`USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY`
+
+Authorized scope:
+`FINAL CREATE APP CREATION ONLY`
+
+Permitted:
+- complete the current Google Play Console Create app form using the canonical identity;
+- press the final `Create app` action once;
+- confirm the new app entry exists;
+- capture/report the immediate post-create screen.
+
+Mandatory hard stop:
+`IMMEDIATELY AFTER APP ENTRY CREATION`
+
+Not authorized:
+- ownership-proof submission;
+- key creation/rotation/import;
+- signing;
+- AAB upload;
+- Play App Signing configuration changes beyond unavoidable create-flow defaults;
+- tester mutation;
+- release creation;
+- rollout;
+- S6;
+- BUILD promotion;
+- Artifact Freeze;
+- release;
+- publication.
+
+Authorization evidence:
+`evidence/play/S5_PLAY_FINAL_CREATE_APP_CREATION_ONLY_AUTHORIZATION_v1.0.json`
+
+Provider-flow conflict audit remains:
+`docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CURRENT_PROVIDER_AUDIT_2026_10_02_v1.0.md`
+
+Execution owner:
+`HUMAN`
+
+CHAT must not infer success until the post-create provider state is observed.
