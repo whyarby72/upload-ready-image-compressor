@@ -1,0 +1,34 @@
+{
+  "schema": "S5_PLAY_SCREENSHOT_V2_1_HUMAN_VISUAL_APPROVAL_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "approved_at": "2026-10-02",
+  "approval_ref": "USER_OPTION_1_2026-10-02_HUMAN_PLAY_STORE_SCREENSHOT_VISUAL_APPROVAL",
+  "scope": "HUMAN_PLAY_STORE_SCREENSHOT_VISUAL_APPROVAL_ONLY",
+  "approved_result_commit": "f787c438e23bc5fd14afe7968f4d2c72944d052e",
+  "composition_manifest_sha256": "5e7388b40d4039c285622d32b2a75f39d3980c492f77b902a0b06eb486ed78b4",
+  "contact_sheet_sha256": "1d4f99a757bedeabcad1d3bf2c476ba33d8dc88438f5313e4bd877b181bb6932",
+  "approved_assets": {
+    "01_verified_result_1080x1920.png": "bd9df46276e19dc6981ce50740552d34a34ef05bb4a29d6d994f97d30a71ddf8",
+    "02_set_kb_limit_1080x1920.png": "8e20f4ea41d7ec045cc374f1b986df85bab50b6cfd4b116f211f6a8798f325ef",
+    "03_save_share_1080x1920.png": "444d1a073f3027819d81289af6be5116f66bf561a8fba1fa53a4f48d4cb783b7",
+    "04_custom_limit_1080x1920.png": "1349f795d662a95d4eded738ec2ead9d34a6fe79329aeec529f78b921a258900",
+    "05_on_device_1080x1920.png": "35532d92bc51ca6d13e9d3e2803208767bfd4a16e154df9b6745123a30cd63a9",
+    "06_not_met_1080x1920.png": "d2c4cbb22d3ececf1bbc1d1775062bbb4ac70df5ecf2aceaefd2555991550e25"
+  },
+  "approval_effect": {
+    "screenshot_visual_quality_approved": true,
+    "screenshot_set_closed_for_current_v2_1": true,
+    "play_console_mutation_authorized": false,
+    "signing_authorized": false,
+    "upload_authorized": false,
+    "tester_mutation_authorized": false,
+    "rollout_authorized": false,
+    "s6_authorized": false,
+    "build_promotion_authorized": false,
+    "artifact_freeze_authorized": false,
+    "release_authorized": false,
+    "publication_authorized": false
+  },
+  "next_authorized_scope": "S5_PLAY_CREATE_APP_FLOW_AND_PACKAGE_STATUS_CHECK_ONLY",
+  "note": "Approval is bound only to the exact six V2.1 screenshot assets and hashes listed above."
+}
