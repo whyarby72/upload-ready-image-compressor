@@ -684,3 +684,25 @@ Next within the already authorized read-only scope:
 expand `Play Store protection`, then open `Play app signing` / `Manage Play app signing` if offered and capture the resulting status page.
 
 No mutating action is authorized.
+
+
+## Play App Signing active — upload-key details pending — 2026-10-02
+
+Evidence:
+`evidence/play/S5_PLAY_APP_SIGNING_READ_ONLY_OBSERVATION_2026_10_02_v1.0.md`
+
+Screenshot SHA-256:
+`e97edcb18a41b4c12cbbedf0c932c0b6956d07334fe3ab96d5cace925a16c5b3`
+
+Direct provider status:
+`Protect app signing key — Releases signed by Play`
+
+Disposition:
+`PLAY_APP_SIGNING_ACTIVE_PROVIDER_CONFIRMED / UPLOAD_KEY_STATUS_PENDING`
+
+This confirms Play App Signing is active for the app, but the screenshot does not yet expose certificate fingerprints or upload-key status.
+
+Next within the existing read-only scope:
+open `Manage Play app signing` and capture the certificate/status page.
+
+No mutating signing/key/upload action is authorized.
