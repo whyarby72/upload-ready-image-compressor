@@ -39,31 +39,35 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_PLAY_APP_CREATION_PACKAGE_STATUS_CHECK",
+    "id": "S5_PLAY_FINAL_CREATE_APP_CREATION_ONLY",
     "owner": "HUMAN",
     "next_owner": "HUMAN",
-    "status": "PACKAGE_STATUS_CHECK_READY_DIRECT_PROVIDER_UI_CONFIRMED",
+    "status": "PACKAGE_STATUS_PASS_FINAL_CREATE_APP_READY",
     "opened_from": "S5_PLAY_PROVIDER_PREFLIGHT",
     "reason": "Provider preflight completed. The app does not yet exist in Play Console; the next provider mutation is to enter the Create app flow and observe package-name eligibility/registration behavior before proceeding further.",
     "provider_preflight_ref": "docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_RESULT_v1.0.md",
     "provider_action_authorized": true,
     "authorization_ref": "USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY",
     "runbook_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CHECK_v1.0.md",
-    "provider_execution_state": "READY_FOR_PACKAGE_AVAILABILITY_CHECK",
+    "provider_execution_state": "READY_FOR_FINAL_CREATE_APP_ACTION",
     "current_provider_audit_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CURRENT_PROVIDER_AUDIT_2026_10_02_v1.0.md",
     "authorization_evidence_ref": "evidence/play/S5_PLAY_FINAL_CREATE_APP_CREATION_ONLY_AUTHORIZATION_v1.0.json",
     "hard_stop": "IMMEDIATELY_AFTER_APP_ENTRY_CREATION",
     "direct_provider_ui_evidence_ref": "docs/ops/S5_PLAY_CREATE_APP_DIRECT_PROVIDER_UI_EVIDENCE_2026_10_02_v1.0.md",
     "direct_provider_pdf_sha256": "7eb0c95038c87ea8154c9865513ca0751e1866914d4b64d0d725d2712e3799a2",
     "execution_authority_ref": "USER_OPTION_1_2026-10-01_S5_PLAY_CREATE_APP_FLOW_PACKAGE_STATUS_CHECK_ONLY",
-    "broader_create_app_authority_ref": "USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY"
+    "broader_create_app_authority_ref": "USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY",
+    "package_status": "PACKAGE_STATUS_NEW_OR_AUTO_REGISTERABLE_OBSERVED",
+    "package_availability_result": "AVAILABLE",
+    "package_availability_evidence_ref": "evidence/play/S5_PLAY_PACKAGE_AVAILABILITY_RESULT_2026_10_02_v1.0.md",
+    "package_availability_screenshot_sha256": "5923b11e6455be89ded4b8220a68500bdaa2ab182a87866734eb3b1b8fee9a88"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "PROVIDER_PREFLIGHT_PASS_PACKAGE_AVAILABILITY_CHECK_READY_DIRECT_UI_CONFIRMED",
+    "internal_test": "PROVIDER_PREFLIGHT_PASS_PACKAGE_AVAILABLE_FINAL_CREATE_APP_READY",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "NOT_RUN",
@@ -89,14 +93,13 @@
     "No upload key has been established for this app.",
     "Signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "The Play app entry has not yet been confirmed created.",
-    "Signing, AAB upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Package availability result for com.afradadmedia.reducephotosize has not yet been observed."
+    "Signing, AAB upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human enters Photo Compressor: KB Limit and com.afradadmedia.reducephotosize, invokes Check availability, then stops and reports the exact package-status result before pressing Create app.",
+  "next_action": "Human completes required Create app fields, presses final Create app once, then stops immediately after confirming the app entry exists and reports the post-create provider state. No signing/key/upload/tester/release action is authorized.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
