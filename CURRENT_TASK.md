@@ -565,3 +565,31 @@ Hard stop:
 `IMMEDIATELY_AFTER_APP_ENTRY_CREATION`
 
 No signing, key operation, AAB upload, tester mutation, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+
+## Create app declarations audit — 2026-10-02
+
+Audit:
+`docs/compliance/S5_CREATE_APP_DECLARATIONS_AUDIT_2026_10_02_v1.0.md`
+
+Developer Program Policies:
+`PASS_FOR_CREATE_APP_DECLARATION_SCOPE / PUBLICATION_COMPLIANCE_DEBT_OPEN`
+
+US export laws:
+`TECHNICAL_SCOPE_PASS_NO_APP_CRYPTO_FOUND / HUMAN_LEGAL_ATTESTATION_REQUIRED`
+
+Key evidence:
+- targetSdk 36;
+- no manifest permissions;
+- no INTERNET permission;
+- no network/ads/analytics/crypto implementation found;
+- no material source/metadata policy conflict found for current Create app scope.
+
+Publication controls still required:
+- in-app privacy-policy surface/link;
+- public privacy-policy URL;
+- Play Data safety declaration.
+
+The account holder must personally make the two Play Console attestations. CHAT does not attest legal statements on the human's behalf.
+
+After truthful attestation, the already-authorized `FINAL CREATE APP CREATION ONLY` action may proceed, followed by immediate hard stop after app entry creation.
