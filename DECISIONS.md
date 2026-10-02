@@ -949,3 +949,25 @@ Approval ref:
 
 Evidence:
 `evidence/play/S5_PLAY_FINAL_CREATE_APP_CREATION_ONLY_AUTHORIZATION_v1.0.json`
+
+
+## D-068 — Direct Play Console UI supersedes generic provider-flow assumption (2026-10-02)
+
+The user supplied a direct PDF capture of the actual Google Play Console Create app screen.
+
+The capture visibly proves the account-specific UI contains a `Package name` field and a `Check availability` action before final `Create app`.
+
+PDF SHA-256:
+`7eb0c95038c87ea8154c9865513ca0751e1866914d4b64d0d725d2712e3799a2`
+
+Decision:
+- supersede the prior `HOLD_PROVIDER_FLOW_CONFLICT` execution disposition;
+- restore the reversible package-status checkpoint;
+- use least authority: check package availability before consuming the broader final Create app authorization;
+- stop after the package-status result for CHAT review.
+
+Canonical values:
+- App name: `Photo Compressor: KB Limit`;
+- Package name: `com.afradadmedia.reducephotosize`.
+
+No signing, key operation, AAB upload, tester mutation, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority is added.
