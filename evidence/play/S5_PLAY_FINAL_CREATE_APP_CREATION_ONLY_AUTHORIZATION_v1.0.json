@@ -1,0 +1,36 @@
+{
+  "schema": "S5_PLAY_FINAL_CREATE_APP_CREATION_ONLY_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "package": "com.afradadmedia.reducephotosize",
+  "authorized_at": "2026-10-02",
+  "approval_ref": "USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY",
+  "authorized_scope": "FINAL_CREATE_APP_CREATION_ONLY",
+  "permitted": [
+    "Open Google Play Console Create app flow",
+    "Enter canonical app identity and required reversible form fields",
+    "Accept only declarations/terms strictly required to complete the Create app action",
+    "Press the final Create app action once",
+    "Confirm that the app entry was created",
+    "Capture/report the immediate post-create provider state"
+  ],
+  "mandatory_stop": "IMMEDIATELY_AFTER_APP_ENTRY_CREATION",
+  "not_authorized": [
+    "package ownership proof",
+    "key creation",
+    "key rotation",
+    "key import",
+    "signing",
+    "AAB upload",
+    "Play App Signing configuration changes beyond unavoidable create-flow defaults",
+    "tester mutation",
+    "release creation",
+    "rollout",
+    "S6",
+    "BUILD promotion",
+    "Artifact Freeze",
+    "release",
+    "publication"
+  ],
+  "provider_conflict_audit_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CURRENT_PROVIDER_AUDIT_2026_10_02_v1.0.md",
+  "result_state_after_authorization": "READY_FOR_HUMAN_PROVIDER_CREATE_APP_ACTION"
+}
