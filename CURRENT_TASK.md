@@ -623,3 +623,38 @@ No signing, key action, AAB upload, tester mutation, release creation, rollout, 
 
 Next material scope:
 `S5 PLAY APP SIGNING + UPLOAD KEY READ-ONLY STATUS AUDIT`.
+
+
+## App Signing + upload-key read-only status audit authorized — 2026-10-02
+
+Approval ref:
+`USER_OPTION_1_2026-10-02_S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT`
+
+Scope:
+`S5 PLAY APP SIGNING + UPLOAD KEY READ-ONLY STATUS AUDIT`
+
+Permitted:
+- navigate to `Protected with Play`;
+- open `Play Store distribution`;
+- open `Play app signing` / `Manage Play app signing`;
+- read current signing status;
+- read app-signing certificate status/fingerprints if visible;
+- read upload-key certificate status/fingerprints if visible;
+- capture non-mutating warnings/prompts.
+
+Hard stop:
+- before changing the app signing key;
+- before creating/resetting/rotating/importing any key;
+- before uploading any certificate/key;
+- before accepting terms if acceptance itself changes signing configuration;
+- before signing or uploading an AAB;
+- before tester/release/rollout actions.
+
+Authorization evidence:
+`evidence/play/S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT_AUTHORIZATION_v1.0.json`
+
+Execution owner:
+`HUMAN`
+
+Next:
+capture the read-only Play App Signing page and return it to CHAT for artifact-bound audit.
