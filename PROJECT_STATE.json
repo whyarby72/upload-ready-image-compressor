@@ -42,14 +42,14 @@
     "id": "S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "READ_ONLY_APP_SIGNING_AUDIT_AUTHORIZED",
+    "status": "READ_ONLY_SIGNING_AUDIT_PARTIAL",
     "opened_from": "S5_PLAY_PROVIDER_PREFLIGHT",
     "reason": "Provider preflight completed. The app does not yet exist in Play Console; the next provider mutation is to enter the Create app flow and observe package-name eligibility/registration behavior before proceeding further.",
     "provider_preflight_ref": "docs/ops/S5_PLAY_PROVIDER_PREFLIGHT_RESULT_v1.0.md",
     "provider_action_authorized": true,
     "authorization_ref": "USER_OPTION_1_2026-10-02_S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT",
     "runbook_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CHECK_v1.0.md",
-    "provider_execution_state": "READY_FOR_HUMAN_READ_ONLY_PROVIDER_AUDIT",
+    "provider_execution_state": "PROTECTED_WITH_PLAY_OVERVIEW_OBSERVED_SIGNING_DETAILS_PENDING",
     "current_provider_audit_ref": "docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CURRENT_PROVIDER_AUDIT_2026_10_02_v1.0.md",
     "authorization_evidence_ref": "evidence/play/S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT_AUTHORIZATION_v1.0.json",
     "hard_stop": "STOP_BEFORE_ANY_KEY_SIGNING_UPLOAD_OR_TERMS_MUTATION",
@@ -67,7 +67,16 @@
     "post_create_pdf_sha256": "82a0da061a94e6ee44256131c24b72a35c308d1859eb2c4c2002d796769d5f91",
     "provider_app_id": "4973120481844433940",
     "hard_stop_status": "HONORED",
-    "audit_scope": "READ_ONLY_NO_SIGNING_STATE_MUTATION"
+    "audit_scope": "READ_ONLY_NO_SIGNING_STATE_MUTATION",
+    "read_only_overview_evidence_ref": "evidence/play/S5_PLAY_PROTECTED_WITH_PLAY_READ_ONLY_STATUS_2026_10_02_v1.0.md",
+    "read_only_overview_pdf_sha256": "0fef8382b2f129369c861bcf00052d09562d36c3adb30de0275f181a1b6f4ed4",
+    "observed_protection_state": {
+      "overall": "GOOD_PROTECTION",
+      "automatic_protection": "1_OF_1_ACTIVE",
+      "play_integrity_api": "0_OF_7_ACTIVE",
+      "play_store_protection": "6_OF_7_ACTIVE",
+      "play_billing_protection": "0_OF_4_ACTIVE"
+    }
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -104,13 +113,15 @@
     "Play Data safety declaration must be completed before distribution/publication.",
     "Play App Signing / upload-key state for the newly created app has not yet been observed.",
     "No authorized upload key has been established for this app.",
-    "AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
+    "AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
+    "App signing key certificate status/fingerprint not yet observed.",
+    "Upload key certificate status/fingerprint not yet observed."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human opens Protected with Play > Play Store distribution > Play app signing, captures the current app-signing and upload-key status without changing settings, then returns the screenshot/status to CHAT.",
+  "next_action": "Human expands Play Store protection and opens the read-only Play app signing detail page if available, then captures the certificate/status page without changing any signing/key setting.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
