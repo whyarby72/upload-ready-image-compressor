@@ -924,3 +924,28 @@ Audit:
 `docs/ops/S5_PLAY_CREATE_APP_PACKAGE_STATUS_CURRENT_PROVIDER_AUDIT_2026_10_02_v1.0.md`
 
 No Play Console mutation, signing/key action, upload, tester mutation, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication occurred or is authorized.
+
+
+## D-067 — Human authorizes final Google Play Create app action only (2026-10-02)
+
+The human selected Option 1 after the current-provider-flow audit established that a pre-create package-status checkpoint is not documented.
+
+Authorized:
+`FINAL CREATE APP CREATION ONLY`
+
+Canonical identity:
+- Play title: `Photo Compressor: KB Limit`;
+- package target: `com.afradadmedia.reducephotosize`.
+
+The authorization permits the final Google Play `Create app` action and confirmation that the app entry exists.
+
+Hard stop:
+`IMMEDIATELY_AFTER_APP_ENTRY_CREATION`
+
+This authorization does not extend to ownership proof, key creation/rotation/import, signing, AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication.
+
+Approval ref:
+`USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY`
+
+Evidence:
+`evidence/play/S5_PLAY_FINAL_CREATE_APP_CREATION_ONLY_AUTHORIZATION_v1.0.json`
