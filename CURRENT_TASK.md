@@ -534,3 +534,34 @@ The package-status-only authorization is sufficient:
 `USER_OPTION_1_2026-10-01_S5_PLAY_CREATE_APP_FLOW_PACKAGE_STATUS_CHECK_ONLY`.
 
 The broader create-app-only authorization remains available but should not be consumed until after the reversible package-status result is reviewed.
+
+
+## Package availability observed — 2026-10-02
+
+Evidence:
+`evidence/play/S5_PLAY_PACKAGE_AVAILABILITY_RESULT_2026_10_02_v1.0.md`
+
+Screenshot SHA-256:
+`5923b11e6455be89ded4b8220a68500bdaa2ab182a87866734eb3b1b8fee9a88`
+
+Observed provider result:
+`Package name available`
+
+Canonical package:
+`com.afradadmedia.reducephotosize`
+
+Disposition:
+`PACKAGE_STATUS_NEW_OR_AUTO_REGISTERABLE_OBSERVED`
+
+The package-status-only checkpoint is complete.
+
+The separately approved scope now becomes active:
+`FINAL CREATE APP CREATION ONLY`
+
+Approval ref:
+`USER_OPTION_1_2026-10-02_FINAL_CREATE_APP_CREATION_ONLY`
+
+Hard stop:
+`IMMEDIATELY_AFTER_APP_ENTRY_CREATION`
+
+No signing, key operation, AAB upload, tester mutation, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
