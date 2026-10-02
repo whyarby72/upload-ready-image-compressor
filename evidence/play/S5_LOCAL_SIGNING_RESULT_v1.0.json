@@ -1,0 +1,18 @@
+{
+  "schema": "S5_LOCAL_SIGNING_RESULT_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "package": "com.afradadmedia.reducephotosize",
+  "source_commit": "91bb462de8007b6491be5c5ed6c073d60858ae70",
+  "version_name": "0.1.0",
+  "version_code": 1,
+  "upload_key_alias": "photo-compressor-upload",
+  "upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
+  "unsigned_aab_sha256": "fe6daf1be52ba9f681f45fd18a9ec0f0f4b0ba16b82dc1b3cc0c31dee510af67",
+  "signed_aab_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+  "signed_aab_bytes": 7984820,
+  "signed_aab_filename": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
+  "jarsigner_verification": "PASS_JAR_VERIFIED",
+  "secret_material_recorded": false,
+  "play_upload_performed": false,
+  "hard_stop": "STOP_AFTER_LOCAL_SIGNED_AAB_VERIFICATION_BEFORE_ANY_PLAY_UPLOAD"
+}
