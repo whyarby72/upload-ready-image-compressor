@@ -42,7 +42,7 @@
     "id": "S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_ONLY",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "AUTHORIZED_LOCAL_EXECUTION_REQUIRED",
+    "status": "LOCAL_SIGNING_SCREENSHOT_PASS_RESULT_JSON_PENDING",
     "authorization_ref": "USER_EXPLICIT_2026-10-03_S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_ONLY",
     "authorization_evidence_ref": "evidence/play/S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_ONLY_AUTHORIZATION_v1.0.json",
     "runbook_ref": "docs/ops/S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_RUNBOOK_v1.0.md",
@@ -50,14 +50,21 @@
     "scope": "CREATE_DEDICATED_UPLOAD_KEY_LOCALLY_BUILD_FRESH_RELEASE_AAB_SIGN_VERIFY_STOP_BEFORE_PLAY_UPLOAD",
     "secret_boundary": "PRIVATE_KEYSTORE_AND_PASSWORDS_LOCAL_ONLY_NEVER_CHAT_NEVER_GIT",
     "hard_stop": "STOP_AFTER_LOCAL_SIGNED_AAB_VERIFICATION_BEFORE_ANY_PLAY_UPLOAD",
-    "expected_return": "S5_LOCAL_SIGNING_RESULT.json_ONLY_NON_SECRET"
+    "expected_return": "S5_LOCAL_SIGNING_RESULT.json_ONLY_NON_SECRET",
+    "provider_execution_state": "LOCAL_SIGNED_AAB_VERIFIED_SCREENSHOT_OBSERVED_NO_PLAY_UPLOAD",
+    "local_signing_screenshot_evidence_ref": "evidence/play/S5_LOCAL_UPLOAD_KEY_SIGNING_SCREENSHOT_OBSERVATION_2026_10_03_v1.0.md",
+    "local_signing_screenshot_sha256": "1193758c4ddde42053c1a3e6b4bd22d37e702ca0e70b74da1dce5dea42a46c0a",
+    "upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
+    "signed_aab_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "result_json_status": "PENDING_CHAT_INGESTION",
+    "hard_stop_status": "HONORED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "PLAY_APP_ENTRY_CREATED_APP_SIGNING_PASS_LOCAL_UPLOAD_KEY_SIGNING_AUTHORIZED_EXECUTION_PENDING",
+    "internal_test": "LOCAL_SIGNING_SCREENSHOT_PASS_RESULT_JSON_PENDING_NO_PLAY_UPLOAD",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -88,14 +95,14 @@
     "No authorized upload key has been established for this app.",
     "AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "No signed release AAB is yet bound to an authorized upload-key certificate.",
-    "Authorized local upload key has not yet been created and verified.",
-    "Fresh locally signed release AAB has not yet been verified."
+    "Canonical local-signing closure is pending ingestion of S5_LOCAL_SIGNING_RESULT.json.",
+    "Play upload remains unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human runs `bash scripts/local/s5_create_upload_key_and_sign.sh` on the trusted local machine, follows interactive secret prompts, then returns only S5_LOCAL_SIGNING_RESULT.json to CHAT. Do not upload the AAB to Play.",
+  "next_action": "Human uploads only S5_LOCAL_SIGNING_RESULT.json to CHAT for canonical artifact-bound closure. Do not upload the AAB to Play yet.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -849,7 +856,7 @@
     "hard_stop_status": "HONORED"
   },
   "s5_local_upload_key_signing": {
-    "status": "AUTHORIZED_EXECUTION_PENDING",
+    "status": "SCREENSHOT_PASS_RESULT_JSON_PENDING",
     "authorized_at": "2026-10-03",
     "authorization_ref": "USER_EXPLICIT_2026-10-03_S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_ONLY",
     "runbook_ref": "docs/ops/S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_RUNBOOK_v1.0.md",
@@ -861,6 +868,14 @@
     "keystore_location_policy": "OUTSIDE_REPOSITORY_LOCAL_DEVICE_ONLY",
     "secret_material_repository_allowed": false,
     "play_upload_authorized": false,
-    "hard_stop": "STOP_AFTER_LOCAL_SIGNED_AAB_VERIFICATION_BEFORE_ANY_PLAY_UPLOAD"
+    "hard_stop": "STOP_AFTER_LOCAL_SIGNED_AAB_VERIFICATION_BEFORE_ANY_PLAY_UPLOAD",
+    "observed_at": "2026-10-03",
+    "upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
+    "signed_aab_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "screenshot_sha256": "1193758c4ddde42053c1a3e6b4bd22d37e702ca0e70b74da1dce5dea42a46c0a",
+    "screenshot_evidence_ref": "evidence/play/S5_LOCAL_UPLOAD_KEY_SIGNING_SCREENSHOT_OBSERVATION_2026_10_03_v1.0.md",
+    "jarsigner_verification": "PASS_SCREENSHOT_OBSERVED",
+    "result_json_status": "PENDING_CHAT_INGESTION",
+    "hard_stop_status": "HONORED"
   }
 }
