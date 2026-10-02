@@ -874,3 +874,28 @@ Authorization ref:
 `USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_MICRO_POLISH`
 
 No Play Console mutation, signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+
+## D-065 — Human approves exact Play screenshot V2.1 set (2026-10-02)
+
+The human selected Option 1 for the explicitly bound:
+`HUMAN PLAY STORE SCREENSHOT VISUAL APPROVAL`.
+
+Approval is restricted to the exact six V2.1 assets bound to:
+- result commit `f787c438e23bc5fd14afe7968f4d2c72944d052e`;
+- manifest SHA-256 `5e7388b40d4039c285622d32b2a75f39d3980c492f77b902a0b06eb486ed78b4`;
+- contact-sheet SHA-256 `1d4f99a757bedeabcad1d3bf2c476ba33d8dc88438f5313e4bd877b181bb6932`;
+- six individual asset hashes in `evidence/store/S5_PLAY_SCREENSHOT_V2_1_HUMAN_VISUAL_APPROVAL_v1.0.json`.
+
+Decision:
+- close V2.1 screenshot visual review as `PASS_HUMAN_VISUAL_APPROVED_CLOSED`;
+- authorize current visual/listing use of this exact hash-bound screenshot set;
+- do not generalize approval to changed screenshot bytes or a future screenshot revision.
+
+This approval does not grant Play Console mutation, package registration, signing/key operations, AAB upload, tester mutation, release/rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority.
+
+Next authorized provider action remains:
+`S5 PLAY CREATE-APP FLOW + PACKAGE STATUS CHECK ONLY`.
+
+Approval ref:
+`USER_OPTION_1_2026-10-02_HUMAN_PLAY_STORE_SCREENSHOT_VISUAL_APPROVAL`
