@@ -394,3 +394,42 @@ Next material gate:
 `HUMAN PLAY STORE SCREENSHOT VISUAL APPROVAL`.
 
 No Play Console mutation, signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication is authorized.
+
+
+## Human Play Store screenshot visual approval — 2026-10-02
+
+Approval ref:
+`USER_OPTION_1_2026-10-02_HUMAN_PLAY_STORE_SCREENSHOT_VISUAL_APPROVAL`
+
+Approved scope:
+`HUMAN PLAY STORE SCREENSHOT VISUAL APPROVAL ONLY`
+
+Bound asset set:
+- result commit: `f787c438e23bc5fd14afe7968f4d2c72944d052e`;
+- composition manifest SHA-256: `5e7388b40d4039c285622d32b2a75f39d3980c492f77b902a0b06eb486ed78b4`;
+- contact sheet SHA-256: `1d4f99a757bedeabcad1d3bf2c476ba33d8dc88438f5313e4bd877b181bb6932`;
+- six individual asset hashes are recorded in `evidence/store/S5_PLAY_SCREENSHOT_V2_1_HUMAN_VISUAL_APPROVAL_v1.0.json`.
+
+Result:
+`PASS_HUMAN_VISUAL_APPROVED_CLOSED`
+
+Effect:
+- the six V2.1 Play Store screenshots are approved for current visual/listing use;
+- the screenshot visual-review gate is closed for this exact hash-bound set.
+
+Not authorized by this approval:
+- final Create app submission/package registration mutation;
+- key creation/rotation or signing;
+- AAB upload;
+- tester mutation;
+- release creation or rollout;
+- S6;
+- BUILD promotion;
+- Artifact Freeze;
+- release;
+- publication.
+
+Next active provider scope remains the previously authorized:
+`S5 PLAY CREATE-APP FLOW + PACKAGE STATUS CHECK ONLY`
+
+Hard stop remains before any final Create app submission/registration mutation and immediately if ownership proof or signing-key/private-key action is requested.
