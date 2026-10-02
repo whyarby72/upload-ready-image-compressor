@@ -1034,3 +1034,34 @@ Next recommended provider scope:
 `S5 PLAY APP SIGNING + UPLOAD KEY READ-ONLY STATUS AUDIT`.
 
 This next scope is observation-only unless separately authorized.
+
+
+## D-072 — Authorize Play App Signing + upload-key read-only status audit (2026-10-02)
+
+The human selected Option 1 and explicitly authorized:
+`S5 PLAY APP SIGNING + UPLOAD KEY READ-ONLY STATUS AUDIT`.
+
+This is observation-only.
+
+Allowed:
+- navigate to the Play App Signing status page;
+- inspect app-signing and upload-key certificate status;
+- capture visible fingerprints/status/warnings.
+
+Not allowed:
+- key creation, change, reset, rotation, import, or upload;
+- signing;
+- AAB upload;
+- tester mutation;
+- release creation;
+- rollout;
+- S6;
+- BUILD promotion;
+- Artifact Freeze;
+- publication.
+
+Approval ref:
+`USER_OPTION_1_2026-10-02_S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT`
+
+Evidence:
+`evidence/play/S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT_AUTHORIZATION_v1.0.json`
