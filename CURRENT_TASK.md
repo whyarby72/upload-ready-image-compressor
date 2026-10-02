@@ -838,3 +838,30 @@ Hard stop honored:
 - no Play upload authority exists yet.
 
 Next material provider decision is separate from this closed signing scope.
+
+
+## Internal testing upload scope preparation — provider flow corrected — 2026-10-03
+
+Human selected the prior continuation to restore the local stash and prepare an Internal Testing AAB upload scope.
+
+Provider audit:
+`docs/ops/S5_PLAY_INTERNAL_TESTING_UPLOAD_SCOPE_PROVIDER_AUDIT_2026_10_03_v1.0.md`
+
+Current official Play Console flow requires:
+`Internal testing > Create new release`
+before an AAB can be uploaded to the track.
+
+Therefore the literal scope:
+`AAB UPLOAD ONLY / NO RELEASE CREATION`
+cannot be executed truthfully on the Internal testing track.
+
+Least-authority corrected scope prepared:
+`S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`
+
+Hard stop:
+`STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT`
+
+No provider mutation is authorized yet.
+
+Local prerequisite remains:
+restore and verify the preserved stash before any Play action.
