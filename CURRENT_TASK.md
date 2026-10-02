@@ -774,3 +774,30 @@ Hard stop:
 `STOP_AFTER_LOCAL_SIGNED_AAB_VERIFICATION_BEFORE_ANY_PLAY_UPLOAD`.
 
 AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.
+
+
+## Local upload-key signing screenshot observed — PASS pending JSON closure — 2026-10-03
+
+Evidence:
+`evidence/play/S5_LOCAL_UPLOAD_KEY_SIGNING_SCREENSHOT_OBSERVATION_2026_10_03_v1.0.md`
+
+Screenshot SHA-256:
+`1193758c4ddde42053c1a3e6b4bd22d37e702ca0e70b74da1dce5dea42a46c0a`
+
+Observed:
+- Gradle `BUILD SUCCESSFUL`;
+- `PASS: local release AAB signed and verified.`;
+- upload certificate SHA-256:
+  `22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`;
+- signed AAB SHA-256:
+  `d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`;
+- hard stop explicitly shown: do not upload to Play yet.
+
+Jarsigner warnings about self-signed certificate / PKIX chain and absent timestamp are recorded, but the terminal verification itself PASSed.
+
+Disposition:
+`LOCAL_SIGNING_SCREENSHOT_PASS / RESULT_JSON_PENDING_CANONICAL_CLOSURE`
+
+Next:
+upload only `S5_LOCAL_SIGNING_RESULT.json` to CHAT.
+Do not upload the AAB to Play.
