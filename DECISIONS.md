@@ -1190,3 +1190,21 @@ Decision:
 The earlier unsigned materialized candidate is provenance-only for signing. The fresh signed candidate is the current local Play-upload candidate, but Play acceptance has not been tested and upload remains unauthorized.
 
 No tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority is granted.
+
+
+## D-079 — Correct Internal Testing upload scope to provider-compatible release-draft upload (2026-10-03)
+
+The human selected the prior recommendation to restore the preserved stash and prepare an Internal Testing upload-only scope.
+
+Current official Google Play documentation was rechecked.
+
+Finding:
+Internal Testing AAB upload is performed inside an Internal testing release flow. A literal `AAB UPLOAD ONLY` action that forbids entering/creating a release draft is not provider-compatible.
+
+Decision:
+prepare, but do not yet authorize, the least-authority scope:
+`S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`.
+
+This scope would permit entering the mandatory release draft and uploading the already signed vc1 AAB solely to obtain provider validation, then stop before testers, review, rollout, or publication.
+
+No Play mutation has been performed or authorized by this decision.
