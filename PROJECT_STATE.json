@@ -70,7 +70,7 @@
     "internal_test": "PROVIDER_PREFLIGHT_PASS_PACKAGE_AVAILABLE_FINAL_CREATE_APP_READY",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
-    "play_compliance": "NOT_RUN",
+    "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
     "production_readiness": "NOT_RUN"
   },
@@ -93,13 +93,16 @@
     "No upload key has been established for this app.",
     "Signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "The Play app entry has not yet been confirmed created.",
-    "Signing, AAB upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
+    "Signing, AAB upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
+    "In-app privacy-policy surface/link must be completed before distribution/publication.",
+    "A public privacy-policy URL must be bound before distribution/publication.",
+    "Play Data safety declaration must be completed before distribution/publication."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human completes required Create app fields, presses final Create app once, then stops immediately after confirming the app entry exists and reports the post-create provider state. No signing/key/upload/tester/release action is authorized.",
+  "next_action": "Account holder reviews and personally accepts the Developer Program Policies and US export-law declarations if true, then may press Create app under the existing create-app-only authorization. Stop immediately after app entry creation.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -818,5 +821,17 @@
       "contact_sheet_sha256": "1d4f99a757bedeabcad1d3bf2c476ba33d8dc88438f5313e4bd877b181bb6932",
       "scope": "VISUAL_APPROVAL_ONLY_NO_PROVIDER_OR_RELEASE_AUTHORITY"
     }
+  },
+  "create_app_declarations_audit": {
+    "status": "PASS_WITH_HUMAN_ATTESTATION",
+    "audited_at": "2026-10-02",
+    "audit_ref": "docs/compliance/S5_CREATE_APP_DECLARATIONS_AUDIT_2026_10_02_v1.0.md",
+    "developer_program_policies": "PASS_FOR_CREATE_APP_DECLARATION_SCOPE_PUBLICATION_COMPLIANCE_DEBT_OPEN",
+    "us_export_laws": "TECHNICAL_SCOPE_PASS_NO_APP_CRYPTO_FOUND_HUMAN_LEGAL_ATTESTATION_REQUIRED",
+    "publication_blockers": [
+      "In-app privacy-policy surface/link not yet bound",
+      "Public privacy-policy URL not yet bound",
+      "Play Data safety declaration not yet completed"
+    ]
   }
 }
