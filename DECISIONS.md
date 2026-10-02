@@ -1065,3 +1065,20 @@ Approval ref:
 
 Evidence:
 `evidence/play/S5_PLAY_APP_SIGNING_UPLOAD_KEY_READ_ONLY_STATUS_AUDIT_AUTHORIZATION_v1.0.json`
+
+
+## D-073 — Protected with Play overview observed; signing audit remains partial (2026-10-02)
+
+Direct provider evidence shows:
+- `Good protection`;
+- Automatic protection `1/1 active`;
+- Play Integrity API `0/7 active`;
+- Play Store protection `6/7 active`;
+- Play Billing protection `0/4 active`.
+
+This does not prove Play App Signing enrollment details or upload-key certificate state.
+
+Decision:
+continue only within the existing read-only signing audit authorization by opening the Play Store protection / Play app signing detail page.
+
+No key/signing/upload mutation is authorized.
