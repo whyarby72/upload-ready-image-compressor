@@ -1116,3 +1116,33 @@ Decision:
   `S5 UPLOAD KEY CREATION + LOCAL RELEASE SIGNING ONLY`.
 
 No Play upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, or publication authority is added.
+
+
+## D-076 — Authorize dedicated local upload key creation and fresh release AAB signing only (2026-10-03)
+
+The human explicitly authorized:
+`S5 UPLOAD KEY CREATION + LOCAL RELEASE SIGNING ONLY`.
+
+Decision:
+- create one dedicated developer-held upload key locally;
+- keep all private material and passwords only on the human-controlled device;
+- build a fresh release AAB from the verified repository source;
+- sign that AAB locally with the upload key;
+- verify the signature and record only public/non-secret evidence;
+- stop before any Google Play upload.
+
+Operational controls:
+- `.gitignore` already excludes `*.jks`, `*.keystore`, `keystore.properties`, `secrets.properties`, and `.env*`;
+- no Gradle signing configuration or secret path is added to application source;
+- local helper signs outside the repository to minimize secret/artifact leakage.
+
+Authorization ref:
+`USER_EXPLICIT_2026-10-03_S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_ONLY`
+
+Runbook:
+`docs/ops/S5_UPLOAD_KEY_CREATION_LOCAL_RELEASE_SIGNING_RUNBOOK_v1.0.md`
+
+Helper:
+`scripts/local/s5_create_upload_key_and_sign.sh`
+
+No Play upload or downstream release authority is granted.
