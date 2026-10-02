@@ -1,5 +1,5 @@
 {
-  "schema": "S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_MANIFEST_v1.0",
+  "schema": "S5_PLAY_SCREENSHOT_PREMIUM_COMPOSITION_MANIFEST_v1.1",
   "source_commit": "e3a5745d4ed5e0cd0bb87f84fb3ca37366eec5ec",
   "canvas": {
     "width": 1080,
@@ -19,11 +19,11 @@
     900,
     1480
   ],
-  "pixel_fidelity": "PASS",
+  "pixel_fidelity": "PASS_EXACT_APP_RECT_ALL_SIX",
   "items": [
     {
       "final_path": "store/assets/play/en-US/screenshots_v2/01_verified_result_1080x1920.png",
-      "final_sha256": "1a9a175958c00097002b508bbac6cd23ba25912d85d48f6bded273d501f5983a",
+      "final_sha256": "bd9df46276e19dc6981ce50740552d34a34ef05bb4a29d6d994f97d30a71ddf8",
       "source_raw_path": "evidence/store/play_screenshots_v1/01_verified_result/screenshot_raw.png",
       "source_raw_sha256": "c6b969083969ab6c309ae473e8c7a85a80dae6bfd54583d52441b22d6394f858",
       "source_crop_rect_top_origin": [
@@ -37,11 +37,11 @@
       "destination_x": 90,
       "destination_y_top_origin": 260,
       "interpolation": "CoreGraphics high quality",
-      "pixel_fidelity": "PASS"
+      "pixel_fidelity": "PASS_EXACT_APP_RECT"
     },
     {
       "final_path": "store/assets/play/en-US/screenshots_v2/02_set_kb_limit_1080x1920.png",
-      "final_sha256": "24a400f7c2f17c3c5108b08ec38632ba9251aa2564edc89f30965c21964ac905",
+      "final_sha256": "8e20f4ea41d7ec045cc374f1b986df85bab50b6cfd4b116f211f6a8798f325ef",
       "source_raw_path": "evidence/store/play_screenshots_v2/02_set_kb_limit/screenshot_raw.png",
       "source_raw_sha256": "c7191f847e021d57a94f6ec78fce7559fcc61ab1b3423bb5a1eebc6911a163d5",
       "source_crop_rect_top_origin": [
@@ -55,11 +55,11 @@
       "destination_x": 90,
       "destination_y_top_origin": 260,
       "interpolation": "CoreGraphics high quality",
-      "pixel_fidelity": "PASS"
+      "pixel_fidelity": "PASS_EXACT_APP_RECT"
     },
     {
       "final_path": "store/assets/play/en-US/screenshots_v2/03_save_share_1080x1920.png",
-      "final_sha256": "e55559414712ce28d19f33b2a6608e6949e643cdf3d38f09d2f82a7458835cdf",
+      "final_sha256": "444d1a073f3027819d81289af6be5116f66bf561a8fba1fa53a4f48d4cb783b7",
       "source_raw_path": "evidence/store/play_screenshots_v1/03_save_share/screenshot_raw.png",
       "source_raw_sha256": "ab111010826986ed4ee13091ba78ea9ec7acfcc766581376c194d24fa554100b",
       "source_crop_rect_top_origin": [
@@ -73,11 +73,11 @@
       "destination_x": 90,
       "destination_y_top_origin": 260,
       "interpolation": "CoreGraphics high quality",
-      "pixel_fidelity": "PASS"
+      "pixel_fidelity": "PASS_EXACT_APP_RECT"
     },
     {
       "final_path": "store/assets/play/en-US/screenshots_v2/04_custom_limit_1080x1920.png",
-      "final_sha256": "9c145b8e8556381e610994003a4b437039828aefbbfb7212647085bb49fb1498",
+      "final_sha256": "1349f795d662a95d4eded738ec2ead9d34a6fe79329aeec529f78b921a258900",
       "source_raw_path": "evidence/store/play_screenshots_v2/04_custom_limit/screenshot_raw.png",
       "source_raw_sha256": "a4976525af09e81fa0696a6ea15ffa346a999cf4950646263449b4a4943f5737",
       "source_crop_rect_top_origin": [
@@ -91,11 +91,11 @@
       "destination_x": 90,
       "destination_y_top_origin": 260,
       "interpolation": "CoreGraphics high quality",
-      "pixel_fidelity": "PASS"
+      "pixel_fidelity": "PASS_EXACT_APP_RECT"
     },
     {
       "final_path": "store/assets/play/en-US/screenshots_v2/05_on_device_1080x1920.png",
-      "final_sha256": "3dffcf5b95142de7a3926bbe0ed93f4a117db8303bbf04b62306e304befcae33",
+      "final_sha256": "35532d92bc51ca6d13e9d3e2803208767bfd4a16e154df9b6745123a30cd63a9",
       "source_raw_path": "evidence/store/play_screenshots_v1/05_on_device/screenshot_raw.png",
       "source_raw_sha256": "c92484a06806a82cfb09a252a68e5b86235fd789e0f8840239413da78836f4cb",
       "source_crop_rect_top_origin": [
@@ -109,11 +109,11 @@
       "destination_x": 90,
       "destination_y_top_origin": 260,
       "interpolation": "CoreGraphics high quality",
-      "pixel_fidelity": "PASS"
+      "pixel_fidelity": "PASS_EXACT_APP_RECT"
     },
     {
       "final_path": "store/assets/play/en-US/screenshots_v2/06_not_met_1080x1920.png",
-      "final_sha256": "d00e7031c69353caa68c7e310ae200c36e7dec8ed1655611e865cf3a514eb07a",
+      "final_sha256": "d2c4cbb22d3ececf1bbc1d1775062bbb4ac70df5ecf2aceaefd2555991550e25",
       "source_raw_path": "evidence/store/play_screenshots_v1/06_not_met/screenshot_raw.png",
       "source_raw_sha256": "ba863fb2d1293e12685218a4a1a7eb373f42f29ae08f00752bb29e34ce4e07ab",
       "source_crop_rect_top_origin": [
@@ -127,7 +127,21 @@
       "destination_x": 90,
       "destination_y_top_origin": 260,
       "interpolation": "CoreGraphics high quality",
-      "pixel_fidelity": "PASS"
+      "pixel_fidelity": "PASS_EXACT_APP_RECT"
     }
-  ]
+  ],
+  "composition_version": "V2.1_BRAND_KICKER_MICRO_POLISH",
+  "authorization_ref": "USER_OPTION_1_2026-10-02_S5_PLAY_SCREENSHOT_V2_1_BRAND_KICKER_MICRO_POLISH",
+  "external_brand_kicker": {
+    "previous": "REDUCE PHOTO SIZE",
+    "current": "PHOTO COMPRESSOR: KB LIMIT",
+    "scope": "EXTERNAL_COMPOSITION_ONLY",
+    "embedded_app_pixels_changed": false,
+    "emulator_recapture_required": false
+  },
+  "contact_sheet": {
+    "path": "store/assets/play/en-US/screenshots_v2/CONTACT_SHEET_6UP.png",
+    "sha256": "1d4f99a757bedeabcad1d3bf2c476ba33d8dc88438f5313e4bd877b181bb6932",
+    "layout": "3x2"
+  }
 }
