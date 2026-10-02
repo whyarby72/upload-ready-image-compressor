@@ -801,3 +801,40 @@ Disposition:
 Next:
 upload only `S5_LOCAL_SIGNING_RESULT.json` to CHAT.
 Do not upload the AAB to Play.
+
+
+## Local upload-key signing canonical closure — PASS — 2026-10-03
+
+Human-returned result:
+`S5_LOCAL_SIGNING_RESULT.json`
+
+Uploaded JSON SHA-256:
+`8f81f065389442417847bc7b8507e385a1e41283fb1cbcb4ae471b2ee65e86a0`
+
+Repository evidence:
+`evidence/play/S5_LOCAL_SIGNING_RESULT_v1.0.json`
+
+Closure:
+`docs/qa/S5_LOCAL_UPLOAD_KEY_SIGNING_CANONICAL_CLOSURE_v1.0.md`
+
+Canonical result:
+`PASS_LOCAL_UPLOAD_KEY_CREATED_AND_RELEASE_AAB_SIGNED_VERIFIED`
+
+Bound artifact:
+- versionName `0.1.0`;
+- versionCode `1`;
+- signed AAB SHA-256 `d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`;
+- bytes `7984820`;
+- public upload-certificate SHA-256 `22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`;
+- jarsigner `PASS_JAR_VERIFIED`.
+
+Source reconciliation:
+- signing repository HEAD: `91bb462de8007b6491be5c5ed6c073d60858ae70`;
+- verified app-source commit: `27199bf6f174e55dc835d0d9898e456d3848001c`;
+- no changes under `app/` between those commits.
+
+Hard stop honored:
+- `play_upload_performed=false`;
+- no Play upload authority exists yet.
+
+Next material provider decision is separate from this closed signing scope.
