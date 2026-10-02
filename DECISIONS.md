@@ -991,3 +991,23 @@ Decision:
 - stop immediately after app entry creation.
 
 No authority is added beyond the already-bound create-app-only scope.
+
+
+## D-070 — Create app declarations technical audit passes with human attestation (2026-10-02)
+
+Audit:
+`docs/compliance/S5_CREATE_APP_DECLARATIONS_AUDIT_2026_10_02_v1.0.md`
+
+Developer Program Policies:
+`PASS_FOR_CREATE_APP_DECLARATION_SCOPE / PUBLICATION_COMPLIANCE_DEBT_OPEN`.
+
+US export laws:
+`TECHNICAL_SCOPE_PASS_NO_APP_CRYPTO_FOUND / HUMAN_LEGAL_ATTESTATION_REQUIRED`.
+
+No material technical blocker was found for creating the Play app entry.
+
+Publication remains blocked until privacy-policy and Data safety controls are completed.
+
+The legal/developer declarations remain the responsibility of the account holder.
+
+No authority beyond the existing `FINAL CREATE APP CREATION ONLY` scope is added.
