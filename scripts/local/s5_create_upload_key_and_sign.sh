@@ -37,12 +37,34 @@ fi
 mkdir -p "$KEYSTORE_DIR" "$OUT_DIR"
 chmod 700 "$KEYSTORE_DIR" 2>/dev/null || true
 
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+if [[ "$CURRENT_BRANCH" != "task/TASK-S5-007" ]]; then
+  echo "ERROR: expected branch task/TASK-S5-007, found: $CURRENT_BRANCH" >&2
+  exit 1
+fi
+
+if [[ -n "$(git status --porcelain)" ]]; then
+  echo "ERROR: working tree is not clean. Commit/stash unrelated local changes before signing." >&2
+  exit 1
+fi
+
+if grep -q "signingConfig" app/build.gradle; then
+  echo "ERROR: repository release build unexpectedly contains a signingConfig. Stop for audit." >&2
+  exit 1
+fi
+
 SOURCE_COMMIT="$(git rev-parse HEAD)"
 VERSION_NAME="$(awk -F"'" '/versionName / {print $2; exit}' app/build.gradle)"
 VERSION_CODE="$(awk '/versionCode / {print $2; exit}' app/build.gradle)"
 
 if [[ -z "$VERSION_NAME" || -z "$VERSION_CODE" ]]; then
   echo "ERROR: could not read versionName/versionCode from app/build.gradle" >&2
+  exit 1
+fi
+
+if [[ "$VERSION_NAME" != "0.1.0" || "$VERSION_CODE" != "1" ]]; then
+  echo "ERROR: authorized first signing scope expects versionName 0.1.0 / versionCode 1." >&2
+  echo "Observed: versionName=$VERSION_NAME versionCode=$VERSION_CODE" >&2
   exit 1
 fi
 
