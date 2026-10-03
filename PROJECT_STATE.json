@@ -39,24 +39,28 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_INTERNAL_TESTING_TESTER_LIST_CONFIGURATION_ONLY",
-    "owner": "HUMAN",
-    "next_owner": "CHAT",
-    "status": "PASS_TESTER_COUNT_MATCH_READY_TO_SAVE",
+    "id": "S5_INTERNAL_TESTING_TESTER_LIST_SAVED",
+    "owner": "CHAT",
+    "next_owner": "HUMAN",
+    "status": "PASS_INTERNAL_TESTER_LIST_SAVED",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_TESTER_LIST_CONFIGURATION_ONLY",
-    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_TESTER_LIST_COUNT_CORRECTED_2026_10_03_v1.0.md",
+    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_TESTER_LIST_SAVE_RESULT_2026_10_03_v1.0.md",
+    "evidence_pdf_sha256": "9c4d23d40036484de0a955b114667522765c8990ee179d1c190d97980417cd76",
     "intended_tester_count": 1,
-    "observed_selected_list_name": "emailaku",
-    "observed_selected_list_user_count": 1,
-    "save_status": "AUTHORIZED_UNDER_CURRENT_SCOPE",
-    "hard_stop": "STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED"
+    "selected_list_name": "emailaku",
+    "observed_user_count": 1,
+    "provider_setup_progress": "2_OF_3_COMPLETE",
+    "provider_track_status": "INACTIVE",
+    "next_provider_step": "PREVIEW_AND_CONFIRM_RELEASE",
+    "hard_stop": "STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED",
+    "hard_stop_status": "REACHED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "TESTER_COUNT_MATCH_SAVE_AUTHORIZED_UNDER_EXISTING_SCOPE",
+    "internal_test": "TESTER_LIST_SAVED_PREVIEW_CONFIRM_SCOPE_APPROVAL_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -91,16 +95,16 @@
     "Provider-compatible Internal Testing release-draft + AAB upload scope still requires explicit authorization.",
     "Tester mutation, release review, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "Upload-key certificate fingerprint after first bundle upload has not yet been re-observed in Play App Signing.",
-    "Tester configuration and actual Internal Testing rollout remain unauthorized and not completed.",
     "Distributed install/runtime validation from Google Play remains not run.",
     "Validated Internal testing release draft has not yet been persisted with Save as draft.",
-    "Tester configuration, release review, rollout, distributed install/runtime validation, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
+    "Tester configuration, release review, rollout, distributed install/runtime validation, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
+    "Internal testing release has not yet been previewed/confirmed or rolled out."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Press Save on the current Internal testing tester configuration, wait for confirmation, capture the saved state, and stop before release review or rollout.",
+  "next_action": "Human chooses the next bounded scope. Do not preview/confirm or roll out the Internal testing release without explicit authorization.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -921,5 +925,15 @@
     "observed_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
     "exact_match": true,
     "provider_registration_confirmed": true
+  },
+  "s5_internal_tester_configuration": {
+    "status": "PASS_SAVED",
+    "observed_at": "2026-10-03",
+    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_TESTER_LIST_SAVE_RESULT_2026_10_03_v1.0.md",
+    "pdf_sha256": "9c4d23d40036484de0a955b114667522765c8990ee179d1c190d97980417cd76",
+    "list_name": "emailaku",
+    "tester_count": 1,
+    "setup_progress": "2_OF_3_COMPLETE",
+    "next_step": "PREVIEW_AND_CONFIRM_RELEASE"
   }
 }
