@@ -1279,3 +1279,23 @@ Next recommended scope:
 `S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION`.
 
 No promotion beyond Internal testing is authorized.
+
+
+## Internal Testing active-track detail reconfirmed — 2026-10-03
+
+Evidence:
+`evidence/play/S5_INTERNAL_TESTING_ACTIVE_TRACK_DETAIL_2026_10_03_v1.0.md`
+
+Observed:
+- track `Active`;
+- release `1 (0.1.0)`;
+- `Available to internal testers`;
+- version code `1`;
+- review status `Not reviewed`;
+- supported Android devices `14,290`.
+
+Disposition:
+`PASS_INTERNAL_TRACK_ACTIVE_DETAIL_CONFIRMED`
+
+Next recommended scope:
+`S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION`.
