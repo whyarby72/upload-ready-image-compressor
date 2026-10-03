@@ -1581,3 +1581,27 @@ Privacy/Data safety are reclassified as later-stage compliance gates rather than
 
 This decision does not authorize:
 S6, BUILD promotion, Artifact Freeze, closed/open testing, production, release, publication, or AdMob integration.
+
+
+## D-104 — Bind W1 pre-AdMob architecture and privacy baseline (2026-10-03)
+
+The human selected the recommended W1 continuation after S5 closeout.
+
+Decision:
+`W1_PRE_ADMOB_RECONCILIATION = PASS`.
+
+Initial monetization contract:
+- one in-flow adaptive banner on ResultScreen only;
+- ad appears only after verified result and after buyer-critical Save/Share controls;
+- interstitial, app-open, rewarded and native formats remain OFF;
+- no analytics or mediation in the first integration;
+- Publisher first-party ID is disabled initially;
+- UMP gates ad requests via current consent state;
+- source image content is never passed to AdMob/analytics.
+
+Preferred fresh-integration SDK candidate:
+GMA Next-Gen rather than starting a new legacy integration, subject to version revalidation immediately before coding.
+
+The W1 baseline records a material privacy delta once GMA is integrated: ad SDK data handling must be reflected in privacy/Data Safety later, while current vc1 remains a no-ads local-only baseline.
+
+No S7 coding, AdMob account mutation, production ad-unit creation, Play declaration change, broader testing, BUILD promotion, Artifact Freeze, release or publication is authorized by this decision.
