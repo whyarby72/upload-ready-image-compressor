@@ -39,23 +39,34 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
-    "owner": "HUMAN",
-    "next_owner": "CHAT",
-    "status": "PLAY_STORE_LISTING_ACCESS_RESOLVED_BY_RETRY_INSTALL_PENDING",
+    "id": "S5_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION_CLOSED",
+    "owner": "CHAT",
+    "next_owner": "HUMAN",
+    "status": "PASS_DISTRIBUTED_CORE_RUNTIME_VALIDATION",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
-    "evidence_level": "HUMAN_ATTESTED_NOT_SCREENSHOT_BOUND",
-    "tester_access_status": "RESOLVED_AFTER_TRY_AGAIN",
-    "install_status": "PENDING",
-    "runtime_validation_status": "PENDING",
-    "hard_stop": "STOP_AFTER_DISTRIBUTED_CORE_RUNTIME_VALIDATION_RESULT_IS_CAPTURED"
+    "evidence_ref": "evidence/play/S5_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION_RESULT_2026_10_03_v1.0.md",
+    "evidence_level": "HUMAN_ATTESTED_RUNTIME_RESULT",
+    "device": "Samsung Galaxy Note 20",
+    "android_version": "13",
+    "installed_from_google_play": "PASS",
+    "app_opened": "PASS",
+    "choose_jpeg": "PASS",
+    "current_facts": "PASS",
+    "limit_entry": "PASS",
+    "result_semantics": "PASS",
+    "save": "PASS",
+    "share": "PASS",
+    "original_preserved": true,
+    "unexpected_error_confusion": "NONE_REPORTED",
+    "direct_on_device_version_observation": "NOT_REPORTED",
+    "hard_stop_status": "REACHED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "PLAY_STORE_ACCESS_RESOLVED_INSTALL_RUNTIME_VALIDATION_PENDING",
+    "internal_test": "PASS_DISTRIBUTED_CORE_RUNTIME_VALIDATION_S5_CLOSEOUT_REVIEW_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -97,15 +108,14 @@
     "Native debug symbols are not attached to vc1; this is diagnostic-quality debt to address before production readiness where feasible.",
     "Distributed install/runtime validation from Google Play has not yet been completed.",
     "Closed testing, open testing, production, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Distributed install/runtime validation from Google Play remains pending human execution.",
-    "Google Play installation of the internal-test build has not yet been confirmed.",
-    "Distributed runtime buyer-job validation has not yet been completed."
+    "Direct on-device version-string/versionCode observation was not separately recorded during runtime validation.",
+    "Runtime PASS is human-attested; no screenshot-bound runtime evidence was supplied."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Install the app from the now-visible Google Play listing using the configured tester account, launch it, run the bounded core runtime checklist with a non-sensitive JPEG, and report results.",
+  "next_action": "Run S5 closeout audit against the Internal Test Plan and determine whether S5 can be closed as INTERNAL_TEST_READY/COMPLETE or whether any evidence debt remains before advancing.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -947,5 +957,24 @@
     "version_code": 1,
     "version_name": "0.1.0",
     "review_status": "NOT_REVIEWED"
+  },
+  "s5_distributed_runtime_validation": {
+    "status": "PASS",
+    "observed_at": "2026-10-03",
+    "evidence_ref": "evidence/play/S5_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION_RESULT_2026_10_03_v1.0.md",
+    "evidence_level": "HUMAN_ATTESTED_RUNTIME_RESULT",
+    "device": "Samsung Galaxy Note 20",
+    "android_version": "13",
+    "installed_from_google_play": true,
+    "app_opened": true,
+    "choose_jpeg": true,
+    "current_facts": true,
+    "limit_entry": true,
+    "result_semantics": true,
+    "save": true,
+    "share": true,
+    "original_preserved": true,
+    "unexpected_error_confusion": "NONE_REPORTED",
+    "direct_on_device_version_observation": "NOT_REPORTED"
   }
 }
