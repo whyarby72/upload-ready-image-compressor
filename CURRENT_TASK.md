@@ -1564,3 +1564,19 @@ UMP consent/privacy-options paths may be `NOT_OBSERVABLE` with sample IDs and no
 
 Hard stop:
 `STOP_AFTER_TEST_ONLY_RUNTIME_VALIDATION_RESULTS_ARE_CAPTURED`
+
+
+## S7 ADB install evidence conflict — HOLD — 2026-10-03
+
+Evidence:
+`evidence/admob/S7_ADB_INSTALL_EVIDENCE_CONFLICT_2026_10_03_v1.0.md`
+
+Conflict:
+- chat report: `adb` found no device;
+- commit `724b5191b9d27e234edae5f279b14103d54425c8`: records Samsung SM-N980F / Android 13, install PASS and launch PASS.
+
+Disposition:
+`HOLD_MATERIAL_EVIDENCE_CONFLICT`
+
+Required:
+fresh timestamped ADB/device/package/launch reconciliation before any runtime PASS/FAIL is accepted.
