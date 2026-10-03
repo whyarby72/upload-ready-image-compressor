@@ -1605,3 +1605,24 @@ GMA Next-Gen rather than starting a new legacy integration, subject to version r
 The W1 baseline records a material privacy delta once GMA is integrated: ad SDK data handling must be reflected in privacy/Data Safety later, while current vc1 remains a no-ads local-only baseline.
 
 No S7 coding, AdMob account mutation, production ad-unit creation, Play declaration change, broader testing, BUILD promotion, Artifact Freeze, release or publication is authorized by this decision.
+
+
+## D-105 — Authorize and implement S7 GMA Next-Gen + UMP test-only integration (2026-10-03)
+
+The human selected Option 1.
+
+Authorization:
+`S7 CODEX ADMOB+UMP TEST-INTEGRATION ONLY`.
+
+Fresh official SDK recheck changed the GMA candidate from the W1 snapshot:
+- W1 recorded 1.4.0 as the then-observed quick-start candidate;
+- official Next-Gen release notes now show `1.5.0` released 2026-09-24;
+- implementation therefore pins `1.5.0`;
+- UMP remains `4.0.0`.
+
+The implementation uses only Google sample/test identifiers and performs no AdMob or Play provider mutation.
+
+Monetization scope remains exactly:
+one adaptive banner on ResultScreen after verified value and buyer-critical completion controls.
+
+No S8, production ads, provider configuration, broader testing, BUILD promotion, Artifact Freeze, release, or publication authority is created.

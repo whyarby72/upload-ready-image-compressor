@@ -5,7 +5,7 @@
     "canonical_name": "PHOTO COMPRESSOR: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE_COMPLETE",
+    "current_stage": "S7_ADMOB_PRIVACY_TEST_INTEGRATION",
     "canonical_decision": "TEST",
     "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR",
@@ -39,23 +39,21 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE",
-    "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "PASS_W1_BASELINE_READY_FOR_S7_IMPLEMENTATION_APPROVAL",
-    "authorization_ref": "USER_OPTION_1_2026-10-03_START_W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE",
-    "audit_ref": "docs/admob/W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE_2026_10_03_v1.0.md",
-    "experience_contract_ref": "docs/admob/ADMOB_EXPERIENCE_CONTRACT_v1.0.md",
-    "data_safety_draft_ref": "store/DATA_SAFETY_DRAFT.md",
-    "ads_declaration_ref": "store/ADS_DECLARATION.md",
-    "preferred_sdk_candidate": "GMA_NEXT_GEN_1.4.0",
-    "ump_candidate": "4.0.0",
-    "initial_ad_format": "ONE_IN_FLOW_ADAPTIVE_BANNER_ON_RESULT_ONLY",
-    "analytics": "NONE",
-    "mediation": "NONE_INITIAL",
-    "publisher_first_party_id": "DISABLED_INITIAL",
-    "implementation_authorized": false,
-    "provider_admob_mutation_authorized": false
+    "id": "TASK-S7-001",
+    "owner": "CODEX",
+    "next_owner": "CHAT",
+    "status": "IMPLEMENTED_AWAITING_CI",
+    "authorization_ref": "USER_OPTION_1_2026-10-03_S7_CODEX_ADMOB_UMP_TEST_INTEGRATION_ONLY",
+    "authorization_evidence_ref": "evidence/admob/S7_ADMOB_UMP_TEST_INTEGRATION_AUTHORIZATION_v1.0.json",
+    "branch": "task/TASK-S7-001",
+    "sdk": {
+      "gma_next_gen": "1.5.0",
+      "ump": "4.0.0"
+    },
+    "test_ids_only": true,
+    "ad_format": "RESULT_SCREEN_ADAPTIVE_BANNER_ONLY",
+    "provider_mutation": false,
+    "next_gate": "CI_BUILD_TEST_LINT"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -63,7 +61,7 @@
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
     "internal_test": "PASS_CLOSED_WITH_NONBLOCKING_EVIDENCE_DEBT",
-    "admob_privacy": "W1_PRE_ADMOB_BASELINE_PASS_S7_IMPLEMENTATION_NOT_AUTHORIZED",
+    "admob_privacy": "S7_TEST_INTEGRATION_IMPLEMENTED_CI_PENDING",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "INTERNAL_TEST_ALLOWED_BROADER_RELEASE_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
@@ -97,13 +95,14 @@
     "AdMob Privacy & messaging configuration has not yet been created/published.",
     "Final Play target-audience declaration is not yet bound for ad policy configuration.",
     "app-ads.txt and AdMob app readiness verification remain pending provider setup.",
-    "W2 post-AdMob privacy/monetization audit remains NOT_RUN."
+    "W2 post-AdMob privacy/monetization audit remains NOT_RUN.",
+    "TASK-S7-001 CI evidence is pending; source implementation is not PASS until build/unit/lint succeed."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Human decides whether to authorize the narrow S7/Codex implementation of GMA Next-Gen + UMP + one ResultScreen in-flow adaptive banner using test ads only, with no AdMob/Play provider mutation.",
+  "next_action": "CI must prove assembleDebug, testDebugUnitTest and lintDebug on task/TASK-S7-001. Any failure is repaired before S7 implementation PASS.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -120,7 +119,7 @@
     "remote_url": "https://github.com/whyarby72/upload-ready-image-compressor",
     "default_branch": "main",
     "integration_branch": "develop",
-    "active_task_branch": "task/TASK-S5-007",
+    "active_task_branch": "task/TASK-S7-001",
     "bootstrap_state": "READY_REMOTE",
     "last_bootstrap_at": "2026-09-26T15:30:09.465577+00:00",
     "last_bootstrap_evidence": "evidence/build/REPO_BOOTSTRAP.json",

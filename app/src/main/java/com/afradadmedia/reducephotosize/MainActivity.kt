@@ -102,6 +102,7 @@ class MainActivity : ComponentActivity() {
     private var selectedTargetBytes: Long? = null
     private var selectedTargetIndex: Int? = null
     private var currentResultFile: File? = null
+    private lateinit var adMobController: AdMobTestController
     private val picker = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode != Activity.RESULT_OK) return@registerForActivityResult
         val uri = result.data?.data ?: return@registerForActivityResult
@@ -124,7 +125,20 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent { WarmInkTheme { ReducePhotoSizeApp(uiState, ::onEvent) } }
+        adMobController = AdMobTestController(this)
+        setContent {
+            WarmInkTheme {
+                ReducePhotoSizeApp(
+                    state = uiState,
+                    onEvent = ::onEvent,
+                    canRequestAds = adMobController.canRequestAds,
+                    adsInitialized = adMobController.sdkInitialized,
+                    privacyOptionsRequired = adMobController.privacyOptionsRequired,
+                    onPrivacyOptions = adMobController::showPrivacyOptions
+                )
+            }
+        }
+        adMobController.refreshConsentOnLaunch()
     }
 
     private fun onEvent(event: MainUiEvent) {
@@ -247,19 +261,33 @@ class MainActivity : ComponentActivity() {
 private fun WarmInkTheme(content: @Composable () -> Unit) { androidx.compose.material3.MaterialTheme(colorScheme = androidx.compose.material3.lightColorScheme(primary = Ink, onPrimary = Color.White, background = Canvas, onBackground = InkDeep, surface = SurfaceWarm, onSurface = InkDeep, surfaceVariant = SurfaceSubtle, outline = Outline), typography = WarmInkTypography, content = content) }
 
 @Composable
-private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Unit) {
+private fun ReducePhotoSizeApp(
+    state: MainUiState,
+    onEvent: (MainUiEvent) -> Unit,
+    canRequestAds: Boolean,
+    adsInitialized: Boolean,
+    privacyOptionsRequired: Boolean,
+    onPrivacyOptions: () -> Unit
+) {
     var customOpen by remember { mutableStateOf(false) }
     val actualState = if (state is MainUiState.Failure) state.recoverTo else state
     Scaffold(containerColor = Canvas) { padding ->
         Column(Modifier.fillMaxSize().padding(padding).statusBarsPadding().navigationBarsPadding().verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 16.dp)) {
-            AppHeader()
+            AppHeader(privacyOptionsRequired, onPrivacyOptions)
             Spacer(Modifier.height(28.dp))
             when (actualState) {
                 MainUiState.Home -> HomeScreen { onEvent(MainUiEvent.ChoosePhoto) }
                 is MainUiState.Inspecting -> ProcessingScreen(actualState.message)
                 is MainUiState.Requirement -> RequirementScreen(actualState, onEvent, { customOpen = true })
                 is MainUiState.Processing -> ProcessingScreen(actualState.message, actualState.sourcePreview)
-                is MainUiState.Result -> ResultScreen(actualState, onEvent)
+                is MainUiState.Result -> ResultScreen(
+                    actualState,
+                    onEvent,
+                    showTestBanner = AdMobEligibility.shouldLoadResultBanner(
+                        canRequestAds = canRequestAds,
+                        sdkInitialized = adsInitialized
+                    )
+                )
                 is MainUiState.Failure -> Unit
             }
             if (state is MainUiState.Failure && actualState !is MainUiState.Requirement) {
@@ -285,13 +313,26 @@ private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Uni
     }
 }
 
-@Composable private fun AppHeader() {
+@Composable private fun AppHeader(showPrivacyChoices: Boolean, onPrivacyChoices: () -> Unit) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Icon(painterResource(R.drawable.ic_brand_compress_frame), "Reduce Photo Size", tint = Ink, modifier = Modifier.size(26.dp))
         Spacer(Modifier.width(10.dp))
         Text("Reduce Photo Size", color = InkDeep, style = WarmInkTypography.titleLarge, modifier = Modifier.weight(1f), maxLines = 1)
     }
-    Spacer(Modifier.height(8.dp)); Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) { TrustCue() }
+    Spacer(Modifier.height(8.dp))
+    Row(
+        Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.End,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        if (showPrivacyChoices) {
+            TextButton(onClick = onPrivacyChoices) {
+                Text("Privacy choices", color = TextSecondary, style = WarmInkTypography.labelMedium)
+            }
+            Spacer(Modifier.width(6.dp))
+        }
+        TrustCue()
+    }
 }
 
 @Composable private fun HomeScreen(onChoose: () -> Unit) {
@@ -325,7 +366,11 @@ private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Uni
 
 @Composable private fun ProcessingScreen(message: String, preview: ImageBitmap? = null) { Column(Modifier.fillMaxWidth().padding(top = 24.dp), horizontalAlignment = Alignment.CenterHorizontally) { PreviewBox(preview, Modifier.fillMaxWidth().height(300.dp), ContentScale.Fit); Spacer(Modifier.height(18.dp)); Row(verticalAlignment = Alignment.CenterVertically) { CircularProgressIndicator(color = Ink, modifier = Modifier.size(22.dp), strokeWidth = 2.dp); Spacer(Modifier.width(12.dp)); Text(message.replace(" on-device", ""), color = InkDeep, style = WarmInkTypography.titleLarge) }; Spacer(Modifier.height(8.dp)); Text("Original untouched", color = TextSecondary, style = WarmInkTypography.bodyMedium, textAlign = TextAlign.Center) } }
 
-@Composable private fun ResultScreen(state: MainUiState.Result, onEvent: (MainUiEvent) -> Unit) {
+@Composable private fun ResultScreen(
+    state: MainUiState.Result,
+    onEvent: (MainUiEvent) -> Unit,
+    showTestBanner: Boolean
+) {
     val result = state.result; val pass = result.state == CompressionResult.State.PASS || result.state == CompressionResult.State.ALREADY_READY; val reduced = result.state == CompressionResult.State.REDUCED || result.state == CompressionResult.State.ALREADY_SMALL; val notMet = !pass && !reduced; val accent = if (pass) Success else if (reduced) Info else Warning; val tint = if (pass) SuccessSurface else if (reduced) InfoSurface else WarningSurface
     val resultValueStyle = WarmInkTypography.displayLarge.copy(fontSize = if (result.outputBytes >= 10_000_000L) 36.sp else if (result.outputBytes >= 1_000_000L) 42.sp else 50.sp, lineHeight = if (result.outputBytes >= 10_000_000L) 40.sp else if (result.outputBytes >= 1_000_000L) 46.sp else 54.sp)
     Surface(color = SurfaceWarm, shape = RoundedCornerShape(28.dp), modifier = Modifier.fillMaxWidth().border(1.dp, Outline, RoundedCornerShape(28.dp))) { Column(Modifier.padding(14.dp)) { PreviewBox(state.resultPreview, Modifier.fillMaxWidth().height(252.dp), ContentScale.Fit); Spacer(Modifier.height(16.dp)); Surface(color = tint, shape = RoundedCornerShape(50)) { Text(if (pass) "MEETS LIMIT" else if (reduced) "SMALLER COPY" else "TARGET NOT MET", color = accent, style = WarmInkTypography.labelMedium, modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp)) }; Spacer(Modifier.height(8.dp)); Text(FormatUtils.bytes(result.outputBytes), color = InkDeep, style = resultValueStyle, maxLines = 1, softWrap = false, modifier = Modifier.fillMaxWidth()) } }
@@ -347,6 +392,10 @@ private fun ReducePhotoSizeApp(state: MainUiState, onEvent: (MainUiEvent) -> Uni
     if (notMet) { Spacer(Modifier.height(10.dp)); Text("Try a higher limit or a different photo.", color = Warning, style = WarmInkTypography.bodyMedium, modifier = Modifier.fillMaxWidth()) }
     Spacer(Modifier.height(14.dp)); BeforeAfterCard(state.sourcePreview, state.resultPreview, result); Spacer(Modifier.height(8.dp)); Text("${result.width} × ${result.height} · JPEG · original untouched", color = TextSecondary, style = WarmInkTypography.bodyMedium)
     Spacer(Modifier.height(20.dp)); PrimaryButton(if (notMet) "Save current copy" else "Save copy", R.drawable.ic_download, { onEvent(MainUiEvent.Save) }); Spacer(Modifier.height(10.dp)); Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(20.dp)).background(SurfaceWarm).border(1.dp, Outline, RoundedCornerShape(20.dp))) { CompactAction("Share", R.drawable.ic_share, Modifier.weight(1f)) { onEvent(MainUiEvent.Share) }; Box(Modifier.width(1.dp).height(48.dp).background(Outline)); CompactAction("Compress another", R.drawable.ic_repeat, Modifier.weight(1f)) { onEvent(MainUiEvent.CompressAnother) } }
+    if (showTestBanner) {
+        Spacer(Modifier.height(18.dp))
+        ResultTestBanner()
+    }
 }
 
 @Composable private fun RequirementMediaCard(preview: ImageBitmap?, size: String, meta: String) { Surface(color = SurfaceWarm, shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth().border(1.dp, Outline, RoundedCornerShape(20.dp))) { Row(Modifier.fillMaxWidth().padding(12.dp), verticalAlignment = Alignment.CenterVertically) { PreviewBox(preview, Modifier.size(92.dp), ContentScale.Crop); Spacer(Modifier.width(12.dp)); Column(Modifier.weight(1f)) { Text("CURRENT PHOTO", color = Info, style = WarmInkTypography.labelMedium); Spacer(Modifier.height(2.dp)); Text(size, color = InkDeep, style = WarmInkTypography.titleLarge, maxLines = 1, softWrap = false); Text(meta, color = TextSecondary, style = WarmInkTypography.bodyMedium, maxLines = 1, softWrap = false) } } } }

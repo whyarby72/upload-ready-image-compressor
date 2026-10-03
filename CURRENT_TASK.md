@@ -1471,3 +1471,37 @@ Disposition:
 `W1_PASS_ARCHITECTURE_BASELINE_READY_FOR_S7_IMPLEMENTATION_APPROVAL`
 
 No source/code mutation and no AdMob/Play provider mutation were authorized or performed.
+
+
+## TASK-S7-001 — AdMob + UMP TEST integration — AUTHORIZED / IMPLEMENTED — 2026-10-03
+
+Approval:
+`USER_OPTION_1_2026-10-03_S7_CODEX_ADMOB_UMP_TEST_INTEGRATION_ONLY`
+
+Branch:
+`task/TASK-S7-001`
+
+Fresh official recheck before coding:
+- GMA Next-Gen latest release: `1.5.0`;
+- UMP: `4.0.0`;
+- Google sample App ID: `ca-app-pub-3940256099942544~3347511713`;
+- Google sample adaptive-banner unit ID: `ca-app-pub-3940256099942544/9214589741`.
+
+Implementation:
+- UMP consent update on every launch;
+- required consent form flow;
+- `canRequestAds()` gate;
+- visible Privacy choices entry point when UMP marks it required;
+- GMA initialization on background thread only after ad-request permission;
+- Publisher first-party ID disabled before ads become eligible;
+- one ResultScreen banner only;
+- banner located after result proof and after Save/Share/Compress another;
+- no interstitial/app-open/rewarded/native;
+- no analytics/mediation;
+- Google sample/test IDs only.
+
+Provider/account mutation:
+`NONE`
+
+Current status:
+`IMPLEMENTED_AWAITING_CI`

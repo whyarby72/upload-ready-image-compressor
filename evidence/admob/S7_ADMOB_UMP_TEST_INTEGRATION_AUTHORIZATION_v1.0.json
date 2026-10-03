@@ -1,0 +1,34 @@
+{
+  "schema": "S7_ADMOB_UMP_TEST_INTEGRATION_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "authorized_at": "2026-10-03T17:27:00+07:00",
+  "approval_ref": "USER_OPTION_1_2026-10-03_S7_CODEX_ADMOB_UMP_TEST_INTEGRATION_ONLY",
+  "scope": "S7 CODEX ADMOB+UMP TEST-INTEGRATION ONLY",
+  "branch": "task/TASK-S7-001",
+  "authorized": [
+    "Integrate current GMA Next-Gen SDK using Google sample/test IDs only",
+    "Integrate UMP consent refresh and privacy-options behavior",
+    "Disable Publisher first-party ID for the initial test integration",
+    "Render one adaptive banner on ResultScreen only after result proof and Save/Share/Compress another controls",
+    "Run build, unit tests and lint through repository CI",
+    "Generate deterministic evidence"
+  ],
+  "prohibited": [
+    "Create or mutate an AdMob app/account",
+    "Create production ad units",
+    "Use production ad IDs",
+    "Publish Privacy & messaging configuration",
+    "Change Google Play ads/Data Safety declarations",
+    "Closed/open/production rollout",
+    "S8 promotion",
+    "BUILD promotion",
+    "Artifact Freeze",
+    "Publication"
+  ],
+  "current_official_sdk_recheck": {
+    "gma_next_gen": "1.5.0",
+    "ump": "4.0.0",
+    "google_sample_app_id": "ca-app-pub-3940256099942544~3347511713",
+    "google_sample_banner_ad_unit_id": "ca-app-pub-3940256099942544/9214589741"
+  }
+}
