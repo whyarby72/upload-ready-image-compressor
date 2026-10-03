@@ -1222,3 +1222,23 @@ Decision:
 The corrected provider-compatible scope remains:
 `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`,
 which still requires separate explicit authorization.
+
+
+## D-082 — Pre-upload signed AAB integrity MATCH; provider upload scope is ready for explicit approval (2026-10-03)
+
+Human/Codex local verification reports the exact signed vc1 AAB exists and matches the canonical SHA-256:
+`d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`.
+
+File size:
+`7984820` bytes.
+
+Decision:
+- close pre-upload integrity check as PASS;
+- treat the exact signed vc1 AAB as the only eligible artifact for the next provider step;
+- require separate explicit approval for:
+  `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`.
+
+Hard stop for that future scope:
+`STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT`.
+
+No provider mutation has yet occurred.
