@@ -4,36 +4,9 @@
   "authorized_at": "2026-10-03",
   "approval_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_PREVIEW_CONFIRM_ONLY",
   "scope": "S5 INTERNAL TESTING PREVIEW + CONFIRM ONLY",
-  "preconditions": {
-    "draft_saved": true,
-    "tester_list_saved": true,
-    "tester_count": 1,
-    "version_name": "0.1.0",
-    "version_code": 1,
-    "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d"
-  },
-  "permitted": [
-    "Open Preview and confirm release",
-    "Review all visible release details, warnings, validation messages, countries/device information, bundle/version information, and tester-related summary",
-    "Capture the full preview/confirm page",
-    "Press the provider action that confirms the release only if it does not start rollout/testing availability immediately",
-    "Capture the immediate post-confirm state"
-  ],
-  "prohibited": [
-    "Start rollout",
-    "Roll out to internal testing",
-    "Publish",
-    "Make available to testers",
-    "Change testers",
-    "Change bundle",
-    "Change signing keys",
-    "Closed testing",
-    "Open testing",
-    "Production",
-    "S6",
-    "BUILD promotion",
-    "Artifact Freeze"
-  ],
-  "hard_stop": "STOP_BEFORE_ANY_ACTION_THAT_STARTS_ROLLOUT_OR_MAKES_THE_RELEASE_AVAILABLE_TO_TESTERS",
-  "provider_execution_state": "READY_FOR_HUMAN_PREVIEW_CONFIRM_AUDIT"
+  "version_name": "0.1.0",
+  "version_code": 1,
+  "tester_count": 1,
+  "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+  "hard_stop": "STOP_BEFORE_ROLLOUT_OR_TESTER_AVAILABILITY"
 }
