@@ -39,27 +39,33 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY",
-    "owner": "HUMAN",
-    "next_owner": "CHAT",
-    "status": "AUTHORIZED_PROVIDER_EXECUTION_REQUIRED",
+    "id": "S5_INTERNAL_TESTING_AAB_PROVIDER_VALIDATION_CLOSED",
+    "owner": "CHAT",
+    "next_owner": "HUMAN",
+    "status": "PASS_AAB_PROVIDER_VALIDATION_IN_DRAFT",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY",
-    "authorization_evidence_ref": "evidence/play/S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY_AUTHORIZATION_v1.0.json",
+    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_AAB_PROVIDER_VALIDATION_RESULT_2026_10_03_v1.0.md",
+    "evidence_pdf_sha256": "7b717ed457dfaf2582a2812fca32644ccd330b2ace0ca97ee8570e6fbe0890b4",
     "artifact_filename": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
     "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
-    "artifact_bytes": 7984820,
-    "version_name": "0.1.0",
-    "version_code": 1,
-    "upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
-    "provider_execution_state": "READY_FOR_HUMAN_PROVIDER_EXECUTION",
-    "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT"
+    "provider_version": "1 (0.1.0)",
+    "provider_api_levels": "29+",
+    "provider_target_sdk": 36,
+    "provider_screen_layouts": 4,
+    "provider_abis": 4,
+    "provider_required_features": 1,
+    "provider_bundle_status": "ENHANCED",
+    "provider_visible_rejection": false,
+    "provider_execution_state": "VALIDATION_PASS_HARD_STOP_REACHED",
+    "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT",
+    "hard_stop_status": "REACHED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "INTERNAL_TEST_RELEASE_DRAFT_AAB_UPLOAD_AUTHORIZED_PROVIDER_EXECUTION_PENDING",
+    "internal_test": "AAB_PROVIDER_VALIDATION_PASS_DRAFT_HARD_STOP_REACHED_NEXT_PROVIDER_SCOPE_APPROVAL_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -88,20 +94,20 @@
     "Play Data safety declaration must be completed before distribution/publication.",
     "AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "Play upload remains unauthorized.",
-    "Signed AAB has not yet been uploaded to Google Play.",
     "Play has not yet registered/confirmed the upload-key certificate from the first bundle.",
     "Tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "Internal-testing AAB upload requires entering a Play release draft; corrected scope awaits explicit authorization.",
-    "Signed AAB has not yet been provider-validated by Google Play.",
     "Provider-compatible Internal Testing release-draft + AAB upload scope still requires explicit authorization.",
-    "Google Play provider acceptance of the signed vc1 AAB has not yet been observed.",
-    "Tester mutation, release review, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
+    "Tester mutation, release review, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
+    "Upload-key certificate fingerprint after first bundle upload has not yet been re-observed in Play App Signing.",
+    "Tester configuration and actual Internal Testing rollout remain unauthorized and not completed.",
+    "Distributed install/runtime validation from Google Play remains not run."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human opens Internal testing, enters the mandatory release draft, uploads only the exact bound signed vc1 AAB, waits for provider validation, captures the result, and stops before testers, review, rollout, or publication.",
+  "next_action": "Human chooses the next bounded scope. Under the current authorization, do not press Next or Save as draft and do not configure testers/review/rollout.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -900,5 +906,19 @@
     "expected_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
     "match": true,
     "evidence_ref": "evidence/local/S5_PREUPLOAD_SIGNED_AAB_HASH_RECHECK_RESULT_2026_10_03_v1.0.md"
+  },
+  "s5_internal_testing_aab_upload": {
+    "status": "PASS_PROVIDER_VALIDATED_IN_DRAFT",
+    "observed_at": "2026-10-03",
+    "authorization_ref": "USER_OPTION_1_2026-10-03_S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY",
+    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_AAB_PROVIDER_VALIDATION_RESULT_2026_10_03_v1.0.md",
+    "pdf_sha256": "7b717ed457dfaf2582a2812fca32644ccd330b2ace0ca97ee8570e6fbe0890b4",
+    "artifact_filename": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
+    "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "version_code": 1,
+    "version_name": "0.1.0",
+    "provider_parse_status": "PASS",
+    "provider_visible_rejection": false,
+    "hard_stop_status": "REACHED"
   }
 }
