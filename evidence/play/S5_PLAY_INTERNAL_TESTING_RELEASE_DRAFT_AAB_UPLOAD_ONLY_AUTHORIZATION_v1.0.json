@@ -1,0 +1,45 @@
+{
+  "schema": "S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "package": "com.afradadmedia.reducephotosize",
+  "provider_app_id": "4973120481844433940",
+  "authorized_at": "2026-10-03",
+  "approval_ref": "USER_OPTION_1_2026-10-03_S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY",
+  "authorized_scope": "S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY",
+  "artifact": {
+    "filename": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
+    "sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "bytes": 7984820,
+    "version_name": "0.1.0",
+    "version_code": 1,
+    "upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4"
+  },
+  "permitted": [
+    "Open Google Play Console for Photo Compressor: KB Limit",
+    "Navigate to Test and release > Testing > Internal testing",
+    "Enter or create the mandatory Internal testing release draft",
+    "Upload exactly the bound signed vc1 AAB",
+    "Wait for Google Play processing and provider validation",
+    "Observe and capture package/version/signing/upload-key acceptance or rejection",
+    "Observe whether Play registers the upload-key certificate after the first bundle upload",
+    "Leave the release in draft state"
+  ],
+  "prohibited": [
+    "Adding or changing testers",
+    "Saving tester lists",
+    "Completing release notes unless technically unavoidable for bundle validation",
+    "Review release",
+    "Start rollout",
+    "Publish",
+    "Closed testing",
+    "Open testing",
+    "Production",
+    "Changing Play App Signing configuration",
+    "Changing/resetting/rotating/importing upload or app-signing keys",
+    "S6",
+    "BUILD promotion",
+    "Artifact Freeze"
+  ],
+  "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT",
+  "provider_execution_state": "READY_FOR_HUMAN_PROVIDER_EXECUTION"
+}
