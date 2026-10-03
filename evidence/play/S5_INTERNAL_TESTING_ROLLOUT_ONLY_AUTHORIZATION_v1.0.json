@@ -1,0 +1,34 @@
+{
+  "schema": "S5_INTERNAL_TESTING_ROLLOUT_ONLY_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "authorized_at": "2026-10-03",
+  "approval_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_ROLLOUT_ONLY",
+  "scope": "S5 INTERNAL TESTING ROLLOUT ONLY",
+  "preconditions": {
+    "preview_status": "PASS_PREVIEW_WITH_NON_BLOCKING_WARNINGS",
+    "tester_count": 1,
+    "version_name": "0.1.0",
+    "version_code": 1,
+    "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d"
+  },
+  "permitted": [
+    "Press Save and publish on the already reviewed Internal testing release",
+    "Wait for Google Play to process the rollout",
+    "Observe the resulting Internal testing track status",
+    "Capture the immediate post-rollout state",
+    "Observe the tester opt-in/share link if Play exposes it"
+  ],
+  "prohibited": [
+    "Change testers",
+    "Change bundle",
+    "Create another release",
+    "Promote to closed testing",
+    "Promote to open testing",
+    "Promote to production",
+    "Change signing keys",
+    "S6",
+    "BUILD promotion",
+    "Artifact Freeze"
+  ],
+  "hard_stop": "STOP_AFTER_INTERNAL_TESTING_RELEASE_BECOMES_ACTIVE_OR_PROVIDER_RETURNS_A_ROLLOUT_RESULT"
+}
