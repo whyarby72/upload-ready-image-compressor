@@ -1402,3 +1402,41 @@ Open evidence debt:
 
 Next:
 run S5 closeout audit against `S5_INTERNAL_TEST_PLAN.md`.
+
+
+## S5 closeout audit — CLOSED / PASS — 2026-10-03
+
+Closeout audit:
+`docs/qa/S5_CLOSEOUT_AUDIT_2026_10_03_v1.0.md`
+
+Final S5 disposition:
+`S5_CLOSED_PASS_WITH_NONBLOCKING_EVIDENCE_DEBT`
+
+Closed PASS chain:
+- source/artifact binding;
+- local upload-key signing;
+- exact pre-upload AAB integrity;
+- Play provider acceptance;
+- upload-certificate registration / exact fingerprint match;
+- Internal testing draft persistence;
+- one-tester configuration;
+- preview audit;
+- Internal testing rollout active;
+- Play-distributed physical-device core runtime PASS.
+
+Non-blocking evidence/diagnostic debt:
+- runtime result is human-attested without screenshot-bound sequence;
+- device UI did not separately expose versionName/versionCode during runtime validation;
+- native debug symbols are not attached to vc1;
+- Internal testing release notes were empty;
+- provider review status remains `Not reviewed`.
+
+Later-stage compliance debt remains open:
+- in-app privacy-policy surface/link;
+- public privacy-policy URL;
+- Data safety before closed/open/production;
+- AdMob/UMP/privacy reconciliation after monetization integration.
+
+Current official Play guidance checked 2026-10-03 confirms Internal-testing-only apps are exempt from Data safety and Internal testing can be used before full app setup.
+
+No S6, BUILD promotion, Artifact Freeze, broader testing, production, or publication authority is added.
