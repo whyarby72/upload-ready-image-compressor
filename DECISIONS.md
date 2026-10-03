@@ -1429,3 +1429,19 @@ Hard stop:
 `STOP_BEFORE_ROLLOUT_OR_TESTER_AVAILABILITY`
 
 No rollout, tester availability, production, or signing-key mutation authority is granted.
+
+
+## D-094 — Internal Testing preview passes with two non-blocking diagnostics warnings (2026-10-03)
+
+Direct Play Console evidence shows two warnings and no visible error.
+
+The deobfuscation warning is not a blocker for the exact vc1 artifact because the current release build has `minifyEnabled false`.
+
+The native debug-symbol warning is retained as diagnostic-quality debt; it does not constitute a Play rejection of this Internal Testing release.
+
+Decision:
+- close preview audit as `PASS_PREVIEW_WITH_NON_BLOCKING_WARNINGS`;
+- do not press `Save and publish` without a separate rollout authorization;
+- retain native-symbol improvement as pre-production readiness debt.
+
+No rollout or publication authority is granted.
