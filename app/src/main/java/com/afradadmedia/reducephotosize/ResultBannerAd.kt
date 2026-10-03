@@ -43,7 +43,7 @@ internal fun ResultTestBanner() {
 
             loadAd(
                 request,
-                object : AdLoadCallback<BannerAd>() {
+                object : AdLoadCallback<BannerAd> {
                     override fun onAdLoaded(ad: BannerAd) {
                         Log.d(TAG, "TEST banner loaded.")
                     }
