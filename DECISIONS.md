@@ -1670,3 +1670,18 @@ Decision:
 No S7 install/runtime PASS or FAIL is accepted until a fresh timestamped ADB check reconciles chronology/state.
 
 No provider or Play mutation is authorized by this reconciliation.
+
+
+## D-109 — Resolve S7 ADB evidence conflict; package present and launchable (2026-10-03)
+
+Fresh timestamped evidence confirms:
+- intended Samsung device is currently in ADB `device` state;
+- S7 TEST package is already installed;
+- launch returns `Status: ok`.
+
+Decision:
+`PASS_S7_TEST_PACKAGE_PRESENT_AND_LAUNCHABLE`.
+
+The prior `no devices/emulators found` report is retained as a transient ADB connectivity event, not as proof that installation never occurred.
+
+This closes only the install/launch reconciliation. It does not close S7 runtime validation or authorize provider/Play mutation.
