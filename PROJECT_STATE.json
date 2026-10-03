@@ -40,24 +40,28 @@
   },
   "current_task": {
     "id": "S5_INTERNAL_TESTING_PREVIEW_CONFIRM_ONLY",
-    "owner": "HUMAN",
-    "next_owner": "CHAT",
-    "status": "AUTHORIZED_PROVIDER_EXECUTION_REQUIRED",
+    "owner": "CHAT",
+    "next_owner": "HUMAN",
+    "status": "PASS_PREVIEW_WITH_NON_BLOCKING_WARNINGS",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_PREVIEW_CONFIRM_ONLY",
-    "authorization_evidence_ref": "evidence/play/S5_INTERNAL_TESTING_PREVIEW_CONFIRM_ONLY_AUTHORIZATION_v1.0.json",
-    "provider_execution_state": "READY_FOR_HUMAN_PREVIEW_CONFIRM_AUDIT",
-    "version_name": "0.1.0",
-    "version_code": 1,
-    "tester_count": 1,
-    "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
-    "hard_stop": "STOP_BEFORE_ROLLOUT_OR_TESTER_AVAILABILITY"
+    "evidence_ref": "docs/qa/S5_INTERNAL_TESTING_PREVIEW_CONFIRM_AUDIT_2026_10_03_v1.0.md",
+    "evidence_pdf_sha256": "f085b9e20e1925baff9bbf6871045ef3e67156fb559af197d5f246d0fe4ac691",
+    "provider_warning_count": 2,
+    "provider_error_count": 0,
+    "deobfuscation_warning_disposition": "NON_BLOCKING_CURRENT_RELEASE_MINIFY_FALSE",
+    "native_symbols_warning_disposition": "NON_BLOCKING_INTERNAL_TEST_DIAGNOSTIC_DEBT",
+    "release_notes_status": "EMPTY",
+    "final_provider_action": "SAVE_AND_PUBLISH",
+    "rollout_authorized": false,
+    "hard_stop": "STOP_BEFORE_SAVE_AND_PUBLISH",
+    "hard_stop_status": "REACHED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "TESTER_LIST_SAVED_PREVIEW_CONFIRM_ONLY_AUTHORIZED",
+    "internal_test": "PREVIEW_PASS_WITH_NON_BLOCKING_WARNINGS_ROLLOUT_APPROVAL_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -95,13 +99,15 @@
     "Distributed install/runtime validation from Google Play remains not run.",
     "Validated Internal testing release draft has not yet been persisted with Save as draft.",
     "Tester configuration, release review, rollout, distributed install/runtime validation, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Internal testing release has not yet been previewed/confirmed or rolled out."
+    "Internal testing release has not yet been previewed/confirmed or rolled out.",
+    "Internal testing release has not yet been published/rolled out.",
+    "Native debug symbols are not attached to vc1; this is diagnostic-quality debt to address before production readiness where feasible."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Open Preview and confirm release, review and capture all visible details and warnings, then stop before any action that starts rollout or tester availability.",
+  "next_action": "Human decides whether to authorize S5 INTERNAL TESTING ROLLOUT ONLY. Current scope does not authorize Save and publish.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
