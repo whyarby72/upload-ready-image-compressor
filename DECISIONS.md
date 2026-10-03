@@ -1318,3 +1318,21 @@ Expected SHA-256:
 `22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`.
 
 This is observation-only. No key changes, reset, tester, release review, rollout, or publication authority is granted.
+
+
+## D-088 — Upload-key certificate registration confirmed after first bundle upload (2026-10-03)
+
+Direct provider evidence shows the Upload key certificate section is now populated in Play App Signing.
+
+The visible SHA-256 fingerprint matches the locally recorded upload certificate through the displayed prefix:
+`22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9`.
+
+The capture truncates the final three bytes, so full 32-byte exact equality is not claimed solely from the screenshot.
+
+Decision:
+- close the read-only registration objective as PASS;
+- record provider registration of the upload-key certificate;
+- keep key-reset/change actions prohibited;
+- leave optional full copy-text fingerprint verification available as a separate read-only micro-check.
+
+No tester, review, rollout, or publication authority is granted.
