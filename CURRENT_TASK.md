@@ -887,3 +887,29 @@ Disposition:
 
 Next:
 recheck canonical signed AAB SHA-256 before any provider mutation.
+
+
+## Pre-upload signed AAB integrity recheck — PASS — 2026-10-03
+
+Evidence:
+`evidence/local/S5_PREUPLOAD_SIGNED_AAB_HASH_RECHECK_RESULT_2026_10_03_v1.0.md`
+
+Result:
+- file exists: YES;
+- observed SHA-256:
+  `d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`;
+- expected SHA-256:
+  `d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`;
+- result: `MATCH`;
+- size: `7984820` bytes.
+
+Disposition:
+`PASS_PREUPLOAD_SIGNED_AAB_INTEGRITY_MATCH`
+
+Local pre-upload integrity prerequisite is closed.
+
+Next material decision:
+authorize or hold
+`S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`.
+
+No Play upload authority is inferred from this PASS.
