@@ -1197,3 +1197,29 @@ Hard stop:
 `STOP_BEFORE_ROLLOUT_OR_TESTER_AVAILABILITY`
 
 No rollout or tester availability is authorized.
+
+
+## Internal Testing Preview + Confirm audit — PASS with non-blocking warnings — 2026-10-03
+
+Audit:
+`docs/qa/S5_INTERNAL_TESTING_PREVIEW_CONFIRM_AUDIT_2026_10_03_v1.0.md`
+
+Provider evidence:
+- 2 warnings;
+- no visible error;
+- exact vc1 bundle summary remains consistent;
+- final action is `Save and publish`.
+
+Warning dispositions:
+- deobfuscation file: non-blocking for current vc1 because release build has `minifyEnabled false`;
+- native debug symbols: non-blocking for Internal Testing, but open diagnostic-quality debt for production readiness.
+
+Release notes are currently empty.
+
+Disposition:
+`PASS_PREVIEW_WITH_NON_BLOCKING_WARNINGS`
+
+Hard stop reached:
+`STOP_BEFORE_SAVE_AND_PUBLISH`.
+
+No rollout authority exists yet.
