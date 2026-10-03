@@ -1353,3 +1353,19 @@ First resolution path:
 verify exact tester account + opt-in state, then reopen the tester opt-in/share link with that same account.
 
 Do not mutate the track/release while this access issue is being isolated.
+
+
+## Tester Play Store access resolved after retry — human attestation — 2026-10-03
+
+Human reports that after pressing `Try again`, the internal-test app listing appeared in Google Play.
+
+Evidence level:
+`HUMAN_ATTESTED_NOT_SCREENSHOT_BOUND`
+
+Disposition:
+`PLAY_STORE_LISTING_ACCESS_RESOLVED_BY_RETRY_INSTALL_PENDING`
+
+The prior `Item not found` blocker is cleared, but install and distributed runtime validation remain open.
+
+Next:
+install from Google Play with the configured tester account, launch the distributed build, run the existing bounded runtime checklist using a non-sensitive JPEG, and report the results.
