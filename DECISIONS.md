@@ -1261,3 +1261,23 @@ Mandatory stop:
 `STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT`
 
 No tester mutation, release review, rollout, production/publication, signing-key mutation, S6, BUILD promotion, or Artifact Freeze authority is added.
+
+
+## D-084 — Google Play accepts/parses signed vc1 AAB in Internal testing draft; hard stop reached (2026-10-03)
+
+Direct provider evidence shows the exact signed vc1 AAB inside the Internal testing release draft with parsed bundle metadata:
+- version `1 (0.1.0)`;
+- API `29+`;
+- Target SDK `36`;
+- 4 screen layouts;
+- 4 ABIs;
+- 1 required feature;
+- no visible upload rejection/error.
+
+Decision:
+- close `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY` as PASS for provider validation;
+- mark the bound hard stop reached;
+- do not infer tester/review/rollout/install/publication success;
+- do not permit `Next`, `Save as draft`, tester, review, or rollout actions without a new explicit scope.
+
+No additional provider authority is granted.
