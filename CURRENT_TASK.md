@@ -913,3 +913,35 @@ authorize or hold
 `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`.
 
 No Play upload authority is inferred from this PASS.
+
+
+## Internal Testing release-draft + exact AAB upload authorized — 2026-10-03
+
+Approval ref:
+`USER_OPTION_1_2026-10-03_S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY`
+
+Authorization evidence:
+`evidence/play/S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY_AUTHORIZATION_v1.0.json`
+
+Bound artifact:
+- filename: `PhotoCompressor-0.1.0-vc1-upload-signed.aab`
+- SHA-256: `d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`
+- bytes: `7984820`
+- versionName: `0.1.0`
+- versionCode: `1`
+- upload-certificate SHA-256:
+  `22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`
+
+Permitted provider execution:
+1. open Internal testing;
+2. enter/create the mandatory release draft;
+3. upload exactly the bound signed vc1 AAB;
+4. wait for Play processing/validation;
+5. capture acceptance/rejection and signing/upload-key state;
+6. leave the release in draft.
+
+Hard stop:
+`STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT`
+
+Not authorized:
+tester mutation, tester-list save, review release, rollout, publication, closed/open/production release, key mutation, S6, BUILD promotion, Artifact Freeze.
