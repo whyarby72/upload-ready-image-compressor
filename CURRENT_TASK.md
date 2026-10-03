@@ -865,3 +865,25 @@ No provider mutation is authorized yet.
 
 Local prerequisite remains:
 restore and verify the preserved stash before any Play action.
+
+
+## Reversible local stash restore — PASS — 2026-10-03
+
+Evidence:
+`evidence/local/S5_PRE_UPLOAD_STASH_RESTORE_RESULT_2026_10_03_v1.0.md`
+
+Reported result:
+- branch `task/TASK-S5-007`;
+- restore completed with no conflict/error;
+- restored:
+  - `docs/qa/S5_REAL_PLAY_SCREENSHOT_CAPTURE_REVIEW_v1.0.md`;
+  - `tools/` (3 files);
+- both are readable;
+- `stash@{0}` still exists as fallback;
+- no destructive Git action or Play Console action occurred.
+
+Disposition:
+`PASS_REVERSIBLE_STASH_RESTORE_VERIFIED`
+
+Next:
+recheck canonical signed AAB SHA-256 before any provider mutation.
