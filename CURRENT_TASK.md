@@ -1336,3 +1336,20 @@ Hard stop:
 `STOP_AFTER_DISTRIBUTED_CORE_RUNTIME_VALIDATION_RESULT_IS_CAPTURED`
 
 No track promotion, new release, AdMob integration, S6, BUILD promotion, Artifact Freeze, or publication is authorized.
+
+
+## Internal tester Play Store access — HOLD — 2026-10-03
+
+Evidence:
+`evidence/play/S5_INTERNAL_TESTER_PLAY_STORE_ITEM_NOT_FOUND_2026_10_03_v1.0.md`
+
+Observed:
+`Item not found` in Google Play Store on the tester device.
+
+Disposition:
+`HOLD_TESTER_PLAY_STORE_ACCESS_ITEM_NOT_FOUND`
+
+First resolution path:
+verify exact tester account + opt-in state, then reopen the tester opt-in/share link with that same account.
+
+Do not mutate the track/release while this access issue is being isolated.
