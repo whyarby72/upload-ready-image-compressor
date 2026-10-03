@@ -22,6 +22,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix '.s7test'
+            versionNameSuffix '-s7test'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -35,6 +39,7 @@ android {
 
     buildFeatures {
         compose true
+        buildConfig true
     }
 }
 

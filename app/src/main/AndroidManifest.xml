@@ -24,7 +24,7 @@
 
         <provider
             android:name=".ResultContentProvider"
-            android:authorities="com.afradadmedia.reducephotosize.result"
+            android:authorities="${applicationId}.result"
             android:exported="false"
             android:grantUriPermissions="true" />
     </application>

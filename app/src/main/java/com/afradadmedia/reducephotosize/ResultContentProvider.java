@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 public final class ResultContentProvider extends ContentProvider {
-    static final String AUTHORITY = "com.afradadmedia.reducephotosize.result";
+    static final String AUTHORITY = BuildConfig.APPLICATION_ID + ".result";
     static final Uri RESULT_URI = Uri.parse("content://" + AUTHORITY + "/result");
 
     @Override public boolean onCreate() { return true; }
