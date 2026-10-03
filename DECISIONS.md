@@ -1462,3 +1462,16 @@ Mandatory stop:
 `STOP_AFTER_INTERNAL_TESTING_RELEASE_BECOMES_ACTIVE_OR_PROVIDER_RETURNS_A_ROLLOUT_RESULT`.
 
 No closed/open/production promotion or publication authority outside Internal testing is granted.
+
+
+## D-096 — Execute previously authorized Internal Testing rollout now (2026-10-03)
+
+The human selected Option 1 to proceed with the already-authorized Internal Testing rollout.
+
+No new scope is added.
+
+Execution remains bounded to:
+`S5 INTERNAL TESTING ROLLOUT ONLY`.
+
+Hard stop remains:
+`STOP_AFTER_INTERNAL_TESTING_RELEASE_BECOMES_ACTIVE_OR_PROVIDER_RETURNS_A_ROLLOUT_RESULT`.
