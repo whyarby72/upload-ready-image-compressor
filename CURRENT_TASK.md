@@ -1600,3 +1600,23 @@ Disposition:
 The earlier `no devices/emulators found` state is reconciled as transient connectivity evidence; the material conflict is closed for the current state.
 
 RT-01..RT-07 remain pending and must not be inferred from launch success.
+
+
+## S7 TEST runtime validation — CLOSED WITH OBSERVABILITY DEBT — 2026-10-03
+
+Evidence:
+`evidence/admob/S7_TEST_RUNTIME_VALIDATION_RESULT_2026_10_03_v1.0.md`
+
+Results:
+- RT-01 Launch: PASS
+- RT-02 Core flow: PASS
+- RT-03 Banner: NO_AD_OBSERVED
+- RT-04 UMP: NOT_OBSERVABLE
+- RT-05 Privacy choices: NOT_OBSERVABLE
+- RT-06 Offline: PASS
+- RT-07 Ad failure/no-fill: NOT_OBSERVED
+
+Scope verdict:
+`S7_TEST_RUNTIME_VALIDATION_PASS_WITH_PROVIDER_DEPENDENT_OBSERVABILITY_DEBT`
+
+Full S7 remains open.
