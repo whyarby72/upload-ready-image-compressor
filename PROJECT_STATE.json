@@ -39,33 +39,26 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_PLAY_INTERNAL_TESTING_UPLOAD_SCOPE_PREPARATION",
-    "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "LOCAL_STASH_RESTORE_PASS_AAB_HASH_RECHECK_PENDING",
-    "opened_from": "S5_LOCAL_UPLOAD_KEY_SIGNING_CLOSED",
-    "requested_continuation_ref": "USER_OPTION_1_2026-10-03_RESTORE_STASH_AND_PREPARE_INTERNAL_TEST_UPLOAD_SCOPE",
-    "provider_audit_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_UPLOAD_SCOPE_PROVIDER_AUDIT_2026_10_03_v1.0.md",
-    "requested_scope": "S5 PLAY INTERNAL TESTING AAB UPLOAD ONLY",
+    "id": "S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_APPROVAL",
+    "owner": "HUMAN",
+    "next_owner": "CHAT",
+    "status": "PREUPLOAD_INTEGRITY_PASS_PROVIDER_SCOPE_APPROVAL_PENDING",
+    "opened_from": "S5_PREUPLOAD_SIGNED_AAB_HASH_CHECK",
+    "preupload_integrity_status": "PASS_PREUPLOAD_SIGNED_AAB_INTEGRITY_MATCH",
+    "preupload_integrity_evidence_ref": "evidence/local/S5_PREUPLOAD_SIGNED_AAB_HASH_RECHECK_RESULT_2026_10_03_v1.0.md",
+    "target_artifact": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
+    "target_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "target_bytes": 7984820,
     "provider_compatible_scope": "S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY",
-    "reason": "Current Play Console flow requires creating/entering an Internal testing release draft in order to upload an AAB.",
-    "local_prerequisite": "RESTORE_AND_VERIFY_PRESERVED_STASH_ITEMS",
     "provider_execution_state": "NOT_AUTHORIZED",
-    "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT",
-    "local_stash_restore_status": "PASS_REVERSIBLE_STASH_RESTORE_VERIFIED",
-    "local_stash_restore_evidence_ref": "evidence/local/S5_PRE_UPLOAD_STASH_RESTORE_RESULT_2026_10_03_v1.0.md",
-    "local_stash_fallback_present": true,
-    "local_restored_items": [
-      "docs/qa/S5_REAL_PLAY_SCREENSHOT_CAPTURE_REVIEW_v1.0.md",
-      "tools/"
-    ]
+    "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "SIGNED_AAB_PASS_LOCAL_STASH_RESTORED_AAB_HASH_RECHECK_THEN_UPLOAD_SCOPE_APPROVAL_PENDING",
+    "internal_test": "PREUPLOAD_INTEGRITY_PASS_INTERNAL_TEST_RELEASE_DRAFT_AAB_UPLOAD_APPROVAL_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -99,14 +92,16 @@
     "Tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "Internal-testing AAB upload requires entering a Play release draft; corrected scope awaits explicit authorization.",
     "Signed AAB has not yet been provider-validated by Google Play.",
-    "Canonical signed AAB SHA-256 should be rechecked immediately before Play upload.",
-    "Provider-compatible Internal Testing release-draft + AAB upload scope still requires explicit authorization."
+    "Provider-compatible Internal Testing release-draft + AAB upload scope still requires explicit authorization.",
+    "Google Play provider acceptance of the signed vc1 AAB has not yet been observed.",
+    "Internal Testing release-draft + AAB upload still requires explicit authorization.",
+    "Tester mutation, release review, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Re-verify the canonical signed AAB SHA-256 locally. If it matches, the stash fallback may be dropped. Then obtain explicit authorization for `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY` before any Play Console upload.",
+  "next_action": "Human decides whether to authorize `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY` for the exact signed vc1 AAB. If authorized, upload only in an Internal testing release draft and stop immediately after provider validation.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -895,5 +890,15 @@
     "local_verification": "PASS_JAR_VERIFIED",
     "play_upload_eligible": "TECHNICALLY_CANDIDATE_BUT_PROVIDER_ACCEPTANCE_NOT_YET_PROVEN",
     "play_upload_authorized": false
+  },
+  "s5_preupload_integrity": {
+    "status": "PASS",
+    "observed_at": "2026-10-03",
+    "artifact": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
+    "sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "bytes": 7984820,
+    "expected_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "match": true,
+    "evidence_ref": "evidence/local/S5_PREUPLOAD_SIGNED_AAB_HASH_RECHECK_RESULT_2026_10_03_v1.0.md"
   }
 }
