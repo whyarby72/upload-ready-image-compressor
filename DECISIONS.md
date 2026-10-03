@@ -1656,3 +1656,17 @@ This authorizes installation and runtime testing of the already-CI-green test-on
 It does not authorize AdMob account/app mutation, production IDs, Privacy & messaging publication, Play declaration changes, S8 promotion, broader testing, BUILD promotion, Artifact Freeze, release, or publication.
 
 Conditional UMP/provider paths must be reported as `OBSERVED`, `NOT_APPLICABLE/NOT_OBSERVABLE`, or `FAIL` rather than guessed.
+
+
+## D-108 — HOLD S7 on material ADB evidence conflict (2026-10-03)
+
+A material evidence conflict was detected.
+
+The user-supplied Codex report states `no devices/emulators found`, while the reported S7 HEAD itself contains an evidence file claiming successful ADB install and launch on a Samsung SM-N980F / Android 13.
+
+Decision:
+`HOLD_MATERIAL_EVIDENCE_CONFLICT`.
+
+No S7 install/runtime PASS or FAIL is accepted until a fresh timestamped ADB check reconciles chronology/state.
+
+No provider or Play mutation is authorized by this reconciliation.
