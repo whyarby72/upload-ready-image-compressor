@@ -39,33 +39,23 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_INTERNAL_TESTING_AAB_PROVIDER_VALIDATION_CLOSED",
-    "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "PASS_AAB_PROVIDER_VALIDATION_IN_DRAFT",
-    "authorization_ref": "USER_OPTION_1_2026-10-03_S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY",
-    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_AAB_PROVIDER_VALIDATION_RESULT_2026_10_03_v1.0.md",
-    "evidence_pdf_sha256": "7b717ed457dfaf2582a2812fca32644ccd330b2ace0ca97ee8570e6fbe0890b4",
+    "id": "S5_INTERNAL_TESTING_SAVE_DRAFT_ONLY",
+    "owner": "HUMAN",
+    "next_owner": "CHAT",
+    "status": "AUTHORIZED_PROVIDER_EXECUTION_REQUIRED",
+    "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_SAVE_DRAFT_ONLY",
+    "authorization_evidence_ref": "evidence/play/S5_INTERNAL_TESTING_SAVE_DRAFT_ONLY_AUTHORIZATION_v1.0.json",
+    "provider_execution_state": "READY_FOR_HUMAN_SAVE_DRAFT_ONLY",
     "artifact_filename": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
     "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
-    "provider_version": "1 (0.1.0)",
-    "provider_api_levels": "29+",
-    "provider_target_sdk": 36,
-    "provider_screen_layouts": 4,
-    "provider_abis": 4,
-    "provider_required_features": 1,
-    "provider_bundle_status": "ENHANCED",
-    "provider_visible_rejection": false,
-    "provider_execution_state": "VALIDATION_PASS_HARD_STOP_REACHED",
-    "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT",
-    "hard_stop_status": "REACHED"
+    "hard_stop": "STOP_IMMEDIATELY_AFTER_DRAFT_SAVE_CONFIRMATION"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "AAB_PROVIDER_VALIDATION_PASS_DRAFT_HARD_STOP_REACHED_NEXT_PROVIDER_SCOPE_APPROVAL_PENDING",
+    "internal_test": "AAB_PROVIDER_VALIDATION_PASS_SAVE_DRAFT_ONLY_AUTHORIZED_EXECUTION_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -101,13 +91,15 @@
     "Tester mutation, release review, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "Upload-key certificate fingerprint after first bundle upload has not yet been re-observed in Play App Signing.",
     "Tester configuration and actual Internal Testing rollout remain unauthorized and not completed.",
-    "Distributed install/runtime validation from Google Play remains not run."
+    "Distributed install/runtime validation from Google Play remains not run.",
+    "Validated Internal testing release draft has not yet been persisted with Save as draft.",
+    "Tester configuration, release review, rollout, distributed install/runtime validation, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human chooses the next bounded scope. Under the current authorization, do not press Next or Save as draft and do not configure testers/review/rollout.",
+  "next_action": "Human presses `Save as draft` on the current Internal testing release draft, waits for confirmation, captures the immediate post-save state, and stops. Do not press Next or configure testers/review/rollout.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
