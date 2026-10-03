@@ -1208,3 +1208,17 @@ prepare, but do not yet authorize, the least-authority scope:
 This scope would permit entering the mandatory release draft and uploading the already signed vc1 AAB solely to obtain provider validation, then stop before testers, review, rollout, or publication.
 
 No Play mutation has been performed or authorized by this decision.
+
+
+## D-080 — Accept reversible stash restore as PASS; require immediate pre-upload AAB hash recheck (2026-10-03)
+
+The preserved local untracked items were restored successfully without conflicts and remain readable, while the stash fallback still exists.
+
+Decision:
+- close the local stash-restore prerequisite as PASS;
+- require one final local SHA-256 recheck of the exact signed vc1 AAB before any Play upload;
+- do not infer provider upload authority.
+
+The corrected provider-compatible scope remains:
+`S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`,
+which still requires separate explicit authorization.
