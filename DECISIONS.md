@@ -1397,3 +1397,19 @@ Decision:
 - close `S5 INTERNAL TESTING TESTER LIST CONFIGURATION ONLY` as PASS;
 - preserve the hard stop before `Preview and confirm release`;
 - require a new explicit scope before any release confirmation or rollout.
+
+
+## D-093 — Authorize Internal Testing preview + confirm only (2026-10-03)
+
+The human selected Option 1.
+
+Authorized:
+`S5 INTERNAL TESTING PREVIEW + CONFIRM ONLY`.
+
+Purpose:
+inspect the complete release summary and provider validation before any rollout.
+
+Mandatory stop:
+`STOP_BEFORE_ANY_ACTION_THAT_STARTS_ROLLOUT_OR_MAKES_THE_RELEASE_AVAILABLE_TO_TESTERS`.
+
+No rollout, publication, production, tester change, bundle change, or signing-key mutation authority is granted.
