@@ -975,3 +975,37 @@ Hard stop reached:
 `STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT`
 
 Do not press `Next`, `Save as draft`, or proceed to testers/review/rollout without a new explicit authorization.
+
+
+## Internal Testing save-draft-only authorized — 2026-10-03
+
+Approval ref:
+`USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_SAVE_DRAFT_ONLY`
+
+Scope:
+`S5 INTERNAL TESTING SAVE DRAFT ONLY`
+
+Permitted:
+- press `Save as draft` on the current validated Internal testing release draft;
+- wait for provider confirmation;
+- capture the immediate post-save state.
+
+Hard stop:
+`STOP_IMMEDIATELY_AFTER_DRAFT_SAVE_CONFIRMATION`
+
+Not authorized:
+- `Next`;
+- Preview and confirm;
+- tester mutation;
+- tester-list save;
+- review release;
+- rollout;
+- publish;
+- closed/open/production testing;
+- signing/key mutation;
+- S6;
+- BUILD promotion;
+- Artifact Freeze.
+
+Authorization evidence:
+`evidence/play/S5_INTERNAL_TESTING_SAVE_DRAFT_ONLY_AUTHORIZATION_v1.0.json`
