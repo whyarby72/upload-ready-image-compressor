@@ -1620,3 +1620,20 @@ Scope verdict:
 `S7_TEST_RUNTIME_VALIDATION_PASS_WITH_PROVIDER_DEPENDENT_OBSERVABILITY_DEBT`
 
 Full S7 remains open.
+
+
+## S7 AdMob provider setup preflight — PASS / READ ONLY — 2026-10-03
+
+Evidence:
+`docs/admob/S7_ADMOB_PROVIDER_SETUP_PREFLIGHT_2026_10_03_v1.0.md`
+
+Key findings:
+- current internal/private Google Play state cannot be linked to AdMob as a published Android app;
+- unpublished AdMob app setup is available for pre-release testing if separately authorized;
+- real AdMob App ID and banner ad-unit ID do not yet exist;
+- Privacy & messaging provider configuration does not yet exist;
+- app-ads.txt final verification needs a public developer website and public store linkage;
+- Firebase/Analytics is not required for the initial banner path and remains out of scope.
+
+Disposition:
+`PREFLIGHT_PASS_PROVIDER_MUTATION_NOT_YET_AUTHORIZED`.
