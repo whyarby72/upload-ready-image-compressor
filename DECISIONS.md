@@ -1358,3 +1358,16 @@ Authorized scope:
 The intended tester count remains one.
 
 This authorization does not include release review, rollout, publication, or signing-key changes.
+
+
+## D-090 — Hold tester-list save because selected list contains 2 users (2026-10-03)
+
+Direct provider evidence shows the selected Internal testing email list contains 2 users.
+
+Current authorization is explicitly for one tester.
+
+Decision:
+- do not save the current tester configuration;
+- require the list to be reduced to exactly one intended tester, or require a new explicit authorization that broadens the tester count.
+
+No tester-list save, release review, rollout, or publication authority is added.
