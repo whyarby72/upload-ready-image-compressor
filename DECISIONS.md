@@ -1383,3 +1383,17 @@ Decision:
 - stop immediately after save confirmation.
 
 No release review, rollout, or publication authority is added.
+
+
+## D-092 — Internal tester list saved with exactly one tester (2026-10-03)
+
+Direct provider evidence shows the one-tester configuration is persisted:
+- list `emailaku`;
+- Users `1`;
+- setup progress advanced to `2 of 3 complete`;
+- `Select testers` is completed.
+
+Decision:
+- close `S5 INTERNAL TESTING TESTER LIST CONFIGURATION ONLY` as PASS;
+- preserve the hard stop before `Preview and confirm release`;
+- require a new explicit scope before any release confirmation or rollout.
