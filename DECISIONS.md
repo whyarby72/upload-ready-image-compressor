@@ -1445,3 +1445,20 @@ Decision:
 - retain native-symbol improvement as pre-production readiness debt.
 
 No rollout or publication authority is granted.
+
+
+## D-095 — Authorize Internal Testing rollout only (2026-10-03)
+
+The human selected Option 1.
+
+Authorized:
+`S5 INTERNAL TESTING ROLLOUT ONLY`.
+
+The exact reviewed release is version `1 (0.1.0)` for one internal tester.
+
+The provider action `Save and publish` is authorized only for the Internal testing track.
+
+Mandatory stop:
+`STOP_AFTER_INTERNAL_TESTING_RELEASE_BECOMES_ACTIVE_OR_PROVIDER_RETURNS_A_ROLLOUT_RESULT`.
+
+No closed/open/production promotion or publication authority outside Internal testing is granted.
