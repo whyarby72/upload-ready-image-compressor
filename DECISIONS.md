@@ -1413,3 +1413,19 @@ Mandatory stop:
 `STOP_BEFORE_ANY_ACTION_THAT_STARTS_ROLLOUT_OR_MAKES_THE_RELEASE_AVAILABLE_TO_TESTERS`.
 
 No rollout, publication, production, tester change, bundle change, or signing-key mutation authority is granted.
+
+
+## D-093 — Authorize Internal Testing preview + confirm only (2026-10-03)
+
+The human selected Option 1.
+
+Authorized scope:
+`S5 INTERNAL TESTING PREVIEW + CONFIRM ONLY`
+
+Purpose:
+inspect the complete release summary and provider validation before any rollout.
+
+Hard stop:
+`STOP_BEFORE_ROLLOUT_OR_TESTER_AVAILABILITY`
+
+No rollout, tester availability, production, or signing-key mutation authority is granted.
