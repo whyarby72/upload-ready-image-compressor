@@ -1685,3 +1685,18 @@ Decision:
 The prior `no devices/emulators found` report is retained as a transient ADB connectivity event, not as proof that installation never occurred.
 
 This closes only the install/launch reconciliation. It does not close S7 runtime validation or authorize provider/Play mutation.
+
+
+## D-110 — Close S7 TEST runtime validation with provider-dependent observability debt (2026-10-03)
+
+Physical-device runtime results were supplied by the human:
+RT-01 PASS, RT-02 PASS, RT-03 NO_AD_OBSERVED, RT-04 NOT_OBSERVABLE, RT-05 NOT_OBSERVABLE, RT-06 PASS, RT-07 NOT_OBSERVED.
+
+Decision:
+`S7_TEST_RUNTIME_VALIDATION_PASS_WITH_PROVIDER_DEPENDENT_OBSERVABILITY_DEBT`.
+
+The core app is proven launchable, functional, and offline-capable under the S7 TEST build, with no visible ad obstruction during the observed session.
+
+Full S7 is not closed because provider-bound ad rendering, UMP consent behavior, Privacy choices behavior, and explicit ad failure/no-fill behavior remain unproven.
+
+No provider mutation, Play declaration mutation, S8 promotion, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
