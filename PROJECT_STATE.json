@@ -42,22 +42,19 @@
     "id": "S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "AUTHORIZED_HUMAN_DISTRIBUTED_RUNTIME_EXECUTION_REQUIRED",
+    "status": "HOLD_TESTER_PLAY_STORE_ACCESS_ITEM_NOT_FOUND",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
-    "authorization_evidence_ref": "evidence/play/S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_RUNTIME_AUTHORIZATION_v1.0.json",
-    "tester_count": 1,
-    "target_version_name": "0.1.0",
-    "target_version_code": 1,
-    "target_package": "com.afradadmedia.reducephotosize",
-    "provider_execution_state": "READY_FOR_TESTER_OPTIN_INSTALL_RUNTIME",
-    "hard_stop": "STOP_AFTER_DISTRIBUTED_CORE_RUNTIME_VALIDATION_RESULT_IS_CAPTURED"
+    "evidence_ref": "evidence/play/S5_INTERNAL_TESTER_PLAY_STORE_ITEM_NOT_FOUND_2026_10_03_v1.0.md",
+    "screenshot_sha256": "8c96815ff07578df0af7ec8b329506bcc93661b70f5e52d11beb4011da71b3cc",
+    "provider_execution_state": "TESTER_ACCESS_BLOCKED_BEFORE_INSTALL",
+    "hard_stop": "STOP_BEFORE_RUNTIME_VALIDATION_UNTIL_PLAY_STORE_ACCESS_SUCCEEDS"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "INTERNAL_TESTING_ACTIVE_DISTRIBUTED_RUNTIME_VALIDATION_AUTHORIZED",
+    "internal_test": "HOLD_TESTER_PLAY_STORE_ITEM_NOT_FOUND",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -99,13 +96,14 @@
     "Native debug symbols are not attached to vc1; this is diagnostic-quality debt to address before production readiness where feasible.",
     "Distributed install/runtime validation from Google Play has not yet been completed.",
     "Closed testing, open testing, production, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Distributed install/runtime validation from Google Play remains pending human execution."
+    "Distributed install/runtime validation from Google Play remains pending human execution.",
+    "Tester device currently receives Google Play Store 'Item not found' when attempting to access the internal-test app."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human uses the Internal testing opt-in link with the configured tester account, installs from Google Play, runs the bounded core runtime checklist using a non-sensitive JPEG, records outcomes, and stops.",
+  "next_action": "Verify the tester Play Store account and opt-in state, reopen the official tester opt-in link with that same account, and retry access. Do not change the release or track yet.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
