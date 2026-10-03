@@ -42,19 +42,20 @@
     "id": "S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "HOLD_TESTER_PLAY_STORE_ACCESS_ITEM_NOT_FOUND",
+    "status": "PLAY_STORE_LISTING_ACCESS_RESOLVED_BY_RETRY_INSTALL_PENDING",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
-    "evidence_ref": "evidence/play/S5_INTERNAL_TESTER_PLAY_STORE_ITEM_NOT_FOUND_2026_10_03_v1.0.md",
-    "screenshot_sha256": "8c96815ff07578df0af7ec8b329506bcc93661b70f5e52d11beb4011da71b3cc",
-    "provider_execution_state": "TESTER_ACCESS_BLOCKED_BEFORE_INSTALL",
-    "hard_stop": "STOP_BEFORE_RUNTIME_VALIDATION_UNTIL_PLAY_STORE_ACCESS_SUCCEEDS"
+    "evidence_level": "HUMAN_ATTESTED_NOT_SCREENSHOT_BOUND",
+    "tester_access_status": "RESOLVED_AFTER_TRY_AGAIN",
+    "install_status": "PENDING",
+    "runtime_validation_status": "PENDING",
+    "hard_stop": "STOP_AFTER_DISTRIBUTED_CORE_RUNTIME_VALIDATION_RESULT_IS_CAPTURED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "HOLD_TESTER_PLAY_STORE_ITEM_NOT_FOUND",
+    "internal_test": "PLAY_STORE_ACCESS_RESOLVED_INSTALL_RUNTIME_VALIDATION_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -97,13 +98,14 @@
     "Distributed install/runtime validation from Google Play has not yet been completed.",
     "Closed testing, open testing, production, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "Distributed install/runtime validation from Google Play remains pending human execution.",
-    "Tester device currently receives Google Play Store 'Item not found' when attempting to access the internal-test app."
+    "Google Play installation of the internal-test build has not yet been confirmed.",
+    "Distributed runtime buyer-job validation has not yet been completed."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Verify the tester Play Store account and opt-in state, reopen the official tester opt-in link with that same account, and retry access. Do not change the release or track yet.",
+  "next_action": "Install the app from the now-visible Google Play listing using the configured tester account, launch it, run the bounded core runtime checklist with a non-sensitive JPEG, and report results.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
