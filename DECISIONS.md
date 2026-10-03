@@ -1700,3 +1700,15 @@ The core app is proven launchable, functional, and offline-capable under the S7 
 Full S7 is not closed because provider-bound ad rendering, UMP consent behavior, Privacy choices behavior, and explicit ad failure/no-fill behavior remain unproven.
 
 No provider mutation, Play declaration mutation, S8 promotion, BUILD promotion, Artifact Freeze, release, or publication is authorized by this decision.
+
+
+## D-111 — Pass S7 AdMob provider setup preflight; no mutation performed (2026-10-03)
+
+Read-only provider research and repository audit completed.
+
+Decision:
+`PREFLIGHT_PASS_PROVIDER_MUTATION_NOT_YET_AUTHORIZED`.
+
+The current Play app is still private/internal testing, so it cannot yet be linked to AdMob as a published Android app. If later authorized, the bounded pre-release path is to add the app to AdMob as unpublished, create exactly one ResultScreen banner unit, configure the required privacy message, and test using provider/test-device mechanisms.
+
+No AdMob account/app/ad-unit/message, app-ads.txt, Play Console, production-ID binding, release, or publication mutation was performed.
