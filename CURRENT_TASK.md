@@ -1261,3 +1261,21 @@ Human provider action now required:
 - STOP.
 
 No closed/open/production promotion is authorized.
+
+
+## Internal Testing rollout — PASS — 2026-10-03
+
+Provider evidence shows:
+- track Active;
+- release 1 (0.1.0);
+- Available to internal testers;
+- version code 1;
+- review status Not reviewed.
+
+Disposition:
+`PASS_INTERNAL_TESTING_ROLLOUT_ACTIVE`
+
+Next recommended scope:
+`S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION`.
+
+No promotion beyond Internal testing is authorized.
