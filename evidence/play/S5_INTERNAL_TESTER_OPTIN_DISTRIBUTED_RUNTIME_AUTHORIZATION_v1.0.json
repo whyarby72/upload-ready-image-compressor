@@ -1,0 +1,56 @@
+{
+  "schema": "S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_RUNTIME_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "authorized_at": "2026-10-03",
+  "approval_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
+  "scope": "S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION",
+  "preconditions": {
+    "internal_track_status": "ACTIVE",
+    "release_status": "AVAILABLE_TO_INTERNAL_TESTERS",
+    "version_name": "0.1.0",
+    "version_code": 1,
+    "tester_count": 1,
+    "package": "com.afradadmedia.reducephotosize"
+  },
+  "permitted": [
+    "Open Internal testing > Testers",
+    "Copy the shareable/opt-in link",
+    "Open the opt-in link while signed into Google Play with the configured tester account",
+    "Join the internal test",
+    "Install the app from Google Play",
+    "Launch the Play-distributed build",
+    "Run the core buyer-job flow with a non-sensitive JPEG",
+    "Verify CURRENT file facts, explicit KB/MB limit selection, processing result, PASS/NOT_MET/REDUCED semantics, Save, Share, and original preservation",
+    "Record device model, Android version, observed app version, and concise outcomes",
+    "Capture screenshots only if they contain no sensitive/personal image content"
+  ],
+  "prohibited": [
+    "Changing tester lists",
+    "Changing the release artifact",
+    "Creating another release",
+    "Promoting to closed/open/production",
+    "Changing signing keys",
+    "Adding AdMob/analytics during this validation",
+    "Using personal/sensitive photos as test material",
+    "S6",
+    "BUILD promotion",
+    "Artifact Freeze",
+    "Publication"
+  ],
+  "acceptance": [
+    "Tester can opt in",
+    "Tester can install from Google Play",
+    "Installed app opens successfully",
+    "Package/release observed is the intended 0.1.0 / versionCode 1 distribution",
+    "Choose JPEG succeeds",
+    "CURRENT facts display",
+    "Explicit limit can be selected/entered",
+    "A genuine result is produced",
+    "PASS/NOT_MET/REDUCED truth is correct",
+    "Save succeeds",
+    "Share targets the expected result file",
+    "Original remains untouched",
+    "No unexpected network/ad/paywall interruption blocks first verified value"
+  ],
+  "hard_stop": "STOP_AFTER_DISTRIBUTED_CORE_RUNTIME_VALIDATION_RESULT_IS_CAPTURED"
+}
