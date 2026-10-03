@@ -39,22 +39,22 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_PLAY_UPLOAD_KEY_CERTIFICATE_READ_ONLY_RECHECK",
-    "owner": "HUMAN",
-    "next_owner": "CHAT",
-    "status": "AUTHORIZED_READ_ONLY_PROVIDER_RECHECK",
-    "authorization_ref": "USER_OPTION_1_2026-10-03_S5_PLAY_UPLOAD_KEY_CERTIFICATE_READ_ONLY_RECHECK",
-    "authorization_evidence_ref": "evidence/play/S5_PLAY_UPLOAD_KEY_CERTIFICATE_READ_ONLY_RECHECK_AUTHORIZATION_v1.0.json",
+    "id": "S5_PLAY_UPLOAD_KEY_CERTIFICATE_RECHECK_CLOSED",
+    "owner": "CHAT",
+    "next_owner": "HUMAN",
+    "status": "PASS_FULL_SHA256_MATCH",
     "expected_upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
-    "provider_execution_state": "READY_FOR_READ_ONLY_RECHECK",
-    "hard_stop": "STOP_AFTER_UPLOAD_KEY_CERTIFICATE_STATUS_IS_OBSERVED"
+    "observed_upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
+    "exact_match": true,
+    "provider_registration_confirmed": true,
+    "hard_stop_status": "REACHED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "DRAFT_SAVED_UPLOAD_KEY_CERTIFICATE_READ_ONLY_RECHECK_AUTHORIZED",
+    "internal_test": "UPLOAD_KEY_CERTIFICATE_FULL_MATCH_PASS_DRAFT_SAVED_NEXT_SCOPE_APPROVAL_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -98,7 +98,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Open Protected with Play > Play Store protection > Manage Play app signing, observe the Upload key certificate section, capture the page, and stop without changing anything.",
+  "next_action": "Choose the next bounded Internal Testing scope. Recommended: configure tester list only, without review or rollout.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -911,5 +911,13 @@
     "provider_parse_status": "PASS",
     "provider_visible_rejection": false,
     "hard_stop_status": "REACHED"
+  },
+  "s5_upload_key_certificate_recheck": {
+    "status": "PASS_FULL_MATCH",
+    "observed_at": "2026-10-03",
+    "expected_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
+    "observed_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
+    "exact_match": true,
+    "provider_registration_confirmed": true
   }
 }
