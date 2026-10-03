@@ -1115,3 +1115,23 @@ Disposition:
 
 Do not press Save under the current scope.
 Either reduce the selected list to exactly one intended tester, or obtain explicit authorization to broaden the tester count.
+
+
+## Internal Testing tester count corrected — PASS — 2026-10-03
+
+Evidence:
+`evidence/play/S5_INTERNAL_TESTING_TESTER_LIST_COUNT_CORRECTED_2026_10_03_v1.0.md`
+
+Observed:
+- selected list: `emailaku`;
+- Users: `1`;
+- authorized tester count: `1`;
+- Save button available.
+
+Disposition:
+`PASS_TESTER_COUNT_MATCH_READY_TO_SAVE`
+
+The existing authorization remains sufficient to press Save once.
+
+Hard stop remains:
+`STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED`.
