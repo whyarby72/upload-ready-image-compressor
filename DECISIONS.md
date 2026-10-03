@@ -1281,3 +1281,17 @@ Decision:
 - do not permit `Next`, `Save as draft`, tester, review, or rollout actions without a new explicit scope.
 
 No additional provider authority is granted.
+
+
+## D-085 — Authorize Internal Testing Save as draft only (2026-10-03)
+
+The human selected Option 1 and explicitly authorized:
+`S5 INTERNAL TESTING SAVE DRAFT ONLY`.
+
+This scope permits exactly one provider mutation:
+press `Save as draft` on the already provider-validated Internal testing release draft.
+
+Mandatory stop:
+`STOP_IMMEDIATELY_AFTER_DRAFT_SAVE_CONFIRMATION`.
+
+No authority is added for `Next`, testers, preview/review, rollout, publication, signing/key mutation, S6, BUILD promotion, or Artifact Freeze.
