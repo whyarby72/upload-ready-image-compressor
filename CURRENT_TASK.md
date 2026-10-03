@@ -1244,3 +1244,20 @@ Hard stop:
 
 Not authorized:
 tester changes, bundle changes, another release, closed/open/production promotion, signing-key changes, S6, BUILD promotion, Artifact Freeze.
+
+
+## Internal Testing rollout execution selected — 2026-10-03
+
+Execution selection:
+`USER_OPTION_1_2026-10-03_EXECUTE_INTERNAL_TESTING_ROLLOUT`
+
+The rollout-only authorization remains active.
+
+Human provider action now required:
+- press `Save and publish` on the reviewed Internal testing release;
+- if a confirmation dialog appears, proceed only if it still targets Internal testing;
+- wait for provider processing;
+- capture the resulting track status / tester availability state;
+- STOP.
+
+No closed/open/production promotion is authorized.
