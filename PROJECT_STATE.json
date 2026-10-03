@@ -39,19 +39,17 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S7_TEST_RUNTIME_VALIDATION_ONLY",
+    "id": "S7_ADB_INSTALL_EVIDENCE_RECONCILIATION",
     "owner": "HUMAN/CODEX",
     "next_owner": "CHAT",
-    "status": "AUTHORIZED_RUNTIME_EXECUTION_REQUIRED",
-    "authorization_ref": "USER_OPTION_1_2026-10-03_S7_TEST_RUNTIME_VALIDATION_ONLY",
-    "authorization_evidence_ref": "evidence/admob/S7_TEST_RUNTIME_VALIDATION_ONLY_AUTHORIZATION_v1.0.json",
-    "test_plan_ref": "docs/admob/S7_TEST_RUNTIME_VALIDATION_PLAN_2026_10_03_v1.0.md",
-    "branch": "task/TASK-S7-001",
-    "implementation_commit": "49829356e02c41357db9bce64463ddead1d1d1f4",
+    "status": "HOLD_MATERIAL_EVIDENCE_CONFLICT",
+    "conflict_evidence_ref": "evidence/admob/S7_ADB_INSTALL_EVIDENCE_CONFLICT_2026_10_03_v1.0.md",
+    "reported_s7_head": "724b5191b9d27e234edae5f279b14103d54425c8",
+    "apk_sha256": "4fc626e4f274a711dfdfbb71408c684ba332ae034aac7439b1e3bf4936afd1c6",
+    "chat_reported_adb_state": "NO_DEVICES_EMULATORS_FOUND",
+    "repository_recorded_adb_state": "INSTALL_AND_LAUNCH_PASS",
     "provider_mutation": false,
-    "production_ids": false,
-    "runtime_validation": "READY",
-    "hard_stop": "STOP_AFTER_TEST_ONLY_RUNTIME_VALIDATION_RESULTS_ARE_CAPTURED"
+    "hard_stop": "STOP_UNTIL_FRESH_ADB_STATE_RECONCILES_CONFLICT"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -59,7 +57,7 @@
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
     "internal_test": "PASS_CLOSED_WITH_NONBLOCKING_EVIDENCE_DEBT",
-    "admob_privacy": "S7_TEST_RUNTIME_VALIDATION_AUTHORIZED_PROVIDER_CONFIG_STILL_NOT_AUTHORIZED",
+    "admob_privacy": "HOLD_S7_MATERIAL_ADB_EVIDENCE_CONFLICT",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "INTERNAL_TEST_ALLOWED_BROADER_RELEASE_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
@@ -97,13 +95,14 @@
     "Real-device/emulator UMP + test-banner runtime validation has not yet been completed.",
     "AdMob provider app/ad-unit and Privacy & messaging configuration remain NOT_RUN.",
     "Public privacy-policy URL, developer domain/app-ads.txt and broader Play disclosure reconciliation remain pending.",
-    "S7 TEST-only real-device/emulator runtime validation RT-01..RT-07 is authorized but not yet executed."
+    "S7 TEST-only real-device/emulator runtime validation RT-01..RT-07 is authorized but not yet executed.",
+    "Material S7 ADB evidence conflict: chat report says no device detected while commit 724b519 records install and launch PASS."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Install/run the TEST-only S7 build on a test device/emulator and execute RT-01..RT-07. Record conditional UMP paths honestly as OBSERVED, NOT_APPLICABLE/NOT_OBSERVABLE, or FAIL.",
+  "next_action": "Run a fresh timestamped ADB/device/package/launch check to reconcile the conflict between the chat report and commit 724b519 evidence. Do not claim runtime PASS/FAIL until reconciled.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
