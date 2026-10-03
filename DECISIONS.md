@@ -1346,3 +1346,15 @@ Decision:
 `PASS_FULL_SHA256_MATCH`.
 
 The signing/upload-certificate chain is closed. Tester configuration, release review, rollout, distributed install validation, and publication remain separate scopes.
+
+
+## D-089 — Authorize one-person Internal Testing tester-list configuration only (2026-10-03)
+
+The human selected Option 1.
+
+Authorized scope:
+`S5 INTERNAL TESTING TESTER LIST CONFIGURATION ONLY`.
+
+The intended tester count remains one.
+
+This authorization does not include release review, rollout, publication, or signing-key changes.
