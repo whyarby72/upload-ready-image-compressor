@@ -1178,3 +1178,22 @@ Hard stop:
 
 Not authorized:
 rollout, publish, tester availability, tester changes, bundle changes, signing-key changes, closed/open/production testing, S6, BUILD promotion, Artifact Freeze.
+
+
+## Internal Testing Preview + Confirm Only authorized — 2026-10-03
+
+Approval ref:
+`USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_PREVIEW_CONFIRM_ONLY`
+
+Scope:
+`S5 INTERNAL TESTING PREVIEW + CONFIRM ONLY`
+
+Permitted:
+- open Preview and confirm release;
+- review all visible release details and warnings;
+- capture the page.
+
+Hard stop:
+`STOP_BEFORE_ROLLOUT_OR_TESTER_AVAILABILITY`
+
+No rollout or tester availability is authorized.
