@@ -42,21 +42,21 @@
     "id": "S5_INTERNAL_TESTING_TESTER_LIST_CONFIGURATION_ONLY",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "HOLD_TESTER_COUNT_MISMATCH_BEFORE_SAVE",
+    "status": "PASS_TESTER_COUNT_MATCH_READY_TO_SAVE",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_TESTER_LIST_CONFIGURATION_ONLY",
-    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_TESTER_LIST_PRE_SAVE_AUDIT_2026_10_03_v1.0.md",
+    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_TESTER_LIST_COUNT_CORRECTED_2026_10_03_v1.0.md",
     "intended_tester_count": 1,
     "observed_selected_list_name": "emailaku",
-    "observed_selected_list_user_count": 2,
-    "save_status": "NOT_AUTHORIZED_UNDER_CURRENT_SCOPE",
-    "hard_stop": "STOP_BEFORE_SAVE_UNTIL_TESTER_COUNT_EQUALS_AUTHORIZED_SCOPE"
+    "observed_selected_list_user_count": 1,
+    "save_status": "AUTHORIZED_UNDER_CURRENT_SCOPE",
+    "hard_stop": "STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "HOLD_TESTER_COUNT_MISMATCH_BEFORE_SAVE",
+    "internal_test": "TESTER_COUNT_MATCH_SAVE_AUTHORIZED_UNDER_EXISTING_SCOPE",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -94,14 +94,13 @@
     "Tester configuration and actual Internal Testing rollout remain unauthorized and not completed.",
     "Distributed install/runtime validation from Google Play remains not run.",
     "Validated Internal testing release draft has not yet been persisted with Save as draft.",
-    "Tester configuration, release review, rollout, distributed install/runtime validation, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Selected Internal testing email list currently contains 2 users while the authorized tester count is 1."
+    "Tester configuration, release review, rollout, distributed install/runtime validation, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Reduce the selected tester list to exactly one intended tester, or explicitly broaden tester-count authorization. Do not press Save under the current one-tester scope.",
+  "next_action": "Press Save on the current Internal testing tester configuration, wait for confirmation, capture the saved state, and stop before release review or rollout.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
