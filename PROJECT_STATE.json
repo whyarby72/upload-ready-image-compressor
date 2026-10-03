@@ -42,7 +42,7 @@
     "id": "S5_PLAY_INTERNAL_TESTING_UPLOAD_SCOPE_PREPARATION",
     "owner": "CHAT",
     "next_owner": "HUMAN",
-    "status": "PROVIDER_FLOW_CONFLICT_RESOLVED_APPROVAL_PENDING",
+    "status": "LOCAL_STASH_RESTORE_PASS_AAB_HASH_RECHECK_PENDING",
     "opened_from": "S5_LOCAL_UPLOAD_KEY_SIGNING_CLOSED",
     "requested_continuation_ref": "USER_OPTION_1_2026-10-03_RESTORE_STASH_AND_PREPARE_INTERNAL_TEST_UPLOAD_SCOPE",
     "provider_audit_ref": "docs/ops/S5_PLAY_INTERNAL_TESTING_UPLOAD_SCOPE_PROVIDER_AUDIT_2026_10_03_v1.0.md",
@@ -51,14 +51,21 @@
     "reason": "Current Play Console flow requires creating/entering an Internal testing release draft in order to upload an AAB.",
     "local_prerequisite": "RESTORE_AND_VERIFY_PRESERVED_STASH_ITEMS",
     "provider_execution_state": "NOT_AUTHORIZED",
-    "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT"
+    "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT",
+    "local_stash_restore_status": "PASS_REVERSIBLE_STASH_RESTORE_VERIFIED",
+    "local_stash_restore_evidence_ref": "evidence/local/S5_PRE_UPLOAD_STASH_RESTORE_RESULT_2026_10_03_v1.0.md",
+    "local_stash_fallback_present": true,
+    "local_restored_items": [
+      "docs/qa/S5_REAL_PLAY_SCREENSHOT_CAPTURE_REVIEW_v1.0.md",
+      "tools/"
+    ]
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "SIGNED_AAB_PASS_INTERNAL_TEST_UPLOAD_SCOPE_CORRECTED_APPROVAL_PENDING",
+    "internal_test": "SIGNED_AAB_PASS_LOCAL_STASH_RESTORED_AAB_HASH_RECHECK_THEN_UPLOAD_SCOPE_APPROVAL_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -90,15 +97,16 @@
     "Signed AAB has not yet been uploaded to Google Play.",
     "Play has not yet registered/confirmed the upload-key certificate from the first bundle.",
     "Tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Local preserved stash has not yet been human-confirmed restored and intact.",
     "Internal-testing AAB upload requires entering a Play release draft; corrected scope awaits explicit authorization.",
-    "Signed AAB has not yet been provider-validated by Google Play."
+    "Signed AAB has not yet been provider-validated by Google Play.",
+    "Canonical signed AAB SHA-256 should be rechecked immediately before Play upload.",
+    "Provider-compatible Internal Testing release-draft + AAB upload scope still requires explicit authorization."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human restores and verifies the preserved stash, then explicitly decides whether to authorize the corrected provider-compatible scope `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`. No Play upload is authorized yet.",
+  "next_action": "Re-verify the canonical signed AAB SHA-256 locally. If it matches, the stash fallback may be dropped. Then obtain explicit authorization for `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY` before any Play Console upload.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
