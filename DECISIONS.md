@@ -1475,3 +1475,16 @@ Execution remains bounded to:
 
 Hard stop remains:
 `STOP_AFTER_INTERNAL_TESTING_RELEASE_BECOMES_ACTIVE_OR_PROVIDER_RETURNS_A_ROLLOUT_RESULT`.
+
+
+## D-097 — Internal Testing rollout active and available to testers (2026-10-03)
+
+Direct provider evidence shows:
+- Internal testing track is `Active`;
+- version `1 (0.1.0)` is `Available to internal testers`;
+- review status is `Not reviewed`.
+
+Decision:
+- close `S5 INTERNAL TESTING ROLLOUT ONLY` as PASS;
+- proceed next only via a separately authorized distributed install/runtime validation scope;
+- do not infer closed/open/production release authority.
