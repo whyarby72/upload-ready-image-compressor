@@ -1054,3 +1054,20 @@ Disposition:
 
 No key reset/change action was performed.
 Hard stop reached.
+
+
+## Upload-key certificate exact SHA-256 recheck — PASS — 2026-10-03
+
+Observed public SHA-256:
+`22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`
+
+Expected public SHA-256:
+`22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`
+
+Result:
+`EXACT_MATCH`
+
+Disposition:
+`PASS_FULL_SHA256_MATCH`
+
+Provider registration of the upload certificate is confirmed. No key mutation occurred.
