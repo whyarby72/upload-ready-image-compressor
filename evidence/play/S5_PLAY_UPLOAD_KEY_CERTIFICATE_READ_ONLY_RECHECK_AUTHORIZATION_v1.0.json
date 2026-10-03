@@ -1,0 +1,25 @@
+{
+  "schema": "S5_PLAY_UPLOAD_KEY_CERTIFICATE_READ_ONLY_RECHECK_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "authorized_at": "2026-10-03",
+  "approval_ref": "USER_OPTION_1_2026-10-03_S5_PLAY_UPLOAD_KEY_CERTIFICATE_READ_ONLY_RECHECK",
+  "scope": "S5 PLAY UPLOAD KEY CERTIFICATE READ-ONLY RECHECK",
+  "permitted": [
+    "Open Protected with Play",
+    "Open Play Store protection",
+    "Open Manage Play app signing",
+    "Read the Upload key certificate section",
+    "Capture the public upload certificate fingerprints/status if visible"
+  ],
+  "prohibited": [
+    "Change app signing key",
+    "Request upload key reset",
+    "Create, rotate, import, upload, or replace key material",
+    "Modify the Internal testing draft",
+    "Press Next",
+    "Configure testers",
+    "Review or roll out a release"
+  ],
+  "expected_upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
+  "hard_stop": "STOP_AFTER_UPLOAD_KEY_CERTIFICATE_STATUS_IS_OBSERVED"
+}
