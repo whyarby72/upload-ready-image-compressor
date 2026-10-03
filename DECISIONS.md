@@ -1513,3 +1513,13 @@ prove that the exact Internal testing release can be joined, installed from Goog
 The runtime checklist is bound to the existing S5 buyer-job test plan and must use a non-sensitive JPEG.
 
 No track promotion, new release, AdMob/analytics integration, S6, BUILD promotion, Artifact Freeze, or publication authority is granted.
+
+
+## D-100 — Hold distributed runtime test on Play Store "Item not found" (2026-10-03)
+
+The tester device cannot currently open the internal-test app listing in Google Play.
+
+Decision:
+- hold install/runtime validation;
+- first verify account identity and completed opt-in using the existing tester link;
+- do not change the release, tester list, or signing configuration unless account/opt-in checks fail to resolve access.
