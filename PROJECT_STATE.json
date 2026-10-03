@@ -39,29 +39,19 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "TASK-S7-001",
-    "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "S7_TEST_INTEGRATION_CODE_CI_PASS_PROVIDER_CONFIG_AND_RUNTIME_PENDING",
-    "authorization_ref": "USER_OPTION_1_2026-10-03_S7_CODEX_ADMOB_UMP_TEST_INTEGRATION_ONLY",
-    "evidence_ref": "evidence/admob/S7_TEST_INTEGRATION_CI_CLOSURE_2026_10_03_v1.0.md",
+    "id": "S7_TEST_RUNTIME_VALIDATION_ONLY",
+    "owner": "HUMAN/CODEX",
+    "next_owner": "CHAT",
+    "status": "AUTHORIZED_RUNTIME_EXECUTION_REQUIRED",
+    "authorization_ref": "USER_OPTION_1_2026-10-03_S7_TEST_RUNTIME_VALIDATION_ONLY",
+    "authorization_evidence_ref": "evidence/admob/S7_TEST_RUNTIME_VALIDATION_ONLY_AUTHORIZATION_v1.0.json",
+    "test_plan_ref": "docs/admob/S7_TEST_RUNTIME_VALIDATION_PLAN_2026_10_03_v1.0.md",
     "branch": "task/TASK-S7-001",
-    "final_integration_commit": "49829356e02c41357db9bce64463ddead1d1d1f4",
-    "ci_run_id": 37117336418,
-    "ci_result": "PASS",
-    "preflight": "PASS",
-    "assemble_debug": "PASS",
-    "unit_tests": "PASS",
-    "lint_debug": "PASS",
-    "sdk": {
-      "gma_next_gen": "1.5.0",
-      "ump": "4.0.0"
-    },
-    "test_ids_only": true,
+    "implementation_commit": "49829356e02c41357db9bce64463ddead1d1d1f4",
     "provider_mutation": false,
-    "real_device_ad_runtime": "NOT_RUN",
-    "provider_admob_setup": "NOT_RUN",
-    "w2_post_admob": "NOT_RUN"
+    "production_ids": false,
+    "runtime_validation": "READY",
+    "hard_stop": "STOP_AFTER_TEST_ONLY_RUNTIME_VALIDATION_RESULTS_ARE_CAPTURED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -69,7 +59,7 @@
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
     "internal_test": "PASS_CLOSED_WITH_NONBLOCKING_EVIDENCE_DEBT",
-    "admob_privacy": "S7_TEST_INTEGRATION_CODE_CI_PASS_RUNTIME_AND_PROVIDER_CONFIG_PENDING",
+    "admob_privacy": "S7_TEST_RUNTIME_VALIDATION_AUTHORIZED_PROVIDER_CONFIG_STILL_NOT_AUTHORIZED",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "INTERNAL_TEST_ALLOWED_BROADER_RELEASE_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
@@ -106,13 +96,14 @@
     "W2 post-AdMob privacy/monetization audit remains NOT_RUN.",
     "Real-device/emulator UMP + test-banner runtime validation has not yet been completed.",
     "AdMob provider app/ad-unit and Privacy & messaging configuration remain NOT_RUN.",
-    "Public privacy-policy URL, developer domain/app-ads.txt and broader Play disclosure reconciliation remain pending."
+    "Public privacy-policy URL, developer domain/app-ads.txt and broader Play disclosure reconciliation remain pending.",
+    "S7 TEST-only real-device/emulator runtime validation RT-01..RT-07 is authorized but not yet executed."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Human chooses the next bounded scope. Recommended: run S7 TEST RUNTIME VALIDATION ONLY using the test-ID build before any AdMob provider/live-ad configuration.",
+  "next_action": "Install/run the TEST-only S7 build on a test device/emulator and execute RT-01..RT-07. Record conditional UMP paths honestly as OBSERVED, NOT_APPLICABLE/NOT_OBSERVABLE, or FAIL.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
