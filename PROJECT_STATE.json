@@ -5,7 +5,7 @@
     "canonical_name": "PHOTO COMPRESSOR: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_INTERNAL_TEST_CLOSED_PASS",
+    "current_stage": "W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE_COMPLETE",
     "canonical_decision": "TEST",
     "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR",
@@ -39,16 +39,23 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_CLOSEOUT_AUDIT_CLOSED",
+    "id": "W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE",
     "owner": "CHAT",
     "next_owner": "HUMAN",
-    "status": "S5_CLOSED_PASS_WITH_NONBLOCKING_EVIDENCE_DEBT",
-    "closeout_ref": "docs/qa/S5_CLOSEOUT_AUDIT_2026_10_03_v1.0.md",
-    "closeout_base_head": "475e87f0bb32ad215a0d6493dccdf8a1858e1501",
-    "signed_aab_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
-    "internal_track_status": "ACTIVE",
-    "distributed_runtime_status": "PASS",
-    "authority_effect": "NONE_NEXT_STAGE_REQUIRES_EXPLICIT_HUMAN_DECISION"
+    "status": "PASS_W1_BASELINE_READY_FOR_S7_IMPLEMENTATION_APPROVAL",
+    "authorization_ref": "USER_OPTION_1_2026-10-03_START_W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE",
+    "audit_ref": "docs/admob/W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE_2026_10_03_v1.0.md",
+    "experience_contract_ref": "docs/admob/ADMOB_EXPERIENCE_CONTRACT_v1.0.md",
+    "data_safety_draft_ref": "store/DATA_SAFETY_DRAFT.md",
+    "ads_declaration_ref": "store/ADS_DECLARATION.md",
+    "preferred_sdk_candidate": "GMA_NEXT_GEN_1.4.0",
+    "ump_candidate": "4.0.0",
+    "initial_ad_format": "ONE_IN_FLOW_ADAPTIVE_BANNER_ON_RESULT_ONLY",
+    "analytics": "NONE",
+    "mediation": "NONE_INITIAL",
+    "publisher_first_party_id": "DISABLED_INITIAL",
+    "implementation_authorized": false,
+    "provider_admob_mutation_authorized": false
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -56,14 +63,14 @@
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
     "internal_test": "PASS_CLOSED_WITH_NONBLOCKING_EVIDENCE_DEBT",
-    "admob_privacy": "NOT_RUN",
+    "admob_privacy": "W1_PRE_ADMOB_BASELINE_PASS_S7_IMPLEMENTATION_NOT_AUTHORIZED",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "INTERNAL_TEST_ALLOWED_BROADER_RELEASE_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
     "production_readiness": "NOT_RUN"
   },
   "work_checkpoints": {
-    "W1_pre_admob": "NOT_RUN",
+    "W1_pre_admob": "PASS",
     "W2_post_admob": "NOT_RUN",
     "W3_play_compliance": "NOT_RUN",
     "W4_final_readiness": "NOT_RUN"
@@ -84,13 +91,19 @@
     "Direct on-device versionName/versionCode observation was not separately recorded during S5 runtime validation.",
     "Runtime PASS is human-attested; no screenshot-bound runtime sequence was supplied.",
     "Developer-account production-access testing requirements remain account-dependent and must be verified before production planning.",
-    "Closed testing, production readiness, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized/not run."
+    "Closed testing, production readiness, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized/not run.",
+    "AdMob App ID and production ad-unit ID do not yet exist/bind to this app.",
+    "Public privacy-policy URL and developer website/domain are not yet bound.",
+    "AdMob Privacy & messaging configuration has not yet been created/published.",
+    "Final Play target-audience declaration is not yet bound for ad policy configuration.",
+    "app-ads.txt and AdMob app readiness verification remain pending provider setup.",
+    "W2 post-AdMob privacy/monetization audit remains NOT_RUN."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Human chooses the next bounded stage. S5 is closed; no S6, BUILD promotion, Artifact Freeze, broader testing, production, or publication authority is implied.",
+  "next_action": "Human decides whether to authorize the narrow S7/Codex implementation of GMA Next-Gen + UMP + one ResultScreen in-flow adaptive banner using test ads only, with no AdMob/Play provider mutation.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -978,5 +991,32 @@
       "provider_review_status_not_reviewed"
     ],
     "authority_added": false
+  },
+  "w1_pre_admob": {
+    "status": "PASS",
+    "completed_at": "2026-10-03",
+    "audit_ref": "docs/admob/W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE_2026_10_03_v1.0.md",
+    "experience_contract_ref": "docs/admob/ADMOB_EXPERIENCE_CONTRACT_v1.0.md",
+    "sdk_strategy": {
+      "gma": "NEXT_GEN_1.4.0_CANDIDATE_REVERIFY_BEFORE_CODING",
+      "ump": "4.0.0_CANDIDATE_REVERIFY_BEFORE_CODING",
+      "mediation": "NONE_INITIAL",
+      "analytics": "NONE",
+      "publisher_first_party_id": "DISABLED_INITIAL"
+    },
+    "placement": {
+      "format": "BANNER",
+      "variant": "ANCHORED_ADAPTIVE_IN_FLOW",
+      "screen": "ResultScreen",
+      "position": "AFTER_RESULT_PROOF_AND_AFTER_SAVE_SHARE_COMPRESS_ANOTHER",
+      "interstitial": false,
+      "app_open": false,
+      "rewarded": false,
+      "native": false
+    },
+    "consent_gate": "UMP_REQUEST_UPDATE_EVERY_LAUNCH_AND_CAN_REQUEST_ADS_BEFORE_AD_REQUEST",
+    "photo_data_to_ads": false,
+    "code_mutation_performed": false,
+    "provider_mutation_performed": false
   }
 }
