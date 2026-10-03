@@ -1223,3 +1223,24 @@ Hard stop reached:
 `STOP_BEFORE_SAVE_AND_PUBLISH`.
 
 No rollout authority exists yet.
+
+
+## Internal Testing rollout only authorized — 2026-10-03
+
+Approval ref:
+`USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_ROLLOUT_ONLY`
+
+Scope:
+`S5 INTERNAL TESTING ROLLOUT ONLY`
+
+Permitted:
+- press `Save and publish` on the already-reviewed Internal testing release;
+- wait for provider processing;
+- capture the resulting Internal testing track state;
+- capture tester opt-in/share link if shown.
+
+Hard stop:
+`STOP_AFTER_INTERNAL_TESTING_RELEASE_BECOMES_ACTIVE_OR_PROVIDER_RETURNS_A_ROLLOUT_RESULT`
+
+Not authorized:
+tester changes, bundle changes, another release, closed/open/production promotion, signing-key changes, S6, BUILD promotion, Artifact Freeze.
