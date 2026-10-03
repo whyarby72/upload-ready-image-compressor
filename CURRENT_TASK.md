@@ -1071,3 +1071,29 @@ Disposition:
 `PASS_FULL_SHA256_MATCH`
 
 Provider registration of the upload certificate is confirmed. No key mutation occurred.
+
+
+## Internal Testing tester-list configuration only authorized — 2026-10-03
+
+Approval ref:
+`USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_TESTER_LIST_CONFIGURATION_ONLY`
+
+Scope:
+`S5 INTERNAL TESTING TESTER LIST CONFIGURATION ONLY`
+
+Intended tester count:
+`1`
+
+Permitted:
+- open Internal testing > Testers;
+- create/select an email list;
+- add exactly one tester locally in Play Console;
+- save tester configuration;
+- capture saved state.
+
+Do not send tester email identity to CHAT.
+
+Hard stop:
+`STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED`
+
+No release review, rollout, or publication authority is granted.
