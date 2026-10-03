@@ -5,7 +5,7 @@
     "canonical_name": "PHOTO COMPRESSOR: KB LIMIT",
     "package_name": "com.afradadmedia.reducephotosize",
     "repo": "upload-ready-image-compressor",
-    "current_stage": "S5_INTERNAL_TEST_READY_PROVIDER_ACTION_PENDING",
+    "current_stage": "S5_INTERNAL_TEST_CLOSED_PASS",
     "canonical_decision": "TEST",
     "progress_percent": 99,
     "historical_working_name": "UPLOAD-READY IMAGE COMPRESSOR",
@@ -39,37 +39,26 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION_CLOSED",
+    "id": "S5_CLOSEOUT_AUDIT_CLOSED",
     "owner": "CHAT",
     "next_owner": "HUMAN",
-    "status": "PASS_DISTRIBUTED_CORE_RUNTIME_VALIDATION",
-    "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
-    "evidence_ref": "evidence/play/S5_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION_RESULT_2026_10_03_v1.0.md",
-    "evidence_level": "HUMAN_ATTESTED_RUNTIME_RESULT",
-    "device": "Samsung Galaxy Note 20",
-    "android_version": "13",
-    "installed_from_google_play": "PASS",
-    "app_opened": "PASS",
-    "choose_jpeg": "PASS",
-    "current_facts": "PASS",
-    "limit_entry": "PASS",
-    "result_semantics": "PASS",
-    "save": "PASS",
-    "share": "PASS",
-    "original_preserved": true,
-    "unexpected_error_confusion": "NONE_REPORTED",
-    "direct_on_device_version_observation": "NOT_REPORTED",
-    "hard_stop_status": "REACHED"
+    "status": "S5_CLOSED_PASS_WITH_NONBLOCKING_EVIDENCE_DEBT",
+    "closeout_ref": "docs/qa/S5_CLOSEOUT_AUDIT_2026_10_03_v1.0.md",
+    "closeout_base_head": "475e87f0bb32ad215a0d6493dccdf8a1858e1501",
+    "signed_aab_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "internal_track_status": "ACTIVE",
+    "distributed_runtime_status": "PASS",
+    "authority_effect": "NONE_NEXT_STAGE_REQUIRES_EXPLICIT_HUMAN_DECISION"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "PASS_DISTRIBUTED_CORE_RUNTIME_VALIDATION_S5_CLOSEOUT_REVIEW_PENDING",
+    "internal_test": "PASS_CLOSED_WITH_NONBLOCKING_EVIDENCE_DEBT",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
-    "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
+    "play_compliance": "INTERNAL_TEST_ALLOWED_BROADER_RELEASE_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
     "production_readiness": "NOT_RUN"
   },
@@ -87,35 +76,21 @@
   },
   "evidence_index": "evidence/INDEX.json",
   "open_blockers": [
-    "Package registration/eligibility behavior for com.afradadmedia.reducephotosize is not yet observed in the Create app flow.",
-    "Signing, upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Signing, AAB upload, tester mutation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "In-app privacy-policy surface/link must be completed before distribution/publication.",
-    "A public privacy-policy URL must be bound before distribution/publication.",
-    "Play Data safety declaration must be completed before distribution/publication.",
-    "AAB upload, tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Play upload remains unauthorized.",
-    "Play has not yet registered/confirmed the upload-key certificate from the first bundle.",
-    "Tester mutation, release creation, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Internal-testing AAB upload requires entering a Play release draft; corrected scope awaits explicit authorization.",
-    "Provider-compatible Internal Testing release-draft + AAB upload scope still requires explicit authorization.",
-    "Tester mutation, release review, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Upload-key certificate fingerprint after first bundle upload has not yet been re-observed in Play App Signing.",
-    "Distributed install/runtime validation from Google Play remains not run.",
-    "Validated Internal testing release draft has not yet been persisted with Save as draft.",
-    "Tester configuration, release review, rollout, distributed install/runtime validation, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Internal testing release has not yet been previewed/confirmed or rolled out.",
-    "Native debug symbols are not attached to vc1; this is diagnostic-quality debt to address before production readiness where feasible.",
-    "Distributed install/runtime validation from Google Play has not yet been completed.",
-    "Closed testing, open testing, production, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
-    "Direct on-device version-string/versionCode observation was not separately recorded during runtime validation.",
-    "Runtime PASS is human-attested; no screenshot-bound runtime evidence was supplied."
+    "In-app privacy-policy surface/link must be completed before broader Play distribution/release.",
+    "A public privacy-policy URL must be bound before broader Play distribution/release.",
+    "Play Data safety must be completed/reconciled before closed/open/production tracks; Internal-testing-only apps are currently exempt.",
+    "AdMob/UMP/privacy integration has not been run; W1/W2 monetization gates remain open.",
+    "Native debug symbols are not attached to vc1; diagnostic-quality debt remains for production readiness where feasible.",
+    "Direct on-device versionName/versionCode observation was not separately recorded during S5 runtime validation.",
+    "Runtime PASS is human-attested; no screenshot-bound runtime sequence was supplied.",
+    "Developer-account production-access testing requirements remain account-dependent and must be verified before production planning.",
+    "Closed testing, production readiness, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized/not run."
   ],
   "human_decisions_required": [
-    "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
-    "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
+    "Human decision is required before the next bounded stage begins.",
+    "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Run S5 closeout audit against the Internal Test Plan and determine whether S5 can be closed as INTERNAL_TEST_READY/COMPLETE or whether any evidence debt remains before advancing.",
+  "next_action": "Human chooses the next bounded stage. S5 is closed; no S6, BUILD promotion, Artifact Freeze, broader testing, production, or publication authority is implied.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -889,7 +864,7 @@
     "hard_stop_status": "HONORED"
   },
   "s5_signed_play_candidate": {
-    "status": "LOCAL_SIGNED_VERIFIED_PLAY_UPLOAD_NOT_AUTHORIZED",
+    "status": "PLAY_INTERNAL_TEST_ACTIVE_PROVIDER_ACCEPTED",
     "source_commit": "91bb462de8007b6491be5c5ed6c073d60858ae70",
     "application_source_commit": "27199bf6f174e55dc835d0d9898e456d3848001c",
     "application_id": "com.afradadmedia.reducephotosize",
@@ -902,8 +877,8 @@
     "upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
     "signing_state": "SIGNED_WITH_DEVELOPER_UPLOAD_KEY",
     "local_verification": "PASS_JAR_VERIFIED",
-    "play_upload_eligible": "TECHNICALLY_CANDIDATE_BUT_PROVIDER_ACCEPTANCE_NOT_YET_PROVEN",
-    "play_upload_authorized": false
+    "play_upload_eligible": "PROVIDER_ACCEPTED_AND_ACTIVE_INTERNAL_TEST",
+    "play_upload_authorized": "CONSUMED_FOR_VC1_INTERNAL_TEST"
   },
   "s5_preupload_integrity": {
     "status": "PASS",
@@ -976,5 +951,32 @@
     "original_preserved": true,
     "unexpected_error_confusion": "NONE_REPORTED",
     "direct_on_device_version_observation": "NOT_REPORTED"
+  },
+  "s5_closeout": {
+    "status": "CLOSED_PASS_WITH_NONBLOCKING_EVIDENCE_DEBT",
+    "closed_at": "2026-10-03",
+    "audit_ref": "docs/qa/S5_CLOSEOUT_AUDIT_2026_10_03_v1.0.md",
+    "audit_base_head": "475e87f0bb32ad215a0d6493dccdf8a1858e1501",
+    "source_binding": "PASS",
+    "signing_chain": "PASS",
+    "provider_acceptance": "PASS",
+    "tester_configuration": "PASS",
+    "preview": "PASS_WITH_NONBLOCKING_WARNINGS",
+    "internal_rollout": "PASS_ACTIVE",
+    "distributed_runtime": "PASS_HUMAN_ATTESTED",
+    "app_source_drift_after_signing": "NONE_UNDER_APP_PATH",
+    "compliance_scope": {
+      "internal_testing": "PASS_CURRENT_SCOPE",
+      "data_safety_internal_only": "EXEMPT_CURRENT_OFFICIAL_GUIDANCE",
+      "broader_release": "PRIVACY_POLICY_AND_DATA_SAFETY_PENDING"
+    },
+    "nonblocking_evidence_debt": [
+      "runtime_no_screenshot_sequence",
+      "on_device_version_not_directly_observed",
+      "native_debug_symbols_not_attached",
+      "internal_release_notes_empty",
+      "provider_review_status_not_reviewed"
+    ],
+    "authority_added": false
   }
 }
