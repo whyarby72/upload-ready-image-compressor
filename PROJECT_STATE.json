@@ -39,26 +39,25 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_INTERNAL_TESTING_ACTIVE_TRACK_CONFIRMED",
-    "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "PASS_INTERNAL_TRACK_ACTIVE_DETAIL_CONFIRMED",
-    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_ACTIVE_TRACK_DETAIL_2026_10_03_v1.0.md",
-    "evidence_pdf_sha256": "44c28494a7bbc75142b7022598c54aba5c79c6ad251e5c491d0eeed3161a8f79",
-    "track_status": "ACTIVE",
-    "release_status": "AVAILABLE_TO_INTERNAL_TESTERS",
-    "version_name": "0.1.0",
-    "version_code": 1,
-    "supported_android_devices": 14290,
-    "review_status": "NOT_REVIEWED",
-    "next_scope_recommended": "S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION"
+    "id": "S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
+    "owner": "HUMAN",
+    "next_owner": "CHAT",
+    "status": "AUTHORIZED_HUMAN_DISTRIBUTED_RUNTIME_EXECUTION_REQUIRED",
+    "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION",
+    "authorization_evidence_ref": "evidence/play/S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_RUNTIME_AUTHORIZATION_v1.0.json",
+    "tester_count": 1,
+    "target_version_name": "0.1.0",
+    "target_version_code": 1,
+    "target_package": "com.afradadmedia.reducephotosize",
+    "provider_execution_state": "READY_FOR_TESTER_OPTIN_INSTALL_RUNTIME",
+    "hard_stop": "STOP_AFTER_DISTRIBUTED_CORE_RUNTIME_VALIDATION_RESULT_IS_CAPTURED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "INTERNAL_TESTING_ACTIVE_DISTRIBUTED_INSTALL_VALIDATION_PENDING",
+    "internal_test": "INTERNAL_TESTING_ACTIVE_DISTRIBUTED_RUNTIME_VALIDATION_AUTHORIZED",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -99,13 +98,14 @@
     "Internal testing release has not yet been previewed/confirmed or rolled out.",
     "Native debug symbols are not attached to vc1; this is diagnostic-quality debt to address before production readiness where feasible.",
     "Distributed install/runtime validation from Google Play has not yet been completed.",
-    "Closed testing, open testing, production, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
+    "Closed testing, open testing, production, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
+    "Distributed install/runtime validation from Google Play remains pending human execution."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Authorize one-tester opt-in and distributed install/runtime validation, or first audit the Testers tab to capture the opt-in/share link only.",
+  "next_action": "Human uses the Internal testing opt-in link with the configured tester account, installs from Google Play, runs the bounded core runtime checklist using a non-sensitive JPEG, records outcomes, and stops.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
