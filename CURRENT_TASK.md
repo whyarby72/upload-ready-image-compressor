@@ -1440,3 +1440,34 @@ Later-stage compliance debt remains open:
 Current official Play guidance checked 2026-10-03 confirms Internal-testing-only apps are exempt from Data safety and Internal testing can be used before full app setup.
 
 No S6, BUILD promotion, Artifact Freeze, broader testing, production, or publication authority is added.
+
+
+## W1 PRE-ADMOB ARCHITECTURE + PRIVACY BASELINE — PASS — 2026-10-03
+
+Authorization:
+`USER_OPTION_1_2026-10-03_START_W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE`
+
+Artifacts:
+- `docs/admob/W1_PRE_ADMOB_ARCHITECTURE_PRIVACY_BASELINE_2026_10_03_v1.0.md`
+- `docs/admob/ADMOB_EXPERIENCE_CONTRACT_v1.0.md`
+- `store/DATA_SAFETY_DRAFT.md`
+- `store/ADS_DECLARATION.md`
+
+Bound architecture:
+- GMA Next-Gen candidate, current official version at audit: `1.4.0` (reverify before coding);
+- UMP candidate: `4.0.0` (reverify before coding);
+- no mediation;
+- no Firebase/custom analytics;
+- Publisher first-party ID disabled initially;
+- one ResultScreen in-flow adaptive banner only;
+- placement after result proof and after Save/Share/Compress another;
+- no interstitial/app-open/rewarded/native;
+- UMP update every launch;
+- no ad request unless `canRequestAds()`;
+- core JPEG content never sent to ads/analytics;
+- ad failure/offline/consent denial cannot block the buyer job.
+
+Disposition:
+`W1_PASS_ARCHITECTURE_BASELINE_READY_FOR_S7_IMPLEMENTATION_APPROVAL`
+
+No source/code mutation and no AdMob/Play provider mutation were authorized or performed.
