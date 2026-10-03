@@ -39,18 +39,19 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_APPROVAL",
+    "id": "S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "PREUPLOAD_INTEGRITY_PASS_PROVIDER_SCOPE_APPROVAL_PENDING",
-    "opened_from": "S5_PREUPLOAD_SIGNED_AAB_HASH_CHECK",
-    "preupload_integrity_status": "PASS_PREUPLOAD_SIGNED_AAB_INTEGRITY_MATCH",
-    "preupload_integrity_evidence_ref": "evidence/local/S5_PREUPLOAD_SIGNED_AAB_HASH_RECHECK_RESULT_2026_10_03_v1.0.md",
-    "target_artifact": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
-    "target_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
-    "target_bytes": 7984820,
-    "provider_compatible_scope": "S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY",
-    "provider_execution_state": "NOT_AUTHORIZED",
+    "status": "AUTHORIZED_PROVIDER_EXECUTION_REQUIRED",
+    "authorization_ref": "USER_OPTION_1_2026-10-03_S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY",
+    "authorization_evidence_ref": "evidence/play/S5_PLAY_INTERNAL_TESTING_RELEASE_DRAFT_AAB_UPLOAD_ONLY_AUTHORIZATION_v1.0.json",
+    "artifact_filename": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
+    "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "artifact_bytes": 7984820,
+    "version_name": "0.1.0",
+    "version_code": 1,
+    "upload_certificate_sha256": "22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4",
+    "provider_execution_state": "READY_FOR_HUMAN_PROVIDER_EXECUTION",
     "hard_stop": "STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT"
   },
   "gates": {
@@ -58,7 +59,7 @@
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "PREUPLOAD_INTEGRITY_PASS_INTERNAL_TEST_RELEASE_DRAFT_AAB_UPLOAD_APPROVAL_PENDING",
+    "internal_test": "INTERNAL_TEST_RELEASE_DRAFT_AAB_UPLOAD_AUTHORIZED_PROVIDER_EXECUTION_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -94,14 +95,13 @@
     "Signed AAB has not yet been provider-validated by Google Play.",
     "Provider-compatible Internal Testing release-draft + AAB upload scope still requires explicit authorization.",
     "Google Play provider acceptance of the signed vc1 AAB has not yet been observed.",
-    "Internal Testing release-draft + AAB upload still requires explicit authorization.",
     "Tester mutation, release review, rollout, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human decides whether to authorize `S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY` for the exact signed vc1 AAB. If authorized, upload only in an Internal testing release draft and stop immediately after provider validation.",
+  "next_action": "Human opens Internal testing, enters the mandatory release draft, uploads only the exact bound signed vc1 AAB, waits for provider validation, captures the result, and stops before testers, review, rollout, or publication.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
