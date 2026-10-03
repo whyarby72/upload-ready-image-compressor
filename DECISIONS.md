@@ -1295,3 +1295,10 @@ Mandatory stop:
 `STOP_IMMEDIATELY_AFTER_DRAFT_SAVE_CONFIRMATION`.
 
 No authority is added for `Next`, testers, preview/review, rollout, publication, signing/key mutation, S6, BUILD promotion, or Artifact Freeze.
+
+
+## D-086 — Internal Testing draft saved (2026-10-03)
+
+Provider evidence confirms the validated Internal testing draft was saved successfully.
+Scope S5 INTERNAL TESTING SAVE DRAFT ONLY is closed as PASS.
+No Next, tester, review, or rollout action is authorized by this decision.
