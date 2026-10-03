@@ -1009,3 +1009,26 @@ Not authorized:
 
 Authorization evidence:
 `evidence/play/S5_INTERNAL_TESTING_SAVE_DRAFT_ONLY_AUTHORIZATION_v1.0.json`
+
+
+## Upload key certificate read-only recheck authorized — 2026-10-03
+
+Approval ref:
+`USER_OPTION_1_2026-10-03_S5_PLAY_UPLOAD_KEY_CERTIFICATE_READ_ONLY_RECHECK`
+
+Scope:
+`S5 PLAY UPLOAD KEY CERTIFICATE READ-ONLY RECHECK`
+
+Expected local upload certificate SHA-256:
+`22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`
+
+Permitted:
+- open Protected with Play;
+- open Play Store protection;
+- open Manage Play app signing;
+- read/capture Upload key certificate public status/fingerprints.
+
+No signing/key mutation, draft mutation, Next, tester, review, or rollout action is authorized.
+
+Hard stop:
+`STOP_AFTER_UPLOAD_KEY_CERTIFICATE_STATUS_IS_OBSERVED`.
