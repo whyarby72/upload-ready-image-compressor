@@ -1580,3 +1580,23 @@ Disposition:
 
 Required:
 fresh timestamped ADB/device/package/launch reconciliation before any runtime PASS/FAIL is accepted.
+
+
+## S7 fresh ADB reconciliation — PASS — 2026-10-03
+
+Evidence:
+`evidence/admob/S7_ADB_RECONCILIATION_RESULT_2026_10_03_v1.0.md`
+
+Fresh state:
+- `RR8N805R27P` / `SM-N980F`
+- Android 13 / API 33
+- S7 TEST package already present
+- install command not rerun
+- launch PASS / `Status: ok`
+
+Disposition:
+`PASS_S7_TEST_PACKAGE_PRESENT_AND_LAUNCHABLE`
+
+The earlier `no devices/emulators found` state is reconciled as transient connectivity evidence; the material conflict is closed for the current state.
+
+RT-01..RT-07 remain pending and must not be inferred from launch success.
