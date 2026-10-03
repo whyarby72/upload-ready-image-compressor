@@ -1242,3 +1242,22 @@ Hard stop for that future scope:
 `STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT`.
 
 No provider mutation has yet occurred.
+
+
+## D-083 — Authorize Internal Testing release-draft + exact signed vc1 AAB upload only (2026-10-03)
+
+The human selected Option 1 and explicitly authorized:
+`S5 PLAY INTERNAL TESTING RELEASE-DRAFT + AAB UPLOAD ONLY`.
+
+Only the following artifact is authorized:
+`PhotoCompressor-0.1.0-vc1-upload-signed.aab`
+
+SHA-256:
+`d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d`
+
+The scope permits entering the mandatory Internal testing release draft and uploading that exact artifact solely to obtain Google Play provider validation.
+
+Mandatory stop:
+`STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT`
+
+No tester mutation, release review, rollout, production/publication, signing-key mutation, S6, BUILD promotion, or Artifact Freeze authority is added.
