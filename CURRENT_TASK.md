@@ -1135,3 +1135,25 @@ The existing authorization remains sufficient to press Save once.
 
 Hard stop remains:
 `STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED`.
+
+
+## Internal Testing tester list save — PASS — 2026-10-03
+
+Evidence:
+`evidence/play/S5_INTERNAL_TESTING_TESTER_LIST_SAVE_RESULT_2026_10_03_v1.0.md`
+
+Observed:
+- selected list: `emailaku`;
+- Users: `1`;
+- setup progress: `2 of 3 complete`;
+- `Select testers` step completed;
+- Save control disabled/greyed, consistent with the configuration being persisted;
+- remaining setup step: `Preview and confirm release`.
+
+Disposition:
+`PASS_INTERNAL_TESTER_LIST_SAVED`
+
+Hard stop reached:
+`STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED`
+
+No preview/review/rollout action is authorized under the closed scope.
