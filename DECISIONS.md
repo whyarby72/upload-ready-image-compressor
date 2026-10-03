@@ -1302,3 +1302,19 @@ No authority is added for `Next`, testers, preview/review, rollout, publication,
 Provider evidence confirms the validated Internal testing draft was saved successfully.
 Scope S5 INTERNAL TESTING SAVE DRAFT ONLY is closed as PASS.
 No Next, tester, review, or rollout action is authorized by this decision.
+
+
+## D-087 — Authorize read-only upload-key certificate recheck after first bundle upload (2026-10-03)
+
+The human selected Option 1.
+
+Authorized:
+`S5 PLAY UPLOAD KEY CERTIFICATE READ-ONLY RECHECK`.
+
+Purpose:
+verify whether Google Play now exposes the upload-key certificate after the first signed App Bundle upload.
+
+Expected SHA-256:
+`22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`.
+
+This is observation-only. No key changes, reset, tester, release review, rollout, or publication authority is granted.
