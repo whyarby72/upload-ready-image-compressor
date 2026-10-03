@@ -1,0 +1,37 @@
+{
+  "schema": "S7_TEST_RUNTIME_VALIDATION_ONLY_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "authorized_at": "2026-10-03",
+  "approval_ref": "USER_OPTION_1_2026-10-03_S7_TEST_RUNTIME_VALIDATION_ONLY",
+  "scope": "S7 TEST RUNTIME VALIDATION ONLY",
+  "branch": "task/TASK-S7-001",
+  "implementation_commit": "49829356e02c41357db9bce64463ddead1d1d1f4",
+  "test_only": true,
+  "permitted": [
+    "Build and install the test-only S7 candidate on a test device/emulator",
+    "Launch the app and observe UMP consent/runtime behavior",
+    "Verify the app remains usable when consent/ad loading is unavailable or fails",
+    "Run the core JPEG buyer-job flow through ResultScreen",
+    "Verify the test banner is requested/rendered only on ResultScreen after result proof and after Save/Share/Compress another controls",
+    "Verify Privacy choices is visible and interactive only when UMP reports it required",
+    "Test one offline/no-network run to confirm the core job still works without ads",
+    "Capture non-sensitive runtime screenshots/logs and record device/Android/build identity",
+    "Repair deterministic runtime defects within the already-approved architecture, then rerun"
+  ],
+  "prohibited": [
+    "Create or mutate an AdMob app/account",
+    "Create production ad units",
+    "Use production ad identifiers",
+    "Publish or alter Privacy & messaging configuration",
+    "Change Play ads/Data Safety declarations",
+    "Add interstitial/app-open/rewarded/native formats",
+    "Add mediation or analytics",
+    "Promote to S8",
+    "BUILD promotion",
+    "Artifact Freeze",
+    "Closed/open/production rollout",
+    "Release or publication"
+  ],
+  "conditional_evidence_rule": "Consent form / Privacy choices paths may be NOT_OBSERVABLE under sample IDs without provider configuration; absence alone is not a PASS or FAIL. Runtime must record OBSERVED, NOT_OBSERVABLE, or FAIL honestly.",
+  "hard_stop": "STOP_AFTER_TEST_ONLY_RUNTIME_VALIDATION_RESULTS_ARE_CAPTURED"
+}
