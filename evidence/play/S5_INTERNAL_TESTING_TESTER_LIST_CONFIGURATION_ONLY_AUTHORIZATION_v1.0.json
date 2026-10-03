@@ -1,0 +1,29 @@
+{
+  "schema": "S5_INTERNAL_TESTING_TESTER_LIST_CONFIGURATION_ONLY_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "authorized_at": "2026-10-03",
+  "approval_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_TESTER_LIST_CONFIGURATION_ONLY",
+  "scope": "S5 INTERNAL TESTING TESTER LIST CONFIGURATION ONLY",
+  "intended_tester_count": 1,
+  "permitted": [
+    "Open Internal testing > Testers",
+    "Create or select an email list for the internal test",
+    "Add exactly one intended tester email locally in Play Console",
+    "Provide a feedback email or URL if Play requires it",
+    "Save tester configuration",
+    "Capture the immediate saved tester state"
+  ],
+  "prohibited": [
+    "Sending tester email identity to CHAT",
+    "Pressing Next on the release draft",
+    "Preview and confirm",
+    "Review release",
+    "Start rollout",
+    "Publish",
+    "Closed testing",
+    "Open testing",
+    "Production",
+    "Changing signing keys"
+  ],
+  "hard_stop": "STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED"
+}
