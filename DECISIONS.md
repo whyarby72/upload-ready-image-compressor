@@ -1642,3 +1642,17 @@ Decision:
 The full S7 AdMob/privacy stage is NOT closed because runtime consent/ad behavior and provider configuration are not yet proven.
 
 No authority is created for production AdMob IDs, AdMob provider mutation, Play declaration changes, S8, BUILD promotion, Artifact Freeze, broader Play testing, release or publication.
+
+
+## D-107 — Authorize S7 TEST runtime validation only (2026-10-03)
+
+The human selected Option 1.
+
+Authorized:
+`S7 TEST RUNTIME VALIDATION ONLY`.
+
+This authorizes installation and runtime testing of the already-CI-green test-only S7 candidate, including core regression, conditional UMP behavior, ResultScreen test-banner placement, and offline/no-ad degradation.
+
+It does not authorize AdMob account/app mutation, production IDs, Privacy & messaging publication, Play declaration changes, S8 promotion, broader testing, BUILD promotion, Artifact Freeze, release, or publication.
+
+Conditional UMP/provider paths must be reported as `OBSERVED`, `NOT_APPLICABLE/NOT_OBSERVABLE`, or `FAIL` rather than guessed.
