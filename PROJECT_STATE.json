@@ -39,23 +39,18 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S7_TEST_RUNTIME_VALIDATION_ONLY",
+    "id": "S7_ADMOB_PROVIDER_SETUP_PREFLIGHT_ONLY",
     "owner": "CHAT",
     "next_owner": "HUMAN",
-    "status": "PASS_WITH_PROVIDER_DEPENDENT_OBSERVABILITY_DEBT",
-    "authorization_ref": "USER_OPTION_1_2026-10-03_S7_TEST_RUNTIME_VALIDATION_ONLY",
-    "evidence_ref": "evidence/admob/S7_TEST_RUNTIME_VALIDATION_RESULT_2026_10_03_v1.0.md",
-    "device_model": "SM-N980F",
-    "android_version": "13",
-    "android_api": 33,
-    "rt01_launch": "PASS",
-    "rt02_core_flow": "PASS",
-    "rt03_banner": "NO_AD_OBSERVED",
-    "rt04_ump": "NOT_OBSERVABLE",
-    "rt05_privacy_choices": "NOT_OBSERVABLE",
-    "rt06_offline": "PASS",
-    "rt07_ad_failure_no_fill": "NOT_OBSERVED",
-    "full_s7_closed": false,
+    "status": "PREFLIGHT_PASS_PROVIDER_MUTATION_NOT_YET_AUTHORIZED",
+    "evidence_ref": "docs/admob/S7_ADMOB_PROVIDER_SETUP_PREFLIGHT_2026_10_03_v1.0.md",
+    "published_app_linking": "BLOCKED_PRIVATE_INTERNAL_PLAY",
+    "unpublished_admob_setup": "AVAILABLE_IF_LATER_AUTHORIZED",
+    "production_app_id": "NOT_CREATED",
+    "production_banner_ad_unit_id": "NOT_CREATED",
+    "privacy_messaging_provider_config": "NOT_CREATED",
+    "app_ads_txt": "BLOCKED_PENDING_PUBLIC_DEVELOPER_WEBSITE_AND_PUBLISHER_ID",
+    "firebase_analytics": "NOT_REQUIRED_FOR_INITIAL_BANNER_AND_NOT_PLANNED",
     "provider_mutation": false
   },
   "gates": {
@@ -64,7 +59,7 @@
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
     "internal_test": "PASS_CLOSED_WITH_NONBLOCKING_EVIDENCE_DEBT",
-    "admob_privacy": "S7_TEST_RUNTIME_PASS_PROVIDER_BOUND_AD_UMP_EVIDENCE_PENDING",
+    "admob_privacy": "S7_PROVIDER_PREFLIGHT_PASS_BOUNDED_PROVIDER_SETUP_REQUIRES_NEW_APPROVAL",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "INTERNAL_TEST_ALLOWED_BROADER_RELEASE_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
@@ -106,13 +101,17 @@
     "S7 provider-bound ad rendering remains unproven: RT-03 NO_AD_OBSERVED.",
     "UMP consent path remains unproven: RT-04 NOT_OBSERVABLE.",
     "Privacy choices path remains unproven: RT-05 NOT_OBSERVABLE.",
-    "Explicit ad failure/no-fill callback path remains unproven: RT-07 NOT_OBSERVED."
+    "Explicit ad failure/no-fill callback path remains unproven: RT-07 NOT_OBSERVED.",
+    "Current Play app is internal/private and cannot yet be linked to AdMob as a published Android app.",
+    "Real AdMob App ID and ResultScreen banner ad-unit ID do not yet exist.",
+    "Privacy & messaging provider configuration does not yet exist.",
+    "Final app-ads.txt verification requires a public developer website linked from the public store listing."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Run AdMob provider setup preflight/read-only next, then decide whether to authorize bounded provider setup needed to observe ad render and UMP/privacy behavior.",
+  "next_action": "If approved, perform bounded AdMob provider setup: unpublished app + one ResultScreen banner ad unit + European-regulations message, with no Play/publication mutation.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
