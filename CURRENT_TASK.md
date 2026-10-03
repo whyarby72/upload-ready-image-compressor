@@ -1157,3 +1157,24 @@ Hard stop reached:
 `STOP_AFTER_TESTER_LIST_CONFIGURATION_IS_SAVED`
 
 No preview/review/rollout action is authorized under the closed scope.
+
+
+## Internal Testing Preview + Confirm Only authorized — 2026-10-03
+
+Approval ref:
+`USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_PREVIEW_CONFIRM_ONLY`
+
+Scope:
+`S5 INTERNAL TESTING PREVIEW + CONFIRM ONLY`
+
+Permitted:
+- open `Preview and confirm release`;
+- review all visible release details and provider warnings;
+- capture the full preview/confirm page;
+- confirm only if the provider action does not itself start rollout/testing availability.
+
+Hard stop:
+`STOP_BEFORE_ANY_ACTION_THAT_STARTS_ROLLOUT_OR_MAKES_THE_RELEASE_AVAILABLE_TO_TESTERS`
+
+Not authorized:
+rollout, publish, tester availability, tester changes, bundle changes, signing-key changes, closed/open/production testing, S6, BUILD promotion, Artifact Freeze.
