@@ -1032,3 +1032,25 @@ No signing/key mutation, draft mutation, Next, tester, review, or rollout action
 
 Hard stop:
 `STOP_AFTER_UPLOAD_KEY_CERTIFICATE_STATUS_IS_OBSERVED`.
+
+
+## Upload key certificate read-only recheck — PASS — 2026-10-03
+
+Evidence:
+`evidence/play/S5_UPLOAD_KEY_CERTIFICATE_READ_ONLY_RECHECK_RESULT_2026_10_03_v1.0.md`
+
+Google Play now shows a populated Upload key certificate section with MD5, SHA-1, and SHA-256 fingerprints.
+
+Visible SHA-256 prefix:
+`22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9`
+
+Expected local SHA-256:
+`22:EA:E7:C3:78:69:B8:1A:E7:13:F7:00:7C:11:44:10:EC:A8:67:82:6A:FE:BB:34:9A:B7:B9:61:C9:86:5F:F4`
+
+The screenshot visually matches through the displayed prefix; the final 3 bytes are truncated in the capture, so exact full-text equality is not claimed from pixels alone.
+
+Disposition:
+`PASS_UPLOAD_KEY_CERTIFICATE_REGISTERED_PROVIDER_CONFIRMED`
+
+No key reset/change action was performed.
+Hard stop reached.
