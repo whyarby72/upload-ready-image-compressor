@@ -1626,3 +1626,19 @@ Monetization scope remains exactly:
 one adaptive banner on ResultScreen after verified value and buyer-critical completion controls.
 
 No S8, production ads, provider configuration, broader testing, BUILD promotion, Artifact Freeze, release, or publication authority is created.
+
+
+## D-106 — Close S7 TEST integration code/CI scope as PASS; keep full S7 open (2026-10-03)
+
+Deterministic CI on `task/TASK-S7-001` passed at commit
+`49829356e02c41357db9bce64463ddead1d1d1f4`.
+
+Final run `37117336418` proves:
+PREFLIGHT, assembleDebug, unit tests, lintDebug and CI_VERIFY_PASS.
+
+Decision:
+`S7_TEST_INTEGRATION_CODE_CI_PASS_PROVIDER_CONFIG_AND_RUNTIME_PENDING`.
+
+The full S7 AdMob/privacy stage is NOT closed because runtime consent/ad behavior and provider configuration are not yet proven.
+
+No authority is created for production AdMob IDs, AdMob provider mutation, Play declaration changes, S8, BUILD promotion, Artifact Freeze, broader Play testing, release or publication.
