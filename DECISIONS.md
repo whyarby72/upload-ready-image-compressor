@@ -1523,3 +1523,15 @@ Decision:
 - hold install/runtime validation;
 - first verify account identity and completed opt-in using the existing tester link;
 - do not change the release, tester list, or signing configuration unless account/opt-in checks fail to resolve access.
+
+
+## D-101 — Treat prior Play Store item-not-found as transient after successful retry (2026-10-03)
+
+The human reports that pressing `Try again` caused the internal-test app listing to appear.
+
+Decision:
+- clear the access blocker as human-attested;
+- do not treat install or runtime validation as complete;
+- continue within the already-authorized distributed install/runtime validation scope.
+
+No track/release/signing mutation is required.
