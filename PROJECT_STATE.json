@@ -39,26 +39,27 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S5_INTERNAL_TESTING_ROLLOUT_ONLY",
-    "owner": "HUMAN",
-    "next_owner": "CHAT",
-    "status": "HUMAN_PROVIDER_ACTION_NOW_REQUIRED",
+    "id": "S5_INTERNAL_TESTING_ROLLOUT_CLOSED",
+    "owner": "CHAT",
+    "next_owner": "HUMAN",
+    "status": "PASS_INTERNAL_TESTING_ROLLOUT_ACTIVE",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_ROLLOUT_ONLY",
-    "authorization_evidence_ref": "evidence/play/S5_INTERNAL_TESTING_ROLLOUT_ONLY_AUTHORIZATION_v1.0.json",
-    "provider_execution_state": "AWAITING_SAVE_AND_PUBLISH_RESULT",
-    "tester_count": 1,
+    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_ROLLOUT_RESULT_2026_10_03_v1.0.md",
+    "evidence_pdf_sha256": "e23df4c8df3261f759bbfefad54850fe895c5df290af95b81d7bc025831e8eb7",
+    "provider_track_status": "ACTIVE",
+    "provider_release_status": "AVAILABLE_TO_INTERNAL_TESTERS",
     "version_name": "0.1.0",
     "version_code": 1,
-    "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
-    "hard_stop": "STOP_AFTER_INTERNAL_TESTING_RELEASE_BECOMES_ACTIVE_OR_PROVIDER_RETURNS_A_ROLLOUT_RESULT",
-    "execution_selection_ref": "USER_OPTION_1_2026-10-03_EXECUTE_INTERNAL_TESTING_ROLLOUT"
+    "package_name": "com.afradadmedia.reducephotosize",
+    "provider_review_status": "NOT_REVIEWED",
+    "hard_stop_status": "REACHED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
     "concept": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
-    "internal_test": "INTERNAL_TESTING_ROLLOUT_AUTHORIZED_HUMAN_PROVIDER_ACTION_PENDING_RESULT",
+    "internal_test": "INTERNAL_TESTING_ROLLOUT_ACTIVE_DISTRIBUTED_INSTALL_VALIDATION_PENDING",
     "admob_privacy": "NOT_RUN",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "CREATE_APP_DECLARATIONS_TECHNICAL_PASS_PUBLICATION_COMPLIANCE_PENDING",
@@ -97,15 +98,15 @@
     "Validated Internal testing release draft has not yet been persisted with Save as draft.",
     "Tester configuration, release review, rollout, distributed install/runtime validation, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized.",
     "Internal testing release has not yet been previewed/confirmed or rolled out.",
-    "Internal testing release has not yet been published/rolled out.",
     "Native debug symbols are not attached to vc1; this is diagnostic-quality debt to address before production readiness where feasible.",
-    "Internal testing rollout has not yet been executed."
+    "Distributed install/runtime validation from Google Play has not yet been completed.",
+    "Closed testing, open testing, production, S6, BUILD promotion, Artifact Freeze, release, and publication remain unauthorized."
   ],
   "human_decisions_required": [
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human presses Save and publish for the already-reviewed Internal testing release, confirms only if the dialog still targets Internal testing, waits for the rollout result, captures the resulting track status, and stops.",
+  "next_action": "Human chooses whether to authorize S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION for the one configured tester. No track promotion is authorized.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -936,5 +937,16 @@
     "tester_count": 1,
     "setup_progress": "2_OF_3_COMPLETE",
     "next_step": "PREVIEW_AND_CONFIRM_RELEASE"
+  },
+  "s5_internal_testing_rollout": {
+    "status": "PASS_ACTIVE",
+    "observed_at": "2026-10-03",
+    "evidence_ref": "evidence/play/S5_INTERNAL_TESTING_ROLLOUT_RESULT_2026_10_03_v1.0.md",
+    "pdf_sha256": "e23df4c8df3261f759bbfefad54850fe895c5df290af95b81d7bc025831e8eb7",
+    "track_status": "ACTIVE",
+    "release_status": "AVAILABLE_TO_INTERNAL_TESTERS",
+    "version_code": 1,
+    "version_name": "0.1.0",
+    "review_status": "NOT_REVIEWED"
   }
 }
