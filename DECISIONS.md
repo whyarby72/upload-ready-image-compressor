@@ -1371,3 +1371,15 @@ Decision:
 - require the list to be reduced to exactly one intended tester, or require a new explicit authorization that broadens the tester count.
 
 No tester-list save, release review, rollout, or publication authority is added.
+
+
+## D-091 — Tester-count mismatch resolved; Save is now within authorized scope (2026-10-03)
+
+Direct provider evidence shows the selected Internal testing list now contains exactly one user.
+
+Decision:
+- close the prior tester-count HOLD;
+- allow the already-authorized one-time Save action under the existing tester-list configuration scope;
+- stop immediately after save confirmation.
+
+No release review, rollout, or publication authority is added.
