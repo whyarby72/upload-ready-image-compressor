@@ -1537,3 +1537,30 @@ Not yet proven:
 - ad/no-fill/offline behavior on device;
 - AdMob provider app/ad-unit/readiness configuration;
 - W2 post-AdMob reconciliation.
+
+
+## S7 TEST runtime validation only — AUTHORIZED — 2026-10-03
+
+Approval:
+`USER_OPTION_1_2026-10-03_S7_TEST_RUNTIME_VALIDATION_ONLY`
+
+Plan:
+`docs/admob/S7_TEST_RUNTIME_VALIDATION_PLAN_2026_10_03_v1.0.md`
+
+Scope:
+- TEST IDs only;
+- device/emulator runtime validation;
+- core regression;
+- consent-gate behavior;
+- conditional Privacy choices behavior;
+- ResultScreen banner placement;
+- offline/no-ad degradation.
+
+Provider mutation:
+`PROHIBITED`
+
+Important evidence rule:
+UMP consent/privacy-options paths may be `NOT_OBSERVABLE` with sample IDs and no provider configuration. Record that honestly; do not force a PASS.
+
+Hard stop:
+`STOP_AFTER_TEST_ONLY_RUNTIME_VALIDATION_RESULTS_ARE_CAPTURED`
