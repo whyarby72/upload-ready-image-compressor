@@ -1369,3 +1369,36 @@ The prior `Item not found` blocker is cleared, but install and distributed runti
 
 Next:
 install from Google Play with the configured tester account, launch the distributed build, run the existing bounded runtime checklist using a non-sensitive JPEG, and report the results.
+
+
+## Distributed install/runtime validation — PASS — 2026-10-03
+
+Evidence:
+`evidence/play/S5_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION_RESULT_2026_10_03_v1.0.md`
+
+Human tester report:
+- Samsung Galaxy Note 20;
+- Android 13;
+- install from Google Play PASS;
+- app open PASS;
+- Choose JPEG PASS;
+- CURRENT facts PASS;
+- limit entry PASS;
+- result semantics PASS;
+- Save PASS;
+- Share PASS;
+- original preserved YES;
+- no unexpected error/confusion reported.
+
+Disposition:
+`PASS_DISTRIBUTED_CORE_RUNTIME_VALIDATION`
+
+Evidence level:
+`HUMAN_ATTESTED_RUNTIME_RESULT`
+
+Open evidence debt:
+- on-device version string/versionCode not separately recorded;
+- no screenshot-bound runtime evidence.
+
+Next:
+run S5 closeout audit against `S5_INTERNAL_TEST_PLAN.md`.
