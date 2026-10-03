@@ -50,7 +50,6 @@
     "provider_release_status": "AVAILABLE_TO_INTERNAL_TESTERS",
     "version_name": "0.1.0",
     "version_code": 1,
-    "package_name": "com.afradadmedia.reducephotosize",
     "provider_review_status": "NOT_REVIEWED",
     "hard_stop_status": "REACHED"
   },
@@ -106,7 +105,7 @@
     "Human action is required for Play Console account/app identity, authorized signing enrollment or upload-key selection, tester identities, and upload/submission.",
     "Human decision remains required before canonical BUILD promotion, Artifact Freeze, release, or publication."
   ],
-  "next_action": "Human chooses whether to authorize S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION for the one configured tester. No track promotion is authorized.",
+  "next_action": "Human decides whether to authorize one-tester opt-in and distributed install/runtime validation. No promotion beyond Internal testing is authorized.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
