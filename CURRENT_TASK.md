@@ -1299,3 +1299,40 @@ Disposition:
 
 Next recommended scope:
 `S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION`.
+
+
+## Internal tester opt-in + distributed install/runtime validation authorized — 2026-10-03
+
+Approval ref:
+`USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTER_OPTIN_DISTRIBUTED_INSTALL_RUNTIME_VALIDATION`
+
+Scope:
+`S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION`
+
+Use the configured tester account and a non-sensitive JPEG.
+
+Required validation:
+1. open the Internal testing Testers tab and copy the opt-in/share link;
+2. open it while signed into Google Play with the configured tester account;
+3. join the internal test;
+4. install from Google Play;
+5. launch the distributed build;
+6. verify:
+   - Choose JPEG;
+   - CURRENT file facts;
+   - explicit limit selection/entry;
+   - genuine result;
+   - truthful PASS / NOT_MET / REDUCED semantics;
+   - Save;
+   - Share;
+   - original remains untouched;
+   - no unexpected network/ad/paywall interruption before first verified value;
+7. record device model, Android version, app version, and concise result for each item;
+8. STOP.
+
+Do not use personal/sensitive test photos.
+
+Hard stop:
+`STOP_AFTER_DISTRIBUTED_CORE_RUNTIME_VALIDATION_RESULT_IS_CAPTURED`
+
+No track promotion, new release, AdMob integration, S6, BUILD promotion, Artifact Freeze, or publication is authorized.
