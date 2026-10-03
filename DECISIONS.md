@@ -1498,3 +1498,18 @@ Decision:
 - close `S5 INTERNAL TESTING ROLLOUT ONLY` as PASS;
 - require a separate scope for tester opt-in and distributed install/runtime validation;
 - do not infer closed/open/production authority.
+
+
+## D-099 — Authorize one-tester opt-in and Play-distributed runtime validation (2026-10-03)
+
+The human selected Option 1.
+
+Authorized:
+`S5 INTERNAL TESTER OPT-IN + DISTRIBUTED INSTALL/RUNTIME VALIDATION`.
+
+Purpose:
+prove that the exact Internal testing release can be joined, installed from Google Play, opened, and used successfully for the core buyer job on a tester device.
+
+The runtime checklist is bound to the existing S5 buyer-job test plan and must use a non-sensitive JPEG.
+
+No track promotion, new release, AdMob/analytics integration, S6, BUILD promotion, Artifact Freeze, or publication authority is granted.
