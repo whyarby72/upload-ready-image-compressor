@@ -1505,3 +1505,35 @@ Provider/account mutation:
 
 Current status:
 `IMPLEMENTED_AWAITING_CI`
+
+
+## TASK-S7-001 deterministic CI closure — PASS — 2026-10-03
+
+Evidence:
+`evidence/admob/S7_TEST_INTEGRATION_CI_CLOSURE_2026_10_03_v1.0.md`
+
+Final integration commit:
+`49829356e02c41357db9bce64463ddead1d1d1f4`
+
+Final CI run:
+`37117336418`
+
+PASS:
+- PREFLIGHT
+- assembleDebug
+- testDebugUnitTest
+- lintDebug
+- CI_VERIFY_PASS
+
+Two earlier failed runs were retained as PARTIAL provenance and repaired rather than misreported as PASS.
+
+Disposition:
+`S7_TEST_INTEGRATION_CODE_CI_PASS_PROVIDER_CONFIG_AND_RUNTIME_PENDING`
+
+Not yet proven:
+- real-device UMP/consent UX;
+- Privacy choices runtime path;
+- ResultScreen test-banner runtime behavior;
+- ad/no-fill/offline behavior on device;
+- AdMob provider app/ad-unit/readiness configuration;
+- W2 post-AdMob reconciliation.
