@@ -1488,3 +1488,13 @@ Decision:
 - close `S5 INTERNAL TESTING ROLLOUT ONLY` as PASS;
 - proceed next only via a separately authorized distributed install/runtime validation scope;
 - do not infer closed/open/production release authority.
+
+
+## D-097 — Internal Testing rollout active (2026-10-03)
+
+Direct provider evidence shows Internal testing is Active and release 1 (0.1.0) is Available to internal testers.
+
+Decision:
+- close `S5 INTERNAL TESTING ROLLOUT ONLY` as PASS;
+- require a separate scope for tester opt-in and distributed install/runtime validation;
+- do not infer closed/open/production authority.
