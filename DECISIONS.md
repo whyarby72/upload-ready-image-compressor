@@ -1554,3 +1554,30 @@ This closes the distributed runtime execution scope.
 The PASS is human-attested rather than screenshot-bound, and the device UI did not separately report the app version/versionCode. These remain evidence-quality notes, not observed functional failures.
 
 Next step is S5 closeout audit before any stage advancement.
+
+
+## D-103 — Close S5 Internal Testing as PASS with non-blocking evidence debt (2026-10-03)
+
+The S5 closeout audit reconciled repository, provider, signing, rollout, and distributed runtime evidence.
+
+Decision:
+`S5_CLOSED_PASS_WITH_NONBLOCKING_EVIDENCE_DEBT`.
+
+Material basis:
+- exact signed vc1 AAB is source/artifact bound;
+- Google Play accepted the artifact and registered the exact upload certificate;
+- the Internal testing track is Active and the release is Available to internal testers;
+- the configured tester installed from Google Play and passed the bounded core buyer job on a Samsung Galaxy Note 20 / Android 13;
+- no app-source drift occurred after the signing execution commit.
+
+Non-blocking debt does not overturn S5 PASS:
+- human-attested runtime without screenshot sequence;
+- no direct on-device version observation;
+- native debug-symbol warning;
+- empty internal release notes;
+- provider status `Not reviewed`.
+
+Privacy/Data safety are reclassified as later-stage compliance gates rather than S5 blockers because current Google Play guidance allows Internal testing before full setup and exempts Internal-testing-only apps from Data safety. Privacy policy / Data safety remain mandatory gates before broader Play distribution as applicable.
+
+This decision does not authorize:
+S6, BUILD promotion, Artifact Freeze, closed/open testing, production, release, publication, or AdMob integration.
