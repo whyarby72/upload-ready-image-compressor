@@ -945,3 +945,33 @@ Hard stop:
 
 Not authorized:
 tester mutation, tester-list save, review release, rollout, publication, closed/open/production release, key mutation, S6, BUILD promotion, Artifact Freeze.
+
+
+## Internal Testing AAB provider validation — PASS — 2026-10-03
+
+Evidence:
+`evidence/play/S5_INTERNAL_TESTING_AAB_PROVIDER_VALIDATION_RESULT_2026_10_03_v1.0.md`
+
+PDF SHA-256:
+`7b717ed457dfaf2582a2812fca32644ccd330b2ace0ca97ee8570e6fbe0890b4`
+
+Observed provider state:
+- exact file `PhotoCompressor-0.1.0-vc1-upload-signed.aab` is present in the Internal testing release draft;
+- App bundle row is populated;
+- version `1 (0.1.0)`;
+- API `29+`;
+- Target SDK `36`;
+- 4 screen layouts;
+- 4 ABIs;
+- 1 required feature;
+- no visible rejection/error.
+
+Disposition:
+`PASS_AAB_PROVIDER_VALIDATION_IN_DRAFT`
+
+The current authorization is consumed.
+
+Hard stop reached:
+`STOP_AFTER_AAB_PROVIDER_VALIDATION_IN_DRAFT_BEFORE_TESTERS_SAVE_REVIEW_OR_ROLLOUT`
+
+Do not press `Next`, `Save as draft`, or proceed to testers/review/rollout without a new explicit authorization.
