@@ -1336,3 +1336,13 @@ Decision:
 - leave optional full copy-text fingerprint verification available as a separate read-only micro-check.
 
 No tester, review, rollout, or publication authority is granted.
+
+
+## D-088 — Upload-key certificate exact fingerprint match confirmed (2026-10-03)
+
+The copied Play Console SHA-256 fingerprint exactly matches the locally recorded upload-certificate SHA-256.
+
+Decision:
+`PASS_FULL_SHA256_MATCH`.
+
+The signing/upload-certificate chain is closed. Tester configuration, release review, rollout, distributed install validation, and publication remain separate scopes.
