@@ -1,0 +1,39 @@
+{
+  "schema": "S5_INTERNAL_TESTING_SAVE_DRAFT_ONLY_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "package": "com.afradadmedia.reducephotosize",
+  "provider_app_id": "4973120481844433940",
+  "authorized_at": "2026-10-03",
+  "approval_ref": "USER_OPTION_1_2026-10-03_S5_INTERNAL_TESTING_SAVE_DRAFT_ONLY",
+  "authorized_scope": "S5 INTERNAL TESTING SAVE DRAFT ONLY",
+  "precondition": {
+    "status": "PASS_AAB_PROVIDER_VALIDATION_IN_DRAFT",
+    "artifact_filename": "PhotoCompressor-0.1.0-vc1-upload-signed.aab",
+    "artifact_sha256": "d01a0bc609ea57421cbff727aff08109a4433c3d537f927acb8c441fbec1103d",
+    "version_name": "0.1.0",
+    "version_code": 1
+  },
+  "permitted": [
+    "Press Save as draft on the currently validated Internal testing release draft",
+    "Wait for provider confirmation that the draft is saved",
+    "Capture the immediate post-save state"
+  ],
+  "prohibited": [
+    "Press Next",
+    "Preview and confirm",
+    "Add or change testers",
+    "Save tester lists",
+    "Review release",
+    "Start rollout",
+    "Publish",
+    "Closed testing",
+    "Open testing",
+    "Production",
+    "Change signing configuration or keys",
+    "S6",
+    "BUILD promotion",
+    "Artifact Freeze"
+  ],
+  "hard_stop": "STOP_IMMEDIATELY_AFTER_DRAFT_SAVE_CONFIRMATION",
+  "provider_execution_state": "READY_FOR_HUMAN_SAVE_DRAFT_ONLY"
+}
