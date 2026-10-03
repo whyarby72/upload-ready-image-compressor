@@ -40,20 +40,28 @@
   },
   "current_task": {
     "id": "TASK-S7-001",
-    "owner": "CODEX",
-    "next_owner": "CHAT",
-    "status": "IMPLEMENTED_AWAITING_CI",
+    "owner": "CHAT",
+    "next_owner": "HUMAN",
+    "status": "S7_TEST_INTEGRATION_CODE_CI_PASS_PROVIDER_CONFIG_AND_RUNTIME_PENDING",
     "authorization_ref": "USER_OPTION_1_2026-10-03_S7_CODEX_ADMOB_UMP_TEST_INTEGRATION_ONLY",
-    "authorization_evidence_ref": "evidence/admob/S7_ADMOB_UMP_TEST_INTEGRATION_AUTHORIZATION_v1.0.json",
+    "evidence_ref": "evidence/admob/S7_TEST_INTEGRATION_CI_CLOSURE_2026_10_03_v1.0.md",
     "branch": "task/TASK-S7-001",
+    "final_integration_commit": "49829356e02c41357db9bce64463ddead1d1d1f4",
+    "ci_run_id": 37117336418,
+    "ci_result": "PASS",
+    "preflight": "PASS",
+    "assemble_debug": "PASS",
+    "unit_tests": "PASS",
+    "lint_debug": "PASS",
     "sdk": {
       "gma_next_gen": "1.5.0",
       "ump": "4.0.0"
     },
     "test_ids_only": true,
-    "ad_format": "RESULT_SCREEN_ADAPTIVE_BANNER_ONLY",
     "provider_mutation": false,
-    "next_gate": "CI_BUILD_TEST_LINT"
+    "real_device_ad_runtime": "NOT_RUN",
+    "provider_admob_setup": "NOT_RUN",
+    "w2_post_admob": "NOT_RUN"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -61,7 +69,7 @@
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
     "internal_test": "PASS_CLOSED_WITH_NONBLOCKING_EVIDENCE_DEBT",
-    "admob_privacy": "S7_TEST_INTEGRATION_IMPLEMENTED_CI_PENDING",
+    "admob_privacy": "S7_TEST_INTEGRATION_CODE_CI_PASS_RUNTIME_AND_PROVIDER_CONFIG_PENDING",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "INTERNAL_TEST_ALLOWED_BROADER_RELEASE_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
@@ -96,13 +104,15 @@
     "Final Play target-audience declaration is not yet bound for ad policy configuration.",
     "app-ads.txt and AdMob app readiness verification remain pending provider setup.",
     "W2 post-AdMob privacy/monetization audit remains NOT_RUN.",
-    "TASK-S7-001 CI evidence is pending; source implementation is not PASS until build/unit/lint succeed."
+    "Real-device/emulator UMP + test-banner runtime validation has not yet been completed.",
+    "AdMob provider app/ad-unit and Privacy & messaging configuration remain NOT_RUN.",
+    "Public privacy-policy URL, developer domain/app-ads.txt and broader Play disclosure reconciliation remain pending."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "CI must prove assembleDebug, testDebugUnitTest and lintDebug on task/TASK-S7-001. Any failure is repaired before S7 implementation PASS.",
+  "next_action": "Human chooses the next bounded scope. Recommended: run S7 TEST RUNTIME VALIDATION ONLY using the test-ID build before any AdMob provider/live-ad configuration.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
@@ -1017,5 +1027,20 @@
     "photo_data_to_ads": false,
     "code_mutation_performed": false,
     "provider_mutation_performed": false
+  },
+  "s7_test_integration": {
+    "status": "CODE_CI_PASS_RUNTIME_PENDING",
+    "branch": "task/TASK-S7-001",
+    "implementation_commit": "49829356e02c41357db9bce64463ddead1d1d1f4",
+    "closure_evidence_ref": "evidence/admob/S7_TEST_INTEGRATION_CI_CLOSURE_2026_10_03_v1.0.md",
+    "ci_run_id": 37117336418,
+    "preflight": "PASS",
+    "assemble_debug": "PASS",
+    "unit_tests": "PASS",
+    "lint": "PASS",
+    "provider_mutation": false,
+    "test_ids_only": true,
+    "runtime_validation": "NOT_RUN",
+    "w2": "NOT_RUN"
   }
 }
