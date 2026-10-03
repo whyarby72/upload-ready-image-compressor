@@ -1535,3 +1535,22 @@ Decision:
 - continue within the already-authorized distributed install/runtime validation scope.
 
 No track/release/signing mutation is required.
+
+
+## D-102 — Play-distributed core runtime validation passes on physical tester device (2026-10-03)
+
+Human tester report confirms successful Google Play installation and end-to-end buyer-job execution on:
+- Samsung Galaxy Note 20;
+- Android 13.
+
+Passed:
+Choose JPEG, CURRENT facts, limit entry, result semantics, Save, Share, and original preservation.
+
+Decision:
+`PASS_DISTRIBUTED_CORE_RUNTIME_VALIDATION`.
+
+This closes the distributed runtime execution scope.
+
+The PASS is human-attested rather than screenshot-bound, and the device UI did not separately report the app version/versionCode. These remain evidence-quality notes, not observed functional failures.
+
+Next step is S5 closeout audit before any stage advancement.
