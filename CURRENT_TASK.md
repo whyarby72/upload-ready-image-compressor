@@ -1693,3 +1693,19 @@ Decision:
 
 Next:
 open App settings, record the existing AdMob App ID/package, then create exactly one ResultScreen banner unit.
+
+
+## Provider creation interpretation corrected — 2026-10-04
+
+Correction evidence:
+`evidence/admob/S7_PROVIDER_APP_CREATION_CORRECTION_2026_10_04_v1.0.md`
+
+Human clarification:
+the app visible in the AdMob screenshot had just been created during the currently authorized bounded provider setup.
+
+Therefore the prior `existing app before current setup` inference is superseded.
+
+Current state:
+- AdMob app creation: PASS / within authorized scope;
+- first ad unit: NOT_CREATED;
+- next: record App ID/package, then create exactly one ResultScreen banner.
