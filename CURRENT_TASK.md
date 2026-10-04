@@ -1,28 +1,20 @@
 # CURRENT_TASK.md
 
-Task ID: S7_FAST_LANE_ADMOB_PRIVACY_PREPUBLISH
+Task ID: S7_FAST_LANE_ADMOB_PRIVACY_POSTPUBLISH
 Owner: HUMAN_PROVIDER_ACTION + CHAT_AUDIT
 Reviewer: CHAT
-Stage: S7_ADMOB_PRIVACY_INTEGRATED_PREPUBLISH
+Stage: S7_ADMOB_PRIVACY_MESSAGE_PUBLISHED
 Priority: HIGH
-Status: CONSOLIDATED_PREPUBLISH_AUDIT_PASS / PUBLICATION_APPROVAL_REQUIRED
+Status: EU_MESSAGE_PUBLISHED / PRODUCTION_ID_BINDING_AND_RUNTIME_VALIDATION_OPEN
 
-## Fast-lane activation
+## Fast-lane mode
 
 Approval ref:
 `USER_OPTION_1_2026-10-05_ACTIVATE_FAST_LANE_SIMPLE_APP`
 
-Purpose:
-reduce ceremony and repeated screenshot-by-screenshot review for this simple Android utility while preserving required compliance, evidence, and human authority boundaries.
+Fast-lane remains active for reversible preparation and batched review. Human approval boundaries for production credentials, release, Artifact Freeze, and publication remain unchanged.
 
-Fast-lane rules:
-- batch reversible provider steps where the intended configuration is already resolved;
-- do not require a screenshot after every ordinary toggle or navigation step;
-- use one consolidated pre-Publish audit instead of repeated micro-gates;
-- stop only for material policy/compliance conflict, unexpected provider warning/error, production credential/ID binding, destructive/irreversible action, Artifact Freeze, release, or publication;
-- never infer a PASS from a failed/partial provider action.
-
-## Current verified product/provider state
+## Current verified provider state — 2026-10-05
 
 Product:
 `Photo Compressor: KB Limit`
@@ -42,80 +34,62 @@ Exactly one Banner unit:
 European regulations message:
 `Photo Compressor EU Consent v1`
 
-Current message configuration observed:
-- default language: English (en);
+Observed provider result:
+`PUBLISHED`
+
+Screenshot-observed fields:
+- message name: Photo Compressor EU Consent v1;
+- language: English (en);
+- app: Photo Compressor: KB Limit;
+- last modified: Oct 5, 2026;
+- status: Published;
+- publish toggle: enabled.
+
+Prior configured message state:
 - Consent: ON;
 - Manage options: ON;
 - Do not consent: ON;
 - Close (do not consent): OFF;
 - targeting: Countries subject to GDPR (EEA, UK, and Switzerland);
 - country-selection intent: EEA + UK + Switzerland ON, Everywhere else OFF;
-- selected app: Photo Compressor: KB Limit;
-- privacy policy URL attached to selected app.
-
-Privacy Policy URL:
-`https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
-
-Operator provider results — 2026-10-05:
-- `DRAFT_SAVED`;
-- `PRIVACY_URL_OPENS`.
+- Privacy Policy URL attached to selected app;
+- operator reported `DRAFT_SAVED` and `PRIVACY_URL_OPENS`.
 
 Evidence classification:
-- draft-save result: HUMAN_ATTESTED_PROVIDER_ACTION;
-- public URL reachability: HUMAN_ATTESTED_BROWSER_CHECK;
-- app-selection/privacy-URL binding: SCREENSHOT_OBSERVED.
+- message publication state: SCREENSHOT_OBSERVED_PROVIDER_STATE;
+- privacy URL reachability: HUMAN_ATTESTED_BROWSER_CHECK;
+- draft-save result: HUMAN_ATTESTED_PROVIDER_ACTION.
 
-Fallback consent collection:
-`OFF / ACCEPTED_FOR_PRIMARY_UMP_SDK_PATH`
+Governance note:
+The prior repo state required explicit scoped approval before the provider Publish action. No separate text approval token was recorded in chat before the screenshot showing Published. The provider action has already occurred, so the durable source of truth records the observed state without retroactively asserting pre-action authorization.
 
-Rationale:
-Google documents fallback consent collection as a temporary/secondary mechanism for gaps in the primary CMP path and strongly recommends UMP for apps using Google's CMP. This product already uses the UMP SDK as the primary consent path, so per-app fallback consent collection is not required for the current configuration. Re-evaluate only if maximize-message-coverage/account-level settings create a material conflict.
+## Remaining S7 work
 
-Production AdMob ID binding:
-`NOT_AUTHORIZED`
+Open:
+1. bind production AdMob App ID + Banner unit ID into the authorized release source;
+2. build/test with production IDs while retaining test-device safeguards where applicable;
+3. verify UMP post-publication behavior in a real/provider-backed configuration:
+   - consent required path;
+   - do-not-consent path;
+   - manage/privacy-options path;
+   - ad request gating through current consent state;
+   - banner success/failure/offline degradation;
+4. run post-AdMob privacy/reconciliation audit;
+5. update Data Safety / ads disclosures as required before broader Play release.
 
-European-regulations message Publish:
-`NOT_AUTHORIZED`
+## Authority boundary
 
-## Consolidated pre-Publish audit — 2026-10-05
-
-Disposition:
-`PASS_READY_FOR_SCOPED_EU_MESSAGE_PUBLICATION_APPROVAL`
-
-PASS:
-- correct app selected;
-- required privacy-policy URL is present and operator-confirmed publicly reachable;
-- message draft saved;
-- three-choice consent layout configured;
-- regional targeting limited to EEA + UK + Switzerland;
-- fallback consent collection may remain OFF because UMP is the primary CMP implementation;
-- no provider warning/error was reported in the fast-lane completion result.
-
-Open but non-blocking for EU-message publication:
-- production AdMob IDs are still not bound to release code;
-- post-publication UMP/runtime behavior with real app configuration remains to be verified;
-- broader Play production compliance and Data Safety remain later-stage work.
-
-## Next action
-
-Human must explicitly choose whether to authorize:
-`PUBLISH EUROPEAN REGULATIONS MESSAGE ONLY`
-
-If approved, permitted:
-- click `Publish` for `Photo Compressor EU Consent v1`;
-- wait for provider confirmation;
-- report the resulting message state.
-
-Hard stop immediately after message publication confirmation.
-
-Not authorized by this approval:
+Still NOT authorized:
 - production AdMob ID binding;
-- source-code mutation;
-- new ad-unit creation;
-- Play release/promotion;
+- source-code mutation for production IDs;
+- creating additional ad units;
+- closed/open/production Play promotion;
 - Artifact Freeze;
 - production release/publication of the Android app.
 
-## Hard stop
+## Next action
 
-Do NOT publish the European-regulations message until the scoped approval above is explicit.
+Human decision required for:
+`S7 PRODUCTION ADMOB ID BINDING + POST-PUBLISH UMP RUNTIME VALIDATION`
+
+If authorized, bind only the already-created App ID and exactly one Banner unit to the existing S7 implementation, then run artifact-bound build/test/runtime verification. No new ad unit creation and no Play production release.
