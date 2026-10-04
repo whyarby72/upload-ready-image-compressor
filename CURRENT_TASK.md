@@ -1799,3 +1799,20 @@ Recommended draft state:
 
 Next:
 capture Setup + Targeting after configuration, before Publish.
+
+
+## EU message app selection — privacy policy URL blocker — 2026-10-04
+
+Evidence:
+`evidence/admob/S7_EU_MESSAGE_PRIVACY_POLICY_URL_BLOCKER_2026_10_04_v1.0.md`
+
+Observed:
+- Photo Compressor: KB Limit selected;
+- privacy policy URL missing;
+- AdMob explicitly requires a privacy policy URL before message publication;
+- fallback consent collection OFF.
+
+Disposition:
+`BLOCKED_PRIVACY_POLICY_URL_REQUIRED_FOR_MESSAGE_PUBLICATION`
+
+Do not use a placeholder URL and do not publish yet.
