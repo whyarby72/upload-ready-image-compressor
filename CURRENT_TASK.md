@@ -86,3 +86,26 @@ Human runs the short real-device runtime checklist and returns only:
 - `BANNER_NONOBSTRUCTIVE_PASS` / not observed;
 - `OFFLINE_PASS` / failure;
 - any unexpected warning/error.
+
+
+## Codex physical-smartphone execution handoff — 2026-10-05
+
+Human selected:
+`USER_OPTION_1_2026-10-05_USE_CODEX_FOR_SMARTPHONE_RUNTIME_VALIDATION`
+
+Codex prompt:
+`prompts/CODEX_S7_POSTPUBLISH_UMP_SMARTPHONE_RUNTIME_VALIDATION_v1.0.md`
+
+Execution intent:
+- use Codex with a physically connected Android smartphone through ADB;
+- build/install the DEBUG variant;
+- keep Google demo Banner traffic in debug;
+- use provider-backed production App ID for UMP;
+- if the message is not naturally observable outside Europe, use Google's official test-device + forced-EEA mechanism temporarily;
+- revert all temporary UMP debug-geography/test-device/reset code before any commit;
+- produce artifact-bound runtime evidence.
+
+Chat runtime limitation:
+`NO_DIRECT_CODEX_RUNNER_EXPOSED_IN_THIS_CHAT`
+
+Therefore execution is ready for Codex Desktop/CLI attached to this repository and smartphone. CHAT must not claim smartphone-runtime PASS until Codex returns evidence.
