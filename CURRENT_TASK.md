@@ -1725,3 +1725,17 @@ Do not force store linking while Play remains private/internal.
 
 Next:
 create exactly one Banner ad unit `ResultScreen_Banner_v1`.
+
+
+## Ad unit format screen observed — 2026-10-04
+
+Evidence:
+`evidence/admob/S7_AD_UNIT_FORMAT_SCREEN_2026_10_04_v1.0.md`
+
+Approved selection:
+`Banner`
+
+All other visible formats remain out of scope.
+
+Next:
+select Banner and capture Configure ad unit settings before final Create.
