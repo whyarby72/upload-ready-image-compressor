@@ -1637,3 +1637,32 @@ Key findings:
 
 Disposition:
 `PREFLIGHT_PASS_PROVIDER_MUTATION_NOT_YET_AUTHORIZED`.
+
+
+## S7 bounded AdMob provider setup — AUTHORIZED — 2026-10-04
+
+Authorization:
+`USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP`
+
+Evidence:
+`evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json`
+
+Permitted provider mutation:
+- add Android app as UNPUBLISHED;
+- package `com.afradadmedia.reducephotosize`;
+- create exactly one Banner ad unit for ResultScreen;
+- create/configure one European regulations Privacy & messaging message;
+- record provider-generated App ID and banner ad-unit ID.
+
+Not authorized by inference:
+- Play Console mutation;
+- public store linking/release;
+- app-ads.txt publication;
+- mediation or additional formats;
+- Firebase Analytics;
+- production-ID code binding/release;
+- separate final message publication action if AdMob presents it as a distinct final commit;
+- S8 / BUILD / Artifact Freeze / publication.
+
+Status:
+`AUTHORIZED_PROVIDER_UI_EXECUTION_REQUIRED`
