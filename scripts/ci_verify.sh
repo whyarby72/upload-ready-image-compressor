@@ -9,6 +9,7 @@ if [ ! -f ./gradlew ]; then
 fi
 chmod +x ./gradlew
 ./gradlew --no-daemon assembleDebug
+./gradlew --no-daemon assembleRelease
 ./gradlew --no-daemon testDebugUnitTest
 ./gradlew --no-daemon lintDebug
 python scripts/build_evidence_index.py

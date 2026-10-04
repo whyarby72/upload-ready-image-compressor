@@ -12,7 +12,7 @@ import com.google.android.ump.UserMessagingPlatform
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**
- * TEST-only consent + GMA initialization controller.
+ * Consent + GMA initialization controller.
  *
  * Product invariants:
  * - UMP consent information is refreshed on every app launch.
@@ -88,7 +88,7 @@ internal class AdMobTestController(private val activity: Activity) {
             {
                 MobileAds.initialize(
                     activity.applicationContext,
-                    InitializationConfig.Builder(AdMobTestConfig.SAMPLE_APP_ID).build()
+                    InitializationConfig.Builder(AdMobTestConfig.APP_ID).build()
                 ) {
                     // W1 privacy-minimization default. Apply before any banner request is enabled.
                     MobileAds.putPublisherFirstPartyIdEnabled(false)
@@ -110,9 +110,11 @@ private object AdMobSdkRuntime {
 }
 
 internal object AdMobTestConfig {
-    // Official Google sample IDs. These are deliberately not tied to the user's AdMob account.
-    const val SAMPLE_APP_ID = "ca-app-pub-3940256099942544~3347511713"
-    const val SAMPLE_BANNER_AD_UNIT_ID = "ca-app-pub-3940256099942544/9214589741"
+    // App identity is provider-backed in every variant so the published UMP message can be
+    // exercised. Banner traffic is variant-bound: Google demo unit in debug, production unit
+    // in release.
+    val APP_ID: String = BuildConfig.ADMOB_APP_ID
+    val BANNER_AD_UNIT_ID: String = BuildConfig.ADMOB_BANNER_AD_UNIT_ID
 }
 
 internal object AdMobEligibility {

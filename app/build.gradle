@@ -3,6 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.plugin.compose'
 }
 
+def productionAdMobAppId = 'ca-app-pub-8084313520610270~1492953098'
+def productionBannerAdUnitId = 'ca-app-pub-8084313520610270/1264713228'
+def googleTestBannerAdUnitId = 'ca-app-pub-3940256099942544/9214589741'
+
 configurations.configureEach {
     // GMA Next-Gen must not coexist with the legacy Mobile Ads artifacts.
     exclude group: 'com.google.android.gms', module: 'play-services-ads'
@@ -19,14 +23,21 @@ android {
         targetSdk 36
         versionCode 1
         versionName '0.1.0'
+        manifestPlaceholders = [adMobAppId: productionAdMobAppId]
+        buildConfigField 'String', 'ADMOB_APP_ID', '"ca-app-pub-8084313520610270~1492953098"'
+        buildConfigField 'String', 'ADMOB_BANNER_AD_UNIT_ID', '"ca-app-pub-8084313520610270/1264713228"'
     }
 
     buildTypes {
         debug {
             applicationIdSuffix '.s7test'
             versionNameSuffix '-s7test'
+            // Provider-backed UMP uses the production App ID, but debug ad traffic stays on
+            // Google's dedicated demo banner unit to avoid invalid live-ad activity.
+            buildConfigField 'String', 'ADMOB_BANNER_AD_UNIT_ID', '"ca-app-pub-3940256099942544/9214589741"'
         }
         release {
+            buildConfigField 'String', 'ADMOB_BANNER_AD_UNIT_ID', '"ca-app-pub-8084313520610270/1264713228"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

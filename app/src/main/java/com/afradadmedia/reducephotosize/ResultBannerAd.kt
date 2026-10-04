@@ -20,10 +20,12 @@ import com.google.android.libraries.ads.mobile.sdk.common.AdLoadCallback
 import com.google.android.libraries.ads.mobile.sdk.common.LoadAdError
 
 /**
- * TEST-only banner surface.
+ * ResultScreen banner surface.
  *
- * It is composed only on ResultScreen after result proof and all buyer-critical completion
- * controls. No-fill/failure is silent and never alters the core flow.
+ * Debug builds use Google's dedicated demo banner unit. Release builds use the single
+ * production banner unit authorized for this app. It is composed only after result proof
+ * and all buyer-critical completion controls. No-fill/failure is silent and never alters
+ * the core flow.
  */
 @Composable
 internal fun ResultTestBanner() {
@@ -37,7 +39,7 @@ internal fun ResultTestBanner() {
             val adSize = AdSize.getLargeAnchoredAdaptiveBannerAdSize(activity, bannerWidthDp)
             val request =
                 BannerAdRequest.Builder(
-                    AdMobTestConfig.SAMPLE_BANNER_AD_UNIT_ID,
+                    AdMobTestConfig.BANNER_AD_UNIT_ID,
                     adSize
                 ).build()
 
@@ -45,12 +47,12 @@ internal fun ResultTestBanner() {
                 request,
                 object : AdLoadCallback<BannerAd> {
                     override fun onAdLoaded(ad: BannerAd) {
-                        Log.d(TAG, "TEST banner loaded.")
+                        Log.d(TAG, "Banner loaded.")
                     }
 
                     override fun onAdFailedToLoad(adError: LoadAdError) {
                         // Product law: no-fill/error degrades to no-ad behavior.
-                        Log.d(TAG, "TEST banner unavailable: $adError")
+                        Log.d(TAG, "Banner unavailable: $adError")
                     }
                 }
             )
