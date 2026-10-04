@@ -1811,3 +1811,17 @@ Decision:
 proceed with `Create a European regulations message` under the existing bounded provider authorization.
 
 No publication authority is inferred. If a distinct final Publish/Activate/Go live action appears, stop before executing it.
+
+
+## D-121 — Configure three-choice EU consent draft; keep Publish blocked (2026-10-04)
+
+Decision:
+use a three-choice European regulations message draft:
+- Consent ON
+- Manage options ON
+- Do not consent ON
+- Close (do not consent) OFF
+
+Select only Photo Compressor: KB Limit and keep English as the initial default language.
+
+Publication remains blocked pending review of app selection, targeting, privacy-policy requirements, and final message state.
