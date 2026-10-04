@@ -1816,3 +1816,18 @@ Disposition:
 `BLOCKED_PRIVACY_POLICY_URL_REQUIRED_FOR_MESSAGE_PUBLICATION`
 
 Do not use a placeholder URL and do not publish yet.
+
+
+## Privacy Policy URL provided — 2026-10-05
+
+Evidence:
+`evidence/admob/S7_PRIVACY_POLICY_URL_PROVIDED_2026_10_05_v1.0.md`
+
+URL:
+`https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
+
+State:
+`OPERATOR_ATTESTED / EXTERNAL_FETCH_UNVERIFIED`
+
+Next:
+bind this URL in AdMob for Photo Compressor: KB Limit, then review Targeting and final draft. Do not Publish yet.
