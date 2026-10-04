@@ -1825,3 +1825,15 @@ use a three-choice European regulations message draft:
 Select only Photo Compressor: KB Limit and keep English as the initial default language.
 
 Publication remains blocked pending review of app selection, targeting, privacy-policy requirements, and final message state.
+
+
+## D-122 — Block EU message publication until real privacy-policy URL exists (2026-10-04)
+
+Authenticated AdMob UI explicitly requires a privacy policy URL before publishing the European regulations message.
+
+Decision:
+- keep the app selected for draft work;
+- do not publish the message;
+- do not invent or use a placeholder privacy-policy URL;
+- keep fallback consent collection OFF;
+- require a real public privacy-policy URL before publication.
