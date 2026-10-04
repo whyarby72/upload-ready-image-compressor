@@ -1837,3 +1837,14 @@ Decision:
 - do not invent or use a placeholder privacy-policy URL;
 - keep fallback consent collection OFF;
 - require a real public privacy-policy URL before publication.
+
+
+## D-123 — Accept operator-provided Privacy Policy URL for bounded AdMob binding (2026-10-05)
+
+The human provided:
+`https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
+
+Decision:
+accept the URL for the next bounded AdMob configuration step, while retaining verification state `ATTESTED` because public reachability/content compliance was not independently verified in the current chat environment.
+
+This authorizes entering the URL into the existing European regulations message configuration only. It does not authorize final message publication, Play publication, production-ID binding, Artifact Freeze, or release.
