@@ -1666,3 +1666,12 @@ Not authorized by inference:
 
 Status:
 `AUTHORIZED_PROVIDER_UI_EXECUTION_REQUIRED`
+
+
+Execution plan:
+`docs/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_EXECUTION_PLAN_2026_10_04_v1.0.md`
+
+New pre-production evidence debt:
+`BANNER_PLACEMENT_API_MISMATCH_REVIEW_REQUIRED`
+
+The current ResultScreen is scrollable while the S7 TEST banner uses anchored-adaptive sizing. Resolve before real provider IDs are bound into production/release code.
