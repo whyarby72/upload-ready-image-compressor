@@ -1730,3 +1730,13 @@ The provider-side scope is limited to:
 No Play mutation, public linking/release, app-ads.txt publication, mediation, extra ad formats, Firebase Analytics, production code binding, S8, BUILD promotion, Artifact Freeze, or release/publication is authorized.
 
 If AdMob exposes message publication as a distinct final irreversible/commit-style action, stop before that action and obtain explicit approval.
+
+
+## D-113 — Existing AdMob app confirmed; duplicate creation prohibited (2026-10-04)
+
+Authenticated provider screenshot confirms the AdMob app already exists.
+
+Decision:
+`EXISTING_ADMOB_APP_CONFIRMED_DO_NOT_CREATE_DUPLICATE`.
+
+The next bounded action is to record the existing App ID/package from App settings, then create exactly one Banner ad unit. The observed `Requires review` badge is recorded without inferring its cause.
