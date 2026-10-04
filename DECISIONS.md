@@ -1801,3 +1801,13 @@ Decision:
 do not change these advanced settings under the current bounded provider setup. Proceed to the `Messages` tab and configure exactly one European regulations message for this app.
 
 If AdMob exposes a distinct final Publish/Activate/Go live action, stop before it for explicit approval.
+
+
+## D-120 — Proceed from EU message entry screen to message configuration (2026-10-04)
+
+Authenticated AdMob UI is at the European regulations Messages entry screen.
+
+Decision:
+proceed with `Create a European regulations message` under the existing bounded provider authorization.
+
+No publication authority is inferred. If a distinct final Publish/Activate/Go live action appears, stop before executing it.
