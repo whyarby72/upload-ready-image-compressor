@@ -1769,3 +1769,13 @@ Decision:
 accept the App ID as provider evidence and defer provider package/store linkage until a supported public listing is available. The canonical source applicationId remains `com.afradadmedia.reducephotosize`.
 
 Do not use App store details > Add merely to force linkage to the current private/internal Play listing.
+
+
+## D-116 — Select Banner only for first AdMob ad unit (2026-10-04)
+
+Authenticated AdMob UI shows multiple ad formats.
+
+Decision:
+select only `Banner` under the current bounded provider scope.
+
+Interstitial, rewarded interstitial, rewarded, native advanced, and app-open remain prohibited for this product stage.
