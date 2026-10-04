@@ -42,7 +42,7 @@
     "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "EU_MESSAGE_EDITOR_OPEN_CONFIGURATION_IN_PROGRESS",
+    "status": "EU_MESSAGE_DRAFT_BLOCKED_FOR_PUBLICATION_PRIVACY_POLICY_URL_MISSING",
     "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
     "target_package": "com.afradadmedia.reducephotosize",
@@ -110,7 +110,11 @@
       "close_do_not_consent": false,
       "publish": false,
       "targeting_review_required": true
-    }
+    },
+    "eu_message_app_selected": true,
+    "privacy_policy_url": "MISSING",
+    "fallback_consent_collection": false,
+    "privacy_policy_blocker_evidence_ref": "evidence/admob/S7_EU_MESSAGE_PRIVACY_POLICY_URL_BLOCKER_2026_10_04_v1.0.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -166,13 +170,14 @@
     "Current ResultScreen is scrollable but S7 uses anchored adaptive banner sizing; review inline-adaptive sizing before production-ID binding.",
     "Provider package/store identity is not yet linked because the Play listing is still private/internal.",
     "European regulations message has not yet been created/configured.",
-    "AdMob Policy issues banner is visible and requires separate review before publication/readiness."
+    "AdMob Policy issues banner is visible and requires separate review before publication/readiness.",
+    "A real public privacy-policy URL is required by AdMob before the European regulations message can be published."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "In the EU message editor: select only Photo Compressor: KB Limit, rename the message, enable Do not consent, keep Consent and Manage options on, keep Close off, then capture Setup and Targeting state before any Publish action.",
+  "next_action": "Do not publish the European regulations message. Keep fallback consent collection off. Either continue draft configuration without publication if allowed, or separately authorize creation/binding of a real public privacy-policy URL.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
