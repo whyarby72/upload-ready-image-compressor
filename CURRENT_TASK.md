@@ -1,95 +1,88 @@
 # CURRENT_TASK.md
 
-Task ID: S7_FAST_LANE_ADMOB_PRIVACY_POSTPUBLISH
-Owner: HUMAN_PROVIDER_ACTION + CHAT_AUDIT
+Task ID: S7_FAST_LANE_ADMOB_RUNTIME_VALIDATION
+Owner: HUMAN_RUNTIME_EXECUTION + CHAT_AUDIT
 Reviewer: CHAT
-Stage: S7_ADMOB_PRIVACY_MESSAGE_PUBLISHED
+Stage: S7_PRODUCTION_ID_BOUND_CI_PASS_RUNTIME_PENDING
 Priority: HIGH
-Status: EU_MESSAGE_PUBLISHED / PRODUCTION_ID_BINDING_AND_RUNTIME_VALIDATION_OPEN
+Status: SOURCE_AND_CI_PASS / POSTPUBLISH_RUNTIME_VALIDATION_PENDING
 
-## Fast-lane mode
+## Authorization
 
 Approval ref:
-`USER_OPTION_1_2026-10-05_ACTIVATE_FAST_LANE_SIMPLE_APP`
+`USER_OPTION_1_2026-10-05_S7_PRODUCTION_ADMOB_ID_BINDING_POSTPUBLISH_UMP_RUNTIME_VALIDATION`
 
-Fast-lane remains active for reversible preparation and batched review. Human approval boundaries for production credentials, release, Artifact Freeze, and publication remain unchanged.
+Authorized scope:
+`S7 PRODUCTION ADMOB ID BINDING + POST-PUBLISH UMP RUNTIME VALIDATION`
 
-## Current verified provider state — 2026-10-05
+No new ad unit creation and no Play production release are authorized.
 
-Product:
-`Photo Compressor: KB Limit`
-
-Package:
-`com.afradadmedia.reducephotosize`
+## Bound source state
 
 Branch:
 `task/TASK-S7-001`
 
-AdMob app:
-`CREATED`
+Production-ID binding commit:
+`91b90466e0d5df6f61b5e00c12130264f85ee3e1`
 
-Exactly one Banner unit:
-`CREATED`
+Implementation:
+- production AdMob App ID bound;
+- release variant uses the single existing production Banner ID;
+- debug variant uses Google's demo Banner ID for safe test traffic;
+- published UMP message remains provider-backed through the production App ID.
 
-European regulations message:
-`Photo Compressor EU Consent v1`
+## Deterministic CI closure — PASS
 
-Observed provider result:
-`PUBLISHED`
+Evidence:
+`evidence/admob/S7_PRODUCTION_ID_BINDING_CI_CLOSURE_2026_10_05_v1.0.md`
 
-Screenshot-observed fields:
-- message name: Photo Compressor EU Consent v1;
-- language: English (en);
-- app: Photo Compressor: KB Limit;
-- last modified: Oct 5, 2026;
-- status: Published;
-- publish toggle: enabled.
+GitHub Actions run:
+`37233806993`
 
-Prior configured message state:
-- Consent: ON;
-- Manage options: ON;
-- Do not consent: ON;
-- Close (do not consent): OFF;
-- targeting: Countries subject to GDPR (EEA, UK, and Switzerland);
-- country-selection intent: EEA + UK + Switzerland ON, Everywhere else OFF;
-- Privacy Policy URL attached to selected app;
-- operator reported `DRAFT_SAVED` and `PRIVACY_URL_OPENS`.
+Job:
+`111528832328`
 
-Evidence classification:
-- message publication state: SCREENSHOT_OBSERVED_PROVIDER_STATE;
-- privacy URL reachability: HUMAN_ATTESTED_BROWSER_CHECK;
-- draft-save result: HUMAN_ATTESTED_PROVIDER_ACTION.
+PASS:
+- assembleDebug;
+- assembleRelease;
+- testDebugUnitTest;
+- lintDebug;
+- CI_VERIFY_PASS.
 
-Governance note:
-The prior repo state required explicit scoped approval before the provider Publish action. No separate text approval token was recorded in chat before the screenshot showing Published. The provider action has already occurred, so the durable source of truth records the observed state without retroactively asserting pre-action authorization.
+Disposition:
+`PASS_SOURCE_AND_CI`
 
-## Remaining S7 work
+## Runtime validation still required
 
-Open:
-1. bind production AdMob App ID + Banner unit ID into the authorized release source;
-2. build/test with production IDs while retaining test-device safeguards where applicable;
-3. verify UMP post-publication behavior in a real/provider-backed configuration:
-   - consent required path;
-   - do-not-consent path;
-   - manage/privacy-options path;
-   - ad request gating through current consent state;
-   - banner success/failure/offline degradation;
-4. run post-AdMob privacy/reconciliation audit;
-5. update Data Safety / ads disclosures as required before broader Play release.
+Run one short real-device validation using the debug/provider-backed path:
+
+1. launch from a fresh app state;
+2. verify core photo-compression flow remains usable;
+3. exercise the UMP consent-required path if presented;
+4. verify `Do not consent` can be selected when the message is shown;
+5. verify Privacy choices / manage-options path when UMP reports it required;
+6. reach ResultScreen and confirm demo Banner behavior does not obstruct result proof, Save, Share, or Compress another;
+7. test offline/no-ad degradation;
+8. stop after recording the concise result.
+
+Do not deliberately generate clicks on ads.
 
 ## Authority boundary
 
 Still NOT authorized:
-- production AdMob ID binding;
-- source-code mutation for production IDs;
 - creating additional ad units;
-- closed/open/production Play promotion;
+- live-ad testing through deliberate impressions/clicks outside normal validation;
+- Play closed/open/production promotion;
 - Artifact Freeze;
 - production release/publication of the Android app.
 
 ## Next action
 
-Human decision required for:
-`S7 PRODUCTION ADMOB ID BINDING + POST-PUBLISH UMP RUNTIME VALIDATION`
-
-If authorized, bind only the already-created App ID and exactly one Banner unit to the existing S7 implementation, then run artifact-bound build/test/runtime verification. No new ad unit creation and no Play production release.
+Human runs the short real-device runtime checklist and returns only:
+- `CORE_PASS` or failure;
+- `UMP_SHOWN` / `UMP_NOT_SHOWN`;
+- `DO_NOT_CONSENT_PASS` / not observed;
+- `PRIVACY_CHOICES_PASS` / not observed;
+- `BANNER_NONOBSTRUCTIVE_PASS` / not observed;
+- `OFFLINE_PASS` / failure;
+- any unexpected warning/error.
