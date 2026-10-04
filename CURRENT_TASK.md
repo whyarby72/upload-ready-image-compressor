@@ -1831,3 +1831,25 @@ State:
 
 Next:
 bind this URL in AdMob for Photo Compressor: KB Limit, then review Targeting and final draft. Do not Publish yet.
+
+
+## Privacy Policy URL supplied — 2026-10-05
+
+Evidence:
+`evidence/admob/S7_PRIVACY_POLICY_URL_SUPPLIED_2026_10_05_v1.0.md`
+
+URL:
+`https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
+
+State:
+`ATTESTED_PENDING_INDEPENDENT_FETCH`
+
+Current editor:
+- app selected;
+- Consent ON;
+- Manage options ON;
+- Do not consent not yet configured;
+- Close (do not consent) OFF.
+
+Next:
+configure three-choice draft, review Targeting, save draft, stop before Publish.
