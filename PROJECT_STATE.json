@@ -42,7 +42,7 @@
     "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "AUTHORIZED_PROVIDER_UI_EXECUTION_REQUIRED",
+    "status": "EXISTING_ADMOB_APP_CONFIRMED_NEXT_RECORD_APP_ID_AND_CREATE_ONE_BANNER",
     "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
     "target_package": "com.afradadmedia.reducephotosize",
@@ -52,14 +52,19 @@
       "location": "ResultScreen"
     },
     "target_privacy_message": "EUROPEAN_REGULATIONS_ONE_MESSAGE_CONFIGURED",
-    "provider_execution": "NOT_RUN",
+    "provider_execution": "IN_PROGRESS_EXISTING_APP_FOUND",
     "provider_mutation_authorized": true,
     "play_mutation_authorized": false,
     "production_code_binding_authorized": false,
     "hard_stop": "STOP_AFTER_UNPUBLISHED_APP_ONE_BANNER_AND_EU_MESSAGE_CONFIGURATION_ARE_RECORDED",
     "execution_plan_ref": "docs/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_EXECUTION_PLAN_2026_10_04_v1.0.md",
     "provider_ui_execution": "REQUIRES_AUTHENTICATED_ADMOB_UI",
-    "banner_placement_api_review": "REQUIRED_BEFORE_PRODUCTION_ID_BINDING"
+    "banner_placement_api_review": "REQUIRED_BEFORE_PRODUCTION_ID_BINDING",
+    "existing_admob_app_confirmed": true,
+    "duplicate_app_creation": "PROHIBITED",
+    "app_status_visible": "REQUIRES_REVIEW",
+    "first_ad_unit_state": "NOT_CREATED_UI_PROMPTS_CREATE_FIRST_AD_UNIT",
+    "existing_app_evidence_ref": "evidence/admob/S7_PROVIDER_EXISTING_APP_CONFIRMED_2026_10_04_v1.0.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -112,14 +117,14 @@
     "Explicit ad failure/no-fill callback path remains unproven: RT-07 NOT_OBSERVED.",
     "Current Play app is internal/private and cannot yet be linked to AdMob as a published Android app.",
     "Final app-ads.txt verification requires a public developer website linked from the public store listing.",
-    "Authorized bounded AdMob provider setup has not yet been executed in the authenticated AdMob UI.",
-    "Current ResultScreen is scrollable but S7 uses anchored adaptive banner sizing; review inline-adaptive sizing before production-ID binding."
+    "Current ResultScreen is scrollable but S7 uses anchored adaptive banner sizing; review inline-adaptive sizing before production-ID binding.",
+    "Existing AdMob app confirmed; real App ID has not yet been recorded into project evidence."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Execute the bounded setup in authenticated AdMob UI using the execution plan. Stop if an existing app candidate is found or before any distinct message Publish/Activate action.",
+  "next_action": "Open AdMob App settings for the existing app, record the AdMob App ID/package identity, then create exactly one Banner ad unit named ResultScreen_Banner_v1. Do not create another app.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
