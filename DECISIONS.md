@@ -1779,3 +1779,15 @@ Decision:
 select only `Banner` under the current bounded provider scope.
 
 Interstitial, rewarded interstitial, rewarded, native advanced, and app-open remain prohibited for this product stage.
+
+
+## D-117 — Approve first ResultScreen banner configuration (2026-10-04)
+
+For the one authorized Banner ad unit:
+- use name `ResultScreen_Banner_v1`;
+- leave Partner bidding unchecked;
+- keep both banner ad types enabled;
+- retain Google optimized automatic refresh;
+- retain Google optimized eCPM floor with All prices.
+
+This decision authorizes creation of exactly this single banner unit within the existing bounded provider scope.
