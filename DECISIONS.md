@@ -1740,3 +1740,19 @@ Decision:
 `EXISTING_ADMOB_APP_CONFIRMED_DO_NOT_CREATE_DUPLICATE`.
 
 The next bounded action is to record the existing App ID/package from App settings, then create exactly one Banner ad unit. The observed `Requires review` badge is recorded without inferring its cause.
+
+
+## D-114 — Correct AdMob app creation interpretation (2026-10-04)
+
+The human clarified that the app shown in the prior screenshot was created moments earlier as part of the authorized bounded provider setup.
+
+Decision:
+the prior interpretation in D-113 that the app pre-existed this setup is `SUPERSEDED`.
+
+Current accepted state:
+`ADMOB_APP_CREATED_WITHIN_AUTHORIZED_SCOPE`.
+
+Next bounded action:
+record the newly generated App ID/package from App settings, then create exactly one Banner ad unit for ResultScreen.
+
+No broader provider, Play, production-ID binding, release, or publication authority is added by this correction.
