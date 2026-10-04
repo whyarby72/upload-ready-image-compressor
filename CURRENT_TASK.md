@@ -1768,3 +1768,15 @@ Current action:
 do not alter the advanced settings during this bounded provider setup. Move to `Messages` and create/configure the single European regulations message.
 
 A Policy issues banner is visible and is recorded for separate review; it does not by itself authorize any policy-center mutation.
+
+
+## European regulations message entry screen — READY — 2026-10-04
+
+Evidence:
+`evidence/admob/S7_EU_MESSAGE_ENTRY_SCREEN_2026_10_04_v1.0.md`
+
+Next:
+click `Create a European regulations message` and continue configuration for this app.
+
+Boundary:
+stop before any distinct final `Publish` / `Activate` / `Go live` action.
