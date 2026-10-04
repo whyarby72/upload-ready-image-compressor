@@ -1791,3 +1791,13 @@ For the one authorized Banner ad unit:
 - retain Google optimized eCPM floor with All prices.
 
 This decision authorizes creation of exactly this single banner unit within the existing bounded provider scope.
+
+
+## D-119 — Preserve current European-regulations settings; proceed to message creation (2026-10-04)
+
+The authenticated Settings screen contains account-wide/privacy-significant controls including ad partners, legitimate interest defaults, consent mode, special feature 2, consent syncing, and purposes for own use.
+
+Decision:
+do not change these advanced settings under the current bounded provider setup. Proceed to the `Messages` tab and configure exactly one European regulations message for this app.
+
+If AdMob exposes a distinct final Publish/Activate/Go live action, stop before it for explicit approval.
