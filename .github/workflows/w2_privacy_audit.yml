@@ -23,50 +23,66 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Build exact debug artifact
+      - name: Build debug and release artifacts
         run: |
           set -euo pipefail
-          ./gradlew --no-daemon :app:assembleDebug :app:processDebugManifest
+          ./gradlew --no-daemon             :app:assembleDebug :app:processDebugManifest             :app:assembleRelease :app:processReleaseManifest
 
       - name: Capture resolved runtime dependencies
         run: |
           set -euo pipefail
           mkdir -p w2-evidence
-          ./gradlew --no-daemon :app:dependencies --configuration debugRuntimeClasspath > w2-evidence/debugRuntimeClasspath.txt
+          ./gradlew --no-daemon :app:dependencies --configuration debugRuntimeClasspath             > w2-evidence/debugRuntimeClasspath.txt
+          ./gradlew --no-daemon :app:dependencies --configuration releaseRuntimeClasspath             > w2-evidence/releaseRuntimeClasspath.txt
 
-      - name: Capture merged manifest and artifact metadata
+      - name: Capture artifact and merged-manifest evidence
         run: |
           set -euo pipefail
           mkdir -p w2-evidence
 
-          APK="app/build/outputs/apk/debug/app-debug.apk"
-          test -f "$APK"
-          cp "$APK" w2-evidence/app-debug.apk
-          sha256sum "$APK" | tee w2-evidence/app-debug.sha256
+          capture_variant() {
+            VARIANT="$1"
+            APK="$2"
+            MANIFEST_PATTERN="$3"
 
-          MANIFEST="$(find app/build/intermediates -type f -name AndroidManifest.xml | grep -E 'merged_manifest|merged_manifests|processDebugManifest' | head -n 1 || true)"
-          if [ -z "$MANIFEST" ]; then
-            echo "Merged manifest not found" >&2
-            find app/build/intermediates -type f -name AndroidManifest.xml -print >&2 || true
-            exit 2
-          fi
-          cp "$MANIFEST" w2-evidence/AndroidManifest-merged-debug.xml
+            test -f "$APK"
+            cp "$APK" "w2-evidence/$(basename "$APK")"
+            sha256sum "$APK" | tee "w2-evidence/${VARIANT}-apk.sha256"
+
+            MANIFEST="$(find app/build/intermediates -type f -name AndroidManifest.xml               | grep -E "$MANIFEST_PATTERN" | head -n 1 || true)"
+            if [ -z "$MANIFEST" ]; then
+              echo "Merged manifest not found for $VARIANT" >&2
+              find app/build/intermediates -type f -name AndroidManifest.xml -print >&2 || true
+              exit 2
+            fi
+
+            cp "$MANIFEST" "w2-evidence/AndroidManifest-merged-${VARIANT}.xml"
+
+            grep -oE '<uses-permission[^>]*android:name="[^"]+"' "$MANIFEST"               | sed -E 's/.*android:name="([^"]+)".*/\1/'               | sort -u               > "w2-evidence/${VARIANT}-merged-manifest-permissions.txt" || true
+
+            grep -oE '<uses-feature[^>]*android:name="[^"]+"' "$MANIFEST"               | sed -E 's/.*android:name="([^"]+)".*/\1/'               | sort -u               > "w2-evidence/${VARIANT}-merged-manifest-features.txt" || true
+
+            grep -E 'com.google.android.gms.ads.APPLICATION_ID|provider|service|receiver|activity' "$MANIFEST"               > "w2-evidence/${VARIANT}-merged-manifest-components-excerpt.txt" || true
+
+            {
+              echo "VARIANT=$VARIANT"
+              echo "APK_PATH=$APK"
+              echo "APK_BYTES=$(stat -c %s "$APK")"
+              echo "MERGED_MANIFEST_SOURCE=$MANIFEST"
+            } > "w2-evidence/${VARIANT}-BUILD_METADATA.txt"
+          }
+
+          capture_variant             debug             app/build/outputs/apk/debug/app-debug.apk             'merged_manifest|merged_manifests|processDebugManifest'
+
+          capture_variant             release             app/build/outputs/apk/release/app-release-unsigned.apk             'merged_manifest|merged_manifests|processReleaseManifest'
 
           {
             echo "SOURCE_COMMIT=$(git rev-parse HEAD)"
             echo "SOURCE_BRANCH=$(git branch --show-current)"
-            echo "APK_PATH=$APK"
-            echo "APK_BYTES=$(stat -c %s "$APK")"
-            echo "MERGED_MANIFEST_SOURCE=$MANIFEST"
+            echo "BASE_PRODUCT_SOURCE_COMMIT=baf63bbc9c793b135796cc70de61013bccd26fca"
             echo "JAVA_VERSION=$(java -version 2>&1 | head -n 1)"
             echo "GRADLE_VERSION=$(./gradlew --version | awk '/Gradle / {print $2; exit}')"
           } > w2-evidence/BUILD_METADATA.txt
-
-          grep -oE '<uses-permission[^>]*android:name="[^"]+"' "$MANIFEST"             | sed -E 's/.*android:name="([^"]+)".*/\1/'             | sort -u             > w2-evidence/merged-manifest-permissions.txt || true
-
-          grep -oE '<uses-feature[^>]*android:name="[^"]+"' "$MANIFEST"             | sed -E 's/.*android:name="([^"]+)".*/\1/'             | sort -u             > w2-evidence/merged-manifest-features.txt || true
-
-          grep -E 'com.google.android.gms.ads.APPLICATION_ID|provider|service|receiver|activity' "$MANIFEST"             > w2-evidence/merged-manifest-components-excerpt.txt || true
 
       - name: Static privacy assertions
         run: |
@@ -74,26 +90,57 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
 
-          manifest = Path("w2-evidence/AndroidManifest-merged-debug.xml").read_text(encoding="utf-8")
-          deps = Path("w2-evidence/debugRuntimeClasspath.txt").read_text(encoding="utf-8")
+          results = []
 
-          checks = {
-              "contains_gma_next_gen_1_5_0": "ads-mobile-sdk:1.5.0" in deps,
-              "contains_ump_4_0_0": "user-messaging-platform:4.0.0" in deps,
-              "contains_legacy_play_services_ads": "play-services-ads:" in deps or "play-services-ads-lite:" in deps,
-              "manifest_has_sample_app_id": "ca-app-pub-3940256099942544~3347511713" in manifest,
-              "manifest_has_production_app_id": "ca-app-pub-8084313520610270~1492953098" in manifest,
-          }
+          for variant in ("debug", "release"):
+              manifest = Path(f"w2-evidence/AndroidManifest-merged-{variant}.xml").read_text(encoding="utf-8")
+              deps = Path(f"w2-evidence/{variant}RuntimeClasspath.txt").read_text(encoding="utf-8")
 
-          lines = [f"{k}={'YES' if v else 'NO'}" for k,v in checks.items()]
-          Path("w2-evidence/STATIC_ASSERTIONS.txt").write_text("\n".join(lines)+"\n", encoding="utf-8")
+              checks = {
+                  "contains_gma_next_gen_1_5_0": "ads-mobile-sdk:1.5.0" in deps,
+                  "contains_ump_4_0_0": "user-messaging-platform:4.0.0" in deps,
+                  "contains_legacy_play_services_ads": "play-services-ads:" in deps or "play-services-ads-lite:" in deps,
+                  "manifest_has_sample_app_id": "ca-app-pub-3940256099942544~3347511713" in manifest,
+                  "manifest_has_production_app_id": "ca-app-pub-8084313520610270~1492953098" in manifest,
+                  "manifest_has_camera": "android.permission.CAMERA" in manifest,
+                  "manifest_has_microphone": "android.permission.RECORD_AUDIO" in manifest,
+                  "manifest_has_location": "android.permission.ACCESS_FINE_LOCATION" in manifest or "android.permission.ACCESS_COARSE_LOCATION" in manifest,
+                  "manifest_has_contacts": "android.permission.READ_CONTACTS" in manifest,
+                  "manifest_has_read_media_images": "android.permission.READ_MEDIA_IMAGES" in manifest,
+                  "manifest_has_broad_storage": "android.permission.READ_EXTERNAL_STORAGE" in manifest or "android.permission.WRITE_EXTERNAL_STORAGE" in manifest,
+              }
 
-          assert checks["contains_gma_next_gen_1_5_0"]
-          assert checks["contains_ump_4_0_0"]
-          assert not checks["contains_legacy_play_services_ads"]
-          assert checks["manifest_has_sample_app_id"]
-          assert not checks["manifest_has_production_app_id"]
+              for key, value in checks.items():
+                  results.append(f"{variant}.{key}={'YES' if value else 'NO'}")
+
+              assert checks["contains_gma_next_gen_1_5_0"]
+              assert checks["contains_ump_4_0_0"]
+              assert not checks["contains_legacy_play_services_ads"]
+              assert checks["manifest_has_sample_app_id"]
+              assert not checks["manifest_has_production_app_id"]
+              assert not checks["manifest_has_camera"]
+              assert not checks["manifest_has_microphone"]
+              assert not checks["manifest_has_location"]
+              assert not checks["manifest_has_contacts"]
+              assert not checks["manifest_has_read_media_images"]
+              assert not checks["manifest_has_broad_storage"]
+
+          Path("w2-evidence/STATIC_ASSERTIONS.txt").write_text("\n".join(results)+"\n", encoding="utf-8")
+          print("\n".join(results))
           PY
+
+      - name: Print privacy evidence summary
+        run: |
+          set -euo pipefail
+          echo "=== DEBUG PERMISSIONS ==="
+          cat w2-evidence/debug-merged-manifest-permissions.txt
+          echo "=== RELEASE PERMISSIONS ==="
+          cat w2-evidence/release-merged-manifest-permissions.txt
+          echo "=== STATIC ASSERTIONS ==="
+          cat w2-evidence/STATIC_ASSERTIONS.txt
+          echo "=== ARTIFACT HASHES ==="
+          cat w2-evidence/debug-apk.sha256
+          cat w2-evidence/release-apk.sha256
 
       - name: Upload W2 evidence
         uses: actions/upload-artifact@v4
