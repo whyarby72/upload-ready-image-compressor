@@ -1739,3 +1739,21 @@ All other visible formats remain out of scope.
 
 Next:
 select Banner and capture Configure ad unit settings before final Create.
+
+
+## Banner configuration screen reviewed — 2026-10-04
+
+Evidence:
+`evidence/admob/S7_BANNER_CONFIG_SCREEN_2026_10_04_v1.0.md`
+
+Approved:
+- Name: `ResultScreen_Banner_v1`
+- Partner bidding: OFF
+- Text/image/rich media: ON
+- Video: ON
+- Automatic refresh: Google optimized
+- eCPM floor: Google optimized
+- Method: All prices
+
+Next:
+create this one banner unit and capture its generated ID.
