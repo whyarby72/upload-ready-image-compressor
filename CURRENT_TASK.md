@@ -1675,3 +1675,21 @@ New pre-production evidence debt:
 `BANNER_PLACEMENT_API_MISMATCH_REVIEW_REQUIRED`
 
 The current ResultScreen is scrollable while the S7 TEST banner uses anchored-adaptive sizing. Resolve before real provider IDs are bound into production/release code.
+
+
+## Existing AdMob app safety precheck — PASS — 2026-10-04
+
+Evidence:
+`evidence/admob/S7_PROVIDER_EXISTING_APP_CONFIRMED_2026_10_04_v1.0.md`
+
+Authenticated AdMob screenshot confirms:
+- `Photo Compressor: KB Limit` already exists;
+- Android;
+- status `Requires review`;
+- UI says `Create your first ad unit`.
+
+Decision:
+`DO_NOT_CREATE_DUPLICATE_APP`.
+
+Next:
+open App settings, record the existing AdMob App ID/package, then create exactly one ResultScreen banner unit.
