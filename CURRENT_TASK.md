@@ -67,3 +67,27 @@ This approval does NOT authorize:
 - Play track promotion;
 - Artifact Freeze;
 - Android app release/publication.
+
+
+## Scoped publication approval — 2026-10-05
+
+Human selection:
+`USER_OPTION_1_2026-10-05_AUTHORIZE_PUBLISH_CURRENT_CHANGES_EU_CONSENT_ONLY`
+
+Explicitly authorized action:
+`PUBLISH CURRENT CHANGES TO PHOTO COMPRESSOR EU CONSENT V1 ONLY`
+
+Permitted:
+- click `Publish changes` for the current AdMob European regulations message;
+- wait for provider confirmation;
+- return to message list/status and record resulting published state.
+
+Not authorized:
+- source-code changes;
+- AdMob app/ad-unit creation;
+- production AdMob ID changes;
+- Play track promotion;
+- Artifact Freeze;
+- Android app release/publication.
+
+After provider confirmation, stop and return evidence to CHAT for reconciliation closure.
