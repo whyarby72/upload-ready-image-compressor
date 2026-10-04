@@ -109,3 +109,31 @@ Chat runtime limitation:
 `NO_DIRECT_CODEX_RUNNER_EXPOSED_IN_THIS_CHAT`
 
 Therefore execution is ready for Codex Desktop/CLI attached to this repository and smartphone. CHAT must not claim smartphone-runtime PASS until Codex returns evidence.
+
+
+## Codex smartphone runtime attempt — BLOCKED — 2026-10-05
+
+Terminal disposition:
+`BLOCKED_S7_POSTPUBLISH_RUNTIME_NO_ADB_DEVICE`
+
+Reported by Codex:
+- `adb devices -l` returned no physical device;
+- UMP: NOT_OBSERVED;
+- Do not consent: NOT_OBSERVED;
+- Privacy choices: NOT_OBSERVED;
+- Banner: NOT_OBSERVED;
+- Offline: NOT_RUN;
+- S7 worktree remained clean;
+- HEAD remained `1563b08d3a9d88df2908eedf58d8246642aa5b0d`;
+- no temporary UMP debug patch remained;
+- original S5 working tree was not modified;
+- Android SDK availability/path was checked during retry, but the terminal blocker remained lack of an ADB device.
+
+Evidence classification:
+`CODEX_REPORTED_RUNTIME_BLOCKER / NO_DEVICE_ARTIFACT_EVIDENCE`
+
+Interpretation:
+- source + deterministic CI remain PASS;
+- real-device S7 runtime validation is still OPEN;
+- no source rollback is required;
+- next action is device connectivity recovery only, then rerun the existing Codex prompt.
