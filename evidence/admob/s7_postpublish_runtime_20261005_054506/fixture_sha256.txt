@@ -1,0 +1,1 @@
+de0b90cdf105ff671ff6945f7f5908a8b29c22c019f982e695032196f297018e  app/src/androidTest/assets/fixtures/ratio_1x1.jpg

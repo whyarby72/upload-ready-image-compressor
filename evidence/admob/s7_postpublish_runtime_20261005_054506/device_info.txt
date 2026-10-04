@@ -1,0 +1,7 @@
+git_head=ca4f528b7c4f9a470ea7e22e629e13db4f9d07eb
+branch=codex/s7-runtime
+device_serial=RR8N805R27P
+model=SM-N980F
+android=13
+api=33
+package=com.afradadmedia.reducephotosize.s7test

@@ -1,0 +1,183 @@
+--------- beginning of main
+10-05 05:45:05.484  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.484  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.484  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.484  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.501  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.501  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.501  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.502  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.519  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.519  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.519  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.519  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.538  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.538  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.538  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.538  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.551  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.551  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.551  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.551  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.567  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.567  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.567  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.567  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.584  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.584  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.584  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.584  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.601  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.601  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.601  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.601  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.617  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 68, real height = 358
+10-05 05:45:05.617  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+10-05 05:45:05.617  1710  1710 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+10-05 05:45:05.617  1710  1710 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 290, bottom margin = 0, real height = 358
+10-05 05:45:05.620  1710  1710 D SecQSFragmentAnimator_QSCinema: [panelExpanding:false] qsExpanded:false, qsFullyExpanded:false, qsExpansionPosition:0, qsExpandImmediate:false, qsCollapsingWhilePanelClosing:false &&&  panelExpansionFraction:1, panelExpansionDragDownPxAmount:922 ***   panelExpanded:true, panelExpanding:true %%%   barState:1, overScrolling:false, userId:-1, isRunningPanelOnHeightAnimation:false
+10-05 05:45:05.621  1710  1710 V SecQSFragmentAnimatorBase: onPanelOpened
+10-05 05:45:05.621  1710  1710 V QsExpandAnimator: onPanelOpened 
+10-05 05:45:05.623  1710  1710 V QsExpandAnimator: updateAnimators
+10-05 05:45:05.623  1710  1710 V QsExpandAnimator: clearAnimationState 
+10-05 05:45:05.625  1710  1710 V QsExpandAnimator: updateViews
+10-05 05:45:05.626  1710  1710 V QsExpandAnimator: updateTileAnimator
+10-05 05:45:05.626  1710  1710 V QsExpandAnimator: updateHeaderAnimator
+10-05 05:45:05.627  1710  1710 V QsExpandAnimator: updateBarAnimator
+10-05 05:45:05.627  1710  1710 V QsExpandAnimator: setQsExpansionPosition 0.0
+10-05 05:45:05.627  1710  1710 V QsExpandAnimator: onAnimationAtStart
+10-05 05:45:05.653  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.0072040088]
+10-05 05:45:05.654  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.91399384]
+10-05 05:45:05.654  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.05528177]
+10-05 05:45:05.654  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 0.913577 msecs
+10-05 05:45:05.656  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.553693 msecs
+10-05 05:45:05.657  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.292923 msecs
+10-05 05:45:05.700  1710  1710 I KeyguardFingerprint: Waiting window focus change
+10-05 05:45:05.700  1710  1710 D KeyguardFingerprint: shouldListenForFingerprint ( isFingerprintEnabled = true , mKeyguardIsVisible = true , mDeviceInteractive = false , mBouncerIsOrWillBeShowing = false , mBouncerFullyShown = false , mGoingToSleep = false , mSwitchingUser = false , mIsDreamingForBiometrics = true , mKeyguardUnlocking = false , mKeyguardGoingAway = false , mKeyguardShowing = true , mKeyguardOccluded = false , mSystemReady = true , mHasFocus = true
+10-05 05:45:05.701  1710  1710 D KeyguardFingerprint: updateFingerprintListeningState#mFingerprintRunningState=1 shouldListenForFingerprint=true isUdfpsEnrolled=false bioType : 257
+--------- beginning of system
+10-05 05:45:05.825  1203  1203 D PowerManagerService: [api] release WakeLock DRAW_WAKE_LOCK                 'Window:NotificationShade' ACQ=-743ms (uid=1000 pid=1203 ws=WorkSource{10044 com.android.systemui} displayId=-1 lock=9c77eae acqCnt=25)
+10-05 05:45:05.826  1203  1203 D PowerManagerService: displayReady: false groupId=0
+10-05 05:45:05.826  1203  1309 D DisplayPowerController[0]: animateScreenStateChange: target=4, mLogicalDisplay.isEnabled()=true
+10-05 05:45:05.830  1203  1309 D PowerManagerService: [PWL] sb acquire: PowerManagerService.Display
+10-05 05:45:05.832  1203  1299 D BatteryExternalStatsWorker: update stats : screen-state (1)
+10-05 05:45:05.833  1203  1650 D DisplayManagerService: !@display_state requestDisplayStateInternal: DOZE -> DOZE_SUSPEND displayId=0
+10-05 05:45:05.833  1203  1650 D SemInputDeviceManagerService: currentDisplayState[1]:DOZE(3)
+10-05 05:45:05.833  1203  1299 D BatteryExternalStatsWorker: Update CPU state
+10-05 05:45:05.834  1203  1299 D BatteryExternalStatsWorker: mStats lock released
+10-05 05:45:05.834  1203  1299 D BatteryExternalStatsWorker: done updateExternalStatsLocked
+10-05 05:45:05.834  1203  1650 D SemInputDeviceManagerService: EARLY: Logical: DOZE_SUSPEND(4) Physical: DOZE_SUSPEND(4) [Using: DOZE_SUSPEND(4)] displayType: 1
+10-05 05:45:05.834  1203  1650 D LocalDisplayAdapter: notifyStateChangeStart: com.samsung.android.hardware.secinputdev.SemInputDeviceManagerService$8@536590c took 1 ms
+10-05 05:45:05.834  1203  1650 D LocalDisplayAdapter: !@display_state: DOZE -> DOZE_SUSPEND (id:4633128672291735937)
+10-05 05:45:05.835   857   857 D SurfaceFlinger: Setting power mode 3 on display 4633128672291735937
+10-05 05:45:05.835   780   780 E display : DOZE or Power off called twice, mPowerModeState : 1
+10-05 05:45:05.835   780   780 D display : setPowerMode:: FBIOBLANK mode(3), blank(-1)
+10-05 05:45:05.835   780   780 D display : setPowerMode:: S3CFB_POWER_MODE mode(3), blank(-1)
+10-05 05:45:05.836   857   857 D SurfaceFlinger: Finished setting power mode 3 on display 4633128672291735937
+10-05 05:45:05.836  1203  1281 I DisplayDeviceRepository: Display device changed state: "Built-in Screen", DOZE_SUSPEND
+10-05 05:45:05.837  1203  1650 D LocalDisplayAdapter: !@display_state: DOZE_SUSPEND took 3 ms
+10-05 05:45:05.837  1203  1650 D SemInputDeviceManagerService: currentDisplayState[1]:DOZE_SUSPEND(4)
+10-05 05:45:05.837  1203  1650 D SemInputDeviceManagerService: LATE: Logical: DOZE_SUSPEND(4) Physical: DOZE_SUSPEND(4) [Using: DOZE_SUSPEND(4)] displayType: 1
+10-05 05:45:05.837  1203  1650 D LocalDisplayAdapter: notifyStateChangeFinish: com.samsung.android.hardware.secinputdev.SemInputDeviceManagerService$8@536590c took 0 ms
+10-05 05:45:05.838  1203  1650 D DisplayPowerController[0]: setActualDisplayState: DOZE -> DOZE_SUSPEND
+10-05 05:45:05.839  1203  1309 D DisplayPowerController[0]: animateScreenStateChange: target=4, mLogicalDisplay.isEnabled()=true
+10-05 05:45:05.839  1203  1309 D DisplayPowerController[0]: animateScreenStateChange: target=4, mLogicalDisplay.isEnabled()=true
+10-05 05:45:05.842  2596  2596 I BSS_SysUiClient: handleDisplayChanged: 4
+10-05 05:45:05.844  2596  2596 I BSS_InDisplaySensorWindow: handleScreenEvent : false, false, false
+10-05 05:45:05.846  1710  1710 D DisplayLifecycle: updateDisplay id = 0
+10-05 05:45:05.847  1203  1309 D PowerManagerService: displayReady: true groupId=0
+10-05 05:45:05.848  1203  1309 D PowerManagerService: [PWL] sb release: PowerManagerService.Display
+10-05 05:45:05.849  1203  1203 D MotionRecognitionService: [DisplayListener] getRefreshRate 60.000004
+10-05 05:45:05.849  1203  1499 D MotionRecognitionService: Inject RefreshRate: 60
+10-05 05:45:05.849  1203  1203 D SGM:GameManager: onDisplayChanged. displyId: 0, state: 4
+10-05 05:45:05.850  1203  1499 D SensorService: setSContextDataLocked ints length 3 , byte length 8
+10-05 05:45:05.850  1203  1499 D SensorService: setSContextDataLocked 100048c1
+10-05 05:45:05.850  1203  1531 D SGM:FgCheckThread: onLooperPrepared(), msg: MSG_LCD_OFF
+10-05 05:45:05.850   789   789 D Sensors : c1 48 00 10 3c 00 00 00  
+10-05 05:45:05.850   789   789 E Sensors : inject_scontext_data: New ssp_data_injection_fd(43)
+10-05 05:45:05.853   789   789 D Sensors : SContext Data Injection return 8
+10-05 05:45:05.857  1710  1710 I AODTriggers: onAODEventDispatched = 4 / eventData = r7.a$d@6003c4
+10-05 05:45:05.857  1710  1710 I AOD_LIVE_CLOCK@LiveClockController: updateDisplayState: DISPLAY_STATE_DOZE_SUSPEND
+10-05 05:45:06.090  1058  1689 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,1 ,0 ,0, 7.0.0.0
+10-05 05:45:06.090  1058  1689 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 0, et : 0
+10-05 05:45:06.090  1058  1689 I bauth_FPBAuthService: FPBAuthService, 11511
+10-05 05:45:06.159  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.025229225]
+10-05 05:45:06.160  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.9487448]
+10-05 05:45:06.161  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.064636074]
+10-05 05:45:06.161  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 2.026692 msecs
+10-05 05:45:06.165  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 3.619462 msecs
+10-05 05:45:06.167  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 2.523 msecs
+10-05 05:45:06.212   538   538 D io_stats: !@   8,0 r 1736361 56917380 w 553666 6891872 d 341588 185777484 f 0 0 iot 527560 0 th 0 0 0 pt 0 inp 0 0 17842.697
+10-05 05:45:06.668  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.040628083]
+10-05 05:45:06.670  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.934833]
+10-05 05:45:06.670  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.15305054]
+10-05 05:45:06.670  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 2.268846 msecs
+10-05 05:45:06.674  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 3.597962 msecs
+10-05 05:45:06.677  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 2.898847 msecs
+10-05 05:45:06.815   974  1676 I CameraService: onUidStateChanged: uid=10384, procState is changed. (6 -> 10)
+10-05 05:45:06.833   974  3313 I CameraService: onUidStateChanged: uid=10384, procState is changed. (10 -> 6)
+10-05 05:45:06.973  1203  1288 I AppOps  : commitUidPendingStateLocked() :: UID - 10044, 100 > 500, 15 > 15
+10-05 05:45:07.091  1058  1689 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,1 ,0 ,0, 7.0.0.0
+10-05 05:45:07.091  1058  1689 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 0, et : 0
+10-05 05:45:07.091  1058  1689 I bauth_FPBAuthService: FPBAuthService, 11511
+10-05 05:45:07.158  1710  1710 D SecPowerUI.Notification: showChargingNotice oldChargingType : 11 / currentChargingType : 11, oldChargingTime : 1123000 / mChargingTime : 1123000
+10-05 05:45:07.159  1710  1710 D SecPowerUI.Notification: There is no change about charging status, so return!
+10-05 05:45:07.178  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.0416672]
+10-05 05:45:07.179  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.73950267]
+10-05 05:45:07.179  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.39189872]
+10-05 05:45:07.179  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 1.905 msecs
+10-05 05:45:07.183  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 3.323231 msecs
+10-05 05:45:07.185  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 2.181846 msecs
+10-05 05:45:08.093  1058  1689 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,1 ,0 ,0, 7.0.0.0
+10-05 05:45:08.094  1058  1689 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 0, et : 0
+10-05 05:45:08.094  1058  1689 I bauth_FPBAuthService: FPBAuthService, 11511
+10-05 05:45:08.155  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.23289636]
+10-05 05:45:08.156  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.72252375]
+10-05 05:45:08.156  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.5522542]
+10-05 05:45:08.156  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 2.363846 msecs
+10-05 05:45:08.161  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 4.501616 msecs
+10-05 05:45:08.165  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 2.965462 msecs
+10-05 05:45:08.186   822  1043 I EDEN    : [Exynos][EDEN][v1.6.23][SERVICE] processAliveMointorMain:253: Try to check pid=(802)...
+10-05 05:45:08.216   538   538 D io_stats: !@   8,0 r 1736361 56917380 w 553796 6893444 d 341588 185777484 f 0 0 iot 527608 0 th 0 0 0 pt 0 inp 0 0 17844.701
+10-05 05:45:08.352   974  3313 I CameraService: onUidStateChanged: uid=10384, procState is changed. (6 -> 10)
+10-05 05:45:08.371   974  3313 I CameraService: onUidStateChanged: uid=10384, procState is changed. (10 -> 6)
+10-05 05:45:08.665  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.097823456]
+10-05 05:45:08.666  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.7517595]
+10-05 05:45:08.666  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.96245205]
+10-05 05:45:08.666  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 1.738769 msecs
+10-05 05:45:08.669  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.643462 msecs
+10-05 05:45:08.672  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 2.420115 msecs
+10-05 05:45:08.891  1188  1204 W System  : A resource failed to call close. 
+10-05 05:45:09.094  1058  1689 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,1 ,0 ,0, 7.0.0.0
+10-05 05:45:09.095  1058  1689 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 0, et : 0
+10-05 05:45:09.095  1058  1689 I bauth_FPBAuthService: FPBAuthService, 11511
+10-05 05:45:09.173  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.20666867]
+10-05 05:45:09.174  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.61214584]
+10-05 05:45:09.175  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.7071428]
+10-05 05:45:09.175  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 1.774 msecs
+10-05 05:45:09.178  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.945654 msecs
+10-05 05:45:09.181  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 2.845538 msecs
+10-05 05:45:09.290  1203  3995 D SGM:GameManager: identifyForegroundApp. com.afradadmedia.reducephotosize.s7test, mCurrentUserId: 0, callerUserId: 0
+10-05 05:45:09.290  1203  3995 D SGM:PkgDataHelper: getGamePkgData(). com.afradadmedia.reducephotosize.s7test
+10-05 05:45:09.291 28005 28082 I PolicyManager: [#CMH#] Is foreground game app: false
+10-05 05:45:09.683  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.09022726]
+10-05 05:45:09.684  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.28900474]
+10-05 05:45:09.684  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.8434901]
+10-05 05:45:09.684  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 2.134231 msecs
+10-05 05:45:09.688  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 3.664 msecs
+10-05 05:45:09.691  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 2.537231 msecs
+10-05 05:45:09.888   974  3313 I CameraService: onUidStateChanged: uid=10384, procState is changed. (6 -> 10)
+10-05 05:45:09.900   974  3313 I CameraService: onUidStateChanged: uid=10384, procState is changed. (10 -> 6)
+10-05 05:45:10.095  1058  1689 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,1 ,0 ,0, 7.0.0.0
+10-05 05:45:10.095  1058  1689 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 0, et : 0
+10-05 05:45:10.095  1058  1689 I bauth_FPBAuthService: FPBAuthService, 11511
+10-05 05:45:10.193  1203  1611 D SemNscXgbMsL1: Probability - Cloud gaming: [0.07563251]
+10-05 05:45:10.194  1203  1611 D SemNscXgbMsL1: Probability - Real time: [0.758848]
+10-05 05:45:10.194  1203  1611 D SemNscXgbMsL1: Probability - Non real time: [0.5653946]
+10-05 05:45:10.194  1203  1611 D SemNscXgbMsL1: 1 sample inference time: 1.847193 msecs
+10-05 05:45:10.199  1203  1611 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 3.925385 msecs
+10-05 05:45:10.202  1203  1611 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 2.555192 msecs
+10-05 05:45:10.202  1203  1611 I SemWifiServiceDetector: NSD results: [1, 1, 1, 0, 1, 1, 2, 1, 0] Traff. type 1 Thr 363
+10-05 05:45:10.204  1203  1614 D SemWifiOptimizer: enable=1 state=0x10 prev=0x10 new=0x10 force=0 mode=0
+10-05 05:45:10.218   538   538 D io_stats: !@   8,0 r 1736361 56917380 w 553974 6894944 d 341588 185777484 f 0 0 iot 527652 0 th 0 0 0 pt 0 inp 0 0 17846.702
+10-05 05:45:10.739  2826  2826 I adbd    : adbd service requested 'shell,v2,TERM=dumb:export ANDROID_LOG_TAGS=''; exec logcat '-v' 'threadtime' '-d''

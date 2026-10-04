@@ -1,0 +1,4 @@
+Temporary DEBUG forced-EEA runtime APK (not committed as an artifact):
+3eb1d7b96584629559cf34e78c89adb8bed81445d0e007be3d952992f43650c4  app/build/outputs/apk/debug/app-debug.apk
+
+The temporary APK was used only for the bounded UMP interaction and core/offline runtime exercise. The final clean source APK was rebuilt after reverting the temporary patch and is recorded in debug_apk_sha256.txt.

@@ -1,0 +1,13 @@
+Temporary UMP cleanup proof
+
+- Final source diff for AdMobTestController.kt: clean (no temporary patch remains).
+- Captured hashed UMP test-device ID: not present in tracked source.
+- DEBUG_GEOGRAPHY_EEA: not present in tracked source.
+- ConsentDebugSettings: not present in tracked source.
+- consentInformation.reset() test hook: not present in tracked source.
+- Debug banner unit remains Google's demo unit: ca-app-pub-3940256099942544/9214589741.
+- Release banner unit was not changed.
+- Network before test: Wi-Fi enabled and connected to Whyarby72; mobile_data=1; airplane_mode=1.
+- Network after cleanup: Wi-Fi enabled and connected to Whyarby72; mobile_data=1; airplane_mode=1.
+- No ad was clicked.
+- No Play Console, signing, release, rollout, or publication action was performed.

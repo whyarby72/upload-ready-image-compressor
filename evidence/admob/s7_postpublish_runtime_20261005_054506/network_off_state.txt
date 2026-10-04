@@ -1,0 +1,3 @@
+wifi_after_disable=0
+mobile_data_after_disable=1
+airplane_mode=1

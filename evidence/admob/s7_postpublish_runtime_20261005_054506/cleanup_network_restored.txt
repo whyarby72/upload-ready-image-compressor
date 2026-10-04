@@ -1,0 +1,6 @@
+restored_at=2026-10-05T05:59:16+0700
+wifi_on=2
+mobile_data=1
+airplane_mode=1
+wifi_status=Wifi is enabled Wifi scanning is always available ==== Primary ClientModeManager instance ==== Wifi is connected to "Whyarby72" WifiInfo: SSID: "Whyarby72", BSSID: 9c:6f:52:3d:c3:a0, MAC: 22:7b:97:ab:33:bd, IP: /192.168.1.6, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 4, RSSI: -61, Link speed: 130Mbps, Tx Link speed: 130Mbps, Max Supported Tx Link speed: 144Mbps, Rx Link speed: 1Mbps, Max Supported Rx Link speed: 144Mbps, Frequency: 2457MHz, Net ID: 18, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none>"Whyarby72"wpa2-pskMLO Information: , 
+

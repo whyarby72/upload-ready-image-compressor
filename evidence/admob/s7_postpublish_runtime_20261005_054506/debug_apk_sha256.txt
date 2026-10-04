@@ -1,0 +1,1 @@
+622c95c6167d4f672ab58faf067b91a052dd7e5a0f00d12b937b0392e5886b04  app/build/outputs/apk/debug/app-debug.apk
