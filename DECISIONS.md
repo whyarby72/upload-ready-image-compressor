@@ -1712,3 +1712,21 @@ Decision:
 The current Play app is still private/internal testing, so it cannot yet be linked to AdMob as a published Android app. If later authorized, the bounded pre-release path is to add the app to AdMob as unpublished, create exactly one ResultScreen banner unit, configure the required privacy message, and test using provider/test-device mechanisms.
 
 No AdMob account/app/ad-unit/message, app-ads.txt, Play Console, production-ID binding, release, or publication mutation was performed.
+
+
+## D-112 — Authorize bounded AdMob provider setup (2026-10-04)
+
+The human selected Option 1.
+
+Authorized scope:
+`S7 BOUNDED ADMOB PROVIDER SETUP`.
+
+The provider-side scope is limited to:
+1. add `com.afradadmedia.reducephotosize` as an unpublished Android app;
+2. create exactly one Banner ad unit for ResultScreen;
+3. create/configure one European regulations Privacy & messaging message;
+4. record the generated identifiers and provider state.
+
+No Play mutation, public linking/release, app-ads.txt publication, mediation, extra ad formats, Firebase Analytics, production code binding, S8, BUILD promotion, Artifact Freeze, or release/publication is authorized.
+
+If AdMob exposes message publication as a distinct final irreversible/commit-style action, stop before that action and obtain explicit approval.
