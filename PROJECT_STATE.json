@@ -42,7 +42,7 @@
     "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "ADMOB_APP_CREATED_NEXT_RECORD_APP_ID_AND_CREATE_ONE_BANNER",
+    "status": "ADMOB_APP_ID_CAPTURED_NEXT_CREATE_ONE_BANNER",
     "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
     "target_package": "com.afradadmedia.reducephotosize",
@@ -66,7 +66,12 @@
     "first_ad_unit_state": "NOT_CREATED_UI_PROMPTS_CREATE_FIRST_AD_UNIT",
     "existing_app_evidence_ref": "evidence/admob/S7_PROVIDER_EXISTING_APP_CONFIRMED_2026_10_04_v1.0.md",
     "app_created_in_current_authorized_flow": true,
-    "correction_evidence_ref": "evidence/admob/S7_PROVIDER_APP_CREATION_CORRECTION_2026_10_04_v1.0.md"
+    "correction_evidence_ref": "evidence/admob/S7_PROVIDER_APP_CREATION_CORRECTION_2026_10_04_v1.0.md",
+    "real_admob_app_id": "ca-app-pub-8084313520610270~1492953098",
+    "provider_package_identity": "NOT_YET_LINKED_OR_DISPLAYED",
+    "source_application_id": "com.afradadmedia.reducephotosize",
+    "app_store_details": "UNLINKED",
+    "app_id_evidence_ref": "evidence/admob/S7_PROVIDER_APP_ID_CAPTURE_2026_10_04_v1.0.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -120,13 +125,13 @@
     "Current Play app is internal/private and cannot yet be linked to AdMob as a published Android app.",
     "Final app-ads.txt verification requires a public developer website linked from the public store listing.",
     "Current ResultScreen is scrollable but S7 uses anchored adaptive banner sizing; review inline-adaptive sizing before production-ID binding.",
-    "Newly created AdMob app exists, but real App ID and package identity are not yet recorded in project evidence."
+    "Provider package/store identity is not yet linked because the Play listing is still private/internal."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Open AdMob App settings, record the generated AdMob App ID and package identity, then create exactly one Banner ad unit named ResultScreen_Banner_v1.",
+  "next_action": "Create exactly one Banner ad unit named ResultScreen_Banner_v1. Do not force App store linking while Google Play remains private/internal.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
