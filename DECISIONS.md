@@ -1756,3 +1756,16 @@ Next bounded action:
 record the newly generated App ID/package from App settings, then create exactly one Banner ad unit for ResultScreen.
 
 No broader provider, Play, production-ID binding, release, or publication authority is added by this correction.
+
+
+## D-115 — Accept unpublished AdMob App ID; defer provider package/store binding (2026-10-04)
+
+Authenticated App settings screenshot confirms real AdMob App ID:
+`ca-app-pub-8084313520610270~1492953098`.
+
+No package identity is displayed because App store details are currently unlinked.
+
+Decision:
+accept the App ID as provider evidence and defer provider package/store linkage until a supported public listing is available. The canonical source applicationId remains `com.afradadmedia.reducephotosize`.
+
+Do not use App store details > Add merely to force linkage to the current private/internal Play listing.
