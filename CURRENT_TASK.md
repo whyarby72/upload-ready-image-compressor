@@ -1,62 +1,69 @@
 # CURRENT_TASK.md
 
-Task ID: S7_DNC_PROVIDER_RUNTIME_RECONCILIATION
-Owner: HUMAN_PROVIDER_OBSERVATION + CHAT_AUDIT
+Task ID: S7_DNC_PROVIDER_PUBLISH_RECONCILIATION
+Owner: HUMAN_PROVIDER_ACTION + CHAT_AUDIT
 Reviewer: CHAT
-Stage: S7_TECHNICAL_RUNTIME_PASS_COMPLIANCE_RECONCILIATION
+Stage: S7_TECHNICAL_RUNTIME_PASS_PROVIDER_DRAFT_READY
 Priority: HIGH
-Status: TECHNICAL_RUNTIME_PASS / COMPLIANCE_HOLD_DNC_PROVIDER_DOC_CONFLICT
+Status: PROVIDER_PREVIEW_THREE_BUTTON_PASS / PUBLISH_CHANGES_APPROVAL_REQUIRED
 
-## Bound evidence
-
-Canonical branch:
-`task/TASK-S7-001`
+## Technical runtime state
 
 Runtime evidence commit:
 `485cf2413c38e1b6c5a253600514612e02fc208e`
 
-Independent audit v1.1:
-`docs/qa/S7_POSTPUBLISH_UMP_SMARTPHONE_CHAT_INDEPENDENT_AUDIT_2026_10_05_v1.1.md`
+Technical runtime:
+`PASS`
 
-## PASS
+Observed forced-EEA runtime first layer:
+- Consent;
+- Manage options;
+- literal Do not consent not observed.
 
-- production AdMob IDs bound;
-- deterministic CI PASS;
-- provider-backed UMP displayed on physical device;
-- refusal semantics through Manage options PASS;
-- Privacy choices entry point present;
-- demo Banner load PASS;
-- buyer-critical controls unobstructed;
-- offline/no-ad degradation PASS;
-- temporary debug hooks fully cleaned;
-- final build/test/lint PASS.
+Refusal semantics through Manage options:
+`PASS`
 
-## HOLD
+## Provider reconciliation — 2026-10-05
 
-Observed runtime UMP first layer and reopened privacy form showed only:
-- Consent
-- Manage options
+Evidence:
+`docs/qa/S7_DNC_PROVIDER_PREVIEW_RECONCILIATION_2026_10_05_v1.0.md`
 
-No literal:
-- Do not consent
+Current editor state visibly shows:
+- Consent: ON;
+- Manage options: ON;
+- Do not consent: ON;
+- Close (do not consent): OFF;
+- first-layer preview contains Do not consent + Consent + Manage options;
+- intended country targeting is ON for EEA + UK + Switzerland and OFF for Everywhere else.
 
-This conflicts with the configured/provider intent and current official Google documentation for the relevant flows.
+Provider editor disposition:
+`PASS_THREE_BUTTON_PREVIEW`
 
-## Minimal next action
+Important:
+top-right action currently reads:
+`Publish changes`
 
-Provider-side read-only recheck of the already-published message only:
-- verify Do not consent remains ON;
-- verify intended EEA + UK + Switzerland country selections remain active;
-- verify published preview shows the three-button first layer.
+Therefore the current correct editor state is not yet proven to be the served/published state.
 
-Do not create a new message or ad unit.
-Do not change account-level settings unless drift is found.
-Do not proceed to Artifact Freeze or production Play release while this HOLD remains open.
+## Next gate
+
+Explicit human approval required for:
+
+`PUBLISH CURRENT CHANGES TO PHOTO COMPRESSOR EU CONSENT V1 ONLY`
+
+If approved:
+- click `Publish changes`;
+- wait for provider confirmation;
+- return to message list/status;
+- record provider published state;
+- optionally rerun one minimal forced-EEA first-layer check only if needed to confirm served runtime catches up.
 
 ## Authority boundary
 
-Still NOT authorized:
-- new ad units;
-- Play closed/open/production promotion;
+This approval does NOT authorize:
+- new AdMob app or ad unit;
+- source-code changes;
+- production AdMob ID changes;
+- Play track promotion;
 - Artifact Freeze;
-- production Android release/publication.
+- Android app release/publication.
