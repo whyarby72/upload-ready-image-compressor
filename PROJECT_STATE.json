@@ -42,7 +42,7 @@
     "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "ADMOB_BANNER_FORMAT_SELECTION_READY",
+    "status": "BANNER_CONFIG_APPROVED_CREATE_ONE_UNIT_AND_CAPTURE_ID",
     "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
     "target_package": "com.afradadmedia.reducephotosize",
@@ -81,7 +81,19 @@
       "Native advanced",
       "App open"
     ],
-    "ad_unit_format_evidence_ref": "evidence/admob/S7_AD_UNIT_FORMAT_SCREEN_2026_10_04_v1.0.md"
+    "ad_unit_format_evidence_ref": "evidence/admob/S7_AD_UNIT_FORMAT_SCREEN_2026_10_04_v1.0.md",
+    "banner_config": {
+      "name": "ResultScreen_Banner_v1",
+      "partner_bidding": false,
+      "ad_types": [
+        "Text/image/rich media",
+        "Video"
+      ],
+      "automatic_refresh": "Google optimized",
+      "ecpm_floor": "Google optimized",
+      "ecpm_method": "All prices"
+    },
+    "banner_config_evidence_ref": "evidence/admob/S7_BANNER_CONFIG_SCREEN_2026_10_04_v1.0.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -141,7 +153,7 @@
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Select Banner only, proceed to Configure ad unit settings, and capture the configuration screen before final creation.",
+  "next_action": "Enter ResultScreen_Banner_v1, keep partner bidding off, keep both ad types checked, keep Google optimized refresh, keep Google optimized eCPM floor with All prices, create the single banner unit, then capture the generated ad-unit ID.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
