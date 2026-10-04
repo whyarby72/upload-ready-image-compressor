@@ -1,0 +1,32 @@
+{
+  "schema": "S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_v1.0",
+  "product": "PHOTO COMPRESSOR: KB LIMIT",
+  "authorized_at": "2026-10-04",
+  "approval_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
+  "scope": "S7 BOUNDED ADMOB PROVIDER SETUP",
+  "permitted": [
+    "Add the Android app to AdMob as UNPUBLISHED using package com.afradadmedia.reducephotosize",
+    "Record the provider-generated AdMob App ID",
+    "Create exactly one Banner ad unit intended for ResultScreen and record its ad-unit ID",
+    "Create and configure one European regulations Privacy & messaging message for this app",
+    "Use provider-generated identifiers only for subsequent TEST-branch binding after separate code change execution",
+    "Capture screenshots/provider state needed for evidence"
+  ],
+  "not_inferred_without_separate_approval": [
+    "Publish/activate the European regulations message if the provider UI treats publication as a distinct final action",
+    "Modify Google Play Console",
+    "Link the app as a published Play app",
+    "Publish a public Play release",
+    "Create or publish app-ads.txt",
+    "Add developer website/domain",
+    "Enable mediation",
+    "Create interstitial, app-open, rewarded, native, or additional banner units",
+    "Enable Firebase Analytics or user metrics if optional",
+    "Bind production IDs into release source or ship them",
+    "Promote to S8",
+    "BUILD promotion",
+    "Artifact Freeze",
+    "Release or publication"
+  ],
+  "hard_stop": "STOP_AFTER_UNPUBLISHED_APP_ONE_BANNER_AND_EU_MESSAGE_CONFIGURATION_ARE_RECORDED"
+}
