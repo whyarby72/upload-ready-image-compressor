@@ -42,7 +42,7 @@
     "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "BANNER_CONFIG_APPROVED_CREATE_ONE_UNIT_AND_CAPTURE_ID",
+    "status": "EUROPEAN_REGULATIONS_SETTINGS_OBSERVED_MESSAGE_CREATION_PENDING",
     "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
     "target_package": "com.afradadmedia.reducephotosize",
@@ -93,7 +93,11 @@
       "ecpm_floor": "Google optimized",
       "ecpm_method": "All prices"
     },
-    "banner_config_evidence_ref": "evidence/admob/S7_BANNER_CONFIG_SCREEN_2026_10_04_v1.0.md"
+    "banner_config_evidence_ref": "evidence/admob/S7_BANNER_CONFIG_SCREEN_2026_10_04_v1.0.md",
+    "eu_settings_evidence_ref": "evidence/admob/S7_EUROPEAN_REGULATIONS_SETTINGS_SCREEN_2026_10_04_v1.0.md",
+    "eu_advanced_settings_policy": "NO_CHANGE_WITHOUT_SEPARATE_COMPLIANCE_DECISION",
+    "eu_message_state": "NOT_YET_CREATED",
+    "policy_issue_banner_visible": true
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -147,13 +151,15 @@
     "Current Play app is internal/private and cannot yet be linked to AdMob as a published Android app.",
     "Final app-ads.txt verification requires a public developer website linked from the public store listing.",
     "Current ResultScreen is scrollable but S7 uses anchored adaptive banner sizing; review inline-adaptive sizing before production-ID binding.",
-    "Provider package/store identity is not yet linked because the Play listing is still private/internal."
+    "Provider package/store identity is not yet linked because the Play listing is still private/internal.",
+    "European regulations message has not yet been created/configured.",
+    "AdMob Policy issues banner is visible and requires separate review before publication/readiness."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Enter ResultScreen_Banner_v1, keep partner bidding off, keep both ad types checked, keep Google optimized refresh, keep Google optimized eCPM floor with All prices, create the single banner unit, then capture the generated ad-unit ID.",
+  "next_action": "Open the European regulations Messages tab and begin configuring exactly one message for Photo Compressor: KB Limit. Do not change advanced settings or press any distinct final Publish/Activate action.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
