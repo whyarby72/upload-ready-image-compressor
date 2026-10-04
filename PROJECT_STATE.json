@@ -42,7 +42,7 @@
     "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "EU_MESSAGE_CREATION_READY",
+    "status": "EU_MESSAGE_EDITOR_OPEN_CONFIGURATION_IN_PROGRESS",
     "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
     "target_package": "com.afradadmedia.reducephotosize",
@@ -98,7 +98,19 @@
     "eu_advanced_settings_policy": "NO_CHANGE_WITHOUT_SEPARATE_COMPLIANCE_DECISION",
     "eu_message_state": "NOT_YET_CREATED",
     "policy_issue_banner_visible": true,
-    "eu_message_entry_evidence_ref": "evidence/admob/S7_EU_MESSAGE_ENTRY_SCREEN_2026_10_04_v1.0.md"
+    "eu_message_entry_evidence_ref": "evidence/admob/S7_EU_MESSAGE_ENTRY_SCREEN_2026_10_04_v1.0.md",
+    "eu_message_editor_evidence_ref": "evidence/admob/S7_EU_MESSAGE_EDITOR_SCREEN_2026_10_04_v1.0.md",
+    "eu_message_recommended_config": {
+      "app": "Photo Compressor: KB Limit",
+      "name": "Photo Compressor EU Consent v1",
+      "default_language": "English (en)",
+      "consent": true,
+      "manage_options": true,
+      "do_not_consent": true,
+      "close_do_not_consent": false,
+      "publish": false,
+      "targeting_review_required": true
+    }
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -160,7 +172,7 @@
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Click Create a European regulations message, configure one message for Photo Compressor: KB Limit, and stop before any distinct final Publish/Activate/Go live action.",
+  "next_action": "In the EU message editor: select only Photo Compressor: KB Limit, rename the message, enable Do not consent, keep Consent and Manage options on, keep Close off, then capture Setup and Targeting state before any Publish action.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
