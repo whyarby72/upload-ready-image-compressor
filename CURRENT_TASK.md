@@ -1780,3 +1780,22 @@ click `Create a European regulations message` and continue configuration for thi
 
 Boundary:
 stop before any distinct final `Publish` / `Activate` / `Go live` action.
+
+
+## EU message editor observed — 2026-10-04
+
+Evidence:
+`evidence/admob/S7_EU_MESSAGE_EDITOR_SCREEN_2026_10_04_v1.0.md`
+
+Recommended draft state:
+- app: Photo Compressor: KB Limit only
+- name: `Photo Compressor EU Consent v1`
+- Consent: ON
+- Manage options: ON
+- Do not consent: ON
+- Close (do not consent): OFF
+- Default language: English (en)
+- Publish: STOP / not authorized yet
+
+Next:
+capture Setup + Targeting after configuration, before Publish.
