@@ -42,7 +42,7 @@
     "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "EU_MESSAGE_DRAFT_BLOCKED_FOR_PUBLICATION_PRIVACY_POLICY_URL_MISSING",
+    "status": "PRIVACY_POLICY_URL_PROVIDED_ADMOB_BINDING_PENDING",
     "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
     "target_package": "com.afradadmedia.reducephotosize",
@@ -112,9 +112,11 @@
       "targeting_review_required": true
     },
     "eu_message_app_selected": true,
-    "privacy_policy_url": "MISSING",
+    "privacy_policy_url": "https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/",
     "fallback_consent_collection": false,
-    "privacy_policy_blocker_evidence_ref": "evidence/admob/S7_EU_MESSAGE_PRIVACY_POLICY_URL_BLOCKER_2026_10_04_v1.0.md"
+    "privacy_policy_blocker_evidence_ref": "evidence/admob/S7_EU_MESSAGE_PRIVACY_POLICY_URL_BLOCKER_2026_10_04_v1.0.md",
+    "privacy_policy_url_evidence_ref": "evidence/admob/S7_PRIVACY_POLICY_URL_PROVIDED_2026_10_05_v1.0.md",
+    "privacy_policy_url_verification": "OPERATOR_ATTESTED_EXTERNAL_FETCH_UNVERIFIED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -171,13 +173,14 @@
     "Provider package/store identity is not yet linked because the Play listing is still private/internal.",
     "European regulations message has not yet been created/configured.",
     "AdMob Policy issues banner is visible and requires separate review before publication/readiness.",
-    "A real public privacy-policy URL is required by AdMob before the European regulations message can be published."
+    "Privacy policy URL has been provided but external reachability/content compliance is not yet independently verified in this chat environment.",
+    "European regulations message remains unpublished pending URL binding, targeting review, and final message review."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Do not publish the European regulations message. Keep fallback consent collection off. Either continue draft configuration without publication if allowed, or separately authorize creation/binding of a real public privacy-policy URL.",
+  "next_action": "Enter the provided privacy-policy URL into AdMob for the selected app, save/confirm, then review Targeting and message configuration. Do not publish yet.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
