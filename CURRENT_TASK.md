@@ -1757,3 +1757,14 @@ Approved:
 
 Next:
 create this one banner unit and capture its generated ID.
+
+
+## European regulations settings screen observed — 2026-10-04
+
+Evidence:
+`evidence/admob/S7_EUROPEAN_REGULATIONS_SETTINGS_SCREEN_2026_10_04_v1.0.md`
+
+Current action:
+do not alter the advanced settings during this bounded provider setup. Move to `Messages` and create/configure the single European regulations message.
+
+A Policy issues banner is visible and is recorded for separate review; it does not by itself authorize any policy-center mutation.
