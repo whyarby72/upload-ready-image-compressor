@@ -39,19 +39,24 @@
     "frozen_release_candidate": null
   },
   "current_task": {
-    "id": "S7_ADMOB_PROVIDER_SETUP_PREFLIGHT_ONLY",
-    "owner": "CHAT",
-    "next_owner": "HUMAN",
-    "status": "PREFLIGHT_PASS_PROVIDER_MUTATION_NOT_YET_AUTHORIZED",
-    "evidence_ref": "docs/admob/S7_ADMOB_PROVIDER_SETUP_PREFLIGHT_2026_10_03_v1.0.md",
-    "published_app_linking": "BLOCKED_PRIVATE_INTERNAL_PLAY",
-    "unpublished_admob_setup": "AVAILABLE_IF_LATER_AUTHORIZED",
-    "production_app_id": "NOT_CREATED",
-    "production_banner_ad_unit_id": "NOT_CREATED",
-    "privacy_messaging_provider_config": "NOT_CREATED",
-    "app_ads_txt": "BLOCKED_PENDING_PUBLIC_DEVELOPER_WEBSITE_AND_PUBLISHER_ID",
-    "firebase_analytics": "NOT_REQUIRED_FOR_INITIAL_BANNER_AND_NOT_PLANNED",
-    "provider_mutation": false
+    "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
+    "owner": "HUMAN",
+    "next_owner": "CHAT",
+    "status": "AUTHORIZED_PROVIDER_UI_EXECUTION_REQUIRED",
+    "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
+    "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
+    "target_package": "com.afradadmedia.reducephotosize",
+    "target_app_state": "UNPUBLISHED",
+    "target_ad_units": {
+      "banner": 1,
+      "location": "ResultScreen"
+    },
+    "target_privacy_message": "EUROPEAN_REGULATIONS_ONE_MESSAGE_CONFIGURED",
+    "provider_execution": "NOT_RUN",
+    "provider_mutation_authorized": true,
+    "play_mutation_authorized": false,
+    "production_code_binding_authorized": false,
+    "hard_stop": "STOP_AFTER_UNPUBLISHED_APP_ONE_BANNER_AND_EU_MESSAGE_CONFIGURATION_ARE_RECORDED"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -59,7 +64,7 @@
     "spec": "PASS_FOR_BOUNDED_TEST_SCOPE",
     "core_technical": "S4_CORE_TECHNICAL_PASS",
     "internal_test": "PASS_CLOSED_WITH_NONBLOCKING_EVIDENCE_DEBT",
-    "admob_privacy": "S7_PROVIDER_PREFLIGHT_PASS_BOUNDED_PROVIDER_SETUP_REQUIRES_NEW_APPROVAL",
+    "admob_privacy": "S7_BOUNDED_PROVIDER_SETUP_AUTHORIZED_EXECUTION_PENDING",
     "monetization_qa": "NOT_RUN",
     "play_compliance": "INTERNAL_TEST_ALLOWED_BROADER_RELEASE_COMPLIANCE_PENDING",
     "closed_test": "NOT_RUN",
@@ -103,15 +108,14 @@
     "Privacy choices path remains unproven: RT-05 NOT_OBSERVABLE.",
     "Explicit ad failure/no-fill callback path remains unproven: RT-07 NOT_OBSERVED.",
     "Current Play app is internal/private and cannot yet be linked to AdMob as a published Android app.",
-    "Real AdMob App ID and ResultScreen banner ad-unit ID do not yet exist.",
-    "Privacy & messaging provider configuration does not yet exist.",
-    "Final app-ads.txt verification requires a public developer website linked from the public store listing."
+    "Final app-ads.txt verification requires a public developer website linked from the public store listing.",
+    "Authorized bounded AdMob provider setup has not yet been executed in the authenticated AdMob UI."
   ],
   "human_decisions_required": [
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "If approved, perform bounded AdMob provider setup: unpublished app + one ResultScreen banner ad unit + European-regulations message, with no Play/publication mutation.",
+  "next_action": "In authenticated AdMob UI: add app as unpublished, create exactly one ResultScreen banner unit, configure one European regulations message, capture generated IDs/state, then stop before any separate publication/Play/code-binding action.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
