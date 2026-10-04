@@ -1709,3 +1709,19 @@ Current state:
 - AdMob app creation: PASS / within authorized scope;
 - first ad unit: NOT_CREATED;
 - next: record App ID/package, then create exactly one ResultScreen banner.
+
+
+## Real AdMob App ID captured — 2026-10-04
+
+Evidence:
+`evidence/admob/S7_PROVIDER_APP_ID_CAPTURE_2026_10_04_v1.0.md`
+
+- App ID: `ca-app-pub-8084313520610270~1492953098`
+- App store details: unlinked
+- Provider package identity: not displayed/not yet linked
+- Source applicationId remains: `com.afradadmedia.reducephotosize`
+
+Do not force store linking while Play remains private/internal.
+
+Next:
+create exactly one Banner ad unit `ResultScreen_Banner_v1`.
