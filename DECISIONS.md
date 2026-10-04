@@ -1848,3 +1848,18 @@ Decision:
 accept the URL for the next bounded AdMob configuration step, while retaining verification state `ATTESTED` because public reachability/content compliance was not independently verified in the current chat environment.
 
 This authorizes entering the URL into the existing European regulations message configuration only. It does not authorize final message publication, Play publication, production-ID binding, Artifact Freeze, or release.
+
+
+## D-123 — Accept supplied Privacy Policy URL for draft configuration; publication still blocked (2026-10-05)
+
+Human supplied:
+`https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
+
+Decision:
+accept it as operator-attested input for the AdMob draft configuration.
+
+Publication is still blocked until:
+- URL reachability/content is independently verified;
+- user-choice configuration is complete;
+- Targeting is reviewed;
+- final publication approval is explicit.
