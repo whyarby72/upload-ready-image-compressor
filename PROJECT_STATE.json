@@ -42,7 +42,7 @@
     "id": "S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "owner": "HUMAN",
     "next_owner": "CHAT",
-    "status": "ADMOB_APP_ID_CAPTURED_NEXT_CREATE_ONE_BANNER",
+    "status": "ADMOB_BANNER_FORMAT_SELECTION_READY",
     "authorization_ref": "USER_OPTION_1_2026-10-04_S7_BOUNDED_ADMOB_PROVIDER_SETUP",
     "authorization_evidence_ref": "evidence/admob/S7_BOUNDED_ADMOB_PROVIDER_SETUP_AUTHORIZATION_2026_10_04_v1.0.json",
     "target_package": "com.afradadmedia.reducephotosize",
@@ -71,7 +71,17 @@
     "provider_package_identity": "NOT_YET_LINKED_OR_DISPLAYED",
     "source_application_id": "com.afradadmedia.reducephotosize",
     "app_store_details": "UNLINKED",
-    "app_id_evidence_ref": "evidence/admob/S7_PROVIDER_APP_ID_CAPTURE_2026_10_04_v1.0.md"
+    "app_id_evidence_ref": "evidence/admob/S7_PROVIDER_APP_ID_CAPTURE_2026_10_04_v1.0.md",
+    "ad_unit_format_screen_observed": true,
+    "approved_ad_format": "Banner",
+    "prohibited_ad_formats": [
+      "Interstitial",
+      "Rewarded interstitial",
+      "Rewarded",
+      "Native advanced",
+      "App open"
+    ],
+    "ad_unit_format_evidence_ref": "evidence/admob/S7_AD_UNIT_FORMAT_SCREEN_2026_10_04_v1.0.md"
   },
   "gates": {
     "opportunity": "TEST_DECISION_EXISTS",
@@ -131,7 +141,7 @@
     "Human decision is required before the next bounded stage begins.",
     "Human decision remains required before canonical BUILD promotion, S6, Artifact Freeze, broader testing, production release, or publication."
   ],
-  "next_action": "Create exactly one Banner ad unit named ResultScreen_Banner_v1. Do not force App store linking while Google Play remains private/internal.",
+  "next_action": "Select Banner only, proceed to Configure ad unit settings, and capture the configuration screen before final creation.",
   "repository": {
     "bootstrap_owner": "CODEX",
     "provider": "GITHUB",
