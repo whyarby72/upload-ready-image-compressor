@@ -43,15 +43,17 @@ jobs:
           capture_variant() {
             VARIANT="$1"
             APK="$2"
-            MANIFEST_PATTERN="$3"
+            MANIFEST_ROOT="app/build/intermediates/merged_manifests/$VARIANT"
 
             test -f "$APK"
+            test -d "$MANIFEST_ROOT"
+
             cp "$APK" "w2-evidence/$(basename "$APK")"
             sha256sum "$APK" | tee "w2-evidence/${VARIANT}-apk.sha256"
 
-            MANIFEST="$(find app/build/intermediates -type f -name AndroidManifest.xml               | grep -E "$MANIFEST_PATTERN" | head -n 1 || true)"
+            MANIFEST="$(find "$MANIFEST_ROOT" -type f -name AndroidManifest.xml -print -quit)"
             if [ -z "$MANIFEST" ]; then
-              echo "Merged manifest not found for $VARIANT" >&2
+              echo "Merged manifest not found for $VARIANT under $MANIFEST_ROOT" >&2
               find app/build/intermediates -type f -name AndroidManifest.xml -print >&2 || true
               exit 2
             fi
@@ -72,9 +74,8 @@ jobs:
             } > "w2-evidence/${VARIANT}-BUILD_METADATA.txt"
           }
 
-          capture_variant             debug             app/build/outputs/apk/debug/app-debug.apk             'merged_manifest|merged_manifests|processDebugManifest'
-
-          capture_variant             release             app/build/outputs/apk/release/app-release-unsigned.apk             'merged_manifest|merged_manifests|processReleaseManifest'
+          capture_variant debug app/build/outputs/apk/debug/app-debug.apk
+          capture_variant release app/build/outputs/apk/release/app-release-unsigned.apk
 
           {
             echo "SOURCE_COMMIT=$(git rev-parse HEAD)"
@@ -89,14 +90,24 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
+          import re
 
           results = []
+
+          expected_packages = {
+              "debug": "com.afradadmedia.reducephotosize.s7test",
+              "release": "com.afradadmedia.reducephotosize",
+          }
 
           for variant in ("debug", "release"):
               manifest = Path(f"w2-evidence/AndroidManifest-merged-{variant}.xml").read_text(encoding="utf-8")
               deps = Path(f"w2-evidence/{variant}RuntimeClasspath.txt").read_text(encoding="utf-8")
 
+              package_match = re.search(r'package="([^"]+)"', manifest)
+              package_name = package_match.group(1) if package_match else "MISSING"
+
               checks = {
+                  "package_matches_variant": package_name == expected_packages[variant],
                   "contains_gma_next_gen_1_5_0": "ads-mobile-sdk:1.5.0" in deps,
                   "contains_ump_4_0_0": "user-messaging-platform:4.0.0" in deps,
                   "contains_legacy_play_services_ads": "play-services-ads:" in deps or "play-services-ads-lite:" in deps,
@@ -110,9 +121,11 @@ jobs:
                   "manifest_has_broad_storage": "android.permission.READ_EXTERNAL_STORAGE" in manifest or "android.permission.WRITE_EXTERNAL_STORAGE" in manifest,
               }
 
+              results.append(f"{variant}.package={package_name}")
               for key, value in checks.items():
                   results.append(f"{variant}.{key}={'YES' if value else 'NO'}")
 
+              assert checks["package_matches_variant"]
               assert checks["contains_gma_next_gen_1_5_0"]
               assert checks["contains_ump_4_0_0"]
               assert not checks["contains_legacy_play_services_ads"]
@@ -132,6 +145,10 @@ jobs:
       - name: Print privacy evidence summary
         run: |
           set -euo pipefail
+          echo "=== DEBUG METADATA ==="
+          cat w2-evidence/debug-BUILD_METADATA.txt
+          echo "=== RELEASE METADATA ==="
+          cat w2-evidence/release-BUILD_METADATA.txt
           echo "=== DEBUG PERMISSIONS ==="
           cat w2-evidence/debug-merged-manifest-permissions.txt
           echo "=== RELEASE PERMISSIONS ==="
