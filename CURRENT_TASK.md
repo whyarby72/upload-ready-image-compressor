@@ -488,3 +488,26 @@ Do not select:
 This matches the current GMA Next-Gen disclosure for diagnostic data.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — App interactions handling screen — 2026-10-05
+
+Human screenshot-observed question:
+`App interactions — Is this data collected, shared, or both?`
+
+Artifact/official-doc answer:
+- `Collected` = selected;
+- `Shared` = selected.
+
+Expected follow-up profile:
+- processed ephemerally: `No`;
+- collection: `Required`;
+- purposes:
+  - `Analytics`;
+  - `Advertising or marketing`;
+  - `Fraud prevention, security and compliance`.
+
+Basis:
+current GMA Next-Gen disclosure states user product interactions are automatically collected/shared for advertising, analytics, and fraud-prevention purposes.
+
+No final Data Safety submission or Send for review is authorized.
