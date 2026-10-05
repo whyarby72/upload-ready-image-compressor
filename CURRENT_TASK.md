@@ -1109,3 +1109,51 @@ Next blocker:
 `DEFAULT_STORE_LISTING_AND_ASSETS`
 
 No `Send app for review`, release, rollout, Artifact Freeze, or Android app publication is authorized by this result.
+
+
+## Google Play listing package v1.0.0 — 2026-10-06
+
+Human-selected action:
+`AUDIT_SOURCE_AND_BUILD_COMPLETE_GOOGLE_PLAY_LISTING_PACKAGE`
+
+Source audit:
+`PASS`
+
+Canonical listing payload:
+- app name = `Photo Compressor: KB Limit` (26/30);
+- short description = `Compress JPEG photos to a target KB or MB limit and verify the final file size` (78/80);
+- full description = 1547/4000 characters;
+- locale = `en-US`;
+- category remains `Photography`.
+
+Visual package produced:
+- Play app icon candidate = 512×512 PNG;
+- feature graphic candidate = 1024×500 JPEG;
+- four phone screenshot candidates = 1080×1920 portrait.
+
+Screenshot evidence boundary:
+- screenshot assets are deterministic source-rendered candidates based on current MainActivity UI, palette, labels, and flows;
+- they are NOT direct Android runtime captures;
+- therefore each screenshot remains `HOLD_RUNTIME_PARITY_QA` before provider upload;
+- direct runtime replacement is required for any material mismatch or uncertainty.
+
+Listing package repo manifest:
+`play-store/listing/v1.0.0/README.md`
+
+Preparation/upload gate prompt:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_UPLOAD_GATE_v1.0.md`
+
+Binary package:
+`PHOTO_COMPRESSOR_GOOGLE_PLAY_LISTING_PACKAGE_v1.0.0.zip`
+
+Binary package SHA-256:
+`3e14faba0961152f9173c139f52b5e588363f308b8033427b46582a54fe866a6`
+
+Provider authority:
+- Main store listing mutation = NOT YET AUTHORIZED;
+- Save / Save and publish = NOT YET AUTHORIZED;
+- Send app for review = NOT AUTHORIZED;
+- release/rollout/publication = NOT AUTHORIZED.
+
+Next gate:
+`MAIN_STORE_LISTING_SCHEMA_AND_SCREENSHOT_RUNTIME_PARITY_PREFLIGHT`
