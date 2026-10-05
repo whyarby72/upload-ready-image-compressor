@@ -603,3 +603,28 @@ set Play Console Privacy policy URL to:
 `https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
 
 Do not submit Data Safety / Send for review until both blockers are corrected and Preview is rechecked.
+
+
+## Play Data Safety — Approximate location shared-purpose correction verified — 2026-10-05
+
+Human screenshot-observed state for `Approximate location > Why is this user data shared?`:
+- Analytics = selected;
+- Advertising or marketing = selected;
+- Fraud prevention, security, and compliance = selected;
+- App functionality = not selected;
+- Developer communications = not selected;
+- Personalization = not selected;
+- Account management = not selected.
+
+Disposition:
+`APPROXIMATE_LOCATION_SHARED_PURPOSES = PASS`
+
+Still not independently re-verified from this screenshot:
+`Approximate location > Why is this user data collected?`
+
+Required collected purposes remain:
+- Analytics;
+- Advertising or marketing;
+- Fraud prevention, security, and compliance.
+
+Do not treat Approximate location as fully reconciled until the collected-purpose section is visibly confirmed with only those three purposes selected.
