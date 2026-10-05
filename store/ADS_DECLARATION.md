@@ -1,8 +1,9 @@
 # ADS_DECLARATION.md
 
-Status: W1 DRAFT
+Status: W2 RECONCILED
+Date: 2026-10-05
 
-## Current Internal Testing vc1
+## Historical Internal Testing vc1
 
 Artifact:
 `PhotoCompressor-0.1.0-vc1-upload-signed.aab`
@@ -10,22 +11,33 @@ Artifact:
 Ads implementation:
 `NONE`
 
-Play ads declaration truth for this exact artifact:
+Truth for that historical artifact:
 `NO / DOES NOT CONTAIN ADS`
 
-## Future first ad-enabled artifact
+## Current S7 source / next ad-enabled artifact
 
-Once GMA/AdMob code actually ships in an artifact that displays ads, Play ads declaration must be reconciled to:
+Ads implementation:
+- GMA Next-Gen integrated;
+- one ResultScreen adaptive Banner;
+- release variant bound to the existing production Banner ad unit;
+- debug variant uses Google's demo Banner unit;
+- no interstitial;
+- no app-open;
+- no rewarded;
+- no native.
+
+Play Ads declaration truth for the first distributed ad-enabled artifact:
 `YES / CONTAINS ADS`
 
-Do not change the declaration based only on future intent.
+Google Play's Ads declaration includes banner/display ads delivered by third-party ad SDKs.
 
-## Formats approved at W1 architecture level
+## Provider action timing
 
-- ResultScreen in-flow adaptive banner: APPROVED FOR IMPLEMENTATION DESIGN
-- interstitial: NOT APPROVED
-- app open: NOT APPROVED
-- rewarded: NOT APPROVED
-- native: NOT APPROVED
+Change the Play Console Ads declaration to YES no later than upload/distribution of the first ad-enabled artifact.
 
-Implementation and provider/live-serving actions require separate authorization.
+Do not leave a NO-ADS declaration once an ad-enabled artifact is distributed.
+
+No Play Console mutation or release is authorized by this file.
+
+Reference:
+`docs/qa/W2_POST_ADMOB_PRIVACY_DATA_SAFETY_ADS_RECONCILIATION_2026_10_05_v1.0.md`

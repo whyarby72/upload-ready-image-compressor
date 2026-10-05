@@ -1,162 +1,75 @@
 # CURRENT_TASK.md
 
-Task ID: S7_DNC_PROVIDER_PUBLISH_RECONCILIATION
-Owner: HUMAN_PROVIDER_ACTION + CHAT_AUDIT
+Task ID: W2_POST_ADMOB_PRIVACY_DATA_SAFETY_ADS_RECONCILIATION
+Owner: CHAT_AUDIT + CODEX_FOR_ARTIFACT_CHECKS + HUMAN_FOR_PROVIDER_ACTIONS
 Reviewer: CHAT
-Stage: S7_TECHNICAL_RUNTIME_PASS_PROVIDER_DRAFT_READY
+Stage: W2_POST_ADMOB_RECONCILIATION
 Priority: HIGH
-Status: PROVIDER_PREVIEW_THREE_BUTTON_PASS / PUBLISH_CHANGES_APPROVAL_REQUIRED
+Status: S7_CLOSED_WITH_ACCEPTED_OBSERVABILITY_EXCEPTION / W2_PARTIAL_PASS_WITH_PRIVACY_SURFACE_BLOCKER
 
-## Technical runtime state
+## S7 closure
 
-Runtime evidence commit:
-`485cf2413c38e1b6c5a253600514612e02fc208e`
+Human decision:
+`USER_OPTION_1_2026-10-05_ACCEPT_RESIDUAL_AND_PROCEED_W2`
 
-Technical runtime:
-`PASS`
+Accepted residual:
+`POST_REPUBLISH_THREE_BUTTON_PHYSICAL_DEVICE_OBSERVATION_NOT_REPEATED_DUE_EXECUTION_ENVIRONMENT`
 
-Observed forced-EEA runtime first layer:
-- Consent;
-- Manage options;
-- literal Do not consent not observed.
+S7 closure basis:
+- provider three-button preview PASS;
+- intended DNC country configuration PASS;
+- consent message republished and provider status Published;
+- prior physical-device UMP/refusal/privacy/banner/offline runtime evidence PASS except literal first-layer DNC observation before republish;
+- minimal post-republish rerun blocked by ADB/Android SDK environment, not app failure;
+- no source mutation occurred during blocked rerun.
 
-Refusal semantics through Manage options:
-`PASS`
+S7 disposition:
+`CLOSED_WITH_DOCUMENTED_PROVIDER_RUNTIME_OBSERVABILITY_EXCEPTION`
 
-## Provider reconciliation — 2026-10-05
+## W2 audit
 
-Evidence:
-`docs/qa/S7_DNC_PROVIDER_PREVIEW_RECONCILIATION_2026_10_05_v1.0.md`
+Primary audit:
+`docs/qa/W2_POST_ADMOB_PRIVACY_DATA_SAFETY_ADS_RECONCILIATION_2026_10_05_v1.0.md`
 
-Current editor state visibly shows:
-- Consent: ON;
-- Manage options: ON;
-- Do not consent: ON;
-- Close (do not consent): OFF;
-- first-layer preview contains Do not consent + Consent + Manage options;
-- intended country targeting is ON for EEA + UK + Switzerland and OFF for Everywhere else.
+Reconciled store docs:
+- `store/DATA_SAFETY_DRAFT.md`
+- `store/ADS_DECLARATION.md`
+- `store/PRIVACY_NOTES.md`
 
-Provider editor disposition:
-`PASS_THREE_BUTTON_PREVIEW`
+## W2 PASS
 
-Important:
-top-right action currently reads:
-`Publish changes`
+- GMA/UMP post-AdMob data model reconciled.
+- Photo/JPEG content remains isolated from ads/analytics in app code.
+- Data Safety candidate defined for:
+  - Approximate location;
+  - App interactions;
+  - Diagnostics;
+  - Device or other IDs.
+- Play Ads declaration truth for the first ad-enabled distributed artifact is:
+  `YES / CONTAINS ADS`
+- UMP/privacy choices implementation is present.
+- Publisher first-party ID disabled.
 
-Therefore the current correct editor state is not yet proven to be the served/published state.
+## W2 HOLD / blockers before broader release
 
-## Next gate
+1. persistent in-app Privacy policy link/text is missing;
+2. deployed privacy-policy body is not independently verified against the post-AdMob data model;
+3. exact merged release manifest / AD_ID state is not captured;
+4. final release dependency inventory should be captured;
+5. Play target-audience declaration remains unresolved;
+6. final Play Data safety answers must be reconciled against the actual release artifact and current Play Console form.
 
-Explicit human approval required for:
+## Next recommended action
 
-`PUBLISH CURRENT CHANGES TO PHOTO COMPRESSOR EU CONSENT V1 ONLY`
+Authorize a narrow W2 fix/verification bundle:
 
-If approved:
-- click `Publish changes`;
-- wait for provider confirmation;
-- return to message list/status;
-- record provider published state;
-- optionally rerun one minimal forced-EEA first-layer check only if needed to confirm served runtime catches up.
+- add a persistent in-app `Privacy policy` link opening:
+  `https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
+- do not transmit photo content/metadata when opening it;
+- have Codex capture merged release manifest, AD_ID permission state, and release dependency inventory;
+- rerun build/test/lint;
+- produce W2 artifact-bound evidence.
 
-## Authority boundary
-
-This approval does NOT authorize:
-- new AdMob app or ad unit;
-- source-code changes;
-- production AdMob ID changes;
-- Play track promotion;
-- Artifact Freeze;
-- Android app release/publication.
-
-
-## Scoped publication approval — 2026-10-05
-
-Human selection:
-`USER_OPTION_1_2026-10-05_AUTHORIZE_PUBLISH_CURRENT_CHANGES_EU_CONSENT_ONLY`
-
-Explicitly authorized action:
-`PUBLISH CURRENT CHANGES TO PHOTO COMPRESSOR EU CONSENT V1 ONLY`
-
-Permitted:
-- click `Publish changes` for the current AdMob European regulations message;
-- wait for provider confirmation;
-- return to message list/status and record resulting published state.
-
-Not authorized:
-- source-code changes;
-- AdMob app/ad-unit creation;
-- production AdMob ID changes;
-- Play track promotion;
-- Artifact Freeze;
-- Android app release/publication.
-
-After provider confirmation, stop and return evidence to CHAT for reconciliation closure.
-
-
-## Provider publication confirmation — 2026-10-05
-
-Human screenshot-observed provider state after the scoped publish action:
-
-- message: `Photo Compressor EU Consent v1`;
-- app: `Photo Compressor: KB Limit`;
-- language: English (en);
-- last modified: Oct 5, 2026;
-- status: `Published`;
-- publish toggle: enabled.
-
-Interpretation:
-`PUBLISH_CURRENT_CHANGES_CONFIRMED`
-
-The current three-button editor configuration has now been republished at provider level.
-
-Remaining reconciliation:
-`MINIMAL_FORCED_EEA_FIRST_LAYER_RERUN_RECOMMENDED`
-
-Purpose:
-confirm the served runtime message now reflects the republished three-button provider configuration. Full core/banner/offline regression is not required because those paths already passed and no source code changed.
-
-
-## Minimal three-button runtime recheck — 2026-10-05
-
-Human selected:
-`USER_OPTION_1_2026-10-05_MINIMAL_THREE_BUTTON_RUNTIME_RECHECK`
-
-Prompt:
-`prompts/CODEX_S7_MINIMAL_THREE_BUTTON_RUNTIME_RECHECK_v1.0.md`
-
-Scope:
-- physical device;
-- forced-EEA UMP first-layer observation only;
-- confirm `Do not consent + Consent + Manage options`;
-- no full regression rerun;
-- all temporary UMP debug hooks must be reverted;
-- evidence-only commit.
-
-No Play release, Artifact Freeze, source feature changes, or new ad-unit creation authorized.
-
-
-## Minimal three-button runtime recheck attempt — BLOCKED — 2026-10-05
-
-Terminal disposition reported by Codex:
-`BLOCKED_S7_MINIMAL_RECHECK_NO_ADB_DEVICE`
-
-Observed execution state:
-- no evidence commit produced;
-- physical device not detected in the current Codex environment;
-- Android SDK / adb unavailable in that environment;
-- button labels were not re-observed after the republish;
-- no temporary source modification was made;
-- S7 worktree remained clean;
-- HEAD remained `626dd959c0ead61808d7c94f6c78b2beeb415aae`.
-
-Interpretation:
-- this is an execution-environment blocker, not an app/runtime failure;
-- provider editor three-button preview remains PASS;
-- provider republish remains CONFIRMED;
-- prior physical-device technical runtime remains PASS except for the pre-republish literal DNC observation;
-- post-republish three-button physical-device observation remains OPEN.
-
-Decision gate:
-`ACCEPT_RESIDUAL_PROVIDER_RUNTIME_OBSERVABILITY_EXCEPTION_OR_RECOVER_ADB_ENVIRONMENT`
-
-No Play promotion, Artifact Freeze, or Android production release is authorized by this blocked attempt.
+Do NOT change Play Console declarations yet.
+Do NOT promote Play tracks.
+Do NOT Artifact Freeze or release.

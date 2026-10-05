@@ -1,53 +1,136 @@
 # DATA_SAFETY_DRAFT.md
 
-Status: PRE-ADMOB W1 DRAFT — NOT A PLAY CONSOLE SUBMISSION
-Date: 2026-10-03
+Status: W2 RECONCILED CANDIDATE — NOT YET A PLAY CONSOLE SUBMISSION
+Date: 2026-10-05
 Package: `com.afradadmedia.reducephotosize`
 
-## Current vc1 shipped behavior
+## Artifact scope
 
-Current Internal Testing vc1 has no AdMob/analytics/network SDK integration.
+This draft applies to the first AdMob-enabled artifact derived from the current S7 source.
 
-Core:
-- photo selection/inspection/compression/verification is local;
-- Save is user initiated;
-- Share is explicit/user initiated;
-- original is preserved;
-- no INTERNET permission is declared in source manifest.
+Current monetization stack:
+- GMA Next-Gen SDK `1.5.0`;
+- UMP SDK `4.0.0`;
+- one ResultScreen Banner;
+- no Firebase Analytics;
+- no mediation;
+- no custom analytics;
+- no custom user ID;
+- Publisher first-party ID disabled.
 
-Internal-testing-only apps are currently exempt from the Play Data safety section.
+## Core user-content handling
 
-## Planned AdMob delta — not yet shipped
+- JPEG selection/inspection/compression/verification is local/on-device.
+- Save is explicit and user initiated.
+- Share is explicit and user initiated.
+- Original is preserved.
+- App code does not send source/result JPEG bytes, target KB/MB, filenames, or share destinations to AdMob/analytics.
 
-If the approved AdMob architecture is implemented, the ads SDK can add third-party data handling.
+## Third-party SDK collection/sharing candidate
 
-Current official GMA disclosure baseline identifies automatic collection/sharing of:
-- IP address;
-- user product interactions;
-- diagnostic information;
-- device/account identifiers;
-for advertising, analytics and fraud-prevention purposes.
+Google's current GMA Next-Gen disclosure states the SDK automatically collects and shares the following for advertising, analytics, and fraud prevention.
 
-The exact final Data Safety answers MUST be generated from:
-1. the exact resolved GMA/UMP versions;
-2. merged release manifest;
-3. actual enabled SDK features/settings;
-4. target audience / consent configuration;
-5. any later analytics/mediation additions.
+### Approximate location
 
-W1 explicitly does NOT approve Firebase Analytics, mediation, custom user IDs, or sending photo content to ads.
+Source:
+IP address may be used to estimate general location.
 
-## Planned privacy-minimization defaults
+Play candidate:
+- collected: YES
+- shared: YES
+- optional: NO / REQUIRED_CANDIDATE
+- purposes:
+  - Advertising or marketing
+  - Analytics
+  - Fraud prevention, security and compliance
+- encrypted in transit: YES
 
-- source JPEG bytes: never sent to ads;
-- target KB/MB and compression result values: not sent by app code;
-- Firebase Analytics: absent;
-- custom analytics: absent;
-- custom cross-app identity: absent;
-- Publisher first-party ID: disabled initially.
+### App activity — App interactions
+
+Source:
+user product interactions including app launch/taps/interaction information.
+
+Play candidate:
+- collected: YES
+- shared: YES
+- optional: NO / REQUIRED_CANDIDATE
+- purposes:
+  - Advertising or marketing
+  - Analytics
+  - Fraud prevention, security and compliance
+- encrypted in transit: YES
+
+### App info and performance — Diagnostics
+
+Play candidate:
+- collected: YES
+- shared: YES
+- optional: NO / REQUIRED_CANDIDATE
+- purposes:
+  - Advertising or marketing
+  - Analytics
+  - Fraud prevention, security and compliance
+- encrypted in transit: YES
+
+### Device or other IDs
+
+Source:
+Android advertising ID, app set ID, and where applicable other device/account identifiers.
+
+Play candidate:
+- collected: YES
+- shared: YES
+- optional: NO / REQUIRED_CANDIDATE
+- purposes:
+  - Advertising or marketing
+  - Analytics
+  - Fraud prevention, security and compliance
+- encrypted in transit: YES
+
+## Why not optional
+
+Google Play says a data type may be declared optional only when all users, regardless of device or region, can choose whether that data is collected.
+
+The current app does not provide a universal all-region opt-out that disables all GMA collection for every user.
+
+## Not currently evidenced as collected by app code
+
+- JPEG/photo content;
+- generated result image bytes;
+- target KB/MB value;
+- filenames;
+- share destination;
+- name;
+- email;
+- phone;
+- contacts;
+- precise GPS location;
+- health or financial data.
+
+User-initiated Share is treated separately under Play's user-initiated transfer guidance.
+
+## Security
+
+Google's current GMA disclosure states SDK-collected user data is encrypted in transit using TLS.
+
+## Open evidence before final submission
+
+- capture exact merged release manifest;
+- determine exact AD_ID permission state;
+- capture final release dependency inventory;
+- independently verify deployed privacy-policy content;
+- reconcile target-audience declaration;
+- reconcile actual Play Console form wording at time of submission.
+
+## Internal testing note
+
+Apps active only on the Internal Testing track are currently exempt from inclusion in the public Data safety section.
+
+This exemption does not justify inaccurate later declarations and does not authorize broader release.
 
 ## Gate
 
-`DRAFT_ONLY / RECONCILE_AT_W2_AND_W3`
+`W2_CANDIDATE_READY / FINAL_PLAY_SUBMISSION_HOLD`
 
-Do not submit this file verbatim to Play Console without current artifact-bound reconciliation.
+Reference:
+`docs/qa/W2_POST_ADMOB_PRIVACY_DATA_SAFETY_ADS_RECONCILIATION_2026_10_05_v1.0.md`
