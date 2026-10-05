@@ -48,14 +48,17 @@ Open:
 - CHAT cannot independently fetch the deployed body in the current environment;
 - deployed content therefore remains unverified against the current post-AdMob data model.
 
-## Material app-surface gap
+## In-app privacy-policy surface
 
-The app does not currently provide a persistent in-app `Privacy policy` link/text.
+W2 fix authorized on 2026-10-05:
+the app now exposes an always-available `Privacy policy` text control in the shared app header.
 
-Google Play's current User Data policy requires the privacy policy in Play Console and within the app.
+Behavior:
+- explicit user action only;
+- opens the existing HTTPS policy URL through a plain ACTION_VIEW intent;
+- does not attach photo bytes, target size, filename, result metadata, or share destination.
 
-Required before broader release:
-add an always-available, explicit in-app Privacy/Privacy policy control opening the existing HTTPS URL.
+This closes the app-surface privacy-policy-link gap subject to build/runtime verification.
 
 ## Policy-content checklist to verify
 

@@ -69,6 +69,9 @@ import java.io.File
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
+private const val PRIVACY_POLICY_URL =
+    "https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/"
+
 private val Canvas = Color(0xFFF6F0ED)
 private val SurfaceWarm = Color(0xFFFCF9F6)
 private val SurfaceSubtle = Color(0xFFEFE9E4)
@@ -134,7 +137,8 @@ class MainActivity : ComponentActivity() {
                     canRequestAds = adMobController.canRequestAds,
                     adsInitialized = adMobController.sdkInitialized,
                     privacyOptionsRequired = adMobController.privacyOptionsRequired,
-                    onPrivacyOptions = adMobController::showPrivacyOptions
+                    onPrivacyOptions = adMobController::showPrivacyOptions,
+                    onPrivacyPolicy = ::openPrivacyPolicy
                 )
             }
         }
@@ -237,6 +241,18 @@ class MainActivity : ComponentActivity() {
         startActivity(Intent.createChooser(send, "Share upload-ready photo"))
     }
 
+    private fun openPrivacyPolicy() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(PRIVACY_POLICY_URL))
+        runCatching { startActivity(intent) }
+            .onFailure {
+                Toast.makeText(
+                    this,
+                    "Unable to open privacy policy",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+    }
+
     private fun reset() {
         imageInfo = null
         selectedTargetBytes = null
@@ -267,13 +283,18 @@ private fun ReducePhotoSizeApp(
     canRequestAds: Boolean,
     adsInitialized: Boolean,
     privacyOptionsRequired: Boolean,
-    onPrivacyOptions: () -> Unit
+    onPrivacyOptions: () -> Unit,
+    onPrivacyPolicy: () -> Unit
 ) {
     var customOpen by remember { mutableStateOf(false) }
     val actualState = if (state is MainUiState.Failure) state.recoverTo else state
     Scaffold(containerColor = Canvas) { padding ->
         Column(Modifier.fillMaxSize().padding(padding).statusBarsPadding().navigationBarsPadding().verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 16.dp)) {
-            AppHeader(privacyOptionsRequired, onPrivacyOptions)
+            AppHeader(
+                showPrivacyChoices = privacyOptionsRequired,
+                onPrivacyChoices = onPrivacyOptions,
+                onPrivacyPolicy = onPrivacyPolicy
+            )
             Spacer(Modifier.height(28.dp))
             when (actualState) {
                 MainUiState.Home -> HomeScreen { onEvent(MainUiEvent.ChoosePhoto) }
@@ -313,25 +334,43 @@ private fun ReducePhotoSizeApp(
     }
 }
 
-@Composable private fun AppHeader(showPrivacyChoices: Boolean, onPrivacyChoices: () -> Unit) {
+@Composable
+private fun AppHeader(
+    showPrivacyChoices: Boolean,
+    onPrivacyChoices: () -> Unit,
+    onPrivacyPolicy: () -> Unit
+) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-        Icon(painterResource(R.drawable.ic_brand_compress_frame), "Reduce Photo Size", tint = Ink, modifier = Modifier.size(26.dp))
+        Icon(
+            painterResource(R.drawable.ic_brand_compress_frame),
+            "Reduce Photo Size",
+            tint = Ink,
+            modifier = Modifier.size(26.dp)
+        )
         Spacer(Modifier.width(10.dp))
-        Text("Reduce Photo Size", color = InkDeep, style = WarmInkTypography.titleLarge, modifier = Modifier.weight(1f), maxLines = 1)
+        Text(
+            "Reduce Photo Size",
+            color = InkDeep,
+            style = WarmInkTypography.titleLarge,
+            modifier = Modifier.weight(1f),
+            maxLines = 1
+        )
+        TrustCue()
     }
-    Spacer(Modifier.height(8.dp))
+    Spacer(Modifier.height(4.dp))
     Row(
         Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.End,
         verticalAlignment = Alignment.CenterVertically
     ) {
+        TextButton(onClick = onPrivacyPolicy) {
+            Text("Privacy policy", color = TextSecondary, style = WarmInkTypography.labelMedium)
+        }
         if (showPrivacyChoices) {
             TextButton(onClick = onPrivacyChoices) {
                 Text("Privacy choices", color = TextSecondary, style = WarmInkTypography.labelMedium)
             }
-            Spacer(Modifier.width(6.dp))
         }
-        TrustCue()
     }
 }
 

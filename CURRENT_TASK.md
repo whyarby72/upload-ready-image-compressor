@@ -73,3 +73,27 @@ Authorize a narrow W2 fix/verification bundle:
 Do NOT change Play Console declarations yet.
 Do NOT promote Play tracks.
 Do NOT Artifact Freeze or release.
+
+
+## W2 minimal compliance fix authorization — 2026-10-05
+
+Human selection:
+`USER_OPTION_1_2026-10-05_W2_MINIMAL_COMPLIANCE_FIX_ARTIFACT_AUDIT`
+
+Authorized:
+- add a persistent in-app Privacy policy link to the existing HTTPS URL;
+- preserve explicit user action and send no photo content/metadata;
+- generate artifact-bound merged release manifest / AD_ID / dependency evidence;
+- rerun build/test/lint.
+
+Not authorized:
+- Play Console declaration mutation;
+- target-audience provider submission;
+- track promotion;
+- Artifact Freeze;
+- Android production release.
+
+Implementation intent:
+- persistent header control labeled `Privacy policy`;
+- URL: `https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`;
+- GitHub Actions uploads `w2-artifact-audit` containing merged release manifest, permission audit, release dependency inventory, and release APK hash when available.
