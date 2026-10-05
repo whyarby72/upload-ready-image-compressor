@@ -229,3 +229,25 @@ Use the existing W2 artifact-bound candidate:
 all as collected/shared candidates for the AdMob-enabled artifact, with purposes Advertising or marketing, Analytics, and Fraud prevention/security/compliance, subject to actual current Play form wording.
 
 Do not Send for review, promote tracks, Artifact Freeze, or release.
+
+
+## Play Data safety entry screen — 2026-10-05
+
+Human screenshot-observed state:
+- Data safety questionnaire opened successfully;
+- current step: `1 Overview`;
+- remaining steps visible:
+  - `2 Data collection and security`;
+  - `3 Data types`;
+  - `4 Data usage and handling`;
+  - `5 Preview`;
+- `Next` is available;
+- no Data Safety answers have been saved from this screen.
+
+Interpretation:
+`DATA_SAFETY_QUESTIONNAIRE_READY`
+
+Next action:
+advance to `Data collection and security`, then review the exact current Play wording before selecting any answer.
+
+No Save draft, provider submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized from this overview screen.
