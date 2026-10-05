@@ -77,3 +77,17 @@ The deployed privacy policy should accurately cover at least:
 ## Gate
 
 `PRIVACY_MODEL_RECONCILED / IN_APP_POLICY_LINK_AND_DEPLOYED_CONTENT_VERIFICATION_OPEN`
+
+
+## W2 privacy-link verification — 2026-10-05
+
+Persistent in-app `Privacy policy` control:
+`SOURCE_IMPLEMENTED / CI_BUILD_TEST_LINT_PASS`
+
+Implementation:
+plain ACTION_VIEW to the exact policy URL only.
+
+Artifact audit:
+`docs/qa/W2_MINIMAL_PRIVACY_LINK_ARTIFACT_AUDIT_RESULT_2026_10_05_v1.0.md`
+
+Deployed policy BODY content verification remains open.

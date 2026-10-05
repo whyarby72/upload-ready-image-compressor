@@ -1,99 +1,101 @@
 # CURRENT_TASK.md
 
-Task ID: W2_POST_ADMOB_PRIVACY_DATA_SAFETY_ADS_RECONCILIATION
-Owner: CHAT_AUDIT + CODEX_FOR_ARTIFACT_CHECKS + HUMAN_FOR_PROVIDER_ACTIONS
+Task ID: W2_PROVIDER_POLICY_CONTENT_AND_PLAY_DECLARATIONS
+Owner: CHAT_AUDIT + HUMAN_PROVIDER_ACTION
 Reviewer: CHAT
 Stage: W2_POST_ADMOB_RECONCILIATION
 Priority: HIGH
-Status: S7_CLOSED_WITH_ACCEPTED_OBSERVABILITY_EXCEPTION / W2_PARTIAL_PASS_WITH_PRIVACY_SURFACE_BLOCKER
+Status: SOURCE_AND_ARTIFACT_AUDIT_PASS / PROVIDER_POLICY_CONTENT_AND_DECLARATIONS_OPEN
 
-## S7 closure
+## S7
 
-Human decision:
-`USER_OPTION_1_2026-10-05_ACCEPT_RESIDUAL_AND_PROCEED_W2`
-
-Accepted residual:
-`POST_REPUBLISH_THREE_BUTTON_PHYSICAL_DEVICE_OBSERVATION_NOT_REPEATED_DUE_EXECUTION_ENVIRONMENT`
-
-S7 closure basis:
-- provider three-button preview PASS;
-- intended DNC country configuration PASS;
-- consent message republished and provider status Published;
-- prior physical-device UMP/refusal/privacy/banner/offline runtime evidence PASS except literal first-layer DNC observation before republish;
-- minimal post-republish rerun blocked by ADB/Android SDK environment, not app failure;
-- no source mutation occurred during blocked rerun.
-
-S7 disposition:
 `CLOSED_WITH_DOCUMENTED_PROVIDER_RUNTIME_OBSERVABILITY_EXCEPTION`
 
-## W2 audit
+## W2 source fix
 
-Primary audit:
-`docs/qa/W2_POST_ADMOB_PRIVACY_DATA_SAFETY_ADS_RECONCILIATION_2026_10_05_v1.0.md`
-
-Reconciled store docs:
-- `store/DATA_SAFETY_DRAFT.md`
-- `store/ADS_DECLARATION.md`
-- `store/PRIVACY_NOTES.md`
-
-## W2 PASS
-
-- GMA/UMP post-AdMob data model reconciled.
-- Photo/JPEG content remains isolated from ads/analytics in app code.
-- Data Safety candidate defined for:
-  - Approximate location;
-  - App interactions;
-  - Diagnostics;
-  - Device or other IDs.
-- Play Ads declaration truth for the first ad-enabled distributed artifact is:
-  `YES / CONTAINS ADS`
-- UMP/privacy choices implementation is present.
-- Publisher first-party ID disabled.
-
-## W2 HOLD / blockers before broader release
-
-1. persistent in-app Privacy policy link/text is missing;
-2. deployed privacy-policy body is not independently verified against the post-AdMob data model;
-3. exact merged release manifest / AD_ID state is not captured;
-4. final release dependency inventory should be captured;
-5. Play target-audience declaration remains unresolved;
-6. final Play Data safety answers must be reconciled against the actual release artifact and current Play Console form.
-
-## Next recommended action
-
-Authorize a narrow W2 fix/verification bundle:
-
-- add a persistent in-app `Privacy policy` link opening:
-  `https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
-- do not transmit photo content/metadata when opening it;
-- have Codex capture merged release manifest, AD_ID permission state, and release dependency inventory;
-- rerun build/test/lint;
-- produce W2 artifact-bound evidence.
-
-Do NOT change Play Console declarations yet.
-Do NOT promote Play tracks.
-Do NOT Artifact Freeze or release.
-
-
-## W2 minimal compliance fix authorization — 2026-10-05
-
-Human selection:
+Human authorization:
 `USER_OPTION_1_2026-10-05_W2_MINIMAL_COMPLIANCE_FIX_ARTIFACT_AUDIT`
 
-Authorized:
-- add a persistent in-app Privacy policy link to the existing HTTPS URL;
-- preserve explicit user action and send no photo content/metadata;
-- generate artifact-bound merged release manifest / AD_ID / dependency evidence;
-- rerun build/test/lint.
+Implemented:
+- persistent in-app `Privacy policy` control;
+- explicit ACTION_VIEW to:
+  `https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`;
+- no photo content or photo metadata attached to the intent.
 
-Not authorized:
-- Play Console declaration mutation;
-- target-audience provider submission;
-- track promotion;
+Source commit:
+`8e5b4d66967e81c486affc19f573f699b5feb393`
+
+## W2 deterministic verification
+
+Audit:
+`docs/qa/W2_MINIMAL_PRIVACY_LINK_ARTIFACT_AUDIT_RESULT_2026_10_05_v1.0.md`
+
+GitHub Actions:
+- run `37257297047`;
+- job `111597008413`;
+- assembleDebug PASS;
+- assembleRelease PASS;
+- unit tests PASS;
+- lint PASS;
+- W2_ARTIFACT_AUDIT_PASS;
+- CI_VERIFY_PASS.
+
+Artifact:
+- name: `w2-artifact-audit`;
+- id: `11323640997`;
+- digest: `sha256:96224ef93763cf18382ac21eac08b5a67e9bab3ac1afc337fd43dab0ec25f630`.
+
+## Merged release manifest FACT
+
+AdMob App ID:
+`ca-app-pub-8084313520610270~1492953098`
+
+Permissions:
+- INTERNET;
+- ACCESS_NETWORK_STATE;
+- READ_BASIC_PHONE_STATE;
+- AD_ID;
+- WAKE_LOCK;
+- FOREGROUND_SERVICE;
+- app-scoped signature dynamic-receiver permission.
+
+AD_ID:
+`PRESENT`
+
+No photo/media/location dangerous runtime permission observed.
+
+## Release dependency FACT
+
+- GMA Next-Gen `1.5.0`;
+- UMP `4.0.0`;
+- Play Services Ads Identifier `18.0.0`;
+- Play Services App Set `16.0.1`.
+
+Unsigned release APK SHA-256:
+`df8ad4babe583bae7bf5f125ec7917803a25e01fbdd7a0353312d71a971c936e`
+
+## W2 closed
+
+- in-app privacy-policy source surface;
+- merged release manifest evidence;
+- AD_ID state;
+- dependency inventory;
+- deterministic build/test/lint.
+
+## W2 open
+
+1. deployed privacy-policy body content verification;
+2. final target-audience declaration;
+3. final Play Data Safety provider-form reconciliation;
+4. Ads declaration must become YES for the first distributed ad-enabled artifact.
+
+## Next recommended gate
+
+`PRIVACY_POLICY_BODY_VERIFICATION`
+
+Audit the deployed policy body against the current post-AdMob data model before any broader Play release/provider declaration submission.
+
+Do NOT:
+- promote Play tracks;
 - Artifact Freeze;
-- Android production release.
-
-Implementation intent:
-- persistent header control labeled `Privacy policy`;
-- URL: `https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`;
-- GitHub Actions uploads `w2-artifact-audit` containing merged release manifest, permission audit, release dependency inventory, and release APK hash when available.
+- release/publish the Android app.

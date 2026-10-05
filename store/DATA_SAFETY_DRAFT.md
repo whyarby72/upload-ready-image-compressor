@@ -134,3 +134,29 @@ This exemption does not justify inaccurate later declarations and does not autho
 
 Reference:
 `docs/qa/W2_POST_ADMOB_PRIVACY_DATA_SAFETY_ADS_RECONCILIATION_2026_10_05_v1.0.md`
+
+
+## W2 artifact-bound release reconciliation — 2026-10-05
+
+Source commit:
+`8e5b4d66967e81c486affc19f573f699b5feb393`
+
+CI:
+`PASS` — run `37257297047`
+
+Merged release manifest:
+`CAPTURED`
+
+AD_ID permission:
+`PRESENT`
+
+Resolved release dependency focus:
+- GMA Next-Gen `1.5.0`;
+- UMP `4.0.0`;
+- Play Services Ads Identifier `18.0.0`;
+- Play Services App Set `16.0.1`.
+
+Merged manifest also contains `READ_BASIC_PHONE_STATE`; Android documents this as a non-dangerous permission. No photo/media/location dangerous runtime permission is present.
+
+Artifact audit:
+`docs/qa/W2_MINIMAL_PRIVACY_LINK_ARTIFACT_AUDIT_RESULT_2026_10_05_v1.0.md`
