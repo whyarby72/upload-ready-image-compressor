@@ -826,3 +826,30 @@ Execution binding:
 Authority remains unchanged:
 - draft/declaration filling and non-submitting Save are allowed when evidence-backed;
 - `Send app for review`, release, rollout, track promotion, Managed Publishing changes, Artifact Freeze, and publication remain forbidden without new explicit approval.
+
+
+## Codex Chrome-profile automation attempt — blocked safely — 2026-10-05
+
+Human-reported Codex disposition:
+- automation stopped before mutation;
+- Play Console opened a developer-account creation page instead of the active app `Photo Compressor: KB Limit`;
+- the active Chrome account/profile was not the intended Play Console context;
+- no declaration was changed;
+- no submission/release occurred;
+- no evidence commit was created.
+
+Disposition:
+`BLOCKED_PLAY_CONSOLE_BROWSER_AUTH_REQUIRED`
+
+Control validation:
+- active-app/account verification gate worked as intended;
+- no provider mutation occurred under the wrong account/profile;
+- no release/submission boundary was crossed.
+
+Required recovery:
+1. human manually switches to the correct existing Chrome profile/account;
+2. human opens Google Play Console and confirms `Photo Compressor: KB Limit` is visible/active;
+3. rerun `prompts/CODEX_PLAY_CONSOLE_CHROME_PROFILE_CONTINUATION_v1.1.md`;
+4. Codex must again verify the active app before any mutation.
+
+No engine promotion yet: workflow has not passed end-to-end provider execution.
