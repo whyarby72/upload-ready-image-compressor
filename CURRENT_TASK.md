@@ -1074,3 +1074,38 @@ Execution prompt:
 
 Next gate:
 `STORE_SETTINGS_SAVE_AND_PUBLISH_EXECUTION`
+
+
+## Store settings Save-and-publish result — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_STORE_SETTINGS_SAVE_AND_PUBLISH_VERIFIED`
+
+Reported durable provider state:
+- app = `Photo Compressor: KB Limit`;
+- package = `com.afradadmedia.reducephotosize`;
+- Application type = `App`;
+- Category = `Photography`;
+- support email = `afradadmedia@gmail.com`;
+- website = `https://apps.afradadmedia.com/photo-compressor-kb-limit/`;
+- phone = blank;
+- provider durable-state message = `Change published`;
+- Publishing overview: `Send app for review` disabled and not clicked;
+- no release/track/publication action outside the authorized Store settings mutation;
+- app/source diff = none;
+- working tree = clean.
+
+Reported evidence commit:
+`f7b1ae0c68809b49fbf25bad07c25a173149079b`
+
+Remote evidence note:
+- the reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- therefore this provider PASS remains Codex/operator-attested until that evidence commit is pushed/reachable or equivalent provider evidence is reconciled independently.
+
+Store settings disposition:
+`STORE_SETTINGS_CATEGORY_CONTACT = PASS_ATTESTED`
+
+Next blocker:
+`DEFAULT_STORE_LISTING_AND_ASSETS`
+
+No `Send app for review`, release, rollout, Artifact Freeze, or Android app publication is authorized by this result.
