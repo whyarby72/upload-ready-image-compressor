@@ -154,3 +154,22 @@ Next gate:
 Proceed to the Target audience questionnaire and review `18 and over` only before saving/submitting.
 
 No Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
+
+
+## Play Target audience draft selection — 2026-10-05
+
+Human screenshot-observed draft state:
+- `18 and over` = selected;
+- `13-15` = not selected;
+- `16-17` = not selected;
+- optional `Restrict users that Google has determined to be minors from my app` = not selected.
+
+Interpretation:
+`TARGET_AUDIENCE_18_PLUS_ONLY_DRAFT_SELECTED`
+
+The optional minor-restriction control is not required merely because the target audience is 18+. Current product positioning is a general adult utility, not age-restricted/adult-content functionality.
+
+Next action:
+continue the questionnaire and inspect any remaining questions before Save.
+
+No Save/Submit, Send for review, track promotion, Artifact Freeze, or Android production release is authorized by this draft selection.
