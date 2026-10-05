@@ -336,3 +336,36 @@ Next action:
 select both checkboxes, then inspect the follow-up questions before saving this data type.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — Approximate location follow-up — 2026-10-05
+
+Human screenshot-observed current questions:
+- ephemeral processing;
+- required vs optional collection;
+- collection purposes.
+
+Artifact/official-doc answer profile for `Approximate location`:
+- processed ephemerally: `No`;
+- collection: `Required` (users cannot universally turn off collection across all regions/devices);
+- purposes:
+  - `Analytics`;
+  - `Advertising or marketing`;
+  - `Fraud prevention, security and compliance`.
+
+Do not select:
+- App functionality;
+- Developer communications;
+- Personalization;
+- Account management.
+
+Basis:
+- GMA Next-Gen automatically collects/shares IP address, which may estimate general location;
+- Google states the automatic purposes are advertising, analytics, and fraud prevention;
+- Play says optional collection may be declared only when all users can choose whether collection occurs;
+- Play says data used to build advertising/user profiles is not ephemeral.
+
+Next action:
+apply this profile to Approximate location, then inspect/save the data-type dialog before proceeding to the remaining three types.
+
+No final Data Safety submission or Send for review is authorized.
