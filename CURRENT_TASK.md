@@ -770,3 +770,35 @@ Next gate:
 answer `Downloaded App = No`, then expand the next section and inspect its exact wording before continuing.
 
 No final IARC rating submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
+
+
+## Codex Browser/Computer Use handoff — 2026-10-05
+
+Human selection:
+`USER_OPTION_2_2026-10-05_MOVE_NOW_TO_CODEX_BROWSER_COMPUTER_USE`
+
+Prompt:
+`prompts/CODEX_PLAY_CONSOLE_BROWSER_CONTINUATION_v1.0.md`
+
+Authorized scope:
+- continue Play Console Content Rating and remaining App content declarations using Browser/Computer Use;
+- save non-submitting declaration/draft changes to Publishing overview when directly evidence-supported;
+- stop on ambiguity;
+- evidence-only repo commit permitted.
+
+Explicitly NOT authorized:
+- Send app for review;
+- production rollout;
+- track promotion;
+- Managed Publishing changes;
+- Artifact Freeze;
+- Android app publication/release.
+
+Current Content Rating state:
+- Category = `All Other App Types`;
+- Step 2 Questionnaire;
+- first directly supported answer:
+  `Downloaded App = No`.
+
+Next operator action:
+open Codex Desktop with Browser/Computer Use in the authenticated Play Console session and run the prompt above.
