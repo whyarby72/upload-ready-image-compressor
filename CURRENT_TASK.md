@@ -1157,3 +1157,44 @@ Provider authority:
 
 Next gate:
 `MAIN_STORE_LISTING_SCHEMA_AND_SCREENSHOT_RUNTIME_PARITY_PREFLIGHT`
+
+
+## Google Play listing visual redesign approval — 2026-10-06
+
+Human decision:
+`USER_VISUAL_APPROVED_V1_1_0`
+
+The user explicitly approved the redesigned modern visual set and instructed the project to use those images.
+
+Selected package:
+`PHOTO_COMPRESSOR_GOOGLE_PLAY_LISTING_PACKAGE_v1.1.0.zip`
+
+Package SHA-256:
+`21b8cfa1653e938c5ba00a3fb36081690685b595add8cdce3ba496b1de3c403e`
+
+Visual set:
+- modern redesigned app icon;
+- modern feature graphic;
+- four portrait Google Play marketing screenshots:
+  1. Fit photos to upload limits;
+  2. Choose KB or MB targets;
+  3. Verify the final file size;
+  4. Set custom limits.
+
+The v1.0.0 plain/source-rendered creative set is superseded for listing creative use.
+
+Provider truth boundary:
+- the four portrait images are stylized marketing composites, not direct Android runtime captures;
+- user visual approval does not itself prove current Google Play provider acceptance or authorize provider mutation;
+- current-provider read-only preflight remains required before upload.
+
+Repo manifest:
+`play-store/listing/v1.1.0/README.md`
+
+Preflight prompt:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_V1_1_PREFLIGHT.md`
+
+Next gate:
+`MAIN_STORE_LISTING_V1_1_PROVIDER_PREFLIGHT`
+
+No Play Console upload, Save/Save and publish, Send for review, release, rollout, Artifact Freeze, or Android publication is authorized by this visual approval.
