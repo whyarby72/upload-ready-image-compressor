@@ -744,3 +744,29 @@ Next gate:
 complete Category inputs, then inspect the IARC questionnaire before answering content questions.
 
 No final rating submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
+
+
+## Play Content ratings — Questionnaire entry — 2026-10-05
+
+Human screenshot-observed state:
+- Category = `All Other App Types`;
+- questionnaire step 2 opened;
+- first visible question under `Downloaded App`:
+  `Does the app contain any ratings-relevant content (e.g., sex, violence, language) downloaded as part of the app package (code, assets)?`
+
+Artifact/source-backed answer for the current app:
+- `Downloaded App` = `No`.
+
+Basis:
+the app package is a photo-compression utility and does not intentionally include ratings-relevant sexual, violent, or strong-language content in its own packaged code/assets.
+
+The remaining sections visible but not yet expanded are:
+- User Content Sharing;
+- Online Content;
+- Promotion or Sale of Age-Restricted Products or Activities;
+- Miscellaneous.
+
+Next gate:
+answer `Downloaded App = No`, then expand the next section and inspect its exact wording before continuing.
+
+No final IARC rating submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
