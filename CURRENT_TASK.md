@@ -292,3 +292,25 @@ Do NOT select:
 Do not answer the lower unlabeled `No` until its question text is visible.
 
 No Save draft, provider submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized by this observation.
+
+
+## Play Data Safety — data types saved / usage handling reached — 2026-10-05
+
+Human screenshot evidence:
+- Step 3 Data types was saved.
+- Questionnaire advanced to Step 4 Data usage and handling.
+- Selected types shown in the form include:
+  - Approximate location;
+  - App interactions;
+  - Diagnostics;
+  - Device or other IDs.
+- Approximate location is currently Not started.
+
+Next handling profile for each of the four selected types, subject to exact current Play wording:
+- Collected: Yes;
+- Shared: Yes;
+- Ephemeral processing: No;
+- Collection optional: No / required;
+- Purposes: Advertising or marketing; Analytics; Fraud prevention, security and compliance.
+
+No final Data Safety Save/Submit or Send for review is authorized yet.
