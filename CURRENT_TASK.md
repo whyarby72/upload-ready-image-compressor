@@ -114,3 +114,22 @@ Remaining reconciliation:
 
 Purpose:
 confirm the served runtime message now reflects the republished three-button provider configuration. Full core/banner/offline regression is not required because those paths already passed and no source code changed.
+
+
+## Minimal three-button runtime recheck — 2026-10-05
+
+Human selected:
+`USER_OPTION_1_2026-10-05_MINIMAL_THREE_BUTTON_RUNTIME_RECHECK`
+
+Prompt:
+`prompts/CODEX_S7_MINIMAL_THREE_BUTTON_RUNTIME_RECHECK_v1.0.md`
+
+Scope:
+- physical device;
+- forced-EEA UMP first-layer observation only;
+- confirm `Do not consent + Consent + Manage options`;
+- no full regression rerun;
+- all temporary UMP debug hooks must be reverted;
+- evidence-only commit.
+
+No Play release, Artifact Freeze, source feature changes, or new ad-unit creation authorized.
