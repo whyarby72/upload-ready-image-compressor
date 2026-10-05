@@ -802,3 +802,27 @@ Current Content Rating state:
 
 Next operator action:
 open Codex Desktop with Browser/Computer Use in the authenticated Play Console session and run the prompt above.
+
+
+## Codex Chrome-profile binding revision — 2026-10-05
+
+Human authorization:
+`USER_OPTION_1_2026-10-05_REQUIRE_EXISTING_CHROME_PROFILE`
+
+Supersedes for execution:
+`prompts/CODEX_PLAY_CONSOLE_BROWSER_CONTINUATION_v1.0.md`
+
+New active handoff:
+`prompts/CODEX_PLAY_CONSOLE_CHROME_PROFILE_CONTINUATION_v1.1.md`
+
+Execution binding:
+- use Codex Chrome extension;
+- use the operator-selected existing Chrome profile that is already authenticated to the authorized Google Play Console account;
+- do NOT use ChatGPT built-in browser for this task;
+- do NOT persist or commit the Google account email address;
+- verify active Play Console app = `Photo Compressor: KB Limit` before mutation;
+- if account/app mismatch is visible, STOP for human intervention.
+
+Authority remains unchanged:
+- draft/declaration filling and non-submitting Save are allowed when evidence-backed;
+- `Send app for review`, release, rollout, track promotion, Managed Publishing changes, Artifact Freeze, and publication remain forbidden without new explicit approval.
