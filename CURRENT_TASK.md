@@ -540,3 +540,28 @@ Do not select:
 - Account management.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — Device or other IDs handling screen — 2026-10-05
+
+Human screenshot-observed question:
+`Device or other IDs — Is this data collected, shared, or both?`
+
+Current official GMA Next-Gen disclosure states Device and Account identifiers are automatically collected and shared, including Android advertising ID, app set ID, and, where applicable, other identifiers related to signed-in accounts.
+
+Answer:
+- `Collected` = selected;
+- `Shared` = selected.
+
+Expected follow-up profile, subject to the exact Play wording shown next:
+- processed ephemerally: `No`;
+- collection: `Required` for the current distributed configuration because the SDK automatically collects identifier data and the app does not provide a universal all-user opt-out;
+- purposes:
+  - `Analytics`;
+  - `Advertising or marketing`;
+  - `Fraud prevention, security and compliance`.
+
+Caveat:
+Google notes Android advertising ID collection itself can be prevented by manifest/configuration and users can reset/delete the ad ID. The Data Safety answer must still reflect the sum of identifier collection actually performed by the current app/SDK configuration, including app set ID and other applicable identifiers.
+
+No final Data Safety submission or Send for review is authorized.
