@@ -511,3 +511,32 @@ Basis:
 current GMA Next-Gen disclosure states user product interactions are automatically collected/shared for advertising, analytics, and fraud-prevention purposes.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — App interactions follow-up and shared-purpose screens — 2026-10-05
+
+Human screenshots show the same handling fields as prior types:
+- ephemeral processing;
+- required vs optional collection;
+- collected purposes;
+- shared purposes.
+
+For `App interactions`, use:
+- processed ephemerally: `No`;
+- collection: `Required`;
+- collected purposes:
+  - `Analytics`;
+  - `Advertising or marketing`;
+  - `Fraud prevention, security and compliance`;
+- shared purposes:
+  - `Analytics`;
+  - `Advertising or marketing`;
+  - `Fraud prevention, security and compliance`.
+
+Do not select:
+- App functionality;
+- Developer communications;
+- Personalization;
+- Account management.
+
+No final Data Safety submission or Send for review is authorized.
