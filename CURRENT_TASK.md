@@ -127,3 +127,30 @@ Next prerequisite from the prior Target audience screen:
 After Sign in details is completed, return to Target audience and content and continue the 18+ review flow.
 
 No Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
+
+
+## Play Sign in details save — 2026-10-05
+
+Human attestation:
+- `Is any part of your app restricted?` = `No`;
+- declaration was saved in Play Console.
+
+Interpretation:
+`SIGN_IN_DETAILS_NO_SAVED`
+
+This is consistent with the current app architecture:
+- no account/login requirement;
+- no subscription/IAP/access tier;
+- no referral/PIN/2-step verification;
+- no biometric gate;
+- no cross-device action requirement.
+
+Evidence class:
+`HUMAN_PROVIDER_ATTESTATION`
+
+Next gate:
+`TARGET_AUDIENCE_AND_CONTENT`
+
+Proceed to the Target audience questionnaire and review `18 and over` only before saving/submitting.
+
+No Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
