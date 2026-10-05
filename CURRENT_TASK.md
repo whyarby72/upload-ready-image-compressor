@@ -853,3 +853,37 @@ Required recovery:
 4. Codex must again verify the active app before any mutation.
 
 No engine promotion yet: workflow has not passed end-to-end provider execution.
+
+
+## Codex Chrome provider workflow — positive-path attestation and engine extraction — 2026-10-05
+
+Human attestation:
+`CODEX_CHROME_WORKFLOW = PASS`
+
+Evidence authority:
+- source_class = `OPERATOR_ATTESTATION`;
+- observation_mode = `SELF_REPORT`;
+- verification_state = `ATTESTED`;
+- independently_verifiable = `false` at audit time because the expected positive-run machine provider evidence file is not present on this canonical branch.
+
+Existing negative-control evidence:
+- prior wrong-profile/account attempt safely stopped before mutation;
+- no declaration/submission/release occurred under the wrong context.
+
+Reusable capability extraction:
+`AUTHENTICATED_PROVIDER_UI_AUTOMATION_AND_CONTEXT_INTEGRITY = PASS_TO_CLEAN_PATCH`
+
+Clean patch:
+`AI_PROD_ENGINE_AUTHENTICATED_PROVIDER_UI_AUTOMATION_CLEAN_PATCH_v1.0.0.md`
+SHA-256:
+`7fe274a3255c54102005735e046c16f5877b2836a08c479233595e7678ee19f6`
+
+Structural regression:
+`15/15 PASS`
+
+Capability boundary:
+- adds conditional provider-console automation adapter under canonical Section 48.1;
+- preserves Evidence Authority, Environment Matrix, Destructive Mutation Control, G0–G12, PRR, Artifact Freeze, Release, Publication and human approval authority;
+- provider positive-path maturity remains `ATTESTED`, not independently VERIFIED, until a replayable provider evidence pack is captured.
+
+No product release/publication authority is implied by this engine-capability extraction.
