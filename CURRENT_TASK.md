@@ -1037,3 +1037,40 @@ Decision:
 `HOLD_FOR_EXPLICIT_SAVE_AND_PUBLISH_SCOPE_APPROVAL`
 
 No authority is inferred from the earlier ordinary-Save approval because the provider control wording materially changed.
+
+
+## Store settings Save-and-publish approval — 2026-10-06
+
+Human explicit approval:
+`SAVE_AND_PUBLISH_STORE_SETTINGS_ONLY`
+
+Authorized scope:
+- Application type = `App`;
+- Category = `Photography`;
+- support email = canonical published support contact;
+- website = verified app-specific page if reachable, otherwise canonical developer website;
+- phone left blank unless a canonical public support number already exists;
+- click the Store settings control labeled `Save and publish`;
+- verify durable provider state;
+- inspect Publishing overview read-only after persistence;
+- capture evidence.
+
+Critical boundary:
+- if clicking `Save and publish` opens a second confirmation that would send for review, release/publish an app version, trigger rollout, or commit unrelated changes, STOP before confirming that second action.
+
+Explicitly not authorized:
+- `Send app for review`;
+- Main store listing text/media edits;
+- release creation;
+- track promotion;
+- production rollout;
+- Managed Publishing changes;
+- pricing/country changes;
+- Artifact Freeze;
+- Android app publication/release.
+
+Execution prompt:
+`prompts/CODEX_PLAY_CONSOLE_STORE_SETTINGS_SAVE_AND_PUBLISH_v1.0.md`
+
+Next gate:
+`STORE_SETTINGS_SAVE_AND_PUBLISH_EXECUTION`
