@@ -268,3 +268,27 @@ Artifact/SDK evidence supports:
 Do not answer the lower unlabeled `No` until its question text is visible.
 
 No Save draft, provider submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized by this observation.
+
+
+## Play Data safety — account/deletion follow-up observed — 2026-10-05
+
+Human screenshot-observed state:
+- `My app does not allow users to create an account` = selected;
+- question visible: `Can users login to your app with accounts created outside of the app?`;
+- deletion question visible: `Do you provide a way for users to request that their data is deleted? (Optional)`;
+- deletion answer choices visible:
+  - Yes;
+  - No;
+  - No, but user data is automatically deleted within 90 days;
+- another lower standalone `No` radio is visible without its question label.
+
+Recommended answers supported by current evidence:
+- external-account login: `No`;
+- deletion request mechanism: `No` unless a clearly discoverable deletion-request mechanism is intentionally established.
+
+Do NOT select:
+- `No, but user data is automatically deleted within 90 days`, because current evidence does not establish that all Google Mobile Ads / UMP data is automatically deleted or anonymized within 90 days.
+
+Do not answer the lower unlabeled `No` until its question text is visible.
+
+No Save draft, provider submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized by this observation.
