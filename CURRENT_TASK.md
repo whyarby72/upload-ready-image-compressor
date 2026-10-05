@@ -887,3 +887,40 @@ Capability boundary:
 - provider positive-path maturity remains `ATTESTED`, not independently VERIFIED, until a replayable provider evidence pack is captured.
 
 No product release/publication authority is implied by this engine-capability extraction.
+
+
+## Primary Runtime v5.16.27 APUACI pre-promotion run — 2026-10-05
+
+Scope authorized:
+`PROMOTION_DRY_RUN + GOVERNANCE_REPLAY + EXACT_HASH_PREFLIGHT`
+
+Explicitly not authorized:
+`ENGINE_PROMOTION v5.16.27`
+
+Exact candidate:
+`PRIMARY_RUNTIME_ENGINE_v5.16.27_PROMOTION_CANDIDATE_APUACI.md`
+
+Candidate SHA-256:
+`58f480e4fb48ca08cd90c3ff22c3ee4d42c62adeeace137905bda569a1062fb8`
+
+Final rerun results:
+- exact-hash preflight: `21/21 PASS`;
+- governance replay: `21/21 PASS`;
+- promotion dry-run: `7/7 PASS`;
+- candidate bytes unchanged after run: `PASS`;
+- promotion executed: `NO`.
+
+Execution-integrity note:
+- initial verifier invocation produced a false FAIL because the verifier read the regression JSON using the wrong field path and searched an unnecessarily narrow Section 62 slice for the canonical decision set;
+- no candidate bytes changed;
+- verifier defects were corrected;
+- the complete suite was rerun from the same exact candidate hash and passed;
+- initial verifier failure is retained as `PARTIAL_VERIFIER_FAILURE_NOT_CANDIDATE_FAILURE`.
+
+Terminal disposition:
+`PASS_READY_FOR_SCOPED_ENGINE_PROMOTION_APPROVAL`
+
+Pre-promotion bundle SHA-256:
+`1a2b70fa97e630c87e17f6c7bfc62c758973abab02bf576978e6782e5c8cbee0`
+
+No runtime activation, product BUILD authority, Artifact Freeze, release, or Publication authority was changed.
