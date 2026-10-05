@@ -946,3 +946,22 @@ Next gate:
 `PLAY_CONSOLE_CURRENT_STATE_RECONCILIATION`
 
 No Send for review, release, rollout, Artifact Freeze, or Publication is authorized by this step.
+
+
+## Play Console reconciliation — 2026-10-05
+
+Status: `PARTIAL_PLAY_CONSOLE_CURRENT_STATE_INCOMPLETE_VISIBILITY`
+
+Reported by Codex/operator:
+- correct app/package context verified;
+- App content has no current Need attention item;
+- Content ratings complete;
+- Publishing overview has 2 pending change groups;
+- Send app for review disabled;
+- remaining setup blockers: app category/contact details, store listing descriptions, app icon, feature graphic, and phone screenshots;
+- Testing/Release blocked until initial setup tasks are complete;
+- reconciliation run made no provider mutation.
+
+Reported evidence commit `858764eaf8b8338a13fc2ad62d1b6e896a0af213` is not currently reachable from the canonical remote branch, so this run remains ATTESTED rather than independently remote-verified.
+
+Next action candidate: `SELECT_APP_CATEGORY_AND_PROVIDE_CONTACT_DETAILS`.
