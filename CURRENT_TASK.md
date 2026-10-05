@@ -199,3 +199,33 @@ Next gate:
 `EXPLICIT_SAVE_TARGET_AUDIENCE_18_PLUS_ONLY_APPROVAL`
 
 No Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
+
+
+## Play Target audience save — 2026-10-05
+
+Human screenshot-observed state after Save:
+- Publishing overview shows `Target audience and content` under `Changes not yet submitted for review`;
+- description states target age is `18 and older`;
+- Ads declaration is also staged under App content;
+- Sign in details is summarized as all functionality available without special access;
+- `Send app for review` remains disabled because required dashboard setup steps are still incomplete.
+
+Interpretation:
+`TARGET_AUDIENCE_18_PLUS_ONLY_SAVED_TO_PENDING_CHANGES`
+
+This proves:
+- the 18+ declaration was saved/staged;
+- it has NOT been sent for review;
+- it has NOT been published/released.
+
+Next recommended gate:
+`PLAY_DATA_SAFETY_FORM_RECONCILIATION`
+
+Use the existing W2 artifact-bound candidate:
+- Approximate location;
+- App activity / App interactions;
+- App info and performance / Diagnostics;
+- Device or other IDs;
+all as collected/shared candidates for the AdMob-enabled artifact, with purposes Advertising or marketing, Analytics, and Fraud prevention/security/compliance, subject to actual current Play form wording.
+
+Do not Send for review, promote tracks, Artifact Freeze, or release.
