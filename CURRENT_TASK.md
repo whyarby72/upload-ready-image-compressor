@@ -75,3 +75,30 @@ Do NOT:
 - promote Play tracks;
 - Artifact Freeze;
 - release/publish the Android app.
+
+
+## Target audience decision intent — 2026-10-05
+
+Human selection:
+`USER_OPTION_1_2026-10-05_PROCEED_TARGET_AUDIENCE_18_PLUS_ONLY`
+
+Current official Google Play baseline rechecked:
+- Target audience must reflect the users the app is actually designed for.
+- `18 and over` can be selected as the only target group for an adult-designed app.
+- Restrict Minor Access is a separate optional control for adult-only apps unless a restricted-content policy specifically requires it.
+
+Product-positioning evidence:
+- current listing is a practical utility for strict upload limits, job applications, websites, portals, and email attachments;
+- no child-directed characters, school-age positioning, or youth-specific feature set is present in the current listing;
+- current live privacy policy already states the app is intended for an adult audience aged 18 and over.
+
+Decision scope:
+`PROCEED_TO_PLAY_TARGET_AUDIENCE_REVIEW_WITH_18_AND_OVER_ONLY_AS_CANDIDATE`
+
+Important:
+- do not Save/Submit yet;
+- do not enable Restrict Minor Access merely to simplify compliance;
+- review the actual Play screen first and verify that the declaration remains truthful for the current product positioning.
+
+Next provider action:
+open Play Console > Policy > App content > Target audience and content > Start/Manage, then return screenshot before Save.
