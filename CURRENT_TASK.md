@@ -393,3 +393,28 @@ Do not select:
 - Account management.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — Approximate location completed — 2026-10-05
+
+Human screenshot-observed state:
+- `Approximate location` status = `Completed`;
+- `App info and performance` = `0 of 1 completed`;
+- `App activity` = `0 of 1 completed`;
+- `Device or other IDs` = `0 of 1 completed`;
+- Play Console confirms changes have been saved.
+
+Interpretation:
+`APPROXIMATE_LOCATION_HANDLING_COMPLETE`
+
+Next data type:
+`App info and performance > Diagnostics`
+
+Expected handling profile subject to exact current Play wording:
+- Collected = Yes;
+- Shared = Yes;
+- Ephemeral = No;
+- Required = Yes;
+- purposes = Analytics; Advertising or marketing; Fraud prevention, security and compliance.
+
+No final Data Safety submission or Send for review is authorized.
