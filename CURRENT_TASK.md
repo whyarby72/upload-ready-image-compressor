@@ -1317,3 +1317,49 @@ Next gate:
 `ANDROID_RUNTIME_SCREENSHOT_CAPTURE_4_OF_4`
 
 No Play Console upload, Save, Send for review, release, rollout, Artifact Freeze, or publication is authorized by this step.
+
+
+## Google Play listing visual set v1.2 approved and packaged — 2026-10-06
+
+Human decision:
+`USER_APPROVED_RUNTIME_GROUNDED_VISUAL_SET_V1_2`
+
+Source truth:
+- four direct smartphone screenshots supplied by the human operator;
+- evidence class = `USER_SUPPLIED_RUNTIME_CAPTURE`;
+- marketing presentation layer built from those captures;
+- marketing composites are not raw runtime screenshots and must not be described as such.
+
+Selected package:
+`PHOTO_COMPRESSOR_GOOGLE_PLAY_LISTING_PACKAGE_v1.2.0.zip`
+
+Package SHA-256:
+`4294f59c952bc97d21a22350f1adf4121158f6004c730ab06f3d7ccc672248ff`
+
+Final assets:
+- app icon = 512×512 RGBA PNG;
+- feature graphic = 1024×500 JPEG;
+- 4 phone screenshots = 1080×1920 PNG;
+- raw smartphone captures included in the binary package as provenance.
+
+Repo manifest:
+`play-store/listing/v1.2.0/README.md`
+
+Prepared execution contract:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_V1_2_UPLOAD.md`
+
+Current state:
+`V1_2_PACKAGE_READY / PROVIDER_UPLOAD_NOT_YET_AUTHORIZED`
+
+Next approval gate:
+`MAIN_STORE_LISTING_V1_2_SAVE_AS_DRAFT`
+
+If later approved, the scope is limited to:
+- exact listing copy;
+- exact v1.2 assets;
+- Main store listing `Save as draft`;
+- durable-state verification;
+- Publishing overview read-only inspection;
+- STOP before Send app for review.
+
+No `Next`, Send app for review, release, rollout, Artifact Freeze, or publication is authorized by this package approval.
