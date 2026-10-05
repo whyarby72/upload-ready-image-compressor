@@ -565,3 +565,41 @@ Caveat:
 Google notes Android advertising ID collection itself can be prevented by manifest/configuration and users can reset/delete the ad ID. The Data Safety answer must still reflect the sum of identifier collection actually performed by the current app/SDK configuration, including app set ID and other applicable identifiers.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — Preview audit — 2026-10-05
+
+Human-provided Preview capture shows:
+
+PASS:
+- Approximate location shared purposes = Analytics; Fraud prevention, security, and compliance; Advertising or marketing.
+- Diagnostics shared/collected purposes = Analytics; Fraud prevention, security, and compliance; Advertising or marketing.
+- App interactions shared/collected purposes = Analytics; Fraud prevention, security, and compliance; Advertising or marketing.
+- Device or other IDs shared/collected purposes = Analytics; Fraud prevention, security, and compliance; Advertising or marketing.
+- Data deletion summary = Developer hasn't provided a way to request data deletion.
+- Security practices = Data is encrypted in transit.
+
+BLOCKER 1 — Approximate location collected-purpose mismatch:
+Preview shows Approximate location collected purposes including:
+- Analytics;
+- Advertising or marketing;
+- Personalization;
+- Account management.
+
+This is inconsistent with the intended/official GMA mapping. Expected collected purposes:
+- Analytics;
+- Advertising or marketing;
+- Fraud prevention, security, and compliance.
+
+Required correction:
+remove Personalization and Account management; add Fraud prevention, security, and compliance.
+
+BLOCKER 2 — Play Privacy policy field missing:
+Preview shows:
+`To submit, provide a link to your privacy policy on the Privacy policy page`
+
+Required provider action:
+set Play Console Privacy policy URL to:
+`https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
+
+Do not submit Data Safety / Send for review until both blockers are corrected and Preview is rechecked.
