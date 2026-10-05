@@ -467,3 +467,24 @@ Do not select:
 - Account management.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — Diagnostics shared-purpose screen — 2026-10-05
+
+Human screenshot-observed question:
+`Why is this user data shared? Select all that apply.`
+
+For `Diagnostics`, select exactly:
+- `Analytics`;
+- `Advertising or marketing`;
+- `Fraud prevention, security, and compliance`.
+
+Do not select:
+- App functionality;
+- Developer communications;
+- Personalization;
+- Account management.
+
+This matches the current GMA Next-Gen disclosure for diagnostic data.
+
+No final Data Safety submission or Send for review is authorized.
