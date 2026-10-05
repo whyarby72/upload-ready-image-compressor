@@ -418,3 +418,26 @@ Expected handling profile subject to exact current Play wording:
 - purposes = Analytics; Advertising or marketing; Fraud prevention, security and compliance.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — Diagnostics handling screen — 2026-10-05
+
+Human screenshot-observed question:
+`Diagnostics — Is this data collected, shared, or both?`
+
+Artifact/official-doc answer:
+- `Collected` = selected;
+- `Shared` = selected.
+
+Expected follow-up profile:
+- processed ephemerally: `No`;
+- collection: `Required`;
+- purposes:
+  - `Analytics`;
+  - `Advertising or marketing`;
+  - `Fraud prevention, security and compliance`.
+
+Basis:
+current GMA Next-Gen disclosure states diagnostic information is automatically collected/shared for advertising, analytics, and fraud-prevention purposes.
+
+No final Data Safety submission or Send for review is authorized.
