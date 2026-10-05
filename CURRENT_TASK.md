@@ -995,3 +995,45 @@ Execution prompt:
 
 Next gate:
 `STORE_SETTINGS_CATEGORY_CONTACT_SAVE_EXECUTION`
+
+
+## Store settings schema drift — Save and publish — 2026-10-06
+
+Codex/operator-reported disposition:
+`BLOCKED_PROVIDER_UI_SCHEMA_DRIFT`
+
+Verified provider context:
+- app = `Photo Compressor: KB Limit`;
+- package = `com.afradadmedia.reducephotosize`.
+
+Observed pre-save state:
+- Application type = `App`;
+- Category = `Not selected`;
+- Email = blank;
+- Phone = blank;
+- Website = blank.
+
+Observed UI drift:
+- contact/category form exposes `Save and publish`;
+- ordinary non-submitting `Save` is not exposed;
+- no values were entered;
+- no provider mutation occurred;
+- no Send app for review, release, or publishing action occurred.
+
+Reported evidence commit:
+`826d26be9c1e19d2e6b1dee1b6a66251c962846e`
+
+Remote evidence note:
+- reported evidence commit is not reachable from the canonical remote branch at this audit point;
+- therefore this provider observation remains Codex/operator-attested.
+
+Current official Play Console help reconciliation:
+- Store settings contains app category and store-listing contact details;
+- Publishing overview includes changes to store listings and store settings;
+- changes that require review are not sent for review until `Send for review` is clicked;
+- current app remains first-publication setup-incomplete, so this button cannot by itself create an Android production release.
+
+Decision:
+`HOLD_FOR_EXPLICIT_SAVE_AND_PUBLISH_SCOPE_APPROVAL`
+
+No authority is inferred from the earlier ordinary-Save approval because the provider control wording materially changed.
