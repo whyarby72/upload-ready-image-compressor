@@ -133,3 +133,30 @@ Scope:
 - evidence-only commit.
 
 No Play release, Artifact Freeze, source feature changes, or new ad-unit creation authorized.
+
+
+## Minimal three-button runtime recheck attempt — BLOCKED — 2026-10-05
+
+Terminal disposition reported by Codex:
+`BLOCKED_S7_MINIMAL_RECHECK_NO_ADB_DEVICE`
+
+Observed execution state:
+- no evidence commit produced;
+- physical device not detected in the current Codex environment;
+- Android SDK / adb unavailable in that environment;
+- button labels were not re-observed after the republish;
+- no temporary source modification was made;
+- S7 worktree remained clean;
+- HEAD remained `626dd959c0ead61808d7c94f6c78b2beeb415aae`.
+
+Interpretation:
+- this is an execution-environment blocker, not an app/runtime failure;
+- provider editor three-button preview remains PASS;
+- provider republish remains CONFIRMED;
+- prior physical-device technical runtime remains PASS except for the pre-republish literal DNC observation;
+- post-republish three-button physical-device observation remains OPEN.
+
+Decision gate:
+`ACCEPT_RESIDUAL_PROVIDER_RUNTIME_OBSERVABILITY_EXCEPTION_OR_RECOVER_ADB_ENVIRONMENT`
+
+No Play promotion, Artifact Freeze, or Android production release is authorized by this blocked attempt.
