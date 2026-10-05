@@ -1198,3 +1198,30 @@ Next gate:
 `MAIN_STORE_LISTING_V1_1_PROVIDER_PREFLIGHT`
 
 No Play Console upload, Save/Save and publish, Send for review, release, rollout, Artifact Freeze, or Android publication is authorized by this visual approval.
+
+
+## Main store listing v1.1 provider preflight selected — 2026-10-06
+
+Human selection:
+`USER_OPTION_1_RUN_CODEX_READ_ONLY_PROVIDER_PREFLIGHT`
+
+Authorized scope:
+- run `prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_V1_1_PREFLIGHT.md`;
+- use the approved modern visual set v1.1.0;
+- inspect current Main store listing schema and provider constraints;
+- evaluate provider compatibility of the approved icon, feature graphic, and four marketing screenshots;
+- return provider-readiness disposition and one next action;
+- zero provider mutation.
+
+Explicitly not authorized:
+- upload assets;
+- edit listing text;
+- Save / Save and publish;
+- Send app for review;
+- release/track actions;
+- Managed Publishing changes;
+- Artifact Freeze;
+- Android publication/release.
+
+Next gate:
+`MAIN_STORE_LISTING_V1_1_PROVIDER_PREFLIGHT_EXECUTION`
