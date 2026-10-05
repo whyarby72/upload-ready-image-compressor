@@ -3,7 +3,7 @@
 Product: PHOTO COMPRESSOR: KB LIMIT
 Repository: whyarby72/upload-ready-image-compressor
 Canonical branch: task/TASK-S7-001
-Expected starting HEAD: 375a0dd24744d547bbc0a7091ef330290e8559f5
+Required ancestry marker: cfe5b481ae2c1570c3a0d503cc9957e12d0547f1 or later canonical descendant
 
 ## Goal
 
@@ -38,8 +38,11 @@ Do NOT repeat compression, banner, offline, Save/Share, or full runtime regressi
    git rev-parse HEAD
    ```
 
-2. Require HEAD:
-   `375a0dd24744d547bbc0a7091ef330290e8559f5`
+2. Require that current HEAD contains the prepared handoff commit:
+   ```bash
+   git merge-base --is-ancestor cfe5b481ae2c1570c3a0d503cc9957e12d0547f1 HEAD
+   ```
+   Exit status must be 0.
 
 3. Confirm one physical ADB device:
    ```bash
