@@ -78,3 +78,27 @@ Do NOT:
 - promote Play tracks;
 - Artifact Freeze;
 - release/publish the Android app.
+
+
+## Privacy-policy deployment observation — 2026-10-05
+
+Human screenshot-observed hosting state:
+- deployment target: `apps.afradadmedia.com`;
+- repository: `whyarby72/apps-afradadmedia.git`;
+- deployment mode: manual;
+- provider result: `Success`;
+- timestamp shown by provider UI: `0s ago`.
+
+Interpretation:
+`PRIVACY_POLICY_PATCH_DEPLOYMENT_ATTESTED_BY_HOSTING_UI`
+
+Independent live-body verification:
+`STILL_REQUIRED`
+
+Reason:
+current CHAT web retrieval cannot access the live policy URL, so the newly deployed rendered body must be verified through a fresh browser capture/PDF or text export.
+
+Next gate:
+`POST_DEPLOY_PRIVACY_POLICY_RENDERED_BODY_VERIFICATION`
+
+No Play Console mutation, Artifact Freeze, or production release is authorized by this deployment alone.
