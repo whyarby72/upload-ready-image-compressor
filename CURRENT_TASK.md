@@ -99,3 +99,27 @@ Do NOT:
 - promote Play tracks;
 - Artifact Freeze;
 - release/publish the Android app.
+
+
+## Privacy-policy body audit attempt — 2026-10-05
+
+Human selected:
+`USER_OPTION_1_2026-10-05_AUDIT_DEPLOYED_PRIVACY_POLICY_BODY`
+
+Audit:
+`docs/qa/W2_PRIVACY_POLICY_BODY_AUDIT_ATTEMPT_2026_10_05_v1.0.md`
+
+Independent retrieval result:
+`BODY_CONTENT_NOT_INDEPENDENTLY_RETRIEVABLE_IN_CHAT_ENVIRONMENT`
+
+Important:
+- operator previously confirmed the URL opens publicly;
+- current tooling cannot fetch/read the deployed body;
+- this is evidence-access debt, not proof that the URL is broken.
+
+Current official Google baseline was refreshed and confirms the policy must comprehensively describe app + SDK data handling, while GMA Next-Gen automatically collects/shares IP/general location, user product interactions, diagnostics, and device/account identifiers for advertising, analytics, and fraud prevention.
+
+Next minimal recovery:
+provide the rendered policy text/HTML or screenshots from the live page for line-by-line audit.
+
+Provider mutation, Artifact Freeze, and production release remain unauthorized.
