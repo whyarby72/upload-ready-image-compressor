@@ -718,3 +718,29 @@ Next recommended gate:
 `CONTENT_RATING`
 
 No Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
+
+
+## Play Content ratings — Category screen — 2026-10-05
+
+Human screenshot-observed state:
+- step 1 `Category`;
+- required email field is empty;
+- category choices:
+  - Game;
+  - Social or Communication;
+  - All Other App Types;
+- IARC Terms of Use checkbox is available;
+- Next is currently disabled.
+
+Recommended profile for Photo Compressor: KB Limit:
+- Email address: use an actively monitored developer/support email that can receive rating-related notices and is consistent with the app's published support identity.
+- Category: `All Other App Types`.
+- Terms: check `I agree to the Terms of Use ... IARC` only if the human operator accepts those terms.
+
+Rationale:
+the app is a utility/photo-compression tool, not a game, betting app, social network, or communication app.
+
+Next gate:
+complete Category inputs, then inspect the IARC questionnaire before answering content questions.
+
+No final rating submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
