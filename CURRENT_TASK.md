@@ -314,3 +314,25 @@ Next handling profile for each of the four selected types, subject to exact curr
 - Purposes: Advertising or marketing; Analytics; Fraud prevention, security and compliance.
 
 No final Data Safety Save/Submit or Send for review is authorized yet.
+
+
+## Play Data Safety — Approximate location handling screen — 2026-10-05
+
+Human screenshot-observed wording:
+`Is this data collected, shared, or both?`
+
+Available choices:
+- `Collected`
+- `Shared`
+
+Artifact/SDK-backed answer for Approximate location:
+- `Collected` = selected;
+- `Shared` = selected.
+
+Basis:
+the ad-enabled release uses Google Mobile Ads; current GMA disclosure states IP address may be used to estimate general location and is automatically collected/shared for advertising, analytics, and fraud-prevention purposes.
+
+Next action:
+select both checkboxes, then inspect the follow-up questions before saving this data type.
+
+No final Data Safety submission or Send for review is authorized.
