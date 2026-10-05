@@ -965,3 +965,33 @@ Reported by Codex/operator:
 Reported evidence commit `858764eaf8b8338a13fc2ad62d1b6e896a0af213` is not currently reachable from the canonical remote branch, so this run remains ATTESTED rather than independently remote-verified.
 
 Next action candidate: `SELECT_APP_CATEGORY_AND_PROVIDE_CONTACT_DETAILS`.
+
+
+## Store settings category/contact authorization — 2026-10-05
+
+Human approval:
+`STORE_SETTINGS_CATEGORY_CONTACT_SAVE`
+
+Authorized provider mutation scope:
+- Application type = `App`;
+- Category = `Photography`;
+- public support email = canonical published support contact;
+- website = verified public app-specific page if reachable, otherwise canonical developer website;
+- ordinary non-submitting Save for this Store settings section;
+- post-save durable-state verification and evidence capture.
+
+Explicitly not authorized:
+- Send app for review;
+- release/track actions;
+- Managed Publishing;
+- store-listing copy/media edits;
+- pricing/country changes;
+- App content changes;
+- Artifact Freeze;
+- Publication.
+
+Execution prompt:
+`prompts/CODEX_PLAY_CONSOLE_STORE_SETTINGS_CATEGORY_CONTACT_v1.0.md`
+
+Next gate:
+`STORE_SETTINGS_CATEGORY_CONTACT_SAVE_EXECUTION`
