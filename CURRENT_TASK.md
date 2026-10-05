@@ -102,3 +102,36 @@ Next gate:
 `POST_DEPLOY_PRIVACY_POLICY_RENDERED_BODY_VERIFICATION`
 
 No Play Console mutation, Artifact Freeze, or production release is authorized by this deployment alone.
+
+
+## Post-deploy live capture verification — 2026-10-05
+
+New 3-page browser capture still shows the OLD privacy-policy body:
+- Last updated remains `October 4, 2026`;
+- advertising summary still says `may use Google Mobile Ads`;
+- Section 6 still uses generic device/network/advertising/interaction/diagnostic wording;
+- Section 10 lacks an explicit third-party Google retention boundary;
+- Section 11 lacks the GMA TLS-in-transit statement.
+
+Root-cause audit:
+repository `whyarby72/apps-afradadmedia`, branch `deploy/production`, file
+`photo-compressor-kb-limit/privacy/index.html`
+was independently read and confirmed to still contain the old policy body. The prior manual hosting deployment therefore redeployed unchanged production-branch content.
+
+Recovery performed under the existing privacy-policy deployment authorization:
+- patched the actual website production source file;
+- website repo commit:
+  `6a9106b74cd02dd5f0d32e6b591246a59f7e040f`;
+- updated Last updated to October 5, 2026;
+- made AdMob/UMP usage affirmative for ad-enabled release;
+- enumerated IP/approximate location, product interactions, diagnostics, and device/account identifiers;
+- added advertising/analytics/fraud-prevention purposes;
+- added GMA TLS statement;
+- added explicit third-party Google retention/deletion boundary.
+
+Next action:
+`MANUAL_REDEPLOY_APPS_AFRADADMEDIA_FROM_DEPLOY_PRODUCTION`
+
+After redeploy, capture the live privacy page again and verify the new body before closing W2.
+
+No Play Console mutation, Artifact Freeze, or Android production release is authorized.
