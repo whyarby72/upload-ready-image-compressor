@@ -173,3 +173,29 @@ Next action:
 continue the questionnaire and inspect any remaining questions before Save.
 
 No Save/Submit, Send for review, track promotion, Artifact Freeze, or Android production release is authorized by this draft selection.
+
+
+## Play Target audience summary — 2026-10-05
+
+Human screenshot-observed summary state:
+- questionnaire reached step 5 `Summary`;
+- Play Console summary states:
+  `The target age group for your app is: 18 and over`;
+- Save button is active;
+- Play Console states that Save will stage the change in Publishing overview, ready to be sent for review later.
+
+Interpretation:
+`TARGET_AUDIENCE_18_PLUS_ONLY_READY_TO_SAVE`
+
+This is consistent with:
+- current live privacy policy: adult audience aged 18 and over;
+- current product positioning;
+- no child-directed content/features;
+- optional minor-restriction control left off.
+
+No Save has been authorized by this observation alone.
+
+Next gate:
+`EXPLICIT_SAVE_TARGET_AUDIENCE_18_PLUS_ONLY_APPROVAL`
+
+No Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
