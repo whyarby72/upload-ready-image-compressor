@@ -628,3 +628,67 @@ Required collected purposes remain:
 - Fraud prevention, security, and compliance.
 
 Do not treat Approximate location as fully reconciled until the collected-purpose section is visibly confirmed with only those three purposes selected.
+
+
+## Play Data Safety — final Preview reconciliation — 2026-10-05
+
+Human-provided 2-page Preview capture shows the corrected declaration state.
+
+PASS — Data shared:
+- Approximate location:
+  - Analytics;
+  - Fraud prevention, security and compliance;
+  - Advertising or marketing.
+- Diagnostics:
+  - Analytics;
+  - Fraud prevention, security and compliance;
+  - Advertising or marketing.
+- App interactions:
+  - Analytics;
+  - Fraud prevention, security and compliance;
+  - Advertising or marketing.
+- Device or other IDs:
+  - Analytics;
+  - Fraud prevention, security and compliance;
+  - Advertising or marketing.
+
+PASS — Data collected:
+- Approximate location:
+  - Analytics;
+  - Fraud prevention, security and compliance;
+  - Advertising or marketing.
+- Diagnostics:
+  - Analytics;
+  - Fraud prevention, security and compliance;
+  - Advertising or marketing.
+- App interactions:
+  - Analytics;
+  - Fraud prevention, security and compliance;
+  - Advertising or marketing.
+- Device or other IDs:
+  - Analytics;
+  - Fraud prevention, security and compliance;
+  - Advertising or marketing.
+
+PASS — Other Preview sections:
+- Data deletion: developer hasn't provided a way to request data deletion.
+- Security practices: data is encrypted in transit.
+- Privacy policy URL is present:
+  `https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`
+
+Disposition:
+`DATA_SAFETY_PREVIEW_RECONCILED_PASS`
+
+The previous two blockers are closed:
+1. Approximate location collected-purpose mismatch corrected.
+2. Play Privacy policy URL field populated.
+
+Next gate:
+`EXPLICIT_SAVE_DATA_SAFETY_DECLARATION_APPROVAL`
+
+Save scope, if approved:
+- save the current Data Safety declaration to Publishing overview only;
+- do NOT Send for review;
+- do NOT promote tracks;
+- do NOT Artifact Freeze;
+- do NOT release/publish the Android app.
