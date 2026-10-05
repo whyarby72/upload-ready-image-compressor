@@ -1287,3 +1287,33 @@ Next gate:
 `BUILD_PROVIDER_SAFE_VISUAL_SET_V1_2`
 
 No Play Console mutation is authorized by this audit.
+
+
+## Android runtime screenshot capture authorized — 2026-10-06
+
+Human selection:
+`USER_OPTION_1_CAPTURE_4_REAL_RUNTIME_SCREENSHOTS`
+
+Execution prompt:
+`prompts/CODEX_ANDROID_RUNTIME_SCREENSHOT_CAPTURE_v1.0.md`
+
+Required runtime source-of-truth states:
+1. Home;
+2. Choose limit;
+3. real successful Result/PASS;
+4. Custom limit dialog.
+
+Evidence requirements:
+- actual running Android app;
+- ADB screencap provenance;
+- exact source commit;
+- device/build identity;
+- PNG dimensions + SHA-256;
+- foreground package verification;
+- no source modification;
+- no provider mutation.
+
+Next gate:
+`ANDROID_RUNTIME_SCREENSHOT_CAPTURE_4_OF_4`
+
+No Play Console upload, Save, Send for review, release, rollout, Artifact Freeze, or publication is authorized by this step.
