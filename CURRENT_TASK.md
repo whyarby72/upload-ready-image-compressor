@@ -441,3 +441,29 @@ Basis:
 current GMA Next-Gen disclosure states diagnostic information is automatically collected/shared for advertising, analytics, and fraud-prevention purposes.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — Diagnostics follow-up screen — 2026-10-05
+
+Human screenshot-observed current questions for `Diagnostics`:
+- ephemeral processing;
+- required vs optional collection;
+- collection purposes.
+
+Use the same artifact/official-doc profile as Approximate location:
+- processed ephemerally: `No`;
+- collection: `Required`;
+- collected purposes:
+  - `Analytics`;
+  - `Advertising or marketing`;
+  - `Fraud prevention, security and compliance`.
+
+When the shared-purpose section appears, use the same three shared purposes.
+
+Do not select:
+- App functionality;
+- Developer communications;
+- Personalization;
+- Account management.
+
+No final Data Safety submission or Send for review is authorized.
