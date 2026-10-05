@@ -369,3 +369,27 @@ Next action:
 apply this profile to Approximate location, then inspect/save the data-type dialog before proceeding to the remaining three types.
 
 No final Data Safety submission or Send for review is authorized.
+
+
+## Play Data Safety — Approximate location shared-purpose screen — 2026-10-05
+
+Human screenshot-observed question:
+`Why is this user data shared? Select all that apply.`
+
+Current official GMA Next-Gen disclosure states automatically collected/shared data is used for:
+- advertising;
+- analytics;
+- fraud prevention.
+
+Therefore for `Approximate location` shared purposes select exactly:
+- `Analytics`;
+- `Advertising or marketing`;
+- `Fraud prevention, security, and compliance`.
+
+Do not select:
+- App functionality;
+- Developer communications;
+- Personalization;
+- Account management.
+
+No final Data Safety submission or Send for review is authorized.
