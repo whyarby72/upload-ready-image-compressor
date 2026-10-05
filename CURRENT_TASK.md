@@ -692,3 +692,29 @@ Save scope, if approved:
 - do NOT promote tracks;
 - do NOT Artifact Freeze;
 - do NOT release/publish the Android app.
+
+
+## Play Data Safety save — 2026-10-05
+
+Human screenshot-observed Publishing overview state:
+- `Data safety` appears under `Changes not yet submitted for review`;
+- description: `Complete Data safety questionnaire`;
+- `Privacy policy` is staged with URL:
+  `https://apps.afradadmedia.com/photo-compressor-kb-limit/privacy/`;
+- `Target audience and content` is staged with target age 18 and older;
+- `Ads declaration` is staged;
+- `Send app for review` remains disabled because required dashboard setup steps are still incomplete.
+
+Interpretation:
+`DATA_SAFETY_SAVED_TO_PENDING_CHANGES`
+
+This proves:
+- Data Safety is saved/staged in Publishing overview;
+- Privacy policy URL is saved/staged;
+- neither has been sent for review;
+- nothing has been published/released.
+
+Next recommended gate:
+`CONTENT_RATING`
+
+No Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
