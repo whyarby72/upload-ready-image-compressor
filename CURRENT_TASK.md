@@ -1225,3 +1225,65 @@ Explicitly not authorized:
 
 Next gate:
 `MAIN_STORE_LISTING_V1_1_PROVIDER_PREFLIGHT_EXECUTION`
+
+
+## Main store listing v1.1 visual/provider audit — 2026-10-06
+
+Codex disposition:
+`HOLD_VISUAL_SET_POLICY_AMBIGUITY`
+
+Direct artifact inspection performed after Codex:
+- v1.1 binaries exist in the conversation working runtime;
+- app icon = 512×512 PNG, RGB, 223,785 bytes;
+- feature graphic = 1024×500 JPEG, 249,935 bytes;
+- screenshots 1–4 = 1080×1920 RGB PNG, each < 8 MB.
+
+Current official Google Play guidance reconciliation:
+- phone screenshots should demonstrate the actual in-app experience;
+- captured app footage is the preferred truth source;
+- stylized screenshots are allowed, but UI should be prioritized in the first three;
+- taglines should be used only when needed and should not occupy more than ~20% of the image;
+- device imagery is discouraged for screenshots;
+- feature graphics should avoid device imagery, fine detail overload, duplicated icon-like branding, and key content in cutoff zones;
+- Play app icon should be 512×512, 32-bit PNG, full square, with Google Play applying dynamic mask/shadow.
+
+Direct visual findings:
+1. `phone_01_approved_1080x1920.png`:
+   - premium art direction PASS;
+   - provider-readiness HOLD because the UI is presented inside an iPhone-like device frame and is a generated composite rather than a captured Android app view.
+2. `phone_02_approved_1080x1920.png`:
+   - premium art direction PASS;
+   - provider-readiness HOLD for device frame + generated status/device chrome + stylized UI that may diverge from current Android runtime.
+3. `phone_03_approved_1080x1920.png`:
+   - premium art direction PASS;
+   - core product semantics are accurate, but provider-readiness HOLD for device imagery and generated UI composition.
+4. `phone_04_approved_1080x1920.png`:
+   - premium art direction PASS;
+   - provider-readiness HOLD for the same device-frame/runtime-truth issue.
+5. Feature graphic:
+   - dimensions/size PASS;
+   - art direction PASS;
+   - provider optimization REWORK recommended: reduce small explanatory text / duplicated icon-like branding and move focal content farther from cutoff-sensitive edges.
+6. App icon:
+   - dimensions/size PASS;
+   - current file is RGB rather than 32-bit RGBA;
+   - baked rounded-square/shadow treatment should be normalized to a full-square Play asset because Play dynamically applies mask and shadow.
+
+Decision:
+`REWORK_VISUAL_SET_PROVIDER_SAFE_V1_2_RECOMMENDED`
+
+Preservation rule:
+- retain the user-approved premium modern art direction, palette, core motif, and marketing hierarchy;
+- revise only provider-risk elements: device frames, runtime-mismatch chrome, excess overlay text, icon masking/shadow format, and feature-graphic cutoff/detail risk.
+
+Reported Codex evidence commit:
+`97ef194954be76dcf37e6241ffb4dec49e484b83`
+
+Remote evidence note:
+- that reported evidence commit is not reachable from the canonical remote GitHub API at this audit point;
+- provider observation remains Codex/operator-attested, while the artifact and official-guidance review above is independently rechecked in this chat.
+
+Next gate:
+`BUILD_PROVIDER_SAFE_VISUAL_SET_V1_2`
+
+No Play Console mutation is authorized by this audit.
