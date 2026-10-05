@@ -251,3 +251,20 @@ Next action:
 advance to `Data collection and security`, then review the exact current Play wording before selecting any answer.
 
 No Save draft, provider submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized from this overview screen.
+
+
+## Play Data safety — collection/security screen observed — 2026-10-05
+
+Human screenshot-observed current questionnaire state:
+- `Does your app collect or share any required user data types?` = `Yes` selected;
+- next question visible: `Is all of the user data collected by your app encrypted in transit?`;
+- account-creation methods visible, including `My app does not allow users to create an account`;
+- a lower `No` radio is visible without its full question label in the provided capture.
+
+Artifact/SDK evidence supports:
+- encryption-in-transit answer candidate: `Yes`, because current GMA Next-Gen disclosure states SDK-collected data is encrypted in transit using TLS;
+- account-creation method candidate: `My app does not allow users to create an account`, consistent with source/product behavior and the previously saved Sign in details = No.
+
+Do not answer the lower unlabeled `No` until its question text is visible.
+
+No Save draft, provider submission, Send for review, track promotion, Artifact Freeze, or Android production release is authorized by this observation.
