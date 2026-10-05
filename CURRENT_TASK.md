@@ -102,3 +102,28 @@ Important:
 
 Next provider action:
 open Play Console > Policy > App content > Target audience and content > Start/Manage, then return screenshot before Save.
+
+
+## Play Ads declaration save — 2026-10-05
+
+Human screenshot-observed state after Save:
+- Play Console Publishing overview shows `Changes not yet submitted for review`;
+- App content item: `Ads declaration`;
+- description: `Update ads declaration`;
+- `Send app for review` is disabled;
+- Play Console states required app-dashboard steps remain incomplete.
+
+Interpretation:
+`ADS_DECLARATION_YES_SAVED_TO_PENDING_CHANGES`
+
+This proves:
+- Ads declaration was saved/staged;
+- it has NOT been sent for review;
+- it has NOT been published/released.
+
+Next prerequisite from the prior Target audience screen:
+`SIGN_IN_DETAILS`
+
+After Sign in details is completed, return to Target audience and content and continue the 18+ review flow.
+
+No Send for review, track promotion, Artifact Freeze, or Android production release is authorized.
