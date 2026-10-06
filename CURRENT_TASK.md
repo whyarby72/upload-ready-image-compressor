@@ -2611,3 +2611,29 @@ Execution prompt:
 
 Next gate:
 `SAVE_VC3_READY_PRODUCTION_STATE_EXECUTION`
+
+
+## Final VC3 review gate — 2026-10-07
+
+Status reported:
+READY_FOR_FINAL_SEND_FOR_REVIEW_APPROVAL_VC3
+
+Current Play state:
+- Internal testing paused/inactive
+- VC1 inactive
+- Production VC3 only
+- versionCode 3 / versionName 0.1.0 / targetSdk 36
+- AD_ID blocker cleared
+- only non-blocking warnings remain
+- release saved as Not yet sent for review
+- Publishing overview shows 11 pending changes
+- Managed publishing OFF
+- next control: Submit 11 changes for review
+
+Prepared prompt:
+prompts/CODEX_GOOGLE_PLAY_SUBMIT_11_CHANGES_FOR_REVIEW_VC3_v1.0.md
+
+Approval required:
+GOOGLE_PLAY_SUBMIT_11_CHANGES_FOR_REVIEW_VC3
+
+No review submission has been authorized yet.
