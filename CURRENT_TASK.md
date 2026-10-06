@@ -2470,3 +2470,42 @@ Next approval gate:
 `DEACTIVATE_INTERNAL_TESTING_VC1`
 
 No Internal-testing mutation, review submission, rollout, or publication is authorized by this record.
+
+
+## Internal testing VC1 deactivation approval — 2026-10-07
+
+Human explicit approval:
+`DEACTIVATE_INTERNAL_TESTING_VC1`
+
+Authorized scope:
+- verify correct app/package context;
+- open Internal testing;
+- verify the active stale artifact is VC1 only;
+- identify the narrowest provider control that deactivates/removes VC1 from Internal testing;
+- execute that control only if it clearly affects Internal testing VC1;
+- confirm only if the confirmation is clearly limited to Internal testing VC1/current internal release;
+- verify VC1 is no longer active;
+- verify Production VC3 remains unchanged;
+- re-run/inspect Production Advertising ID validation;
+- STOP before any `Send app for review`, rollout, or publication action.
+
+Explicitly not authorized:
+- alter Production VC3;
+- upload another artifact;
+- create VC4;
+- change Advertising ID declaration;
+- use `Release without permission`;
+- change listing/countries;
+- create/edit Closed/Open testing;
+- submit for review;
+- rollout;
+- publish.
+
+Execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_INTERNAL_VC1_DEACTIVATE_AND_REVALIDATE_v1.0.md`
+
+Critical stop:
+if the provider control cannot be proven to target Internal testing VC1 only, or if Production VC3 changes, STOP immediately.
+
+Next gate:
+`DEACTIVATE_INTERNAL_TESTING_VC1_EXECUTION`
