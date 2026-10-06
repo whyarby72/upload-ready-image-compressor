@@ -2677,3 +2677,34 @@ Expected best-case disposition:
 
 Next gate:
 `GOOGLE_PLAY_FINAL_REVIEW_SUBMISSION_EXECUTION`
+
+
+## Google Play review submission complete — 2026-10-07
+
+Codex/operator-reported disposition:
+PASS_GOOGLE_PLAY_11_CHANGES_SENT_FOR_REVIEW_VC3
+
+Provider-visible state:
+- app/package = Photo Compressor: KB Limit / com.afradadmedia.reducephotosize;
+- Production contains VC3 only;
+- versionCode 3 / versionName 0.1.0 / targetSdk 36;
+- Internal testing = Paused / Inactive;
+- Advertising ID blocker = cleared;
+- pending changes before submission = 11;
+- Managed publishing = OFF;
+- confirmation flow = Send 11 changes for review? -> Send changes for review;
+- result = Changes in review;
+- provider confirmation = 11 changes sent for review;
+- no rollout, publish, additional upload, or other mutation occurred after submission.
+
+Reported evidence commit:
+71c64b6218f8aef638d40908947d5458ca53ef8a
+
+Remote evidence note:
+reported evidence commit is not currently reachable through the canonical remote GitHub API; provider state remains Codex/operator-attested.
+
+Current project state:
+SUBMITTED_TO_GOOGLE_PLAY_REVIEW_VC3
+
+Next operational action:
+no further mutation until Google Play returns a review decision or exposes a new required action.
