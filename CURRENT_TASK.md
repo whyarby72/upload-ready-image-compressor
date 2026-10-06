@@ -2288,3 +2288,37 @@ Remaining mandatory gates before any review submission:
 5. stop before `Send app for review`.
 
 No review submission, rollout, or publication is authorized by this checkpoint.
+
+
+## Production draft vc2 removal approval — 2026-10-06
+
+Human explicit approval:
+`REMOVE_VC2_FROM_PRODUCTION_DRAFT_ONLY`
+
+Reason:
+- Production draft currently contains vc2 and vc3;
+- vc2 is the obsolete artifact that triggered the Advertising ID mismatch because it lacks `com.google.android.gms.permission.AD_ID`;
+- vc3 is the corrected artifact and must remain in the draft.
+
+Authorized scope:
+- verify the selected artifact is versionCode 2 only;
+- click `Remove app bundle` for vc2 only;
+- verify vc3 remains attached to the Production draft;
+- re-run provider validation;
+- record whether the Advertising ID blocker disappears;
+- STOP before any `Send app for review`, rollout, or publication action.
+
+Explicitly not authorized:
+- remove vc3;
+- remove both artifacts;
+- upload another artifact;
+- change declarations/listing/countries;
+- Send app for review;
+- rollout;
+- publication.
+
+Critical stop:
+if the provider control would remove more than vc2, or artifact identity is ambiguous, STOP before confirming.
+
+Next gate:
+`PRODUCTION_VC2_REMOVE_AND_REVALIDATE`
