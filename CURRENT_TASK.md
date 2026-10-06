@@ -2227,3 +2227,43 @@ if app/package/artifact mismatches, unexpected pending changes appear, or provid
 
 Next gate:
 `GOOGLE_PLAY_FINAL_SEND_FOR_REVIEW_EXECUTION`
+
+
+## Final review blocker: AD_ID permission mismatch — 2026-10-06
+
+Codex/operator-reported disposition:
+`BLOCKED_PROVIDER_VALIDATION`
+
+Observed provider blocker:
+Advertising ID declaration is active, but the uploaded production artifact does not contain:
+`com.google.android.gms.permission.AD_ID`
+
+Current source/product reality:
+- the release intentionally uses AdMob/GMA;
+- Ads declaration and privacy/Data Safety model are ad-enabled;
+- changing Advertising ID declaration to "No" would not match the intended ad-enabled configuration.
+
+Official Google Play requirement for apps targeting Android 13+ that use Advertising ID:
+declare `com.google.android.gms.permission.AD_ID` in the manifest.
+
+Minimum corrective source changes executed:
+- main manifest now explicitly declares `com.google.android.gms.permission.AD_ID`;
+- versionCode bumped 2 -> 3 because vc2 has already been uploaded/used;
+- versionName remains `0.1.0`;
+- targetSdk remains 36.
+
+Source commits:
+- AD_ID manifest correction: `027763f87a7b7970171b758dbb14f9c60ab9742d`
+- versionCode 3: `08d7518c6e674628873a41fedcfda0ed9905d282`
+
+Prepared execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_AD_ID_FIX_VC3_REBUILD_RETRY_v1.0.md`
+
+Next gate:
+`AD_ID_FIX_VC3_REBUILD_AND_PRODUCTION_RETRY`
+
+Required verification:
+the final signed vc3 AAB itself must be inspected and proven to contain AD_ID before Play upload.
+
+Hard boundary remains:
+STOP before Send for review / rollout / publication.
