@@ -1903,3 +1903,38 @@ if `Save` wording/warning changes materially, or any second confirmation indicat
 
 Next gate:
 `MAIN_STORE_LISTING_REVIEW_SAVE_EXECUTION`
+
+
+## Main store listing Review Save result — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_MAIN_STORE_LISTING_REVIEW_SAVED`
+
+Observed provider result:
+`Change saved. Send for review in Publishing overview.`
+
+Post-save provider state:
+- Main store listing prerequisite is no longer shown as incomplete;
+- prior `10 of 11 complete` checklist is no longer shown;
+- `Release your app` section is now exposed;
+- Publishing overview = `Changes not yet submitted for review`;
+- `Send app for review` = disabled;
+- no review submission, release, track, rollout, or publication occurred.
+
+Interpretation:
+the store-listing setup prerequisite is functionally complete even though the provider did not display literal `11 of 11 complete`.
+
+Reported evidence commit:
+`734db72e32ada9df4ff2ce72102ea1e2203c33f5`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser result remains Codex/operator-attested.
+
+Next gate:
+`RELEASE_SECTION_READ_ONLY_INSPECTION`
+
+Prepared prompt:
+`prompts/CODEX_PLAY_CONSOLE_RELEASE_SECTION_READ_ONLY_INSPECTION_v1.0.md`
+
+No Send for review, release, track, rollout, Artifact Freeze, or publication is authorized.
