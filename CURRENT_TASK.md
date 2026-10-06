@@ -1815,3 +1815,45 @@ if `Save as draft` disappears, the Review-step declaration/category state is mis
 
 Next gate:
 `MAIN_STORE_LISTING_REVIEW_SAVE_AS_DRAFT_EXECUTION`
+
+
+## Review Save-as-draft disabled state — 2026-10-06
+
+Codex/operator-reported disposition:
+`BLOCKED_REVIEW_SAVE_AS_DRAFT_SCHEMA_DRIFT`
+
+Observed provider state:
+- app/package context correct;
+- Review step = `AI asset declaration`;
+- AI label remains active;
+- all six current listing assets remain selected/labeled:
+  - App icon;
+  - Feature graphic;
+  - 4 Phone screenshots;
+- `Save as draft` is visible but disabled;
+- listing `Save` was not used;
+- Dashboard/Publishing overview were not touched after the blocker;
+- no Send app for review, release, track, rollout, or publication occurred.
+
+Interpretation:
+disabled `Save as draft` may mean either:
+1. the `Label assets and submit` dialog already persisted the AI declaration and there is no unsaved draft state;
+2. provider validation or another Review-state condition blocks draft persistence;
+3. provider uses a different persistence model for this Review step.
+
+Do not infer which without a reload/Dashboard/Publishing-overview reconciliation.
+
+Reported evidence commit:
+`ecfa01d207d0c5a01738632835df003287dd81a9`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser result remains Codex/operator-attested.
+
+Prepared read-only investigation:
+`prompts/CODEX_PLAY_CONSOLE_REVIEW_SAVE_DISABLED_STATE_INVESTIGATION_v1.0.md`
+
+Next gate:
+`REVIEW_SAVE_DISABLED_STATE_INVESTIGATION`
+
+No Save, Save-as-draft, Send for review, release, rollout, Artifact Freeze, or publication is authorized.
