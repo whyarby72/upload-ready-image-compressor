@@ -2267,3 +2267,24 @@ the final signed vc3 AAB itself must be inspected and proven to contain AD_ID be
 
 Hard boundary remains:
 STOP before Send for review / rollout / publication.
+
+
+## vc3 signing checkpoint — 2026-10-06
+
+Operator/Codex-reported signing result:
+- file = `PhotoCompressor-0.1.0-vc3-upload-signed.aab`;
+- JAR verification = PASS;
+- SHA-256 = `cc13f4faaf78c15deaa5bb4826659b154ff437fb092931b5b0f1241f4aa15c1f`;
+- self-signed/no-timestamp warnings were observed but did not invalidate local upload-key signing.
+
+Interpretation:
+`SIGNED_AAB_VC3_READY_FOR_ARTIFACT_PERMISSION_VERIFICATION_AND_PRODUCTION_UPLOAD`
+
+Remaining mandatory gates before any review submission:
+1. prove the signed vc3 AAB itself contains `com.google.android.gms.permission.AD_ID`;
+2. upload vc3 to the existing Production draft;
+3. confirm Play accepts versionCode 3;
+4. confirm prior Advertising ID validation blocker is cleared;
+5. stop before `Send app for review`.
+
+No review submission, rollout, or publication is authorized by this checkpoint.
