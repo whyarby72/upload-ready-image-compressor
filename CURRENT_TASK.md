@@ -2322,3 +2322,23 @@ if the provider control would remove more than vc2, or artifact identity is ambi
 
 Next gate:
 `PRODUCTION_VC2_REMOVE_AND_REVALIDATE`
+
+
+## Explicit vc2 removal approval confirmed by user selection — 2026-10-06
+
+Human selection:
+`1`
+
+This explicitly approves:
+`REMOVE_VC2_FROM_PRODUCTION_DRAFT_ONLY`
+
+Authorized action:
+- remove versionCode 2 from the existing Production draft only;
+- retain versionCode 3;
+- re-run/inspect provider validation;
+- STOP before review submission, rollout, or publication.
+
+Targeted execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_REMOVE_VC2_REVALIDATE_v1.0.md`
+
+No authorization is granted to remove vc3 or to submit/publish the release.
