@@ -1734,3 +1734,45 @@ if additional asset categories appear, file-level selection becomes mandatory, o
 
 Next gate:
 `AI_ASSET_PER_ASSET_LABELING_ALL_THREE_SUBMIT_EXECUTION`
+
+
+## AI asset category labeling result — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_AI_ASSET_PER_ASSET_LABELING_ALL_THREE_SUBMITTED`
+
+Selected categories:
+- `App icon`
+- `Feature graphic`
+- `Phone screenshots` (all 4 screenshots)
+
+Dialog control used:
+`Label assets and submit`
+
+Observed result:
+- dialog closed and returned to Review step;
+- `AI asset declaration` remained selected;
+- Main store listing remained `Draft`;
+- listing `Save` and `Save as draft` were NOT clicked;
+- Dashboard remained `10 of 11 complete`;
+- Publishing overview remained `Changes not yet submitted for review`;
+- `Send app for review` remained disabled;
+- no review submission, release, track, rollout, or publication occurred.
+
+Interpretation:
+the AI category declaration was completed inside the Review step, but the Review step itself has not yet been persisted via the listing-level persistence control.
+
+Reported evidence commit:
+`0bc65f4c0e631cd9d4cd315a359a0e9ca2261682`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser result remains Codex/operator-attested.
+
+Prepared, but NOT authorized:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_REVIEW_SAVE_AS_DRAFT_v1.0.md`
+
+Next approval gate:
+`MAIN_STORE_LISTING_REVIEW_SAVE_AS_DRAFT`
+
+No listing Save/Save-as-draft, Send for review, release, rollout, Artifact Freeze, or publication is authorized by this record.
