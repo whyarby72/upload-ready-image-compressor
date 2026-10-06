@@ -2370,3 +2370,40 @@ Next approval gate:
 `REMOVE_VC2_USING_ROW_BOUND_CONFIRMATION`
 
 No bundle removal, review submission, rollout, or publication is authorized by this record.
+
+
+## VC2 row-bound removal approval — 2026-10-07
+
+Human explicit approval:
+`REMOVE_VC2_USING_ROW_BOUND_CONFIRMATION`
+
+Authorized scope:
+- verify both VC2 and VC3 are visible in the Production draft;
+- identify the exact VC2 row/card using visible artifact identity;
+- open the overflow/menu from that VC2 row only;
+- select `Remove app bundle`;
+- if the generic dialog `Remove app bundle from release?` appears directly from that VC2-row action, confirm exactly once;
+- verify VC2 disappears;
+- verify VC3 remains attached and still represents versionCode 3 / versionName 0.1.0;
+- re-run/inspect provider validation;
+- verify whether the Advertising ID blocker is cleared;
+- STOP before any review submission, rollout, or publication action.
+
+Explicitly not authorized:
+- remove VC3;
+- remove both artifacts;
+- upload another artifact;
+- modify declarations/listing/countries;
+- click `Send app for review`;
+- click `Send release to Google for review`;
+- rollout;
+- publication.
+
+Execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_REMOVE_VC2_WITH_ROW_BOUND_CONFIRMATION_v1.0.md`
+
+Critical stop:
+if VC2 row identity or menu origin cannot be proven, or VC3 disappears after removal, STOP immediately.
+
+Next gate:
+`REMOVE_VC2_USING_ROW_BOUND_CONFIRMATION_EXECUTION`
