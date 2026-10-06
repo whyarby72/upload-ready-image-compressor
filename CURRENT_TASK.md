@@ -2637,3 +2637,43 @@ Approval required:
 GOOGLE_PLAY_SUBMIT_11_CHANGES_FOR_REVIEW_VC3
 
 No review submission has been authorized yet.
+
+
+## Final Google Play review submission approval — 2026-10-07
+
+Human explicit approval:
+`GOOGLE_PLAY_SUBMIT_11_CHANGES_FOR_REVIEW_VC3`
+
+Authorized scope:
+- verify correct app/package context;
+- verify Production contains VC3 only:
+  - versionCode 3
+  - versionName 0.1.0
+  - targetSdk 36
+- verify Internal testing remains Paused / Inactive;
+- verify Advertising ID blocker remains cleared;
+- verify Publishing overview still shows exactly 11 pending changes;
+- verify the 11 pending changes are only the intended launch changes already reviewed;
+- verify Managed publishing remains OFF;
+- click `Submit 11 changes for review` exactly once;
+- if a confirmation dialog appears, confirm exactly once only if it clearly submits those 11 pending changes for Google Play review;
+- capture resulting provider review status;
+- STOP immediately after submission.
+
+Explicitly not authorized:
+- change listing/declarations/countries;
+- alter VC3;
+- upload another artifact;
+- re-enable Internal testing;
+- change Managed publishing;
+- start any separate rollout;
+- click any separate Publish control.
+
+Execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_SUBMIT_11_CHANGES_FOR_REVIEW_VC3_v1.0.md`
+
+Expected best-case disposition:
+`PASS_GOOGLE_PLAY_11_CHANGES_SENT_FOR_REVIEW_VC3`
+
+Next gate:
+`GOOGLE_PLAY_FINAL_REVIEW_SUBMISSION_EXECUTION`
