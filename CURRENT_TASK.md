@@ -2573,3 +2573,41 @@ Next approval gate:
 `SAVE_VC3_READY_PRODUCTION_STATE`
 
 No Save, review submission, rollout, or publication is authorized by this record.
+
+
+## VC3 review-ready Save approval — 2026-10-07
+
+Human explicit approval:
+`SAVE_VC3_READY_PRODUCTION_STATE`
+
+Authorized scope:
+- verify correct app/package context;
+- verify Internal testing remains Paused / Inactive;
+- verify Production contains VC3 only:
+  - versionCode 3
+  - versionName 0.1.0
+  - targetSdk 36
+- verify Advertising ID blocker remains cleared;
+- verify only known non-blocking warnings remain;
+- verify no unexpected pending change appeared;
+- click `Save` exactly once;
+- if a confirmation appears, confirm only if it persists the already-reviewed state and does not itself submit for review / rollout / publication;
+- reload/verify state persisted;
+- identify the exact next material control;
+- STOP before `Send app for review`, rollout, or publish.
+
+Explicitly not authorized:
+- alter VC3;
+- upload another artifact;
+- change declarations/listing/countries;
+- re-enable Internal testing;
+- resolve optional warnings unless they become blocking;
+- submit for review;
+- rollout;
+- publication.
+
+Execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_SAVE_VC3_READY_STATE_v1.0.md`
+
+Next gate:
+`SAVE_VC3_READY_PRODUCTION_STATE_EXECUTION`
