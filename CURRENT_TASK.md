@@ -2002,3 +2002,60 @@ Prepared prompt:
 `prompts/CODEX_PLAY_CONSOLE_CLOSED_TEST_SETUP_READ_ONLY_INSPECTION_v1.0.md`
 
 No track creation, tester/country mutation, artifact upload, release, review submission, rollout, Artifact Freeze, or publication is authorized.
+
+
+## Closed testing prerequisite inspection result — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_CLOSED_TEST_SETUP_PREREQUISITES_IDENTIFIED`
+
+Observed provider state:
+- Closed testing track = `Closed testing - Alpha`;
+- status = `Inactive`;
+- releases = none.
+
+Closed testing sequence:
+1. `Set up your closed test track`
+2. `Select countries and regions`
+3. `Select testers`
+4. `Create and roll out a release`
+   - Create a new release
+   - Preview and confirm — locked
+   - Send release to Google for review — locked
+
+Countries/regions:
+- controls = `Add countries / regions` and `Add and sync countries / regions`;
+- no country currently visibly selected;
+- no availability warning observed.
+
+Testers:
+- email lists supported;
+- Google Groups supported;
+- existing email list `emailaku` with 1 user;
+- join links become available after app publication;
+- no minimum tester count/duration visible;
+- no account-specific threshold visible.
+
+Artifact/signing visibility:
+- `Create new release` available;
+- no AAB/APK upload prompt visible at this depth;
+- Play App Signing = UNKNOWN;
+- release notes/version code/version name/target API/integrity/symbols = not visible.
+
+Comparison:
+Closed testing is currently lower-friction than Open testing because Alpha track and an existing tester list already exist. Both still require country selection and a release.
+
+Reported evidence commit:
+`b8e48ddcb45d2461955b428e2b27dc0fb619aef1`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser result remains Codex/operator-attested.
+
+Next gate:
+`CLOSED_TEST_COUNTRY_SELECTION_READ_ONLY_INSPECTION`
+
+Prepared prompt:
+`prompts/CODEX_PLAY_CONSOLE_CLOSED_TEST_COUNTRY_SELECTION_READ_ONLY_INSPECTION_v1.0.md`
+
+No country selection, tester mutation, artifact upload, release, review submission, rollout, Artifact Freeze, or publication is authorized.
