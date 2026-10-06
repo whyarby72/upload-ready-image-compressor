@@ -2186,3 +2186,44 @@ Important launch semantics:
 this is the material review-submission boundary. With Managed publishing off, approved changes can be published automatically after Google review; treat approval of this gate as approval to submit the first production launch for review.
 
 No Send for review is authorized by this record.
+
+
+## Final Google Play review-submission approval — 2026-10-06
+
+Human explicit approval:
+`GOOGLE_PLAY_FINAL_SEND_FOR_REVIEW`
+
+Approved launch scope:
+- verify exact app/package context;
+- verify Production release still uses:
+  - versionCode = 2;
+  - versionName = 0.1.0;
+  - targetSdk = 36;
+  - signed AAB SHA-256 = `da4b862c70fd65f779890ae45339b16f6fb159ff607d37be6bb4957b337eaeb8`;
+- verify intended pending change set only;
+- verify global country selection remains present;
+- verify Managed publishing state;
+- click `Send app for review` exactly once;
+- if a confirmation dialog appears with materially matching review-submission semantics, confirm exactly once;
+- record resulting provider review/publication status;
+- STOP after submission/status verification.
+
+The human understands this is the material launch boundary. With Managed publishing currently off, Google Play may publish approved changes automatically after review.
+
+Explicitly not authorized:
+- any unrelated store/app-content edits;
+- changing country scope;
+- changing Managed publishing;
+- uploading a different artifact;
+- changing testing tracks;
+- starting a separate manual rollout/publish action beyond the exact review-submission flow;
+- any unrelated provider mutation.
+
+Execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_SEND_FOR_REVIEW_FINAL_v1.0.md`
+
+Critical stop:
+if app/package/artifact mismatches, unexpected pending changes appear, or provider wording materially changes to a different publication/release action, STOP before confirming.
+
+Next gate:
+`GOOGLE_PLAY_FINAL_SEND_FOR_REVIEW_EXECUTION`
