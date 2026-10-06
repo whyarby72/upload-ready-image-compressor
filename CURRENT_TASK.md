@@ -1498,3 +1498,55 @@ Read-only prompt:
 `prompts/CODEX_PLAY_CONSOLE_REMAINING_DASHBOARD_PREREQUISITE_v1.0.md`
 
 No Send for review, release, rollout, Artifact Freeze, or publication is authorized.
+
+
+## Remaining Dashboard prerequisite identified — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_REMAINING_DASHBOARD_PREREQUISITE_IDENTIFIED`
+
+Dashboard state:
+`10 of 11 complete`
+
+Completed:
+1. Set privacy policy
+2. Sign in details
+3. Ads
+4. Content rating
+5. Target audience
+6. Data safety
+7. Government apps
+8. Financial features
+9. Health
+10. Select an app category and provide contact details
+
+Only incomplete item:
+`Set up your store listing`
+
+Provider wording:
+`Provide information about your app and set up your store listing`
+
+Observed current listing state:
+- Main store listing = `Draft`;
+- listing text/assets already present;
+- visible controls = `Save as draft` and `Next`.
+
+Interpretation:
+- no app bundle, release, or test-track prerequisite was identified at this stage;
+- remaining setup blocker is the provider Review step for Main store listing;
+- entering/completing that Review step crosses a separate approval boundary and was not executed.
+
+Reported evidence commit:
+`89c24097d9df9e50131ba761dffea4d11c2aeaa2`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser result remains Codex/operator-attested.
+
+Prepared, but NOT authorized for execution:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_REVIEW_STEP_INSPECTION_v1.0.md`
+
+Next approval gate:
+`MAIN_STORE_LISTING_REVIEW_STEP_INSPECTION`
+
+No `Next`, review submission, release, rollout, Artifact Freeze, or publication is authorized by this record.
