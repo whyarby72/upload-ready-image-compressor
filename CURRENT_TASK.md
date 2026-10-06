@@ -1776,3 +1776,42 @@ Next approval gate:
 `MAIN_STORE_LISTING_REVIEW_SAVE_AS_DRAFT`
 
 No listing Save/Save-as-draft, Send for review, release, rollout, Artifact Freeze, or publication is authorized by this record.
+
+
+## Main store listing Review Save-as-draft approval — 2026-10-06
+
+Human explicit approval:
+`MAIN_STORE_LISTING_REVIEW_SAVE_AS_DRAFT`
+
+Authorized scope:
+- verify correct app/package and current `AI asset declaration` Review step;
+- verify current AI declaration and category labels remain present:
+  - App icon;
+  - Feature graphic;
+  - Phone screenshots;
+- click listing-level `Save as draft` only;
+- reload/re-open and verify durable Review-step declaration state;
+- verify whether Dashboard becomes `11 of 11 complete`;
+- inspect Publishing overview read-only;
+- record `Send app for review` enabled/disabled;
+- capture evidence;
+- STOP.
+
+Explicitly not authorized:
+- listing `Save` if broader than `Save as draft`;
+- `Send app for review`;
+- release creation/edit;
+- track promotion;
+- production rollout;
+- Managed Publishing changes;
+- Artifact Freeze;
+- Android publication/release.
+
+Execution prompt:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_REVIEW_SAVE_AS_DRAFT_v1.0.md`
+
+Critical stop:
+if `Save as draft` disappears, the Review-step declaration/category state is missing or changed, or any second confirmation implies review submission/publication/release/rollout, STOP before further action.
+
+Next gate:
+`MAIN_STORE_LISTING_REVIEW_SAVE_AS_DRAFT_EXECUTION`
