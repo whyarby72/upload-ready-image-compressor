@@ -1454,3 +1454,47 @@ Next gate:
 `POST_LISTING_STATE_RECONCILIATION`
 
 No Send for review, release, rollout, Artifact Freeze, or publication is authorized.
+
+
+## Post-listing provider-state reconciliation result — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_POST_LISTING_STATE_RECONCILED`
+
+Reconciled provider state:
+- Dashboard = `10 of 11 complete`;
+- Privacy policy = completed;
+- Sign in details = completed;
+- Ads = completed;
+- Content rating = completed;
+- Target audience = completed;
+- Data safety = completed;
+- Government apps = completed;
+- Financial features = completed;
+- Health apps = completed;
+- App category/contact details = completed;
+- App content = `You're all caught up`;
+- App content declarations = `10 actioned declarations`;
+- IARC status = `Completed`, submitted 2026-10-05;
+- Store settings = App / Photography / contact email + website saved;
+- Main store listing = Draft with text + icon + feature graphic + 4 screenshots present;
+- Publishing overview contains pending changes for Store listing, Content Rating, Target audience, Privacy policy, Ads declaration, Data safety, Health apps, and Store settings/App category;
+- `Send app for review` = disabled.
+
+Reconciliation:
+the prior "incomplete sections" report was a provider-state interpretation error. Pending items in Publishing overview mean saved changes are not yet sent for review; they do not mean the declarations are incomplete.
+
+Reported evidence commit:
+`ae981a0792108fbb9edbab49b83b613a3555560f`
+
+Remote evidence note:
+- the reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- this browser result remains Codex/operator-attested.
+
+Next gate:
+`REMAINING_DASHBOARD_PREREQUISITE_IDENTIFICATION`
+
+Read-only prompt:
+`prompts/CODEX_PLAY_CONSOLE_REMAINING_DASHBOARD_PREREQUISITE_v1.0.md`
+
+No Send for review, release, rollout, Artifact Freeze, or publication is authorized.
