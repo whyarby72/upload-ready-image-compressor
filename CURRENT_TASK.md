@@ -2509,3 +2509,34 @@ if the provider control cannot be proven to target Internal testing VC1 only, or
 
 Next gate:
 `DEACTIVATE_INTERNAL_TESTING_VC1_EXECUTION`
+
+
+## Internal testing Pause track control approval — 2026-10-07
+
+Provider control discovered:
+`Pause track`
+
+Verified scope:
+- applies to Internal testing;
+- Internal testing contains VC1 as its only active artifact/release;
+- Production VC3 is not affected.
+
+Human authorization:
+`PAUSE_INTERNAL_TESTING_TRACK_TO_DEACTIVATE_VC1`
+
+Authorized action:
+- click `Pause track` exactly once for Internal testing;
+- confirm only if any confirmation remains scoped to pausing Internal testing/current internal release;
+- verify Internal testing is paused/inactive and VC1 is no longer active;
+- verify Production VC3 remains unchanged;
+- re-run Production Advertising ID validation;
+- STOP before review submission, rollout, or publication.
+
+Not authorized:
+- pause/change Production;
+- alter VC3;
+- upload another artifact;
+- change declarations/listing/countries;
+- send for review;
+- rollout;
+- publish.
