@@ -2342,3 +2342,31 @@ Targeted execution prompt:
 `prompts/CODEX_GOOGLE_PLAY_REMOVE_VC2_REVALIDATE_v1.0.md`
 
 No authorization is granted to remove vc3 or to submit/publish the release.
+
+
+## VC2 removal confirmation ambiguity — 2026-10-06
+
+Codex/operator-reported disposition:
+`BLOCKED_VC2_REMOVAL_AMBIGUOUS`
+
+Observed provider state:
+- both VC2 and VC3 are visible in the Production draft;
+- VC2 row menu was opened;
+- `Remove app bundle` was selected from the VC2 row;
+- provider confirmation dialog wording = `Remove app bundle from release?`;
+- the dialog did not repeat versionCode 2;
+- removal was correctly NOT confirmed;
+- VC2 remains present;
+- VC3 remains present;
+- AD_ID revalidation could not proceed.
+
+Interpretation:
+the dialog text is generic, but the action may still be safely attributable to VC2 if the row/menu origin is proven immediately before confirmation.
+
+Prepared, but NOT authorized:
+`prompts/CODEX_GOOGLE_PLAY_REMOVE_VC2_WITH_ROW_BOUND_CONFIRMATION_v1.0.md`
+
+Next approval gate:
+`REMOVE_VC2_USING_ROW_BOUND_CONFIRMATION`
+
+No bundle removal, review submission, rollout, or publication is authorized by this record.
