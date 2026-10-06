@@ -1363,3 +1363,47 @@ If later approved, the scope is limited to:
 - STOP before Send app for review.
 
 No `Next`, Send app for review, release, rollout, Artifact Freeze, or publication is authorized by this package approval.
+
+
+## Main store listing v1.2 Save-as-draft approval — 2026-10-06
+
+Human explicit approval:
+`MAIN_STORE_LISTING_V1_2_SAVE_AS_DRAFT`
+
+Exact package:
+`PHOTO_COMPRESSOR_GOOGLE_PLAY_LISTING_PACKAGE_v1.2.0.zip`
+
+Exact package SHA-256:
+`4294f59c952bc97d21a22350f1adf4121158f6004c730ab06f3d7ccc672248ff`
+
+Authorized scope:
+- verify exact package/hash and exact six asset hashes;
+- open verified app/package Main store listing;
+- enter exact canonical v1.2 listing text;
+- upload exact v1.2 icon, feature graphic, and four runtime-grounded screenshots;
+- click provider control `Save as draft` only;
+- re-open/reload and verify durable saved state;
+- inspect Publishing overview read-only;
+- capture evidence;
+- STOP.
+
+Explicitly not authorized:
+- `Next`;
+- `Send app for review`;
+- declarations beyond Main store listing;
+- release creation/edit;
+- track promotion;
+- production rollout;
+- Managed Publishing changes;
+- pricing/country changes;
+- Artifact Freeze;
+- Android publication/release.
+
+Execution prompt:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_V1_2_SAVE_AS_DRAFT_EXECUTION_v1.0.md`
+
+Critical boundary:
+if `Save as draft` changes wording or opens a second confirmation that implies review submission, publication, release/rollout, or unrelated changes, STOP before confirming.
+
+Next gate:
+`MAIN_STORE_LISTING_V1_2_SAVE_AS_DRAFT_EXECUTION`
