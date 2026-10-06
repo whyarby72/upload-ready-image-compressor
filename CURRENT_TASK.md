@@ -1857,3 +1857,49 @@ Next gate:
 `REVIEW_SAVE_DISABLED_STATE_INVESTIGATION`
 
 No Save, Save-as-draft, Send for review, release, rollout, Artifact Freeze, or publication is authorized.
+
+
+## Main store listing Review Save approval — 2026-10-06
+
+Human explicit approval:
+`MAIN_STORE_LISTING_REVIEW_SAVE`
+
+Authorized scope:
+- verify correct app/package context;
+- verify Dashboard remains `10 of 11 complete`;
+- open Main store listing Review step;
+- verify `AI asset declaration` remains selected;
+- verify AI labels remain present for:
+  - App icon;
+  - Feature graphic;
+  - all 4 Phone screenshots;
+- verify `Save as draft` remains disabled;
+- verify `Save` remains enabled;
+- verify warning still materially states that saving places changes in Publishing overview ready to send for review later;
+- click `Save` exactly once;
+- reload/re-open Dashboard;
+- verify whether Dashboard becomes `11 of 11 complete`;
+- verify whether `Set up your store listing` now has a check;
+- inspect Publishing overview read-only;
+- record whether `Send app for review` is enabled or disabled;
+- capture evidence;
+- STOP.
+
+Explicitly not authorized:
+- `Send app for review`;
+- any second confirmation that submits for review;
+- release creation/edit;
+- track promotion;
+- production rollout;
+- Managed Publishing changes;
+- Artifact Freeze;
+- Android publication/release.
+
+Execution prompt:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_REVIEW_SAVE_v1.0.md`
+
+Critical stop:
+if `Save` wording/warning changes materially, or any second confirmation indicates immediate review submission/publication/release/rollout, STOP before confirming.
+
+Next gate:
+`MAIN_STORE_LISTING_REVIEW_SAVE_EXECUTION`
