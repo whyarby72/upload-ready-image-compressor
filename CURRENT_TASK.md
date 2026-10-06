@@ -2149,3 +2149,40 @@ Next gate:
 
 Hard boundary remains:
 STOP before Send for review / review submission / rollout / publication.
+
+
+## Production release vc2 ready for final review submission — 2026-10-06
+
+Codex/operator-reported disposition:
+`READY_FOR_PRODUCTION_REVIEW_SUBMISSION_APPROVAL`
+
+Release artifact:
+- source commit tested = `0cfad9c293ef5b94a7848b9fe2b24f99c003a1b8`;
+- targetSdk = 36;
+- versionCode = 2;
+- versionName = 0.1.0;
+- tests/lint/bundleRelease = PASS;
+- signed AAB SHA-256 = `da4b862c70fd65f779890ae45339b16f6fb159ff607d37be6bb4957b337eaeb8`;
+- Production upload accepted;
+- Production release draft saved;
+- global country selection remains present;
+- next material control = `Send app for review`;
+- no review submission, rollout, or publication has occurred.
+
+Reported evidence commit:
+`3cb83657549ca155387ac7229e7bc33a618a0e84`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser/provider result remains Codex/operator-attested.
+
+Prepared, but NOT authorized:
+`prompts/CODEX_GOOGLE_PLAY_SEND_FOR_REVIEW_FINAL_v1.0.md`
+
+Next approval gate:
+`GOOGLE_PLAY_FINAL_SEND_FOR_REVIEW`
+
+Important launch semantics:
+this is the material review-submission boundary. With Managed publishing off, approved changes can be published automatically after Google review; treat approval of this gate as approval to submit the first production launch for review.
+
+No Send for review is authorized by this record.
