@@ -1938,3 +1938,67 @@ Prepared prompt:
 `prompts/CODEX_PLAY_CONSOLE_RELEASE_SECTION_READ_ONLY_INSPECTION_v1.0.md`
 
 No Send for review, release, track, rollout, Artifact Freeze, or publication is authorized.
+
+
+## Release section read-only inspection result — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_RELEASE_SECTION_PREREQUISITES_IDENTIFIED`
+
+Observed provider context:
+- App = `Photo Compressor: KB Limit`;
+- Package = `com.afradadmedia.reducephotosize`;
+- Production = `Inactive`.
+
+Visible Closed testing prerequisites:
+- Set up closed test track;
+- Select countries and regions;
+- Select testers;
+- Create new release;
+- Preview/confirm and send for review locked.
+
+Visible Open testing prerequisites:
+- Set up open test track;
+- Select countries and regions;
+- Create new release;
+- Preview/confirm and send for review locked.
+
+Visible Pre-registration prerequisites:
+- Upload an app bundle or APK;
+- Select countries and regions;
+- Optional reward;
+- Send release for review.
+
+Visible Production prerequisites:
+- Select countries and regions;
+- Create new release;
+- Preview/confirm;
+- Send release for review;
+- Publish app locked.
+
+Additional observations:
+- AAB/APK requirement is visible under pre-registration;
+- Play App Signing = UNKNOWN;
+- Closed testing shows `Select testers`, but no account-specific tester count/duration threshold is visible;
+- no separate production-access requirement is visible;
+- countries/regions selection is required on all visible release/testing paths;
+- release notes, version code/name, target API, signing, integrity, and symbols are not visible at this inspection depth;
+- Managed publishing = off;
+- Publishing overview contains pending changes;
+- `Send app for review` = disabled;
+- provider reason = `To send changes for review, complete the required steps in the app dashboard`.
+
+Reported evidence commit:
+`ab8a447309976a99130cee70d71e3da3257c9ad1`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser result remains Codex/operator-attested.
+
+Next gate:
+`CLOSED_TEST_SETUP_READ_ONLY_INSPECTION`
+
+Prepared prompt:
+`prompts/CODEX_PLAY_CONSOLE_CLOSED_TEST_SETUP_READ_ONLY_INSPECTION_v1.0.md`
+
+No track creation, tester/country mutation, artifact upload, release, review submission, rollout, Artifact Freeze, or publication is authorized.
