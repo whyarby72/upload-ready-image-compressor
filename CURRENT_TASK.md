@@ -2540,3 +2540,36 @@ Not authorized:
 - send for review;
 - rollout;
 - publish.
+
+
+## Internal VC1 deactivated; AD_ID blocker cleared — 2026-10-07
+
+Codex/operator-reported disposition:
+`READY_FOR_PRODUCTION_REVIEW_SUBMISSION_APPROVAL_VC3`
+
+Provider-visible result:
+- Internal testing was active with VC1 only, full rollout;
+- control used: `Pause track` then confirmation `Pause test`;
+- Internal testing is now `Paused` / `Inactive`;
+- VC1 is no longer available to testers;
+- Production still contains VC3 only and is unchanged;
+- Advertising ID blocker is cleared;
+- remaining warnings are non-blocking only:
+  - deobfuscation file;
+  - native debug symbols;
+- next provider control is `Save`;
+- `Send app for review`, rollout, and publish were not reached/clicked.
+
+Reported evidence commit:
+`775b47510090f01a84f8e9f6e25a80b18b6fba93`
+
+Remote evidence note:
+reported evidence commit is not currently reachable through the canonical remote GitHub API; provider result remains Codex/operator-attested.
+
+Prepared, but NOT authorized:
+`prompts/CODEX_GOOGLE_PLAY_SAVE_VC3_READY_STATE_v1.0.md`
+
+Next approval gate:
+`SAVE_VC3_READY_PRODUCTION_STATE`
+
+No Save, review submission, rollout, or publication is authorized by this record.
