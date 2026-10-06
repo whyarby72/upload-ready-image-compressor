@@ -2407,3 +2407,32 @@ if VC2 row identity or menu origin cannot be proven, or VC3 disappears after rem
 
 Next gate:
 `REMOVE_VC2_USING_ROW_BOUND_CONFIRMATION_EXECUTION`
+
+
+## AD_ID blocker persists after VC2 removal — 2026-10-07
+
+Codex/operator-reported disposition:
+`BLOCKED_AD_ID_PROVIDER_VALIDATION_PERSISTS`
+
+Observed provider state:
+- VC2 removed successfully from Production draft;
+- VC3 remains as the only Production bundle;
+- VC3 signed AAB SHA-256 = `cc13f4faaf78c15deaa5bb4826659b154ff437fb092931b5b0f1241f4aa15c1f`;
+- local artifact-bound manifest verification proves VC3 contains `com.google.android.gms.permission.AD_ID`;
+- Google Play still reports the Advertising ID declaration/permission mismatch;
+- controls `Update declaration`, `Release without permission`, `Save`, and `Send app for review` were not clicked;
+- no review submission, rollout, or publication occurred.
+
+Official SDK context:
+Google Mobile Ads Next-Gen automatically collects Android advertising ID by default unless the developer prevents collection through manifest/configuration. Therefore the current ad-enabled product should not switch the Advertising ID declaration to No merely to bypass validation.
+
+Interpretation:
+there is now a material conflict between local artifact truth and provider-recognized state. The next required step is provider-side reconciliation, not another blind rebuild or declaration downgrade.
+
+Prepared prompt:
+`prompts/CODEX_GOOGLE_PLAY_AD_ID_PROVIDER_RECONCILIATION_v1.0.md`
+
+Next gate:
+`AD_ID_PROVIDER_RECONCILIATION`
+
+No declaration change, `Release without permission`, new artifact upload, review submission, rollout, or publication is authorized.
