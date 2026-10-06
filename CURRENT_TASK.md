@@ -2076,3 +2076,40 @@ Next approval gate:
 `CLOSED_TEST_COUNTRY_SELECTOR_OPEN_INSPECTION`
 
 No country selection/save, tester mutation, artifact upload, release, review submission, rollout, Artifact Freeze, or publication is authorized by this record.
+
+
+## Publication workflow simplification directive — 2026-10-06
+
+Human directive:
+`DO ONLY WHAT IS ACTUALLY REQUIRED TO PUBLISH`
+
+Workflow adjustment:
+- stop unnecessary micro-inspection gates;
+- prefer the shortest valid publication path;
+- try direct Production eligibility before setting up Closed testing;
+- use Closed testing only if Google explicitly requires it for this account/app;
+- skip optional Open testing and Pre-registration;
+- build and validate the required release AAB first;
+- stop only at a real blocker or a material review/submission/publication boundary.
+
+Current source fact:
+- `app/build.gradle` currently declares `targetSdk 36`, `versionCode 1`, `versionName 0.1.0`.
+
+Prepared execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_MINIMUM_PUBLICATION_PATH_v1.0.md`
+
+Authorized operational scope under this directive:
+- deterministic release artifact checks/build;
+- use an existing secure upload key if already available;
+- direct Production eligibility check;
+- if Production is allowed, complete only reversible required production-release prerequisites up to the first review-submission control;
+- if Production is explicitly blocked by a testing requirement, use Closed testing only as required and stop if tester eligibility is insufficient.
+
+Hard boundaries still require separate approval:
+- any `Send ... for review` action;
+- rollout;
+- publication;
+- irreversible signing-key creation/custody decision if no upload key exists.
+
+Next gate:
+`MINIMUM_PUBLICATION_PATH_EXECUTION`
