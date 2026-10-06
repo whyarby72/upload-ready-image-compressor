@@ -2113,3 +2113,39 @@ Hard boundaries still require separate approval:
 
 Next gate:
 `MINIMUM_PUBLICATION_PATH_EXECUTION`
+
+
+## Production upload blocker: versionCode already used — 2026-10-06
+
+Codex/operator-reported disposition:
+`BLOCKED_PROVIDER_VALIDATION`
+
+Observed provider validation:
+`Version code 1 has already been used. Try another version code.`
+
+Prior signed AAB:
+- versionCode = 1
+- versionName = 0.1.0
+- SHA-256 = `f0952b9a5edd3803595171409c9be4c24eb3c1f478a3d9b169dcee42f48f0869`
+
+Production:
+- directly available;
+- no testing requirement observed;
+- global country selection saved to Publishing overview.
+
+Minimum required source correction executed:
+- `app/build.gradle`: versionCode 1 -> 2
+- versionName remains `0.1.0`
+- no other app/source change.
+
+Source commit:
+`ca10725c82954808674e1a767e6e27ef47c95bca`
+
+Execution prompt:
+`prompts/CODEX_GOOGLE_PLAY_REBUILD_VC2_AND_RETRY_PRODUCTION_v1.0.md`
+
+Next gate:
+`PRODUCTION_VC2_REBUILD_AND_RETRY`
+
+Hard boundary remains:
+STOP before Send for review / review submission / rollout / publication.
