@@ -1696,3 +1696,41 @@ if `Save as draft` disappears, provider wording materially changes, per-asset la
 
 Next gate:
 `AI_ASSET_DECLARATION_LABEL_ALL_SAVE_AS_DRAFT_EXECUTION`
+
+
+## AI asset per-asset labeling approval — 2026-10-06
+
+Human explicit approval:
+`AI_ASSET_PER_ASSET_LABELING_ALL_THREE_SUBMIT`
+
+Authorized categories:
+- `App icon`
+- `Feature graphic`
+- `Phone screenshots`
+
+Authorized action:
+- select all three categories in the `Label AI-generated assets` dialog;
+- click `Label assets and submit` for that AI-labeling dialog only;
+- observe and record the resulting Review-step/provider state;
+- inspect Dashboard/Publishing overview read-only if available;
+- STOP.
+
+Explicitly not authorized:
+- listing `Save`;
+- listing `Save as draft`;
+- `Send app for review`;
+- release creation/edit;
+- track promotion;
+- production rollout;
+- Managed Publishing changes;
+- Artifact Freeze;
+- Android publication/release.
+
+Execution prompt:
+`prompts/CODEX_PLAY_CONSOLE_AI_ASSET_PER_ASSET_LABELING_v1.0.md`
+
+Critical stop:
+if additional asset categories appear, file-level selection becomes mandatory, or `Label assets and submit` is shown to submit the app/listing for review rather than only the AI-label declaration, STOP before further action.
+
+Next gate:
+`AI_ASSET_PER_ASSET_LABELING_ALL_THREE_SUBMIT_EXECUTION`
