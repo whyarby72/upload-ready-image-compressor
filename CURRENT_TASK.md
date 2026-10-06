@@ -1648,3 +1648,51 @@ Remote evidence note:
 - browser result remains Codex/operator-attested.
 
 No AI declaration save, Send for review, release, rollout, Artifact Freeze, or publication is authorized by this record.
+
+
+## AI asset declaration Save-as-draft approval — 2026-10-06
+
+Human explicit approval:
+`AI_ASSET_DECLARATION_LABEL_ALL_SAVE_AS_DRAFT`
+
+Approved declaration:
+`Label assets as created or edited using AI`
+
+Rationale:
+the exact current v1.2 listing visual set consists entirely of assets that were created or materially edited with generative AI tools:
+- app icon;
+- feature graphic;
+- 4 phone marketing screenshots grounded in direct smartphone runtime captures.
+
+Authorized scope:
+- verify correct app/package and `AI asset declaration` Review step;
+- verify provider choices/control wording has not materially changed;
+- select exactly `Label assets as created or edited using AI`;
+- click `Save as draft` only;
+- reload/re-open and verify durable declaration state;
+- verify whether Dashboard becomes 11/11;
+- inspect Publishing overview read-only;
+- record `Send app for review` enabled/disabled;
+- capture evidence;
+- STOP.
+
+Explicitly not authorized:
+- `Don't label assets`;
+- per-asset labeling unless schema drift requires a new decision;
+- `Save` if broader than `Save as draft`;
+- `Send app for review`;
+- release creation/edit;
+- track promotion;
+- production rollout;
+- Managed Publishing changes;
+- Artifact Freeze;
+- publication/release.
+
+Execution prompt:
+`prompts/CODEX_PLAY_CONSOLE_AI_ASSET_DECLARATION_SAVE_AS_DRAFT_v1.0.md`
+
+Critical stop:
+if `Save as draft` disappears, provider wording materially changes, per-asset labeling becomes mandatory, or any confirmation implies immediate review submission/publication/release, STOP before further action.
+
+Next gate:
+`AI_ASSET_DECLARATION_LABEL_ALL_SAVE_AS_DRAFT_EXECUTION`
