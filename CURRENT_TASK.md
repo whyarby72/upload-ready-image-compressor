@@ -1587,3 +1587,64 @@ if clicking `Next` itself unexpectedly mutates state, causes submission/publicat
 
 Next gate:
 `MAIN_STORE_LISTING_REVIEW_STEP_INSPECTION_EXECUTION`
+
+
+## Main store listing Review-step inspection result — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_MAIN_STORE_LISTING_REVIEW_STEP_INSPECTED`
+
+Observed provider state:
+- App = `Photo Compressor: KB Limit`;
+- Package = `com.afradadmedia.reducephotosize`;
+- Main store listing = `Draft`;
+- clicking `Next` opened Review without mutation.
+
+Review title:
+`AI asset declaration`
+
+Provider wording:
+`Regulations require that content that uses AI-generated assets be labeled under certain circumstances.`
+
+Observed choices:
+- `Don't label assets`;
+- `Label assets as created or edited using AI`;
+- `You will label individual assets on the next step`.
+
+Observed controls:
+- `Discard`;
+- `Back`;
+- `Save as draft`;
+- `Save`.
+
+Provider warning:
+`If you save, changes will be saved in Publishing overview, ready for you to send for review`
+
+Interpretation:
+- opening Review does not mutate provider state;
+- persistence begins at `Save` / `Save as draft`;
+- `Send app for review` remains the later submission boundary;
+- Dashboard 11/11 cannot be proven without saving a Review-step declaration.
+
+Current listing visual provenance:
+- app icon = AI-created/edited;
+- feature graphic = AI-created/edited;
+- 4 phone screenshots = AI-created/edited marketing composites grounded in direct smartphone runtime captures.
+
+Therefore the truthful preferred declaration for the current exact v1.2 visual set is:
+`Label assets as created or edited using AI`
+
+Prepared, but NOT authorized:
+`prompts/CODEX_PLAY_CONSOLE_AI_ASSET_DECLARATION_SAVE_AS_DRAFT_v1.0.md`
+
+Next approval gate:
+`AI_ASSET_DECLARATION_LABEL_ALL_SAVE_AS_DRAFT`
+
+Reported evidence commit:
+`da400145e278ddff23ba8b4f3bea81273c4ff874`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser result remains Codex/operator-attested.
+
+No AI declaration save, Send for review, release, rollout, Artifact Freeze, or publication is authorized by this record.
