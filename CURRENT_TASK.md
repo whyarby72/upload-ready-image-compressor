@@ -2436,3 +2436,37 @@ Next gate:
 `AD_ID_PROVIDER_RECONCILIATION`
 
 No declaration change, `Release without permission`, new artifact upload, review submission, rollout, or publication is authorized.
+
+
+## AD_ID provider root cause identified — 2026-10-07
+
+Codex/operator-reported disposition:
+`PASS_AD_ID_PROVIDER_ROOT_CAUSE_IDENTIFIED`
+
+Provider-visible facts:
+- Production contains only VC3;
+- Google Play recognizes VC3 contains `com.google.android.gms.permission.AD_ID`;
+- VC1 remains active in Internal testing and does not contain AD_ID permission;
+- VC2 is inactive;
+- Open/Closed testing have no active release.
+
+Root-cause classification:
+`STALE_OR_OTHER_ACTIVE_ARTIFACT_CAUSING_MISMATCH`
+
+Smallest corrective action:
+deactivate/remove active Internal testing VC1, then re-run Production AD_ID validation.
+
+Reported evidence commit:
+`da666f9108834cf0df42845a40e299d3b71d7a4e`
+
+Remote evidence note:
+- reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- browser/provider result remains Codex/operator-attested.
+
+Prepared, but NOT authorized:
+`prompts/CODEX_GOOGLE_PLAY_INTERNAL_VC1_DEACTIVATE_AND_REVALIDATE_v1.0.md`
+
+Next approval gate:
+`DEACTIVATE_INTERNAL_TESTING_VC1`
+
+No Internal-testing mutation, review submission, rollout, or publication is authorized by this record.
