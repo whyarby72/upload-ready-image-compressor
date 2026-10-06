@@ -1550,3 +1550,40 @@ Next approval gate:
 `MAIN_STORE_LISTING_REVIEW_STEP_INSPECTION`
 
 No `Next`, review submission, release, rollout, Artifact Freeze, or publication is authorized by this record.
+
+
+## Main store listing Review-step inspection approval — 2026-10-06
+
+Human explicit approval:
+`MAIN_STORE_LISTING_REVIEW_STEP_INSPECTION`
+
+Authorized scope:
+- verify active app/package context;
+- open Main store listing;
+- confirm current durable Draft state;
+- click `Next` only to enter/inspect the provider Review step;
+- record exact Review-step title, wording, warnings, controls, and state semantics;
+- determine whether simply entering/completing the Review step would mark Dashboard 11/11 or cross a submission/review/publication boundary;
+- capture evidence;
+- STOP before any persistence/submission/publication action.
+
+Explicitly not authorized:
+- edit any listing field;
+- `Save`, `Save as draft`, or `Save and publish`;
+- any Review-step confirmation that persists or submits changes;
+- `Send app for review`;
+- release creation/edit;
+- track promotion;
+- production rollout;
+- Managed Publishing changes;
+- Artifact Freeze;
+- Android publication/release.
+
+Execution prompt:
+`prompts/CODEX_PLAY_CONSOLE_MAIN_STORE_LISTING_REVIEW_STEP_INSPECTION_v1.0.md`
+
+Critical boundary:
+if clicking `Next` itself unexpectedly mutates state, causes submission/publication, or opens a confirmation requiring broader authority, stop immediately before any further confirmation.
+
+Next gate:
+`MAIN_STORE_LISTING_REVIEW_STEP_INSPECTION_EXECUTION`
