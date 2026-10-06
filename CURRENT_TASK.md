@@ -1407,3 +1407,50 @@ if `Save as draft` changes wording or opens a second confirmation that implies r
 
 Next gate:
 `MAIN_STORE_LISTING_V1_2_SAVE_AS_DRAFT_EXECUTION`
+
+
+## Main store listing v1.2 Save-as-draft result — 2026-10-06
+
+Codex/operator-reported disposition:
+`PASS_MAIN_STORE_LISTING_V1_2_SAVED_AS_DRAFT`
+
+Reported durable provider state:
+- exact ZIP SHA-256 = `4294f59c952bc97d21a22350f1adf4121158f6004c730ab06f3d7ccc672248ff`;
+- Main store listing draft persisted after reload;
+- app icon installed;
+- feature graphic installed;
+- four phone screenshots installed;
+- `Send app for review` = disabled;
+- `Next` not clicked;
+- no review submission;
+- no release/track/rollout/publication action.
+
+Reported evidence commit:
+`a0b19f927b6792953dab871febf3d4b54f290502`
+
+Remote evidence note:
+- the reported evidence commit is not currently reachable through the canonical remote GitHub API;
+- therefore the positive provider result remains Codex/operator-attested until pushed/reachable or independently reconciled.
+
+Conflict requiring reconciliation:
+the same run reported the following as incomplete:
+- Content Rating;
+- Target audience;
+- Privacy policy;
+- Ads declaration;
+- Data safety;
+- Health apps;
+- App category.
+
+This conflicts with prior project/provider observations where many of these items were already completed/saved, including Content Rating, Target audience, Privacy policy, Ads declaration, Data safety, and Store settings category/contact.
+
+Decision:
+`HOLD_FURTHER_PROVIDER_MUTATION_PENDING_POST_LISTING_STATE_RECONCILIATION`
+
+Read-only reconciliation prompt:
+`prompts/CODEX_PLAY_CONSOLE_POST_LISTING_STATE_RECONCILIATION_v1.0.md`
+
+Next gate:
+`POST_LISTING_STATE_RECONCILIATION`
+
+No Send for review, release, rollout, Artifact Freeze, or publication is authorized.
